@@ -302,6 +302,65 @@
     
 
         <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2017/08/16/不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区/">不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2017/08/16/不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="DalianSky's avatar">
+            </div>
+            <div>
+                <strong>DalianSky</strong>
+                <span>8月 16, 2017</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+            <!-- Category -->
+            <span class="post_entry-category">
+                
+            </span>
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
         <p class="article-headline-p"><a href="/2017/08/16/【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动/">【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动</a></p>
     </div>
 
@@ -310,6 +369,20 @@
         
             ####【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动
 
+本镜像采用官方原版app制作，集成Clover 4133，支持UEFI启动安装。
+Clover集成众多配置文件，系统默认config.plist支持原生I5/i7七代移动版CPU，原生支持Intel HD Graphics 620【platforms-id:59160000】；
+其它显卡配置文件可通过Clover引导界面-Options-config进行选择；
+如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；
+集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的另一帖
+支持BCM94352z无线网卡，支持Realtek8111系列网卡；
+已加入Lilu、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；
+其它驱动位于/EFI/Clover/kexts/Other/backup目录下，请根据自己的机型配置适当的驱动；
+本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决，当然您也可以通过企鹅群：331686786寻求帮助。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！
+本镜像唯一发布站点：远景论坛
+
+下载链接：百度云：https://pan.baidu.com/s/1sloGhCL 密码: yknpMD5 (macOS Sierra 10.12.6 16G29 Installer with Clover 4133.dmg) = 81ecbc29863381097537ec9a40c8e1c6
+QQ群：
+[x] 331686786 一起黑苹果 [x] 158976808 燃7000-黑苹果交流群
 
         
         &nbsp;&nbsp;&nbsp;
@@ -369,7 +442,17 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            hotpatch详解这里阐述hotpatch的作用及各功能详解
+[TOC]
+核心文件1SSDT-Config     SSDT控制入口文件
+系统1234SSDT-LPC      正确识别LPC总线到系统SSDT-SMBUS    正确识别SMBus到系统SSDT-DMAC     将DMA控制器公开给系统SSDT-MCHC     将内存控制器暴露在系统中
+显卡123456789SSDT-IGPU       将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示SSDT-Disable_DGPU                在启动时关闭独立显卡，因为Mac OS无法使用它SSDT-ALS0       添加假环境光传感器以在重新启动之间保存背光信息SSDT-BRT6       将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码SSDT-Dell_FN    将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码                【部分DELL机型】SSDT-PNLF       显示器亮度控制，为IntelBacklight.kext或                AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备
+声卡12SSDT-HDAU       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台SSDT-HDEF       自动注入HDEF属性 声卡layoutid注入点
+睡眠相关12345SSDT-GPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-LANC_PRW   通过挂接GPRW来解决即时唤醒SSDT-UPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-IMEI       添加IMEI（6系列HD4000，7系HD3000）SSDT-PTSWAK     在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它
+其它杂项SSDT-Debug      用于ACPIDebug                该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的                使用“添加SSDT调试外部声明”从其他方式访问这些方法                hotpatch SSDT甚至打补丁的OEM ACPI文件SSDT-ESEL       关闭ESEL，在DSDT里原生ESEL被重命名为ESEXSSDT-XWAK       关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAKSSDT-PluginType1在_PR.CPU0上插入plugin-type = 1                可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入SSDT-SATA       修复某些不支持的SATA设备SSDT-XHC        自动注入XHC属性SSDT-XOSI       覆盖主机定义的_OSI来处理“Darwin”…                DSDT中的所有_OSI调用都被路由到XOSI                XOSI模拟“Windows 2009”（这是Windows 7）                XOSI模拟“Windows 2015”（这是Windows 10）                这里是关于_OSI中微软操作系统的描述文件
+QQ群：
+[x] 331686786 一起黑苹果[x] 158976808 燃7000-黑苹果交流群
+
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -638,7 +721,7 @@ Markdown 的目標是實現「易讀易寫」。不過最需要強調的便是�
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         

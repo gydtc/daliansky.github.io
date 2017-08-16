@@ -35,7 +35,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="DalianSky">
-    <meta name="description" itemprop="description" content="一些平时学习笔记以及搜集到的好的文章">
+    <meta name="description" itemprop="description" content="hotpatch详解这里阐述hotpatch的作用及各功能详解
+[TOC]
+核心文件1SSDT-Config     SSDT控制入口文件
+系统1234SSDT-LPC      正确识别LPC总线到系统SSDT-SMBUS    正确识别SMBus到系统SSDT-DMAC     将DMA控制器公开给系统SSDT-MCHC     将内存控制器暴露在系统中
+显卡123456789SSDT-IGPU       将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示SSDT-Disable_DGPU                在启动时关闭独立显卡，因为Mac OS无法使用它SSDT-ALS0       添加假环境光传感器以在重新启动之间保存背光信息SSDT-BRT6       将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码SSDT-Dell_FN    将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码                【部分DELL机型】SSDT-PNLF       显示器亮度控制，为IntelBacklight.kext或                AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备
+声卡12SSDT-HDAU       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台SSDT-HDEF       自动注入HDEF属性 声卡layoutid注入点
+睡眠相关12345SSDT-GPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-LANC_PRW   通过挂接GPRW来解决即时唤醒SSDT-UPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-IMEI       添加IMEI（6系列HD4000，7系HD3000）SSDT-PTSWAK     在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它
+其它杂项SSDT-Debug      用于ACPIDebug                该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的                使用“添加SSDT调试外部声明”从其他方式访问这些方法                hotpatch SSDT甚至打补丁的OEM ACPI文件SSDT-ESEL       关闭ESEL，在DSDT里原生ESEL被重命名为ESEXSSDT-XWAK       关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAKSSDT-PluginType1在_PR.CPU0上插入plugin-type = 1                可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入SSDT-SATA       修复某些不支持的SATA设备SSDT-XHC        自动注入XHC属性SSDT-XOSI       覆盖主机定义的_OSI来处理“Darwin”…                DSDT中的所有_OSI调用都被路由到XOSI                XOSI模拟“Windows 2009”（这是Windows 7）                XOSI模拟“Windows 2015”（这是Windows 10）                这里是关于_OSI中微软操作系统的描述文件
+QQ群：
+[x] 331686786 一起黑苹果[x] 158976808 燃7000-黑苹果交流群
+">
     <meta name="keywords" content="">
 
     <!-- Site Verification -->
@@ -67,7 +77,17 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="hotpatch详解 | 曾经沧海的部落阁">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
+    <meta property="og:description" content="hotpatch详解这里阐述hotpatch的作用及各功能详解
+[TOC]
+核心文件1SSDT-Config     SSDT控制入口文件
+系统1234SSDT-LPC      正确识别LPC总线到系统SSDT-SMBUS    正确识别SMBus到系统SSDT-DMAC     将DMA控制器公开给系统SSDT-MCHC     将内存控制器暴露在系统中
+显卡123456789SSDT-IGPU       将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示SSDT-Disable_DGPU                在启动时关闭独立显卡，因为Mac OS无法使用它SSDT-ALS0       添加假环境光传感器以在重新启动之间保存背光信息SSDT-BRT6       将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码SSDT-Dell_FN    将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码                【部分DELL机型】SSDT-PNLF       显示器亮度控制，为IntelBacklight.kext或                AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备
+声卡12SSDT-HDAU       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台SSDT-HDEF       自动注入HDEF属性 声卡layoutid注入点
+睡眠相关12345SSDT-GPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-LANC_PRW   通过挂接GPRW来解决即时唤醒SSDT-UPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-IMEI       添加IMEI（6系列HD4000，7系HD3000）SSDT-PTSWAK     在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它
+其它杂项SSDT-Debug      用于ACPIDebug                该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的                使用“添加SSDT调试外部声明”从其他方式访问这些方法                hotpatch SSDT甚至打补丁的OEM ACPI文件SSDT-ESEL       关闭ESEL，在DSDT里原生ESEL被重命名为ESEXSSDT-XWAK       关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAKSSDT-PluginType1在_PR.CPU0上插入plugin-type = 1                可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入SSDT-SATA       修复某些不支持的SATA设备SSDT-XHC        自动注入XHC属性SSDT-XOSI       覆盖主机定义的_OSI来处理“Darwin”…                DSDT中的所有_OSI调用都被路由到XOSI                XOSI模拟“Windows 2009”（这是Windows 7）                XOSI模拟“Windows 2015”（这是Windows 10）                这里是关于_OSI中微软操作系统的描述文件
+QQ群：
+[x] 331686786 一起黑苹果[x] 158976808 燃7000-黑苹果交流群
+">
     
 
     
@@ -77,7 +97,17 @@
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="hotpatch详解 | 曾经沧海的部落阁">
-    <meta name="twitter:description" content="一些平时学习笔记以及搜集到的好的文章">
+    <meta name="twitter:description" content="hotpatch详解这里阐述hotpatch的作用及各功能详解
+[TOC]
+核心文件1SSDT-Config     SSDT控制入口文件
+系统1234SSDT-LPC      正确识别LPC总线到系统SSDT-SMBUS    正确识别SMBus到系统SSDT-DMAC     将DMA控制器公开给系统SSDT-MCHC     将内存控制器暴露在系统中
+显卡123456789SSDT-IGPU       将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示SSDT-Disable_DGPU                在启动时关闭独立显卡，因为Mac OS无法使用它SSDT-ALS0       添加假环境光传感器以在重新启动之间保存背光信息SSDT-BRT6       将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码SSDT-Dell_FN    将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码                【部分DELL机型】SSDT-PNLF       显示器亮度控制，为IntelBacklight.kext或                AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备
+声卡12SSDT-HDAU       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台SSDT-HDEF       自动注入HDEF属性 声卡layoutid注入点
+睡眠相关12345SSDT-GPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-LANC_PRW   通过挂接GPRW来解决即时唤醒SSDT-UPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-IMEI       添加IMEI（6系列HD4000，7系HD3000）SSDT-PTSWAK     在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它
+其它杂项SSDT-Debug      用于ACPIDebug                该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的                使用“添加SSDT调试外部声明”从其他方式访问这些方法                hotpatch SSDT甚至打补丁的OEM ACPI文件SSDT-ESEL       关闭ESEL，在DSDT里原生ESEL被重命名为ESEXSSDT-XWAK       关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAKSSDT-PluginType1在_PR.CPU0上插入plugin-type = 1                可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入SSDT-SATA       修复某些不支持的SATA设备SSDT-XHC        自动注入XHC属性SSDT-XOSI       覆盖主机定义的_OSI来处理“Darwin”…                DSDT中的所有_OSI调用都被路由到XOSI                XOSI模拟“Windows 2009”（这是Windows 7）                XOSI模拟“Windows 2015”（这是Windows 10）                这里是关于_OSI中微软操作系统的描述文件
+QQ群：
+[x] 331686786 一起黑苹果[x] 158976808 燃7000-黑苹果交流群
+">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://daliansky.github.io" />
@@ -114,7 +144,17 @@
     "url": "http://daliansky.github.io/2017/08/16/hotpatch详解/index.html",
     "datePublished": "8月 16, 2017",
     "dateModified": "8月 16, 2017",
-    "description": "一些平时学习笔记以及搜集到的好的文章",
+    "description": "hotpatch详解这里阐述hotpatch的作用及各功能详解
+[TOC]
+核心文件1SSDT-Config     SSDT控制入口文件
+系统1234SSDT-LPC      正确识别LPC总线到系统SSDT-SMBUS    正确识别SMBus到系统SSDT-DMAC     将DMA控制器公开给系统SSDT-MCHC     将内存控制器暴露在系统中
+显卡123456789SSDT-IGPU       将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示SSDT-Disable_DGPU                在启动时关闭独立显卡，因为Mac OS无法使用它SSDT-ALS0       添加假环境光传感器以在重新启动之间保存背光信息SSDT-BRT6       将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码SSDT-Dell_FN    将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码                【部分DELL机型】SSDT-PNLF       显示器亮度控制，为IntelBacklight.kext或                AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备
+声卡12SSDT-HDAU       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台SSDT-HDEF       自动注入HDEF属性 声卡layoutid注入点
+睡眠相关12345SSDT-GPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-LANC_PRW   通过挂接GPRW来解决即时唤醒SSDT-UPRW       通过挂接GPRW或UPRW来解决即时唤醒SSDT-IMEI       添加IMEI（6系列HD4000，7系HD3000）SSDT-PTSWAK     在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它
+其它杂项SSDT-Debug      用于ACPIDebug                该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的                使用“添加SSDT调试外部声明”从其他方式访问这些方法                hotpatch SSDT甚至打补丁的OEM ACPI文件SSDT-ESEL       关闭ESEL，在DSDT里原生ESEL被重命名为ESEXSSDT-XWAK       关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAKSSDT-PluginType1在_PR.CPU0上插入plugin-type = 1                可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入SSDT-SATA       修复某些不支持的SATA设备SSDT-XHC        自动注入XHC属性SSDT-XOSI       覆盖主机定义的_OSI来处理“Darwin”…                DSDT中的所有_OSI调用都被路由到XOSI                XOSI模拟“Windows 2009”（这是Windows 7）                XOSI模拟“Windows 2015”（这是Windows 10）                这里是关于_OSI中微软操作系统的描述文件
+QQ群：
+[x] 331686786 一起黑苹果[x] 158976808 燃7000-黑苹果交流群
+",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://daliansky.github.io"
@@ -495,12 +535,10 @@
 <h4 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SSDT-HDAU       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台</div><div class="line">SSDT-HDEF       自动注入HDEF属性 声卡layoutid注入点</div></pre></td></tr></table></figure>
 <h4 id="睡眠相关"><a href="#睡眠相关" class="headerlink" title="睡眠相关"></a>睡眠相关</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SSDT-GPRW       通过挂接GPRW或UPRW来解决即时唤醒</div><div class="line">SSDT-LANC_PRW   通过挂接GPRW来解决即时唤醒</div><div class="line">SSDT-UPRW       通过挂接GPRW或UPRW来解决即时唤醒</div><div class="line">SSDT-IMEI       添加IMEI（6系列HD4000，7系HD3000）</div><div class="line">SSDT-PTSWAK     在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它</div></pre></td></tr></table></figure>
 <h4 id="其它杂项"><a href="#其它杂项" class="headerlink" title="其它杂项"></a>其它杂项</h4><p>SSDT-Debug      用于ACPIDebug<br>                该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的<br>                使用“添加SSDT调试外部声明”从其他方式访问这些方法<br>                hotpatch SSDT甚至打补丁的OEM ACPI文件<br>SSDT-ESEL       关闭ESEL，在DSDT里原生ESEL被重命名为ESEX<br>SSDT-XWAK       关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAK<br>SSDT-PluginType1在_PR.CPU0上插入plugin-type = 1<br>                可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入<br>SSDT-SATA       修复某些不支持的SATA设备<br>SSDT-XHC        自动注入XHC属性<br>SSDT-XOSI       覆盖主机定义的_OSI来处理“Darwin”…<br>                DSDT中的所有_OSI调用都被路由到XOSI<br>                XOSI模拟“Windows 2009”（这是Windows 7）<br>                XOSI模拟“Windows 2015”（这是Windows 10）<br>                <a href="http://download.microsoft.com/download/7/E/7/7E7662CF-CBEA-470B-A97E-CE7CE0D98DC2/WinACPI_OSI.docx" target="_blank" rel="external">这里是关于_OSI中微软操作系统的描述文件</a></p>
-<h4 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h4><ul>
-<li><p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-</li>
-<li><p>[x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
-</li>
-</ul>
+<h4 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h4><blockquote>
+<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>[x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+</blockquote>
+<a id="more"></a>
 
     
 
@@ -626,7 +664,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
