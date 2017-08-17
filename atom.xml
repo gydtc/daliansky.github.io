@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://daliansky.github.io/"/>
-  <updated>2017-08-17T03:44:02.000Z</updated>
+  <updated>2017-08-17T06:31:43.000Z</updated>
   <id>http://daliansky.github.io/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <link href="http://daliansky.github.io/2017/08/17/Mac%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E5%91%BD%E4%BB%A4-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/"/>
     <id>http://daliansky.github.io/2017/08/17/Mac常用到的命令-持续更新/</id>
     <published>2017-08-17T02:24:00.000Z</published>
-    <updated>2017-08-17T03:44:02.000Z</updated>
+    <updated>2017-08-17T06:31:43.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Mac常用命令"><a href="#Mac常用命令" class="headerlink" title="Mac常用命令"></a>Mac常用命令</h3><h4 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h4><p>熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀<br><a id="more"></a></p>
-<h4 id="1-隐藏“允许任何来源的应用”选项问题"><a href="#1-隐藏“允许任何来源的应用”选项问题" class="headerlink" title="1. 隐藏“允许任何来源的应用”选项问题"></a>1. 隐藏“允许任何来源的应用”选项问题</h4><blockquote>
+<h3 id="1-隐藏“允许任何来源的应用”选项问题"><a href="#1-隐藏“允许任何来源的应用”选项问题" class="headerlink" title="1. 隐藏“允许任何来源的应用”选项问题"></a>1. 隐藏“允许任何来源的应用”选项问题</h3><blockquote>
 <p>新的系统安装好后，通常你打开一个dmg文件准备安装的时候，系统会提示你<code>不允许打开未知来源的应用</code>，这是因为从macOS Sierra开始增强了GateKeeper的安全性，所以“<code>允许任何来源的应用</code>”选项被隐藏，目的在于避免除Mac AppStore和正规签名外的未知或未签名App在系统内被任意执行，从而威胁用户隐私和系统安全。但这也造成了很多不便。<br><strong>操作方法</strong>：打开终端，输入命令：</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo spctl --master-disable</div></pre></td></tr></table></figure>
 <p>验证口令后即可。</p>
-<h4 id="2-磁盘分区的基本操作"><a href="#2-磁盘分区的基本操作" class="headerlink" title="2. 磁盘分区的基本操作"></a>2. 磁盘分区的基本操作</h4><blockquote>
+<h3 id="2-磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><a href="#2-磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区" class="headerlink" title="2. 磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"></a>2. 磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</h3><blockquote>
 <p>新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让<code>diskutil</code>登场了。</p>
 </blockquote>
 <p><code>diskutil</code>命令的基本用法：</p>
@@ -38,7 +38,7 @@
 <thead>
 <tr>
 <th>#:</th>
-<th>TYPE</th>
+<th style="text-align:right">TYPE</th>
 <th>NAME</th>
 <th>SIZE</th>
 <th>IDENTIFIER</th>
@@ -47,28 +47,28 @@
 <tbody>
 <tr>
 <td>0:</td>
-<td>GUID_partition_scheme</td>
+<td style="text-align:right">GUID_partition_scheme</td>
 <td></td>
 <td>256 GB</td>
 <td>disk0</td>
 </tr>
 <tr>
 <td>1:</td>
-<td>EFI</td>
+<td style="text-align:right">EFI</td>
 <td>EFI</td>
 <td>200 MB</td>
 <td>disk0s1</td>
 </tr>
 <tr>
 <td>2:</td>
-<td>Apple_HFS</td>
+<td style="text-align:right">Apple_HFS</td>
 <td>MAC</td>
 <td>128 GB</td>
 <td>disk0s2</td>
 </tr>
 <tr>
 <td>3:</td>
-<td>Microsoft Basic Data</td>
+<td style="text-align:right">Microsoft Basic Data</td>
 <td>WIN10</td>
 <td>127.7 GB</td>
 <td>disk0s3</td>
@@ -80,7 +80,7 @@
 <thead>
 <tr>
 <th>#:</th>
-<th>TYPE</th>
+<th style="text-align:right">TYPE</th>
 <th>NAME</th>
 <th>SIZE</th>
 <th>IDENTIFIER</th>
@@ -89,21 +89,21 @@
 <tbody>
 <tr>
 <td>0:</td>
-<td>GUID_partition_scheme</td>
+<td style="text-align:right">GUID_partition_scheme</td>
 <td></td>
 <td>16 GB</td>
 <td>disk1</td>
 </tr>
 <tr>
 <td>1:</td>
-<td>EFI</td>
+<td style="text-align:right">EFI</td>
 <td>EFI</td>
 <td>200 MB</td>
 <td>disk1s1</td>
 </tr>
 <tr>
 <td>2:</td>
-<td>Apple_HFS</td>
+<td style="text-align:right">Apple_HFS</td>
 <td>Install macOS Sierra</td>
 <td>15.8 GB</td>
 <td>disk1s2</td>
@@ -114,7 +114,214 @@
 <h5 id="挂载U盘EFI分区"><a href="#挂载U盘EFI分区" class="headerlink" title="挂载U盘EFI分区"></a>挂载U盘EFI分区</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk1s1</div></pre></td></tr></table></figure>
 <h5 id="打开Finder，注意后面有个"><a href="#打开Finder，注意后面有个" class="headerlink" title="打开Finder，注意后面有个."></a>打开Finder，注意后面有个<code>.</code></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open .</div></pre></td></tr></table></figure>
 <p>左侧会显示挂载了两个EFI分区，将U盘EFI目录全部复制到磁盘的EFI分区即可。</p>
-]]></content>
+<h3 id="3-磁盘分区的进阶操作：教你将apfs分区转换回hfs"><a href="#3-磁盘分区的进阶操作：教你将apfs分区转换回hfs" class="headerlink" title="3. 磁盘分区的进阶操作：教你将apfs分区转换回hfs+"></a>3. 磁盘分区的进阶操作：教你将apfs分区转换回hfs+</h3><blockquote>
+<p>随着macOS High Sierra发布日期的临近，苹果公司新推出的<code>apfs</code>文件格式已经频繁地出现在我们的面前，假如你还不了解<code>apfs</code>文件的前世今生，请阅读<a href="https://zh.wikipedia.org/wiki/苹果文件系统" target="_blank" rel="external">苹果文件系统</a>。<strong>友情提示：</strong> <em><code>APFS</code> 在 macOS High Sierra（10.13）之后将成为默认的文件格式</em><br>那么问题来了，万一我的分区格式已经是<code>apfs</code>，我想转换成<code>HFS+</code>有什么办法吗？当然可以了，只是这个命令隐藏得比较深，这个命令还是：<code>diskutil</code></p>
+</blockquote>
+<h5 id="diskutil命令的进阶操作"><a href="#diskutil命令的进阶操作" class="headerlink" title="diskutil命令的进阶操作"></a>diskutil命令的进阶操作</h5><p>查看磁盘分区表：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
+<p>/dev/disk0(internal, physical):</p>
+<table>
+<thead>
+<tr>
+<th>#:</th>
+<th style="text-align:right">TYPE</th>
+<th style="text-align:left">NAME</th>
+<th>SIZE</th>
+<th>IDENTIFIER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:</td>
+<td style="text-align:right">GUID_partition_scheme</td>
+<td style="text-align:left"></td>
+<td>512 GB</td>
+<td>disk0</td>
+</tr>
+<tr>
+<td>1:</td>
+<td style="text-align:right">EFI</td>
+<td style="text-align:left">EFI</td>
+<td>200 MB</td>
+<td>disk0s1</td>
+</tr>
+<tr>
+<td>2:</td>
+<td style="text-align:right">Apple_HFS</td>
+<td style="text-align:left">MAC</td>
+<td>128 GB</td>
+<td>disk0s2</td>
+</tr>
+<tr>
+<td>…</td>
+<td style="text-align:right">…</td>
+<td style="text-align:left">…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>10:</td>
+<td style="text-align:right">Apple_APFS</td>
+<td style="text-align:left">Container disk1</td>
+<td>29.2 GB</td>
+<td>disk0s10</td>
+</tr>
+</tbody>
+</table>
+<p>/dev/disk1 (synthesized):</p>
+<table>
+<thead>
+<tr>
+<th>#:</th>
+<th style="text-align:right">TYPE</th>
+<th style="text-align:left">NAME</th>
+<th>SIZE</th>
+<th>IDENTIFIER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:</td>
+<td style="text-align:right">APFS Container Scheme</td>
+<td style="text-align:left">-<br>Physical Store disk0s5</td>
+<td>+29.2 GB</td>
+<td>disk1</td>
+</tr>
+<tr>
+<td>1:</td>
+<td style="text-align:right">APFS Volume</td>
+<td style="text-align:left">test</td>
+<td>9.8 GB</td>
+<td>disk1s1</td>
+</tr>
+<tr>
+<td>2:</td>
+<td style="text-align:right">APFS Volume</td>
+<td style="text-align:left">Preboot</td>
+<td>20.6 MB</td>
+<td>disk1s2</td>
+</tr>
+<tr>
+<td>3:</td>
+<td style="text-align:right">APFS Volume</td>
+<td style="text-align:left">Recovery</td>
+<td>519.6 MB</td>
+<td>disk1s3</td>
+</tr>
+<tr>
+<td>4:</td>
+<td style="text-align:right">APFS Volume</td>
+<td style="text-align:left">VM</td>
+<td>1.1 GB</td>
+<td>disk1s4</td>
+</tr>
+</tbody>
+</table>
+<p>查看<code>apfs</code>分区表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil apfs list</div></pre></td></tr></table></figure>
+<blockquote>
+<p>APFS Containers (2 found)<br>|<br>+– Container disk1 90B9C430-E60A-4174-8F1B-B8ED6E486D8B<br>|   ====================================================<br>|   APFS Container Reference:     disk1<br>|   Capacity Ceiling (Size):      29194424320 B (29.2 GB)<br>|   Capacity In Use By Volumes:   11533049856 B (11.5 GB) (39.5% used)<br>|   Capacity Available:           17661374464 B (17.7 GB) (60.5% free)<br>|   |<br>|   +-&lt; Physical Store disk0s10 CF77604A-0F78-4512-9563-AD2E944353C8<br>|   |   ————————————————————<br>|   |   APFS Physical Store Disk:   disk0s10<br>|   |   Size:                       29194424320 B (29.2 GB)<br>|   |<br>|   +-&gt; Volume disk1s1 12C9B3A9-0D9B-3E75-B0EF-D829FFE4D438<br>|   |   —————————————————<br>|   |   APFS Volume Disk (Role):   disk1s1 (No specific role)<br>|   |   Name:                      test (Case-insensitive)<br>|   |   Mount Point:               /Volumes/test<br>|   |   Capacity Consumed:         9848913920 B (9.8 GB)<br>|   |   Encrypted:                 No<br>|   |<br>|   +-&gt; Volume disk1s2 2316B0D9-6798-4564-A3CE-5C5D1124AE5B<br>|   |   —————————————————<br>|   |   APFS Volume Disk (Role):   disk1s2 (Preboot)<br>|   |   Name:                      Preboot (Case-insensitive)<br>|   |   Mount Point:               Not Mounted<br>|   |   Capacity Consumed:         20631552 B (20.6 MB)<br>|   |   Encrypted:                 No<br>|   |<br>|   +-&gt; Volume disk1s3 1B6EBD7A-EE58-48A7-97A8-4E31C18BE5EC<br>|   |   —————————————————<br>|   |   APFS Volume Disk (Role):   disk1s3 (Recovery)<br>|   |   Name:                      Recovery (Case-insensitive)<br>|   |   Mount Point:               Not Mounted<br>|   |   Capacity Consumed:         519573504 B (519.6 MB)<br>|   |   Encrypted:                 No<br>|   |<br>|   +-&gt; Volume disk1s4 560E6B74-04B3-4083-8730-A7FB7A0116A2<br>|       —————————————————<br>|       APFS Volume Disk (Role):   disk1s4 (VM)<br>|       Name:                      VM (Case-insensitive)<br>|       Mount Point:               Not Mounted<br>|       Capacity Consumed:         1073762304 B (1.1 GB)<br>|       Encrypted:                 No<br>|</p>
+<h1 id="–-Container-disk2-15E113C0-6AC5-4DA5-960C-A29A3C3B418A"><a href="#–-Container-disk2-15E113C0-6AC5-4DA5-960C-A29A3C3B418A" class="headerlink" title="+– Container disk2 15E113C0-6AC5-4DA5-960C-A29A3C3B418A"></a>+– Container disk2 15E113C0-6AC5-4DA5-960C-A29A3C3B418A</h1><pre><code>APFS Container Reference:     disk2
+Capacity Ceiling (Size):      100411764736 B (100.4 GB)
+Capacity In Use By Volumes:   59094196224 B (59.1 GB) (58.9% used)
+Capacity Available:           41317568512 B (41.3 GB) (41.1% free)
+|
++-&lt; Physical Store disk0s5 987E8152-DD9D-4148-8314-CDA8A28323D5
+|   -----------------------------------------------------------
+|   APFS Physical Store Disk:   disk0s5
+|   Size:                       100411764736 B (100.4 GB)
+|
++-&gt; Volume disk2s1 931C738D-C5A4-3A43-823A-210C3E9AF123
+|   ---------------------------------------------------
+|   APFS Volume Disk (Role):   disk2s1 (No specific role)
+|   Name:                      MAC (Case-insensitive)
+|   Mount Point:               /
+|   Capacity Consumed:         57355460608 B (57.4 GB)
+|   Encrypted:                 No
+|
++-&gt; Volume disk2s2 95F73DEF-D85F-4F43-B35F-D8914ED4A95F
+|   ---------------------------------------------------
+|   APFS Volume Disk (Role):   disk2s2 (Preboot)
+|   Name:                      Preboot (Case-insensitive)
+|   Mount Point:               Not Mounted
+|   Capacity Consumed:         20959232 B (21.0 MB)
+|   Encrypted:                 No
+|
++-&gt; Volume disk2s3 CDF460DC-38FE-4E79-A04C-C7A5242BD091
+|   ---------------------------------------------------
+|   APFS Volume Disk (Role):   disk2s3 (Recovery)
+|   Name:                      Recovery (Case-insensitive)
+|   Mount Point:               Not Mounted
+|   Capacity Consumed:         519573504 B (519.6 MB)
+|   Encrypted:                 No
+|
++-&gt; Volume disk2s4 25CC995F-FB04-4617-900A-955B423A675F
+    ---------------------------------------------------
+    APFS Volume Disk (Role):   disk2s4 (VM)
+    Name:                      VM (Case-insensitive)
+    Mount Point:               /private/var/vm
+    Capacity Consumed:         1073762304 B (1.1 GB)
+    Encrypted:                 No
+</code></pre></blockquote>
+<p>以我的磁盘为例：我的磁盘中存在两个<code>APFS</code>容器，分别是：<code>Container disk1</code>和<code>Container disk2</code>，disk1对应的是我的test卷，它是我测试用的，我演示下使用<code>diskutil</code>命令将<code>apfs</code>转换为<code>hfs+</code>，并且将转换的<code>hfs+</code>分区重新命名为：test<br><strong>[提示:]执行该命令之前请保存你的数据，该命令会直接删除之前该分区存在的数据</strong></p>
+<h5 id="命令："><a href="#命令：" class="headerlink" title="命令："></a>命令：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil apfs deleteContainer disk1 <span class="built_in">test</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>Started APFS operation on disk1<br>Deleting APFS Container with all of its APFS Volumes<br>Unmounting Volumes<br>Unmounting Volume “test” on disk1s1<br>Unmounting Volume “Preboot” on disk1s2<br>Unmounting Volume “Recovery” on disk1s3<br>Unmounting Volume “VM” on disk1s4<br>Deleting Volumes<br>Deleting Container<br>Wiping former APFS disks<br>Switching content types<br>Reformatting former APFS disks<br>Initialized /dev/rdisk0s10 as a 27 GB case-insensitive HFS Plus volume with a 8192k journal<br>Mounting disk<br>1 new disk created or changed due to APFS operation<br>Disk from APFS operation: disk0s10<br>Finished APFS operation on disk1</p>
+</blockquote>
+<h5 id="检查："><a href="#检查：" class="headerlink" title="检查："></a>检查：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
+<p>/dev/disk0(internal, physical):</p>
+<table>
+<thead>
+<tr>
+<th>#:</th>
+<th style="text-align:right">TYPE</th>
+<th style="text-align:left">NAME</th>
+<th>SIZE</th>
+<th>IDENTIFIER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:</td>
+<td style="text-align:right">GUID_partition_scheme</td>
+<td style="text-align:left"></td>
+<td>512 GB</td>
+<td>disk0</td>
+</tr>
+<tr>
+<td>1:</td>
+<td style="text-align:right">EFI</td>
+<td style="text-align:left">EFI</td>
+<td>200 MB</td>
+<td>disk0s1</td>
+</tr>
+<tr>
+<td>2:</td>
+<td style="text-align:right">Apple_HFS</td>
+<td style="text-align:left">MAC</td>
+<td>128 GB</td>
+<td>disk0s2</td>
+</tr>
+<tr>
+<td>…</td>
+<td style="text-align:right">…</td>
+<td style="text-align:left">…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>8:</td>
+<td style="text-align:right">Apple_HFS</td>
+<td style="text-align:left">test</td>
+<td>29.1 GB</td>
+<td>disk0s10</td>
+</tr>
+</tbody>
+</table>
+<p>可以看到test的分区格式已经变回<code>hfs+</code>了。</p>
+<p>本教程结束，更多的命令用法请使用命令：<code>man diskutil</code></p>
+<h4 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h4><h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4 id="黑果小兵的部落阁：http-daliansky-github-io"><a href="#黑果小兵的部落阁：http-daliansky-github-io" class="headerlink" title="黑果小兵的部落阁：http://daliansky.github.io"></a>黑果小兵的部落阁：<a href="http://daliansky.github.io">http://daliansky.github.io</a></h4>]]></content>
     
     <summary type="html">
     
@@ -485,7 +692,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109;">&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
