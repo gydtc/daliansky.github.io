@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://daliansky.github.io/"/>
-  <updated>2017-08-17T06:45:33.000Z</updated>
+  <updated>2017-08-18T15:00:00.000Z</updated>
   <id>http://daliansky.github.io/</id>
   
   <author>
@@ -14,6 +14,122 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用CodecCommander解决ALC1220唤醒无声</title>
+    <link href="http://daliansky.github.io/2017/08/18/Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr/"/>
+    <id>http://daliansky.github.io/2017/08/18/Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr/</id>
+    <published>2017-08-18T14:56:17.000Z</published>
+    <updated>2017-08-18T15:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="使用CodecCommander解决ALC1220唤醒无声"><a href="#使用CodecCommander解决ALC1220唤醒无声" class="headerlink" title="使用CodecCommander解决ALC1220唤醒无声"></a>使用CodecCommander解决ALC1220唤醒无声</h4><h5 id="AppleALC-info-plist"><a href="#AppleALC-info-plist" class="headerlink" title="AppleALC info.plist"></a>AppleALC info.plist</h5><p>f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01</p>
+<h5 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h5><ol>
+<li>去掉0x1a line in real，使用01a70c41 01a70d11 01a70e11 01a70ff0进行屏蔽</li>
+<li>整理出两条cc命令：<br> 01970724 01b70883</li>
+<li>编译CodecCommander，增加10ec_1220，添加ALC1220，将两条cc命令添加进去</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>10ec_1220</th>
+<th>String</th>
+<th>Realtek ALC1220</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Custom Commands</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Data</th>
+<th>01970724</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commont</td>
+<td>String</td>
+<td>0x19 SET_PIN_WIDGET_CONTROL 0x24</td>
+</tr>
+<tr>
+<td>On Init</td>
+<td>Boolean</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>On Sleep</td>
+<td>Boolean</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>ON Wake</td>
+<td>Boolean</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Data</th>
+<th>01b70883</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commont</td>
+<td>String</td>
+<td>0x1b SET_UNSOLICITED_ENABLE 0x83</td>
+</tr>
+<tr>
+<td>On Init</td>
+<td>Boolean</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>On Sleep</td>
+<td>Boolean</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>ON Wake</td>
+<td>Boolean</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Perform Reset</th>
+<th>Boolean</th>
+<th>YES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;使用CodecCommander解决ALC1220唤醒无声&quot;&gt;&lt;a href=&quot;#使用CodecCommander解决ALC1220唤醒无声&quot; class=&quot;headerlink&quot; title=&quot;使用CodecCommander解决ALC1220唤醒无声&quot;&gt;&lt;/a
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Mac常用到的命令[持续更新]</title>
@@ -649,7 +765,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;">&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
