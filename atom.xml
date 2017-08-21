@@ -160,7 +160,7 @@
     <link href="http://daliansky.github.io/2017/08/17/Mac%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84%E5%91%BD%E4%BB%A4-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/"/>
     <id>http://daliansky.github.io/2017/08/17/Mac常用到的命令-持续更新/</id>
     <published>2017-08-17T02:24:00.000Z</published>
-    <updated>2017-08-20T00:19:03.000Z</updated>
+    <updated>2017-08-21T05:27:01.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Mac常用命令"><a href="#Mac常用命令" class="headerlink" title="Mac常用命令"></a>Mac常用命令</h3><h4 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h4><p>熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀<br><a id="more"></a></p>
 <h3 id="1-隐藏“允许任何来源的应用”选项问题"><a href="#1-隐藏“允许任何来源的应用”选项问题" class="headerlink" title="1. 隐藏“允许任何来源的应用”选项问题"></a>1. 隐藏“允许任何来源的应用”选项问题</h3><blockquote>
@@ -419,7 +419,12 @@
 <p>本教程结束，更多的命令用法请使用命令：<code>man diskutil</code></p>
 <h4 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h4><h3 id="4-如何开启原生SSD-Trim功能"><a href="#4-如何开启原生SSD-Trim功能" class="headerlink" title="4. 如何开启原生SSD Trim功能"></a>4. 如何开启原生SSD Trim功能</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo trimforce <span class="built_in">enable</span></div></pre></td></tr></table></figure>
 <p>因为是系统原生工具，此方法无需开启rootless=0，更不会改变已有驱动的签名，也就是说不需要kext-dev-mode=1，白果也可用此方法开启Trim。</p>
-<h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h3 id="5-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题"><a href="#5-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题" class="headerlink" title="5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题"></a>5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题</h3><p>经常有网友需要解决笔记本显示器内屏黑屏问题，目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。<br>其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。最简单的命令是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep IODisplayEDID</div></pre></td></tr></table></figure>
+<p>显示信息如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">| |   | | |       <span class="string">"IODisplayEDID"</span> = &lt;00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8&gt;</div></pre></td></tr></table></figure>
+<p>其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover中，然后保存重启你的电脑。<br><img src="http://ous2s14vo.bkt.clouddn.com/Custom EDID.png" alt="Custom EDID"></p>
+<h4 id="收工-1"><a href="#收工-1" class="headerlink" title="收工"></a>收工</h4><h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 <h4 id="黑果小兵的部落阁：http-daliansky-github-io"><a href="#黑果小兵的部落阁：http-daliansky-github-io" class="headerlink" title="黑果小兵的部落阁：http://daliansky.github.io"></a>黑果小兵的部落阁：<a href="http://daliansky.github.io">http://daliansky.github.io</a></h4>]]></content>
     
     <summary type="html">
@@ -792,7 +797,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x40;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;">&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#x40;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
