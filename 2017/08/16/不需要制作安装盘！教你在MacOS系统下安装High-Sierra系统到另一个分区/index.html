@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="8月 16, 2017" />
-        <meta property="article:modified_time" content="8月 16, 2017" />
+        <meta property="article:modified_time" content="8月 24, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区",
     "url": "http://daliansky.github.io/2017/08/16/不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区/index.html",
     "datePublished": "8月 16, 2017",
-    "dateModified": "8月 16, 2017",
+    "dateModified": "8月 24, 2017",
     "description": "一些平时学习笔记以及搜集到的好的文章",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -494,7 +494,7 @@
 <li>通过App Store下载macOS High Sierra Developer Beta 5/ Public Beta 4安装程序。</li>
 <li>在要使用磁盘实用程序安装测试版的驱动器上创建HFS日志分区（名称不能包含空格）。</li>
 <li>打开应用程序目录，右键单击macOS Beta安装程序，然后单击显示包内容。 转到<code>Contents&gt;Shared Support</code>，然后双击<code>InstallESD.dmg</code>和<code>BaseSystem.dmg</code>挂载它们。</li>
-<li>打开安装的<code>InstallESD.dmg</code>，打开Packages文件夹，然后打开<code>OSInstall.mpkg</code>文件。 这将打开macOS安装程序。 是的，现在您可以从启动的MacOS系统桌面安装High Sierra Beta。 选择您创建的分区以安装它，安装完成后，按照步骤5。</li>
+<li>打开安装的<code>InstallESD.dmg</code>，打开Packages文件夹，然后打开<code>OSInstall.mpkg</code>文件。 这将打开macOS安装程序。 是的，现在您可以从启动的MacOS系统桌面安装High Sierra Beta。 选择您创建的分区以安装它[备注：如果无法安装请执行：<code>diskutil umount HighSierra</code> <code>diskutil mount HighSierra</code> <code>HighSierra</code>是指卷名]；安装完成后，按照步骤5。</li>
 <li>打开已安装的<code>BaseSystem.dmg</code>并将boot.efi从/System/Library/CoreServices复制到同一位置的High Sierra分区（<code>/System/Library/CoreServices</code>）</li>
 <li>虽然安装了HS测试版，但它尚不可启动。 要使其可引导，请打开<code>终端</code>并键入以下命令：<code>[假设安装分区为：HighSierra]</code></li>
 </ol>
