@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://daliansky.github.io/"/>
-  <updated>2017-08-25T11:56:37.000Z</updated>
+  <updated>2017-08-25T12:27:02.000Z</updated>
   <id>http://daliansky.github.io/</id>
   
   <author>
@@ -20,9 +20,27 @@
     <link href="http://daliansky.github.io/2017/08/25/Existing-Lilu-Plugins/"/>
     <id>http://daliansky.github.io/2017/08/25/Existing-Lilu-Plugins/</id>
     <published>2017-08-25T08:45:19.000Z</published>
-    <updated>2017-08-25T11:56:37.000Z</updated>
+    <updated>2017-08-25T12:27:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Lilu插件列表-持续更新"><a href="#Lilu插件列表-持续更新" class="headerlink" title="Lilu插件列表[持续更新]"></a>Lilu插件列表[持续更新]</h1><p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
+    <content type="html"><![CDATA[<h1 id="Lilu插件列表-持续更新"><a href="#Lilu插件列表-持续更新" class="headerlink" title="Lilu插件列表[持续更新]"></a>Lilu插件列表[持续更新]</h1><p>本文部分翻译自 <a href="https://github.com/vit9696/Lilu/blob/master/README.md" target="_blank" rel="external">Lilu的README</a>，一些部分基于楼主的理解写出。</p>
+<h4 id="什么是-Lilu-？"><a href="#什么是-Lilu-？" class="headerlink" title="什么是 Lilu ？"></a>什么是 Lilu ？</h4><blockquote>
+<p>Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)</p>
+</blockquote>
+<h4 id="Lilu-目前实现的功能？"><a href="#Lilu-目前实现的功能？" class="headerlink" title="Lilu 目前实现的功能？"></a>Lilu 目前实现的功能？</h4><blockquote>
+<p>为 kext 打补丁<br>为 进程 打补丁    (目前仅支持 64 位)<br>为 运行库 打补丁 (目前仅支持 64 位)<br>提供一套统一的 API 接口</p>
+</blockquote>
+<h4 id="如何理解-“提供一套统一的-API-接口”？"><a href="#如何理解-“提供一套统一的-API-接口”？" class="headerlink" title="如何理解 “提供一套统一的 API 接口”？"></a>如何理解 “提供一套统一的 API 接口”？</h4><p>这意味着 Lilu 自身是不起任何作用的，你需要额外使用依赖它的 kext ，目前已知需要依赖 Lilu 的 kext 可在 下方 找到。</p>
+<h4 id="下载-安装"><a href="#下载-安装" class="headerlink" title="下载/安装"></a>下载/安装</h4><h5 id="关于下载："><a href="#关于下载：" class="headerlink" title="关于下载："></a>关于下载：</h5><p>你可以<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">直接下载</a>作者编译好的版本，或者从 <a href="https://github.com/vit9696/Lilu/" target="_blank" rel="external">GitHub</a> 下载源码自行编译。</p>
+<h5 id="关于安装："><a href="#关于安装：" class="headerlink" title="关于安装："></a>关于安装：</h5><ul>
+<li>建议将 Lilu 以及依赖它的 kext 放置于引导器用于注入 kext 的位置并使用引导器注入它，目前主流的引导器都有注入 kext 的功能。</li>
+<li>如果将其放置于 <code>/System/Library/Extensions</code> 或者 <code>/Library/Extensions</code> 下的话，你还需要 <code>LiluFriend</code> 并正确配置使其正常工作。</li>
+</ul>
+<h4 id="Lilu-支持的内核参数-kernel-flags"><a href="#Lilu-支持的内核参数-kernel-flags" class="headerlink" title="Lilu 支持的内核参数(kernel flags)"></a>Lilu 支持的内核参数(kernel flags)</h4><p><code>-liludbg</code> 可以开启排错日志模式，不过只有 DEBUG 版本才可用。(对于日常使用的 RELEASE 版本此参数无效)<br><code>-liluoff</code> 会禁用 Lilu 和依赖它的 kext 。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-liluslow</code> 会启用旧版的 UserPatcher 。(可能与修改进程、运行库有关，具体的因为楼主对 Lilu 代码不是很熟悉，所以也就没法解释清楚了，抱歉)<br><code>-lilulowmem</code> 会禁止 Lilu 和依赖它的 kext 在 Recovery 模式下载入。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-lilubeta</code> 会在不受支持的 Darwin 版本启用 Lilu 。</p>
+<h4 id="致开发者-有兴趣的朋友："><a href="#致开发者-有兴趣的朋友：" class="headerlink" title="致开发者/有兴趣的朋友："></a>致开发者/有兴趣的朋友：</h4><p>关于 Log 输出，目前 Lilu 提供的 API 中有两个输出 Log 的接口，分别为 SYSLOG(“msg\n”); 与 DBGLOG(“msg\n”); 这两个 macro ，具体输出原理这里不做过多解释，仍是调用 Apple 在 IOLib.h 中为我们提供的 IOLog 接口。<br>但要特别注意的是，如上所说，DBGLOG(“msg\n”); 这个 macro 需要在 DEBUG 模式开启下才会被编译。<br>相信各位看这段代码即可了解。;) (来自 Headers/kern_util.hpp)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#define SYSLOG(str, ...) IOLog( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)</span></div><div class="line"></div><div class="line"><span class="comment">#ifdef DEBUG</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...)                                                                                                                                \</span></div><div class="line">        <span class="keyword">do</span> &#123;                                                                                                                                                                \</div><div class="line">                <span class="keyword">if</span> (ADDPR(debugEnabled))                                                                                \</div><div class="line">                        IOLog( xStringify(PRODUCT_NAME) <span class="string">": (DEBUG) "</span> str <span class="string">"\n"</span>, <span class="comment">## __VA_ARGS__);                \</span></div><div class="line">        &#125; <span class="keyword">while</span>(0)</div><div class="line"><span class="comment">#else</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...) do &#123; &#125; while(0)</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure>
+<p>另外，原宏中已经自带了换行符 \n ，所以在编写 Log 时也就无必要再换行了。</p>
+<h4 id="Bug-反馈"><a href="#Bug-反馈" class="headerlink" title="Bug 反馈"></a>Bug 反馈</h4><p>建议在作者的 <a href="https://github.com/vit9696/Lilu/issues" target="_blank" rel="external">GitHub Issues</a> 中提交，需使用英文。</p>
+<h3 id="Lilu插件列表"><a href="#Lilu插件列表" class="headerlink" title="Lilu插件列表"></a>Lilu插件列表</h3><p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
 <p>目前已知需依赖 Lilu 的 kext &amp; 作用简单说明<br>注：某些 kext 可能还没有列在这里，如果你有发现的话，可以跟帖反馈。</p>
 <table>
 <thead>
@@ -105,7 +123,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Lilu插件列表-持续更新&quot;&gt;&lt;a href=&quot;#Lilu插件列表-持续更新&quot; class=&quot;headerlink&quot; title=&quot;Lilu插件列表[持续更新]&quot;&gt;&lt;/a&gt;Lilu插件列表[持续更新]&lt;/h1&gt;&lt;p&gt;此插件列表来自 Lilu 的 &lt;a href=&quot;
+      &lt;h1 id=&quot;Lilu插件列表-持续更新&quot;&gt;&lt;a href=&quot;#Lilu插件列表-持续更新&quot; class=&quot;headerlink&quot; title=&quot;Lilu插件列表[持续更新]&quot;&gt;&lt;/a&gt;Lilu插件列表[持续更新]&lt;/h1&gt;&lt;p&gt;本文部分翻译自 &lt;a href=&quot;https:/
     
     </summary>
     
@@ -928,7 +946,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x40;&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x40;&#101;&#120;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#99;&#111;&#x6d;">&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#99;&#111;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
