@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://daliansky.github.io/"/>
-  <updated>2017-08-22T06:41:52.000Z</updated>
+  <updated>2017-08-25T08:47:48.000Z</updated>
   <id>http://daliansky.github.io/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LiLu插件列表[持续更新]</title>
+    <link href="http://daliansky.github.io/2017/08/25/Existing-Lilu-Plugins/"/>
+    <id>http://daliansky.github.io/2017/08/25/Existing-Lilu-Plugins/</id>
+    <published>2017-08-25T08:45:19.000Z</published>
+    <updated>2017-08-25T08:47:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LiLu插件列表-持续更新"><a href="#LiLu插件列表-持续更新" class="headerlink" title="LiLu插件列表[持续更新]"></a>LiLu插件列表[持续更新]</h1><p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
+<p>目前已知需依赖 Lilu 的 kext &amp; 作用简单说明<br>注：某些 kext 可能还没有列在这里，如果你有发现的话，可以跟帖反馈。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Short description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> | 修补 Broadcom Wi-Fi 综合问题<br><a href="https://github.com/vit9696/AppleALC" target="_blank" rel="external">AppleALC</a> | 动态对系统注入必要的文件/打补丁以驱动声卡<br><a href="https://github.com/coderobe/AzulPatcher4600" target="_blank" rel="external">AzulPatcher4600</a> | 一些针对某些笔记型 HD4600 的额外修复<br><a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a> | 动态修改某些系统运行库/kext 以解决非 Iris 系列 Intel 核显/部分 N 卡高分辨率输出问题<br><a href="https://github.com/PMheart/CPUFriend" target="_blank" rel="external">CPUFriend</a> | 动态向 X86 注入 CPU 电源管理数据<br><a href="https://github.com/syscl/EnableLidWake" target="_blank" rel="external">EnableLidWake</a> | 为某些 Intel 核显开启合盖睡眠<br><a href="https://sourceforge.net/p/hibernationfixup" target="_blank" rel="external">HibernationFixup</a> | 在某些机器上修复 3/25 模式下的休眠状态<br><a href="https://sourceforge.net/p/intelgraphicsfixup" target="_blank" rel="external">IntelGraphicsFixup</a> | 修补 Intel 核显综合问题 (开机花屏，Haswell/Skylake 因 PAVP 导致的死机等等)<br><a href="https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup" target="_blank" rel="external">IntelGraphicsDVMTFixup</a> | 修正 Broadwell/Skylake 平台核显因 DVMT 不足而导致的死机<br><a href="https://github.com/Austere-J/NightShiftUnlocker" target="_blank" rel="external">NightShiftUnlocker</a> | 解决老机型无法使用自 10.12.4 开始引入的 NightShift 功能<a href="https://sourceforge.net/p/nvidiagraphicsfixup" target="_blank" rel="external">NvidiaGraphicsFixup</a> | 修正 N 卡 (可能也适用于 I 卡) 使用某些 SMBios 如 MacPro6,1 等引发黑屏的问题<br><a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a> | 动态修改 iTunes 相关系统进程，以在 Ivy Bridge 或更新的平台上正确使用 iTunes 相关服务，同时其内置的 ResourceConverter 亦可配置一些自定义的针对其他 framework/lib/process 的补丁 (<a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a> 的早期测试版本即基于 <a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a> 编写)<br><a href="https://github.com/vit9696/WhateverGreen" target="_blank" rel="external">WhateverGreen</a> | 修补 AMD 独显综合问题 （单卡启动黑屏，唤醒黑屏 等等）</p>
+<p>将功能合并到其他插件中的插件：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Short description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a> | 现已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。</p>
+<h5 id="原文链接：口袋妖怪heart"><a href="#原文链接：口袋妖怪heart" class="headerlink" title="原文链接：口袋妖怪heart"></a>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;LiLu插件列表-持续更新&quot;&gt;&lt;a href=&quot;#LiLu插件列表-持续更新&quot; class=&quot;headerlink&quot; title=&quot;LiLu插件列表[持续更新]&quot;&gt;&lt;/a&gt;LiLu插件列表[持续更新]&lt;/h1&gt;&lt;p&gt;此插件列表来自 Lilu 的 &lt;a href=&quot;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像</title>
@@ -475,7 +524,7 @@
     <link href="http://daliansky.github.io/2017/08/16/%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%B6%E4%BD%9C%E5%AE%89%E8%A3%85%E7%9B%98%EF%BC%81%E6%95%99%E4%BD%A0%E5%9C%A8MacOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85High-Sierra%E7%B3%BB%E7%BB%9F%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%88%86%E5%8C%BA/"/>
     <id>http://daliansky.github.io/2017/08/16/不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区/</id>
     <published>2017-08-16T14:11:02.000Z</published>
-    <updated>2017-08-24T02:27:04.000Z</updated>
+    <updated>2017-08-24T13:04:38.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区"><a href="#不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区" class="headerlink" title="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区"></a>不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</h3><h4 id="此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。"><a href="#此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。" class="headerlink" title="此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。"></a><em>此方法不支持APFS分区</em>。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。</h4><blockquote>
 <p>我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。<br>通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 </p>
@@ -831,7 +880,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#101;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;">&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
