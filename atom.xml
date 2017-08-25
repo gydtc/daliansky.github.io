@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://daliansky.github.io/"/>
-  <updated>2017-08-25T08:47:48.000Z</updated>
+  <updated>2017-08-25T11:53:40.000Z</updated>
   <id>http://daliansky.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://daliansky.github.io/2017/08/25/Existing-Lilu-Plugins/"/>
     <id>http://daliansky.github.io/2017/08/25/Existing-Lilu-Plugins/</id>
     <published>2017-08-25T08:45:19.000Z</published>
-    <updated>2017-08-25T08:47:48.000Z</updated>
+    <updated>2017-08-25T11:53:40.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="LiLu插件列表-持续更新"><a href="#LiLu插件列表-持续更新" class="headerlink" title="LiLu插件列表[持续更新]"></a>LiLu插件列表[持续更新]</h1><p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
 <p>目前已知需依赖 Lilu 的 kext &amp; 作用简单说明<br>注：某些 kext 可能还没有列在这里，如果你有发现的话，可以跟帖反馈。</p>
@@ -33,11 +33,59 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></td>
+<td style="text-align:left">修补 Broadcom Wi-Fi 综合问题</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/vit9696/AppleALC" target="_blank" rel="external">AppleALC</a></td>
+<td style="text-align:left">动态对系统注入必要的文件/打补丁以驱动声卡</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/coderobe/AzulPatcher4600" target="_blank" rel="external">AzulPatcher4600</a></td>
+<td style="text-align:left">一些针对某些笔记型 HD4600 的额外修复</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a></td>
+<td style="text-align:left">动态修改某些系统运行库/kext 以解决非 Iris 系列 Intel 核显/部分 N 卡高分辨率输出问题</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/PMheart/CPUFriend" target="_blank" rel="external">CPUFriend</a></td>
+<td style="text-align:left">动态向 X86 注入 CPU 电源管理数据</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/syscl/EnableLidWake" target="_blank" rel="external">EnableLidWake</a></td>
+<td style="text-align:left">为某些 Intel 核显开启合盖睡眠</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://sourceforge.net/p/hibernationfixup" target="_blank" rel="external">HibernationFixup</a></td>
+<td style="text-align:left">在某些机器上修复 3/25 模式下的休眠状态</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://sourceforge.net/p/intelgraphicsfixup" target="_blank" rel="external">IntelGraphicsFixup</a></td>
+<td style="text-align:left">修补 Intel 核显综合问题 (开机花屏，Haswell/Skylake 因 PAVP 导致的死机等等)</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup" target="_blank" rel="external">IntelGraphicsDVMTFixup</a></td>
+<td style="text-align:left">修正 Broadwell/Skylake 平台核显因 DVMT 不足而导致的死机</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/Austere-J/NightShiftUnlocker" target="_blank" rel="external">NightShiftUnlocker</a></td>
+<td style="text-align:left">解决老机型无法使用自 10.12.4 开始引入的 NightShift 功能</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://sourceforge.net/p/nvidiagraphicsfixup" target="_blank" rel="external">NvidiaGraphicsFixup</a></td>
+<td style="text-align:left">修正 N 卡 (可能也适用于 I 卡) 使用某些 SMBios 如 MacPro6,1 等引发黑屏的问题</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a></td>
+<td style="text-align:left">动态修改 iTunes 相关系统进程，以在 Ivy Bridge 或更新的平台上正确使用 iTunes 相关服务，同时其内置的 ResourceConverter 亦可配置一些自定义的针对其他 framework/lib/process 的补丁 (<a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a> 的早期测试版本即基于 <a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a> 编写)</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/vit9696/WhateverGreen" target="_blank" rel="external">WhateverGreen</a></td>
+<td style="text-align:left">修补 AMD 独显综合问题 （单卡启动黑屏，唤醒黑屏 等等）</td>
 </tr>
 </tbody>
 </table>
-<p><a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> | 修补 Broadcom Wi-Fi 综合问题<br><a href="https://github.com/vit9696/AppleALC" target="_blank" rel="external">AppleALC</a> | 动态对系统注入必要的文件/打补丁以驱动声卡<br><a href="https://github.com/coderobe/AzulPatcher4600" target="_blank" rel="external">AzulPatcher4600</a> | 一些针对某些笔记型 HD4600 的额外修复<br><a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a> | 动态修改某些系统运行库/kext 以解决非 Iris 系列 Intel 核显/部分 N 卡高分辨率输出问题<br><a href="https://github.com/PMheart/CPUFriend" target="_blank" rel="external">CPUFriend</a> | 动态向 X86 注入 CPU 电源管理数据<br><a href="https://github.com/syscl/EnableLidWake" target="_blank" rel="external">EnableLidWake</a> | 为某些 Intel 核显开启合盖睡眠<br><a href="https://sourceforge.net/p/hibernationfixup" target="_blank" rel="external">HibernationFixup</a> | 在某些机器上修复 3/25 模式下的休眠状态<br><a href="https://sourceforge.net/p/intelgraphicsfixup" target="_blank" rel="external">IntelGraphicsFixup</a> | 修补 Intel 核显综合问题 (开机花屏，Haswell/Skylake 因 PAVP 导致的死机等等)<br><a href="https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup" target="_blank" rel="external">IntelGraphicsDVMTFixup</a> | 修正 Broadwell/Skylake 平台核显因 DVMT 不足而导致的死机<br><a href="https://github.com/Austere-J/NightShiftUnlocker" target="_blank" rel="external">NightShiftUnlocker</a> | 解决老机型无法使用自 10.12.4 开始引入的 NightShift 功能<a href="https://sourceforge.net/p/nvidiagraphicsfixup" target="_blank" rel="external">NvidiaGraphicsFixup</a> | 修正 N 卡 (可能也适用于 I 卡) 使用某些 SMBios 如 MacPro6,1 等引发黑屏的问题<br><a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a> | 动态修改 iTunes 相关系统进程，以在 Ivy Bridge 或更新的平台上正确使用 iTunes 相关服务，同时其内置的 ResourceConverter 亦可配置一些自定义的针对其他 framework/lib/process 的补丁 (<a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a> 的早期测试版本即基于 <a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a> 编写)<br><a href="https://github.com/vit9696/WhateverGreen" target="_blank" rel="external">WhateverGreen</a> | 修补 AMD 独显综合问题 （单卡启动黑屏，唤醒黑屏 等等）</p>
 <p>将功能合并到其他插件中的插件：</p>
 <table>
 <thead>
@@ -48,11 +96,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a></td>
+<td style="text-align:left">现已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。</td>
 </tr>
 </tbody>
 </table>
-<p><a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a> | 现已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。</p>
 <h5 id="原文链接：口袋妖怪heart"><a href="#原文链接：口袋妖怪heart" class="headerlink" title="原文链接：口袋妖怪heart"></a>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5>]]></content>
     
     <summary type="html">
@@ -880,7 +928,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;">&#101;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
