@@ -661,9 +661,9 @@
       <category term="教程" scheme="http://daliansky.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="high sierra" scheme="http://daliansky.github.io/tags/high-sierra/"/>
-    
       <category term="安装" scheme="http://daliansky.github.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="high sierra" scheme="http://daliansky.github.io/tags/high-sierra/"/>
     
       <category term="分区" scheme="http://daliansky.github.io/tags/%E5%88%86%E5%8C%BA/"/>
     
@@ -898,8 +898,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;hotpatch详解&quot;&gt;&lt;a href=&quot;#hotpatch详解&quot; class=&quot;headerlink&quot; title=&quot;hotpatch详解&quot;&gt;&lt;/a&gt;hotpatch详解&lt;/h2&gt;&lt;p&gt;这里阐述hotpatch的作用及各功能详解&lt;/p&gt;
-&lt;p&gt;[TOC]
+      hotpatch列表及详解
     
     </summary>
     
