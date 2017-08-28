@@ -127,9 +127,7 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://daliansky.github.io/categories/Mac/"/>
-    
-      <category term="插件" scheme="http://daliansky.github.io/categories/Mac/%E6%8F%92%E4%BB%B6/"/>
+      <category term="插件" scheme="http://daliansky.github.io/categories/%E6%8F%92%E4%BB%B6/"/>
     
     
       <category term="Lilu" scheme="http://daliansky.github.io/tags/Lilu/"/>
@@ -170,9 +168,9 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://daliansky.github.io/categories/Mac/"/>
+      <category term="下载" scheme="http://daliansky.github.io/categories/%E4%B8%8B%E8%BD%BD/"/>
     
-      <category term="下载" scheme="http://daliansky.github.io/categories/Mac/%E4%B8%8B%E8%BD%BD/"/>
+      <category term="镜像" scheme="http://daliansky.github.io/categories/%E4%B8%8B%E8%BD%BD/%E9%95%9C%E5%83%8F/"/>
     
     
       <category term="10.13" scheme="http://daliansky.github.io/tags/10-13/"/>
@@ -206,9 +204,7 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://daliansky.github.io/categories/Mac/"/>
-    
-      <category term="破解" scheme="http://daliansky.github.io/categories/Mac/%E7%A0%B4%E8%A7%A3/"/>
+      <category term="破解" scheme="http://daliansky.github.io/categories/%E7%A0%B4%E8%A7%A3/"/>
     
     
       <category term="破解" scheme="http://daliansky.github.io/tags/%E7%A0%B4%E8%A7%A3/"/>
@@ -332,7 +328,7 @@
     
     </summary>
     
-      <category term="Mac - 驱动 - ALC" scheme="http://daliansky.github.io/categories/Mac-%E9%A9%B1%E5%8A%A8-ALC/"/>
+      <category term="驱动" scheme="http://daliansky.github.io/categories/%E9%A9%B1%E5%8A%A8/"/>
     
     
       <category term="ALC" scheme="http://daliansky.github.io/tags/ALC/"/>
@@ -622,7 +618,7 @@
     
     </summary>
     
-      <category term="Mac - 教程 - shell" scheme="http://daliansky.github.io/categories/Mac-%E6%95%99%E7%A8%8B-shell/"/>
+      <category term="教程" scheme="http://daliansky.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="shell" scheme="http://daliansky.github.io/tags/shell/"/>
@@ -662,9 +658,7 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://daliansky.github.io/categories/Mac/"/>
-    
-      <category term="教程" scheme="http://daliansky.github.io/categories/Mac/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://daliansky.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="high sierra" scheme="http://daliansky.github.io/tags/high-sierra/"/>
@@ -712,9 +706,7 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://daliansky.github.io/categories/Mac/"/>
-    
-      <category term="下载" scheme="http://daliansky.github.io/categories/Mac/%E4%B8%8B%E8%BD%BD/"/>
+      <category term="下载" scheme="http://daliansky.github.io/categories/%E4%B8%8B%E8%BD%BD/"/>
     
     
       <category term="镜像" scheme="http://daliansky.github.io/tags/%E9%95%9C%E5%83%8F/"/>
@@ -909,7 +901,7 @@
     
     </summary>
     
-      <category term="Mac - 教程 - 驱动" scheme="http://daliansky.github.io/categories/Mac-%E6%95%99%E7%A8%8B-%E9%A9%B1%E5%8A%A8/"/>
+      <category term="教程" scheme="http://daliansky.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="hotpatch" scheme="http://daliansky.github.io/tags/hotpatch/"/>
@@ -950,7 +942,9 @@
     
     </summary>
     
-      <category term="Mac - 下载 - 镜像" scheme="http://daliansky.github.io/categories/Mac-%E4%B8%8B%E8%BD%BD-%E9%95%9C%E5%83%8F/"/>
+      <category term="下载" scheme="http://daliansky.github.io/categories/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="镜像" scheme="http://daliansky.github.io/categories/%E4%B8%8B%E8%BD%BD/%E9%95%9C%E5%83%8F/"/>
     
     
       <category term="10.13" scheme="http://daliansky.github.io/tags/10-13/"/>
