@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.daliansky.net/"/>
-  <updated>2017-08-29T02:42:02.000Z</updated>
+  <updated>2017-08-29T08:16:23.000Z</updated>
   <id>http://blog.daliansky.net/</id>
   
   <author>
@@ -16,13 +16,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows下使用diskpart建立EFI分区</title>
+    <link href="http://blog.daliansky.net/2017/08/29/Under-Windows-using-DISKPART-to-create-EFI-points/"/>
+    <id>http://blog.daliansky.net/2017/08/29/Under-Windows-using-DISKPART-to-create-EFI-points/</id>
+    <published>2017-08-29T08:04:22.000Z</published>
+    <updated>2017-08-29T08:16:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3>Windows下使用diskpart建立EFI分区</h3>
+<p>很多人在安装黑苹果的时候都需要在<code>Windows</code>下使用<a href="www.diskgenius.cn/download.php">DiskGenius</a>进行分区，其实在<code>Windows 7</code>及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：<code>diskpart</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3&gt;Windows下使用diskpart建立EFI分区&lt;/h3&gt;
+&lt;p&gt;很多人在安装黑苹果的时候都需要在&lt;code&gt;Windows&lt;/code&gt;下使用&lt;a href=&quot;www.diskgenius.cn/download.php&quot;&gt;DiskGenius&lt;/a&gt;进行分区，其实在
+    
+    </summary>
+    
+      <category term="教程" scheme="http://blog.daliansky.net/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="diskpart" scheme="http://blog.daliansky.net/tags/diskpart/"/>
+    
+      <category term="windows" scheme="http://blog.daliansky.net/tags/windows/"/>
+    
+      <category term="分区" scheme="http://blog.daliansky.net/tags/%E5%88%86%E5%8C%BA/"/>
+    
+      <category term="EFI" scheme="http://blog.daliansky.net/tags/EFI/"/>
+    
+      <category term="ESP" scheme="http://blog.daliansky.net/tags/ESP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是个测试帖</title>
+    <link href="http://blog.daliansky.net/2017/08/29/%E8%BF%99%E6%98%AF%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%B8%96/"/>
+    <id>http://blog.daliansky.net/2017/08/29/这是个测试帖/</id>
+    <published>2017-08-29T06:45:23.000Z</published>
+    <updated>2017-08-29T06:45:24.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像</title>
     <link href="http://blog.daliansky.net/2017/08/29/MacOS-High-Sierra-10.13DB8-17A358a-and-Clover-4189/"/>
     <id>http://blog.daliansky.net/2017/08/29/MacOS-High-Sierra-10.13DB8-17A358a-and-Clover-4189/</id>
     <published>2017-08-29T02:03:58.000Z</published>
     <updated>2017-08-29T02:42:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13DB8-17A358a-with-Clover-4189原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13DB8-17A358a-with-Clover-4189原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像"></a>【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像</h3><ul>
+    <content type="html"><![CDATA[<h3>【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像</h3>
+<ul>
 <li>本镜像采用官方原版app制作，集成Clover 4189，支持UEFI启动安装。</li>
 <li>Clover默认config.plist为620/630/640/650；</li>
 <li>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
@@ -33,16 +81,25 @@
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
-<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/17A358a.png" alt="17A358a"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover Configurator.png" alt="Clover Configurator"><br><img src="http://ous2s14vo.bkt.clouddn.com/Other Drivers.png" alt="Other Drivers"></p>
-<h4 id="下载链接-百度云盘"><a href="#下载链接-百度云盘" class="headerlink" title="下载链接: 百度云盘"></a>下载链接: <a href="https://pan.baidu.com/s/1qXTeYWc" target="_blank" rel="external">百度云盘</a></h4><ul>
+<h4>截图：</h4>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/17A358a.png" alt="17A358a">
+![Clover Configurator](http://ous2s14vo.bkt.clouddn.com/Clover Configurator.png)
+![Other Drivers](http://ous2s14vo.bkt.clouddn.com/Other Drivers.png)</p>
+<h4>下载链接: <a href="https://pan.baidu.com/s/1qXTeYWc" target="_blank" rel="external">https://pan.baidu.com/s/1qXTeYWc</a></h4>
+<ul>
 <li>MD5 (macOS High Sierra 10.13DB8 17A358a with Clover 4189.dmg) = 559bbd4ad59f5f12cf058e271ef6d871</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13DB8-17A358a-with-Clover-4189原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13DB8-17A358a-with-Clover-4189原版
+      &lt;h3&gt;【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4189，支持UEFI启动安装。&lt;/li&gt;
+&lt;li&gt;Clover默认co
     
     </summary>
     
@@ -70,26 +127,47 @@
     <published>2017-08-25T08:45:19.000Z</published>
     <updated>2017-08-29T02:55:38.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Lilu插件列表-持续更新"><a href="#Lilu插件列表-持续更新" class="headerlink" title="Lilu插件列表[持续更新]"></a>Lilu插件列表[持续更新]</h1><p>本文部分翻译自 <a href="https://github.com/vit9696/Lilu/blob/master/README.md" target="_blank" rel="external">Lilu的README</a>，一些部分基于楼主的理解写出。</p>
-<h4 id="什么是-Lilu-？"><a href="#什么是-Lilu-？" class="headerlink" title="什么是 Lilu ？"></a>什么是 Lilu ？</h4><blockquote>
-<p>Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)</p>
+    <content type="html"><![CDATA[<h1>Lilu插件列表[持续更新]</h1>
+<p>本文部分翻译自 <a href="https://github.com/vit9696/Lilu/blob/master/README.md" target="_blank" rel="external">Lilu的README</a>，一些部分基于楼主的理解写出。</p>
+<h4>什么是 Lilu ？</h4>
+<blockquote>
+<p>Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对&quot;任意&quot; 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)</p>
 </blockquote>
-<h4 id="Lilu-目前实现的功能？"><a href="#Lilu-目前实现的功能？" class="headerlink" title="Lilu 目前实现的功能？"></a>Lilu 目前实现的功能？</h4><blockquote>
-<p>为 kext 打补丁<br>为 进程 打补丁    (目前仅支持 64 位)<br>为 运行库 打补丁 (目前仅支持 64 位)<br>提供一套统一的 API 接口</p>
+<h4>Lilu 目前实现的功能？</h4>
+<blockquote>
+<p>为 kext 打补丁
+为 进程 打补丁    (目前仅支持 64 位)
+为 运行库 打补丁 (目前仅支持 64 位)
+提供一套统一的 API 接口</p>
 </blockquote>
-<h4 id="如何理解-“提供一套统一的-API-接口”？"><a href="#如何理解-“提供一套统一的-API-接口”？" class="headerlink" title="如何理解 “提供一套统一的 API 接口”？"></a>如何理解 “提供一套统一的 API 接口”？</h4><p>这意味着 Lilu 自身是不起任何作用的，你需要额外使用依赖它的 kext ，目前已知需要依赖 Lilu 的 kext 可在 下方 找到。</p>
-<h4 id="下载-安装"><a href="#下载-安装" class="headerlink" title="下载/安装"></a>下载/安装</h4><h5 id="关于下载："><a href="#关于下载：" class="headerlink" title="关于下载："></a>关于下载：</h5><p>你可以<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">直接下载</a>作者编译好的版本，或者从 <a href="https://github.com/vit9696/Lilu/" target="_blank" rel="external">GitHub</a> 下载源码自行编译。</p>
-<h5 id="关于安装："><a href="#关于安装：" class="headerlink" title="关于安装："></a>关于安装：</h5><ul>
+<h4>如何理解 &quot;提供一套统一的 API 接口&quot;？</h4>
+<p>这意味着 Lilu 自身是不起任何作用的，你需要额外使用依赖它的 kext ，目前已知需要依赖 Lilu 的 kext 可在 下方 找到。</p>
+<h4>下载/安装</h4>
+<h5>关于下载：</h5>
+<p>你可以<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">直接下载</a>作者编译好的版本，或者从 <a href="https://github.com/vit9696/Lilu/" target="_blank" rel="external">GitHub</a> 下载源码自行编译。</p>
+<h5>关于安装：</h5>
+<ul>
 <li>建议将 Lilu 以及依赖它的 kext 放置于引导器用于注入 kext 的位置并使用引导器注入它，目前主流的引导器都有注入 kext 的功能。</li>
 <li>如果将其放置于 <code>/System/Library/Extensions</code> 或者 <code>/Library/Extensions</code> 下的话，你还需要 <code>LiluFriend</code> 并正确配置使其正常工作。</li>
 </ul>
-<h4 id="Lilu-支持的内核参数-kernel-flags"><a href="#Lilu-支持的内核参数-kernel-flags" class="headerlink" title="Lilu 支持的内核参数(kernel flags)"></a>Lilu 支持的内核参数(kernel flags)</h4><p><code>-liludbg</code> 可以开启排错日志模式，不过只有 DEBUG 版本才可用。(对于日常使用的 RELEASE 版本此参数无效)<br><code>-liluoff</code> 会禁用 Lilu 和依赖它的 kext 。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-liluslow</code> 会启用旧版的 UserPatcher 。(可能与修改进程、运行库有关，具体的因为楼主对 Lilu 代码不是很熟悉，所以也就没法解释清楚了，抱歉)<br><code>-lilulowmem</code> 会禁止 Lilu 和依赖它的 kext 在 Recovery 模式下载入。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-lilubeta</code> 会在不受支持的 Darwin 版本启用 Lilu 。</p>
-<h4 id="致开发者-有兴趣的朋友："><a href="#致开发者-有兴趣的朋友：" class="headerlink" title="致开发者/有兴趣的朋友："></a>致开发者/有兴趣的朋友：</h4><p>关于 Log 输出，目前 Lilu 提供的 API 中有两个输出 Log 的接口，分别为 SYSLOG(“msg\n”); 与 DBGLOG(“msg\n”); 这两个 macro ，具体输出原理这里不做过多解释，仍是调用 Apple 在 IOLib.h 中为我们提供的 IOLog 接口。<br>但要特别注意的是，如上所说，DBGLOG(“msg\n”); 这个 macro 需要在 DEBUG 模式开启下才会被编译。<br>相信各位看这段代码即可了解。;) (来自 Headers/kern_util.hpp)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#define SYSLOG(str, ...) IOLog( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)</span></div><div class="line"></div><div class="line"><span class="comment">#ifdef DEBUG</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...)                                                                                                                                \</span></div><div class="line">        <span class="keyword">do</span> &#123;                                                                                                                                                                \</div><div class="line">                <span class="keyword">if</span> (ADDPR(debugEnabled))                                                                                \</div><div class="line">                        IOLog( xStringify(PRODUCT_NAME) <span class="string">": (DEBUG) "</span> str <span class="string">"\n"</span>, <span class="comment">## __VA_ARGS__);                \</span></div><div class="line">        &#125; <span class="keyword">while</span>(0)</div><div class="line"><span class="comment">#else</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...) do &#123; &#125; while(0)</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure>
+<h4>Lilu 支持的内核参数(kernel flags)</h4>
+<p><code>-liludbg</code> 可以开启排错日志模式，不过只有 DEBUG 版本才可用。(对于日常使用的 RELEASE 版本此参数无效)
+<code>-liluoff</code> 会禁用 Lilu 和依赖它的 kext 。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)
+<code>-liluslow</code> 会启用旧版的 UserPatcher 。(可能与修改进程、运行库有关，具体的因为楼主对 Lilu 代码不是很熟悉，所以也就没法解释清楚了，抱歉)
+<code>-lilulowmem</code> 会禁止 Lilu 和依赖它的 kext 在 Recovery 模式下载入。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)
+<code>-lilubeta</code> 会在不受支持的 Darwin 版本启用 Lilu 。</p>
+<h4>致开发者/有兴趣的朋友：</h4>
+<p>关于 Log 输出，目前 Lilu 提供的 API 中有两个输出 Log 的接口，分别为 SYSLOG(&quot;msg\n&quot;); 与 DBGLOG(&quot;msg\n&quot;); 这两个 macro ，具体输出原理这里不做过多解释，仍是调用 Apple 在 IOLib.h 中为我们提供的 IOLog 接口。
+但要特别注意的是，如上所说，DBGLOG(&quot;msg\n&quot;); 这个 macro 需要在 DEBUG 模式开启下才会被编译。
+相信各位看这段代码即可了解。;) (来自 Headers/kern_util.hpp)</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#define SYSLOG(str, ...) IOLog( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)</span></div><div class="line"></div><div class="line"><span class="comment">#ifdef DEBUG</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...)                                                                                                                                \</span></div><div class="line">        <span class="keyword">do</span> &#123;                                                                                                                                                                \</div><div class="line">                <span class="keyword">if</span> (ADDPR(debugEnabled))                                                                                \</div><div class="line">                        IOLog( xStringify(PRODUCT_NAME) <span class="string">": (DEBUG) "</span> str <span class="string">"\n"</span>, <span class="comment">## __VA_ARGS__);                \</span></div><div class="line">        &#125; <span class="keyword">while</span>(0)</div><div class="line"><span class="comment">#else</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...) do &#123; &#125; while(0)</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure></p>
 <p>另外，原宏中已经自带了换行符 \n ，所以在编写 Log 时也就无必要再换行了。</p>
-<h4 id="Bug-反馈"><a href="#Bug-反馈" class="headerlink" title="Bug 反馈"></a>Bug 反馈</h4><p>建议在作者的 <a href="https://github.com/vit9696/Lilu/issues" target="_blank" rel="external">GitHub Issues</a> 中提交，需使用英文。</p>
-<h3 id="Lilu插件列表"><a href="#Lilu插件列表" class="headerlink" title="Lilu插件列表"></a>Lilu插件列表</h3><p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
-<p>目前已知需依赖 Lilu 的 kext &amp; 作用简单说明<br>注：某些 kext 可能还没有列在这里，如果你有发现的话，可以跟帖反馈。</p>
+<h4>Bug 反馈</h4>
+<p>建议在作者的 <a href="https://github.com/vit9696/Lilu/issues" target="_blank" rel="external">GitHub Issues</a> 中提交，需使用英文。</p>
+<h3>Lilu插件列表</h3>
+<p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
+<p>目前已知需依赖 Lilu 的 kext &amp; 作用简单说明
+注：某些 kext 可能还没有列在这里，如果你有发现的话，可以跟帖反馈。</p>
 <table>
 <thead>
 <tr>
@@ -167,11 +245,16 @@
 </tr>
 </tbody>
 </table>
-<h5 id="原文链接：口袋妖怪heart"><a href="#原文链接：口袋妖怪heart" class="headerlink" title="原文链接：口袋妖怪heart"></a>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5>]]></content>
+<h5>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Lilu插件列表-持续更新&quot;&gt;&lt;a href=&quot;#Lilu插件列表-持续更新&quot; class=&quot;headerlink&quot; title=&quot;Lilu插件列表[持续更新]&quot;&gt;&lt;/a&gt;Lilu插件列表[持续更新]&lt;/h1&gt;&lt;p&gt;本文部分翻译自 &lt;a href=&quot;https:/
+      &lt;h1&gt;Lilu插件列表[持续更新]&lt;/h1&gt;
+&lt;p&gt;本文部分翻译自 &lt;a href=&quot;https://github.com/vit9696/Lilu/blob/master/README.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Lilu的READM
     
     </summary>
     
@@ -191,28 +274,37 @@
     <published>2017-08-22T05:22:58.000Z</published>
     <updated>2017-08-28T03:12:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13DB7-17A352a-with-Clover-4182原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13DB7-17A352a-with-Clover-4182原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像"></a>【黑果小兵】macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像</h3><ul>
+    <content type="html"><![CDATA[<h3>【黑果小兵】macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像</h3>
+<ul>
 <li>本镜像采用官方原版app制作，集成Clover 4182，支持UEFI启动安装。</li>
 <li>Clover默认config.plist为620/630/640/650；</li>
 <li>【DELL 燃7000系列可直接安装使用】，配置文件为:config_Dell_7000.plist;</li>
 <li>其它配置文件包括七代6x0 config.plist配置文件，其中spoof的是显卡欺骗，不带spoof字样的是支持原生显卡，配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
 <li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
-<li>集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的另一帖</li>
+<li>集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的<a href="http://bbs.pcbeta.com/viewthread-1748601-1-1.html" target="_blank" rel="external">另一帖</a></li>
 <li>支持BCM94352z无线网卡，支持Realtek8111系列网卡；</li>
 <li>已加入Lilu、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
-<li>本镜像发布站点：远景论坛/ <a href="https://daliansky.github.io" target="_blank" rel="external">我的github小站</a></li>
+<li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
-<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/17A352a.png" alt="17A352a"><br><img src="http://ous2s14vo.bkt.clouddn.com/clover config.png" alt="clover config"></p>
-<h4 id="下载链接-百度云盘"><a href="#下载链接-百度云盘" class="headerlink" title="下载链接: 百度云盘"></a>下载链接: <a href="https://pan.baidu.com/s/1i4DdUFN" target="_blank" rel="external">百度云盘</a></h4><ul>
+<h4>截图：</h4>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/17A352a.png" alt="17A352a">
+![clover config](http://ous2s14vo.bkt.clouddn.com/clover config.png)</p>
+<h4>下载链接: <a href="https://pan.baidu.com/s/1i4DdUFN" target="_blank" rel="external">百度云盘</a></h4>
+<ul>
 <li>MD5 (macOS High Sierra 10.13DB7 17A352a with Clover 4182.dmg) = 48fc6f8cb402d4a3d8b6035ab4456efc</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13DB7-17A352a-with-Clover-4182原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13DB7-17A352a-with-Clover-4182原版
+      &lt;h3&gt;【黑果小兵】macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4182，支持UEFI启动安装。&lt;/li&gt;
+&lt;li&gt;Clover默认co
     
     </summary>
     
@@ -238,17 +330,23 @@
     <published>2017-08-20T00:24:29.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="如何在macOS-Sierra中运行CORE-Keygen破解程序"><a href="#如何在macOS-Sierra中运行CORE-Keygen破解程序" class="headerlink" title="如何在macOS Sierra中运行CORE Keygen破解程序"></a>如何在macOS Sierra中运行CORE Keygen破解程序</h3><p>将系统升级到macOS Sierra后很多破解程序或注册机都不能用了，尤其是CORE Keygen！ 解决方案如下：<br>下载：<a href="https://pan.baidu.com/s/1skCh1A9" target="_blank" rel="external">https://pan.baidu.com/s/1skCh1A9</a> 密码: cqgi</p>
+    <content type="html"><![CDATA[<h3>如何在macOS Sierra中运行CORE Keygen破解程序</h3>
+<p>将系统升级到macOS Sierra后很多破解程序或注册机都不能用了，尤其是CORE Keygen！ 解决方案如下：
+下载：https://pan.baidu.com/s/1skCh1A9 密码: cqgi</p>
 <p>将xnp.out.zip放在CORE Keygen程序相同目录，运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod +x upx.out</div><div class="line">./upx.out -d ./YourApp.app/Contents/MacOS/CORE\ Keygen</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod +x upx.out</div><div class="line">./upx.out -d ./YourApp.app/Contents/MacOS/CORE\ Keygen</div></pre></td></tr></table></figure></p>
 <p>重新运行CORE Keygen！</p>
 <p>收工，尽情享用吧！</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;如何在macOS-Sierra中运行CORE-Keygen破解程序&quot;&gt;&lt;a href=&quot;#如何在macOS-Sierra中运行CORE-Keygen破解程序&quot; class=&quot;headerlink&quot; title=&quot;如何在macOS Sierra中运行CORE Key
+      &lt;h3&gt;如何在macOS Sierra中运行CORE Keygen破解程序&lt;/h3&gt;
+&lt;p&gt;将系统升级到macOS Sierra后很多破解程序或注册机都不能用了，尤其是CORE Keygen！ 解决方案如下：
+下载：https://pan.baidu.com/s/1skCh1A9
     
     </summary>
     
@@ -270,10 +368,15 @@
     <published>2017-08-18T14:56:17.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="使用CodecCommander解决ALC1220唤醒无声"><a href="#使用CodecCommander解决ALC1220唤醒无声" class="headerlink" title="使用CodecCommander解决ALC1220唤醒无声"></a>使用CodecCommander解决ALC1220唤醒无声</h4><h5 id="AppleALC-info-plist"><a href="#AppleALC-info-plist" class="headerlink" title="AppleALC info.plist"></a>AppleALC info.plist</h5><p>f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01</p>
-<h5 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h5><ol>
-<li>整理pinconfig:<br>屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽</li>
-<li>整理出两条cc命令：<br> 01970724 01b70883</li>
+    <content type="html"><![CDATA[<h4>使用CodecCommander解决ALC1220唤醒无声</h4>
+<h5>AppleALC info.plist</h5>
+<p>f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01</p>
+<h5>解决过程</h5>
+<ol>
+<li>整理pinconfig:
+屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽</li>
+<li>整理出两条cc命令：
+01970724 01b70883</li>
 <li>编译CodecCommander，增加10ec_1220，添加ALC1220，将两条cc命令添加进去</li>
 </ol>
 <table>
@@ -284,11 +387,7 @@
 <th>Realtek ALC1220</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
 <p>Custom Commands</p>
 <table>
@@ -361,18 +460,19 @@
 <th>YES</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h5>收工</h5>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;使用CodecCommander解决ALC1220唤醒无声&quot;&gt;&lt;a href=&quot;#使用CodecCommander解决ALC1220唤醒无声&quot; class=&quot;headerlink&quot; title=&quot;使用CodecCommander解决ALC1220唤醒无声&quot;&gt;&lt;/a
+      &lt;h4&gt;使用CodecCommander解决ALC1220唤醒无声&lt;/h4&gt;
+&lt;h5&gt;AppleALC info.plist&lt;/h5&gt;
+&lt;p&gt;f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 503081
     
     </summary>
     
@@ -396,17 +496,24 @@
     <published>2017-08-17T02:24:00.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Mac常用命令"><a href="#Mac常用命令" class="headerlink" title="Mac常用命令"></a>Mac常用命令</h3><h4 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h4><p>熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀<br><a id="more"></a></p>
-<h3 id="1-隐藏“允许任何来源的应用”选项问题"><a href="#1-隐藏“允许任何来源的应用”选项问题" class="headerlink" title="1. 隐藏“允许任何来源的应用”选项问题"></a>1. 隐藏“允许任何来源的应用”选项问题</h3><blockquote>
-<p>新的系统安装好后，通常你打开一个dmg文件准备安装的时候，系统会提示你<code>不允许打开未知来源的应用</code>，这是因为从macOS Sierra开始增强了GateKeeper的安全性，所以“<code>允许任何来源的应用</code>”选项被隐藏，目的在于避免除Mac AppStore和正规签名外的未知或未签名App在系统内被任意执行，从而威胁用户隐私和系统安全。但这也造成了很多不便。<br><strong>操作方法</strong>：打开终端，输入命令：</p>
+    <content type="html"><![CDATA[<h3>Mac常用命令</h3>
+<h4>序言</h4>
+<p>熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀
+&lt;!-- more --&gt;</p>
+<h3>1. 隐藏“允许任何来源的应用”选项问题</h3>
+<blockquote>
+<p>新的系统安装好后，通常你打开一个dmg文件准备安装的时候，系统会提示你<code>不允许打开未知来源的应用</code>，这是因为从macOS Sierra开始增强了GateKeeper的安全性，所以“<code>允许任何来源的应用</code>”选项被隐藏，目的在于避免除Mac AppStore和正规签名外的未知或未签名App在系统内被任意执行，从而威胁用户隐私和系统安全。但这也造成了很多不便。
+<strong>操作方法</strong>：打开终端，输入命令：</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo spctl --master-disable</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo spctl --master-disable</div></pre></td></tr></table></figure></p>
 <p>验证口令后即可。</p>
-<h3 id="2-磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><a href="#2-磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区" class="headerlink" title="2. 磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"></a>2. 磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</h3><blockquote>
+<h3>2. 磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</h3>
+<blockquote>
 <p>新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让<code>diskutil</code>登场了。</p>
 </blockquote>
 <p><code>diskutil</code>命令的基本用法：</p>
-<h4 id="查看磁盘分区表"><a href="#查看磁盘分区表" class="headerlink" title="查看磁盘分区表"></a>查看磁盘分区表</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
+<h4>查看磁盘分区表</h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure></p>
 <p>/dev/disk0(internal, physical):</p>
 <table>
 <thead>
@@ -484,15 +591,22 @@
 </tr>
 </tbody>
 </table>
-<h4 id="挂载磁盘EFI分区"><a href="#挂载磁盘EFI分区" class="headerlink" title="挂载磁盘EFI分区"></a>挂载磁盘EFI分区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk0s1</div></pre></td></tr></table></figure>
-<h4 id="挂载U盘EFI分区"><a href="#挂载U盘EFI分区" class="headerlink" title="挂载U盘EFI分区"></a>挂载U盘EFI分区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk1s1</div></pre></td></tr></table></figure>
-<h4 id="打开Finder，注意后面有个"><a href="#打开Finder，注意后面有个" class="headerlink" title="打开Finder，注意后面有个."></a>打开Finder，注意后面有个<code>.</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open .</div></pre></td></tr></table></figure>
+<h4>挂载磁盘EFI分区</h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk0s1</div></pre></td></tr></table></figure></p>
+<h4>挂载U盘EFI分区</h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk1s1</div></pre></td></tr></table></figure></p>
+<h4>打开Finder，注意后面有个<code>.</code></h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open .</div></pre></td></tr></table></figure></p>
 <p>左侧会显示挂载了两个EFI分区，将U盘EFI目录全部复制到磁盘的EFI分区即可。</p>
-<h4 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h4><h3 id="3-磁盘分区的进阶操作：教你将apfs分区转换回hfs"><a href="#3-磁盘分区的进阶操作：教你将apfs分区转换回hfs" class="headerlink" title="3. 磁盘分区的进阶操作：教你将apfs分区转换回hfs+"></a>3. 磁盘分区的进阶操作：教你将apfs分区转换回hfs+</h3><blockquote>
-<p>随着macOS High Sierra发布日期的临近，苹果公司新推出的<code>apfs</code>文件格式已经频繁地出现在我们的面前，假如你还不了解<code>apfs</code>文件的前世今生，请阅读<a href="https://zh.wikipedia.org/wiki/苹果文件系统" target="_blank" rel="external">苹果文件系统</a>。<strong>友情提示：</strong> <em><code>APFS</code> 在 macOS High Sierra（10.13）之后将成为默认的文件格式</em><br>那么问题来了，万一我的分区格式已经是<code>apfs</code>，我想转换成<code>HFS+</code>有什么办法吗？当然可以了，只是这个命令隐藏得比较深，这个命令还是：<code>diskutil</code></p>
+<h4>收工</h4>
+<h3>3. 磁盘分区的进阶操作：教你将apfs分区转换回hfs+</h3>
+<blockquote>
+<p>随着macOS High Sierra发布日期的临近，苹果公司新推出的<code>apfs</code>文件格式已经频繁地出现在我们的面前，假如你还不了解<code>apfs</code>文件的前世今生，请阅读<a href="https://zh.wikipedia.org/wiki/%E8%8B%B9%E6%9E%9C%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="external">苹果文件系统</a>。<strong>友情提示：</strong> <em><code>APFS</code> 在 macOS High Sierra（10.13）之后将成为默认的文件格式</em>
+那么问题来了，万一我的分区格式已经是<code>apfs</code>，我想转换成<code>HFS+</code>有什么办法吗？当然可以了，只是这个命令隐藏得比较深，这个命令还是：<code>diskutil</code></p>
 </blockquote>
-<h4 id="diskutil命令的进阶操作"><a href="#diskutil命令的进阶操作" class="headerlink" title="diskutil命令的进阶操作"></a>diskutil命令的进阶操作</h4><p>查看磁盘分区表：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
+<h4>diskutil命令的进阶操作</h4>
+<p>查看磁盘分区表：</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure></p>
 <p>/dev/disk0(internal, physical):</p>
 <table>
 <thead>
@@ -527,11 +641,11 @@
 <td>disk0s2</td>
 </tr>
 <tr>
-<td>…</td>
-<td style="text-align:right">…</td>
-<td style="text-align:left">…</td>
-<td>…</td>
-<td>…</td>
+<td>...</td>
+<td style="text-align:right">...</td>
+<td style="text-align:left">...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 <tr>
 <td>10:</td>
@@ -557,7 +671,7 @@
 <tr>
 <td>0:</td>
 <td style="text-align:right">APFS Container Scheme</td>
-<td style="text-align:left">-<br>Physical Store disk0s5</td>
+<td style="text-align:left">-&lt;br&gt;Physical Store disk0s5</td>
 <td>+29.2 GB</td>
 <td>disk1</td>
 </tr>
@@ -592,14 +706,17 @@
 </tbody>
 </table>
 <p>查看<code>apfs</code>分区表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil apfs list</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil apfs list</div></pre></td></tr></table></figure></p>
 <p>显示结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line">APFS Containers (2 found)</div><div class="line">|</div><div class="line">+-- Container disk1 90B9C430-E60A-4174-8F1B-B8ED6E486D8B</div><div class="line">|   ====================================================</div><div class="line">|   APFS Container Reference:     disk1</div><div class="line">|   Capacity Ceiling (Size):      29194424320 B (29.2 GB)</div><div class="line">|   Capacity In Use By Volumes:   11533049856 B (11.5 GB) (39.5% used)</div><div class="line">|   Capacity Available:           17661374464 B (17.7 GB) (60.5% free)</div><div class="line">|   |</div><div class="line">|   +-&lt; Physical Store disk0s10 CF77604A-0F78-4512-9563-AD2E944353C8</div><div class="line">|   |   ------------------------------------------------------------</div><div class="line">|   |   APFS Physical Store Disk:   disk0s10</div><div class="line">|   |   Size:                       29194424320 B (29.2 GB)</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s1 12C9B3A9-0D9B-3E75-B0EF-D829FFE4D438</div><div class="line">|   |   ---------------------------------------------------</div><div class="line">|   |   APFS Volume Disk (Role):   disk1s1 (No specific role)</div><div class="line">|   |   Name:                      test (Case-insensitive)</div><div class="line">|   |   Mount Point:               /Volumes/test</div><div class="line">|   |   Capacity Consumed:         9848913920 B (9.8 GB)</div><div class="line">|   |   Encrypted:                 No</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s2 2316B0D9-6798-4564-A3CE-5C5D1124AE5B</div><div class="line">|   |   ---------------------------------------------------</div><div class="line">|   |   APFS Volume Disk (Role):   disk1s2 (Preboot)</div><div class="line">|   |   Name:                      Preboot (Case-insensitive)</div><div class="line">|   |   Mount Point:               Not Mounted</div><div class="line">|   |   Capacity Consumed:         20631552 B (20.6 MB)</div><div class="line">|   |   Encrypted:                 No</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s3 1B6EBD7A-EE58-48A7-97A8-4E31C18BE5EC</div><div class="line">|   |   ---------------------------------------------------</div><div class="line">|   |   APFS Volume Disk (Role):   disk1s3 (Recovery)</div><div class="line">|   |   Name:                      Recovery (Case-insensitive)</div><div class="line">|   |   Mount Point:               Not Mounted</div><div class="line">|   |   Capacity Consumed:         519573504 B (519.6 MB)</div><div class="line">|   |   Encrypted:                 No</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s4 560E6B74-04B3-4083-8730-A7FB7A0116A2</div><div class="line">|       ---------------------------------------------------</div><div class="line">|       APFS Volume Disk (Role):   disk1s4 (VM)</div><div class="line">|       Name:                      VM (Case-insensitive)</div><div class="line">|       Mount Point:               Not Mounted</div><div class="line">|       Capacity Consumed:         1073762304 B (1.1 GB)</div><div class="line">|       Encrypted:                 No</div><div class="line">|</div><div class="line">+-- Container disk2 15E113C0-6AC5-4DA5-960C-A29A3C3B418A</div><div class="line">    ====================================================</div><div class="line">    APFS Container Reference:     disk2</div><div class="line">    Capacity Ceiling (Size):      100411764736 B (100.4 GB)</div><div class="line">    Capacity In Use By Volumes:   59094196224 B (59.1 GB) (58.9% used)</div><div class="line">    Capacity Available:           41317568512 B (41.3 GB) (41.1% free)</div><div class="line">    |</div><div class="line">    +-&lt; Physical Store disk0s5 987E8152-DD9D-4148-8314-CDA8A28323D5</div><div class="line">    |   -----------------------------------------------------------</div><div class="line">    |   APFS Physical Store Disk:   disk0s5</div><div class="line">    |   Size:                       100411764736 B (100.4 GB)</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s1 931C738D-C5A4-3A43-823A-210C3E9AF123</div><div class="line">    |   ---------------------------------------------------</div><div class="line">    |   APFS Volume Disk (Role):   disk2s1 (No specific role)</div><div class="line">    |   Name:                      MAC (Case-insensitive)</div><div class="line">    |   Mount Point:               /</div><div class="line">    |   Capacity Consumed:         57355460608 B (57.4 GB)</div><div class="line">    |   Encrypted:                 No</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s2 95F73DEF-D85F-4F43-B35F-D8914ED4A95F</div><div class="line">    |   ---------------------------------------------------</div><div class="line">    |   APFS Volume Disk (Role):   disk2s2 (Preboot)</div><div class="line">    |   Name:                      Preboot (Case-insensitive)</div><div class="line">    |   Mount Point:               Not Mounted</div><div class="line">    |   Capacity Consumed:         20959232 B (21.0 MB)</div><div class="line">    |   Encrypted:                 No</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s3 CDF460DC-38FE-4E79-A04C-C7A5242BD091</div><div class="line">    |   ---------------------------------------------------</div><div class="line">    |   APFS Volume Disk (Role):   disk2s3 (Recovery)</div><div class="line">    |   Name:                      Recovery (Case-insensitive)</div><div class="line">    |   Mount Point:               Not Mounted</div><div class="line">    |   Capacity Consumed:         519573504 B (519.6 MB)</div><div class="line">    |   Encrypted:                 No</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s4 25CC995F-FB04-4617-900A-955B423A675F</div><div class="line">        ---------------------------------------------------</div><div class="line">        APFS Volume Disk (Role):   disk2s4 (VM)</div><div class="line">        Name:                      VM (Case-insensitive)</div><div class="line">        Mount Point:               /private/var/vm</div><div class="line">        Capacity Consumed:         1073762304 B (1.1 GB)</div><div class="line">        Encrypted:                 No</div></pre></td></tr></table></figure>
-<p>以我的磁盘为例：我的磁盘中存在两个<code>APFS</code>容器，分别是：<code>Container disk1</code>和<code>Container disk2</code>，disk1对应的是我的test卷，它是我测试用的，我演示下使用<code>diskutil</code>命令将<code>apfs</code>转换为<code>hfs+</code>，并且将转换的<code>hfs+</code>分区重新命名为：test<br><strong>[提示:]执行该命令之前请保存你的数据，该命令会直接删除之前该分区存在的数据</strong></p>
-<h4 id="命令："><a href="#命令：" class="headerlink" title="命令："></a>命令：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil apfs deleteContainer disk1 <span class="built_in">test</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line">APFS Containers (2 found)</div><div class="line">|</div><div class="line">+-- Container disk1 90B9C430-E60A-4174-8F1B-B8ED6E486D8B</div><div class="line">|   ====================================================</div><div class="line">|   APFS Container Reference:     disk1</div><div class="line">|   Capacity Ceiling (Size):      29194424320 B (29.2 GB)</div><div class="line">|   Capacity In Use By Volumes:   11533049856 B (11.5 GB) (39.5% used)</div><div class="line">|   Capacity Available:           17661374464 B (17.7 GB) (60.5% free)</div><div class="line">|   |</div><div class="line">|   +-&lt; Physical Store disk0s10 CF77604A-0F78-4512-9563-AD2E944353C8</div><div class="line">|   |   ------------------------------------------------------------</div><div class="line">|   |   APFS Physical Store Disk:   disk0s10</div><div class="line">|   |   Size:                       29194424320 B (29.2 GB)</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s1 12C9B3A9-0D9B-3E75-B0EF-D829FFE4D438</div><div class="line">|   |   ---------------------------------------------------</div><div class="line">|   |   APFS Volume Disk (Role):   disk1s1 (No specific role)</div><div class="line">|   |   Name:                      test (Case-insensitive)</div><div class="line">|   |   Mount Point:               /Volumes/test</div><div class="line">|   |   Capacity Consumed:         9848913920 B (9.8 GB)</div><div class="line">|   |   Encrypted:                 No</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s2 2316B0D9-6798-4564-A3CE-5C5D1124AE5B</div><div class="line">|   |   ---------------------------------------------------</div><div class="line">|   |   APFS Volume Disk (Role):   disk1s2 (Preboot)</div><div class="line">|   |   Name:                      Preboot (Case-insensitive)</div><div class="line">|   |   Mount Point:               Not Mounted</div><div class="line">|   |   Capacity Consumed:         20631552 B (20.6 MB)</div><div class="line">|   |   Encrypted:                 No</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s3 1B6EBD7A-EE58-48A7-97A8-4E31C18BE5EC</div><div class="line">|   |   ---------------------------------------------------</div><div class="line">|   |   APFS Volume Disk (Role):   disk1s3 (Recovery)</div><div class="line">|   |   Name:                      Recovery (Case-insensitive)</div><div class="line">|   |   Mount Point:               Not Mounted</div><div class="line">|   |   Capacity Consumed:         519573504 B (519.6 MB)</div><div class="line">|   |   Encrypted:                 No</div><div class="line">|   |</div><div class="line">|   +-&gt; Volume disk1s4 560E6B74-04B3-4083-8730-A7FB7A0116A2</div><div class="line">|       ---------------------------------------------------</div><div class="line">|       APFS Volume Disk (Role):   disk1s4 (VM)</div><div class="line">|       Name:                      VM (Case-insensitive)</div><div class="line">|       Mount Point:               Not Mounted</div><div class="line">|       Capacity Consumed:         1073762304 B (1.1 GB)</div><div class="line">|       Encrypted:                 No</div><div class="line">|</div><div class="line">+-- Container disk2 15E113C0-6AC5-4DA5-960C-A29A3C3B418A</div><div class="line">    ====================================================</div><div class="line">    APFS Container Reference:     disk2</div><div class="line">    Capacity Ceiling (Size):      100411764736 B (100.4 GB)</div><div class="line">    Capacity In Use By Volumes:   59094196224 B (59.1 GB) (58.9% used)</div><div class="line">    Capacity Available:           41317568512 B (41.3 GB) (41.1% free)</div><div class="line">    |</div><div class="line">    +-&lt; Physical Store disk0s5 987E8152-DD9D-4148-8314-CDA8A28323D5</div><div class="line">    |   -----------------------------------------------------------</div><div class="line">    |   APFS Physical Store Disk:   disk0s5</div><div class="line">    |   Size:                       100411764736 B (100.4 GB)</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s1 931C738D-C5A4-3A43-823A-210C3E9AF123</div><div class="line">    |   ---------------------------------------------------</div><div class="line">    |   APFS Volume Disk (Role):   disk2s1 (No specific role)</div><div class="line">    |   Name:                      MAC (Case-insensitive)</div><div class="line">    |   Mount Point:               /</div><div class="line">    |   Capacity Consumed:         57355460608 B (57.4 GB)</div><div class="line">    |   Encrypted:                 No</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s2 95F73DEF-D85F-4F43-B35F-D8914ED4A95F</div><div class="line">    |   ---------------------------------------------------</div><div class="line">    |   APFS Volume Disk (Role):   disk2s2 (Preboot)</div><div class="line">    |   Name:                      Preboot (Case-insensitive)</div><div class="line">    |   Mount Point:               Not Mounted</div><div class="line">    |   Capacity Consumed:         20959232 B (21.0 MB)</div><div class="line">    |   Encrypted:                 No</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s3 CDF460DC-38FE-4E79-A04C-C7A5242BD091</div><div class="line">    |   ---------------------------------------------------</div><div class="line">    |   APFS Volume Disk (Role):   disk2s3 (Recovery)</div><div class="line">    |   Name:                      Recovery (Case-insensitive)</div><div class="line">    |   Mount Point:               Not Mounted</div><div class="line">    |   Capacity Consumed:         519573504 B (519.6 MB)</div><div class="line">    |   Encrypted:                 No</div><div class="line">    |</div><div class="line">    +-&gt; Volume disk2s4 25CC995F-FB04-4617-900A-955B423A675F</div><div class="line">        ---------------------------------------------------</div><div class="line">        APFS Volume Disk (Role):   disk2s4 (VM)</div><div class="line">        Name:                      VM (Case-insensitive)</div><div class="line">        Mount Point:               /private/var/vm</div><div class="line">        Capacity Consumed:         1073762304 B (1.1 GB)</div><div class="line">        Encrypted:                 No</div></pre></td></tr></table></figure></p>
+<p>以我的磁盘为例：我的磁盘中存在两个<code>APFS</code>容器，分别是：<code>Container disk1</code>和<code>Container disk2</code>，disk1对应的是我的test卷，它是我测试用的，我演示下使用<code>diskutil</code>命令将<code>apfs</code>转换为<code>hfs+</code>，并且将转换的<code>hfs+</code>分区重新命名为：test
+<strong>[提示:]执行该命令之前请保存你的数据，该命令会直接删除之前该分区存在的数据</strong></p>
+<h4>命令：</h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil apfs deleteContainer disk1 <span class="built_in">test</span></div></pre></td></tr></table></figure></p>
 <p>显示结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Started APFS operation on disk1</div><div class="line">Deleting APFS Container with all of its APFS Volumes</div><div class="line">Unmounting Volumes</div><div class="line">Unmounting Volume &quot;test&quot; on disk1s1</div><div class="line">Unmounting Volume &quot;Preboot&quot; on disk1s2</div><div class="line">Unmounting Volume &quot;Recovery&quot; on disk1s3</div><div class="line">Unmounting Volume &quot;VM&quot; on disk1s4</div><div class="line">Deleting Volumes</div><div class="line">Deleting Container</div><div class="line">Wiping former APFS disks</div><div class="line">Switching content types</div><div class="line">Reformatting former APFS disks</div><div class="line">Initialized /dev/rdisk0s10 as a 27 GB case-insensitive HFS Plus volume with a 8192k journal</div><div class="line">Mounting disk</div><div class="line">1 new disk created or changed due to APFS operation</div><div class="line">Disk from APFS operation: disk0s10</div><div class="line">Finished APFS operation on disk1</div></pre></td></tr></table></figure>
-<h4 id="检查："><a href="#检查：" class="headerlink" title="检查："></a>检查：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Started APFS operation on disk1</div><div class="line">Deleting APFS Container with all of its APFS Volumes</div><div class="line">Unmounting Volumes</div><div class="line">Unmounting Volume &quot;test&quot; on disk1s1</div><div class="line">Unmounting Volume &quot;Preboot&quot; on disk1s2</div><div class="line">Unmounting Volume &quot;Recovery&quot; on disk1s3</div><div class="line">Unmounting Volume &quot;VM&quot; on disk1s4</div><div class="line">Deleting Volumes</div><div class="line">Deleting Container</div><div class="line">Wiping former APFS disks</div><div class="line">Switching content types</div><div class="line">Reformatting former APFS disks</div><div class="line">Initialized /dev/rdisk0s10 as a 27 GB case-insensitive HFS Plus volume with a 8192k journal</div><div class="line">Mounting disk</div><div class="line">1 new disk created or changed due to APFS operation</div><div class="line">Disk from APFS operation: disk0s10</div><div class="line">Finished APFS operation on disk1</div></pre></td></tr></table></figure></p>
+<h4>检查：</h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure></p>
 <p>/dev/disk0(internal, physical):</p>
 <table>
 <thead>
@@ -634,11 +751,11 @@
 <td>disk0s2</td>
 </tr>
 <tr>
-<td>…</td>
-<td style="text-align:right">…</td>
-<td style="text-align:left">…</td>
-<td>…</td>
-<td>…</td>
+<td>...</td>
+<td style="text-align:right">...</td>
+<td style="text-align:left">...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 <tr>
 <td>8:</td>
@@ -651,18 +768,35 @@
 </table>
 <p>可以看到test的分区格式已经变回<code>hfs+</code>了。</p>
 <p>本教程结束，更多的命令用法请使用命令：<code>man diskutil</code></p>
-<h4 id="收工-1"><a href="#收工-1" class="headerlink" title="收工"></a>收工</h4><h3 id="4-如何开启原生SSD-Trim功能"><a href="#4-如何开启原生SSD-Trim功能" class="headerlink" title="4. 如何开启原生SSD Trim功能"></a>4. 如何开启原生SSD Trim功能</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo trimforce <span class="built_in">enable</span></div></pre></td></tr></table></figure>
+<h4>收工</h4>
+<h3>4. 如何开启原生SSD Trim功能</h3>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo trimforce <span class="built_in">enable</span></div></pre></td></tr></table></figure></p>
 <p>因为是系统原生工具，此方法无需开启rootless=0，更不会改变已有驱动的签名，也就是说不需要kext-dev-mode=1，白果也可用此方法开启Trim。</p>
-<h3 id="5-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题"><a href="#5-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题" class="headerlink" title="5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题"></a>5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题</h3><p>经常有网友需要解决笔记本显示器内屏黑屏问题，目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。<br>其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。</p>
-<h4 id="最简单的命令是："><a href="#最简单的命令是：" class="headerlink" title="最简单的命令是："></a>最简单的命令是：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep IODisplayEDID</div></pre></td></tr></table></figure>
-<h5 id="显示信息如下："><a href="#显示信息如下：" class="headerlink" title="显示信息如下："></a>显示信息如下：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">| |   | | |       <span class="string">"IODisplayEDID"</span> = &lt;00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8&gt;</div></pre></td></tr></table></figure>
-<p>其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover中，然后保存重启你的电脑。<br><img src="http://ous2s14vo.bkt.clouddn.com/Custom EDID.png" alt="Custom EDID"></p>
-<h4 id="收工-2"><a href="#收工-2" class="headerlink" title="收工"></a>收工</h4><h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
-<h4 id="黑果小兵的部落阁：http-daliansky-github-io"><a href="#黑果小兵的部落阁：http-daliansky-github-io" class="headerlink" title="黑果小兵的部落阁：http://daliansky.github.io"></a>黑果小兵的部落阁：<a href="http://daliansky.github.io" target="_blank" rel="external">http://daliansky.github.io</a></h4>]]></content>
+<h3>5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题</h3>
+<p>经常有网友需要解决笔记本显示器内屏黑屏问题，目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。
+其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。</p>
+<h4>最简单的命令是：</h4>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep IODisplayEDID</div></pre></td></tr></table></figure></p>
+<h5>显示信息如下：</h5>
+<p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">| |   | | |       <span class="string">"IODisplayEDID"</span> = &lt;00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8&gt;</div></pre></td></tr></table></figure></p>
+<p>其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover中，然后保存重启你的电脑。
+![Custom EDID](http://ous2s14vo.bkt.clouddn.com/Custom EDID.png)</p>
+<h4>收工</h4>
+<h3>———— 未完待续 ————</h3>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4>黑果小兵的部落阁：<a href="http://blog.daliansky.net">http://blog.daliansky.net</a></h4>
+]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Mac常用命令&quot;&gt;&lt;a href=&quot;#Mac常用命令&quot; class=&quot;headerlink&quot; title=&quot;Mac常用命令&quot;&gt;&lt;/a&gt;Mac常用命令&lt;/h3&gt;&lt;h4 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h4&gt;&lt;p&gt;熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀&lt;br&gt;
+      &lt;h3&gt;Mac常用命令&lt;/h3&gt;
+&lt;h4&gt;序言&lt;/h4&gt;
+&lt;p&gt;熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀
+&amp;lt;!-- more --&amp;gt;&lt;/p&gt;
+&lt;h3&gt;1. 隐藏“允许任何来源的应用”选项问题&lt;/h3&gt;
+&lt;blo
     
     </summary>
     
@@ -682,10 +816,14 @@
     <published>2017-08-16T14:11:02.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区"><a href="#不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区" class="headerlink" title="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区"></a>不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</h3><h4 id="此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。"><a href="#此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。" class="headerlink" title="此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。"></a><em>此方法不支持APFS分区</em>。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。</h4><blockquote>
-<p>我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。<br>通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 </p>
+    <content type="html"><![CDATA[<h3>不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</h3>
+<h4><em>此方法不支持APFS分区</em>。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。</h4>
+<blockquote>
+<p>我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。
+通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。</p>
 </blockquote>
-<h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><ol>
+<h4>开始</h4>
+<ol>
 <li>通过App Store下载macOS High Sierra Developer Beta 5/ Public Beta 4安装程序。</li>
 <li>在要使用磁盘实用程序安装测试版的驱动器上创建HFS日志分区（名称不能包含空格）。</li>
 <li>打开应用程序目录，右键单击macOS Beta安装程序，然后单击显示包内容。 转到<code>Contents&gt;Shared Support</code>，然后双击<code>InstallESD.dmg</code>和<code>BaseSystem.dmg</code>挂载它们。</li>
@@ -693,27 +831,36 @@
 <li>打开已安装的<code>BaseSystem.dmg</code>并将boot.efi从/System/Library/CoreServices复制到同一位置的High Sierra分区（<code>/System/Library/CoreServices</code>）</li>
 <li>虽然安装了HS测试版，但它尚不可启动。 要使其可引导，请打开<code>终端</code>并键入以下命令：<code>[假设安装分区为：HighSierra]</code></li>
 </ol>
-<h5 id="命令1："><a href="#命令1：" class="headerlink" title="命令1："></a>命令1：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --folder <span class="string">"/Volumes/HighSierra/System/Library/CoreServices"</span></div></pre></td></tr></table></figure>
-<h5 id="命令2："><a href="#命令2：" class="headerlink" title="命令2："></a>命令2：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --mount <span class="string">"/Volumes/HighSierra"</span> --setBoot</div></pre></td></tr></table></figure>
-<h5 id="命令3：检查分区是否可引导。-为此，键入以下命令："><a href="#命令3：检查分区是否可引导。-为此，键入以下命令：" class="headerlink" title="命令3：检查分区是否可引导。 为此，键入以下命令："></a>命令3：检查分区是否可引导。 为此，键入以下命令：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bless --info /Volumes/HighSierra</div></pre></td></tr></table></figure>
-<h5 id="输出类似结果："><a href="#输出类似结果：" class="headerlink" title="输出类似结果："></a>输出类似结果：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierra</div><div class="line">finderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServices</div><div class="line">finderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efi</div><div class="line">finderinfo[2]:      0 =&gt; Open-folder linked list empty</div><div class="line">finderinfo[3]:      0 =&gt; No alternate OS blessed file/folder</div><div class="line">finderinfo[4]:      0 =&gt; Unused field <span class="built_in">unset</span></div><div class="line">finderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices</div><div class="line">64-bit VSDB volume id:  0x9E0F1563A37473E4</div></pre></td></tr></table></figure>
-<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h5>命令1：</h5>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --folder <span class="string">"/Volumes/HighSierra/System/Library/CoreServices"</span></div></pre></td></tr></table></figure></p>
+<h5>命令2：</h5>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --mount <span class="string">"/Volumes/HighSierra"</span> --setBoot</div></pre></td></tr></table></figure></p>
+<h5>命令3：检查分区是否可引导。 为此，键入以下命令：</h5>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bless --info /Volumes/HighSierra</div></pre></td></tr></table></figure></p>
+<h5>输出类似结果：</h5>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierra</div><div class="line">finderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServices</div><div class="line">finderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efi</div><div class="line">finderinfo[2]:      0 =&gt; Open-folder linked list empty</div><div class="line">finderinfo[3]:      0 =&gt; No alternate OS blessed file/folder</div><div class="line">finderinfo[4]:      0 =&gt; Unused field <span class="built_in">unset</span></div><div class="line">finderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices</div><div class="line">64-bit VSDB volume id:  0x9E0F1563A37473E4</div></pre></td></tr></table></figure></p>
+<h5>收工</h5>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区&quot;&gt;&lt;a href=&quot;#不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区&quot; class=&quot;headerlink&quot; title=&quot;不需要制作安装盘！教
+      &lt;h3&gt;不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区&lt;/h3&gt;
+&lt;h4&gt;&lt;em&gt;此方法不支持APFS分区&lt;/em&gt;。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。&lt;/h4&gt;
+&lt;blockqu
     
     </summary>
     
       <category term="教程" scheme="http://blog.daliansky.net/categories/%E6%95%99%E7%A8%8B/"/>
     
     
+      <category term="分区" scheme="http://blog.daliansky.net/tags/%E5%88%86%E5%8C%BA/"/>
+    
       <category term="high sierra" scheme="http://blog.daliansky.net/tags/high-sierra/"/>
     
       <category term="安装" scheme="http://blog.daliansky.net/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="分区" scheme="http://blog.daliansky.net/tags/%E5%88%86%E5%8C%BA/"/>
     
   </entry>
   
@@ -724,33 +871,40 @@
     <published>2017-08-16T12:02:43.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动"><a href="#【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动" class="headerlink" title="【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动"></a>【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动</h4><ul>
+    <content type="html"><![CDATA[<h4>【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动</h4>
+<ul>
 <li>本镜像采用官方原版app制作，集成Clover 4133，支持UEFI启动安装。</li>
 </ul>
-<a id="more"></a>
+<p>&lt;!--more--&gt;</p>
 <ul>
 <li>Clover集成众多配置文件，系统默认config.plist支持<code>原生I5/i7七代移动版CPU</code>，<code>原生支持Intel HD Graphics 620</code>【platforms-id:59160000】；</li>
 <li>其它显卡配置文件可通过Clover引导界面-Options-config进行选择；</li>
 <li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
-<li>集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的另一帖</li>
+<li>集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的<a href="http://bbs.pcbeta.com/viewthread-1748601-1-1.html" target="_blank" rel="external">另一帖</a></li>
 <li>支持BCM94352z无线网卡，支持Realtek8111系列网卡；</li>
 <li>已加入Lilu、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
 <li>其它驱动位于/EFI/Clover/kexts/Other/backup目录下，请根据自己的机型配置适当的驱动；</li>
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决，当然您也可以通过企鹅群：331686786寻求帮助。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
-<li>本镜像唯一发布站点：远景论坛</li>
+<li>本镜像唯一发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
-<h5 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h5><p>百度云：<a href="https://pan.baidu.com/s/1sloGhCL" target="_blank" rel="external">https://pan.baidu.com/s/1sloGhCL</a> 密码: yknp<br>MD5 (macOS Sierra 10.12.6 16G29 Installer with Clover 4133.dmg) = 81ecbc29863381097537ec9a40c8e1c6</p>
-<h5 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h5><blockquote>
-<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br> [x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h5>下载链接：</h5>
+<p>百度云：https://pan.baidu.com/s/1sloGhCL 密码: yknp
+MD5 (macOS Sierra 10.12.6 16G29 Installer with Clover 4133.dmg) = 81ecbc29863381097537ec9a40c8e1c6</p>
+<h5>QQ群：</h5>
+<blockquote>
+<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+[x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 </blockquote>
-<!-- more -->
+<p>&lt;!-- more --&gt;</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动&quot; class=&quot;headerlink&quot; title=&quot;【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动&quot;&gt;&lt;/a&gt;【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动&lt;/h4&gt;&lt;ul&gt;
+      &lt;h4&gt;【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动&lt;/h4&gt;
+&lt;ul&gt;
 &lt;li&gt;本镜像采用官方原版app制作，集成Clover 4133，支持UEFI启动安装。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&amp;lt;!--mo
     
     </summary>
     
@@ -776,9 +930,11 @@
     <published>2017-08-16T08:22:44.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="hotpatch详解"><a href="#hotpatch详解" class="headerlink" title="hotpatch详解"></a>hotpatch详解</h2><p>这里阐述hotpatch的作用及各功能详解</p>
-<p>[TOC]<a id="more"></a></p>
-<h4 id="核心文件"><a href="#核心文件" class="headerlink" title="核心文件"></a>核心文件</h4><table>
+    <content type="html"><![CDATA[<h2>hotpatch详解</h2>
+<p>这里阐述hotpatch的作用及各功能详解</p>
+<p>[TOC]&lt;!--more--&gt;</p>
+<h4>核心文件</h4>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -792,7 +948,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h4><table>
+<h4>系统</h4>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -818,7 +975,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h4><table>
+<h4>显卡</h4>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -844,7 +1002,7 @@
 </tr>
 <tr>
 <td>SSDT-Dell_FN</td>
-<td>将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码<br>【部分DELL机型】</td>
+<td>将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码&lt;br&gt;【部分DELL机型】</td>
 </tr>
 <tr>
 <td>SSDT-PNLF</td>
@@ -852,7 +1010,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h4><table>
+<h4>声卡</h4>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -870,7 +1029,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="睡眠相关"><a href="#睡眠相关" class="headerlink" title="睡眠相关"></a>睡眠相关</h4><table>
+<h4>睡眠相关</h4>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -900,7 +1060,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="其它杂项"><a href="#其它杂项" class="headerlink" title="其它杂项"></a>其它杂项</h4><table>
+<h4>其它杂项</h4>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -910,7 +1071,7 @@
 <tbody>
 <tr>
 <td>SSDT-Debug</td>
-<td>用于ACPIDebug <br>该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的，使用“添加SSDT调试外部声明”从其他方式访问这些方法<br>hotpatch SSDT甚至打补丁的OEM ACPI文件</td>
+<td>用于ACPIDebug &lt;br&gt;该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的，使用“添加SSDT调试外部声明”从其他方式访问这些方法&lt;br&gt;hotpatch SSDT甚至打补丁的OEM ACPI文件</td>
 </tr>
 <tr>
 <td>SSDT-ESEL</td>
@@ -922,7 +1083,7 @@
 </tr>
 <tr>
 <td>SSDT-PluginType1</td>
-<td>在_PR.CPU0上插入plugin-type = 1<br>可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入</td>
+<td>在_PR.CPU0上插入plugin-type = 1&lt;br&gt;可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入</td>
 </tr>
 <tr>
 <td>SSDT-SATA</td>
@@ -934,14 +1095,16 @@
 </tr>
 <tr>
 <td>SSDT-XOSI</td>
-<td>覆盖主机定义的_OSI来处理“Darwin”…<br>DSDT中的所有_OSI调用都被路由到XOSI<br>XOSI模拟“Windows 2009”（这是Windows 7）<br>XOSI模拟“Windows 2015”（这是Windows 10）<br><a href="http://download.microsoft.com/download/7/E/7/7E7662CF-CBEA-470B-A97E-CE7CE0D98DC2/WinACPI_OSI.docx" target="_blank" rel="external">这里是关于_OSI中微软操作系统的描述文件</a></td>
+<td>覆盖主机定义的_OSI来处理“Darwin”...&lt;br&gt;DSDT中的所有_OSI调用都被路由到XOSI&lt;br&gt;XOSI模拟“Windows 2009”（这是Windows 7）&lt;br&gt;XOSI模拟“Windows 2015”（这是Windows 10）&lt;br&gt;<a href="http://download.microsoft.com/download/7/E/7/7E7662CF-CBEA-470B-A97E-CE7CE0D98DC2/WinACPI_OSI.docx" target="_blank" rel="external">这里是关于_OSI中微软操作系统的描述文件</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h4><blockquote>
-<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>[x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4>QQ群：</h4>
+<blockquote>
+<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a>
+[x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 </blockquote>
-<!-- more -->
+<p>&lt;!-- more --&gt;</p>
 ]]></content>
     
     <summary type="html">
@@ -968,7 +1131,8 @@
     <published>2017-08-16T08:13:40.000Z</published>
     <updated>2017-08-28T03:08:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像"></a>【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像</h3><p><img src="http://ous2s14vo.bkt.clouddn.com/17A334b.png" alt="17A334b"></p>
+    <content type="html"><![CDATA[<h3>【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像</h3>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/17A334b.png" alt="17A334b"></p>
 <ul>
 <li>本镜像采用官方原版app制作，集成Clover 4160，支持UEFI启动安装。</li>
 <li>Clover默认config.plist支持<code>原生i5/i7七代移动版CPU</code>，<code>原生支持Intel HD Graphics 620</code>【platforms-id:59160000】；<code>【DELL 燃7000系列可直接安装使用】</code></li>
@@ -981,13 +1145,18 @@
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://daliansky.github.io" target="_blank" rel="external">我的github小站</a></li>
 </ul>
-<p>####下载链接:<br>百度云：<a href="https://pan.baidu.com/s/1dFvkYZZ" target="_blank" rel="external">https://pan.baidu.com/s/1dFvkYZZ</a><br>    •    MD5 (macOS High Sierra 10.13 17A334b Installer with Clover 4160.dmg) = 8b46ab210917be9287ac3a38b4e8eb81</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a><br>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<p>####下载链接:
+百度云：https://pan.baidu.com/s/1dFvkYZZ
+	•	MD5 (macOS High Sierra 10.13 17A334b Installer with Clover 4160.dmg) = 8b46ab210917be9287ac3a38b4e8eb81</p>
+<h4>QQ群:</h4>
+<p>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a>
+331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160原版
+      &lt;h3&gt;【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://ous2s14vo.bkt.clouddn.com/17A334b.png&quot; alt=&quot;17A33
     
     </summary>
     
@@ -1003,6 +1172,8 @@
       <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
     
       <category term="high sierra" scheme="http://blog.daliansky.net/tags/high-sierra/"/>
+    
+      <category term="17A344b" scheme="http://blog.daliansky.net/tags/17A344b/"/>
     
   </entry>
   
