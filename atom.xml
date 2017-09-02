@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.daliansky.net/"/>
-  <updated>2017-08-29T08:16:23.000Z</updated>
+  <updated>2017-09-02T01:37:09.000Z</updated>
   <id>http://blog.daliansky.net/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载</title>
+    <link href="http://blog.daliansky.net/2017/09/02/Mac-Sierra-and-High-Sierra-Installer-App-Download/"/>
+    <id>http://blog.daliansky.net/2017/09/02/Mac-Sierra-and-High-Sierra-Installer-App-Download/</id>
+    <published>2017-09-02T01:23:25.000Z</published>
+    <updated>2017-09-02T01:37:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Mac-Sierra-10-12-6-和High-Sierra-10-13-安装文件下载"><a href="#Mac-Sierra-10-12-6-和High-Sierra-10-13-安装文件下载" class="headerlink" title="Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载"></a>Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载</h3><blockquote>
+<p>需要在Mac系统下通过<code>App Store</code>进行下载</p>
+</blockquote>
+<h4 id="Mac-Sierra-10-12-6-正式版下载链接："><a href="#Mac-Sierra-10-12-6-正式版下载链接：" class="headerlink" title="Mac Sierra(10.12.6)正式版下载链接："></a>Mac Sierra(10.12.6)正式版下载链接：</h4><p><a href="https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12" target="_blank" rel="external">https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12</a></p>
+<h4 id="Mac-High-Sierra-10-13-下载链接："><a href="#Mac-High-Sierra-10-13-下载链接：" class="headerlink" title="Mac High Sierra(10.13)下载链接："></a>Mac High Sierra(10.13)下载链接：</h4><p><a href="https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12" target="_blank" rel="external">https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Mac-Sierra-10-12-6-和High-Sierra-10-13-安装文件下载&quot;&gt;&lt;a href=&quot;#Mac-Sierra-10-12-6-和High-Sierra-10-13-安装文件下载&quot; class=&quot;headerlink&quot; title=&quot;Mac 
+    
+    </summary>
+    
+    
+      <category term="Sierra" scheme="http://blog.daliansky.net/tags/Sierra/"/>
+    
+      <category term="10.12.6" scheme="http://blog.daliansky.net/tags/10-12-6/"/>
+    
+      <category term="High Sierra" scheme="http://blog.daliansky.net/tags/High-Sierra/"/>
+    
+      <category term="10.13" scheme="http://blog.daliansky.net/tags/10-13/"/>
+    
+      <category term="download" scheme="http://blog.daliansky.net/tags/download/"/>
+    
+      <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="安装" scheme="http://blog.daliansky.net/tags/%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows下使用diskpart建立EFI分区</title>
@@ -100,13 +138,13 @@
     
       <category term="10.13" scheme="http://blog.daliansky.net/tags/10-13/"/>
     
-      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
-    
       <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
     
       <category term="DB8" scheme="http://blog.daliansky.net/tags/DB8/"/>
     
       <category term="17A358a" scheme="http://blog.daliansky.net/tags/17A358a/"/>
+    
+      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
     
   </entry>
   
@@ -271,11 +309,11 @@
     
       <category term="10.13" scheme="http://blog.daliansky.net/tags/10-13/"/>
     
-      <category term="DB7" scheme="http://blog.daliansky.net/tags/DB7/"/>
+      <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
     
       <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
     
-      <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
+      <category term="DB7" scheme="http://blog.daliansky.net/tags/DB7/"/>
     
   </entry>
   
@@ -757,11 +795,11 @@
       <category term="教程" scheme="http://blog.daliansky.net/categories/%E6%95%99%E7%A8%8B/"/>
     
     
+      <category term="安装" scheme="http://blog.daliansky.net/tags/%E5%AE%89%E8%A3%85/"/>
+    
       <category term="分区" scheme="http://blog.daliansky.net/tags/%E5%88%86%E5%8C%BA/"/>
     
       <category term="high sierra" scheme="http://blog.daliansky.net/tags/high-sierra/"/>
-    
-      <category term="安装" scheme="http://blog.daliansky.net/tags/%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
@@ -807,11 +845,11 @@
       <category term="镜像" scheme="http://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/%E9%95%9C%E5%83%8F/"/>
     
     
-      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
+      <category term="10.12.6" scheme="http://blog.daliansky.net/tags/10-12-6/"/>
     
       <category term="安装" scheme="http://blog.daliansky.net/tags/%E5%AE%89%E8%A3%85/"/>
     
-      <category term="10.12.6" scheme="http://blog.daliansky.net/tags/10-12-6/"/>
+      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
     
       <category term="sierra" scheme="http://blog.daliansky.net/tags/sierra/"/>
     
@@ -1046,9 +1084,9 @@
     
       <category term="10.13" scheme="http://blog.daliansky.net/tags/10-13/"/>
     
-      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
-    
       <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
     
       <category term="high sierra" scheme="http://blog.daliansky.net/tags/high-sierra/"/>
     
