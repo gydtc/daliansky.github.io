@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.daliansky.net/"/>
-  <updated>2017-09-05T12:29:47.000Z</updated>
+  <updated>2017-09-05T12:37:29.000Z</updated>
   <id>http://blog.daliansky.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.daliansky.net/2017/09/04/hda-verb%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A1%A8/"/>
     <id>http://blog.daliansky.net/2017/09/04/hda-verb参数详表/</id>
     <published>2017-09-04T14:16:02.000Z</published>
-    <updated>2017-09-05T12:29:47.000Z</updated>
+    <updated>2017-09-05T12:37:29.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="hda-verb参数详表"><a href="#hda-verb参数详表" class="headerlink" title="hda-verb参数详表"></a>hda-verb参数详表</h1><blockquote>
 <p>hda-verb的由来<br>hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
@@ -357,6 +357,7 @@
 <h4 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h4><blockquote>
 <p>字符串不区分大小写<br>此外，它不一定是完整的字符串，但只能是唯一的<br>例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的<br><code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
 </blockquote>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -431,14 +432,14 @@
     <link href="http://blog.daliansky.net/2017/09/02/Mac-Sierra-and-High-Sierra-Installer-App-Download/"/>
     <id>http://blog.daliansky.net/2017/09/02/Mac-Sierra-and-High-Sierra-Installer-App-Download/</id>
     <published>2017-09-02T01:23:25.000Z</published>
-    <updated>2017-09-02T01:37:09.000Z</updated>
+    <updated>2017-09-05T12:37:57.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Mac-Sierra-10-12-6-和High-Sierra-10-13-安装文件下载"><a href="#Mac-Sierra-10-12-6-和High-Sierra-10-13-安装文件下载" class="headerlink" title="Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载"></a>Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载</h3><blockquote>
 <p>需要在Mac系统下通过<code>App Store</code>进行下载</p>
 </blockquote>
 <h4 id="Mac-Sierra-10-12-6-正式版下载链接："><a href="#Mac-Sierra-10-12-6-正式版下载链接：" class="headerlink" title="Mac Sierra(10.12.6)正式版下载链接："></a>Mac Sierra(10.12.6)正式版下载链接：</h4><p><a href="https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12" target="_blank" rel="external">https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12</a></p>
 <h4 id="Mac-High-Sierra-10-13-下载链接："><a href="#Mac-High-Sierra-10-13-下载链接：" class="headerlink" title="Mac High Sierra(10.13)下载链接："></a>Mac High Sierra(10.13)下载链接：</h4><p><a href="https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12" target="_blank" rel="external">https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12</a></p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1463,7 +1464,7 @@
 <h4 id="下载链接-https-pan-baidu-com-s-1qXTeYWc"><a href="#下载链接-https-pan-baidu-com-s-1qXTeYWc" class="headerlink" title="下载链接: https://pan.baidu.com/s/1qXTeYWc"></a>下载链接: <a href="https://pan.baidu.com/s/1qXTeYWc" target="_blank" rel="external">https://pan.baidu.com/s/1qXTeYWc</a></h4><ul>
 <li>MD5 (macOS High Sierra 10.13DB8 17A358a with Clover 4189.dmg) = 559bbd4ad59f5f12cf058e271ef6d871</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1481,11 +1482,11 @@
     
       <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
     
+      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
+    
       <category term="DB8" scheme="http://blog.daliansky.net/tags/DB8/"/>
     
       <category term="17A358a" scheme="http://blog.daliansky.net/tags/17A358a/"/>
-    
-      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
     
   </entry>
   
@@ -1593,7 +1594,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="原文链接：口袋妖怪heart"><a href="#原文链接：口袋妖怪heart" class="headerlink" title="原文链接：口袋妖怪heart"></a>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h5 id="原文链接：口袋妖怪heart"><a href="#原文链接：口袋妖怪heart" class="headerlink" title="原文链接：口袋妖怪heart"></a>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1634,7 +1635,7 @@
 <h4 id="下载链接-百度云盘"><a href="#下载链接-百度云盘" class="headerlink" title="下载链接: 百度云盘"></a>下载链接: <a href="https://pan.baidu.com/s/1i4DdUFN" target="_blank" rel="external">百度云盘</a></h4><ul>
 <li>MD5 (macOS High Sierra 10.13DB7 17A352a with Clover 4182.dmg) = 48fc6f8cb402d4a3d8b6035ab4456efc</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1652,9 +1653,9 @@
     
       <category term="下载" scheme="http://blog.daliansky.net/tags/%E4%B8%8B%E8%BD%BD/"/>
     
-      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
-    
       <category term="DB7" scheme="http://blog.daliansky.net/tags/DB7/"/>
+    
+      <category term="镜像" scheme="http://blog.daliansky.net/tags/%E9%95%9C%E5%83%8F/"/>
     
   </entry>
   
@@ -1670,7 +1671,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod +x upx.out</div><div class="line">./upx.out -d ./YourApp.app/Contents/MacOS/CORE\ Keygen</div></pre></td></tr></table></figure>
 <p>重新运行CORE Keygen！</p>
 <p>收工，尽情享用吧！</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1794,7 +1795,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -2084,7 +2085,7 @@
 <h4 id="最简单的命令是："><a href="#最简单的命令是：" class="headerlink" title="最简单的命令是："></a>最简单的命令是：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep IODisplayEDID</div></pre></td></tr></table></figure>
 <h5 id="显示信息如下："><a href="#显示信息如下：" class="headerlink" title="显示信息如下："></a>显示信息如下：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">| |   | | |       <span class="string">"IODisplayEDID"</span> = &lt;00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8&gt;</div></pre></td></tr></table></figure>
 <p>其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover中，然后保存重启你的电脑。<br><img src="http://ous2s14vo.bkt.clouddn.com/Custom EDID.png" alt="Custom EDID"></p>
-<h4 id="收工-2"><a href="#收工-2" class="headerlink" title="收工"></a>收工</h4><h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h4 id="收工-2"><a href="#收工-2" class="headerlink" title="收工"></a>收工</h4><h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 <h4 id="黑果小兵的部落阁：http-blog-daliansky-net"><a href="#黑果小兵的部落阁：http-blog-daliansky-net" class="headerlink" title="黑果小兵的部落阁：http://blog.daliansky.net"></a>黑果小兵的部落阁：<a href="http://blog.daliansky.net">http://blog.daliansky.net</a></h4>]]></content>
     
     <summary type="html">
@@ -2124,7 +2125,7 @@
 <h5 id="命令2："><a href="#命令2：" class="headerlink" title="命令2："></a>命令2：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --mount <span class="string">"/Volumes/HighSierra"</span> --setBoot</div></pre></td></tr></table></figure>
 <h5 id="命令3：检查分区是否可引导。-为此，键入以下命令："><a href="#命令3：检查分区是否可引导。-为此，键入以下命令：" class="headerlink" title="命令3：检查分区是否可引导。 为此，键入以下命令："></a>命令3：检查分区是否可引导。 为此，键入以下命令：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bless --info /Volumes/HighSierra</div></pre></td></tr></table></figure>
 <h5 id="输出类似结果："><a href="#输出类似结果：" class="headerlink" title="输出类似结果："></a>输出类似结果：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierra</div><div class="line">finderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServices</div><div class="line">finderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efi</div><div class="line">finderinfo[2]:      0 =&gt; Open-folder linked list empty</div><div class="line">finderinfo[3]:      0 =&gt; No alternate OS blessed file/folder</div><div class="line">finderinfo[4]:      0 =&gt; Unused field <span class="built_in">unset</span></div><div class="line">finderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices</div><div class="line">64-bit VSDB volume id:  0x9E0F1563A37473E4</div></pre></td></tr></table></figure>
-<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content>
     
     <summary type="html">
@@ -2168,9 +2169,8 @@
 </ul>
 <h5 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h5><p>百度云：<a href="https://pan.baidu.com/s/1sloGhCL" target="_blank" rel="external">https://pan.baidu.com/s/1sloGhCL</a> 密码: yknp<br>MD5 (macOS Sierra 10.12.6 16G29 Installer with Clover 4133.dmg) = 81ecbc29863381097537ec9a40c8e1c6</p>
 <h5 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h5><blockquote>
-<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br> [x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 </blockquote>
-<!-- more -->
 ]]></content>
     
     <summary type="html">
@@ -2366,9 +2366,8 @@
 </tbody>
 </table>
 <h4 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h4><blockquote>
-<p>[x] 331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a><br>[x] 158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 </blockquote>
-<!-- more -->
 ]]></content>
     
     <summary type="html">
@@ -2409,7 +2408,7 @@
 <li>本镜像发布站点：远景论坛/ <a href="https://daliansky.github.io" target="_blank" rel="external">我的github小站</a></li>
 </ul>
 <p>####下载链接:<br>百度云：<a href="https://pan.baidu.com/s/1dFvkYZZ" target="_blank" rel="external">https://pan.baidu.com/s/1dFvkYZZ</a><br>    •    MD5 (macOS High Sierra 10.13 17A334b Installer with Clover 4160.dmg) = 8b46ab210917be9287ac3a38b4e8eb81</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a><br>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content>
     
     <summary type="html">

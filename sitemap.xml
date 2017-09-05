@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/2017/09/02/Mac-Sierra-and-High-Sierra-Installer-App-Download/</loc>
+    
+    <lastmod>2017-09-05T12:37:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/2017/09/04/hda-verb%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A1%A8/</loc>
     
-    <lastmod>2017-09-05T12:29:47.000Z</lastmod>
+    <lastmod>2017-09-05T12:37:29.000Z</lastmod>
     
   </url>
   
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/2017/09/02/Mac-Sierra-and-High-Sierra-Installer-App-Download/</loc>
-    
-    <lastmod>2017-09-02T01:37:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/2017/08/29/Under-Windows-using-DISKPART-to-create-EFI-points/</loc>
     
     <lastmod>2017-08-29T08:16:23.000Z</lastmod>
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/2017/08/16/%E3%80%90%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E3%80%91macOS-Sierra-10-12-6-16G29-with-Clover-4133%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F%E5%B8%A6%E5%A4%9A%E9%A9%B1%E5%8A%A8/</loc>
+    <loc>http://blog.daliansky.net/2017/08/16/%E3%80%90%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E3%80%91macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F/</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/2017/08/16/%E3%80%90%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E3%80%91macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F/</loc>
+    <loc>http://blog.daliansky.net/2017/08/16/%E3%80%90%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5%E3%80%91macOS-Sierra-10-12-6-16G29-with-Clover-4133%E5%8E%9F%E7%89%88%E9%95%9C%E5%83%8F%E5%B8%A6%E5%A4%9A%E9%A9%B1%E5%8A%A8/</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
     
