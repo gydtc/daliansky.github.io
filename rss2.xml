@@ -202,6 +202,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 关闭 0204 端口, 改变 0105 DP 端口为 0204 HDMI (RehabMan)</div><div class="line">Find:       01050900 00040000 87000000 02040900 00040000 87000000</div><div class="line">Replace:    02040900 00080000 87000000 FF000000 01000000 40000000</div></pre></td></tr></table></figure>
 <p>结果：登录后睡眠不再滞后。</p>
 </blockquote>
+<h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/2017/09/07/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-10-12-Sierra%E4%B8%AD%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%EF%BC%88%E6%9F%90%E4%BA%9B%E6%9C%AA%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%89/#disqus_thread</comments>
