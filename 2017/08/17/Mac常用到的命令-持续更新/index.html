@@ -651,7 +651,7 @@
 <p>因为是系统原生工具，此方法无需开启rootless=0，更不会改变已有驱动的签名，也就是说不需要kext-dev-mode=1，白果也可用此方法开启Trim。</p>
 <h3 id="5-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题"><a href="#5-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题" class="headerlink" title="5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题"></a>5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题</h3><p>经常有网友需要解决笔记本显示器内屏黑屏问题，目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。<br>其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。</p>
 <h4 id="最简单的命令是："><a href="#最简单的命令是：" class="headerlink" title="最简单的命令是："></a>最简单的命令是：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep IODisplayEDID</div></pre></td></tr></table></figure>
-<h5 id="显示信息如下："><a href="#显示信息如下：" class="headerlink" title="显示信息如下："></a>显示信息如下：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">| |   | | |       <span class="string">"IODisplayEDID"</span> = &lt;00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8&gt;</div></pre></td></tr></table></figure>
+<h5 id="显示信息如下："><a href="#显示信息如下：" class="headerlink" title="显示信息如下："></a>显示信息如下：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">| |   | | |       <span class="string">"IODisplayEDID"</span> = <span class="xml"><span class="tag">&lt;<span class="name">00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8</span>&gt;</span></span></div></pre></td></tr></table></figure>
 <p>其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover中，然后保存重启你的电脑。<br><img src="http://ous2s14vo.bkt.clouddn.com/Custom EDID.png" alt="Custom EDID"></p>
 <h4 id="收工-2"><a href="#收工-2" class="headerlink" title="收工"></a>收工</h4><h3 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 <h4 id="黑果小兵的部落阁：http-blog-daliansky-net"><a href="#黑果小兵的部落阁：http-blog-daliansky-net" class="headerlink" title="黑果小兵的部落阁：http://blog.daliansky.net"></a>黑果小兵的部落阁：<a href="http://blog.daliansky.net">http://blog.daliansky.net</a></h4>
@@ -806,7 +806,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -828,7 +828,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-count">64</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
