@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/</loc>
+    
+    <lastmod>2017-09-07T08:34:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/2017/09/07/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-10-12-Sierra%E4%B8%AD%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%EF%BC%88%E6%9F%90%E4%BA%9B%E6%9C%AA%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%89/</loc>
     
     <lastmod>2017-09-07T08:29:15.000Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>http://blog.daliansky.net/2017/08/29/Under-Windows-using-DISKPART-to-create-EFI-points/</loc>
     
     <lastmod>2017-08-29T08:16:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/</loc>
-    
-    <lastmod>2017-08-29T02:55:38.000Z</lastmod>
     
   </url>
   

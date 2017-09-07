@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="Lilu插件列表[持续更新]本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。 什么是 Lilu ？ Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)  Lilu 目前">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-29T02:55:38.000Z">
+<meta property="og:updated_time" content="2017-09-07T08:34:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lilu插件列表[持续更新]">
 <meta name="twitter:description" content="Lilu插件列表[持续更新]本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。 什么是 Lilu ？ Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)  Lilu 目前">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-08-29T10:55:38+08:00">
-                2017-08-29
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-07T16:34:08+08:00">
+                2017-09-07
               </time>
             
           </span>
@@ -403,7 +403,7 @@
 <li>建议将 Lilu 以及依赖它的 kext 放置于引导器用于注入 kext 的位置并使用引导器注入它，目前主流的引导器都有注入 kext 的功能。</li>
 <li>如果将其放置于 <code>/System/Library/Extensions</code> 或者 <code>/Library/Extensions</code> 下的话，你还需要 <code>LiluFriend</code> 并正确配置使其正常工作。</li>
 </ul>
-<h4 id="Lilu-支持的内核参数-kernel-flags"><a href="#Lilu-支持的内核参数-kernel-flags" class="headerlink" title="Lilu 支持的内核参数(kernel flags)"></a>Lilu 支持的内核参数(kernel flags)</h4><p><code>-liludbg</code> 可以开启排错日志模式，不过只有 DEBUG 版本才可用。(对于日常使用的 RELEASE 版本此参数无效)<br><code>-liluoff</code> 会禁用 Lilu 和依赖它的 kext 。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-liluslow</code> 会启用旧版的 UserPatcher 。(可能与修改进程、运行库有关，具体的因为楼主对 Lilu 代码不是很熟悉，所以也就没法解释清楚了，抱歉)<br><code>-lilulowmem</code> 会禁止 Lilu 和依赖它的 kext 在 Recovery 模式下载入。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-lilubeta</code> 会在不受支持的 Darwin 版本启用 Lilu 。</p>
+<h4 id="Lilu-支持的内核参数-kernel-flags"><a href="#Lilu-支持的内核参数-kernel-flags" class="headerlink" title="Lilu 支持的内核参数(kernel flags)"></a>Lilu 支持的内核参数(kernel flags)</h4><p><code>-liludbg</code> 可以开启排错日志模式，不过只有 DEBUG 版本才可用。(对于日常使用的 RELEASE 版本此参数无效)<br><code>-liluoff</code> 会禁用 Lilu 和依赖它的 kext 。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-liluslow</code> 会启用旧版的 UserPatcher 。(可能与修改进程、运行库有关，具体的因为楼主对 Lilu 代码不是很熟悉，所以也就没法解释清楚了，抱歉)<br><code>-lilulowmem</code> 会禁止 Lilu 和依赖它的 kext 在 Recovery 模式下载入。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-lilubeta</code> 会在不受支持的 Darwin 版本启用 Lilu 。<br><code>-lilubetaall</code> 启用Lilu和所有加载的插件不受支持的os版本（非常仔细地使用）<br><code>-liluforce</code> 强制启用Lilu而不管os，该参数适用于安装或恢复。</p>
 <h4 id="致开发者-有兴趣的朋友："><a href="#致开发者-有兴趣的朋友：" class="headerlink" title="致开发者/有兴趣的朋友："></a>致开发者/有兴趣的朋友：</h4><p>关于 Log 输出，目前 Lilu 提供的 API 中有两个输出 Log 的接口，分别为 SYSLOG(“msg\n”); 与 DBGLOG(“msg\n”); 这两个 macro ，具体输出原理这里不做过多解释，仍是调用 Apple 在 IOLib.h 中为我们提供的 IOLog 接口。<br>但要特别注意的是，如上所说，DBGLOG(“msg\n”); 这个 macro 需要在 DEBUG 模式开启下才会被编译。<br>相信各位看这段代码即可了解。;) (来自 Headers/kern_util.hpp)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#define SYSLOG(str, ...) IOLog( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)</span></div><div class="line"></div><div class="line"><span class="comment">#ifdef DEBUG</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...)                                                                                                                                \</span></div><div class="line">        <span class="keyword">do</span> &#123;                                                                                                                                                                \</div><div class="line">                <span class="keyword">if</span> (ADDPR(debugEnabled))                                                                                \</div><div class="line">                        IOLog( xStringify(PRODUCT_NAME) <span class="string">": (DEBUG) "</span> str <span class="string">"\n"</span>, <span class="comment">## __VA_ARGS__);                \</span></div><div class="line">        &#125; <span class="keyword">while</span>(0)</div><div class="line"><span class="comment">#else</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...) do &#123; &#125; while(0)</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure>
 <p>另外，原宏中已经自带了换行符 \n ，所以在编写 Log 时也就无必要再换行了。</p>
