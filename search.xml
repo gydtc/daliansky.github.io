@@ -72,8 +72,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
       </tags>
@@ -84,11 +84,11 @@
     <content type="text"><![CDATA[Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载 需要在Mac系统下通过App Store进行下载 Mac Sierra(10.12.6)正式版下载链接：https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12 Mac High Sierra(10.13)下载链接：https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12 QQ群:331686786 一起黑苹果]]></content>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>High Sierra</tag>
         <tag>download</tag>
-        <tag>下载</tag>
         <tag>安装</tag>
       </tags>
   </entry>
@@ -130,8 +130,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -158,9 +158,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -205,7 +205,7 @@
   <entry>
     <title><![CDATA[不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区]]></title>
     <url>%2F2017%2F08%2F16%2F%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%B6%E4%BD%9C%E5%AE%89%E8%A3%85%E7%9B%98%EF%BC%81%E6%95%99%E4%BD%A0%E5%9C%A8MacOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85High-Sierra%E7%B3%BB%E7%BB%9F%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%88%86%E5%8C%BA%2F</url>
-    <content type="text"><![CDATA[不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。 我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 开始 通过App Store下载macOS High Sierra Developer Beta 5/ Public Beta 4安装程序。 在要使用磁盘实用程序安装测试版的驱动器上创建HFS日志分区（名称不能包含空格）。 打开应用程序目录，右键单击macOS Beta安装程序，然后单击显示包内容。 转到Contents&gt;Shared Support，然后双击InstallESD.dmg和BaseSystem.dmg挂载它们。 打开安装的InstallESD.dmg，打开Packages文件夹，然后打开OSInstall.mpkg文件。 这将打开macOS安装程序。 是的，现在您可以从启动的MacOS系统桌面安装High Sierra Beta。 选择您创建的分区以安装它[备注：如果无法安装请执行：diskutil umount HighSierra diskutil mount HighSierra HighSierra是指卷名]；安装完成后，按照步骤5。 打开已安装的BaseSystem.dmg并将boot.efi从/System/Library/CoreServices复制到同一位置的High Sierra分区（/System/Library/CoreServices） 虽然安装了HS测试版，但它尚不可启动。 要使其可引导，请打开终端并键入以下命令：[假设安装分区为：HighSierra] 命令1：1sudo bless --folder "/Volumes/HighSierra/System/Library/CoreServices" 命令2：1sudo bless --mount "/Volumes/HighSierra" --setBoot 命令3：检查分区是否可引导。 为此，键入以下命令：1bless --info /Volumes/HighSierra 输出类似结果：12345678Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierrafinderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServicesfinderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efifinderinfo[2]: 0 =&gt; Open-folder linked list emptyfinderinfo[3]: 0 =&gt; No alternate OS blessed file/folderfinderinfo[4]: 0 =&gt; Unused field unsetfinderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices64-bit VSDB volume id: 0x9E0F1563A37473E4 收工QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。 我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 开始 通过App Store下载macOS High Sierra Developer Beta 5/ Public Beta 4安装程序。 在要使用磁盘实用程序安装测试版的驱动器上创建HFS日志分区（名称不能包含空格）。 打开应用程序目录，右键单击macOS Beta安装程序，然后单击显示包内容。 转到Contents&gt;Shared Support，然后双击InstallESD.dmg和BaseSystem.dmg挂载它们。 打开安装的InstallESD.dmg，打开Packages文件夹，然后打开OSInstall.mpkg文件。 这将打开macOS安装程序。 是的，现在您可以从启动的MacOS系统桌面安装High Sierra Beta。 选择您创建的分区以安装它[备注：如果无法安装请执行：diskutil umount HighSierra diskutil mount HighSierra HighSierra是指卷名]；安装完成后，按照步骤5。 打开已安装的BaseSystem.dmg并将boot.efi从/System/Library/CoreServices复制到同一位置的High Sierra分区（/System/Library/CoreServices） 虽然安装了HS测试版，但它尚不可启动。 要使其可引导，请打开终端并键入以下命令：[假设安装分区为：HighSierra] 命令1：1sudo bless --folder "/Volumes/HighSierra/System/Library/CoreServices" 命令2：1sudo bless --mount "/Volumes/HighSierra" --setBoot 命令3：检查分区是否可引导。 为此，键入以下命令：1bless --info /Volumes/HighSierra 输出类似结果：Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierra finderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServices finderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efi finderinfo[2]: 0 =&gt; Open-folder linked list empty finderinfo[3]: 0 =&gt; No alternate OS blessed file/folder finderinfo[4]: 0 =&gt; Unused field unset finderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices 64-bit VSDB volume id: 0x9E0F1563A37473E4 收工QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -225,9 +225,9 @@
       </categories>
       <tags>
         <tag>sierra</tag>
+        <tag>镜像</tag>
         <tag>10.12.6</tag>
         <tag>安装</tag>
-        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -254,8 +254,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>high sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>17A344b</tag>
       </tags>
   </entry>
