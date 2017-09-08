@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 08 Sep 2017 02:03:12 GMT</pubDate>
+    <pubDate>Fri, 08 Sep 2017 02:11:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -116,7 +116,7 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC256" target="_blank" rel="external">ALC256 (3246)</a></td>
-<td>layout 13</td>
+<td>layout 13, 28</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
