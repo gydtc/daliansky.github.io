@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 08 Sep 2017 01:59:44 GMT</pubDate>
+    <pubDate>Fri, 08 Sep 2017 02:03:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,8 +26,8 @@
 <p><strong>请注意</strong>，<a href="https://github.com/vit9696/Lilu" target="_blank" rel="external">Lilu</a> 也必须出现在<code>AppleALC</code>上。</p>
 <p>按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。</p>
 <p>备注：<code>AppleALC</code>不处理<code>layout-id</code>值，它希望你提供正确的DSDT(SSDT)。</p>
-<h4 id="如何控制AppleALC"><a href="#如何控制AppleALC" class="headerlink" title="如何控制AppleALC"></a>如何控制AppleALC</h4><ul>
-<li><code>AppleALC</code>接受不同的引导参数来控制其行为：</li>
+<h4 id="如何控制AppleALC"><a href="#如何控制AppleALC" class="headerlink" title="如何控制AppleALC"></a>如何控制AppleALC</h4><p><code>AppleALC</code>接受不同的引导参数来控制其行为：</p>
+<ul>
 <li><code>-alcoff</code> - 禁用自身;</li>
 <li><code>-alcdbg</code> - 打印调试信息（如果扩展在调试模式下编译）;</li>
 <li><code>-alcbeta</code> - 在不支持的系统（通常未发布或旧版）上启用AppleALC;</li>
@@ -39,7 +39,7 @@
 <p><code>log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source</code></p>
 <p>10.11及以前版本</p>
 <p><code>cat /var/log/system.log | egrep &#39;(AppleALC|Lilu)&#39;</code></p>
-<h4 id="AppleALC支持的编解码器列表"><a href="#AppleALC支持的编解码器列表" class="headerlink" title="AppleALC支持的编解码器列表"></a>AppleALC支持的编解码器列表</h4><table>
+<h4 id="附：AppleALC支持的编解码器列表"><a href="#附：AppleALC支持的编解码器列表" class="headerlink" title="附：AppleALC支持的编解码器列表"></a>附：AppleALC支持的编解码器列表</h4><table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -696,6 +696,7 @@
 </tr>
 </tbody>
 </table>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/2017/09/08/AppleALC-Supported-codecs/#disqus_thread</comments>
