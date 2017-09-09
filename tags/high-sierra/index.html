@@ -398,7 +398,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -803,7 +803,27 @@ $('.popup').click(function (e) {
 
 </body>
 </html>
- }
+ex_content;
+                  }
+                }
+              });
+            }
+            // show search results
+            if (isMatch) {
+              matchcounts += 1;
+              str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title +
+                "</a>";
+              var content = data.content.trim().replace(/<[^>]+>/g, "");
+              if (first_occur >= 0) {
+                // cut out 100 characters
+                var start = first_occur - 20;
+                var end = first_occur + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (start == 0) {
+                  end = 50;
+                }
                 if (end > content.length) {
                   end = content.length;
                 }
