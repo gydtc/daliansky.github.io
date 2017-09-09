@@ -96,19 +96,19 @@
 
 
 
-<meta name="description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法] 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。  问题的提出： 在macOS上，当使用BMC9">
+<meta name="description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificat">
 <meta name="keywords" content="DW1560,BCM94352z,10.12,10.13,sierra,high sierra,驱动,WIFI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
 <meta property="og:url" content="http://blog.daliansky.net/2017/09/09/Broadcom-BCM94352z-DW1560驱动新姿势/index.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法] 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。  问题的提出： 在macOS上，当使用BMC9">
+<meta property="og:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificat">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png">
-<meta property="og:updated_time" content="2017-09-09T01:47:39.000Z">
+<meta property="og:updated_time" content="2017-09-09T02:16:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
-<meta name="twitter:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法] 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。  问题的提出： 在macOS上，当使用BMC9">
+<meta name="twitter:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificat">
 <meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png">
 
 
@@ -370,7 +370,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-09T09:47:39+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-09T10:16:49+08:00">
                 2017-09-09
               </time>
             
@@ -426,11 +426,16 @@
       
 
       
-        <h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><blockquote>
-<p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
+        <h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><p>引言</p>
+<blockquote>
+<ul>
+<li>昨晚<a href="https://github.com/pmheart" target="_blank" rel="external">口袋妖怪</a>进群闲聊的时候提到过他之前维护的<a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a>已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。同时他发给我的<a href="https://sourceforge.net/p/airportbrcmfixup/code/HEAD/tree/trunk/AirportBrcmFixup/kern_brcmfx.cpp#l242" target="_blank" rel="external">AirportBrcmFixup/kern_brcmfx.cpp</a>源码中已经增加了包括 <code>_si_pmu_fvco_pllreg</code> / <code>Chip identificator checking patch</code> / <code>Wi-Fi 5 Ghz/Country code patch (required for 10.11)</code> / <code>Third party device patch</code> / <code>White list restriction patch</code> / <code>Failed PCIe configuration (device-id checking)</code> 等问题的修复补丁</li>
+<li>之前我写的一篇<a href="https://blog.daliansky.net/2017/09/07/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势/#more">教程</a>已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果</li>
+</ul>
 </blockquote>
-<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><ul>
-<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 </li>
+<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
+<ul>
+<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 </li>
 </ul>
 <h3 id="解决方案：同时支持10-11-10-13系统"><a href="#解决方案：同时支持10-11-10-13系统" class="headerlink" title="解决方案：同时支持10.11-10.13系统"></a>解决方案：同时支持10.11-10.13系统</h3><h4 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h4><ul>
 <li>使用应用程序<code>Clover Configurator</code></li>
