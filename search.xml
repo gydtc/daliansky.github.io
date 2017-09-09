@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Broadcom BCM94352z/DW1560驱动新姿势]]></title>
+    <title><![CDATA[Broadcom BCM94352z/DW1560驱动新姿势[新方法]]]></title>
     <url>%2F2017%2F09%2F09%2FBroadcom-BCM94352z-DW1560%E9%A9%B1%E5%8A%A8%E6%96%B0%E5%A7%BF%E5%8A%BF%2F</url>
-    <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。 问题的提出： 在macOS上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 解决方案：同时支持10.11-10.13系统Clover设置： 使用应用程序Clover Configurator 在Clover - Devices - FakeID - WIFI中添加仿冒ID: 0x43a014e4 在Clover - KextsToPatch 应用以下补丁，以使BCM94352z启用蓝牙： 1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt; 驱动： 下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup 将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext 包括这些文件的目录看起来是这样的： 当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查WIFI/蓝牙是否工作正常。 写在最后这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。 QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法] 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。 问题的提出： 在macOS上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 解决方案：同时支持10.11-10.13系统Clover设置： 使用应用程序Clover Configurator 在Clover - Devices - FakeID - WIFI中添加仿冒ID: 0x43a014e4 在Clover - KextsToPatch 应用以下补丁，以使BCM94352z启用蓝牙： 1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt; 驱动： 下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup 将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext 包括这些文件的目录看起来是这样的： 当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查WIFI/蓝牙是否工作正常。 写在最后这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。 QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -32,9 +32,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势]]></title>
+    <title><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]]]></title>
     <url>%2F2017%2F09%2F07%2FBroadcom-WiFi-BlueTooth-BCM94352z-DW1560-%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%A9%B1%E5%8A%A8%E5%A7%BF%E5%8A%BF%2F</url>
-    <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。 问题的提出： 在macOS Sierra上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 解决方案：两种方法任选其一【我假设你的系统是10.12.x，同时也给出即将发布的10.13.x的方法】 使用应用程序Clover Configurator在Clover中的KextsToPatch应用以下补丁，以使BCM94352z启用WiFi： 1234567891011121314151617181920212223Name: AirPortBrcm4360Comment: 在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4Find: pci14e4,43a0Replace: pci14e4,43b1MatchOS: 10.12.xInfoPlistPatch: trueName: AirPortBrcmNICComment: 在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4Find: pci14e4,43a0Replace: pci14e4,43b1MatchOS: 10.13.xInfoPlistPatch: trueName: AirPortBrcm4360Comment: 初始化fvco以加载BCM4360驱动[10.12.x] - DarkvoidFind: 81F952AA00007529 Replace: 81F952AA00006690Name: AirPortBrcmNICComment: 初始化fvco以加载BCM4360驱动[10.13.x]Find: 81F952AA00007529 Replace: 81F952AA00006690 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;string&gt;pci14e4,43a0&lt;/string&gt; &lt;key&gt;InfoPlistPatch&lt;/key&gt; &lt;true/&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.12.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AirPortBrcm4360&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;string&gt;pci14e4,43b1&lt;/string&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;初始化fvco以加载BCM4360驱动[10.12.x] - Darkvoid&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; gflSqgAAdSk= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.12.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;com.apple.driver.AirPort.Brcm4360&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; gflSqgAAZpA= &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;string&gt;pci14e4,43a0&lt;/string&gt; &lt;key&gt;InfoPlistPatch&lt;/key&gt; &lt;true/&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AirPortBrcmNIC&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;string&gt;pci14e4,43b1&lt;/string&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;初始化fvco以加载BCM4360驱动[10.13.x]&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; gflSqgAAdSk= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AirPortBrcmNIC&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; gflSqgAAZpA= &lt;/data&gt;&lt;/dict&gt; 它看起来是这个样子的： config.plist文件的修改到此结束现在BCM94352z的WIFI应该已经可以工作了，你甚至都不需要添加仿冒WIFI的设备ID。当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查WIFI是否工作正常。 驱动你的蓝牙Clover设置： 使用应用程序Clover Configurator在Clover中的KextsToPatch应用以下补丁，以使BCM94352z启用蓝牙： 1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt; 驱动： 下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup 将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext 包括这些文件的目录看起来是这样的： 当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查蓝牙是否工作正常。 写在最后这是驱动BCM94352z(DW1560)的基础设置，还有些高级设置需要各位多爬帖。 QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法] 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。 问题的提出： 在macOS Sierra上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 解决方案：两种方法任选其一【我假设你的系统是10.12.x，同时也给出即将发布的10.13.x的方法】 使用应用程序Clover Configurator在Clover中的KextsToPatch应用以下补丁，以使BCM94352z启用WiFi： 1234567891011121314151617181920212223Name: AirPortBrcm4360Comment: 在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4Find: pci14e4,43a0Replace: pci14e4,43b1MatchOS: 10.12.xInfoPlistPatch: trueName: AirPortBrcmNICComment: 在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4Find: pci14e4,43a0Replace: pci14e4,43b1MatchOS: 10.13.xInfoPlistPatch: trueName: AirPortBrcm4360Comment: 初始化fvco以加载BCM4360驱动[10.12.x] - DarkvoidFind: 81F952AA00007529 Replace: 81F952AA00006690Name: AirPortBrcmNICComment: 初始化fvco以加载BCM4360驱动[10.13.x]Find: 81F952AA00007529 Replace: 81F952AA00006690 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;string&gt;pci14e4,43a0&lt;/string&gt; &lt;key&gt;InfoPlistPatch&lt;/key&gt; &lt;true/&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.12.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AirPortBrcm4360&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;string&gt;pci14e4,43b1&lt;/string&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;初始化fvco以加载BCM4360驱动[10.12.x] - Darkvoid&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; gflSqgAAdSk= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.12.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;com.apple.driver.AirPort.Brcm4360&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; gflSqgAAZpA= &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;string&gt;pci14e4,43a0&lt;/string&gt; &lt;key&gt;InfoPlistPatch&lt;/key&gt; &lt;true/&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AirPortBrcmNIC&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;string&gt;pci14e4,43b1&lt;/string&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;初始化fvco以加载BCM4360驱动[10.13.x]&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; gflSqgAAdSk= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AirPortBrcmNIC&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; gflSqgAAZpA= &lt;/data&gt;&lt;/dict&gt; 它看起来是这个样子的： config.plist文件的修改到此结束现在BCM94352z的WIFI应该已经可以工作了，你甚至都不需要添加仿冒WIFI的设备ID。当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查WIFI是否工作正常。 驱动你的蓝牙Clover设置： 使用应用程序Clover Configurator在Clover中的KextsToPatch应用以下补丁，以使BCM94352z启用蓝牙： 1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt; 驱动： 下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup 将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext 包括这些文件的目录看起来是这样的： 当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查蓝牙是否工作正常。 写在最后这是驱动BCM94352z(DW1560)的基础设置，还有些高级设置需要各位多爬帖。 QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -90,8 +90,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
       </tags>
@@ -102,11 +102,11 @@
     <content type="text"><![CDATA[Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载 需要在Mac系统下通过App Store进行下载 Mac Sierra(10.12.6)正式版下载链接：https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12 Mac High Sierra(10.13)下载链接：https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12 QQ群:331686786 一起黑苹果]]></content>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>High Sierra</tag>
         <tag>download</tag>
+        <tag>下载</tag>
         <tag>安装</tag>
       </tags>
   </entry>
@@ -148,8 +148,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -176,9 +176,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -243,9 +243,9 @@
       </categories>
       <tags>
         <tag>sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
         <tag>安装</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -272,8 +272,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>high sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>17A344b</tag>
       </tags>
   </entry>

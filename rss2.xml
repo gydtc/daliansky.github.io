@@ -8,21 +8,21 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sat, 09 Sep 2017 01:46:01 GMT</pubDate>
+    <pubDate>Sat, 09 Sep 2017 01:47:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Broadcom BCM94352z/DW1560驱动新姿势</title>
+      <title>Broadcom BCM94352z/DW1560驱动新姿势[新方法]</title>
       <link>http://blog.daliansky.net/2017/09/09/Broadcom-BCM94352z-DW1560%E9%A9%B1%E5%8A%A8%E6%96%B0%E5%A7%BF%E5%8A%BF/</link>
       <guid>http://blog.daliansky.net/2017/09/09/Broadcom-BCM94352z-DW1560%E9%A9%B1%E5%8A%A8%E6%96%B0%E5%A7%BF%E5%8A%BF/</guid>
       <pubDate>Sat, 09 Sep 2017 01:35:23 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势&quot; class=&quot;headerlink&quot; title=&quot;
+        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot; class=&quot;headerlink&quot;
       
       </description>
       
-      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势</h3><blockquote>
+      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><blockquote>
 <p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
 </blockquote>
 <h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><ul>
@@ -750,17 +750,17 @@
     </item>
     
     <item>
-      <title>Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势</title>
+      <title>Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]</title>
       <link>http://blog.daliansky.net/2017/09/07/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%A9%B1%E5%8A%A8%E5%A7%BF%E5%8A%BF/</link>
       <guid>http://blog.daliansky.net/2017/09/07/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-%E7%9A%84%E6%AD%A3%E7%A1%AE%E9%A9%B1%E5%8A%A8%E5%A7%BF%E5%8A%BF/</guid>
       <pubDate>Thu, 07 Sep 2017 08:18:13 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势&quot; class=&quot;headerlink&quot; tit
+        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法&quot; class=&quot;heade
       
       </description>
       
-      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势</h3><blockquote>
+      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]</h3><blockquote>
 <p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
 </blockquote>
 <h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><ul>
