@@ -398,7 +398,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -420,7 +420,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -803,7 +803,46 @@ $('.popup').click(function (e) {
 
 </body>
 </html>
-="fa fa-search fa-5x" /></div>'
+  });
+            }
+            // show search results
+            if (isMatch) {
+              matchcounts += 1;
+              str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title +
+                "</a>";
+              var content = data.content.trim().replace(/<[^>]+>/g, "");
+              if (first_occur >= 0) {
+                // cut out 100 characters
+                var start = first_occur - 20;
+                var end = first_occur + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (start == 0) {
+                  end = 50;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                var match_content = content.substring(start, end);
+                // highlight all keywords
+                keywords.forEach(function (keyword) {
+                  var regS = new RegExp(keyword, "gi");
+                  match_content = match_content.replace(regS, "<b class=\"search-keyword\">" +
+                    keyword + "</b>");
+                });
+                str += "<p class=\"search-result\">" + match_content + "...</p>"
+              }
+              str += "</li>";
+            }
+          })
+        };
+        str += "</ul>";
+        if (matchcounts == 0) {
+          str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        }
+        if (keywords == "") {
+          str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
         }
         $resultContent.innerHTML = str;
       });

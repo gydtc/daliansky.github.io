@@ -50,6 +50,24 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[[持续更新] 10.12 Sierra中的常见问题（某些未解决的问题）]]></title>
+    <url>%2FUpdated-10.12-Frequently-Asked-Questions-in-Sierra</url>
+    <content type="text"><![CDATA[HD520/HD530/HD620/HD630显卡驱动的正确姿势 在CLOVER里注入platform-id，下表是整理出的部分资料供参考；更详细的资料请移步 显卡型号 platform-id 机型 接口 LVDS DP HDMI Intel HD Graphics 520 0x19160000 3 1 2 Intel HD Graphics 520 0x19160002 3 1 2 Intel HD Graphics 530 0x19120000 iMac17,1 3 3 Intel HD Graphics 530 0x191b0000 MacBookPro13,3 3 1 2 Intel HD Graphics 530 0x191b0006 1 Intel HD Graphics 620 0x59160000 MacBookPro14,2 3 1 1 1 Intel HD Graphics 630 0x59120000 iMac18,2iMac18,3 3 3 Intel HD Graphics 630 0x591b0000 MacBookPro14,3 3 1 1 1 还需要在CLOVER/kexts/Other放入Lilu.kext和IntelGraphicsFixup.kext，其它的基于Lilu的插件列表请稳步：Lilu插件列表 更多的platform-id请移步：黑苹果必备：Intel核显platform ID整理 系统偏好设置里的触控板设置是空白的 请更新VoodooPS2Controller.kext到1.8.25或以上版本，VoodooPS2Controller.kext下载链接 HD4400 / HD4600在Safari浏览器播放视频崩溃 在CLOVER/kexts/Other放入Lilu.kext和IntelGraphicsFixup.kext 还有可能会需要IntelGraphicsDVMTFixup 延伸阅读：其它的基于Lilu的插件列表请稳步：Lilu插件列表 Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后/暂停/无响应 登录后不久（有些在登录之前），鼠标和/或图形可能看起来没有反应。 这通常在大约20秒后清除。 从睡眠醒来后观察到相同的效果。 这似乎只影响了Haswell的图形硬件。 可能与SMBIOS的变化有关，当使用MacBookPro11,2与之前版本的OS X / macOS时，观察到类似的效果。 但现在的问题也出现在MacBookAir6,2和MacBookPro11,1上。 该解决方案似乎是从帧缓冲区kext中的ig-platform数据中删除未使用的连接器： 原文： 在我的u430与10.12.4上遭遇了这个问题（醒来后和登录后的短暂滞后）。u430具有LVDS和单个HDMI。 我使用ig-platform-id 0xa260006。 0xa260006具有LVDS，0105 DP，0204 DP。 HDMI连接到0204，所以我修补该端口的HDMI（启用HDMI音频）。 我也使用vbo 9mb光标字节补丁 1234Name: com.apple.driver.AppleIntelFramebufferAzulComment: 0x0a260006 9MB cursor bytes, vboFind: 0600260a 01030303 00000002 00003001 00006000Replace: 0600260a 01030303 00000002 00003001 00009000 1234Name: com.apple.driver.AppleIntelFramebufferAzulComment: HDMI-audio, port 0204, 0x0a260005 0x0a260006Find: 02040900 00040000 87000000Replace: 02040900 00080000 87000000 现在，0105端口在帧缓冲区中的0204端口之前，但是我们不需要0105端口，因为它没有连接任何东西（并导致滞后），所以…策略是用0204替代0105，将端口数从3减少到2。我们已经知道，在AppleIntelFramebufferCapri中，0x01660004只有一个LVDS连接器，所以我们可以查看该ig-platform-id数据的标题，以发现我们需要将Azul中的ig平台数据从3个端口减少到2个。AppleIntelFramebufferCapri 0x01660004: 104006601 01030101 AppleIntelFramebufferAzul 0x0a260006: 10600260A 01030303 所以，最终有两个计数与连接器的数量有关，现在让我们来修改它们： 1234Name: com.apple.driver.AppleIntelFramebufferAzulComment: 0x0a260006 9MB光标字节(vbo)，仅2端口(RehabMan)Find: 0600260a 01030303 00000002 00003001 00006000Replace: 0600260a 01030202 00000002 00003001 00009000 1234Name: com.apple.driver.AppleIntelFramebufferAzulComment: 0x0a260006 关闭 0204 端口, 改变 0105 DP 端口为 0204 HDMI (RehabMan)Find: 01050900 00040000 87000000 02040900 00040000 87000000Replace: 02040900 00080000 87000000 FF000000 01000000 40000000 结果：登录后睡眠不再滞后。 未完待续QQ群:331686786 一起黑苹果]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>10.12</tag>
+        <tag>sierra</tag>
+        <tag>常见问题</tag>
+        <tag>platform-id</tag>
+        <tag>clover</tag>
+        <tag>patch</tag>
+        <tag>lilu</tag>
+        <tag>wake</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hda-verb参数详表]]></title>
     <url>%2Fhda-verb-parameter-detail-table</url>
     <content type="text"><![CDATA[hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。 命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2 Mac: $ hda-verb 0x12 0x701 2 输入命令： 1hda-verb 输出信息： 1234hda-verb for CodecCommander (based on alsa-tools hda-verb) usage: hda-verb [option] hwdep-device nid verb param -l List known verbs and parameters -L List known verbs and parameters (one per line) 参数 数值 GET_STREAM_FORMAT 0x0a00 GET_AMP_GAIN_MUTE 0x0b00 GET_PROC_COEF 0x0c00 GET_COEF_INDEX 0x0d00 PARAMETERS 0x0f00 GET_CONNECT_SEL 0x0f01 GET_CONNECT_LIST 0x0f02 GET_PROC_STATE 0x0f03 GET_SDI_SELECT 0x0f04 GET_POWER_STATE 0x0f05 GET_CONV 0x0f06 GET_PIN_WIDGET_CONTROL 0x0f07 GET_UNSOLICITED_RESPONSE 0x0f08 GET_PIN_SENSE 0x0f09 GET_BEEP_CONTROL 0x0f0a GET_EAPD_BTLENABLE 0x0f0c GET_DIGI_CONVERT_1 0x0f0d GET_DIGI_CONVERT_2 0x0f0e GET_VOLUME_KNOB_CONTROL 0x0f0f GET_GPIO_DATA 0x0f15 GET_GPIO_MASK 0x0f16 GET_GPIO_DIRECTION 0x0f17 GET_GPIO_WAKE_MASK 0x0f18 GET_GPIO_UNSOLICITED_RSP_MASK 0x0f19 GET_GPIO_STICKY_MASK 0x0f1a GET_CONFIG_DEFAULT 0x0f1c GET_SUBSYSTEM_ID 0x0f20 SET_STREAM_FORMAT 0x200 SET_AMP_GAIN_MUTE 0x300 SET_PROC_COEF 0x400 SET_COEF_INDEX 0x500 SET_CONNECT_SEL 0x701 SET_PROC_STATE 0x703 SET_SDI_SELECT 0x704 SET_POWER_STATE 0x705 SET_CHANNEL_STREAMID 0x706 SET_PIN_WIDGET_CONTROL 0x707 SET_UNSOLICITED_ENABLE 0x708 SET_PIN_SENSE 0x709 SET_BEEP_CONTROL 0x70a SET_EAPD_BTLENABLE 0x70c SET_DIGI_CONVERT_1 0x70d SET_DIGI_CONVERT_2 0x70e SET_VOLUME_KNOB_CONTROL 0x70f SET_GPIO_DATA 0x715 SET_GPIO_MASK 0x716 SET_GPIO_DIRECTION 0x717 SET_GPIO_WAKE_MASK 0x718 SET_GPIO_UNSOLICITED_RSP_MASK 0x719 SET_GPIO_STICKY_MASK 0x71a SET_CONFIG_DEFAULT_BYTES_0 0x71c SET_CONFIG_DEFAULT_BYTES_1 0x71d SET_CONFIG_DEFAULT_BYTES_2 0x71e SET_CONFIG_DEFAULT_BYTES_3 0x71f SET_CODEC_RESET 0x7ff 已知参数： 参数 数值 VENDOR_ID 0x00 SUBSYSTEM_ID 0x01 REV_ID 0x02 NODE_COUNT 0x04 FUNCTION_TYPE 0x05 AUDIO_FG_CAP 0x08 AUDIO_WIDGET_CAP 0x09 PCM 0x0a STREAM 0x0b PIN_CAP 0x0c AMP_IN_CAP 0x0d CONNLIST_LEN 0x0e POWER_STATE 0x0f PROC_CAP 0x10 GPIO_CAP 0x11 AMP_OUT_CAP 0x12 VOL_KNB_CAP 0x13 例子：设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24 1234$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24nid = 0x19, verb = 0x707, param = 0x24command 0x01970724 --&gt; result = 0x00000000 也可以写成： 1234$ hda-verb 0x19 0x707 0x24nid = 0x19, verb = 0x707, param = 0x24command 0x01970724 --&gt; result = 0x00000000 CodecCommander经常使用的命令： 12$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83 备注： 字符串不区分大小写此外，它不一定是完整的字符串，但只能是唯一的例如 par和PARAMETER的参数是相同的set_a就足以代替SET_AMP_GAIN_MUTE QQ群:331686786 一起黑苹果]]></content>
@@ -216,6 +234,21 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动]]></title>
+    <url>%2FmacOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive</url>
+    <content type="text"><![CDATA[【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动 本镜像采用官方原版app制作，集成Clover 4133，支持UEFI启动安装。 Clover集成众多配置文件，系统默认config.plist支持原生I5/i7七代移动版CPU，原生支持Intel HD Graphics 620【platforms-id:59160000】； 其它显卡配置文件可通过Clover引导界面-Options-config进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的另一帖 支持BCM94352z无线网卡，支持Realtek8111系列网卡； 已加入Lilu、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 其它驱动位于/EFI/Clover/kexts/Other/backup目录下，请根据自己的机型配置适当的驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决，当然您也可以通过企鹅群：331686786寻求帮助。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像唯一发布站点：远景论坛/ 黑果小兵的小站 下载链接：百度云：https://pan.baidu.com/s/1sloGhCL 密码: yknpMD5 (macOS Sierra 10.12.6 16G29 Installer with Clover 4133.dmg) = 81ecbc29863381097537ec9a40c8e1c6 QQ群： 331686786 一起黑苹果]]></content>
+      <categories>
+        <category>下载</category>
+        <category>镜像</category>
+      </categories>
+      <tags>
+        <tag>sierra</tag>
+        <tag>10.12.6</tag>
+        <tag>安装</tag>
+        <tag>镜像</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hotpatch详解]]></title>
     <url>%2Fhotpatch-detailed-solution</url>
     <content type="text"><![CDATA[hotpatch详解这里阐述hotpatch的作用及各功能详解 [TOC] 核心文件 名称 解释 SSDT-Config SSDT控制入口文件 系统 名称 解释 SSDT-LPC 正确识别LPC总线到系统 SSDT-SMBUS 正确识别SMBus到系统 SSDT-DMAC 将DMA控制器公开给系统 SSDT-MCHC 将内存控制器暴露在系统中 显卡 名称 解释 SSDT-IGPU 将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示 SSDT-Disable_DGPU 在启动时关闭独立显卡，因为Mac OS无法使用它 SSDT-ALS0 添加假环境光传感器以在重新启动之间保存背光信息 SSDT-BRT6 将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码 SSDT-Dell_FN 将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码【部分DELL机型】 SSDT-PNLF 显示器亮度控制，为IntelBacklight.kext或AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备 声卡 名称 解释 SSDT-HDAU 自动注入HDAU属性 备注：适用于Haswell和Broadwell平台 SSDT-HDEF 自动注入HDEF属性 声卡layoutid注入点 睡眠相关 名称 解释 SSDT-GPRW 通过挂接GPRW或UPRW来解决即时唤醒 SSDT-LANC_PRW 通过挂接GPRW来解决即时唤醒 SSDT-UPRW 通过挂接GPRW或UPRW来解决即时唤醒 SSDT-IMEI 添加IMEI（6系列HD4000，7系HD3000） SSDT-PTSWAK 在睡眠之前对离散GPU进行驱动，并在唤醒后将其关闭，以确保系统能够跟踪它 其它杂项 名称 解释 SSDT-Debug 用于ACPIDebug 该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的，使用“添加SSDT调试外部声明”从其他方式访问这些方法hotpatch SSDT甚至打补丁的OEM ACPI文件 SSDT-ESEL 关闭ESEL，在DSDT里原生ESEL被重命名为ESEX SSDT-XWAK 关闭XWAK，在DSDT里原生的XWAK被重命名为ZWAK SSDT-PluginType1 在_PR.CPU0上插入plugin-type = 1可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入 SSDT-SATA 修复某些不支持的SATA设备 SSDT-XHC 自动注入XHC属性 SSDT-XOSI 覆盖主机定义的_OSI来处理“Darwin”…DSDT中的所有_OSI调用都被路由到XOSIXOSI模拟“Windows 2009”（这是Windows 7）XOSI模拟“Windows 2015”（这是Windows 10）这里是关于_OSI中微软操作系统的描述文件 QQ群： 331686786 一起黑苹果]]></content>
@@ -226,6 +259,22 @@
         <tag>hotpatch</tag>
         <tag>DSDT</tag>
         <tag>SSDT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像]]></title>
+    <url>%2FmacOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror</url>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像 本镜像采用官方原版app制作，集成Clover 4160，支持UEFI启动安装。 Clover默认config.plist支持原生i5/i7七代移动版CPU，原生支持Intel HD Graphics 620【platforms-id:59160000】；【DELL 燃7000系列可直接安装使用】 其它配置文件包括七代6x0 config.plist配置文件，其中spoof的是显卡欺骗，不带spoof字样的是支持原生显卡，本版未放其它型号的config；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 集成的AppleALC是ALC256，添加CodecCommander以解决睡眠唤醒无声问题；完整的ALC256驱动请见老朽的另一帖 支持BCM94352z无线网卡，支持Realtek8111系列网卡； 已加入Lilu、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 其它驱动位于/EFI/Clover/kexts/Other/backup目录下，请根据自己的机型配置适当的驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 我的github小站 ####下载链接:百度云：https://pan.baidu.com/s/1dFvkYZZ • MD5 (macOS High Sierra 10.13 17A334b Installer with Clover 4160.dmg) = 8b46ab210917be9287ac3a38b4e8eb81 QQ群:158976808 燃7000-黑苹果交流群]]></content>
+      <categories>
+        <category>下载</category>
+        <category>镜像</category>
+      </categories>
+      <tags>
+        <tag>10.13</tag>
+        <tag>high sierra</tag>
+        <tag>下载</tag>
+        <tag>镜像</tag>
+        <tag>17A344b</tag>
       </tags>
   </entry>
   <entry>
