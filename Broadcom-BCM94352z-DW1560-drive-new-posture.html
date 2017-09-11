@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DW1560,BCM94352z,10.12,10.13,sierra,high sierra,驱动,WIFI," />
 
 
 
@@ -96,16 +96,20 @@
 
 
 
-<meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
-<meta property="og:type" content="website">
-<meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/page/3/index.html">
+<meta name="description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificat">
+<meta name="keywords" content="DW1560,BCM94352z,10.12,10.13,sierra,high sierra,驱动,WIFI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
+<meta property="og:url" content="http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta property="og:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificat">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png">
+<meta property="og:updated_time" content="2017-09-11T08:30:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑果小兵的部落阁">
-<meta name="twitter:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta name="twitter:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
+<meta name="twitter:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificat">
+<meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png">
 
 
 
@@ -134,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/page/3/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html"/>
 
 
 
 
 
-  <title>黑果小兵的部落阁</title>
+  <title>Broadcom BCM94352z/DW1560驱动新姿势[新方法] | 黑果小兵的部落阁</title>
   
 
 
@@ -159,9 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -308,9 +310,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -323,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/undefined.html">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DalianSky">
@@ -340,9 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/undefined.html" itemprop="url">用百度编辑器ueditor编辑dedecms的栏目内容失败的解决方法</a></h1>
+          <h1 class="post-title" itemprop="name headline">Broadcom BCM94352z/DW1560驱动新姿势[新方法]</h1>
         
 
         <div class="post-meta">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-06-18T13:57:32+08:00">
-                2015-06-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T09:35:23+08:00">
+                2017-09-09
               </time>
             
 
@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-04T13:57:13+08:00">
-                2017-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:30:41+08:00">
+                2017-09-11
               </time>
             
           </span>
@@ -389,8 +389,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
                   </a>
                 </span>
 
@@ -426,19 +426,42 @@
       
 
       
-        
-          
-          修改：/dede/templets/article_edit.htm catalog_add.htm catalog_edit.htm
-12345678910function checkSubmit()&#123;if(document.form1.typename.value=="")&#123;alert("栏目名称不能为空!");document.form1.typename.focus();return false;&#125;document.getElementsByName("content")[0].innerHTML = ue.getContent();return true
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/undefined.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><p>引言</p>
+<blockquote>
+<ul>
+<li>昨晚<a href="https://github.com/pmheart" target="_blank" rel="external">口袋妖怪</a>进群闲聊的时候提到过他之前维护的<a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a>已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。同时他发给我的<a href="https://sourceforge.net/p/airportbrcmfixup/code/HEAD/tree/trunk/AirportBrcmFixup/kern_brcmfx.cpp#l242" target="_blank" rel="external">AirportBrcmFixup/kern_brcmfx.cpp</a>源码中已经增加了包括 <code>_si_pmu_fvco_pllreg</code> / <code>Chip identificator checking patch</code> / <code>Wi-Fi 5 Ghz/Country code patch (required for 10.11)</code> / <code>Third party device patch</code> / <code>White list restriction patch</code> / <code>Failed PCIe configuration (device-id checking)</code> 等问题的修复补丁</li>
+<li>之前我写的一篇<a href="https://blog.daliansky.net/2017/09/07/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势/#more">教程</a>已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果</li>
+</ul>
+</blockquote>
+<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
+<ul>
+<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 </li>
+</ul>
+<h3 id="解决方案：同时支持10-11-10-13系统"><a href="#解决方案：同时支持10-11-10-13系统" class="headerlink" title="解决方案：同时支持10.11-10.13系统"></a>解决方案：同时支持10.11-10.13系统</h3><h4 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h4><ul>
+<li>使用应用程序<code>Clover Configurator</code></li>
+<li>在<code>Clover</code> - <code>Devices</code> - <code>FakeID</code> - <code>WIFI</code>中添加仿冒ID: <code>0x43a014e4</code></li>
+<li>在<code>Clover</code> - <code>KextsToPatch</code> 应用以下补丁，以使BCM94352z启用蓝牙：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure>
+<ul>
+<li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h4><blockquote>
+<p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></p>
+</blockquote>
+<ol>
+<li>将文件<code>BrcmFirmwareData.kext</code>和<code>BrcmPatchRAM2.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
+<li>将文件<code>FakePCIID_Broadcom_WiFi.kext</code>和<code>FakePCIID.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
+<li>将文件<code>AirportBrcmFixup.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下,由于<code>AirportBrcmFixup.kext</code>是依赖于<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu</a>运行的插件，所以还需要检查该目录下必须存在<code>Lilu.kext</code></li>
+<li>包括这些文件的目录看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png" alt="brcm94352z驱动"></li>
+</ol>
+<p>当然，在重启前，还要重建一下系统的缓存，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
+<p>重启你的系统，检查WIFI/蓝牙是否工作正常。</p>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+
       
     </div>
     
@@ -448,358 +471,84 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/undefined.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DalianSky">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑果小兵的部落阁">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/undefined.html" itemprop="url">出现nginx 405 Not Allowed错误的解决方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-04T17:18:17+08:00">
-                2015-03-04
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-04T13:55:42+08:00">
-                2017-09-04
-              </time>
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/网络相关/" itemprop="url" rel="index">
-                    <span itemprop="name">网络相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/DW1560/" rel="tag"># DW1560</a>
           
-
+            <a href="/tags/BCM94352z/" rel="tag"># BCM94352z</a>
           
-            
+            <a href="/tags/10-12/" rel="tag"># 10.12</a>
           
-
+            <a href="/tags/10-13/" rel="tag"># 10.13</a>
           
+            <a href="/tags/sierra/" rel="tag"># sierra</a>
           
-
+            <a href="/tags/high-sierra/" rel="tag"># high sierra</a>
           
-
+            <a href="/tags/驱动/" rel="tag"># 驱动</a>
           
-
+            <a href="/tags/WIFI/" rel="tag"># WIFI</a>
           
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          调试网站程序的时候，出现nginx 405 Not Allowed的错误信息，出现405错误的原因是nginx不允许post静态页。修改方法：
-1nano nginx.conf
-添加以下内容：
-123456789101112server &#123;        listen       80;        server_name  localhost;        location / &#123;            root   html;            index  index.html index.htm;        &#125;        error_pag
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/undefined.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/undefined.html" rel="next" title="AppleALC支持的Codecs列表及AppleALC的使用">
+                <i class="fa fa-chevron-left"></i> AppleALC支持的Codecs列表及AppleALC的使用
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/undefined.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DalianSky">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑果小兵的部落阁">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/undefined.html" itemprop="url">8个好习惯叱咤职场</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-06-18T14:00:49+08:00">
-                2010-06-18
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-04T13:15:52+08:00">
-                2017-09-04
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/人生感悟/" itemprop="url" rel="index">
-                    <span itemprop="name">人生感悟</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          8个好习惯叱咤职场
-守时。这是职场中最重要的一项！守时的乌龟和不守时的兔子做选择，老板更喜欢虽然慢，但是准时到点的乌龟。
-微笑！长得好或者不好都不少很重要，重要的是自己有才气；如果才气也没有，那就总是微笑。
-尊敬不喜欢你的人。职场中不喜欢的也许只是他做事的风格与你有出入，不要期望所有人你都喜欢或者不要期望所有人都喜欢你，那是不可能的，让大多数人喜欢只是是成功的表现。那么就大度点，提供一个马斯洛较高级别的需求给他吧。
-办公要做到对事不对人。或对事无情，对人要有情；或做人第一，做事其次。女人最容易对人不对事了这点要特别注意！职场复杂多变，做事讲原则，做人变规则。
-学习。活到老学到老，不耻下问等都是
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/undefined.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -809,189 +558,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/undefined.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DalianSky">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑果小兵的部落阁">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/undefined.html" itemprop="url">10个 Google 有意思的事情</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-11-04T20:09:22+08:00">
-                2009-11-04
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-04T13:39:57+08:00">
-                2017-09-04
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/网络文摘/" itemprop="url" rel="index">
-                    <span itemprop="name">网络文摘</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/网络文摘/网络相关/" itemprop="url" rel="index">
-                    <span itemprop="name">网络相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          10个Google有意思的事情
-
-我想大部分人都已经知道 Google 最开始是2个斯坦福大学的 Ph.D. 学生 Larry Page 和 Sergey Brin的研究课题。但你可否知道 Google 最初的储存设备其实只是一个乐高玩具积木所拼搭起来的机器？或者 Google 正式成立之前，就已经有人签了一张 10万美金的支票送给这两位学生？还有 Google 甚至还有自己的官方狗？如果都不知道，那就继续看下去吧。
-
-Google 之前被叫做 BackRub在1996年，已经毕业的 Larry Page 和 Sergey Brin 一起研究万维网（World Wide Web）之中每一个连接
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/undefined.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
 
 
           </div>
@@ -999,6 +570,12 @@ Google 之前被叫做 BackRub在1996年，已经毕业的 Larry Page 和 Sergey
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDcyOS83Mjgy"></div>
+    
+  </div>
+
 
         </div>
         
@@ -1019,8 +596,17 @@ Google 之前被叫做 BackRub在1996年，已经毕业的 Larry Page 和 Sergey
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -1113,6 +699,22 @@ Google 之前被叫做 BackRub在1996年，已经毕业的 Larry Page 和 Sergey
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><span class="nav-number">1.</span> <span class="nav-text">Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题的提出："><span class="nav-number">1.1.</span> <span class="nav-text">问题的提出：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案：同时支持10-11-10-13系统"><span class="nav-number">2.</span> <span class="nav-text">解决方案：同时支持10.11-10.13系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Clover设置："><span class="nav-number">2.1.</span> <span class="nav-text">Clover设置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#驱动："><span class="nav-number">2.2.</span> <span class="nav-text">驱动：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写在最后"><span class="nav-number">2.3.</span> <span class="nav-text">写在最后</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ群"><span class="nav-number">2.4.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1248,10 +850,10 @@ Google 之前被叫做 BackRub在1996年，已经毕业的 Larry Page 和 Sergey
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -1280,6 +882,17 @@ Google 之前被叫做 BackRub在1996年，已经毕业的 Larry Page 和 Sergey
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
