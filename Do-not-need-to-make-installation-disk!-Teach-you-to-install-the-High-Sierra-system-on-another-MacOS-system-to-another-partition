@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="high sierra,安装,分区," />
+
+
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="黑果小兵的部落阁" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。 我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上">
+<meta name="keywords" content="high sierra,安装,分区">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区">
+<meta property="og:url" content="http://blog.daliansky.net/Do-not-need-to-make-installation-disk!-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition">
+<meta property="og:site_name" content="黑果小兵的部落阁">
+<meta property="og:description" content="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。 我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-28T03:08:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区">
+<meta name="twitter:description" content="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。 我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"请输入关键词进行搜索","hits_empty":"找不到关于 ${query} 的文章","hits_stats":"共找到 ${hits} 篇文章，花了 ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.daliansky.net/Do-not-need-to-make-installation-disk!-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition"/>
+
+
+
+
+
+  <title>不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区 | 黑果小兵的部落阁</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">黑果小兵的部落阁</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Daliansky的空中楼阁</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/Do-not-need-to-make-installation-disk!-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DalianSky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑果小兵的部落阁">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T22:11:02+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-28T11:08:02+08:00">
+                2017-08-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区"><a href="#不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区" class="headerlink" title="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区"></a>不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</h3><h4 id="此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。"><a href="#此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。" class="headerlink" title="此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。"></a><em>此方法不支持APFS分区</em>。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。</h4><blockquote>
+<p>我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。<br>通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 </p>
+</blockquote>
+<h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><ol>
+<li>通过App Store下载macOS High Sierra Developer Beta 5/ Public Beta 4安装程序。</li>
+<li>在要使用磁盘实用程序安装测试版的驱动器上创建HFS日志分区（名称不能包含空格）。</li>
+<li>打开应用程序目录，右键单击macOS Beta安装程序，然后单击显示包内容。 转到<code>Contents&gt;Shared Support</code>，然后双击<code>InstallESD.dmg</code>和<code>BaseSystem.dmg</code>挂载它们。</li>
+<li>打开安装的<code>InstallESD.dmg</code>，打开Packages文件夹，然后打开<code>OSInstall.mpkg</code>文件。 这将打开macOS安装程序。 是的，现在您可以从启动的MacOS系统桌面安装High Sierra Beta。 选择您创建的分区以安装它[备注：如果无法安装请执行：<code>diskutil umount HighSierra</code> <code>diskutil mount HighSierra</code> <code>HighSierra</code>是指卷名]；安装完成后，按照步骤5。</li>
+<li>打开已安装的<code>BaseSystem.dmg</code>并将boot.efi从/System/Library/CoreServices复制到同一位置的High Sierra分区（<code>/System/Library/CoreServices</code>）</li>
+<li>虽然安装了HS测试版，但它尚不可启动。 要使其可引导，请打开<code>终端</code>并键入以下命令：<code>[假设安装分区为：HighSierra]</code></li>
+</ol>
+<h5 id="命令1："><a href="#命令1：" class="headerlink" title="命令1："></a>命令1：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --folder <span class="string">"/Volumes/HighSierra/System/Library/CoreServices"</span></div></pre></td></tr></table></figure>
+<h5 id="命令2："><a href="#命令2：" class="headerlink" title="命令2："></a>命令2：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo bless --mount <span class="string">"/Volumes/HighSierra"</span> --setBoot</div></pre></td></tr></table></figure>
+<h5 id="命令3：检查分区是否可引导。-为此，键入以下命令："><a href="#命令3：检查分区是否可引导。-为此，键入以下命令：" class="headerlink" title="命令3：检查分区是否可引导。 为此，键入以下命令："></a>命令3：检查分区是否可引导。 为此，键入以下命令：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bless --info /Volumes/HighSierra</div></pre></td></tr></table></figure>
+<h5 id="输出类似结果："><a href="#输出类似结果：" class="headerlink" title="输出类似结果："></a>输出类似结果：</h5><p><code>Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierra
+finderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServices
+finderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efi
+finderinfo[2]:      0 =&gt; Open-folder linked list empty
+finderinfo[3]:      0 =&gt; No alternate OS blessed file/folder
+finderinfo[4]:      0 =&gt; Unused field unset
+finderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices
+64-bit VSDB volume id:  0x9E0F1563A37473E4</code></p>
+<h5 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h5><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/high-sierra/" rel="tag"># high sierra</a>
+          
+            <a href="/tags/安装/" rel="tag"># 安装</a>
+          
+            <a href="/tags/分区/" rel="tag"># 分区</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hotpatch-detailed-solution" rel="next" title="hotpatch详解">
+                <i class="fa fa-chevron-left"></i> hotpatch详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Mac-frequently-used-to-the-command---continuous-update" rel="prev" title="Mac常用到的命令[持续更新]">
+                Mac常用到的命令[持续更新] <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDcyOS83Mjgy"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="DalianSky" />
+          <p class="site-author-name" itemprop="name">DalianSky</p>
+           
+              <p class="site-description motion-element" itemprop="description">一些平时学习笔记以及搜集到的好的文章</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/rss2.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/daliansky" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/df9143008845" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      简书
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#不需要制作安装盘！教你在MacOS系统下安装High-Sierra系统到另一个分区"><span class="nav-number">1.</span> <span class="nav-text">不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#此方法不支持APFS分区。-只有HFS分区才能通过此安装High-Sierra。-而且，您还需要一个GUID分区表来安装它。"><span class="nav-number">1.1.</span> <span class="nav-text">此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开始"><span class="nav-number">1.2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#命令1："><span class="nav-number">1.2.1.</span> <span class="nav-text">命令1：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#命令2："><span class="nav-number">1.2.2.</span> <span class="nav-text">命令2：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#命令3：检查分区是否可引导。-为此，键入以下命令："><span class="nav-number">1.2.3.</span> <span class="nav-text">命令3：检查分区是否可引导。 为此，键入以下命令：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出类似结果："><span class="nav-number">1.2.4.</span> <span class="nav-text">输出类似结果：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#收工"><span class="nav-number">1.2.5.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ群"><span class="nav-number">1.3.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-DalianSky"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DalianSky</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    主题 &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Gemini
+    </a>
+  </div>
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    <p>Hosted by <a href="https://pages.coding.me">Coding Pages</a></p>
+  </div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+<script type="text/javascript">
+// Popup Window;
+var isfetched = false;
+// Search DB path;
+var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+// monitor main search box;
+function proceedsearch() {
+  $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+  $('.popup').toggle();
+}
+// search function;
+var searchFunc = function (path, search_id, content_id) {
+  $.ajax({
+    url: path,
+    dataType: "xml",
+    async: true,
+    success: function (xmlResponse) {
+      // get the contents from search data
+      isfetched = true;
+      $('.popup').detach().appendTo('.header-inner');
+      var datas = $("entry", xmlResponse).map(function () {
+        return {
+          title: $("title", this).text(),
+          content: $("content", this).text(),
+          url: $("url", this).text()
+        };
+      }).get();
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $input.addEventListener('input', function () {
+        var matchcounts = 0;
+        var str = '<ul class=\"search-result-list\">';
+        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+        $resultContent.innerHTML = "";
+        if (this.value.trim().length > 1) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var content_index = [];
+            var data_title = data.title.trim().toLowerCase();
+            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+            var data_url = decodeURIComponent(data.url);
+            var index_title = -1;
+            var index_content = -1;
+            var first_occur = -1;
+            // only match artiles with not empty titles and contents
+            if (data_title != '') {
+              keywords.forEach(function (keyword, i) {
+                index_title = data_title.indexOf(keyword);
+                index_content = data_content.indexOf(keyword);
+                if (index_title >= 0 || index_content >= 0) {
+                  isMatch = true;
+                  if (i == 0) {
+                    first_occur = index_content;
+                  }
+                }
+              });
+            }
+            // show search results
+            if (isMatch) {
+              matchcounts += 1;
+              str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title +
+                "</a>";
+              var content = data.content.trim().replace(/<[^>]+>/g, "");
+              if (first_occur >= 0) {
+                // cut out 100 characters
+                var start = first_occur - 20;
+                var end = first_occur + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (start == 0) {
+                  end = 50;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                var match_content = content.substring(start, end);
+                // highlight all keywords
+                keywords.forEach(function (keyword) {
+                  var regS = new RegExp(keyword, "gi");
+                  match_content = match_content.replace(regS, "<b class=\"search-keyword\">" +
+                    keyword + "</b>");
+                });
+                str += "<p class=\"search-result\">" + match_content + "...</p>"
+              }
+              str += "</li>";
+            }
+          })
+        };
+        str += "</ul>";
+        if (matchcounts == 0) {
+          str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        }
+        if (keywords == "") {
+          str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        }
+        $resultContent.innerHTML = str;
+      });
+      proceedsearch();
+    }
+  }).fail(function (data, errStr, err) {
+    console.log(errStr);
+    console.log(err);
+  })
+}
+// handle and trigger popup window;
+$('.popup-trigger').click(function (e) {
+  e.stopPropagation();
+  if (isfetched == false) {
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  } else {
+    proceedsearch();
+  };
+});
+function renderData(xmlResponse) {
+}
+$('.popup-btn-close').click(function (e) {
+  $('.popup').hide();
+  $(".popoverlay").remove();
+  $('body').css('overflow', '');
+});
+$('.popup').click(function (e) {
+  e.stopPropagation();
+});
+</script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
