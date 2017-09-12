@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Lilu,插件," />
+  <meta name="keywords" content="codec,hda-verb," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="Lilu插件列表[持续更新]本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。 什么是 Lilu ？ Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)  Lilu 目前">
-<meta name="keywords" content="Lilu,插件">
+<meta name="description" content="hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2    Mac: $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda-ver">
+<meta name="keywords" content="codec,hda-verb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lilu插件列表[持续更新]">
-<meta property="og:url" content="http://blog.daliansky.net/Existing-Lilu-Plugins">
+<meta property="og:title" content="hda-verb参数详表">
+<meta property="og:url" content="http://blog.daliansky.net/hda-verb-parameter-detail-table.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="Lilu插件列表[持续更新]本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。 什么是 Lilu ？ Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)  Lilu 目前">
+<meta property="og:description" content="hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2    Mac: $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda-ver">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-11T08:39:08.000Z">
+<meta property="og:updated_time" content="2017-09-11T08:47:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lilu插件列表[持续更新]">
-<meta name="twitter:description" content="Lilu插件列表[持续更新]本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。 什么是 Lilu ？ Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)  Lilu 目前">
+<meta name="twitter:title" content="hda-verb参数详表">
+<meta name="twitter:description" content="hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2    Mac: $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda-ver">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/Existing-Lilu-Plugins"/>
+  <link rel="canonical" href="http://blog.daliansky.net/hda-verb-parameter-detail-table.html"/>
 
 
 
 
 
-  <title>Lilu插件列表[持续更新] | 黑果小兵的部落阁</title>
+  <title>hda-verb参数详表 | 黑果小兵的部落阁</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/Existing-Lilu-Plugins">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/hda-verb-parameter-detail-table.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DalianSky">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Lilu插件列表[持续更新]</h1>
+          <h1 class="post-title" itemprop="name headline">hda-verb参数详表</h1>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T16:45:19+08:00">
-                2017-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-04T22:16:02+08:00">
+                2017-09-04
               </time>
             
 
@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:39:08+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:47:09+08:00">
                 2017-09-11
               </time>
             
@@ -387,8 +387,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/插件/" itemprop="url" rel="index">
-                    <span itemprop="name">插件</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -424,104 +435,341 @@
       
 
       
-        <h1 id="Lilu插件列表-持续更新"><a href="#Lilu插件列表-持续更新" class="headerlink" title="Lilu插件列表[持续更新]"></a>Lilu插件列表[持续更新]</h1><p>本文部分翻译自 <a href="https://github.com/vit9696/Lilu/blob/master/README.md" target="_blank" rel="external">Lilu的README</a>，一些部分基于楼主的理解写出。</p>
-<h4 id="什么是-Lilu-？"><a href="#什么是-Lilu-？" class="headerlink" title="什么是 Lilu ？"></a>什么是 Lilu ？</h4><blockquote>
-<p>Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)</p>
+        <h1 id="hda-verb参数详表"><a href="#hda-verb参数详表" class="headerlink" title="hda-verb参数详表"></a>hda-verb参数详表</h1><blockquote>
+<p>hda-verb的由来<br>hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
 </blockquote>
-<h4 id="Lilu-目前实现的功能？"><a href="#Lilu-目前实现的功能？" class="headerlink" title="Lilu 目前实现的功能？"></a>Lilu 目前实现的功能？</h4><blockquote>
-<p>为 kext 打补丁<br>为 进程 打补丁    (目前仅支持 64 位)<br>为 运行库 打补丁 (目前仅支持 64 位)<br>提供一套统一的 API 接口</p>
-</blockquote>
-<h4 id="如何理解-“提供一套统一的-API-接口”？"><a href="#如何理解-“提供一套统一的-API-接口”？" class="headerlink" title="如何理解 “提供一套统一的 API 接口”？"></a>如何理解 “提供一套统一的 API 接口”？</h4><p>这意味着 Lilu 自身是不起任何作用的，你需要额外使用依赖它的 kext ，目前已知需要依赖 Lilu 的 kext 可在 下方 找到。</p>
-<h4 id="下载-安装"><a href="#下载-安装" class="headerlink" title="下载/安装"></a>下载/安装</h4><h5 id="关于下载："><a href="#关于下载：" class="headerlink" title="关于下载："></a>关于下载：</h5><p>你可以<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">直接下载</a>作者编译好的版本，或者从 <a href="https://github.com/vit9696/Lilu/" target="_blank" rel="external">GitHub</a> 下载源码自行编译。</p>
-<h5 id="关于安装："><a href="#关于安装：" class="headerlink" title="关于安装："></a>关于安装：</h5><ul>
-<li>建议将 Lilu 以及依赖它的 kext 放置于引导器用于注入 kext 的位置并使用引导器注入它，目前主流的引导器都有注入 kext 的功能。</li>
-<li>如果将其放置于 <code>/System/Library/Extensions</code> 或者 <code>/Library/Extensions</code> 下的话，你还需要 <code>LiluFriend</code> 并正确配置使其正常工作。</li>
+<h4 id="命令格式："><a href="#命令格式：" class="headerlink" title="命令格式："></a>命令格式：</h4><ul>
+<li>linux:<ul>
+<li><code>% hda-verb /dev/snd/hwC0D0 0x12 0x701 2</code> </li>
 </ul>
-<h4 id="Lilu-支持的内核参数-kernel-flags"><a href="#Lilu-支持的内核参数-kernel-flags" class="headerlink" title="Lilu 支持的内核参数(kernel flags)"></a>Lilu 支持的内核参数(kernel flags)</h4><p><code>-liludbg</code> 可以开启排错日志模式，不过只有 DEBUG 版本才可用。(对于日常使用的 RELEASE 版本此参数无效)<br><code>-liluoff</code> 会禁用 Lilu 和依赖它的 kext 。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-liluslow</code> 会启用旧版的 UserPatcher 。(可能与修改进程、运行库有关，具体的因为楼主对 Lilu 代码不是很熟悉，所以也就没法解释清楚了，抱歉)<br><code>-lilulowmem</code> 会禁止 Lilu 和依赖它的 kext 在 Recovery 模式下载入。(实际上只禁用了 Lilu ，不过与之相关的 kext 也就自然会失效了)<br><code>-lilubeta</code> 会在不受支持的 Darwin 版本启用 Lilu 。<br><code>-lilubetaall</code> 启用Lilu和所有加载的插件不受支持的os版本（非常仔细地使用）<br><code>-liluforce</code> 强制启用Lilu而不管os，该参数适用于安装或恢复。</p>
-<h4 id="致开发者-有兴趣的朋友："><a href="#致开发者-有兴趣的朋友：" class="headerlink" title="致开发者/有兴趣的朋友："></a>致开发者/有兴趣的朋友：</h4><p>关于 Log 输出，目前 Lilu 提供的 API 中有两个输出 Log 的接口，分别为 SYSLOG(“msg\n”); 与 DBGLOG(“msg\n”); 这两个 macro ，具体输出原理这里不做过多解释，仍是调用 Apple 在 IOLib.h 中为我们提供的 IOLog 接口。<br>但要特别注意的是，如上所说，DBGLOG(“msg\n”); 这个 macro 需要在 DEBUG 模式开启下才会被编译。<br>相信各位看这段代码即可了解。;) (来自 Headers/kern_util.hpp)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#define SYSLOG(str, ...) IOLog( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)</span></div><div class="line"></div><div class="line"><span class="comment">#ifdef DEBUG</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...)                                                                                                                                \</span></div><div class="line">        <span class="keyword">do</span> &#123;                                                                                                                                                                \</div><div class="line">                <span class="keyword">if</span> (ADDPR(debugEnabled))                                                                                \</div><div class="line">                        IOLog( xStringify(PRODUCT_NAME) <span class="string">": (DEBUG) "</span> str <span class="string">"\n"</span>, <span class="comment">## __VA_ARGS__);                \</span></div><div class="line">        &#125; <span class="keyword">while</span>(0)</div><div class="line"><span class="comment">#else</span></div><div class="line"><span class="comment">#define DBGLOG(str, ...) do &#123; &#125; while(0)</span></div><div class="line"><span class="comment">#endif</span></div></pre></td></tr></table></figure>
-<p>另外，原宏中已经自带了换行符 \n ，所以在编写 Log 时也就无必要再换行了。</p>
-<h4 id="Bug-反馈"><a href="#Bug-反馈" class="headerlink" title="Bug 反馈"></a>Bug 反馈</h4><p>建议在作者的 <a href="https://github.com/vit9696/Lilu/issues" target="_blank" rel="external">GitHub Issues</a> 中提交，需使用英文。</p>
-<h3 id="Lilu插件列表"><a href="#Lilu插件列表" class="headerlink" title="Lilu插件列表"></a>Lilu插件列表</h3><p>此插件列表来自 Lilu 的 <a href="https://github.com/vit9696/Lilu/blob/master/KnownPlugins.md" target="_blank" rel="external">KnownPlugins.md</a> 。</p>
-<p>目前已知需依赖 Lilu 的 kext &amp; 作用简单说明<br>注：某些 kext 可能还没有列在这里，如果你有发现的话，可以跟帖反馈。</p>
+</li>
+<li>Mac:<ul>
+<li><code>$ hda-verb 0x12 0x701 2</code></li>
+</ul>
+</li>
+</ul>
+<p>输入命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hda-verb</div></pre></td></tr></table></figure>
+<p>输出信息：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hda-verb <span class="keyword">for</span> CodecCommander (based on alsa-tools hda-verb)</div><div class="line">   usage: hda-verb [option] hwdep-device nid verb param</div><div class="line">   -l      List known verbs and parameters</div><div class="line">   -L      List known verbs and parameters (one per line)</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Short description</th>
+<th>参数</th>
+<th>数值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></td>
-<td style="text-align:left">修补 Broadcom Wi-Fi 综合问题</td>
+<td>GET_STREAM_FORMAT</td>
+<td>0x0a00</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/vit9696/AppleALC" target="_blank" rel="external">AppleALC</a></td>
-<td style="text-align:left">动态对系统注入必要的文件/打补丁以驱动声卡</td>
+<td>GET_AMP_GAIN_MUTE</td>
+<td>0x0b00</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/coderobe/AzulPatcher4600" target="_blank" rel="external">AzulPatcher4600</a></td>
-<td style="text-align:left">一些针对某些笔记型 HD4600 的额外修复</td>
+<td>GET_PROC_COEF</td>
+<td>0x0c00</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a></td>
-<td style="text-align:left">动态修改某些系统运行库/kext 以解决非 Iris 系列 Intel 核显/部分 N 卡高分辨率输出问题</td>
+<td>GET_COEF_INDEX</td>
+<td>0x0d00</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/PMheart/CPUFriend" target="_blank" rel="external">CPUFriend</a></td>
-<td style="text-align:left">动态向 X86 注入 CPU 电源管理数据</td>
+<td>PARAMETERS</td>
+<td>0x0f00</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/syscl/EnableLidWake" target="_blank" rel="external">EnableLidWake</a></td>
-<td style="text-align:left">为某些 Intel 核显开启合盖睡眠</td>
+<td>GET_CONNECT_SEL</td>
+<td>0x0f01</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://sourceforge.net/p/hibernationfixup" target="_blank" rel="external">HibernationFixup</a></td>
-<td style="text-align:left">在某些机器上修复 3/25 模式下的休眠状态</td>
+<td>GET_CONNECT_LIST</td>
+<td>0x0f02</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://sourceforge.net/p/intelgraphicsfixup" target="_blank" rel="external">IntelGraphicsFixup</a></td>
-<td style="text-align:left">修补 Intel 核显综合问题 (开机花屏，Haswell/Skylake 因 PAVP 导致的死机等等)</td>
+<td>GET_PROC_STATE</td>
+<td>0x0f03</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup" target="_blank" rel="external">IntelGraphicsDVMTFixup</a></td>
-<td style="text-align:left">修正 Broadwell/Skylake 平台核显因 DVMT 不足而导致的死机</td>
+<td>GET_SDI_SELECT</td>
+<td>0x0f04</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/Austere-J/NightShiftUnlocker" target="_blank" rel="external">NightShiftUnlocker</a></td>
-<td style="text-align:left">解决老机型无法使用自 10.12.4 开始引入的 NightShift 功能</td>
+<td>GET_POWER_STATE</td>
+<td>0x0f05</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://sourceforge.net/p/nvidiagraphicsfixup" target="_blank" rel="external">NvidiaGraphicsFixup</a></td>
-<td style="text-align:left">修正 N 卡 (可能也适用于 I 卡) 使用某些 SMBios 如 MacPro6,1 等引发黑屏的问题</td>
+<td>GET_CONV</td>
+<td>0x0f06</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a></td>
-<td style="text-align:left">动态修改 iTunes 相关系统进程，以在 Ivy Bridge 或更新的平台上正确使用 iTunes 相关服务，同时其内置的 ResourceConverter 亦可配置一些自定义的针对其他 framework/lib/process 的补丁 (<a href="https://github.com/PMheart/CoreDisplayFixup" target="_blank" rel="external">CoreDisplayFixup</a> 的早期测试版本即基于 <a href="https://github.com/vit9696/Shiki" target="_blank" rel="external">Shiki</a> 编写)</td>
+<td>GET_PIN_WIDGET_CONTROL</td>
+<td>0x0f07</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/vit9696/WhateverGreen" target="_blank" rel="external">WhateverGreen</a></td>
-<td style="text-align:left">修补 AMD 独显综合问题 （单卡启动黑屏，唤醒黑屏 等等）</td>
+<td>GET_UNSOLICITED_RESPONSE</td>
+<td>0x0f08</td>
+</tr>
+<tr>
+<td>GET_PIN_SENSE</td>
+<td>0x0f09</td>
+</tr>
+<tr>
+<td>GET_BEEP_CONTROL</td>
+<td>0x0f0a</td>
+</tr>
+<tr>
+<td>GET_EAPD_BTLENABLE</td>
+<td>0x0f0c</td>
+</tr>
+<tr>
+<td>GET_DIGI_CONVERT_1</td>
+<td>0x0f0d</td>
+</tr>
+<tr>
+<td>GET_DIGI_CONVERT_2</td>
+<td>0x0f0e</td>
+</tr>
+<tr>
+<td>GET_VOLUME_KNOB_CONTROL</td>
+<td>0x0f0f</td>
+</tr>
+<tr>
+<td>GET_GPIO_DATA</td>
+<td>0x0f15</td>
+</tr>
+<tr>
+<td>GET_GPIO_MASK</td>
+<td>0x0f16</td>
+</tr>
+<tr>
+<td>GET_GPIO_DIRECTION</td>
+<td>0x0f17</td>
+</tr>
+<tr>
+<td>GET_GPIO_WAKE_MASK</td>
+<td>0x0f18</td>
+</tr>
+<tr>
+<td>GET_GPIO_UNSOLICITED_RSP_MASK</td>
+<td>0x0f19</td>
+</tr>
+<tr>
+<td>GET_GPIO_STICKY_MASK</td>
+<td>0x0f1a</td>
+</tr>
+<tr>
+<td>GET_CONFIG_DEFAULT</td>
+<td>0x0f1c</td>
+</tr>
+<tr>
+<td>GET_SUBSYSTEM_ID</td>
+<td>0x0f20</td>
+</tr>
+<tr>
+<td>SET_STREAM_FORMAT</td>
+<td>0x200</td>
+</tr>
+<tr>
+<td>SET_AMP_GAIN_MUTE</td>
+<td>0x300</td>
+</tr>
+<tr>
+<td>SET_PROC_COEF</td>
+<td>0x400</td>
+</tr>
+<tr>
+<td>SET_COEF_INDEX</td>
+<td>0x500</td>
+</tr>
+<tr>
+<td>SET_CONNECT_SEL</td>
+<td>0x701</td>
+</tr>
+<tr>
+<td>SET_PROC_STATE</td>
+<td>0x703</td>
+</tr>
+<tr>
+<td>SET_SDI_SELECT</td>
+<td>0x704</td>
+</tr>
+<tr>
+<td>SET_POWER_STATE</td>
+<td>0x705</td>
+</tr>
+<tr>
+<td>SET_CHANNEL_STREAMID</td>
+<td>0x706</td>
+</tr>
+<tr>
+<td>SET_PIN_WIDGET_CONTROL</td>
+<td>0x707</td>
+</tr>
+<tr>
+<td>SET_UNSOLICITED_ENABLE</td>
+<td>0x708</td>
+</tr>
+<tr>
+<td>SET_PIN_SENSE</td>
+<td>0x709</td>
+</tr>
+<tr>
+<td>SET_BEEP_CONTROL</td>
+<td>0x70a</td>
+</tr>
+<tr>
+<td>SET_EAPD_BTLENABLE</td>
+<td>0x70c</td>
+</tr>
+<tr>
+<td>SET_DIGI_CONVERT_1</td>
+<td>0x70d</td>
+</tr>
+<tr>
+<td>SET_DIGI_CONVERT_2</td>
+<td>0x70e</td>
+</tr>
+<tr>
+<td>SET_VOLUME_KNOB_CONTROL</td>
+<td>0x70f</td>
+</tr>
+<tr>
+<td>SET_GPIO_DATA</td>
+<td>0x715</td>
+</tr>
+<tr>
+<td>SET_GPIO_MASK</td>
+<td>0x716</td>
+</tr>
+<tr>
+<td>SET_GPIO_DIRECTION</td>
+<td>0x717</td>
+</tr>
+<tr>
+<td>SET_GPIO_WAKE_MASK</td>
+<td>0x718</td>
+</tr>
+<tr>
+<td>SET_GPIO_UNSOLICITED_RSP_MASK</td>
+<td>0x719</td>
+</tr>
+<tr>
+<td>SET_GPIO_STICKY_MASK</td>
+<td>0x71a</td>
+</tr>
+<tr>
+<td>SET_CONFIG_DEFAULT_BYTES_0</td>
+<td>0x71c</td>
+</tr>
+<tr>
+<td>SET_CONFIG_DEFAULT_BYTES_1</td>
+<td>0x71d</td>
+</tr>
+<tr>
+<td>SET_CONFIG_DEFAULT_BYTES_2</td>
+<td>0x71e</td>
+</tr>
+<tr>
+<td>SET_CONFIG_DEFAULT_BYTES_3</td>
+<td>0x71f</td>
+</tr>
+<tr>
+<td>SET_CODEC_RESET</td>
+<td>0x7ff</td>
 </tr>
 </tbody>
 </table>
-<p>将功能合并到其他插件中的插件：</p>
+<p>已知参数：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Short description</th>
+<th>参数</th>
+<th>数值</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a></td>
-<td style="text-align:left">现已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。</td>
+<td>VENDOR_ID</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>SUBSYSTEM_ID</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>REV_ID</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>NODE_COUNT</td>
+<td>0x04</td>
+</tr>
+<tr>
+<td>FUNCTION_TYPE</td>
+<td>0x05</td>
+</tr>
+<tr>
+<td>AUDIO_FG_CAP</td>
+<td>0x08</td>
+</tr>
+<tr>
+<td>AUDIO_WIDGET_CAP</td>
+<td>0x09</td>
+</tr>
+<tr>
+<td>PCM</td>
+<td>0x0a</td>
+</tr>
+<tr>
+<td>STREAM</td>
+<td>0x0b</td>
+</tr>
+<tr>
+<td>PIN_CAP</td>
+<td>0x0c</td>
+</tr>
+<tr>
+<td>AMP_IN_CAP</td>
+<td>0x0d</td>
+</tr>
+<tr>
+<td>CONNLIST_LEN</td>
+<td>0x0e</td>
+</tr>
+<tr>
+<td>POWER_STATE</td>
+<td>0x0f</td>
+</tr>
+<tr>
+<td>PROC_CAP</td>
+<td>0x10</td>
+</tr>
+<tr>
+<td>GPIO_CAP</td>
+<td>0x11</td>
+</tr>
+<tr>
+<td>AMP_OUT_CAP</td>
+<td>0x12</td>
+</tr>
+<tr>
+<td>VOL_KNB_CAP</td>
+<td>0x13</td>
 </tr>
 </tbody>
 </table>
-<h5 id="原文链接：口袋妖怪heart"><a href="#原文链接：口袋妖怪heart" class="headerlink" title="原文链接：口袋妖怪heart"></a>原文链接：<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1741470&amp;page=1#pid47122622" target="_blank" rel="external">口袋妖怪heart</a></h5><h4 id="扩展阅读："><a href="#扩展阅读：" class="headerlink" title="扩展阅读："></a>扩展阅读：</h4><p><a href="https://blog.daliansky.net/2017/09/08/AppleALC-Supported-codecs/">AppleALC支持的Codecs列表及AppleALC的使用</a></p>
+<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><p>设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
+<p>也可以写成：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 0x707 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
+<p>CodecCommander经常使用的命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25</div><div class="line">$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83</div></pre></td></tr></table></figure>
+<h4 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h4><blockquote>
+<p>字符串不区分大小写<br>此外，它不一定是完整的字符串，但只能是唯一的<br>例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的<br><code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
+</blockquote>
 <h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
@@ -569,9 +817,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Lilu/" rel="tag"># Lilu</a>
+            <a href="/tags/codec/" rel="tag"># codec</a>
           
-            <a href="/tags/插件/" rel="tag"># 插件</a>
+            <a href="/tags/hda-verb/" rel="tag"># hda-verb</a>
           
         </div>
       
@@ -584,8 +832,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/MacOS-High-Sierra-10-13DB7-17A352a-and-Clover-4182" rel="next" title="macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像">
-                <i class="fa fa-chevron-left"></i> macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像
+              <a href="/macOS-High-Sierra-10-13DB9-17A360a-with-Clover-4189.html" rel="next" title="【黑果小兵】macOS High Sierra 10.13DB9 17A360a with Clover 4189原版镜像">
+                <i class="fa fa-chevron-left"></i> 【黑果小兵】macOS High Sierra 10.13DB9 17A360a with Clover 4189原版镜像
               </a>
             
           </div>
@@ -594,8 +842,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/MacOS-High-Sierra-10.13DB8-17A358a-and-Clover-4189" rel="prev" title="【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像">
-                【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像 <i class="fa fa-chevron-right"></i>
+              <a href="/Updated-10.12-Frequently-Asked-Questions-in-Sierra.html" rel="prev" title="[持续更新] 10.12 Sierra中的常见问题（某些未解决的问题）">
+                [持续更新] 10.12 Sierra中的常见问题（某些未解决的问题） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -763,7 +1011,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lilu插件列表-持续更新"><span class="nav-number">1.</span> <span class="nav-text">Lilu插件列表[持续更新]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是-Lilu-？"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">什么是 Lilu ？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lilu-目前实现的功能？"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">Lilu 目前实现的功能？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何理解-“提供一套统一的-API-接口”？"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">如何理解 “提供一套统一的 API 接口”？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载-安装"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">下载/安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于下载："><span class="nav-number">1.0.0.4.1.</span> <span class="nav-text">关于下载：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于安装："><span class="nav-number">1.0.0.4.2.</span> <span class="nav-text">关于安装：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lilu-支持的内核参数-kernel-flags"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">Lilu 支持的内核参数(kernel flags)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#致开发者-有兴趣的朋友："><span class="nav-number">1.0.0.6.</span> <span class="nav-text">致开发者/有兴趣的朋友：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bug-反馈"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">Bug 反馈</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lilu插件列表"><span class="nav-number">1.0.1.</span> <span class="nav-text">Lilu插件列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#原文链接：口袋妖怪heart"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">原文链接：口袋妖怪heart</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展阅读："><span class="nav-number">1.0.1.1.</span> <span class="nav-text">扩展阅读：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ群"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hda-verb参数详表"><span class="nav-number">1.</span> <span class="nav-text">hda-verb参数详表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令格式："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">命令格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例子："><span class="nav-number">1.0.0.2.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#备注："><span class="nav-number">1.0.0.3.</span> <span class="nav-text">备注：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ群"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
