@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-13T17:04:13+08:00">
-                2017-09-13
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:02:37+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -428,11 +428,10 @@
       
         
           
-          Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]
-引言
+          Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言
 
 
-昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificator checking patch / Wi-Fi 5 Ghz/Country code patch (required for 10.11) / Third party device patch 
+昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificator checking patch / Wi-Fi 5 Ghz/Country code patch (required for 10.11) / Third party device patch /
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -534,8 +533,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:39:26+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:17:59+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -592,15 +591,14 @@
       
         
           
-          如何使用AppleALC
-如果您的编解码器支持，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在AppleHDA之前加载AppleALC（有关更多详细信息，请参阅sudo kextstat输出）。
+          如何使用AppleALC如果您的编解码器支持，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在AppleHDA之前加载AppleALC（有关更多详细信息，请参阅sudo kextstat输出）。
 请注意，Lilu 也必须出现在AppleALC上。
 按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。
 备注：AppleALC不处理layout-id值，它希望你提供正确的DSDT(SSDT)。
-如何控制AppleALC
-AppleALC接受不同的引导参数来控制其行为：
+如何控制AppleALCAppleALC接受不同的引导参数来控制其行为：
 
 -alcoff - 禁用自身;
+-
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -702,8 +700,8 @@ AppleALC接受不同的引导参数来控制其行为：
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:37:13+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:20:00+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -761,14 +759,12 @@ AppleALC接受不同的引导参数来控制其行为：
         
           
           Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]
-
 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。
 
 问题的提出：
+在macOS Sierra上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 
 
-在macOS Sierra上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。
-
-解决方案：两种方
+解决方案：两种方法
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -870,8 +866,8 @@ AppleALC接受不同的引导参数来控制其行为：
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T20:36:10+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:01:17+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -929,7 +925,6 @@ AppleALC接受不同的引导参数来控制其行为：
         
           
           HD520/HD530/HD620/HD630显卡驱动的正确姿势
-
 在CLOVER里注入platform-id，下表是整理出的部分资料供参考；更详细的资料请移步
 
 
@@ -975,7 +970,7 @@ iMac17,1
 
 Intel HD Graphics 530
 0x191b0000
-MacBoo
+MacBook
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1077,8 +1072,8 @@ MacBoo
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:47:09+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:08:37+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -1147,19 +1142,14 @@ MacBoo
         
           
           hda-verb参数详表
-
-hda-verb的由来
-hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。
+hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。
 
 命令格式：
-
 linux:
-
-% hda-verb /dev/snd/hwC0D0 0x12 0x701 2
+% hda-verb /dev/snd/hwC0D0 0x12 0x701 2 
 
 
 Mac:
-
 $ hda-verb 0x12 0x701 2
 
 
@@ -1167,7 +1157,7 @@ $ hda-verb 0x12 0x701 2
 输入命令：
 1hda-verb
 输出信息：
-1234hda-verb for CodecCommander (based on alsa-tools hda-verb)   usage: hda-verb [option] hwdep-device nid 
+1234hda-verb for CodecCommander (based on alsa-tools hda-verb)   usage: hda-verb [option] hwdep-device nid verb
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1339,11 +1329,10 @@ $ hda-verb 0x12 0x701 2
         
           
           【黑果小兵】macOS High Sierra 10.13DB9 17A360a with Clover 4189原版镜像
-
 本镜像采用官方原版app制作，集成Clover 4189，支持UEFI启动安装。
 Clover默认config.plist为620/630/640/650；
 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；
-如果无法引导到安装界面，可于C
+如果无法引导到安装界面，可于Cl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1445,8 +1434,8 @@ Clover默认config.plist为620/630/640/650；
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:46:34+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:13:34+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -1482,15 +1471,11 @@ Clover默认config.plist为620/630/640/650；
         
           
           Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载
-
 需要在Mac系统下通过App Store进行下载
 
-Mac Sierra(10.12.6)正式版下载链接：
-https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12
-Mac High Sierra(10.13)下载链接：
-https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12
-QQ群:
-331686786 一起黑苹果
+Mac Sierra(10.12.6)正式版下载链接：https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12
+Mac High Sierra(10.13)下载链接：https://itunes.apple.com/cn/app/macos-high-sierra-beta/id1209167288?mt=12
+QQ群:331686786 一起黑苹果
 
           
           <!--noindex-->
@@ -1593,8 +1578,8 @@ QQ群:
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:40:36+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:17:38+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -1651,14 +1636,11 @@ QQ群:
       
         
           
-          黑苹果必备：Intel核显platform ID整理
-本文的由来
-
+          黑苹果必备：Intel核显platform ID整理本文的由来
 经常有网友进群问某某机型需要注入哪个platform-id才能正确地驱动显卡，每到这个时候，我都需要翻出Clover自带的gma.c查找显卡参数。于是我就想把它整理出来方便大家查询，markdown的表格排版对我来说是一种考验，但更像是一种折磨。还好还好，它没花费我太长的时间。
 
 
 sandy bridge平台
-
 
 
 显卡型号
@@ -1681,7 +1663,7 @@ MacBookPro8,1
 
 
 
-Intel HD 
+Intel HD Gra
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1783,8 +1765,8 @@ Intel HD
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-11T16:49:59+08:00">
-                2017-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:03:21+08:00">
+                2017-09-14
               </time>
             
           </span>
@@ -1841,8 +1823,7 @@ Intel HD
       
         
           
-          Windows下使用diskpart建立EFI分区
-很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart
+          Windows下使用diskpart建立EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart
 
           
           <!--noindex-->
@@ -2015,11 +1996,10 @@ Intel HD
         
           
           【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像
-
 本镜像采用官方原版app制作，集成Clover 4189，支持UEFI启动安装。
 Clover默认config.plist为620/630/640/650；
 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；
-如果无法引导到安装界面，可于C
+如果无法引导到安装界面，可于Cl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2133,7 +2113,7 @@ Clover默认config.plist为620/630/640/650；
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">65</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

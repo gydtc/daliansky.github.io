@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Wed, 13 Sep 2017 09:04:13 GMT</pubDate>
+    <pubDate>Thu, 14 Sep 2017 01:02:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,57 +18,45 @@
       <pubDate>Sat, 09 Sep 2017 01:35:23 GMT</pubDate>
       <description>
       
-        &lt;h3&gt;Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]&lt;/h3&gt;
-&lt;p&gt;引言&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;昨晚&lt;a href=&quot;https://github.com/pmheart&quot; target=&quot;
+        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot; class=&quot;headerlink&quot;
       
       </description>
       
-      <content:encoded><![CDATA[<h3>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3>
-<p>引言</p>
+      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><p>引言</p>
 <blockquote>
 <ul>
 <li>昨晚<a href="https://github.com/pmheart" target="_blank" rel="external">口袋妖怪</a>进群闲聊的时候提到过他之前维护的<a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a>已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。同时他发给我的<a href="https://sourceforge.net/p/airportbrcmfixup/code/HEAD/tree/trunk/AirportBrcmFixup/kern_brcmfx.cpp#l242" target="_blank" rel="external">AirportBrcmFixup/kern_brcmfx.cpp</a>源码中已经增加了包括 <code>_si_pmu_fvco_pllreg</code> / <code>Chip identificator checking patch</code> / <code>Wi-Fi 5 Ghz/Country code patch (required for 10.11)</code> / <code>Third party device patch</code> / <code>White list restriction patch</code> / <code>Failed PCIe configuration (device-id checking)</code> 等问题的修复补丁</li>
 <li>之前我写的一篇<a href="https://blog.daliansky.net/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the%20correct-drive-posture.html">教程</a>已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果</li>
 </ul>
 </blockquote>
-<h4>问题的提出：</h4>
-<p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
+<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
 <ul>
-<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。</li>
+<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 </li>
 </ul>
-<h3>解决方案：同时支持10.11-10.13系统</h3>
-<h4>Clover设置：</h4>
-<ul>
+<h3 id="解决方案：同时支持10-11-10-13系统"><a href="#解决方案：同时支持10-11-10-13系统" class="headerlink" title="解决方案：同时支持10.11-10.13系统"></a>解决方案：同时支持10.11-10.13系统</h3><h4 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h4><ul>
 <li>使用应用程序<code>Clover Configurator</code></li>
 <li>在<code>Clover</code> - <code>Devices</code> - <code>FakeID</code> - <code>WIFI</code>中添加仿冒ID: <code>0x43a014e4</code></li>
 <li>在<code>Clover</code> - <code>KextsToPatch</code> 应用以下补丁，以使BCM94352z启用蓝牙：</li>
 </ul>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure>
 <ul>
 <li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
 </ul>
-<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h4>驱动：</h4>
-<blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h4><blockquote>
 <p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></p>
 </blockquote>
 <ol>
 <li>将文件<code>BrcmFirmwareData.kext</code>和<code>BrcmPatchRAM2.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
 <li>将文件<code>FakePCIID_Broadcom_WiFi.kext</code>和<code>FakePCIID.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
 <li>将文件<code>AirportBrcmFixup.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下,由于<code>AirportBrcmFixup.kext</code>是依赖于<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu</a>运行的插件，所以还需要检查该目录下必须存在<code>Lilu.kext</code></li>
-<li>包括这些文件的目录看起来是这样的：
-<img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z%E9%A9%B1%E5%8A%A8.png" alt="brcm94352z驱动"></li>
+<li>包括这些文件的目录看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png" alt="brcm94352z驱动"></li>
 </ol>
 <p>当然，在重启前，还要重建一下系统的缓存，命令为：</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
 <p>重启你的系统，检查WIFI/蓝牙是否工作正常。</p>
-<h4>写在最后</h4>
-<p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
-<h4>QQ群:</h4>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#disqus_thread</comments>
@@ -81,18 +69,15 @@
       <pubDate>Fri, 08 Sep 2017 01:40:15 GMT</pubDate>
       <description>
       
-        &lt;h4&gt;如何使用AppleALC&lt;/h4&gt;
-&lt;p&gt;如果您的编解码器&lt;a href=&quot;https://github.com/vit9696/AppleALC/wiki/Supported-codecs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;支持&lt;/a&gt;，您
+        &lt;h4 id=&quot;如何使用AppleALC&quot;&gt;&lt;a href=&quot;#如何使用AppleALC&quot; class=&quot;headerlink&quot; title=&quot;如何使用AppleALC&quot;&gt;&lt;/a&gt;如何使用AppleALC&lt;/h4&gt;&lt;p&gt;如果您的编解码器&lt;a href=&quot;https://githu
       
       </description>
       
-      <content:encoded><![CDATA[<h4>如何使用AppleALC</h4>
-<p>如果您的编解码器<a href="https://github.com/vit9696/AppleALC/wiki/Supported-codecs" target="_blank" rel="external">支持</a>，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在<code>AppleHDA</code>之前加载<code>AppleALC</code>（有关更多详细信息，请参阅<code>sudo kextstat</code>输出）。</p>
+      <content:encoded><![CDATA[<h4 id="如何使用AppleALC"><a href="#如何使用AppleALC" class="headerlink" title="如何使用AppleALC"></a>如何使用AppleALC</h4><p>如果您的编解码器<a href="https://github.com/vit9696/AppleALC/wiki/Supported-codecs" target="_blank" rel="external">支持</a>，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在<code>AppleHDA</code>之前加载<code>AppleALC</code>（有关更多详细信息，请参阅<code>sudo kextstat</code>输出）。</p>
 <p><strong>请注意</strong>，<a href="https://github.com/vit9696/Lilu" target="_blank" rel="external">Lilu</a> 也必须出现在<code>AppleALC</code>上。</p>
 <p>按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。</p>
 <p>备注：<code>AppleALC</code>不处理<code>layout-id</code>值，它希望你提供正确的DSDT(SSDT)。</p>
-<h4>如何控制AppleALC</h4>
-<p><code>AppleALC</code>接受不同的引导参数来控制其行为：</p>
+<h4 id="如何控制AppleALC"><a href="#如何控制AppleALC" class="headerlink" title="如何控制AppleALC"></a>如何控制AppleALC</h4><p><code>AppleALC</code>接受不同的引导参数来控制其行为：</p>
 <ul>
 <li><code>-alcoff</code> - 禁用自身;</li>
 <li><code>-alcdbg</code> - 打印调试信息（如果扩展在调试模式下编译）;</li>
@@ -100,14 +85,12 @@
 <li><code>-x</code>或<code>-s</code> - 也将禁用AppleALC。</li>
 <li>所有<a href="https://github.com/vit9696/Lilu" target="_blank" rel="external">Lilu</a>启动参数都会影响AppleALC。</li>
 </ul>
-<h4>如何提取调试日志</h4>
-<p>在使用<code>-alcdbg -liludbg</code>引导后，在终端<code>Terminal</code>中运行以下命令并保存输出。</p>
+<h4 id="如何提取调试日志"><a href="#如何提取调试日志" class="headerlink" title="如何提取调试日志"></a>如何提取调试日志</h4><p>在使用<code>-alcdbg -liludbg</code>引导后，在终端<code>Terminal</code>中运行以下命令并保存输出。</p>
 <p>10.12及以后版本：</p>
-<p><code>log show --predicate 'process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)' --style syslog --source</code></p>
+<p><code>log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source</code></p>
 <p>10.11及以前版本</p>
-<p><code>cat /var/log/system.log | egrep '(AppleALC|Lilu)'</code></p>
-<h4>附：AppleALC支持的编解码器列表</h4>
-<table>
+<p><code>cat /var/log/system.log | egrep &#39;(AppleALC|Lilu)&#39;</code></p>
+<h4 id="附：AppleALC支持的编解码器列表"><a href="#附：AppleALC支持的编解码器列表" class="headerlink" title="附：AppleALC支持的编解码器列表"></a>附：AppleALC支持的编解码器列表</h4><table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -764,10 +747,8 @@
 </tr>
 </tbody>
 </table>
-<h4>扩展阅读：</h4>
-<p><a href="https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/">Lilu支持的内核参数及插件列表</a></p>
-<h4>QQ群:</h4>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4 id="扩展阅读："><a href="#扩展阅读：" class="headerlink" title="扩展阅读："></a>扩展阅读：</h4><p><a href="https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/">Lilu支持的内核参数及插件列表</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/AppleALC-Supported-codecs.html#disqus_thread</comments>
@@ -780,63 +761,50 @@
       <pubDate>Thu, 07 Sep 2017 08:18:13 GMT</pubDate>
       <description>
       
-        &lt;h3&gt;Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似&lt;code&gt;TeamView
+        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法&quot; class=&quot;heade
       
       </description>
       
-      <content:encoded><![CDATA[<h3>Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]</h3>
-<blockquote>
+      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-的正确驱动姿势-原始方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]</h3><blockquote>
 <p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
 </blockquote>
-<h4>问题的提出：</h4>
-<ul>
-<li>在macOS Sierra上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。</li>
+<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><ul>
+<li>在macOS Sierra上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）引起的。 </li>
 </ul>
-<h4>解决方案：两种方法任选其一【我假设你的系统是10.12.x，同时也给出即将发布的10.13.x的方法】</h4>
-<ul>
+<h4 id="解决方案：两种方法任选其一【我假设你的系统是10-12-x，同时也给出即将发布的10-13-x的方法】"><a href="#解决方案：两种方法任选其一【我假设你的系统是10-12-x，同时也给出即将发布的10-13-x的方法】" class="headerlink" title="解决方案：两种方法任选其一【我假设你的系统是10.12.x，同时也给出即将发布的10.13.x的方法】"></a>解决方案：两种方法任选其一【我假设你的系统是10.12.x，同时也给出即将发布的10.13.x的方法】</h4><ul>
 <li>使用应用程序<code>Clover Configurator</code>在<code>Clover</code>中的<code>KextsToPatch</code>应用以下补丁，以使BCM94352z启用WiFi：</li>
 </ul>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Name:           AirPortBrcm4360</div><div class="line">Comment:        在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4</div><div class="line">Find:           pci14e4,43a0</div><div class="line">Replace:        pci14e4,43b1</div><div class="line">MatchOS:        10.12.x</div><div class="line">InfoPlistPatch: <span class="literal">true</span></div><div class="line"></div><div class="line">Name:           AirPortBrcmNIC</div><div class="line">Comment:        在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4</div><div class="line">Find:           pci14e4,43a0</div><div class="line">Replace:        pci14e4,43b1</div><div class="line">MatchOS:        10.13.x</div><div class="line">InfoPlistPatch: <span class="literal">true</span></div><div class="line"></div><div class="line">Name:           AirPortBrcm4360</div><div class="line">Comment:        初始化fvco以加载BCM4360驱动[10.12.x] - Darkvoid</div><div class="line">Find:           81F952AA00007529 </div><div class="line">Replace:        81F952AA00006690</div><div class="line"></div><div class="line">Name:           AirPortBrcmNIC</div><div class="line">Comment:        初始化fvco以加载BCM4360驱动[10.13.x]</div><div class="line">Find:           81F952AA00007529 </div><div class="line">Replace:        81F952AA00006690</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Name:           AirPortBrcm4360</div><div class="line">Comment:        在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4</div><div class="line">Find:           pci14e4,43a0</div><div class="line">Replace:        pci14e4,43b1</div><div class="line">MatchOS:        10.12.x</div><div class="line">InfoPlistPatch: <span class="literal">true</span></div><div class="line"></div><div class="line">Name:           AirPortBrcmNIC</div><div class="line">Comment:        在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4</div><div class="line">Find:           pci14e4,43a0</div><div class="line">Replace:        pci14e4,43b1</div><div class="line">MatchOS:        10.13.x</div><div class="line">InfoPlistPatch: <span class="literal">true</span></div><div class="line"></div><div class="line">Name:           AirPortBrcm4360</div><div class="line">Comment:        初始化fvco以加载BCM4360驱动[10.12.x] - Darkvoid</div><div class="line">Find:           81F952AA00007529 </div><div class="line">Replace:        81F952AA00006690</div><div class="line"></div><div class="line">Name:           AirPortBrcmNIC</div><div class="line">Comment:        初始化fvco以加载BCM4360驱动[10.13.x]</div><div class="line">Find:           81F952AA00007529 </div><div class="line">Replace:        81F952AA00006690</div></pre></td></tr></table></figure>
 <ul>
 <li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
 </ul>
-<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43a0<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>InfoPlistPatch<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.12.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>AirPortBrcm4360<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43b1<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>初始化fvco以加载BCM4360驱动[10.12.x] - Darkvoid<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAdSk=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.12.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>com.apple.driver.AirPort.Brcm4360<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAZpA=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43a0<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>InfoPlistPatch<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.13.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>AirPortBrcmNIC<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43b1<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>初始化fvco以加载BCM4360驱动[10.13.x]<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAdSk=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.13.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>AirPortBrcmNIC<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAZpA=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>它看起来是这个样子的：
-<img src="http://ous2s14vo.bkt.clouddn.com/KextsToPatch_BCM4360.png" alt="KextsToPatch_BCM4360"></p>
-<p><code>config.plist</code>文件的修改到此结束
-现在BCM94352z的WIFI应该已经可以工作了，你甚至都不需要添加仿冒WIFI的设备ID。当然，在重启前，还要重建一下系统的缓存，命令为：</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43a0<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>InfoPlistPatch<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.12.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>AirPortBrcm4360<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43b1<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>初始化fvco以加载BCM4360驱动[10.12.x] - Darkvoid<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAdSk=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.12.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>com.apple.driver.AirPort.Brcm4360<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAZpA=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>在Brcm4360驱动中添加BCM94352z的设备ID：0x43b114e4<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43a0<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>InfoPlistPatch<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">true</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.13.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>AirPortBrcmNIC<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>pci14e4,43b1<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>初始化fvco以加载BCM4360驱动[10.13.x]<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAdSk=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>MatchOS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.13.x<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>AirPortBrcmNIC<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	gflSqgAAZpA=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>它看起来是这个样子的：<br><img src="http://ous2s14vo.bkt.clouddn.com/KextsToPatch_BCM4360.png" alt="KextsToPatch_BCM4360"></p>
+<p><code>config.plist</code>文件的修改到此结束<br>现在BCM94352z的WIFI应该已经可以工作了，你甚至都不需要添加仿冒WIFI的设备ID。当然，在重启前，还要重建一下系统的缓存，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
 <p>重启你的系统，检查WIFI是否工作正常。</p>
-<h4>驱动你的蓝牙</h4>
-<h5>Clover设置：</h5>
-<ul>
+<h4 id="驱动你的蓝牙"><a href="#驱动你的蓝牙" class="headerlink" title="驱动你的蓝牙"></a>驱动你的蓝牙</h4><h5 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h5><ul>
 <li>使用应用程序<code>Clover Configurator</code>在<code>Clover</code>中的<code>KextsToPatch</code>应用以下补丁，以使BCM94352z启用蓝牙：</li>
 </ul>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure>
 <ul>
 <li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
 </ul>
-<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h5>驱动：</h5>
-<blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h5><blockquote>
 <p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></p>
 </blockquote>
 <ol>
 <li>将文件<code>BrcmFirmwareData.kext</code>和<code>BrcmPatchRAM2.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
 <li>将文件<code>FakePCIID_Broadcom_WiFi.kext</code>和<code>FakePCIID.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
 <li>将文件<code>AirportBrcmFixup.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下,由于<code>AirportBrcmFixup.kext</code>是依赖于<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu</a>运行的插件，所以还需要检查该目录下必须存在<code>Lilu.kext</code></li>
-<li>包括这些文件的目录看起来是这样的：
-<img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z%E9%A9%B1%E5%8A%A8.png" alt="brcm94352z驱动"></li>
+<li>包括这些文件的目录看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png" alt="brcm94352z驱动"></li>
 </ol>
 <p>当然，在重启前，还要重建一下系统的缓存，命令为：</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
 <p>重启你的系统，检查蓝牙是否工作正常。</p>
-<h4>写在最后</h4>
-<p>这是驱动BCM94352z(DW1560)的基础设置，还有些高级设置需要各位多爬帖。</p>
-<h4>QQ群:</h4>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是驱动BCM94352z(DW1560)的基础设置，还有些高级设置需要各位多爬帖。</p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the%20correct-drive-posture.html#disqus_thread</comments>
@@ -849,14 +817,11 @@
       <pubDate>Thu, 07 Sep 2017 01:32:15 GMT</pubDate>
       <description>
       
-        &lt;h4&gt;HD520/HD530/HD620/HD630显卡驱动的正确姿势&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;在CLOVER里注入platform-id，下表是整理出的部分资料供参考；更详细的资料请&lt;a href=&quot;https://blog.daliansky.net/2017/08/3
+        &lt;h4 id=&quot;HD520-HD530-HD620-HD630显卡驱动的正确姿势&quot;&gt;&lt;a href=&quot;#HD520-HD530-HD620-HD630显卡驱动的正确姿势&quot; class=&quot;headerlink&quot; title=&quot;HD520/HD530/HD620/HD630显卡驱动的
       
       </description>
       
-      <content:encoded><![CDATA[<h4>HD520/HD530/HD620/HD630显卡驱动的正确姿势</h4>
-<ul>
+      <content:encoded><![CDATA[<h4 id="HD520-HD530-HD620-HD630显卡驱动的正确姿势"><a href="#HD520-HD530-HD620-HD630显卡驱动的正确姿势" class="headerlink" title="HD520/HD530/HD620/HD630显卡驱动的正确姿势"></a>HD520/HD530/HD620/HD630显卡驱动的正确姿势</h4><ul>
 <li>在CLOVER里注入platform-id，下表是整理出的部分资料供参考；更详细的资料请<a href="https://blog.daliansky.net/2017/08/31/Intel-core-display-platformID-finishing/#more">移步</a></li>
 </ul>
 <table>
@@ -929,7 +894,7 @@
 <tr>
 <td style="text-align:center">Intel HD Graphics 630</td>
 <td style="text-align:center">0x59120000</td>
-<td style="text-align:center">iMac18,2&lt;br&gt;iMac18,3</td>
+<td style="text-align:center">iMac18,2<br>iMac18,3</td>
 <td style="text-align:center">3</td>
 <td style="text-align:center"></td>
 <td style="text-align:center">3</td>
@@ -950,21 +915,17 @@
 <li>还需要在<code>CLOVER/kexts/Other</code>放入<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu.kext</a>和<a href="https://sourceforge.net/projects/intelgraphicsfixup/" target="_blank" rel="external">IntelGraphicsFixup.kext</a>，其它的基于<code>Lilu</code>的插件列表请稳步：<a href="https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/">Lilu插件列表</a></li>
 <li>更多的<code>platform-id</code>请移步：<a href="https://blog.daliansky.net/2017/08/31/Intel-core-display-platformID-finishing/#more">黑苹果必备：Intel核显platform ID整理</a></li>
 </ul>
-<h4><code>系统偏好设置</code>里的<code>触控板</code>设置是空白的</h4>
-<ul>
+<h4 id="系统偏好设置里的触控板设置是空白的"><a href="#系统偏好设置里的触控板设置是空白的" class="headerlink" title="系统偏好设置里的触控板设置是空白的"></a><code>系统偏好设置</code>里的<code>触控板</code>设置是空白的</h4><ul>
 <li>请更新<code>VoodooPS2Controller.kext</code>到1.8.25或以上版本，<a href="https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller" target="_blank" rel="external">VoodooPS2Controller.kext下载链接</a></li>
 </ul>
-<h4>HD4400 / HD4600在Safari浏览器播放视频崩溃</h4>
-<ul>
+<h4 id="HD4400-HD4600在Safari浏览器播放视频崩溃"><a href="#HD4400-HD4600在Safari浏览器播放视频崩溃" class="headerlink" title="HD4400 / HD4600在Safari浏览器播放视频崩溃"></a>HD4400 / HD4600在Safari浏览器播放视频崩溃</h4><ul>
 <li>在<code>CLOVER/kexts/Other</code>放入<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu.kext</a>和<a href="https://sourceforge.net/projects/intelgraphicsfixup/" target="_blank" rel="external">IntelGraphicsFixup.kext</a></li>
-<li>还有可能会需要<a href="https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup" target="_blank" rel="external">IntelGraphicsDVMTFixup</a>
-<img src="http://ous2s14vo.bkt.clouddn.com/lilu+IntelGraphicsFixup.png" alt="lilu+IntelGraphicsFixup"></li>
+<li>还有可能会需要<a href="https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup" target="_blank" rel="external">IntelGraphicsDVMTFixup</a><br><img src="http://ous2s14vo.bkt.clouddn.com/lilu+IntelGraphicsFixup.png" alt="lilu+IntelGraphicsFixup"></li>
 </ul>
 <blockquote>
 <p>延伸阅读：其它的基于<code>Lilu</code>的插件列表请稳步：<a href="https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/">Lilu插件列表</a></p>
 </blockquote>
-<h4>Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后/暂停/无响应</h4>
-<ul>
+<h4 id="Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后-暂停-无响应"><a href="#Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后-暂停-无响应" class="headerlink" title="Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后/暂停/无响应"></a>Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后/暂停/无响应</h4><ul>
 <li>登录后不久（有些在登录之前），鼠标和/或图形可能看起来没有反应。 这通常在大约20秒后清除。 从睡眠醒来后观察到相同的效果。</li>
 <li>这似乎只影响了Haswell的图形硬件。</li>
 <li>可能与SMBIOS的变化有关，当使用MacBookPro11,2与之前版本的OS X / macOS时，观察到类似的效果。 但现在的问题也出现在MacBookAir6,2和MacBookPro11,1上。</li>
@@ -972,36 +933,19 @@
 </ul>
 <p>原文：</p>
 <blockquote>
-<p>在我的u430与10.12.4上遭遇了这个问题（醒来后和登录后的短暂滞后）。u430具有LVDS和单个HDMI。
-我使用ig-platform-id 0xa260006。 0xa260006具有LVDS，0105 DP，0204 DP。
-HDMI连接到0204，所以我修补该端口的HDMI（启用HDMI音频）。
-我也使用vbo 9mb光标字节补丁</p>
-</blockquote>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 9MB cursor bytes, vbo</div><div class="line">Find:       0600260a 01030303 00000002 00003001 00006000</div><div class="line">Replace:    0600260a 01030303 00000002 00003001 00009000</div></pre></td></tr></table></figure></p>
-<blockquote></blockquote>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    HDMI-audio, port 0204, 0x0a260005 0x0a260006</div><div class="line">Find:       02040900 00040000 87000000</div><div class="line">Replace:    02040900 00080000 87000000</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>现在，0105端口在帧缓冲区中的0204端口之前，但是我们不需要0105端口，因为它没有连接任何东西（并导致滞后），所以...策略是用0204替代0105，将端口数从3减少到2。
-我们已经知道，在<code>AppleIntelFramebufferCapri</code>中，0x01660004只有一个LVDS连接器，所以我们可以查看该ig-platform-id数据的标题，以发现我们需要将Azul中的ig平台数据从3个端口减少到2个。
-<code>AppleIntelFramebufferCapri</code> 0x01660004:</p>
-</blockquote>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">04006601 01030101</div></pre></td></tr></table></figure></p>
-<blockquote>
+<p>  在我的u430与10.12.4上遭遇了这个问题（醒来后和登录后的短暂滞后）。u430具有LVDS和单个HDMI。<br>  我使用ig-platform-id 0xa260006。 0xa260006具有LVDS，0105 DP，0204 DP。<br>  HDMI连接到0204，所以我修补该端口的HDMI（启用HDMI音频）。<br>  我也使用vbo 9mb光标字节补丁</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 9MB cursor bytes, vbo</div><div class="line">Find:       0600260a 01030303 00000002 00003001 00006000</div><div class="line">Replace:    0600260a 01030303 00000002 00003001 00009000</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    HDMI-audio, port 0204, 0x0a260005 0x0a260006</div><div class="line">Find:       02040900 00040000 87000000</div><div class="line">Replace:    02040900 00080000 87000000</div></pre></td></tr></table></figure>
+<p>现在，0105端口在帧缓冲区中的0204端口之前，但是我们不需要0105端口，因为它没有连接任何东西（并导致滞后），所以…策略是用0204替代0105，将端口数从3减少到2。<br>我们已经知道，在<code>AppleIntelFramebufferCapri</code>中，0x01660004只有一个LVDS连接器，所以我们可以查看该ig-platform-id数据的标题，以发现我们需要将Azul中的ig平台数据从3个端口减少到2个。<br><code>AppleIntelFramebufferCapri</code> 0x01660004:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">04006601 01030101</div></pre></td></tr></table></figure>
 <p><code>AppleIntelFramebufferAzul</code> 0x0a260006:</p>
-</blockquote>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0600260A 01030303</div></pre></td></tr></table></figure></p>
-<blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0600260A 01030303</div></pre></td></tr></table></figure>
 <p>所以，最终有两个计数与连接器的数量有关，现在让我们来修改它们：</p>
-</blockquote>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 9MB光标字节(vbo)，仅2端口(RehabMan)</div><div class="line">Find:       0600260a 01030303 00000002 00003001 00006000</div><div class="line">Replace:    0600260a 01030202 00000002 00003001 00009000</div></pre></td></tr></table></figure></p>
-<blockquote></blockquote>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 关闭 0204 端口, 改变 0105 DP 端口为 0204 HDMI (RehabMan)</div><div class="line">Find:       01050900 00040000 87000000 02040900 00040000 87000000</div><div class="line">Replace:    02040900 00080000 87000000 FF000000 01000000 40000000</div></pre></td></tr></table></figure></p>
-<blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 9MB光标字节(vbo)，仅2端口(RehabMan)</div><div class="line">Find:       0600260a 01030303 00000002 00003001 00006000</div><div class="line">Replace:    0600260a 01030202 00000002 00003001 00009000</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       com.apple.driver.AppleIntelFramebufferAzul</div><div class="line">Comment:    0x0a260006 关闭 0204 端口, 改变 0105 DP 端口为 0204 HDMI (RehabMan)</div><div class="line">Find:       01050900 00040000 87000000 02040900 00040000 87000000</div><div class="line">Replace:    02040900 00080000 87000000 FF000000 01000000 40000000</div></pre></td></tr></table></figure>
 <p>结果：登录后睡眠不再滞后。</p>
 </blockquote>
-<h3>未完待续</h3>
-<h4>QQ群:</h4>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Updated-10.12-Frequently-Asked-Questions-in-Sierra.html#disqus_thread</comments>
@@ -1014,36 +958,28 @@ HDMI连接到0204，所以我修补该端口的HDMI（启用HDMI音频）。
       <pubDate>Mon, 04 Sep 2017 14:16:02 GMT</pubDate>
       <description>
       
-        &lt;h1&gt;hda-verb参数详表&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;hda-verb的由来
-hda-verb是linux下面的&lt;code&gt;alsa-project&lt;/code&gt;的一条命令，它的作用是发送&lt;code&gt;HD-audio&lt;/code&gt;命令。&lt;/p&gt;
-&lt;/bloc
+        &lt;h1 id=&quot;hda-verb参数详表&quot;&gt;&lt;a href=&quot;#hda-verb参数详表&quot; class=&quot;headerlink&quot; title=&quot;hda-verb参数详表&quot;&gt;&lt;/a&gt;hda-verb参数详表&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;hda-verb的由来&lt;br&gt;hd
       
       </description>
       
-      <content:encoded><![CDATA[<h1>hda-verb参数详表</h1>
-<blockquote>
-<p>hda-verb的由来
-hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
+      <content:encoded><![CDATA[<h1 id="hda-verb参数详表"><a href="#hda-verb参数详表" class="headerlink" title="hda-verb参数详表"></a>hda-verb参数详表</h1><blockquote>
+<p>hda-verb的由来<br>hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
 </blockquote>
-<h4>命令格式：</h4>
-<ul>
-<li>linux:
-<ul>
-<li><code>% hda-verb /dev/snd/hwC0D0 0x12 0x701 2</code></li>
+<h4 id="命令格式："><a href="#命令格式：" class="headerlink" title="命令格式："></a>命令格式：</h4><ul>
+<li>linux:<ul>
+<li><code>% hda-verb /dev/snd/hwC0D0 0x12 0x701 2</code> </li>
 </ul>
 </li>
-<li>Mac:
-<ul>
+<li>Mac:<ul>
 <li><code>$ hda-verb 0x12 0x701 2</code></li>
 </ul>
 </li>
 </ul>
 <p>输入命令：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hda-verb</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hda-verb</div></pre></td></tr></table></figure>
 <p>输出信息：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hda-verb <span class="keyword">for</span> CodecCommander (based on alsa-tools hda-verb)</div><div class="line">   usage: hda-verb [option] hwdep-device nid verb param</div><div class="line">   -l      List known verbs and parameters</div><div class="line">   -L      List known verbs and parameters (one per line)</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hda-verb <span class="keyword">for</span> CodecCommander (based on alsa-tools hda-verb)</div><div class="line">   usage: hda-verb [option] hwdep-device nid verb param</div><div class="line">   -l      List known verbs and parameters</div><div class="line">   -L      List known verbs and parameters (one per line)</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -1353,22 +1289,16 @@ hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用
 </tr>
 </tbody>
 </table>
-<h4>例子：</h4>
-<p>设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure></p>
+<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><p>设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
 <p>也可以写成：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 0x707 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 0x707 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
 <p>CodecCommander经常使用的命令：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25</div><div class="line">$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83</div></pre></td></tr></table></figure></p>
-<h4>备注：</h4>
-<blockquote>
-<p>字符串不区分大小写
-此外，它不一定是完整的字符串，但只能是唯一的
-例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的
-<code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25</div><div class="line">$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83</div></pre></td></tr></table></figure>
+<h4 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h4><blockquote>
+<p>字符串不区分大小写<br>此外，它不一定是完整的字符串，但只能是唯一的<br>例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的<br><code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
 </blockquote>
-<h4>QQ群:</h4>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/hda-verb-parameter-detail-table.html#disqus_thread</comments>
