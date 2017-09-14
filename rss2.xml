@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 14 Sep 2017 01:58:43 GMT</pubDate>
+    <pubDate>Thu, 14 Sep 2017 03:14:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,13 +26,22 @@
 <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
 <h4 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h4><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
 <h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
-<h4 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h4><figure class="highlight plain"><figcaption><span>"file"````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">用&quot;file&quot;提供的信息创建`CPUFriendProvider.kext`</div><div class="line"></div><div class="line">````--acpi &quot;file&quot;</div></pre></td></tr></table></figure>
-<p>使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
+<h4 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h4><p>执行命令如下：</p>
+<p><code>./ResourceConverter.sh --kext &quot;/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist&quot; --acpi &quot;/Users/sky/Library/ssdtPRGen/ssdt.dsl&quot;</code></p>
+<p>它会在当前目录生成<code>CPUFriendProvider.kext</code>,将<code>CPUFriendProvider.kext</code>和<a href="https://github.com/PMheart/CPUFriend/releases" target="_blank" rel="external">CPUFriend.kext</a>复制到<code>/EFI/Clover/kexts/Other</code>，重建缓存，然后重启。</p>
+<p>说明：</p>
+<blockquote>
+<p>其中的<code>/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist</code>是我自行修改的，可以通过直接调用系统提供的<code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist</code><br><code>/Users/sky/Library/ssdtPRGen/ssdt.dsl</code>是通过<code>ssdtPRGen.sh</code>创建的，在<code>ssdtPRGen.sh</code>命令执行过程中输出的信息中会包含机型<code>MacBookPro14.2</code>和<code>Board-ID</code> <code>[Mac-CAD6701F7CEA0921]</code></p>
+</blockquote>
+<p><code>--kext &quot;file&quot;</code> 用”file”提供的信息创建<code>CPUFriendProvider.kext</code></p>
+<p><code>--acpi &quot;file&quot;</code> 使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
 <p>注意：</p>
 <ul>
 <li>创建的 kext/ssdt 位于当前工作目录中</li>
 <li>变量 <code>&quot;file&quot;</code> 应该是 <code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources</code> 中的一个完整的plist，具有某些修改，而不是像原始的 <code>FrequencyVectors</code> 条目</li>
 </ul>
+<h4 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h4><p><a href="https://github.com/PMheart/CPUFriend/blob/master/Instructions.md" target="_blank" rel="external">CPUFriend Installation &amp; Usage</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>158976808 <a href="http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600" target="_blank" rel="external">燃7000-黑苹果交流群</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html#disqus_thread</comments>
