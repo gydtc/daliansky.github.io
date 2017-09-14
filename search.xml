@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CPUFriend的安装与使用]]></title>
+    <url>%2FCPUFriend-Installation-and-Usage.html</url>
+    <content type="text"><![CDATA[CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUFriend 配置使用CPUFriend/ResourceConverter.sh生成CPUFriendProvider.kext或ssdt_data.dsl的工作副本。如果您还有ssdtPRGen.sh生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用CPUFriendProvider.kext存储您的定制数据。 ResourceConverter.sh的使用"file"````123用&quot;file&quot;提供的信息创建`CPUFriendProvider.kext`````--acpi &quot;file&quot; 使用”file”提供的信息创建ssdt_data.dsl 注意： 创建的 kext/ssdt 位于当前工作目录中 变量 &quot;file&quot; 应该是 /System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources 中的一个完整的plist，具有某些修改，而不是像原始的 FrequencyVectors 条目]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Lilu</tag>
+        <tag>CPUFriend</tag>
+        <tag>Plugins</tag>
+        <tag>CPU变频</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Broadcom BCM94352z/DW1560驱动新姿势[新方法]]]></title>
     <url>%2FBroadcom-BCM94352z-DW1560-drive-new-posture.html</url>
     <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言 昨晚口袋妖怪进群闲聊的时候提到过他之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时他发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificator checking patch / Wi-Fi 5 Ghz/Country code patch (required for 10.11) / Third party device patch / White list restriction patch / Failed PCIe configuration (device-id checking) 等问题的修复补丁 之前我写的一篇教程已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果 问题的提出：黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。 在macOS上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 解决方案：同时支持10.11-10.13系统Clover设置： 使用应用程序Clover Configurator 在Clover - Devices - FakeID - WIFI中添加仿冒ID: 0x43a014e4 在Clover - KextsToPatch 应用以下补丁，以使BCM94352z启用蓝牙： 1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44 可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里 12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt; 驱动： 下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup 将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下 将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext 包括这些文件的目录看起来是这样的： 当然，在重启前，还要重建一下系统的缓存，命令为： 123sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcachesudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernelsudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u / 重启你的系统，检查WIFI/蓝牙是否工作正常。 写在最后这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。 QQ群:331686786 一起黑苹果]]></content>
@@ -157,9 +172,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -186,8 +201,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>DB7</tag>
       </tags>
   </entry>
   <entry>

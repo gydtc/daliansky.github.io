@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Lilu,CPUFriend,Plugins,CPU变频,插件," />
 
 
 
@@ -96,16 +96,18 @@
 
 
 
-<meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
-<meta property="og:type" content="website">
-<meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/tags/High-Sierra/index.html">
+<meta name="description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
+<meta name="keywords" content="Lilu,CPUFriend,Plugins,CPU变频,插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CPUFriend的安装与使用">
+<meta property="og:url" content="http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta property="og:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-14T01:58:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑果小兵的部落阁">
-<meta name="twitter:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta name="twitter:title" content="CPUFriend的安装与使用">
+<meta name="twitter:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/tags/High-Sierra/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html"/>
 
 
 
 
 
-  <title>标签: High Sierra | 黑果小兵的部落阁</title>
+  <title>CPUFriend的安装与使用 | 黑果小兵的部落阁</title>
   
 
 
@@ -159,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -307,194 +309,228 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>High Sierra<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DalianSky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑果小兵的部落阁">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Broadcom-BCM94352z-DW1560-drive-new-posture.html" itemprop="url">
-              
-                <span itemprop="name">Broadcom BCM94352z/DW1560驱动新姿势[新方法]</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">CPUFriend的安装与使用</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-09T09:35:23+08:00"
-              content="2017-09-09" >
-          09-09
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T09:38:16+08:00">
+                2017-09-14
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:58:43+08:00">
+                2017-09-14
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the correct-drive-posture.html" itemprop="url">
-              
-                <span itemprop="name">Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-07T16:18:13+08:00"
-              content="2017-09-07" >
-          09-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/macOS-High-Sierra-10-13DB9-17A360a-with-Clover-4189.html" itemprop="url">
-              
-                <span itemprop="name">【黑果小兵】macOS High Sierra 10.13DB9 17A360a with Clover 4189原版镜像</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T10:03:58+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Mac-Sierra-and-High-Sierra-Installer-App-Download.html" itemprop="url">
-              
-                <span itemprop="name">Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T09:23:25+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Do-not-need-to-make-installation-disk!-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html" itemprop="url">
-              
-                <span itemprop="name">不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-16T22:11:02+08:00"
-              content="2017-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror.html" itemprop="url">
-              
-                <span itemprop="name">【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-16T16:13:40+08:00"
-              content="2017-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="CPUFriend安装和使用"><a href="#CPUFriend安装和使用" class="headerlink" title="CPUFriend安装和使用"></a>CPUFriend安装和使用</h1><h4 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h4><p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
+<h4 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h4><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
+<h4 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h4><figure class="highlight plain"><figcaption><span>"file"````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">用&quot;file&quot;提供的信息创建`CPUFriendProvider.kext`</div><div class="line"></div><div class="line">````--acpi &quot;file&quot;</div></pre></td></tr></table></figure>
+<p>使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
+<p>注意：</p>
+<ul>
+<li>创建的 kext/ssdt 位于当前工作目录中</li>
+<li>变量 <code>&quot;file&quot;</code> 应该是 <code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources</code> 中的一个完整的plist，具有某些修改，而不是像原始的 <code>FrequencyVectors</code> 条目</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Lilu/" rel="tag"># Lilu</a>
+          
+            <a href="/tags/CPUFriend/" rel="tag"># CPUFriend</a>
+          
+            <a href="/tags/Plugins/" rel="tag"># Plugins</a>
+          
+            <a href="/tags/CPU变频/" rel="tag"># CPU变频</a>
+          
+            <a href="/tags/插件/" rel="tag"># 插件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Broadcom-BCM94352z-DW1560-drive-new-posture.html" rel="next" title="Broadcom BCM94352z/DW1560驱动新姿势[新方法]">
+                <i class="fa fa-chevron-left"></i> Broadcom BCM94352z/DW1560驱动新姿势[新方法]
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -502,6 +538,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDcyOS83Mjgy"></div>
+    
+  </div>
+
 
         </div>
         
@@ -522,8 +564,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -616,6 +667,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CPUFriend安装和使用"><span class="nav-number">1.</span> <span class="nav-text">CPUFriend安装和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#系统要求"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">系统要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可用的内核标志"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">可用的内核标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ResourceConverter-sh的使用"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">ResourceConverter.sh的使用</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -751,10 +818,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -783,6 +850,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -8,8 +8,35 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 14 Sep 2017 01:02:37 GMT</pubDate>
+    <pubDate>Thu, 14 Sep 2017 01:58:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CPUFriend的安装与使用</title>
+      <link>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html</link>
+      <guid>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html</guid>
+      <pubDate>Thu, 14 Sep 2017 01:38:16 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;CPUFriend安装和使用&quot;&gt;&lt;a href=&quot;#CPUFriend安装和使用&quot; class=&quot;headerlink&quot; title=&quot;CPUFriend安装和使用&quot;&gt;&lt;/a&gt;CPUFriend安装和使用&lt;/h1&gt;&lt;h4 id=&quot;系统要求&quot;&gt;&lt;a href=&quot;#系
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="CPUFriend安装和使用"><a href="#CPUFriend安装和使用" class="headerlink" title="CPUFriend安装和使用"></a>CPUFriend安装和使用</h1><h4 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h4><p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
+<h4 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h4><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
+<h4 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h4><figure class="highlight plain"><figcaption><span>"file"````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">用&quot;file&quot;提供的信息创建`CPUFriendProvider.kext`</div><div class="line"></div><div class="line">````--acpi &quot;file&quot;</div></pre></td></tr></table></figure>
+<p>使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
+<p>注意：</p>
+<ul>
+<li>创建的 kext/ssdt 位于当前工作目录中</li>
+<li>变量 <code>&quot;file&quot;</code> 应该是 <code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources</code> 中的一个完整的plist，具有某些修改，而不是像原始的 <code>FrequencyVectors</code> 条目</li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Broadcom BCM94352z/DW1560驱动新姿势[新方法]</title>
@@ -949,359 +976,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Updated-10.12-Frequently-Asked-Questions-in-Sierra.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>hda-verb参数详表</title>
-      <link>http://blog.daliansky.net/hda-verb-parameter-detail-table.html</link>
-      <guid>http://blog.daliansky.net/hda-verb-parameter-detail-table.html</guid>
-      <pubDate>Mon, 04 Sep 2017 14:16:02 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;hda-verb参数详表&quot;&gt;&lt;a href=&quot;#hda-verb参数详表&quot; class=&quot;headerlink&quot; title=&quot;hda-verb参数详表&quot;&gt;&lt;/a&gt;hda-verb参数详表&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;hda-verb的由来&lt;br&gt;hd
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="hda-verb参数详表"><a href="#hda-verb参数详表" class="headerlink" title="hda-verb参数详表"></a>hda-verb参数详表</h1><blockquote>
-<p>hda-verb的由来<br>hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
-</blockquote>
-<h4 id="命令格式："><a href="#命令格式：" class="headerlink" title="命令格式："></a>命令格式：</h4><ul>
-<li>linux:<ul>
-<li><code>% hda-verb /dev/snd/hwC0D0 0x12 0x701 2</code> </li>
-</ul>
-</li>
-<li>Mac:<ul>
-<li><code>$ hda-verb 0x12 0x701 2</code></li>
-</ul>
-</li>
-</ul>
-<p>输入命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hda-verb</div></pre></td></tr></table></figure>
-<p>输出信息：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hda-verb <span class="keyword">for</span> CodecCommander (based on alsa-tools hda-verb)</div><div class="line">   usage: hda-verb [option] hwdep-device nid verb param</div><div class="line">   -l      List known verbs and parameters</div><div class="line">   -L      List known verbs and parameters (one per line)</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>数值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET_STREAM_FORMAT</td>
-<td>0x0a00</td>
-</tr>
-<tr>
-<td>GET_AMP_GAIN_MUTE</td>
-<td>0x0b00</td>
-</tr>
-<tr>
-<td>GET_PROC_COEF</td>
-<td>0x0c00</td>
-</tr>
-<tr>
-<td>GET_COEF_INDEX</td>
-<td>0x0d00</td>
-</tr>
-<tr>
-<td>PARAMETERS</td>
-<td>0x0f00</td>
-</tr>
-<tr>
-<td>GET_CONNECT_SEL</td>
-<td>0x0f01</td>
-</tr>
-<tr>
-<td>GET_CONNECT_LIST</td>
-<td>0x0f02</td>
-</tr>
-<tr>
-<td>GET_PROC_STATE</td>
-<td>0x0f03</td>
-</tr>
-<tr>
-<td>GET_SDI_SELECT</td>
-<td>0x0f04</td>
-</tr>
-<tr>
-<td>GET_POWER_STATE</td>
-<td>0x0f05</td>
-</tr>
-<tr>
-<td>GET_CONV</td>
-<td>0x0f06</td>
-</tr>
-<tr>
-<td>GET_PIN_WIDGET_CONTROL</td>
-<td>0x0f07</td>
-</tr>
-<tr>
-<td>GET_UNSOLICITED_RESPONSE</td>
-<td>0x0f08</td>
-</tr>
-<tr>
-<td>GET_PIN_SENSE</td>
-<td>0x0f09</td>
-</tr>
-<tr>
-<td>GET_BEEP_CONTROL</td>
-<td>0x0f0a</td>
-</tr>
-<tr>
-<td>GET_EAPD_BTLENABLE</td>
-<td>0x0f0c</td>
-</tr>
-<tr>
-<td>GET_DIGI_CONVERT_1</td>
-<td>0x0f0d</td>
-</tr>
-<tr>
-<td>GET_DIGI_CONVERT_2</td>
-<td>0x0f0e</td>
-</tr>
-<tr>
-<td>GET_VOLUME_KNOB_CONTROL</td>
-<td>0x0f0f</td>
-</tr>
-<tr>
-<td>GET_GPIO_DATA</td>
-<td>0x0f15</td>
-</tr>
-<tr>
-<td>GET_GPIO_MASK</td>
-<td>0x0f16</td>
-</tr>
-<tr>
-<td>GET_GPIO_DIRECTION</td>
-<td>0x0f17</td>
-</tr>
-<tr>
-<td>GET_GPIO_WAKE_MASK</td>
-<td>0x0f18</td>
-</tr>
-<tr>
-<td>GET_GPIO_UNSOLICITED_RSP_MASK</td>
-<td>0x0f19</td>
-</tr>
-<tr>
-<td>GET_GPIO_STICKY_MASK</td>
-<td>0x0f1a</td>
-</tr>
-<tr>
-<td>GET_CONFIG_DEFAULT</td>
-<td>0x0f1c</td>
-</tr>
-<tr>
-<td>GET_SUBSYSTEM_ID</td>
-<td>0x0f20</td>
-</tr>
-<tr>
-<td>SET_STREAM_FORMAT</td>
-<td>0x200</td>
-</tr>
-<tr>
-<td>SET_AMP_GAIN_MUTE</td>
-<td>0x300</td>
-</tr>
-<tr>
-<td>SET_PROC_COEF</td>
-<td>0x400</td>
-</tr>
-<tr>
-<td>SET_COEF_INDEX</td>
-<td>0x500</td>
-</tr>
-<tr>
-<td>SET_CONNECT_SEL</td>
-<td>0x701</td>
-</tr>
-<tr>
-<td>SET_PROC_STATE</td>
-<td>0x703</td>
-</tr>
-<tr>
-<td>SET_SDI_SELECT</td>
-<td>0x704</td>
-</tr>
-<tr>
-<td>SET_POWER_STATE</td>
-<td>0x705</td>
-</tr>
-<tr>
-<td>SET_CHANNEL_STREAMID</td>
-<td>0x706</td>
-</tr>
-<tr>
-<td>SET_PIN_WIDGET_CONTROL</td>
-<td>0x707</td>
-</tr>
-<tr>
-<td>SET_UNSOLICITED_ENABLE</td>
-<td>0x708</td>
-</tr>
-<tr>
-<td>SET_PIN_SENSE</td>
-<td>0x709</td>
-</tr>
-<tr>
-<td>SET_BEEP_CONTROL</td>
-<td>0x70a</td>
-</tr>
-<tr>
-<td>SET_EAPD_BTLENABLE</td>
-<td>0x70c</td>
-</tr>
-<tr>
-<td>SET_DIGI_CONVERT_1</td>
-<td>0x70d</td>
-</tr>
-<tr>
-<td>SET_DIGI_CONVERT_2</td>
-<td>0x70e</td>
-</tr>
-<tr>
-<td>SET_VOLUME_KNOB_CONTROL</td>
-<td>0x70f</td>
-</tr>
-<tr>
-<td>SET_GPIO_DATA</td>
-<td>0x715</td>
-</tr>
-<tr>
-<td>SET_GPIO_MASK</td>
-<td>0x716</td>
-</tr>
-<tr>
-<td>SET_GPIO_DIRECTION</td>
-<td>0x717</td>
-</tr>
-<tr>
-<td>SET_GPIO_WAKE_MASK</td>
-<td>0x718</td>
-</tr>
-<tr>
-<td>SET_GPIO_UNSOLICITED_RSP_MASK</td>
-<td>0x719</td>
-</tr>
-<tr>
-<td>SET_GPIO_STICKY_MASK</td>
-<td>0x71a</td>
-</tr>
-<tr>
-<td>SET_CONFIG_DEFAULT_BYTES_0</td>
-<td>0x71c</td>
-</tr>
-<tr>
-<td>SET_CONFIG_DEFAULT_BYTES_1</td>
-<td>0x71d</td>
-</tr>
-<tr>
-<td>SET_CONFIG_DEFAULT_BYTES_2</td>
-<td>0x71e</td>
-</tr>
-<tr>
-<td>SET_CONFIG_DEFAULT_BYTES_3</td>
-<td>0x71f</td>
-</tr>
-<tr>
-<td>SET_CODEC_RESET</td>
-<td>0x7ff</td>
-</tr>
-</tbody>
-</table>
-<p>已知参数：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>数值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VENDOR_ID</td>
-<td>0x00</td>
-</tr>
-<tr>
-<td>SUBSYSTEM_ID</td>
-<td>0x01</td>
-</tr>
-<tr>
-<td>REV_ID</td>
-<td>0x02</td>
-</tr>
-<tr>
-<td>NODE_COUNT</td>
-<td>0x04</td>
-</tr>
-<tr>
-<td>FUNCTION_TYPE</td>
-<td>0x05</td>
-</tr>
-<tr>
-<td>AUDIO_FG_CAP</td>
-<td>0x08</td>
-</tr>
-<tr>
-<td>AUDIO_WIDGET_CAP</td>
-<td>0x09</td>
-</tr>
-<tr>
-<td>PCM</td>
-<td>0x0a</td>
-</tr>
-<tr>
-<td>STREAM</td>
-<td>0x0b</td>
-</tr>
-<tr>
-<td>PIN_CAP</td>
-<td>0x0c</td>
-</tr>
-<tr>
-<td>AMP_IN_CAP</td>
-<td>0x0d</td>
-</tr>
-<tr>
-<td>CONNLIST_LEN</td>
-<td>0x0e</td>
-</tr>
-<tr>
-<td>POWER_STATE</td>
-<td>0x0f</td>
-</tr>
-<tr>
-<td>PROC_CAP</td>
-<td>0x10</td>
-</tr>
-<tr>
-<td>GPIO_CAP</td>
-<td>0x11</td>
-</tr>
-<tr>
-<td>AMP_OUT_CAP</td>
-<td>0x12</td>
-</tr>
-<tr>
-<td>VOL_KNB_CAP</td>
-<td>0x13</td>
-</tr>
-</tbody>
-</table>
-<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><p>设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
-<p>也可以写成：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 0x707 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
-<p>CodecCommander经常使用的命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25</div><div class="line">$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83</div></pre></td></tr></table></figure>
-<h4 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h4><blockquote>
-<p>字符串不区分大小写<br>此外，它不一定是完整的字符串，但只能是唯一的<br>例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的<br><code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
-</blockquote>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/hda-verb-parameter-detail-table.html#disqus_thread</comments>
     </item>
     
   </channel>
