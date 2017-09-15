@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="hda-verb参数详表  hda-verb的由来 hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式：  linux:  % hda-verb /dev/snd/hwC0D0 0x12 0x701 2   Mac:  $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda">
+<meta name="description" content="hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2    Mac: $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda-ver">
 <meta name="keywords" content="AppleALC,CC,CodecCommander,codec,hda-verb,ALCPlugFix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hda-verb参数详表">
 <meta property="og:url" content="http://blog.daliansky.net/hda-verb-parameter-detail-table.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="hda-verb参数详表  hda-verb的由来 hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式：  linux:  % hda-verb /dev/snd/hwC0D0 0x12 0x701 2   Mac:  $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda">
+<meta property="og:description" content="hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2    Mac: $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda-ver">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-09-14T01:08:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hda-verb参数详表">
-<meta name="twitter:description" content="hda-verb参数详表  hda-verb的由来 hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式：  linux:  % hda-verb /dev/snd/hwC0D0 0x12 0x701 2   Mac:  $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda">
+<meta name="twitter:description" content="hda-verb参数详表 hda-verb的由来hda-verb是linux下面的alsa-project的一条命令，它的作用是发送HD-audio命令。  命令格式： linux: % hda-verb /dev/snd/hwC0D0 0x12 0x701 2    Mac: $ hda-verb 0x12 0x701 2    输入命令： 1hda-verb 输出信息： 1234hda-ver">
 
 
 
@@ -447,28 +447,23 @@
       
 
       
-        <h1>hda-verb参数详表</h1>
-<blockquote>
-<p>hda-verb的由来
-hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
+        <h1 id="hda-verb参数详表"><a href="#hda-verb参数详表" class="headerlink" title="hda-verb参数详表"></a>hda-verb参数详表</h1><blockquote>
+<p>hda-verb的由来<br>hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用是发送<code>HD-audio</code>命令。</p>
 </blockquote>
-<h4>命令格式：</h4>
-<ul>
-<li>linux:
-<ul>
-<li><code>% hda-verb /dev/snd/hwC0D0 0x12 0x701 2</code></li>
+<h4 id="命令格式："><a href="#命令格式：" class="headerlink" title="命令格式："></a>命令格式：</h4><ul>
+<li>linux:<ul>
+<li><code>% hda-verb /dev/snd/hwC0D0 0x12 0x701 2</code> </li>
 </ul>
 </li>
-<li>Mac:
-<ul>
+<li>Mac:<ul>
 <li><code>$ hda-verb 0x12 0x701 2</code></li>
 </ul>
 </li>
 </ul>
 <p>输入命令：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hda-verb</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hda-verb</div></pre></td></tr></table></figure>
 <p>输出信息：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hda-verb <span class="keyword">for</span> CodecCommander (based on alsa-tools hda-verb)</div><div class="line">   usage: hda-verb [option] hwdep-device nid verb param</div><div class="line">   -l      List known verbs and parameters</div><div class="line">   -L      List known verbs and parameters (one per line)</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hda-verb <span class="keyword">for</span> CodecCommander (based on alsa-tools hda-verb)</div><div class="line">   usage: hda-verb [option] hwdep-device nid verb param</div><div class="line">   -l      List known verbs and parameters</div><div class="line">   -L      List known verbs and parameters (one per line)</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -778,22 +773,16 @@ hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用
 </tr>
 </tbody>
 </table>
-<h4>例子：</h4>
-<p>设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure></p>
+<h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><p>设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
 <p>也可以写成：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 0x707 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 0x707 0x24</div><div class="line"></div><div class="line">nid = 0x19, verb = 0x707, param = 0x24</div><div class="line"><span class="built_in">command</span> 0x01970724 --&gt; result = 0x00000000</div></pre></td></tr></table></figure>
 <p>CodecCommander经常使用的命令：</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25</div><div class="line">$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83</div></pre></td></tr></table></figure></p>
-<h4>备注：</h4>
-<blockquote>
-<p>字符串不区分大小写
-此外，它不一定是完整的字符串，但只能是唯一的
-例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的
-<code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25</div><div class="line">$ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83</div></pre></td></tr></table></figure>
+<h4 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h4><blockquote>
+<p>字符串不区分大小写<br>此外，它不一定是完整的字符串，但只能是唯一的<br>例如 <code>par</code>和<code>PARAMETER</code>的参数是相同的<br><code>set_a</code>就足以代替<code>SET_AMP_GAIN_MUTE</code></p>
 </blockquote>
-<h4>QQ群:</h4>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -1042,7 +1031,7 @@ hda-verb是linux下面的<code>alsa-project</code>的一条命令，它的作用
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">hda-verb参数详表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">命令格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">备注：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hda-verb参数详表"><span class="nav-number">1.</span> <span class="nav-text">hda-verb参数详表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令格式："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">命令格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例子："><span class="nav-number">1.0.0.2.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#备注："><span class="nav-number">1.0.0.3.</span> <span class="nav-text">备注：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ群"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
