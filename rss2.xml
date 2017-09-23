@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sat, 23 Sep 2017 03:34:48 GMT</pubDate>
+    <pubDate>Sat, 23 Sep 2017 12:45:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,19 +18,42 @@
       <pubDate>Sat, 23 Sep 2017 03:12:16 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;小米笔记本Pro安装10-13随手记&quot;&gt;&lt;a href=&quot;#小米笔记本Pro安装10-13随手记&quot; class=&quot;headerlink&quot; title=&quot;小米笔记本Pro安装10.13随手记&quot;&gt;&lt;/a&gt;小米笔记本Pro安装10.13随手记&lt;/h1&gt;&lt;blockquo
+        &lt;h1&gt;小米笔记本Pro安装10.13随手记&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器
+![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.c
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="小米笔记本Pro安装10-13随手记"><a href="#小米笔记本Pro安装10-13随手记" class="headerlink" title="小米笔记本Pro安装10.13随手记"></a>小米笔记本Pro安装10.13随手记</h1><blockquote>
-<p>帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器<br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png" alt="屏幕快照 2017-09-22 下午6.22.58"></p>
+      <content:encoded><![CDATA[<h1>小米笔记本Pro安装10.13随手记</h1>
+<blockquote>
+<p>帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器
+![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png)</p>
 </blockquote>
-<h3 id="安装中遇到的几个难点："><a href="#安装中遇到的几个难点：" class="headerlink" title="安装中遇到的几个难点："></a>安装中遇到的几个难点：</h3><h4 id="无法进入安装界面，需要屏蔽独显"><a href="#无法进入安装界面，需要屏蔽独显" class="headerlink" title="无法进入安装界面，需要屏蔽独显"></a>无法进入安装界面，需要屏蔽独显</h4><p>卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。</p>
-<h4 id="Clover无法识别苹果分区卷标"><a href="#Clover无法识别苹果分区卷标" class="headerlink" title="Clover无法识别苹果分区卷标"></a>Clover无法识别苹果分区卷标</h4><p>显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】<br>要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。<br>重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。</p>
-<h4 id="安装驱动程序"><a href="#安装驱动程序" class="headerlink" title="安装驱动程序"></a>安装驱动程序</h4><p>进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！<br>于是乎，找出USB的无线网卡，安装驱动，联网成功；<br>显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡；<br>声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。</p>
-<h3 id="one-more-thing-触控板无法驱动，指纹无法识别"><a href="#one-more-thing-触控板无法驱动，指纹无法识别" class="headerlink" title="one more thing:触控板无法驱动，指纹无法识别"></a>one more thing:触控板无法驱动，指纹无法识别</h3><p>收工喽！！！<br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png" alt="屏幕快照 2017-09-22 下午6.20.24"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png" alt="屏幕快照 2017-09-22 下午6.20.50"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png" alt="屏幕快照 2017-09-22 下午6.20.46"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png" alt="屏幕快照 2017-09-22 下午6.16.57"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png" alt="屏幕快照 2017-09-22 下午6.21.07"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png" alt="屏幕快照 2017-09-22 下午6.21.16"></p>
-<h4 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h4><p>EFI下载链接: <a href="https://p8n.b8idu.com/s/1pLn1ocr" target="_blank" rel="external">https://p8n.b8idu.com/s/1pLn1ocr</a> 密码: grer</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h3>安装中遇到的几个难点：</h3>
+<h4>无法进入安装界面，需要屏蔽独显</h4>
+<p>卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。</p>
+<h4>Clover无法识别苹果分区卷标</h4>
+<p>显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】
+要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。
+重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。</p>
+<h4>安装驱动程序</h4>
+<p>进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！
+于是乎，找出USB的无线网卡，安装驱动，联网成功；
+显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡；
+声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。</p>
+<h3>one more thing:触控板无法驱动，指纹无法识别</h3>
+<p>收工喽！！！
+![屏幕快照 2017-09-22 下午6.20.24](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png)
+![屏幕快照 2017-09-22 下午6.20.50](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png)
+![屏幕快照 2017-09-22 下午6.20.46](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png)
+![屏幕快照 2017-09-22 下午6.16.57](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png)
+![屏幕快照 2017-09-22 下午6.21.07](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png)
+![屏幕快照 2017-09-22 下午6.21.16](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png)</p>
+<h4>下载链接</h4>
+<p>EFI下载链接: <a href="https://pan.baidu.com/s/1pLn1ocr" target="_blank" rel="external">https://pan.baidu.com/s/1pLn1ocr</a> 密码: grer</p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html#disqus_thread</comments>
@@ -43,11 +66,15 @@
       <pubDate>Fri, 15 Sep 2017 09:51:24 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像
+        &lt;h3&gt;【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4207，支持UEFI启动安装。&lt;/li&gt;
+&lt;li&gt;Clover默认con
       
       </description>
       
-      <content:encoded><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像"></a>【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像</h3><ul>
+      <content:encoded><![CDATA[<h3>【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像</h3>
+<ul>
 <li>本镜像采用官方原版app制作，集成Clover 4207，支持UEFI启动安装。</li>
 <li>Clover默认config.plist为620/630/640/650；</li>
 <li>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
@@ -57,13 +84,16 @@
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
-<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/17A362a_GM.png" alt="17A362a_GM"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/Clover Configurator.png" alt="Clover Configurator"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/Other Drivers.png" alt="Other Drivers"></p>
-<h4 id="下载链接-https-pan-baidu-com-s-1pLNY8HX"><a href="#下载链接-https-pan-baidu-com-s-1pLNY8HX" class="headerlink" title="下载链接: https://pan.baidu.com/s/1pLNY8HX"></a>下载链接: <a href="https://pan.baidu.com/s/1pLNY8HX" target="_blank" rel="external">https://pan.baidu.com/s/1pLNY8HX</a></h4><ul>
+<h4>截图：</h4>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/17A362a_GM.png" alt="17A362a_GM"></p>
+<p>![Clover Configurator](http://ous2s14vo.bkt.clouddn.com/Clover Configurator.png)</p>
+<p>![Other Drivers](http://ous2s14vo.bkt.clouddn.com/Other Drivers.png)</p>
+<h4>下载链接: <a href="https://pan.baidu.com/s/1pLNY8HX" target="_blank" rel="external">https://pan.baidu.com/s/1pLNY8HX</a></h4>
+<ul>
 <li>MD5 (macOS High Sierra 10.13GM 17A362a with Clover 4207.dmg) = 6d1ddfad2882f665bd0a11c5b291cb06</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html#disqus_thread</comments>
@@ -76,30 +106,44 @@
       <pubDate>Thu, 14 Sep 2017 01:38:16 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;CPUFriend安装和使用&quot;&gt;&lt;a href=&quot;#CPUFriend安装和使用&quot; class=&quot;headerlink&quot; title=&quot;CPUFriend安装和使用&quot;&gt;&lt;/a&gt;CPUFriend安装和使用&lt;/h1&gt;&lt;h4 id=&quot;系统要求&quot;&gt;&lt;a href=&quot;#系
+        &lt;h1&gt;CPUFriend安装和使用&lt;/h1&gt;
+&lt;h4&gt;系统要求&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;CPUFriend&lt;/code&gt; 需要macOS &lt;strong&gt;&lt;em&gt;v10.8&lt;/em&gt;&lt;/strong&gt;或更高版本&lt;/p&gt;
+&lt;h4&gt;安装&lt;/h4&gt;
+&lt;p&gt;强烈建议让引导程序注入&lt;
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="CPUFriend安装和使用"><a href="#CPUFriend安装和使用" class="headerlink" title="CPUFriend安装和使用"></a>CPUFriend安装和使用</h1><h4 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h4><p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
-<h4 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h4><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
-<h4 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h4><p>执行命令如下：</p>
-<p>`./ResourceConverter.sh –kext “/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist”</p>
+      <content:encoded><![CDATA[<h1>CPUFriend安装和使用</h1>
+<h4>系统要求</h4>
+<p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
+<h4>安装</h4>
+<p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
+<h4>可用的内核标志</h4>
+<p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）
+添加<code>-cpufoff</code>来关闭<code>CPUFriend</code>
+添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
+<h4>配置</h4>
+<p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
+<h4>ResourceConverter.sh的使用</h4>
+<p>执行命令如下：</p>
+<p>`./ResourceConverter.sh --kext &quot;/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist&quot;</p>
 <p>它会在当前目录生成<code>CPUFriendProvider.kext</code>,将<code>CPUFriendProvider.kext</code>和<a href="https://github.com/PMheart/CPUFriend/releases" target="_blank" rel="external">CPUFriend.kext</a>复制到<code>/EFI/Clover/kexts/Other</code>，重建缓存，然后重启。</p>
 <p>说明：</p>
 <blockquote>
 <p>其中的<code>/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist</code>是我自行修改的，可以通过直接调用系统提供的<code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist</code></p>
 </blockquote>
-<p><code>--kext &quot;file&quot;</code> 用”file”提供的信息创建<code>CPUFriendProvider.kext</code></p>
-<p><code>--acpi &quot;file&quot;</code> 使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
+<p><code>--kext &quot;file&quot;</code> 用&quot;file&quot;提供的信息创建<code>CPUFriendProvider.kext</code></p>
+<p><code>--acpi &quot;file&quot;</code> 使用&quot;file&quot;提供的信息创建<code>ssdt_data.dsl</code></p>
 <p>注意：</p>
 <ul>
 <li>创建的 kext/ssdt 位于当前工作目录中</li>
 <li>变量 <code>&quot;file&quot;</code> 应该是 <code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources</code> 中的一个完整的plist，具有某些修改，而不是像原始的 <code>FrequencyVectors</code> 条目</li>
 </ul>
-<h4 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h4><p><a href="https://github.com/PMheart/CPUFriend/blob/master/Instructions.md" target="_blank" rel="external">CPUFriend Installation &amp; Usage</a></p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4>原文链接</h4>
+<p><a href="https://github.com/PMheart/CPUFriend/blob/master/Instructions.md" target="_blank" rel="external">CPUFriend Installation &amp; Usage</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html#disqus_thread</comments>
@@ -112,45 +156,57 @@
       <pubDate>Sat, 09 Sep 2017 01:35:23 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot; class=&quot;headerlink&quot;
+        &lt;h3&gt;Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]&lt;/h3&gt;
+&lt;p&gt;引言&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;昨晚&lt;a href=&quot;https://github.com/pmheart&quot; target=&quot;
       
       </description>
       
-      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><p>引言</p>
+      <content:encoded><![CDATA[<h3>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3>
+<p>引言</p>
 <blockquote>
 <ul>
 <li>昨晚<a href="https://github.com/pmheart" target="_blank" rel="external">口袋妖怪</a>进群闲聊的时候提到过 <code>她</code> 之前维护的<a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a>已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。同时 <code>她</code> 发给我的<a href="https://sourceforge.net/p/airportbrcmfixup/code/HEAD/tree/trunk/AirportBrcmFixup/kern_brcmfx.cpp#l242" target="_blank" rel="external">AirportBrcmFixup/kern_brcmfx.cpp</a>源码中已经增加了包括 <code>_si_pmu_fvco_pllreg</code> / <code>Chip identificator checking patch</code> / <code>Wi-Fi 5 Ghz/Country code patch (required for 10.11)</code> / <code>Third party device patch</code> / <code>White list restriction patch</code> / <code>Failed PCIe configuration (device-id checking)</code> 等问题的修复补丁</li>
 <li>之前我写的一篇<a href="https://blog.daliansky.net/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the%20correct-drive-posture.html">教程</a>已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果</li>
 </ul>
 </blockquote>
-<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
+<h4>问题的提出：</h4>
+<p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
 <ul>
-<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 </li>
+<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。</li>
 </ul>
-<h3 id="解决方案：同时支持10-11-10-13系统"><a href="#解决方案：同时支持10-11-10-13系统" class="headerlink" title="解决方案：同时支持10.11-10.13系统"></a>解决方案：同时支持10.11-10.13系统</h3><h4 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h4><ul>
+<h3>解决方案：同时支持10.11-10.13系统</h3>
+<h4>Clover设置：</h4>
+<ul>
 <li>使用应用程序<code>Clover Configurator</code></li>
 <li>在<code>Clover</code> - <code>Devices</code> - <code>FakeID</code> - <code>WIFI</code>中添加仿冒ID: <code>0x43a014e4</code></li>
 <li>在<code>Clover</code> - <code>KextsToPatch</code> 应用以下补丁，以使BCM94352z启用蓝牙：</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure></p>
 <ul>
 <li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h4><blockquote>
+<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h4>驱动：</h4>
+<blockquote>
 <p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></p>
 </blockquote>
 <ol>
 <li>将文件<code>BrcmFirmwareData.kext</code>和<code>BrcmPatchRAM2.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
 <li>将文件<code>FakePCIID_Broadcom_WiFi.kext</code>和<code>FakePCIID.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
 <li>将文件<code>AirportBrcmFixup.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下,由于<code>AirportBrcmFixup.kext</code>是依赖于<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu</a>运行的插件，所以还需要检查该目录下必须存在<code>Lilu.kext</code></li>
-<li>包括这些文件的目录看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png" alt="brcm94352z驱动"></li>
+<li>包括这些文件的目录看起来是这样的：
+<img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z%E9%A9%B1%E5%8A%A8.png" alt="brcm94352z驱动"></li>
 </ol>
 <p>当然，在重启前，还要重建一下系统的缓存，命令为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure></p>
 <p>重启你的系统，检查WIFI/蓝牙是否工作正常。</p>
-<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4>写在最后</h4>
+<p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#disqus_thread</comments>
@@ -163,15 +219,18 @@
       <pubDate>Fri, 08 Sep 2017 01:40:15 GMT</pubDate>
       <description>
       
-        &lt;h4 id=&quot;如何使用AppleALC&quot;&gt;&lt;a href=&quot;#如何使用AppleALC&quot; class=&quot;headerlink&quot; title=&quot;如何使用AppleALC&quot;&gt;&lt;/a&gt;如何使用AppleALC&lt;/h4&gt;&lt;p&gt;如果您的编解码器&lt;a href=&quot;https://githu
+        &lt;h4&gt;如何使用AppleALC&lt;/h4&gt;
+&lt;p&gt;如果您的编解码器&lt;a href=&quot;https://github.com/vit9696/AppleALC/wiki/Supported-codecs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;支持&lt;/a&gt;，您
       
       </description>
       
-      <content:encoded><![CDATA[<h4 id="如何使用AppleALC"><a href="#如何使用AppleALC" class="headerlink" title="如何使用AppleALC"></a>如何使用AppleALC</h4><p>如果您的编解码器<a href="https://github.com/vit9696/AppleALC/wiki/Supported-codecs" target="_blank" rel="external">支持</a>，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在<code>AppleHDA</code>之前加载<code>AppleALC</code>（有关更多详细信息，请参阅<code>sudo kextstat</code>输出）。</p>
+      <content:encoded><![CDATA[<h4>如何使用AppleALC</h4>
+<p>如果您的编解码器<a href="https://github.com/vit9696/AppleALC/wiki/Supported-codecs" target="_blank" rel="external">支持</a>，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在<code>AppleHDA</code>之前加载<code>AppleALC</code>（有关更多详细信息，请参阅<code>sudo kextstat</code>输出）。</p>
 <p><strong>请注意</strong>，<a href="https://github.com/vit9696/Lilu" target="_blank" rel="external">Lilu</a> 也必须出现在<code>AppleALC</code>上。</p>
 <p>按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。</p>
 <p>备注：<code>AppleALC</code>不处理<code>layout-id</code>值，它希望你提供正确的DSDT(SSDT)。</p>
-<h4 id="如何控制AppleALC"><a href="#如何控制AppleALC" class="headerlink" title="如何控制AppleALC"></a>如何控制AppleALC</h4><p><code>AppleALC</code>接受不同的引导参数来控制其行为：</p>
+<h4>如何控制AppleALC</h4>
+<p><code>AppleALC</code>接受不同的引导参数来控制其行为：</p>
 <ul>
 <li><code>-alcoff</code> - 禁用自身;</li>
 <li><code>-alcdbg</code> - 打印调试信息（如果扩展在调试模式下编译）;</li>
@@ -179,12 +238,14 @@
 <li><code>-x</code>或<code>-s</code> - 也将禁用AppleALC。</li>
 <li>所有<a href="https://github.com/vit9696/Lilu" target="_blank" rel="external">Lilu</a>启动参数都会影响AppleALC。</li>
 </ul>
-<h4 id="如何提取调试日志"><a href="#如何提取调试日志" class="headerlink" title="如何提取调试日志"></a>如何提取调试日志</h4><p>在使用<code>-alcdbg -liludbg</code>引导后，在终端<code>Terminal</code>中运行以下命令并保存输出。</p>
+<h4>如何提取调试日志</h4>
+<p>在使用<code>-alcdbg -liludbg</code>引导后，在终端<code>Terminal</code>中运行以下命令并保存输出。</p>
 <p>10.12及以后版本：</p>
-<p><code>log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source</code></p>
+<p><code>log show --predicate 'process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)' --style syslog --source</code></p>
 <p>10.11及以前版本</p>
-<p><code>cat /var/log/system.log | egrep &#39;(AppleALC|Lilu)&#39;</code></p>
-<h4 id="附：AppleALC支持的编解码器列表"><a href="#附：AppleALC支持的编解码器列表" class="headerlink" title="附：AppleALC支持的编解码器列表"></a>附：AppleALC支持的编解码器列表</h4><table>
+<p><code>cat /var/log/system.log | egrep '(AppleALC|Lilu)'</code></p>
+<h4>附：AppleALC支持的编解码器列表</h4>
+<table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -841,8 +902,10 @@
 </tr>
 </tbody>
 </table>
-<h4 id="扩展阅读："><a href="#扩展阅读：" class="headerlink" title="扩展阅读："></a>扩展阅读：</h4><p><a href="https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/">Lilu支持的内核参数及插件列表</a></p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4>扩展阅读：</h4>
+<p><a href="https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/">Lilu支持的内核参数及插件列表</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/AppleALC-Supported-codecs.html#disqus_thread</comments>
