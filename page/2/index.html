@@ -440,14 +440,11 @@
       
         
           
-          黑苹果必备：Intel核显platform ID整理
-本文的由来
-
+          黑苹果必备：Intel核显platform ID整理本文的由来
 经常有网友进群问某某机型需要注入哪个platform-id才能正确地驱动显卡，每到这个时候，我都需要翻出Clover自带的gma.c查找显卡参数。于是我就想把它整理出来方便大家查询，markdown的表格排版对我来说是一种考验，但更像是一种折磨。还好还好，它没花费我太长的时间。
 
 
 sandy bridge平台
-
 
 
 显卡型号
@@ -470,7 +467,7 @@ MacBookPro8,1
 
 
 
-Intel HD 
+Intel HD Gra
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -641,8 +638,7 @@ Intel HD
       
         
           
-          Windows下使用diskpart建立EFI分区
-很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart
+          Windows下使用diskpart建立EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart
 
           
           <!--noindex-->
@@ -826,11 +822,10 @@ Intel HD
         
           
           【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像
-
 本镜像采用官方原版app制作，集成Clover 4189，支持UEFI启动安装。
 Clover默认config.plist为620/630/640/650；
 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；
-如果无法引导到安装界面，可于C
+如果无法引导到安装界面，可于Cl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1001,20 +996,14 @@ Clover默认config.plist为620/630/640/650；
       
         
           
-          Lilu插件列表[持续更新]
-本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。
+          Lilu插件列表[持续更新]本文部分翻译自 Lilu的README，一些部分基于楼主的理解写出。
 什么是 Lilu ？
-
-Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对&quot;任意&quot; 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)
+Lilu 是 vit9696 开发的一个内核扩展 (kext)，可对”任意” 内核扩展(kext)/进程(process)/运行库(framework/library)等 进行打补丁。(但其实某些比较底层的 kext 仍无法修改，如基本硬件驱动、底层重要依赖等)
 
 Lilu 目前实现的功能？
+为 kext 打补丁为 进程 打补丁    (目前仅支持 64 位)为 运行库 打补丁 (目前仅支持 64 位)提供一套统一的 API 接口
 
-为 kext 打补丁
-为 进程 打补丁    (目前仅支持 64 位)
-为 运行库 打补丁 (目前仅支持 64 位)
-提供一套统一的 API 接口
-
-如何理解 
+如何理解 “提供一套统一的 API 接口”
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1197,11 +1186,10 @@ Lilu 目前实现的功能？
         
           
           【黑果小兵】macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像
-
 本镜像采用官方原版app制作，集成Clover 4182，支持UEFI启动安装。
 Clover默认config.plist为620/630/640/650；
 【DELL 燃7000系列可直接安装使用】，配置文件为:config_Dell_7000.plist;
-其它配置文件包括七代6x0 config.plist配置文件，其中spoof的是显卡欺骗，不带spoof字样的是支持原生显卡，配置文件包括：HD520/530/540，HD550/P530,HD5000/5100
+其它配置文件包括七代6x0 config.plist配置文件，其中spoof的是显卡欺骗，不带spoof字样的是支持原生显卡，配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1372,15 +1360,12 @@ Clover默认config.plist为620/630/640/650；
       
         
           
-          如何在macOS Sierra中运行CORE Keygen破解程序
-将系统升级到macOS Sierra后很多破解程序或注册机都不能用了，尤其是CORE Keygen！ 解决方案如下：
-下载：https://pan.baidu.com/s/1skCh1A9 密码: cqgi
+          如何在macOS Sierra中运行CORE Keygen破解程序将系统升级到macOS Sierra后很多破解程序或注册机都不能用了，尤其是CORE Keygen！ 解决方案如下：下载：https://pan.baidu.com/s/1skCh1A9 密码: cqgi
 将xnp.out.zip放在CORE Keygen程序相同目录，运行：
 12chmod +x upx.out./upx.out -d ./YourApp.app/Contents/MacOS/CORE\ Keygen
 重新运行CORE Keygen！
 收工，尽情享用吧！
-QQ群:
-331686786 一起黑苹果
+QQ群:331686786 一起黑苹果
 
           
           <!--noindex-->
@@ -1552,16 +1537,11 @@ QQ群:
       
         
           
-          使用CodecCommander解决ALC1220唤醒无声
-AppleALC info.plist
-f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01
+          使用CodecCommander解决ALC1220唤醒无声AppleALC info.plistf0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01
 解决过程
-
-整理pinconfig:
-屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽
-整理出两条cc命令：
-01970724 01b70883
-编译CodecCommander，增加10ec_12
+整理pinconfig:屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽
+整理出两条cc命令： 01970724 01b70883
+编译CodecCommander，增加10ec_1220，添
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1731,18 +1711,7 @@ f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102
 
       
         
-          
-          Mac常用命令
-序言
-熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀
-&lt;!-- more --&gt;
-1. 隐藏“允许任何来源的应用”选项问题
-
-新的系统安装好后，通常你打开一个dmg文件准备安装的时候，系统会提示你不允许打开未知来源的应用，这是因为从macOS Sierra开始增强了GateKeeper的安全性，所以“允许任何来源的应用”选项被隐藏，目的在于避免除Mac AppStore和正规签名外的未知或未签名App在系统内被任意执行，从而威胁用户隐私和系统安全。但这也造成了很多不便。
-操作方法：打开终端，输入命令：
-
-1sudo
-          ...
+          <h3 id="Mac常用命令"><a href="#Mac常用命令" class="headerlink" title="Mac常用命令"></a>Mac常用命令</h3><h4 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h4><p>熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Mac-frequently-used-to-the-command---continuous-update.html#more" rel="contents">
@@ -1912,15 +1881,11 @@ f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102
       
         
           
-          不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区
-此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。
-
-我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。
-通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。
+          不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。
+我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 
 
 开始
-
-通过App Store下载macOS High Sierra Develope
+通过App Store下载macOS High Sierra Developer B
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2101,17 +2066,9 @@ f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102
 
       
         
-          
-          【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动
-
-本镜像采用官方原版app制作，集成Clover 4133，支持UEFI启动安装。
-
-&lt;!--more--&gt;
-
-Clover集成众多配置文件，系统默认config.plist支持原生I5/i7七代移动版CPU，原生支持Intel HD Graphics 620【platforms-id:59160000】；
-其它显卡配置文件可通过Clover引导界面-Options-config进行选择；
-如果无法引导到安装界面，可于Clover主界面-Options-Graphic
-          ...
+          <h4 id="【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动"><a href="#【黑果小兵】macOS-Sierra-10-12-6-16G29-with-Clover-4133原版镜像带多驱动" class="headerlink" title="【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动"></a>【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动</h4><ul>
+<li>本镜像采用官方原版app制作，集成Clover 4133，支持UEFI启动安装。</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive.html#more" rel="contents">
