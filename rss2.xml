@@ -8,8 +8,64 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Mon, 25 Sep 2017 22:33:52 GMT</pubDate>
+    <pubDate>Sat, 30 Sep 2017 13:29:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>High Sierra全新安装或者升级时禁止进行APFS转换</title>
+      <link>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html</link>
+      <guid>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html</guid>
+      <pubDate>Sat, 30 Sep 2017 07:56:29 GMT</pubDate>
+      <description>
+      
+        &lt;h3 id=&quot;指南-High-Sierra全新安装或者升级时禁止进行APFS转换&quot;&gt;&lt;a href=&quot;#指南-High-Sierra全新安装或者升级时禁止进行APFS转换&quot; class=&quot;headerlink&quot; title=&quot;[指南]High Sierra全新安装或者升级时禁止
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h3 id="指南-High-Sierra全新安装或者升级时禁止进行APFS转换"><a href="#指南-High-Sierra全新安装或者升级时禁止进行APFS转换" class="headerlink" title="[指南]High Sierra全新安装或者升级时禁止进行APFS转换"></a>[指南]High Sierra全新安装或者升级时禁止进行APFS转换</h3><blockquote>
+<p>假设安装的分区为 <code>test</code> ，挂载路径为 <code>/Volumes/test</code></p>
+</blockquote>
+<p>如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 </p>
+<p>幸运的是，这种自动转换有一些方法。 它由 <code>/macOS Install Data/minstallconfig.xml</code> 中的<code>ConvertToAPFS</code> 选项控制。 </p>
+<h4 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h4><p>升级方案比新安装程序稍微简单一些，因为我们可以运行一个命令行工具，可以使用命令行选项将 <code>ConvertToAPFS</code> 设置为 <code>false</code> 。 </p>
+<p>下载10.13安装程序后，请退出。打开终端，输入命令：</p>
+<p><code>/Applications/&quot;Install macOS High Sierra.app&quot;/Contents/Resources/startosinstall --converttoapfs NO --agreetolicense --volume /Volumes/test</code><br>系统将复制一些文件，然后重新启动，您将可以启动安装程序（无需APFS转换），方法是在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项。 </p>
+<h4 id="全新安装"><a href="#全新安装" class="headerlink" title="全新安装"></a>全新安装</h4><p>假设您已经创建了一个用于全新安装的HFS+格式的U盘，如果安装目标是SSD，安装程序仍将转换为APFS。<br>为避免这种情况，在运行安装程序(第一阶段)之后，并且在首次重新启动之后(第二阶段之前)，重新通过 <code>Clover</code> 选择进入U盘 <code>Boot OS X Install from Install macOS High Sierra</code>，打开终端，进入要安装的系统分区(假设安装分区为 <code>test</code> )：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /Volume/<span class="built_in">test</span></div><div class="line"><span class="built_in">cd</span> <span class="string">"macOS Install Data"</span></div><div class="line">vi minstallconfig.xml</div></pre></td></tr></table></figure>
+<p>将 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">true</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p>修改为：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">false</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p>输入:wq保存退出</p>
+<blockquote>
+<p>vi编辑器的用法请自行脑补或者google</p>
+</blockquote>
+<p>重启，在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项，进入第二阶段完成安装，您得到的是一个未转换成 <code>APFS</code> 的 <code>HFS+</code> 分区格式的系统。</p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>macOS 10.13安装中常见的问题及解决方法</title>
+      <link>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</link>
+      <guid>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</guid>
+      <pubDate>Thu, 28 Sep 2017 01:50:25 GMT</pubDate>
+      <description>
+      
+        &lt;h3 id=&quot;macOS-10-13安装中常见的问题及解决方法&quot;&gt;&lt;a href=&quot;#macOS-10-13安装中常见的问题及解决方法&quot; class=&quot;headerlink&quot; title=&quot;macOS 10.13安装中常见的问题及解决方法&quot;&gt;&lt;/a&gt;macOS 10.13安装中
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h3 id="macOS-10-13安装中常见的问题及解决方法"><a href="#macOS-10-13安装中常见的问题及解决方法" class="headerlink" title="macOS 10.13安装中常见的问题及解决方法"></a>macOS 10.13安装中常见的问题及解决方法</h3><h4 id="1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second"><a href="#1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second" class="headerlink" title="1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second"></a>1. 安装10.13时卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code></h4><blockquote>
+<p>此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 <code>hotpatch</code> 方式进行独显屏蔽。</p>
+</blockquote>
+<h5 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h5><p>将 <code>SSDT-Disable-DGPU.aml</code> 复制到 <code>/EFI/CLOVER/ACPI/patched</code> 目录下即可</p>
+<h5 id="下载链接：https-pan-baidu-com-s-1skRcIyL"><a href="#下载链接：https-pan-baidu-com-s-1skRcIyL" class="headerlink" title="下载链接：https://pan.baidu.com/s/1skRcIyL"></a>下载链接：<a href="https://pan.baidu.com/s/1skRcIyL" target="_blank" rel="external">https://pan.baidu.com/s/1skRcIyL</a></h5><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4>]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像</title>
@@ -103,93 +159,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CPUFriend的安装与使用</title>
-      <link>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html</link>
-      <guid>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html</guid>
-      <pubDate>Thu, 14 Sep 2017 01:38:16 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;CPUFriend安装和使用&quot;&gt;&lt;a href=&quot;#CPUFriend安装和使用&quot; class=&quot;headerlink&quot; title=&quot;CPUFriend安装和使用&quot;&gt;&lt;/a&gt;CPUFriend安装和使用&lt;/h1&gt;&lt;h4 id=&quot;系统要求&quot;&gt;&lt;a href=&quot;#系
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="CPUFriend安装和使用"><a href="#CPUFriend安装和使用" class="headerlink" title="CPUFriend安装和使用"></a>CPUFriend安装和使用</h1><h4 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h4><p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
-<h4 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h4><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
-<h4 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h4><p>执行命令如下：</p>
-<p>`./ResourceConverter.sh –kext “/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist”</p>
-<p>它会在当前目录生成<code>CPUFriendProvider.kext</code>,将<code>CPUFriendProvider.kext</code>和<a href="https://github.com/PMheart/CPUFriend/releases" target="_blank" rel="external">CPUFriend.kext</a>复制到<code>/EFI/Clover/kexts/Other</code>，重建缓存，然后重启。</p>
-<p>说明：</p>
-<blockquote>
-<p>其中的<code>/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist</code>是我自行修改的，可以通过直接调用系统提供的<code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist</code></p>
-</blockquote>
-<p><code>--kext &quot;file&quot;</code> 用”file”提供的信息创建<code>CPUFriendProvider.kext</code></p>
-<p><code>--acpi &quot;file&quot;</code> 使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
-<p>注意：</p>
-<ul>
-<li>创建的 kext/ssdt 位于当前工作目录中</li>
-<li>变量 <code>&quot;file&quot;</code> 应该是 <code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources</code> 中的一个完整的plist，具有某些修改，而不是像原始的 <code>FrequencyVectors</code> 条目</li>
-</ul>
-<h4 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h4><p><a href="https://github.com/PMheart/CPUFriend/blob/master/Instructions.md" target="_blank" rel="external">CPUFriend Installation &amp; Usage</a></p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Broadcom BCM94352z/DW1560驱动新姿势[新方法]</title>
-      <link>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</link>
-      <guid>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</guid>
-      <pubDate>Sat, 09 Sep 2017 01:35:23 GMT</pubDate>
-      <description>
-      
-        &lt;h3 id=&quot;Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot;&gt;&lt;a href=&quot;#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法&quot; class=&quot;headerlink&quot;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h3 id="Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法"><a href="#Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-驱动新姿势-新方法" class="headerlink" title="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]"></a>Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]</h3><p>引言</p>
-<blockquote>
-<ul>
-<li>昨晚<a href="https://github.com/pmheart" target="_blank" rel="external">口袋妖怪</a>进群闲聊的时候提到过 <code>她</code> 之前维护的<a href="https://github.com/PMheart/BrcmWLFixup" target="_blank" rel="external">BrcmWLFixup</a>已被 <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a> 取代。同时 <code>她</code> 发给我的<a href="https://sourceforge.net/p/airportbrcmfixup/code/HEAD/tree/trunk/AirportBrcmFixup/kern_brcmfx.cpp#l242" target="_blank" rel="external">AirportBrcmFixup/kern_brcmfx.cpp</a>源码中已经增加了包括 <code>_si_pmu_fvco_pllreg</code> / <code>Chip identificator checking patch</code> / <code>Wi-Fi 5 Ghz/Country code patch (required for 10.11)</code> / <code>Third party device patch</code> / <code>White list restriction patch</code> / <code>Failed PCIe configuration (device-id checking)</code> 等问题的修复补丁</li>
-<li>之前我写的一篇<a href="https://blog.daliansky.net/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the%20correct-drive-posture.html">教程</a>已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果</li>
-</ul>
-</blockquote>
-<h4 id="问题的提出："><a href="#问题的提出：" class="headerlink" title="问题的提出："></a>问题的提出：</h4><p>黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似<code>TeamViewer</code>或者<code>向日葵</code>之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。</p>
-<ul>
-<li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 </li>
-</ul>
-<h3 id="解决方案：同时支持10-11-10-13系统"><a href="#解决方案：同时支持10-11-10-13系统" class="headerlink" title="解决方案：同时支持10.11-10.13系统"></a>解决方案：同时支持10.11-10.13系统</h3><h4 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h4><ul>
-<li>使用应用程序<code>Clover Configurator</code></li>
-<li>在<code>Clover</code> - <code>Devices</code> - <code>FakeID</code> - <code>WIFI</code>中添加仿冒ID: <code>0x43a014e4</code></li>
-<li>在<code>Clover</code> - <code>KextsToPatch</code> 应用以下补丁，以使BCM94352z启用蓝牙：</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure>
-<ul>
-<li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h4><blockquote>
-<p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></p>
-</blockquote>
-<ol>
-<li>将文件<code>BrcmFirmwareData.kext</code>和<code>BrcmPatchRAM2.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
-<li>将文件<code>FakePCIID_Broadcom_WiFi.kext</code>和<code>FakePCIID.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
-<li>将文件<code>AirportBrcmFixup.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下,由于<code>AirportBrcmFixup.kext</code>是依赖于<a href="https://github.com/vit9696/Lilu/releases" target="_blank" rel="external">Lilu</a>运行的插件，所以还需要检查该目录下必须存在<code>Lilu.kext</code></li>
-<li>包括这些文件的目录看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png" alt="brcm94352z驱动"></li>
-</ol>
-<p>当然，在重启前，还要重建一下系统的缓存，命令为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
-<p>重启你的系统，检查WIFI/蓝牙是否工作正常。</p>
-<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#disqus_thread</comments>
     </item>
     
   </channel>
