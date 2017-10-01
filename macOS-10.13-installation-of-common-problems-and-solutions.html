@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="10.13,High Sierra,安装,常见问题," />
+  <meta name="keywords" content="10.13,High Sierra,EDID,安装,常见问题,屏蔽独显,花屏,黑屏," />
 
 
 
@@ -97,17 +97,19 @@
 
 
 <meta name="description" content="macOS 10.13安装中常见的问题及解决方法1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 方式进行独显屏蔽。  使用方法：将 SSDT-Disable-DGPU.aml 复制到 /EFI/C">
-<meta name="keywords" content="10.13,High Sierra,安装,常见问题">
+<meta name="keywords" content="10.13,High Sierra,EDID,安装,常见问题,屏蔽独显,花屏,黑屏">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS 10.13安装中常见的问题及解决方法">
 <meta property="og:url" content="http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="macOS 10.13安装中常见的问题及解决方法1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 方式进行独显屏蔽。  使用方法：将 SSDT-Disable-DGPU.aml 复制到 /EFI/C">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-28T02:47:37.000Z">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/EDID注入.png">
+<meta property="og:updated_time" content="2017-10-01T07:16:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS 10.13安装中常见的问题及解决方法">
 <meta name="twitter:description" content="macOS 10.13安装中常见的问题及解决方法1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 方式进行独显屏蔽。  使用方法：将 SSDT-Disable-DGPU.aml 复制到 /EFI/C">
+<meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/EDID注入.png">
 
 
 
@@ -369,8 +371,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-28T10:47:37+08:00">
-                2017-09-28
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-01T15:16:39+08:00">
+                2017-10-01
               </time>
             
           </span>
@@ -440,7 +442,19 @@
 <p>此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 <code>hotpatch</code> 方式进行独显屏蔽。</p>
 </blockquote>
 <h5 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h5><p>将 <code>SSDT-Disable-DGPU.aml</code> 复制到 <code>/EFI/CLOVER/ACPI/patched</code> 目录下即可</p>
-<h5 id="下载链接：https-pan-baidu-com-s-1skRcIyL"><a href="#下载链接：https-pan-baidu-com-s-1skRcIyL" class="headerlink" title="下载链接：https://pan.baidu.com/s/1skRcIyL"></a>下载链接：<a href="https://pan.baidu.com/s/1skRcIyL" target="_blank" rel="external">https://pan.baidu.com/s/1skRcIyL</a></h5><h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4>
+<h5 id="下载链接：https-pan-baidu-com-s-1skRcIyL"><a href="#下载链接：https-pan-baidu-com-s-1skRcIyL" class="headerlink" title="下载链接：https://pan.baidu.com/s/1skRcIyL"></a>下载链接：<a href="https://pan.baidu.com/s/1skRcIyL" target="_blank" rel="external">https://pan.baidu.com/s/1skRcIyL</a></h5><h4 id="2-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题"><a href="#2-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题" class="headerlink" title="2. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题"></a>2. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题</h4><blockquote>
+<p>经常有网友需要解决笔记本显示器内屏黑屏问题，尤其新发布的10.13的系统会出现睡眠唤醒后屏幕花屏问题。</p>
+</blockquote>
+<p>目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。<br>其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。</p>
+<h4 id="最简单的命令是："><a href="#最简单的命令是：" class="headerlink" title="最简单的命令是："></a>最简单的命令是：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">% ioreg -l | grep <span class="string">"IODisplayEDID"</span></div></pre></td></tr></table></figure>
+<h5 id="显示信息如下："><a href="#显示信息如下：" class="headerlink" title="显示信息如下："></a>显示信息如下：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"IODisplayEDID"</span> = <span class="xml"><span class="tag">&lt;<span class="name">00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<h5 id="接着输入下面的两条命令："><a href="#接着输入下面的两条命令：" class="headerlink" title="接着输入下面的两条命令："></a>接着输入下面的两条命令：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">% ioreg -l | grep <span class="string">"DisplayVendorID"</span>  </div><div class="line">    <span class="string">"DisplayVendorID"</span> = 3502</div><div class="line">% ioreg -l | grep <span class="string">"DisplayProductID"</span>  </div><div class="line">    <span class="string">"DisplayProductID"</span> = 5600</div></pre></td></tr></table></figure>
+<p>其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover的 <code>config.plist</code> 中，顺便将 <code>VendorID</code> 和 <code>ProductID</code> 填入相应的位置，然后保存重启你的电脑。<br><img src="http://ous2s14vo.bkt.clouddn.com/EDID注入.png" alt="EDID注入"></p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><blockquote>
+<p>本文会不定期更新<br>最后更新：10-1-2017</p>
+</blockquote>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+
       
     </div>
     
@@ -490,9 +504,17 @@
           
             <a href="/tags/High-Sierra/" rel="tag"># High Sierra</a>
           
+            <a href="/tags/EDID/" rel="tag"># EDID</a>
+          
             <a href="/tags/安装/" rel="tag"># 安装</a>
           
             <a href="/tags/常见问题/" rel="tag"># 常见问题</a>
+          
+            <a href="/tags/屏蔽独显/" rel="tag"># 屏蔽独显</a>
+          
+            <a href="/tags/花屏/" rel="tag"># 花屏</a>
+          
+            <a href="/tags/黑屏/" rel="tag"># 黑屏</a>
           
         </div>
       
@@ -618,7 +640,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">77</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -684,7 +706,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#macOS-10-13安装中常见的问题及解决方法"><span class="nav-number">1.</span> <span class="nav-text">macOS 10.13安装中常见的问题及解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用方法："><span class="nav-number">1.1.1.</span> <span class="nav-text">使用方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载链接：https-pan-baidu-com-s-1skRcIyL"><span class="nav-number">1.1.2.</span> <span class="nav-text">下载链接：https://pan.baidu.com/s/1skRcIyL</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2"><span class="nav-number">1.2.</span> <span class="nav-text">2.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#macOS-10-13安装中常见的问题及解决方法"><span class="nav-number">1.</span> <span class="nav-text">macOS 10.13安装中常见的问题及解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用方法："><span class="nav-number">1.1.1.</span> <span class="nav-text">使用方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载链接：https-pan-baidu-com-s-1skRcIyL"><span class="nav-number">1.1.2.</span> <span class="nav-text">下载链接：https://pan.baidu.com/s/1skRcIyL</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题"><span class="nav-number">1.2.</span> <span class="nav-text">2. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最简单的命令是："><span class="nav-number">1.3.</span> <span class="nav-text">最简单的命令是：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#显示信息如下："><span class="nav-number">1.3.1.</span> <span class="nav-text">显示信息如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#接着输入下面的两条命令："><span class="nav-number">1.3.2.</span> <span class="nav-text">接着输入下面的两条命令：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写在最后"><span class="nav-number">2.</span> <span class="nav-text">写在最后</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#QQ群"><span class="nav-number">2.1.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></div>
             
 
           </div>
