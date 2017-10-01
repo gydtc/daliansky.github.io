@@ -323,6 +323,9 @@
         <tag>diskutil</tag>
         <tag>trimforce</tag>
         <tag>ioreg</tag>
+        <tag>EDID</tag>
+        <tag>APFS</tag>
+        <tag>HFS+</tag>
       </tags>
   </entry>
   <entry>
