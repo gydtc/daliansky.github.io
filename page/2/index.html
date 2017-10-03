@@ -1080,7 +1080,7 @@ Intel HD Gra
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Under-Windows-using-DISKPART-to-create-EFI-points.html" itemprop="url">Windows下使用diskpart建立EFI分区</a></h1>
+                <a class="post-title-link" href="/Under-Windows-using-DISKPART-to-create-EFI-points.html" itemprop="url">Windows下使用diskpart建立EFI分区及挂载EFI分区</a></h1>
         
 
         <div class="post-meta">
@@ -1108,8 +1108,8 @@ Intel HD Gra
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T09:03:21+08:00">
-                2017-09-14
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-04T07:41:30+08:00">
+                2017-10-04
               </time>
             
           </span>
@@ -1144,7 +1144,7 @@ Intel HD Gra
 
           
           
-             <span id="/Under-Windows-using-DISKPART-to-create-EFI-points.html" class="leancloud_visitors" data-flag-title="Windows下使用diskpart建立EFI分区">
+             <span id="/Under-Windows-using-DISKPART-to-create-EFI-points.html" class="leancloud_visitors" data-flag-title="Windows下使用diskpart建立EFI分区及挂载EFI分区">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1177,9 +1177,13 @@ Intel HD Gra
       
         
           
-          Windows下使用diskpart建立EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart
+          Windows下使用diskpart建立EFI分区及挂载EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart
+创建EFI分区
+以下操作假设磁盘未分区没有其它数据
 
-          
+1234diskpartlist disk       # 磁盘列表select disk n   # 选择需要制作EFI分区的磁盘，n为磁盘号create partition efi size=300   # efi分区大小为300Mb
+挂载EFI分区123456diskpartlist di
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Under-Windows-using-DISKPART-to-create-EFI-points.html#more" rel="contents">
