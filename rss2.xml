@@ -8,8 +8,40 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sat, 30 Sep 2017 13:29:24 GMT</pubDate>
+    <pubDate>Fri, 06 Oct 2017 07:05:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>【黑果小兵】macOS High Sierra 10.13正式版更新(17A405) with Clover 4238原版镜像</title>
+      <link>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-(17A405)-with-Clover-4238-original-mirror.html</link>
+      <guid>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-(17A405)-with-Clover-4238-original-mirror.html</guid>
+      <pubDate>Fri, 06 Oct 2017 06:46:10 GMT</pubDate>
+      <description>
+      
+        &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像&quot; class=&quot;heade
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像"></a>【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像</h3><ul>
+<li>本镜像采用官方原版app制作，集成Clover 4238，支持UEFI启动安装。</li>
+<li>Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理</li>
+<li>Clover默认config.plist为620/630/640/650；</li>
+<li>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
+<li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
+<li>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡，支持Intel网卡；</li>
+<li>已更新Lilu(1.2.0)、AppleALC(1.2.0)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
+<li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
+<li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
+</ul>
+<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/10.13(17A405" alt="10.13-17A405-">.png)<br><img src="http://ous2s14vo.bkt.clouddn.com/Drivers64UEFI.png" alt="Drivers64UEFI"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover.png" alt="Clover"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover Main Menu.png" alt="Clover Main Menu"><br><img src="http://ous2s14vo.bkt.clouddn.com/About Clover.png" alt="About Clover"></p>
+<h4 id="下载链接-百度云上传中"><a href="#下载链接-百度云上传中" class="headerlink" title="下载链接: 百度云上传中"></a>下载链接: 百度云上传中</h4><ul>
+<li>MD5 (macOS High Sierra 10.13(17A405) Installer with Clover 4238.dmg) = 7a6894bad093285ffe6801c55f1a032c</li>
+</ul>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-(17A405)-with-Clover-4238-original-mirror.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>High Sierra全新安装或者升级时禁止进行APFS转换</title>
@@ -152,39 +184,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像</title>
-      <link>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html</link>
-      <guid>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html</guid>
-      <pubDate>Fri, 15 Sep 2017 09:51:24 GMT</pubDate>
-      <description>
-      
-        &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13GM-17A362a-with-Clover-4207原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像"></a>【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像</h3><ul>
-<li>本镜像采用官方原版app制作，集成Clover 4207，支持UEFI启动安装。</li>
-<li>Clover默认config.plist为620/630/640/650；</li>
-<li>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
-<li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
-<li>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡；</li>
-<li>已加入Lilu、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
-<li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
-<li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
-</ul>
-<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/17A362a_GM.png" alt="17A362a_GM"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/Clover Configurator.png" alt="Clover Configurator"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/Other Drivers.png" alt="Other Drivers"></p>
-<h4 id="下载链接-https-pan-baidu-com-s-1pLNY8HX"><a href="#下载链接-https-pan-baidu-com-s-1pLNY8HX" class="headerlink" title="下载链接: https://pan.baidu.com/s/1pLNY8HX"></a>下载链接: <a href="https://pan.baidu.com/s/1pLNY8HX" target="_blank" rel="external">https://pan.baidu.com/s/1pLNY8HX</a></h4><ul>
-<li>MD5 (macOS High Sierra 10.13GM 17A362a with Clover 4207.dmg) = 6d1ddfad2882f665bd0a11c5b291cb06</li>
-</ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html#disqus_thread</comments>
     </item>
     
   </channel>
