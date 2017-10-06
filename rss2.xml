@@ -8,8 +8,33 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 06 Oct 2017 10:53:11 GMT</pubDate>
+    <pubDate>Fri, 06 Oct 2017 14:24:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>MacOS多系统下蓝牙设备的自动连接</title>
+      <link>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html</link>
+      <guid>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html</guid>
+      <pubDate>Fri, 06 Oct 2017 13:52:35 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;a href=&quot;#MacOS多系统下蓝牙设备的自动连接&quot; class=&quot;headerlink&quot; title=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;/a&gt;MacOS多系统下蓝牙设备的自动连接&lt;/h2&gt;&lt;blockquo
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="MacOS多系统下蓝牙设备的自动连接"><a href="#MacOS多系统下蓝牙设备的自动连接" class="headerlink" title="MacOS多系统下蓝牙设备的自动连接"></a>MacOS多系统下蓝牙设备的自动连接</h2><blockquote>
+<p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。<br>我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。<br>我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
+</blockquote>
+<h3 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h3><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure>
+<p>复制文件[10.13到10.13]：<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
+<p>复制文件[10.13到10.12]<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
+<p>这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。</p>
+<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>【黑果小兵】macOS High Sierra 10.13正式版更新(17A405) with Clover 4238原版镜像</title>
@@ -158,32 +183,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-and-Clover-4221-original-image.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>小米笔记本Pro安装10.13随手记及EFI分享</title>
-      <link>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html</link>
-      <guid>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html</guid>
-      <pubDate>Sat, 23 Sep 2017 03:12:16 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;小米笔记本Pro安装10-13随手记&quot;&gt;&lt;a href=&quot;#小米笔记本Pro安装10-13随手记&quot; class=&quot;headerlink&quot; title=&quot;小米笔记本Pro安装10.13随手记&quot;&gt;&lt;/a&gt;小米笔记本Pro安装10.13随手记&lt;/h1&gt;&lt;blockquo
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="小米笔记本Pro安装10-13随手记"><a href="#小米笔记本Pro安装10-13随手记" class="headerlink" title="小米笔记本Pro安装10.13随手记"></a>小米笔记本Pro安装10.13随手记</h1><blockquote>
-<p>帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器</p>
-</blockquote>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png" alt="屏幕快照 2017-09-22 下午6.22.58"></p>
-<h3 id="安装中遇到的几个难点："><a href="#安装中遇到的几个难点：" class="headerlink" title="安装中遇到的几个难点："></a>安装中遇到的几个难点：</h3><h4 id="无法进入安装界面，需要屏蔽独显"><a href="#无法进入安装界面，需要屏蔽独显" class="headerlink" title="无法进入安装界面，需要屏蔽独显"></a>无法进入安装界面，需要屏蔽独显</h4><p>卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。</p>
-<h4 id="Clover无法识别苹果分区卷标"><a href="#Clover无法识别苹果分区卷标" class="headerlink" title="Clover无法识别苹果分区卷标"></a>Clover无法识别苹果分区卷标</h4><p>显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】<br>要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。<br>重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。</p>
-<h4 id="安装驱动程序"><a href="#安装驱动程序" class="headerlink" title="安装驱动程序"></a>安装驱动程序</h4><p>进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！<br>于是乎，找出USB的无线网卡，安装驱动，联网成功；<br>显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡；<br>声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。</p>
-<h3 id="one-more-thing-触控板无法驱动，指纹无法识别"><a href="#one-more-thing-触控板无法驱动，指纹无法识别" class="headerlink" title="one more thing:触控板无法驱动，指纹无法识别"></a>one more thing:触控板无法驱动，指纹无法识别</h3><p>收工喽！！！<br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png" alt="屏幕快照 2017-09-22 下午6.20.24"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png" alt="屏幕快照 2017-09-22 下午6.20.50"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png" alt="屏幕快照 2017-09-22 下午6.20.46"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png" alt="屏幕快照 2017-09-22 下午6.16.57"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png" alt="屏幕快照 2017-09-22 下午6.21.07"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png" alt="屏幕快照 2017-09-22 下午6.21.16"></p>
-<h4 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h4><p>EFI下载链接: <a href="https://pan.baidu.com/s/1skZkcR7" target="_blank" rel="external">https://pan.baidu.com/s/1skZkcR7</a> 密码: tw63</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html#disqus_thread</comments>
     </item>
     
   </channel>
