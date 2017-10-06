@@ -111,11 +111,11 @@
       <pubDate>Thu, 28 Sep 2017 01:50:25 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;macOS-10-13安装中常见的问题及解决方法&quot;&gt;&lt;a href=&quot;#macOS-10-13安装中常见的问题及解决方法&quot; class=&quot;headerlink&quot; title=&quot;macOS 10.13安装中常见的问题及解决方法&quot;&gt;&lt;/a&gt;macOS 10.13安装中
+        &lt;h2 id=&quot;1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second&quot;&gt;&lt;a href=&quot;#1-安装10-13时卡在Service-only-ran-for-0-seconds-Pu
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="macOS-10-13安装中常见的问题及解决方法"><a href="#macOS-10-13安装中常见的问题及解决方法" class="headerlink" title="macOS 10.13安装中常见的问题及解决方法"></a>macOS 10.13安装中常见的问题及解决方法</h1><h2 id="1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second"><a href="#1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second" class="headerlink" title="1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second"></a>1. 安装10.13时卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code></h2><blockquote>
+      <content:encoded><![CDATA[<h2 id="1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second"><a href="#1-安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second" class="headerlink" title="1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second"></a>1. 安装10.13时卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code></h2><blockquote>
 <p>此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 <code>hotpatch</code> 方式进行独显屏蔽。</p>
 </blockquote>
 <h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><p>将 <code>SSDT-Disable-DGPU.aml</code> 复制到 <code>/EFI/CLOVER/ACPI/patched</code> 目录下即可</p>
