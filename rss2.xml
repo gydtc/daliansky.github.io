@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sat, 07 Oct 2017 16:04:48 GMT</pubDate>
+    <pubDate>Sat, 07 Oct 2017 16:06:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -33,9 +33,9 @@
 <p>其中：</p>
 <ul>
 <li><code>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</code> 是EFI系统分区(ESP)的标志</li>
-<li><code>index</code> 是指磁盘分区，这里的数值是1，也就是说是设备 <code>disk0</code> 的第一个分区</li>
-<li><code>start</code> 是指开始的扇区，这里的数值是: 2048</li>
-<li><code>size</code>  是指扇区的偏移量，这里的数值是: 614400</li>
+<li><code>index</code> 是指磁盘分区，这里的数值是 <code>1</code> ，也就是说是设备 <code>disk0</code> 的第一个分区</li>
+<li><code>start</code> 是指开始的扇区，这里的数值是: <code>2048</code></li>
+<li><code>size</code>  是指扇区的偏移量，这里的数值是: <code>614400</code></li>
 </ul>
 <h3 id="删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令："><a href="#删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：" class="headerlink" title="删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令："></a>删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：</h3><ul>
 <li><strong>确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。</strong></li>
