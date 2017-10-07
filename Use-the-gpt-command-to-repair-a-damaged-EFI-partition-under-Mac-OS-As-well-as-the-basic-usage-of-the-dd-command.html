@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="gpt,MacOS,EFI,Fix,修复," />
 
 
 
@@ -96,16 +96,18 @@
 
 
 
-<meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
-<meta property="og:type" content="website">
-<meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/tags/EFI/index.html">
+<meta name="description" content="今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。  命令及用法 显示gpt分区   123456789101112131415161718192021222324  sudo gpt -r show disk0       start        size  index  contents         0">
+<meta name="keywords" content="gpt,MacOS,EFI,Fix,修复">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法">
+<meta property="og:url" content="http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta property="og:description" content="今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。  命令及用法 显示gpt分区   123456789101112131415161718192021222324  sudo gpt -r show disk0       start        size  index  contents         0">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-07T15:50:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑果小兵的部落阁">
-<meta name="twitter:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta name="twitter:title" content="MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法">
+<meta name="twitter:description" content="今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。  命令及用法 显示gpt分区   123456789101112131415161718192021222324  sudo gpt -r show disk0       start        size  index  contents         0">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/tags/EFI/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html"/>
 
 
 
 
 
-  <title>标签: EFI | 黑果小兵的部落阁</title>
+  <title>MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法 | 黑果小兵的部落阁</title>
   <style>
   .forkme{
  display: none;
@@ -159,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
     <a href="https://github.com/daliansky"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
@@ -308,110 +310,268 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>EFI<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DalianSky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑果小兵的部落阁">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html" itemprop="url">
-              
-                <span itemprop="name">MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-07T22:39:16+08:00"
-              content="2017-10-07" >
-          10-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-07T22:39:16+08:00">
+                2017-10-07
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-07T23:50:13+08:00">
+                2017-10-07
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html" class="leancloud_visitors" data-flag-title="MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html" itemprop="url">
-              
-                <span itemprop="name">小米笔记本Pro安装10.13随手记及EFI分享</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-23T11:12:16+08:00"
-              content="2017-09-23" >
-          09-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Under-Windows-using-DISKPART-to-create-EFI-points.html" itemprop="url">
-              
-                <span itemprop="name">Windows下使用diskpart建立EFI分区及挂载EFI分区</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-29T16:04:22+08:00"
-              content="2017-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <blockquote>
+<p>今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。</p>
+</blockquote>
+<h2 id="命令及用法"><a href="#命令及用法" class="headerlink" title="命令及用法"></a>命令及用法</h2><ul>
+<li><p>显示gpt分区</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">  sudo gpt -r show disk0</div><div class="line">  </div><div class="line">     start        size  index  contents</div><div class="line">         0           1         PMBR</div><div class="line">         1           1         Pri GPT header</div><div class="line">         2          32         Pri GPT table</div><div class="line">        34        2014         </div><div class="line">      2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</div><div class="line">    616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</div><div class="line">   1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line"> 158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 190722048      262144         </div><div class="line"> 190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</div><div class="line"> 387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 788038368      262144         </div><div class="line"> 788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</div><div class="line"> 789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line"> 920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line"> 939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">1000215176           7         </div><div class="line">1000215183          32         Sec GPT table</div><div class="line">1000215215           1         Sec GPT header</div></pre></td></tr></table></figure>
+<p>  其中：</p>
+<ul>
+<li><code>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</code>是EFI系统分区(ESP)的标志</li>
+<li><code>index</code> 是指磁盘分区，这里的数值是1，也就是说是设备 <code>disk0</code> 的第一个分区</li>
+<li><code>start</code> 是指开始的扇区，这里的数值是: 2048</li>
+<li><code>size</code>  是指扇区的偏移量，这里的数值是：614400</li>
+</ul>
+</li>
+<li><p>删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：</p>
+<ul>
+<li><strong>确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。</strong></li>
+<li>您无法使用 <code>gpt</code> 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 </li>
+<li><p>您可能需要使用 <code>diskutil unmountDisk disk0</code> 卸载任何自动安装的卷，然后再继续执行下面的操作。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt remove -i 1 disk0</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。</strong></p>
+</li>
+<li>而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引1.</li>
+</ul>
+</li>
+<li>重新添加分区与正确的布局和类型：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure>
+<p>执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初</p>
+<ul>
+<li>EFI分区备份到文件，命令如下：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
+<ul>
+<li>从备份文件恢复到ESP分区，命令如下：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/gpt/" rel="tag"># gpt</a>
+          
+            <a href="/tags/MacOS/" rel="tag"># MacOS</a>
+          
+            <a href="/tags/EFI/" rel="tag"># EFI</a>
+          
+            <a href="/tags/Fix/" rel="tag"># Fix</a>
+          
+            <a href="/tags/修复/" rel="tag"># 修复</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/MacOS-multi-system-Bluetooth-device-automatically-connected.html" rel="next" title="MacOS多系统下蓝牙设备的自动连接">
+                <i class="fa fa-chevron-left"></i> MacOS多系统下蓝牙设备的自动连接
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -419,6 +579,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDcyOS83Mjgy"></div>
+    
+  </div>
+
 
         </div>
         
@@ -439,8 +605,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -533,6 +708,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令及用法"><span class="nav-number">1.</span> <span class="nav-text">命令及用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后"><span class="nav-number">2.</span> <span class="nav-text">写在最后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -668,10 +859,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -700,6 +891,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
