@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MacOS系统下使用gpt命令修复损坏的EFI分区]]></title>
+    <url>%2FUse-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS.html</url>
+    <content type="text"><![CDATA[今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。 命令及用法 显示gpt分区 123456789101112131415161718192021222324 sudo gpt -r show disk0 start size index contents 0 1 PMBR 1 1 Pri GPT header 2 32 Pri GPT table 34 2014 2048 614400 1 GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B 616448 409600 2 GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE 1026048 157696000 3 GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7 158722048 32000000 4 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 190722048 262144 190984192 196116728 5 GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC 387100920 400937448 6 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 788038368 262144 788300512 1280000 7 GPT part - 5361644D-6163-11AA-AA11-00306543ECAC 789580512 129175576 8 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 918756088 1269536 9 GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC 920025624 19594968 10 GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7 939620592 59325048 11 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 998945640 1269536 12 GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC1000215176 7 1000215183 32 Sec GPT table1000215215 1 Sec GPT header 其中： C12A7328-F81F-11D2-BA4B-00A0C93EC93B是EFI系统分区(ESP)的标志 index 是指磁盘分区，这里的数值是1，也就是说是设备 disk0 的第一个分区 start 是指开始的扇区，这里的数值是: 2048 size 是指扇区的偏移量，这里的数值是：614400 删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令： 确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。 您无法使用 gpt 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 您可能需要使用 diskutil unmountDisk disk0 卸载任何自动安装的卷，然后再继续执行下面的操作。 1sudo gpt remove -i 1 disk0 确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。 而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引1. 重新添加分区与正确的布局和类型： 1sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3 执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。 写在最后其实在做修复之前，也可以使用 dd 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 玩坏 后可以恢复如初 EFI分区备份到文件，命令如下： 1sudo dd if=/dev/rdisk0s1 of=~/Desktop/ESP.img # 将EFI分区备份到用户目录-桌面，文件名为：ESP.img 从备份文件恢复到ESP分区，命令如下： 1sudo dd if=~/Desktop/ESP.img of=/dev/rdisk0s1 # 将备份文件ESP.img恢复到EFI分区 QQ群:331686786 一起黑苹果]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>gpt</tag>
+        <tag>MacOS</tag>
+        <tag>EFI</tag>
+        <tag>Fix</tag>
+        <tag>修复</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MacOS多系统下蓝牙设备的自动连接]]></title>
     <url>%2FMacOS-multi-system-Bluetooth-device-automatically-connected.html</url>
     <content type="text"><![CDATA[MacOS多系统下蓝牙设备的自动连接 因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对 操作方法：经爬帖发现蓝牙设备的配对连接信息文件位于 /private/var/root/Library/Preferences/bluetoothaudiod.plist将该文件复制到另外的MacOS系统，使用命令如下： 1sudo -s # 切换到root用户 复制文件[10.13到10.13]：cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences 复制文件[10.13到10.12]cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist 这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。 QQ群:331686786 一起黑苹果]]></content>
@@ -270,10 +285,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
-        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
@@ -367,7 +382,7 @@
   </entry>
   <entry>
     <title><![CDATA[不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区]]></title>
-    <url>%2FDo-not-need-to-make-installation-disk!-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html</url>
+    <url>%2FDo-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html</url>
     <content type="text"><![CDATA[不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区此方法不支持APFS分区。 只有HFS分区才能通过此安装High Sierra。 而且，您还需要一个GUID分区表来安装它。 我无法通过我的安装USB启动macOS High Sierra安装程序。 尝试了很多方法，但没有一个实际上使其启动，所以我发现一种新的方式通过我现在使用的实际引导的macOS在HFS日志分区上安装macOS High Sierra成功。通过这种方式，您不需要创建可引导的U盘，甚至不需要重新启动。 开始 通过App Store下载macOS High Sierra Developer Beta / Public Beta安装程序。 在要使用磁盘实用程序安装测试版的驱动器上创建HFS日志分区（名称不能包含空格）。 打开应用程序目录，右键单击macOS Beta安装程序，然后单击显示包内容。 转到Contents&gt;Shared Support，然后双击InstallESD.dmg和BaseSystem.dmg挂载它们。 打开安装的InstallESD.dmg，打开Packages文件夹，然后打开OSInstall.mpkg文件。 这将打开macOS安装程序。 是的，现在您可以从启动的MacOS系统桌面安装High Sierra Beta。 选择您创建的分区以安装它[备注：如果无法安装请执行：diskutil umount HighSierra diskutil mount HighSierra HighSierra是指卷名]；安装完成后，按照步骤5。 打开已安装的BaseSystem.dmg并将boot.efi从/System/Library/CoreServices复制到同一位置的High Sierra分区（/System/Library/CoreServices） 虽然安装了HS测试版，但它尚不可启动。 要使其可引导，请打开终端并键入以下命令：[假设安装分区为：HighSierra] 命令1：1sudo bless --folder "/Volumes/HighSierra/System/Library/CoreServices" 命令2：1sudo bless --mount "/Volumes/HighSierra" --setBoot 命令3：检查分区是否可引导。 为此，键入以下命令：1bless --info /Volumes/HighSierra 输出类似结果：Siddharths-MacBook-Pro:~ siddharth$ bless --info /Volumes/HighSierra finderinfo[0]: 564434 =&gt; Blessed System Folder is /Volumes/HighSierra/System/Library/CoreServices finderinfo[1]: 838066 =&gt; Blessed System File is /Volumes/HighSierra/System/Library/CoreServices/boot.efi finderinfo[2]: 0 =&gt; Open-folder linked list empty finderinfo[3]: 0 =&gt; No alternate OS blessed file/folder finderinfo[4]: 0 =&gt; Unused field unset finderinfo[5]: 564434 =&gt; OS X blessed folder is /Volumes/HighSierra/System/Library/CoreServices 64-bit VSDB volume id: 0x9E0F1563A37473E4 收工QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>

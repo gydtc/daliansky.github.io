@@ -8,8 +8,67 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 06 Oct 2017 14:24:41 GMT</pubDate>
+    <pubDate>Sat, 07 Oct 2017 15:48:13 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>MacOS系统下使用gpt命令修复损坏的EFI分区</title>
+      <link>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS.html</link>
+      <guid>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS.html</guid>
+      <pubDate>Sat, 07 Oct 2017 14:39:16 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;命令及用法&quot;&gt;&lt;a href=&quot;#命令及用法&quot; class=&quot;headerl
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote>
+<p>今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。</p>
+</blockquote>
+<h2 id="命令及用法"><a href="#命令及用法" class="headerlink" title="命令及用法"></a>命令及用法</h2><ul>
+<li><p>显示gpt分区</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">  sudo gpt -r show disk0</div><div class="line">  </div><div class="line">     start        size  index  contents</div><div class="line">         0           1         PMBR</div><div class="line">         1           1         Pri GPT header</div><div class="line">         2          32         Pri GPT table</div><div class="line">        34        2014         </div><div class="line">      2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</div><div class="line">    616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</div><div class="line">   1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line"> 158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 190722048      262144         </div><div class="line"> 190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</div><div class="line"> 387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 788038368      262144         </div><div class="line"> 788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</div><div class="line"> 789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line"> 920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line"> 939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line"> 998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">1000215176           7         </div><div class="line">1000215183          32         Sec GPT table</div><div class="line">1000215215           1         Sec GPT header</div></pre></td></tr></table></figure>
+<p>  其中：</p>
+<ul>
+<li><code>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</code>是EFI系统分区(ESP)的标志</li>
+<li><code>index</code> 是指磁盘分区，这里的数值是1，也就是说是设备 <code>disk0</code> 的第一个分区</li>
+<li><code>start</code> 是指开始的扇区，这里的数值是: 2048</li>
+<li><code>size</code>  是指扇区的偏移量，这里的数值是：614400</li>
+</ul>
+</li>
+<li><p>删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：</p>
+<ul>
+<li><strong>确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。</strong></li>
+<li>您无法使用 <code>gpt</code> 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 </li>
+<li><p>您可能需要使用 <code>diskutil unmountDisk disk0</code> 卸载任何自动安装的卷，然后再继续执行下面的操作。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt remove -i 1 disk0</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。</strong></p>
+</li>
+<li>而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引1.</li>
+</ul>
+</li>
+<li>重新添加分区与正确的布局和类型：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure>
+<p>执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初</p>
+<ul>
+<li>EFI分区备份到文件，命令如下：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
+<ul>
+<li>从备份文件恢复到ESP分区，命令如下：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>MacOS多系统下蓝牙设备的自动连接</title>
@@ -148,41 +207,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像</title>
-      <link>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-and-Clover-4221-original-image.html</link>
-      <guid>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-and-Clover-4221-original-image.html</guid>
-      <pubDate>Mon, 25 Sep 2017 02:56:19 GMT</pubDate>
-      <description>
-      
-        &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像&quot; class=&quot;heade
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像"></a>【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像</h3><ul>
-<li>本镜像采用官方原版app制作，集成Clover 4221，支持UEFI启动安装。</li>
-<li>Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理</li>
-<li>Clover默认config.plist为620/630/640/650；</li>
-<li>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
-<li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
-<li>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡，支持Intel网卡；</li>
-<li>已更新Lilu(1.2.0)、AppleALC(1.2.0)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
-<li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
-<li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
-</ul>
-<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/Screen Shot 2017-09-26 at 3.55.30 AM.png" alt="Screen Shot 2017-09-26 at 3.55.30 AM"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-26 上午6.01.52.png" alt="屏幕快照 2017-09-26 上午6.01.52"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-26 上午6.03.09.png" alt="屏幕快照 2017-09-26 上午6.03.09"></p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/screenshot17.png" alt="screenshot17"></p>
-<h4 id="下载链接-http-pan-baidu-com-s-1dFCOnML"><a href="#下载链接-http-pan-baidu-com-s-1dFCOnML" class="headerlink" title="下载链接: http://pan.baidu.com/s/1dFCOnML"></a>下载链接: <a href="http://pan.baidu.com/s/1dFCOnML" target="_blank" rel="external">http://pan.baidu.com/s/1dFCOnML</a></h4><ul>
-<li>MD5 (macOS High Sierra 10.13 Installer with Clover 4221.dmg) = 524fc80704b693ad6191a9191436cb5c</li>
-</ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-and-Clover-4221-original-image.html#disqus_thread</comments>
     </item>
     
   </channel>
