@@ -1,11 +1,11 @@
 ---
 title: 使用CodecCommander解决ALC1220唤醒无声
+urlname: Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr
 date: 2017-08-18 22:56:17
 updated: 2017-08-28 11:08:02
 categories:
 - 驱动
 tags:
-- ALC
 - AppleALC
 - CC
 - CodecCommander
@@ -44,7 +44,7 @@ Custom Commands
 | Perform Reset | Boolean | YES |
 | ------- | ------- | ------- |
 ||||
-更多`hda-verb`的用法请前往[https://blog.daliansky.net/2017/09/04/hda-verb参数详表/](https://blog.daliansky.net/2017/09/04/hda-verb参数详表/)
+更多`hda-verb`的用法请前往[hda-verb参数详表](https://blog.daliansky.net/hda-verb-parameter-detail-table.html)
 
 ##### 收工
 

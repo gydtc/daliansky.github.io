@@ -1,9 +1,14 @@
 ---
 title: hda-verb参数详表
+urlname: hda-verb-parameter-detail-table
 date: 2017-09-04 22:16:02
 tags:
 - codec
 - hda-verb
+- AppleALC
+- CodecCommander
+- CC
+- ALCPlugFix
 categories:
 - linux
 - 工具

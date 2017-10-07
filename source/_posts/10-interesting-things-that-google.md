@@ -1,5 +1,6 @@
 ---
 title: 10个 Google 有意思的事情
+urlname: 10-interesting-things-that-google
 tags:
   - google
 id: 541

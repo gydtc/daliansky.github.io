@@ -1,19 +1,22 @@
 ---
-title: Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势
+title: Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]
+urlname: Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the correct-drive-posture
 date: 2017-09-07 16:18:13
 tags:
 - DW1560
 - BCM94352z
 - 10.12
 - 10.13
-- sierra
-- high sierra
+- Sierra
+- High Sierra
 - 驱动
 - WIFI
+- 蓝牙
+- BlueTooth
 categories:
 - 教程
 ---
-### Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势
+### Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]
 > 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似`TeamViewer`或者`向日葵`之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。
 
 #### 问题的提出：

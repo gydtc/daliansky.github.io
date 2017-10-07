@@ -1,9 +1,10 @@
 ---
 title: AppleALC支持的Codecs列表及AppleALC的使用
+urlname: AppleALC-Supported-codecs
 date: 2017-09-08 09:40:15
 tags:
 - AppleALC
-- codec
+- Codec
 - Lilu
 categories:
 - 教程

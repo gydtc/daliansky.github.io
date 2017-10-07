@@ -6,7 +6,8 @@ language: zh-Hans
 timezone: null
 url: 'http://blog.daliansky.net'
 root: /
-permalink: ':year/:month/:day/:title/'
+#permalink: ':year/:month/:day/:title/'
+permalink: :urlname.html
 permalink_defaults: null
 source_dir: source
 public_dir: public

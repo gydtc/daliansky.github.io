@@ -1,12 +1,18 @@
 ---
 title: 'Mac常用到的命令[持续更新]'
 date: 2017-08-17 10:24:00
-updated: 2017-08-28 11:08:02
+urlname: Mac-frequently-used-to-the-command---continuous-update
 categories:
 - 教程
 tags:
 - shell
+- spctl
 - diskutil
+- trimforce
+- ioreg
+- EDID
+- APFS
+- HFS+
 ---
 ### Mac常用命令
 #### 序言
@@ -250,26 +256,37 @@ sudo trimforce enable
 因为是系统原生工具，此方法无需开启rootless=0，更不会改变已有驱动的签名，也就是说不需要kext-dev-mode=1，白果也可用此方法开启Trim。
 
 
-### 5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏的问题
-经常有网友需要解决笔记本显示器内屏黑屏问题，目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。
+### 5. 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题
+> 经常有网友需要解决笔记本显示器内屏黑屏问题，尤其新发布的10.13的系统会出现睡眠唤醒后屏幕花屏问题。
+
+目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。
 其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。
-#### 最简单的命令是：
+
+### 最简单的命令是：
 
 ```bash
-ioreg -l | grep IODisplayEDID
+ioreg -lw0 | grep -i "IODisplayEDID" | sed -e 's/.*<//' -e 's/>//'
 ```
-##### 显示信息如下：
+### 显示信息如下：
 
-```js
-    | |   | | |       "IODisplayEDID" = <00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8>
+` 00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8
+`
+### 接着输入下面的两条命令：
+```bash
+ioreg -l | grep "DisplayVendorID"  
+    "DisplayVendorID" = 3502
+    
+ioreg -l | grep "DisplayProductID"  
+    "DisplayProductID" = 5600
 ```
-其中<>里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover中，然后保存重启你的电脑。
-![Custom EDID](http://ous2s14vo.bkt.clouddn.com/Custom EDID.png)
-#### 收工
+其中<>里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover的 `config.plist` 中，顺便将 `VendorID` 和 `ProductID` 填入相应的位置，然后保存重启你的电脑。
+![EDID注入](http://ous2s14vo.bkt.clouddn.com/EDID注入.png)
+
+### 收工
 
 ### ———— 未完待续 ————
 
-#### QQ群:
+### QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

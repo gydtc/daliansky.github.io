@@ -1,5 +1,6 @@
 ---
 title: 【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像
+urlname: macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror
 date: 2017-08-16 16:13:40
 updated: 2017-08-28 11:08:02
 categories:
@@ -7,10 +8,11 @@ categories:
 - 镜像
 tags:
 - 10.13
-- high sierra
+- High Sierra
 - 17A344b
 - 镜像
 - 下载
+- dmg
 ---
 ### 【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像
 ![17A334b](http://ous2s14vo.bkt.clouddn.com/17A334b.png)

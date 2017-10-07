@@ -1,15 +1,19 @@
 ---
-title: '[持续更新] 10.12 Sierra中的常见问题（某些未解决的问题）'
+title: '[持续更新] 黑苹果常见问题（某些未解决的问题）'
+urlname: Updated-Frequently-Asked-Questions-in-Sierra-or-high-sierra
 date: 2017-09-07 09:32:15
 tags:
 - 10.12
-- sierra
+- 10.13
+- Sierra
+- High Sierra
 - 常见问题
 - platform-id
-- clover
-- patch
-- lilu
+- Clover
+- Patch
+- Lilu
 - wake
+- Plugins
 categories:
 - 教程
 ---
@@ -95,6 +99,65 @@ Find:       01050900 00040000 87000000 02040900 00040000 87000000
 Replace:    02040900 00080000 87000000 FF000000 01000000 40000000
 ```
 >结果：登录后睡眠不再滞后。
+
+#### 解决10.13(High Sierra)/10.12(Sierra) Clover开机出现8个苹果
+使用`Clover Configurator`打开`config.plist` - `Kernel and Kext Patches` - `KextsToPatch`，新添加：
+
+```sh
+Name:       IOGraphicsFamily
+Comment:    10.12+-第二阶段花屏
+Find:       01000075 25
+Replace:    010000eb 25
+MatchOS:    10.12.x
+```
+
+```sh
+Name:       IOGraphicsFamily
+Comment:    10.13+-第二阶段花屏
+Find:       01000075 22
+Replace:    010000eb 22
+MatchOS:    10.13.x
+```
+另一种格式：
+
+```xml
+			<dict>
+				<key>Comment</key>
+				<string>10.12+-第二阶段花屏补丁</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQAAdSU=
+				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA6yU=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.13+-第二阶段花屏补丁</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQAAdSI=
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA6yI=
+				</data>
+			</dict>
+```
 
 ### 未完待续
 

@@ -1,5 +1,6 @@
 ---
 title: 8个好习惯叱咤职场
+urlname: 8-good-habit-chi-zha-in-the-workplace
 tags:
   - 职场
   - 习惯

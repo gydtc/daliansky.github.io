@@ -1369,3 +1369,25 @@
 {"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Rendering index: \u001b[35mindex.html\u001b[39m","time":"2017-09-08T02:33:27.856Z","v":0}
 {"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Rendering index: \u001b[35mindex.html\u001b[39m","time":"2017-09-08T02:33:39.183Z","v":0}
 {"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Rendering index: \u001b[35mindex.html\u001b[39m","time":"2017-09-08T02:47:13.625Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mpage\u001b[39m","time":"2017-09-08T04:15:23.700Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mpost\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35malgolia\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35marchive\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mcategory\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mfeed\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mindex\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mxml\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35msitemap\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mtag\u001b[39m","time":"2017-09-08T04:15:23.701Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35masset\u001b[39m","time":"2017-09-08T04:15:23.702Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mpage\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mpost\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35malgolia\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35marchive\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mcategory\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mfeed\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mindex\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mxml\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35msitemap\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35mtag\u001b[39m","time":"2017-09-08T04:15:23.779Z","v":0}
+{"name":"hexo","hostname":"skys-MacBook-Pro-2.local","pid":26784,"level":20,"msg":"Generator: \u001b[35masset\u001b[39m","time":"2017-09-08T04:15:23.780Z","v":0}

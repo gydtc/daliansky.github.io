@@ -1,5 +1,6 @@
 ---
 title: 【黑果小兵】macOS High Sierra 10.13DB8 17A358a with Clover 4189原版镜像
+urlname: MacOS-High-Sierra-10.13DB8-17A358a-and-Clover-4189
 date: 2017-08-29 10:03:58
 updated: 2017-08-29 10:42:02
 categories:

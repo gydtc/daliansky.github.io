@@ -1,12 +1,13 @@
 ---
 title: 黑苹果必备：Intel核显platform ID整理
+urlname: Intel-core-display-platformID-finishing
 date: 2017-08-31 21:13:07
 categories:
 - 教程
 tags:
 - platform
 - Intel
-- 独显
+- 核显
 - 
 ---
 
@@ -74,7 +75,7 @@ UINT8 ivy_bridge_hd_vals[1][4] = {
 | Intel HD Graphics 4600 | 0x04160000 |  | 3 | 1 |  | 1 | 1 |
 | Intel HD Graphics 4400 | 0x0a160000 |  | 3 | 1 |  | 1 | 1 |
 |  | 0x0c160000 |  | 3 | 1 |  | 1 | 1 |
-|  | 0x04260000 |  | 3 | 1 |  | 1 | 1 |
+| Intel HD Graphics 5000 | 0x04260000 |  | 3 | 1 |  | 1 | 1 |
 | Intel HD Graphics 5000 | 0x0a260000 |  | 3 | 1 |  | 1 | 1 |
 |  | 0x0c260000 |  | 3 | 1 |  | 1 | 1 |
 | Intel Iris Pro Graphics 5200 | 0x0d260000 |  | 3 | 1 |  | 1 | 1 |
@@ -205,7 +206,6 @@ UINT8 kabylake_hd_vals[8][4] = {
 
 ### 已知GPU的列表
 ```js
-
 static struct gma_gpu_t KnownGPUS[] = {
 
   //============== PowerVR ===================
@@ -481,7 +481,7 @@ static struct gma_gpu_t KnownGPUS[] = {
   { 0x162D, "Intel Iris Pro Graphics P6300"  }, // Workstation, Mobile Workstation
   //GT3e
   { 0x1622, "Intel Iris Pro Graphics 6200"   }, // Desktop, Mobile - iMac16,2
-  { 0x162A, "Intel Iris Pro Graphics P6300"  }, // Workstation
+  { 0x162A, "Intel Iris Pro Graphics P6300"  }, // Workstation, Mobile Workstation
   //RSVD
   { 0x162E, "Intel Broadwell RSVD"           }, // Reserved
   { 0x1632, "Intel Broadwell RSVD"           }, // Reserved
@@ -512,7 +512,7 @@ static struct gma_gpu_t KnownGPUS[] = {
   { 0x191A, "Intel Skylake GT2"              }, //
   { 0x191B, "Intel HD Graphics 530"          }, // Mobile - MacBookPro13,3
   { 0x191D, "Intel HD Graphics P530"         }, // Workstation, Mobile Workstation
-  { 0x191E, "Intel HD Graphics 515"          }, // Mobile - MacBook9,1
+  { 0x191E, "Intel HD Graphics 515"          }, // Ultramobile - MacBook9,1
   { 0x1921, "Intel HD Graphics 520"          }, // 
   //GT2f
   { 0x1913, "Intel Skylake GT2f"             }, //
@@ -524,12 +524,12 @@ static struct gma_gpu_t KnownGPUS[] = {
   { 0x1926, "Intel Iris Graphics 540"        }, // Mobile - MacBookPro13,1
   { 0x1927, "Intel Iris Graphics 550"        }, // Mobile - MacBookPro13,2
   { 0x192B, "Intel Iris Graphics 555"        }, //
-  { 0x192D, "Intel Iris Graphics P555"       }, // Workstation
+  { 0x192D, "Intel Iris Graphics P555"       }, // Workstation, Mobile Workstation
   //GT4
   { 0x192A, "Intel Skylake GT4"              }, //
   //GT4e
   { 0x1932, "Intel Iris Pro Graphics 580"    }, //
-  { 0x193A, "Intel Iris Pro Graphics P580"   }, // Server
+  { 0x193A, "Intel Iris Pro Graphics P580"   }, // Workstation, Mobile Workstation
   { 0x193B, "Intel Iris Pro Graphics 580"    }, // Desktop, Mobile
   { 0x193D, "Intel Iris Pro Graphics P580"   }, // Workstation, Mobile Workstation
 
@@ -553,13 +553,14 @@ static struct gma_gpu_t KnownGPUS[] = {
   //GT1.5
   { 0x5913, "Intel Kaby Lake GT1.5"          }, //
   { 0x5915, "Intel Kaby Lake GT1.5"          }, //
+  { 0x5917, "Intel Kaby Lake GT1.5"          }, //
   //GT2
   { 0x5912, "Intel HD Graphics 630"          }, // Desktop - iMac18,2, iMac18,3
   { 0x5916, "Intel HD Graphics 620"          }, // Mobile
   { 0x591A, "Intel HD Graphics P630"         }, //
   { 0x591B, "Intel HD Graphics 630"          }, // Mobile - MacBookPro14,3
   { 0x591D, "Intel HD Graphics P630"         }, // Workstation, Mobile Workstation
-  { 0x591E, "Intel HD Graphics 615"          }, // Mobile - MacBook10,1
+  { 0x591E, "Intel HD Graphics 615"          }, // Ultramobile - MacBook10,1
   //GT2F
   { 0x5921, "Intel Kaby Lake GT2F"           }, //
   //GT3
@@ -569,28 +570,26 @@ static struct gma_gpu_t KnownGPUS[] = {
   //GT4
   { 0x593B, "Intel Kaby Lake GT4"            }, //
 
-  //-------------Kaby Lake Refresh------------
-  //GT1.5
-  { 0x5917, "Intel UHD Graphics 620"         }, // Mobile
 
+  //============== 10th generation ===========
   //----------------Coffee Lake---------------
   //GT1
-  { 0x3E90, "Intel UHD Graphics 610"         }, // Desktop
-  { 0x3E93, "Intel UHD Graphics 610"         }, // Desktop
+  { 0x3E90, "Intel Coffee Lake GT1"          }, //
+  { 0x3E93, "Intel Coffee Lake GT1"          }, //
   //GT2
-  { 0x3E91, "Intel UHD Graphics 630"         }, // Desktop
-  { 0x3E92, "Intel UHD Graphics 630"         }, // Desktop
-  { 0x3E94, "Intel Coffee Lake GT2"          }, //
+  { 0x3E91, "Intel Coffee Lake GT2"          }, //
+  { 0x3E92, "Intel Coffee Lake GT2"          }, //
   { 0x3E96, "Intel Coffee Lake GT2"          }, //
   { 0x3E9B, "Intel Coffee Lake GT2"          }, //
+  { 0x3E94, "Intel Coffee Lake GT2"          }, //
   //GT3
-  { 0x3EA5, "Intel Coffee Lake GT3"          }, //
   { 0x3EA6, "Intel Coffee Lake GT3"          }, //
   { 0x3EA7, "Intel Coffee Lake GT3"          }, //
   { 0x3EA8, "Intel Coffee Lake GT3"          }, //
+  { 0x3EA5, "Intel Coffee Lake GT3"          }, //
 
 
-  //============== 10th generation ===========
+  //============== 10.5th generation =========
   //----------------Cannonlake----------------
   //GT0.5
   { 0x5A49, "Intel Cannonlake GT0.5"         }, //
@@ -609,11 +608,12 @@ static struct gma_gpu_t KnownGPUS[] = {
   { 0x5A52, "Intel Cannonlake GT2"           }, //
   { 0x5A54, "Intel Cannonlake GT2"           }, //
 
-}
+};
 ```
 
 ### 写在最后
 > 本文会不间断更新
+> 最后更新：10-1-2017
 
 
 #### QQ群:

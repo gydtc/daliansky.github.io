@@ -1,5 +1,6 @@
 ---
 title: 如何在macOS Sierra中运行CORE Keygen破解程序
+urlname: How-macOS-Sierra-mid-operation-CORE-Keygen-breaks-down
 date: 2017-08-20 08:24:29
 updated: 2017-08-28 11:08:02
 categories:

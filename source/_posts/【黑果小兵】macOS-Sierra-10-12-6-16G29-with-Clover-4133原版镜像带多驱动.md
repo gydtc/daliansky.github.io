@@ -1,15 +1,16 @@
 ---
 title: 【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动
+urlname: macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive
 date: 2017-08-16 20:02:43
-updated: 2017-08-28 11:08:02
 categories:
 - 下载
 - 镜像
 tags:
 - 安装
 - 10.12.6
-- sierra
+- Sierra
 - 镜像
+- dmg
 ---
 
 #### 【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动

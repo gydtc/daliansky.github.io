@@ -1,7 +1,7 @@
 ---
 title: hotpatch详解
 date: 2017-08-16 16:22:44
-updated: 2017-08-28 11:08:02
+urlname: hotpatch-detailed-solution
 description: hotpatch列表及详解
 categories:
 - 教程

@@ -1,10 +1,12 @@
 ---
 title: Lilu插件列表[持续更新]
+urlname: Existing-Lilu-Plugins
 date: 2017-08-25 16:45:19
 categories:
 - 插件
 tags:
 - Lilu
+- Plugins
 - 插件
 ---
 Lilu插件列表[持续更新]

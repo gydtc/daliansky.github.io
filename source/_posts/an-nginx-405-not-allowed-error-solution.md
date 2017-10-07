@@ -1,5 +1,6 @@
 ---
 title: 出现nginx 405 Not Allowed错误的解决方法
+urlname: an-nginx-405-not-allowed-error-solution
 tags:
   - '405'
   - error

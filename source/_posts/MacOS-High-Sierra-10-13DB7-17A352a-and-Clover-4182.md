@@ -1,5 +1,6 @@
 ---
 title: macOS High Sierra 10.13DB7 17A352a with Clover 4182原版镜像
+urlname: MacOS-High-Sierra-10-13DB7-17A352a-and-Clover-4182
 date: 2017-08-22 13:22:58
 updated: 2017-08-28 11:12:02
 categories:
