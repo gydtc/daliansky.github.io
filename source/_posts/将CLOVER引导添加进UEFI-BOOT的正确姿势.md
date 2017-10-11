@@ -29,19 +29,21 @@ categories:
 ![Windows-EFI](http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png)
 * 将U盘里的EFI目录下面的 `CLOVER` 目录复制到磁盘里的EFI分区EFI目录下
 ![Windows_Clover](http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png)
-** 切记一点：千万不要动另外的Boot和Microsoft目录 **
+
+*** 切记一点：千万不要动另外的Boot和Microsoft目录 ***
 
 ### 双磁盘双系统
-每块磁盘都分别包括各个不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。
+每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。
 
 ## 将 `CLOVER` 引导项添加进 `UEFI Boot Option Menu`
 两种方式：
 ### 通过BIOS添加，教程略
 
 ### 通过 `CLOVER` 自带的工具添加
-1. 开机进入 `CLOVER` 引导界面，将光标移动到 `Clover Boot Options` ，回车进入![clover boot options](http://ous2s14vo.bkt.clouddn.com/clover boot options.png)
-2. 选择 `Add Clover boot options for all entries` 回车![clover-boot-options2](http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png)
-
+1. 开机进入 `CLOVER` 引导界面，将光标移动到 `Clover Boot Options` ，回车进入
+![clover boot options](http://ous2s14vo.bkt.clouddn.com/clover boot options.png)
+2. 选择 `Add Clover boot options for all entries` 回车
+![clover-boot-options2](http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png)
 3. 拔掉U盘，重新开机，按 `Boot` 快捷键，你会发现多了很多以 `Clover start` 开头的引导项，选择 `Clover start boot.efi at MAC` 即可进入 `MacOS` 系统
 ![UEFI_Boot](http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg)
 
