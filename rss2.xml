@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Wed, 11 Oct 2017 03:47:14 GMT</pubDate>
+    <pubDate>Wed, 11 Oct 2017 05:16:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -37,7 +37,7 @@
 <li>将U盘里的EFI目录下面的 <code>CLOVER</code> 目录复制到磁盘里的EFI分区EFI目录下<br><img src="http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png" alt="Windows_Clover"></li>
 </ul>
 <p><strong><em> 切记一点：千万不要动另外的Boot和Microsoft目录 </em></strong></p>
-<h3 id="双磁盘双系统"><a href="#双磁盘双系统" class="headerlink" title="双磁盘双系统"></a>双磁盘双系统</h3><p>每块磁盘都分别包括各个不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
+<h3 id="双磁盘双系统"><a href="#双磁盘双系统" class="headerlink" title="双磁盘双系统"></a>双磁盘双系统</h3><p>每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
 <h2 id="将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu"><a href="#将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu" class="headerlink" title="将 CLOVER 引导项添加进 UEFI Boot Option Menu"></a>将 <code>CLOVER</code> 引导项添加进 <code>UEFI Boot Option Menu</code></h2><p>两种方式：</p>
 <h3 id="通过BIOS添加，教程略"><a href="#通过BIOS添加，教程略" class="headerlink" title="通过BIOS添加，教程略"></a>通过BIOS添加，教程略</h3><h3 id="通过-CLOVER-自带的工具添加"><a href="#通过-CLOVER-自带的工具添加" class="headerlink" title="通过 CLOVER 自带的工具添加"></a>通过 <code>CLOVER</code> 自带的工具添加</h3><ol>
 <li>开机进入 <code>CLOVER</code> 引导界面，将光标移动到 <code>Clover Boot Options</code> ，回车进入<br><img src="http://ous2s14vo.bkt.clouddn.com/clover boot options.png" alt="clover boot options"></li>
