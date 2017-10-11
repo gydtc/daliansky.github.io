@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享]]></title>
+    <url>%2FHP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</url>
+    <content type="text"><![CDATA[惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。 电脑配置 规格 详细信息 电脑型号|HP ENVY Laptop 13-ad1xx 笔记本电脑 操作系统|Windows 10 64位 ( DirectX 12 ) 处理器 |英特尔 Core i5-8250U @ 1.60GHz 四核 主板 | 惠普 83A8 ( 英特尔 Xeon E3 - 1200 v6/7th Gen Intel Core) 显卡 | 英特尔 UHD Graphics 620 ( 128 MB / 惠普 ) 内存 | 8 GB 主硬盘 |英特尔 NVMe SSDPEKKF25 ( 256 GB / 固态硬盘 ) 显示器 |京东方 BOE070E ( 13.3 英寸 ) 声卡 | 瑞昱 @ 英特尔 High Definition Audio 控制器 网卡 | 英特尔 Dual Band Wireless-AC 7265 制作EFI 提取 DSDT/SSDT，制作hotpatch； 添加独显屏蔽补丁，以适用于其它相似机型； 添加虚拟网卡驱动，以解决icloud及AppStore登录问题； 配置其它驱动程序； 打包EFI。 安装过程制作USB安装盘，替换EFI，进入Clover报错，将Drivers64UEFI目录下的OsxAptioFixDrv-64.efi替换为OsxAptioFix2Drv-64.efi，顺利进入Clover，可以正确识别NVMe SSD以及外置移动硬盘，分区抹盘完成安装，过程顺利。 完善驱动程序 声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息； 网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用； 显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装小米Pro的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。 蓝牙使用Intel，工作正常； 电池信息正常； 触摸板正常工作； 显示器亮度调节正常； USB端口信息未完善，需要使用SSDT-UIAC.aml进行修改； PCI设备信息未修正； 系统截图 备注:该截图为显卡未驱动状态 EFI下载链接：https://pan.baidu.com/s/1o7LJVU6 密码: 请进群索取 QQ群:331686786 一起黑苹果]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>EFI</tag>
+        <tag>惠普</tag>
+        <tag>ENVY</tag>
+        <tag>ad1xx</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势]]></title>
     <url>%2FAdd-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</url>
     <content type="text"><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法 将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式： 请使用工具： Clover Configurator 或者 ESP Mounter Pro，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可 使用系统命令 diskutil ，具体操作请移步 单磁盘双系统最简单的分区结构是：一个 EFI 分区，一个 MacOS 分区，一个 Windows 分区 假设你想在同一块磁盘里同时安装 MacOS 和 Windows 10 双系统的话，那么我给你的建议是无论是先安装 MacOS 系统还是先安装 Windows 10 系统，都要在安装完 Windows 10 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 Windows 10 的系统后，它会重新将EFI分区格式化的。 安装完的 Windows 10 的EFI分区里面会有个EFI的目录，目录里面会包括 BOOT 和 MICROSOFT 这两个目录,它看起来是这样的： 将U盘里的EFI目录下面的 CLOVER 目录复制到磁盘里的EFI分区EFI目录下 切记一点：千万不要动另外的Boot和Microsoft目录 双磁盘双系统每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。 将 CLOVER 引导项添加进 UEFI Boot Option Menu两种方式： 通过BIOS添加，教程略通过 CLOVER 自带的工具添加 开机进入 CLOVER 引导界面，将光标移动到 Clover Boot Options ，回车进入 选择 Add Clover boot options for all entries 回车 拔掉U盘，重新开机，按 Boot 快捷键，你会发现多了很多以 Clover start 开头的引导项，选择 Clover start boot.efi at MAC 即可进入 MacOS 系统 QQ群:331686786 一起黑苹果]]></content>
@@ -22,9 +37,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
-        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -217,11 +232,11 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
@@ -299,10 +314,10 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
+        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
@@ -317,9 +332,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -346,8 +361,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>

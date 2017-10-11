@@ -8,8 +8,72 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Wed, 11 Oct 2017 05:16:10 GMT</pubDate>
+    <pubDate>Wed, 11 Oct 2017 13:02:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享</title>
+      <link>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</link>
+      <guid>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</guid>
+      <pubDate>Wed, 11 Oct 2017 11:14:14 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享&quot;&gt;&lt;a href=&quot;#惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享&quot; class=&quot;headerlink&quot; title=&quot;惠普
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享"><a href="#惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享" class="headerlink" title="惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享"></a>惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享</h1><blockquote>
+<p>群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。</p>
+</blockquote>
+<h2 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h2><table>
+<thead>
+<tr>
+<th>规格</th>
+<th>详细信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>  电脑型号|HP ENVY Laptop 13-ad1xx 笔记本电脑<br>  操作系统|Windows 10 64位 ( DirectX 12 )<br>  处理器  |英特尔 Core i5-8250U @ 1.60GHz 四核<br>  主板    | 惠普 83A8 ( 英特尔 Xeon E3 - 1200 v6/7th Gen Intel Core)<br>  显卡    | 英特尔 UHD Graphics 620 ( 128 MB / 惠普 )<br>  内存    | 8 GB<br>  主硬盘  |英特尔 NVMe SSDPEKKF25 ( 256 GB / 固态硬盘 )<br>  显示器  |京东方 BOE070E ( 13.3 英寸  )<br>  声卡    | 瑞昱  @ 英特尔 High Definition Audio 控制器<br>  网卡    | 英特尔 Dual Band Wireless-AC 7265<br><img src="http://ous2s14vo.bkt.clouddn.com/HP_ENVY_Laptop_13-ad1xx.jpg" alt="HP_ENVY_Laptop_13-ad1xx"></p>
+<h2 id="制作EFI"><a href="#制作EFI" class="headerlink" title="制作EFI"></a>制作EFI</h2><ol>
+<li>提取 DSDT/SSDT，制作hotpatch；</li>
+<li>添加独显屏蔽补丁，以适用于其它相似机型；</li>
+<li>添加虚拟网卡驱动，以解决icloud及AppStore登录问题；</li>
+<li>配置其它驱动程序；</li>
+<li>打包EFI。</li>
+</ol>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>制作USB安装盘，替换EFI，进入Clover报错，将Drivers64UEFI目录下的OsxAptioFixDrv-64.efi替换为OsxAptioFix2Drv-64.efi，顺利进入Clover，可以正确识别NVMe SSD以及外置移动硬盘，分区抹盘完成安装，过程顺利。</p>
+<h2 id="完善驱动程序"><a href="#完善驱动程序" class="headerlink" title="完善驱动程序"></a>完善驱动程序</h2><ol>
+<li>声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息；</li>
+<li>网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用；</li>
+<li><p>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。</p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></p>
+</li>
+<li><p>蓝牙使用Intel，工作正常；</p>
+</li>
+<li>电池信息正常；</li>
+<li>触摸板正常工作；</li>
+<li>显示器亮度调节正常；</li>
+<li>USB端口信息未完善，需要使用SSDT-UIAC.aml进行修改；</li>
+<li>PCI设备信息未修正；</li>
+</ol>
+<h2 id="系统截图"><a href="#系统截图" class="headerlink" title="系统截图"></a>系统截图</h2><p><img src="http://ous2s14vo.bkt.clouddn.com/about.png" alt="about"><br><strong><em> 备注:该截图为显卡未驱动状态 </em></strong></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/hw-list.png" alt="hw-list"></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/NVMe.png" alt="NVMe"></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/ALC298_ID28.png" alt="ALC298_ID28"></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/BlueTooth.png" alt="BlueTooth"></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/USB.png" alt="USB"></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/Power.png" alt="Power"></p>
+<h2 id="EFI下载"><a href="#EFI下载" class="headerlink" title="EFI下载"></a>EFI下载</h2><p>链接：<a href="https://pan.baidu.com/s/1o7LJVU6" target="_blank" rel="external">https://pan.baidu.com/s/1o7LJVU6</a> 密码: 请进群索取</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</title>
@@ -152,42 +216,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>High Sierra全新安装或者升级时禁止进行APFS转换</title>
-      <link>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html</link>
-      <guid>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html</guid>
-      <pubDate>Sat, 30 Sep 2017 07:56:29 GMT</pubDate>
-      <description>
-      
-        &lt;h3 id=&quot;指南-High-Sierra全新安装或者升级时禁止进行APFS转换&quot;&gt;&lt;a href=&quot;#指南-High-Sierra全新安装或者升级时禁止进行APFS转换&quot; class=&quot;headerlink&quot; title=&quot;[指南]High Sierra全新安装或者升级时禁止
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h3 id="指南-High-Sierra全新安装或者升级时禁止进行APFS转换"><a href="#指南-High-Sierra全新安装或者升级时禁止进行APFS转换" class="headerlink" title="[指南]High Sierra全新安装或者升级时禁止进行APFS转换"></a>[指南]High Sierra全新安装或者升级时禁止进行APFS转换</h3><blockquote>
-<p>假设安装的分区为 <code>test</code> ，挂载路径为 <code>/Volumes/test</code></p>
-</blockquote>
-<p>如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 </p>
-<p>幸运的是，这种自动转换有一些方法。 它由 <code>/macOS Install Data/minstallconfig.xml</code> 中的<code>ConvertToAPFS</code> 选项控制。 </p>
-<h4 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h4><p>升级方案比新安装程序稍微简单一些，因为我们可以运行一个命令行工具，可以使用命令行选项将 <code>ConvertToAPFS</code> 设置为 <code>false</code> 。 </p>
-<p>下载10.13安装程序后，请退出。打开终端，输入命令：</p>
-<p><code>/Applications/&quot;Install macOS High Sierra.app&quot;/Contents/Resources/startosinstall --converttoapfs NO --agreetolicense --volume /Volumes/test</code><br>系统将复制一些文件，然后重新启动，您将可以启动安装程序（无需APFS转换），方法是在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项。 </p>
-<h4 id="全新安装"><a href="#全新安装" class="headerlink" title="全新安装"></a>全新安装</h4><p>假设您已经创建了一个用于全新安装的HFS+格式的U盘，如果安装目标是SSD，安装程序仍将转换为APFS。<br>为避免这种情况，在运行安装程序(第一阶段)之后，并且在首次重新启动之后(第二阶段之前)，重新通过 <code>Clover</code> 选择进入U盘 <code>Boot OS X Install from Install macOS High Sierra</code>，打开终端，进入要安装的系统分区(假设安装分区为 <code>test</code> )：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /Volume/<span class="built_in">test</span></div><div class="line"><span class="built_in">cd</span> <span class="string">"macOS Install Data"</span></div><div class="line">vi minstallconfig.xml</div></pre></td></tr></table></figure>
-<p>将 </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">true</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">false</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p>输入:wq保存退出</p>
-<blockquote>
-<p>vi编辑器的用法请自行脑补或者google</p>
-</blockquote>
-<p>重启，在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项，进入第二阶段完成安装，您得到的是一个未转换成 <code>APFS</code> 的 <code>HFS+</code> 分区格式的系统。</p>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html#disqus_thread</comments>
     </item>
     
   </channel>
