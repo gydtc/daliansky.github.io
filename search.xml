@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势]]></title>
+    <url>%2FAdd-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</url>
+    <content type="text"><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法 将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式： 请使用工具： Clover Configurator 或者 ESP Mounter Pro，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可 使用系统命令 diskutil ，具体操作请移步 单磁盘双系统最简单的分区结构是：一个 EFI 分区，一个 MacOS 分区，一个 Windows 分区 假设你想在同一块磁盘里同时安装 MacOS 和 Windows 10 双系统的话，那么我给你的建议是无论是先安装 MacOS 系统还是先安装 Windows 10 系统，都要在安装完 Windows 10 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 Windows 10 的系统后，它会重新将EFI分区格式化的。 安装完的 Windows 10 的EFI分区里面会有个EFI的目录，目录里面会包括 BOOT 和 MICROSOFT 这两个目录,它看起来是这样的： 将U盘里的EFI目录下面的 CLOVER 目录复制到磁盘里的EFI分区EFI目录下 切记一点：千万不要动另外的Boot和Microsoft目录 双磁盘双系统每块磁盘都分别包括各个不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。 将 CLOVER 引导项添加进 UEFI Boot Option Menu两种方式： 通过BIOS添加，教程略通过 CLOVER 自带的工具添加 开机进入 CLOVER 引导界面，将光标移动到 Clover Boot Options ，回车进入 选择 Add Clover boot options for all entries 回车 拔掉U盘，重新开机，按 Boot 快捷键，你会发现多了很多以 Clover start 开头的引导项，选择 Clover start boot.efi at MAC 即可进入 MacOS 系统 QQ群:331686786 一起黑苹果]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>EFI</tag>
+        <tag>UEFI</tag>
+        <tag>Clover</tag>
+        <tag>引导</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法]]></title>
     <url>%2FUse-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html</url>
     <content type="text"><![CDATA[今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。 命令及用法显示gpt分区命令如下： 123456789101112131415161718192021222324sudo gpt -r show disk0 start size index contents 0 1 PMBR 1 1 Pri GPT header 2 32 Pri GPT table 34 2014 2048 614400 1 GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B 616448 409600 2 GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE 1026048 157696000 3 GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7 158722048 32000000 4 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 190722048 262144 190984192 196116728 5 GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC 387100920 400937448 6 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 788038368 262144 788300512 1280000 7 GPT part - 5361644D-6163-11AA-AA11-00306543ECAC 789580512 129175576 8 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 918756088 1269536 9 GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC 920025624 19594968 10 GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7 939620592 59325048 11 GPT part - 48465300-0000-11AA-AA11-00306543ECAC 998945640 1269536 12 GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC 1000215176 7 1000215183 32 Sec GPT table 1000215215 1 Sec GPT header 其中： C12A7328-F81F-11D2-BA4B-00A0C93EC93B 是EFI系统分区(ESP)的标志 index 是指磁盘分区，这里的数值是 1 ，也就是说是设备 disk0 的第一个分区 start 是指开始的扇区，这里的数值是: 2048 size 是指扇区的偏移量，这里的数值是: 614400 删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令： 确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。 您无法使用 gpt 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 您可能需要使用 diskutil unmountDisk disk0 卸载任何自动安装的卷，然后再继续执行下面的操作。 1sudo gpt remove -i 1 disk0 确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。 而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引 1 重新添加分区与正确的布局和类型：1sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3 执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。 写在最后其实在做修复之前，也可以使用 dd 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 玩坏 后可以恢复如初。 EFI分区备份到文件，命令如下：1sudo dd if=/dev/rdisk0s1 of=~/Desktop/ESP.img # 将EFI分区备份到用户目录-桌面，文件名为：ESP.img 从备份文件恢复到ESP分区，命令如下：1sudo dd if=~/Desktop/ESP.img of=/dev/rdisk0s1 # 将备份文件ESP.img恢复到EFI分区 QQ群:331686786 一起黑苹果]]></content>
@@ -203,15 +217,15 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
+        <tag>Clover</tag>
         <tag>常见问题</tag>
         <tag>platform-id</tag>
-        <tag>Clover</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
@@ -404,8 +418,8 @@
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>镜像</tag>
-        <tag>安装</tag>
         <tag>dmg</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>

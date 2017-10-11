@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="EFI,UEFI,Clover,引导," />
 
 
 
@@ -96,16 +96,24 @@
 
 
 
-<meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
-<meta property="og:type" content="website">
-<meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/tags/BCM94352z/index.html">
+<meta name="description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：  请使用工具： Clover Configurator 或者 E">
+<meta name="keywords" content="EFI,UEFI,Clover,引导">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势">
+<meta property="og:url" content="http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta property="og:description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：  请使用工具： Clover Configurator 或者 E">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/clover boot options.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg">
+<meta property="og:updated_time" content="2017-10-11T03:31:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑果小兵的部落阁">
-<meta name="twitter:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta name="twitter:title" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势">
+<meta name="twitter:description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：  请使用工具： Clover Configurator 或者 E">
+<meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png">
 
 
 
@@ -134,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/tags/BCM94352z/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html"/>
 
 
 
 
 
-  <title>标签: BCM94352z | 黑果小兵的部落阁</title>
+  <title>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 | 黑果小兵的部落阁</title>
   <style>
   .forkme{
  display: none;
@@ -159,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
     <a href="https://github.com/daliansky"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
@@ -308,82 +316,250 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>BCM94352z<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DalianSky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑果小兵的部落阁">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Broadcom-BCM94352z-DW1560-drive-new-posture.html" itemprop="url">
-              
-                <span itemprop="name">Broadcom BCM94352z/DW1560驱动新姿势[新方法]</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-09T09:35:23+08:00"
-              content="2017-09-09" >
-          09-09
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-11T09:41:29+08:00">
+                2017-10-11
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-11T11:31:55+08:00">
+                2017-10-11
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html" class="leancloud_visitors" data-flag-title="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the correct-drive-posture.html" itemprop="url">
-              
-                <span itemprop="name">Broadcom WiFi/BlueTooth BCM94352z(DW1560)的正确驱动姿势[原始方法]</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-07T16:18:13+08:00"
-              content="2017-09-07" >
-          09-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h1 id="将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势"><a href="#将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势" class="headerlink" title="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势"></a>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</h1><blockquote>
+<p>很多网友在安装完 <code>MacOS</code> 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法</p>
+</blockquote>
+<h2 id="将-MacOS-系统的EFI移动进磁盘的EFI分区里"><a href="#将-MacOS-系统的EFI移动进磁盘的EFI分区里" class="headerlink" title="将 MacOS 系统的EFI移动进磁盘的EFI分区里"></a>将 <code>MacOS</code> 系统的EFI移动进磁盘的EFI分区里</h2><h3 id="单磁盘单-MacOS-系统"><a href="#单磁盘单-MacOS-系统" class="headerlink" title="单磁盘单 MacOS 系统"></a>单磁盘单 <code>MacOS</code> 系统</h3><p>两种方式：</p>
+<ol>
+<li>请使用工具： <code>Clover Configurator</code> 或者 <code>ESP Mounter Pro</code>，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可</li>
+<li>使用系统命令 <code>diskutil</code> ，具体操作请<a href="nd---continuous-update.html#2-磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区">移步</a></li>
+</ol>
+<h3 id="单磁盘双系统"><a href="#单磁盘双系统" class="headerlink" title="单磁盘双系统"></a>单磁盘双系统</h3><p>最简单的分区结构是：一个 <code>EFI</code> 分区，一个 <code>MacOS</code> 分区，一个 <code>Windows</code> 分区</p>
+<ul>
+<li>假设你想在同一块磁盘里同时安装 <code>MacOS</code> 和 <code>Windows 10</code> 双系统的话，那么我给你的建议是无论是先安装 <code>MacOS</code> 系统还是先安装 <code>Windows 10</code> 系统，都要在安装完 <code>Windows 10</code> 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 <code>Windows 10</code> 的系统后，它会重新将EFI分区格式化的。</li>
+<li>安装完的 <code>Windows 10</code> 的EFI分区里面会有个EFI的目录，目录里面会包括 <code>BOOT</code> 和 <code>MICROSOFT</code> 这两个目录,它看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png" alt="Windows-EFI"></li>
+<li>将U盘里的EFI目录下面的 <code>CLOVER</code> 目录复制到磁盘里的EFI分区EFI目录下<br><img src="http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png" alt="Windows_Clover"><br><strong> 切记一点：千万不要动另外的Boot和Microsoft目录 </strong></li>
+</ul>
+<h3 id="双磁盘双系统"><a href="#双磁盘双系统" class="headerlink" title="双磁盘双系统"></a>双磁盘双系统</h3><p>每块磁盘都分别包括各个不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
+<h2 id="将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu"><a href="#将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu" class="headerlink" title="将 CLOVER 引导项添加进 UEFI Boot Option Menu"></a>将 <code>CLOVER</code> 引导项添加进 <code>UEFI Boot Option Menu</code></h2><p>两种方式：</p>
+<h3 id="通过BIOS添加，教程略"><a href="#通过BIOS添加，教程略" class="headerlink" title="通过BIOS添加，教程略"></a>通过BIOS添加，教程略</h3><h3 id="通过-CLOVER-自带的工具添加"><a href="#通过-CLOVER-自带的工具添加" class="headerlink" title="通过 CLOVER 自带的工具添加"></a>通过 <code>CLOVER</code> 自带的工具添加</h3><ol>
+<li>开机进入 <code>CLOVER</code> 引导界面，将光标移动到 <code>Clover Boot Options</code> ，回车进入<img src="http://ous2s14vo.bkt.clouddn.com/clover boot options.png" alt="clover boot options"></li>
+<li><p>选择 <code>Add Clover boot options for all entries</code> 回车<img src="http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png" alt="clover-boot-options2"></p>
+</li>
+<li><p>拔掉U盘，重新开机，按 <code>Boot</code> 快捷键，你会发现多了很多以 <code>Clover start</code> 开头的引导项，选择 <code>Clover start boot.efi at MAC</code> 即可进入 <code>MacOS</code> 系统<br><img src="http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg" alt="UEFI_Boot"></p>
+</li>
+</ol>
+<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/EFI/" rel="tag"># EFI</a>
+          
+            <a href="/tags/UEFI/" rel="tag"># UEFI</a>
+          
+            <a href="/tags/Clover/" rel="tag"># Clover</a>
+          
+            <a href="/tags/引导/" rel="tag"># 引导</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html" rel="next" title="MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法">
+                <i class="fa fa-chevron-left"></i> MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -391,6 +567,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDcyOS83Mjgy"></div>
+    
+  </div>
+
 
         </div>
         
@@ -411,8 +593,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -505,6 +696,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势"><span class="nav-number">1.</span> <span class="nav-text">将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将-MacOS-系统的EFI移动进磁盘的EFI分区里"><span class="nav-number">1.1.</span> <span class="nav-text">将 MacOS 系统的EFI移动进磁盘的EFI分区里</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单磁盘单-MacOS-系统"><span class="nav-number">1.1.1.</span> <span class="nav-text">单磁盘单 MacOS 系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单磁盘双系统"><span class="nav-number">1.1.2.</span> <span class="nav-text">单磁盘双系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双磁盘双系统"><span class="nav-number">1.1.3.</span> <span class="nav-text">双磁盘双系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu"><span class="nav-number">1.2.</span> <span class="nav-text">将 CLOVER 引导项添加进 UEFI Boot Option Menu</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过BIOS添加，教程略"><span class="nav-number">1.2.1.</span> <span class="nav-text">通过BIOS添加，教程略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过-CLOVER-自带的工具添加"><span class="nav-number">1.2.2.</span> <span class="nav-text">通过 CLOVER 自带的工具添加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QQ群"><span class="nav-number">1.2.3.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -640,10 +847,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -672,6 +879,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
