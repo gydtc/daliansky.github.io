@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Wed, 11 Oct 2017 13:02:39 GMT</pubDate>
+    <pubDate>Wed, 11 Oct 2017 13:05:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -34,11 +34,48 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>电脑型号</td>
+<td>HP ENVY Laptop 13-ad1xx 笔记本电脑</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>Windows 10 64位 ( DirectX 12 )</td>
+</tr>
+<tr>
+<td>处理器</td>
+<td>英特尔 Core i5-8250U @ 1.60GHz 四核</td>
+</tr>
+<tr>
+<td>主板</td>
+<td>惠普 83A8 ( 英特尔 Xeon E3 - 1200 v6/7th Gen Intel Core)</td>
+</tr>
+<tr>
+<td>显卡</td>
+<td>英特尔 UHD Graphics 620 ( 128 MB / 惠普 )</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>8 GB</td>
+</tr>
+<tr>
+<td>主硬盘</td>
+<td>英特尔 NVMe SSDPEKKF25 ( 256 GB / 固态硬盘 )</td>
+</tr>
+<tr>
+<td>显示器</td>
+<td>京东方 BOE070E ( 13.3 英寸  )</td>
+</tr>
+<tr>
+<td>声卡</td>
+<td>瑞昱  @ 英特尔 High Definition Audio 控制器</td>
+</tr>
+<tr>
+<td>网卡</td>
+<td>英特尔 Dual Band Wireless-AC 7265</td>
 </tr>
 </tbody>
 </table>
-<p>  电脑型号|HP ENVY Laptop 13-ad1xx 笔记本电脑<br>  操作系统|Windows 10 64位 ( DirectX 12 )<br>  处理器  |英特尔 Core i5-8250U @ 1.60GHz 四核<br>  主板    | 惠普 83A8 ( 英特尔 Xeon E3 - 1200 v6/7th Gen Intel Core)<br>  显卡    | 英特尔 UHD Graphics 620 ( 128 MB / 惠普 )<br>  内存    | 8 GB<br>  主硬盘  |英特尔 NVMe SSDPEKKF25 ( 256 GB / 固态硬盘 )<br>  显示器  |京东方 BOE070E ( 13.3 英寸  )<br>  声卡    | 瑞昱  @ 英特尔 High Definition Audio 控制器<br>  网卡    | 英特尔 Dual Band Wireless-AC 7265<br><img src="http://ous2s14vo.bkt.clouddn.com/HP_ENVY_Laptop_13-ad1xx.jpg" alt="HP_ENVY_Laptop_13-ad1xx"></p>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/HP_ENVY_Laptop_13-ad1xx.jpg" alt="HP_ENVY_Laptop_13-ad1xx"></p>
 <h2 id="制作EFI"><a href="#制作EFI" class="headerlink" title="制作EFI"></a>制作EFI</h2><ol>
 <li>提取 DSDT/SSDT，制作hotpatch；</li>
 <li>添加独显屏蔽补丁，以适用于其它相似机型；</li>

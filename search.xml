@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享]]></title>
     <url>%2FHP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</url>
-    <content type="text"><![CDATA[惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。 电脑配置 规格 详细信息 电脑型号|HP ENVY Laptop 13-ad1xx 笔记本电脑 操作系统|Windows 10 64位 ( DirectX 12 ) 处理器 |英特尔 Core i5-8250U @ 1.60GHz 四核 主板 | 惠普 83A8 ( 英特尔 Xeon E3 - 1200 v6/7th Gen Intel Core) 显卡 | 英特尔 UHD Graphics 620 ( 128 MB / 惠普 ) 内存 | 8 GB 主硬盘 |英特尔 NVMe SSDPEKKF25 ( 256 GB / 固态硬盘 ) 显示器 |京东方 BOE070E ( 13.3 英寸 ) 声卡 | 瑞昱 @ 英特尔 High Definition Audio 控制器 网卡 | 英特尔 Dual Band Wireless-AC 7265 制作EFI 提取 DSDT/SSDT，制作hotpatch； 添加独显屏蔽补丁，以适用于其它相似机型； 添加虚拟网卡驱动，以解决icloud及AppStore登录问题； 配置其它驱动程序； 打包EFI。 安装过程制作USB安装盘，替换EFI，进入Clover报错，将Drivers64UEFI目录下的OsxAptioFixDrv-64.efi替换为OsxAptioFix2Drv-64.efi，顺利进入Clover，可以正确识别NVMe SSD以及外置移动硬盘，分区抹盘完成安装，过程顺利。 完善驱动程序 声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息； 网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用； 显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装小米Pro的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。 蓝牙使用Intel，工作正常； 电池信息正常； 触摸板正常工作； 显示器亮度调节正常； USB端口信息未完善，需要使用SSDT-UIAC.aml进行修改； PCI设备信息未修正； 系统截图 备注:该截图为显卡未驱动状态 EFI下载链接：https://pan.baidu.com/s/1o7LJVU6 密码: 请进群索取 QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。 电脑配置 规格 详细信息 电脑型号 HP ENVY Laptop 13-ad1xx 笔记本电脑 操作系统 Windows 10 64位 ( DirectX 12 ) 处理器 英特尔 Core i5-8250U @ 1.60GHz 四核 主板 惠普 83A8 ( 英特尔 Xeon E3 - 1200 v6/7th Gen Intel Core) 显卡 英特尔 UHD Graphics 620 ( 128 MB / 惠普 ) 内存 8 GB 主硬盘 英特尔 NVMe SSDPEKKF25 ( 256 GB / 固态硬盘 ) 显示器 京东方 BOE070E ( 13.3 英寸 ) 声卡 瑞昱 @ 英特尔 High Definition Audio 控制器 网卡 英特尔 Dual Band Wireless-AC 7265 制作EFI 提取 DSDT/SSDT，制作hotpatch； 添加独显屏蔽补丁，以适用于其它相似机型； 添加虚拟网卡驱动，以解决icloud及AppStore登录问题； 配置其它驱动程序； 打包EFI。 安装过程制作USB安装盘，替换EFI，进入Clover报错，将Drivers64UEFI目录下的OsxAptioFixDrv-64.efi替换为OsxAptioFix2Drv-64.efi，顺利进入Clover，可以正确识别NVMe SSD以及外置移动硬盘，分区抹盘完成安装，过程顺利。 完善驱动程序 声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息； 网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用； 显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装小米Pro的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。 蓝牙使用Intel，工作正常； 电池信息正常； 触摸板正常工作； 显示器亮度调节正常； USB端口信息未完善，需要使用SSDT-UIAC.aml进行修改； PCI设备信息未修正； 系统截图 备注:该截图为显卡未驱动状态 EFI下载链接：https://pan.baidu.com/s/1o7LJVU6 密码: 请进群索取 QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -37,9 +37,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
+        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -314,10 +314,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
-        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
