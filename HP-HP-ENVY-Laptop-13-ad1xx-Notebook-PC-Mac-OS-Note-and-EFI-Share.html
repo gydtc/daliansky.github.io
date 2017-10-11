@@ -113,7 +113,7 @@
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/BlueTooth.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/USB.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/Power.png">
-<meta property="og:updated_time" content="2017-10-11T13:07:45.000Z">
+<meta property="og:updated_time" content="2017-10-11T13:10:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享">
 <meta name="twitter:description" content="惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。  电脑配置   规格 详细信息     电脑型号 HP ENVY Laptop 13-ad1xx 笔记本电脑   操作">
@@ -379,7 +379,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-11T21:07:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-11T21:10:40+08:00">
                 2017-10-11
               </time>
             
@@ -511,11 +511,8 @@
 <h2 id="完善驱动程序"><a href="#完善驱动程序" class="headerlink" title="完善驱动程序"></a>完善驱动程序</h2><ol>
 <li>声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息；</li>
 <li>网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用；</li>
-<li><p>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。</p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></p>
-</li>
-<li><p>蓝牙使用Intel，工作正常；</p>
-</li>
+<li>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。<br><img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></li>
+<li>蓝牙使用Intel，工作正常；</li>
 <li>电池信息正常；</li>
 <li>触摸板正常工作；</li>
 <li>显示器亮度调节正常；</li>

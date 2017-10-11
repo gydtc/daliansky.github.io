@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Wed, 11 Oct 2017 13:07:45 GMT</pubDate>
+    <pubDate>Wed, 11 Oct 2017 13:10:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -87,11 +87,8 @@
 <h2 id="完善驱动程序"><a href="#完善驱动程序" class="headerlink" title="完善驱动程序"></a>完善驱动程序</h2><ol>
 <li>声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息；</li>
 <li>网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用；</li>
-<li><p>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。</p>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></p>
-</li>
-<li><p>蓝牙使用Intel，工作正常；</p>
-</li>
+<li>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。<br><img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></li>
+<li>蓝牙使用Intel，工作正常；</li>
 <li>电池信息正常；</li>
 <li>触摸板正常工作；</li>
 <li>显示器亮度调节正常；</li>
