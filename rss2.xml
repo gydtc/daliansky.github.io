@@ -18,14 +18,18 @@
       <pubDate>Wed, 11 Oct 2017 11:14:14 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享&quot;&gt;&lt;a href=&quot;#惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享&quot; class=&quot;headerlink&quot; title=&quot;惠普
+        &lt;h1&gt;惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpa
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享"><a href="#惠普HP-ENVY-Laptop-13-ad1xx笔记本电脑安装MacOS手记及EFI分享" class="headerlink" title="惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享"></a>惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享</h1><blockquote>
+      <content:encoded><![CDATA[<h1>惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享</h1>
+<blockquote>
 <p>群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。</p>
 </blockquote>
-<h2 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h2><table>
+<h2>电脑配置</h2>
+<table>
 <thead>
 <tr>
 <th>规格</th>
@@ -76,18 +80,22 @@
 </tbody>
 </table>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/HP_ENVY_Laptop_13-ad1xx.jpg" alt="HP_ENVY_Laptop_13-ad1xx"></p>
-<h2 id="制作EFI"><a href="#制作EFI" class="headerlink" title="制作EFI"></a>制作EFI</h2><ol>
+<h2>制作EFI</h2>
+<ol>
 <li>提取 DSDT/SSDT，制作hotpatch；</li>
 <li>添加独显屏蔽补丁，以适用于其它相似机型；</li>
 <li>添加虚拟网卡驱动，以解决icloud及AppStore登录问题；</li>
 <li>配置其它驱动程序；</li>
 <li>打包EFI。</li>
 </ol>
-<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>制作USB安装盘，替换EFI，进入Clover报错，将Drivers64UEFI目录下的OsxAptioFixDrv-64.efi替换为OsxAptioFix2Drv-64.efi，顺利进入Clover，可以正确识别NVMe SSD以及外置移动硬盘，分区抹盘完成安装，过程顺利。</p>
-<h2 id="完善驱动程序"><a href="#完善驱动程序" class="headerlink" title="完善驱动程序"></a>完善驱动程序</h2><ol>
+<h2>安装过程</h2>
+<p>制作USB安装盘，替换EFI，进入Clover报错，将Drivers64UEFI目录下的OsxAptioFixDrv-64.efi替换为OsxAptioFix2Drv-64.efi，顺利进入Clover，可以正确识别NVMe SSD以及外置移动硬盘，分区抹盘完成安装，过程顺利。</p>
+<h2>完善驱动程序</h2>
+<ol>
 <li>声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息；</li>
 <li>网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用；</li>
-<li>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。<br><img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></li>
+<li>显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装<a href="https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">小米Pro</a>的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。
+<img src="http://ous2s14vo.bkt.clouddn.com/59170000.png" alt="59170000"></li>
 <li>蓝牙使用Intel，工作正常；</li>
 <li>电池信息正常；</li>
 <li>触摸板正常工作；</li>
@@ -95,15 +103,19 @@
 <li>USB端口信息未完善，需要使用SSDT-UIAC.aml进行修改；</li>
 <li>PCI设备信息未修正；</li>
 </ol>
-<h2 id="系统截图"><a href="#系统截图" class="headerlink" title="系统截图"></a>系统截图</h2><p><img src="http://ous2s14vo.bkt.clouddn.com/about.png" alt="about"><br><strong><em> 备注:该截图为显卡未驱动状态 </em></strong></p>
+<h2>系统截图</h2>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/about.png" alt="about">
+*** 备注:该截图为显卡未驱动状态 ***</p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/hw-list.png" alt="hw-list"></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/NVMe.png" alt="NVMe"></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/ALC298_ID28.png" alt="ALC298_ID28"></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/BlueTooth.png" alt="BlueTooth"></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/USB.png" alt="USB"></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/Power.png" alt="Power"></p>
-<h2 id="EFI下载"><a href="#EFI下载" class="headerlink" title="EFI下载"></a>EFI下载</h2><p>链接：<a href="https://pan.baidu.com/s/1o7LJVU6" target="_blank" rel="external">https://pan.baidu.com/s/1o7LJVU6</a> 密码: 请进群索取</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h2>EFI下载</h2>
+<p>链接：<a href="https://pan.baidu.com/s/1o7LJVU6" target="_blank" rel="external">https://pan.baidu.com/s/1o7LJVU6</a> 密码: 请进群索取</p>
+<h2>QQ群:</h2>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html#disqus_thread</comments>
@@ -116,33 +128,49 @@
       <pubDate>Wed, 11 Oct 2017 01:41:29 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势&quot;&gt;&lt;a href=&quot;#将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势&quot; class=&quot;headerlink&quot; title=&quot;将CLOVER引导添加进UEFI
+        &lt;h1&gt;将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;很多网友在安装完 &lt;code&gt;MacOS&lt;/code&gt; 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI B
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势"><a href="#将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势" class="headerlink" title="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势"></a>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</h1><blockquote>
+      <content:encoded><![CDATA[<h1>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</h1>
+<blockquote>
 <p>很多网友在安装完 <code>MacOS</code> 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法</p>
 </blockquote>
-<h2 id="将-MacOS-系统的EFI移动进磁盘的EFI分区里"><a href="#将-MacOS-系统的EFI移动进磁盘的EFI分区里" class="headerlink" title="将 MacOS 系统的EFI移动进磁盘的EFI分区里"></a>将 <code>MacOS</code> 系统的EFI移动进磁盘的EFI分区里</h2><h3 id="单磁盘单-MacOS-系统"><a href="#单磁盘单-MacOS-系统" class="headerlink" title="单磁盘单 MacOS 系统"></a>单磁盘单 <code>MacOS</code> 系统</h3><p>两种方式：</p>
+<h2>将 <code>MacOS</code> 系统的EFI移动进磁盘的EFI分区里</h2>
+<h3>单磁盘单 <code>MacOS</code> 系统</h3>
+<p>两种方式：</p>
 <ol>
 <li>请使用工具： <code>Clover Configurator</code> 或者 <code>ESP Mounter Pro</code>，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可</li>
 <li>使用系统命令 <code>diskutil</code> ，具体操作请<a href="https://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html">移步</a></li>
 </ol>
-<h3 id="单磁盘双系统"><a href="#单磁盘双系统" class="headerlink" title="单磁盘双系统"></a>单磁盘双系统</h3><p>最简单的分区结构是：一个 <code>EFI</code> 分区，一个 <code>MacOS</code> 分区，一个 <code>Windows</code> 分区</p>
+<h3>单磁盘双系统</h3>
+<p>最简单的分区结构是：一个 <code>EFI</code> 分区，一个 <code>MacOS</code> 分区，一个 <code>Windows</code> 分区</p>
 <ul>
 <li>假设你想在同一块磁盘里同时安装 <code>MacOS</code> 和 <code>Windows 10</code> 双系统的话，那么我给你的建议是无论是先安装 <code>MacOS</code> 系统还是先安装 <code>Windows 10</code> 系统，都要在安装完 <code>Windows 10</code> 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 <code>Windows 10</code> 的系统后，它会重新将EFI分区格式化的。</li>
-<li>安装完的 <code>Windows 10</code> 的EFI分区里面会有个EFI的目录，目录里面会包括 <code>BOOT</code> 和 <code>MICROSOFT</code> 这两个目录,它看起来是这样的：<br><img src="http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png" alt="Windows-EFI"></li>
-<li>将U盘里的EFI目录下面的 <code>CLOVER</code> 目录复制到磁盘里的EFI分区EFI目录下<br><img src="http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png" alt="Windows_Clover"></li>
+<li>安装完的 <code>Windows 10</code> 的EFI分区里面会有个EFI的目录，目录里面会包括 <code>BOOT</code> 和 <code>MICROSOFT</code> 这两个目录,它看起来是这样的：
+<img src="http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png" alt="Windows-EFI"></li>
+<li>将U盘里的EFI目录下面的 <code>CLOVER</code> 目录复制到磁盘里的EFI分区EFI目录下
+<img src="http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png" alt="Windows_Clover"></li>
 </ul>
-<p><strong><em> 切记一点：千万不要动另外的Boot和Microsoft目录 </em></strong></p>
-<h3 id="双磁盘双系统"><a href="#双磁盘双系统" class="headerlink" title="双磁盘双系统"></a>双磁盘双系统</h3><p>每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
-<h2 id="将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu"><a href="#将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu" class="headerlink" title="将 CLOVER 引导项添加进 UEFI Boot Option Menu"></a>将 <code>CLOVER</code> 引导项添加进 <code>UEFI Boot Option Menu</code></h2><p>两种方式：</p>
-<h3 id="通过BIOS添加，教程略"><a href="#通过BIOS添加，教程略" class="headerlink" title="通过BIOS添加，教程略"></a>通过BIOS添加，教程略</h3><h3 id="通过-CLOVER-自带的工具添加"><a href="#通过-CLOVER-自带的工具添加" class="headerlink" title="通过 CLOVER 自带的工具添加"></a>通过 <code>CLOVER</code> 自带的工具添加</h3><ol>
-<li>开机进入 <code>CLOVER</code> 引导界面，将光标移动到 <code>Clover Boot Options</code> ，回车进入<br><img src="http://ous2s14vo.bkt.clouddn.com/clover boot options.png" alt="clover boot options"></li>
-<li>选择 <code>Add Clover boot options for all entries</code> 回车<br><img src="http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png" alt="clover-boot-options2"></li>
-<li>拔掉U盘，重新开机，按 <code>Boot</code> 快捷键，你会发现多了很多以 <code>Clover start</code> 开头的引导项，选择 <code>Clover start boot.efi at MAC</code> 即可进入 <code>MacOS</code> 系统<br><img src="http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg" alt="UEFI_Boot"></li>
+<p>*** 切记一点：千万不要动另外的Boot和Microsoft目录 ***</p>
+<h3>双磁盘双系统</h3>
+<p>每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
+<h2>将 <code>CLOVER</code> 引导项添加进 <code>UEFI Boot Option Menu</code></h2>
+<p>两种方式：</p>
+<h3>通过BIOS添加，教程略</h3>
+<h3>通过 <code>CLOVER</code> 自带的工具添加</h3>
+<ol>
+<li>开机进入 <code>CLOVER</code> 引导界面，将光标移动到 <code>Clover Boot Options</code> ，回车进入
+![clover boot options](http://ous2s14vo.bkt.clouddn.com/clover boot options.png)</li>
+<li>选择 <code>Add Clover boot options for all entries</code> 回车
+<img src="http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png" alt="clover-boot-options2"></li>
+<li>拔掉U盘，重新开机，按 <code>Boot</code> 快捷键，你会发现多了很多以 <code>Clover start</code> 开头的引导项，选择 <code>Clover start boot.efi at MAC</code> 即可进入 <code>MacOS</code> 系统
+<img src="http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg" alt="UEFI_Boot"></li>
 </ol>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h3>QQ群:</h3>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html#disqus_thread</comments>
@@ -158,15 +186,20 @@
         &lt;blockquote&gt;
 &lt;p&gt;今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;命令及用法&quot;&gt;&lt;a href=&quot;#命令及用法&quot; class=&quot;headerl
+&lt;h2&gt;命令及用法&lt;/h2&gt;
+&lt;h3&gt;显示gpt分区&lt;/h3&gt;
+&lt;p&gt;命令如下：&lt;/p&gt;
+&lt;
       
       </description>
       
       <content:encoded><![CDATA[<blockquote>
 <p>今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。</p>
 </blockquote>
-<h2 id="命令及用法"><a href="#命令及用法" class="headerlink" title="命令及用法"></a>命令及用法</h2><h3 id="显示gpt分区"><a href="#显示gpt分区" class="headerlink" title="显示gpt分区"></a>显示gpt分区</h3><p>命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">sudo gpt -r show disk0</div><div class="line">    </div><div class="line">       start        size  index  contents</div><div class="line">           0           1         PMBR</div><div class="line">           1           1         Pri GPT header</div><div class="line">           2          32         Pri GPT table</div><div class="line">          34        2014         </div><div class="line">        2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</div><div class="line">      616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</div><div class="line">     1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   190722048      262144         </div><div class="line">   190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</div><div class="line">   387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   788038368      262144         </div><div class="line">   788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</div><div class="line">   789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">   920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">  1000215176           7         </div><div class="line">  1000215183          32         Sec GPT table</div><div class="line">  1000215215           1         Sec GPT header</div></pre></td></tr></table></figure>
+<h2>命令及用法</h2>
+<h3>显示gpt分区</h3>
+<p>命令如下：</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">sudo gpt -r show disk0</div><div class="line">    </div><div class="line">       start        size  index  contents</div><div class="line">           0           1         PMBR</div><div class="line">           1           1         Pri GPT header</div><div class="line">           2          32         Pri GPT table</div><div class="line">          34        2014         </div><div class="line">        2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</div><div class="line">      616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</div><div class="line">     1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   190722048      262144         </div><div class="line">   190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</div><div class="line">   387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   788038368      262144         </div><div class="line">   788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</div><div class="line">   789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">   920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">  1000215176           7         </div><div class="line">  1000215183          32         Sec GPT table</div><div class="line">  1000215215           1         Sec GPT header</div></pre></td></tr></table></figure></p>
 <p>其中：</p>
 <ul>
 <li><code>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</code> 是EFI系统分区(ESP)的标志</li>
@@ -174,22 +207,28 @@
 <li><code>start</code> 是指开始的扇区，这里的数值是: <code>2048</code></li>
 <li><code>size</code>  是指扇区的偏移量，这里的数值是: <code>614400</code></li>
 </ul>
-<h3 id="删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令："><a href="#删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：" class="headerlink" title="删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令："></a>删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：</h3><ul>
+<h3>删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：</h3>
+<ul>
 <li><strong>确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。</strong></li>
-<li>您无法使用 <code>gpt</code> 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 </li>
+<li>您无法使用 <code>gpt</code> 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。</li>
 <li>您可能需要使用 <code>diskutil unmountDisk disk0</code> 卸载任何自动安装的卷，然后再继续执行下面的操作。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt remove -i 1 disk0</div></pre></td></tr></table></figure>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt remove -i 1 disk0</div></pre></td></tr></table></figure></p>
 <ul>
 <li><strong>确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。</strong></li>
 <li>而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引 <code>1</code></li>
 </ul>
-<h3 id="重新添加分区与正确的布局和类型："><a href="#重新添加分区与正确的布局和类型：" class="headerlink" title="重新添加分区与正确的布局和类型："></a>重新添加分区与正确的布局和类型：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure>
+<h3>重新添加分区与正确的布局和类型：</h3>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure></p>
 <p>执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初。</p>
-<h3 id="EFI分区备份到文件，命令如下："><a href="#EFI分区备份到文件，命令如下：" class="headerlink" title="EFI分区备份到文件，命令如下："></a>EFI分区备份到文件，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
-<h3 id="从备份文件恢复到ESP分区，命令如下："><a href="#从备份文件恢复到ESP分区，命令如下：" class="headerlink" title="从备份文件恢复到ESP分区，命令如下："></a>从备份文件恢复到ESP分区，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h2>写在最后</h2>
+<p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初。</p>
+<h3>EFI分区备份到文件，命令如下：</h3>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure></p>
+<h3>从备份文件恢复到ESP分区，命令如下：</h3>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure></p>
+<h2>QQ群:</h2>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html#disqus_thread</comments>
@@ -202,19 +241,30 @@
       <pubDate>Fri, 06 Oct 2017 13:52:35 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;a href=&quot;#MacOS多系统下蓝牙设备的自动连接&quot; class=&quot;headerlink&quot; title=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;/a&gt;MacOS多系统下蓝牙设备的自动连接&lt;/h2&gt;&lt;blockquo
+        &lt;h2&gt;MacOS多系统下蓝牙设备的自动连接&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。
+我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="MacOS多系统下蓝牙设备的自动连接"><a href="#MacOS多系统下蓝牙设备的自动连接" class="headerlink" title="MacOS多系统下蓝牙设备的自动连接"></a>MacOS多系统下蓝牙设备的自动连接</h2><blockquote>
-<p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。<br>我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。<br>我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
+      <content:encoded><![CDATA[<h2>MacOS多系统下蓝牙设备的自动连接</h2>
+<blockquote>
+<p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。
+我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。
+我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
 </blockquote>
-<h3 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h3><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure>
-<p>复制文件[10.13到10.13]：<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
-<p>复制文件[10.13到10.12]<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
+<h3>操作方法：</h3>
+<p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code>
+将该文件复制到另外的MacOS系统，使用命令如下：</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure></p>
+<p>复制文件[10.13到10.13]：
+<code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
+<p>复制文件[10.13到10.12]
+<code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
 <p>这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。</p>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h3>QQ群:</h3>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html#disqus_thread</comments>
@@ -227,11 +277,15 @@
       <pubDate>Fri, 06 Oct 2017 06:46:10 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像&quot; class=&quot;heade
+        &lt;h3&gt;【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4238，支持UEFI启动安装。&lt;/li&gt;
+&lt;li&gt;Clover特别增加笔记本常用屏蔽独
       
       </description>
       
-      <content:encoded><![CDATA[<h3 id="【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13正式版-with-Clover-4221原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像"></a>【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像</h3><ul>
+      <content:encoded><![CDATA[<h3>【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像</h3>
+<ul>
 <li>本镜像采用官方原版app制作，集成Clover 4238，支持UEFI启动安装。</li>
 <li>Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理</li>
 <li>Clover默认config.plist为620/630/640/650；</li>
@@ -242,11 +296,18 @@
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
-<h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/10.13-17A405.png" alt="10.13-17A405"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover.png" alt="Clover"><br><img src="http://ous2s14vo.bkt.clouddn.com/Drivers64UEFI.png" alt="Drivers64UEFI"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover Main Menu.png" alt="Clover Main Menu"><br><img src="http://ous2s14vo.bkt.clouddn.com/About Clover.png" alt="About Clover"></p>
-<h4 id="下载链接-https-pan-baidu-com-s-1o8gIsY2"><a href="#下载链接-https-pan-baidu-com-s-1o8gIsY2" class="headerlink" title="下载链接: https://pan.baidu.com/s/1o8gIsY2"></a>下载链接: <a href="https://pan.baidu.com/s/1o8gIsY2" target="_blank" rel="external">https://pan.baidu.com/s/1o8gIsY2</a></h4><ul>
+<h4>截图：</h4>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/10.13-17A405.png" alt="10.13-17A405">
+<img src="http://ous2s14vo.bkt.clouddn.com/Clover.png" alt="Clover">
+<img src="http://ous2s14vo.bkt.clouddn.com/Drivers64UEFI.png" alt="Drivers64UEFI">
+![Clover Main Menu](http://ous2s14vo.bkt.clouddn.com/Clover Main Menu.png)
+![About Clover](http://ous2s14vo.bkt.clouddn.com/About Clover.png)</p>
+<h4>下载链接: <a href="https://pan.baidu.com/s/1o8gIsY2" target="_blank" rel="external">https://pan.baidu.com/s/1o8gIsY2</a></h4>
+<ul>
 <li>MD5 (macOS High Sierra 10.13(17A405) Installer with Clover 4238.dmg) = 7a6894bad093285ffe6801c55f1a032c</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h4>QQ群:</h4>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html#disqus_thread</comments>
