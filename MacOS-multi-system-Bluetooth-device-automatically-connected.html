@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="MacOS多系统下蓝牙设备的自动连接 因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对  操作方法：经爬帖发现蓝牙设备的配对连接信息文件位">
+<meta name="description" content="MacOS多系统下蓝牙设备的自动连接  因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。 我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。 我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对  操作方法： 经爬帖发现蓝牙设备的配对连接信">
 <meta name="keywords" content="10.12,10.13,蓝牙,BlueTooth,鼠标,Mouse">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MacOS多系统下蓝牙设备的自动连接">
 <meta property="og:url" content="http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="MacOS多系统下蓝牙设备的自动连接 因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对  操作方法：经爬帖发现蓝牙设备的配对连接信息文件位">
+<meta property="og:description" content="MacOS多系统下蓝牙设备的自动连接  因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。 我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。 我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对  操作方法： 经爬帖发现蓝牙设备的配对连接信">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-10-06T14:24:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MacOS多系统下蓝牙设备的自动连接">
-<meta name="twitter:description" content="MacOS多系统下蓝牙设备的自动连接 因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对  操作方法：经爬帖发现蓝牙设备的配对连接信息文件位">
+<meta name="twitter:description" content="MacOS多系统下蓝牙设备的自动连接  因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。 我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。 我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对  操作方法： 经爬帖发现蓝牙设备的配对连接信">
 
 
 
@@ -276,22 +276,26 @@
   
     <div class="site-search">
       
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
   </div>
-  <div id="local-search-result"></div>
-</div>
+
 
 
 
@@ -436,15 +440,23 @@
       
 
       
-        <h2 id="MacOS多系统下蓝牙设备的自动连接"><a href="#MacOS多系统下蓝牙设备的自动连接" class="headerlink" title="MacOS多系统下蓝牙设备的自动连接"></a>MacOS多系统下蓝牙设备的自动连接</h2><blockquote>
-<p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。<br>我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。<br>我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
+        <h2>MacOS多系统下蓝牙设备的自动连接</h2>
+<blockquote>
+<p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。
+我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。
+我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
 </blockquote>
-<h3 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h3><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure>
-<p>复制文件[10.13到10.13]：<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
-<p>复制文件[10.13到10.12]<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
+<h3>操作方法：</h3>
+<p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code>
+将该文件复制到另外的MacOS系统，使用命令如下：</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure></p>
+<p>复制文件[10.13到10.13]：
+<code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
+<p>复制文件[10.13到10.12]
+<code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
 <p>这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。</p>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h3>QQ群:</h3>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -719,7 +731,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MacOS多系统下蓝牙设备的自动连接"><span class="nav-number">1.</span> <span class="nav-text">MacOS多系统下蓝牙设备的自动连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作方法："><span class="nav-number">1.1.</span> <span class="nav-text">操作方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QQ群"><span class="nav-number">1.2.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">MacOS多系统下蓝牙设备的自动连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">操作方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">QQ群:</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1046,6 +1058,19 @@ $('.popup').click(function (e) {
 </script>
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 

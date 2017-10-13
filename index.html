@@ -276,22 +276,26 @@
   
     <div class="site-search">
       
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
   </div>
-  <div id="local-search-result"></div>
-</div>
+
 
 
 
@@ -441,9 +445,11 @@
         
           
           惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享
+
 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。
 
 电脑配置
+
 
 
 规格
@@ -465,7 +471,7 @@ Windows 10 64位 ( DirectX 12 )
 
 
 主板
-惠普 83A8 ( 英特尔 Xeon E3 - 1
+惠普 83A8 ( 英特尔 Xeon E3 -
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -637,14 +643,15 @@ Windows 10 64位 ( DirectX 12 )
         
           
           将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势
+
 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法
 
-将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：
+将 MacOS 系统的EFI移动进磁盘的EFI分区里
+单磁盘单 MacOS 系统
+两种方式：
 
 请使用工具： Clover Configurator 或者 ESP Mounter Pro，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可
-使用系统命令 diskutil ，具体操作请移步
-
-
+使用系统命令 diskutil ，具体操作请移
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -818,8 +825,10 @@ Windows 10 64位 ( DirectX 12 )
           
 今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。
 
-命令及用法显示gpt分区命令如下：
-123456789101112131415161718192021222324sudo gpt -r show disk0           start        size  index  contents           0           1         PMBR           1           1         Pri GPT header           2          32      
+命令及用法
+显示gpt分区
+命令如下：
+123456789101112131415161718192021222324sudo gpt -r show disk0           start        size  index  contents           0           1         PMBR           1           1         Pri GPT header           2          32    
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -991,10 +1000,15 @@ Windows 10 64位 ( DirectX 12 )
         
           
           MacOS多系统下蓝牙设备的自动连接
-因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对
 
-操作方法：经爬帖发现蓝牙设备的配对连接信息文件位于 /private/var/root/Library/Preferences/bluetoothaudiod.plist将该文件复制到另外的MacOS系统，使用命令如下：
-1sudo -s     
+因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。
+我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。
+我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对
+
+操作方法：
+经爬帖发现蓝牙设备的配对连接信息文件位于 /private/var/root/Library/Preferences/bluetoothaudiod.plist
+将该文件复制到另外的MacOS系统，使用命令如下：
+1sudo -s
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1177,10 +1191,11 @@ Windows 10 64位 ( DirectX 12 )
         
           
           【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像
+
 本镜像采用官方原版app制作，集成Clover 4238，支持UEFI启动安装。
 Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理
 Clover默认config.plist为620/630/640/650；
-其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/52
+其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1363,11 +1378,13 @@ Clover默认config.plist为620/630/640/650；
         
           
           [指南]High Sierra全新安装或者升级时禁止进行APFS转换
+
 假设安装的分区为 test ，挂载路径为 /Volumes/test
 
-如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 
-幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/minstallconfig.xml 中的ConvertToAPFS 选项控制。 
-升级升级方案比新安装程序稍微简单一些，因为我们可以运行一个命令行工具，可以使用命令行选项将 ConvertToAPFS
+如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。
+幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/minstallconfig.xml 中的ConvertToAPFS 选项控制。
+升级
+升级方案比新安装程序稍微简单一些，因为我们可以运行一个命令行工具，可以使用命令行选项将 ConvertToAPFS
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1539,10 +1556,15 @@ Clover默认config.plist为620/630/640/650；
         
           
           1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second
+
 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 方式进行独显屏蔽。
 
-使用方法：将 SSDT-Disable-DGPU.aml 复制到 /EFI/CLOVER/ACPI/patched 目录下即可
-下载链接：https://pan.baidu.com/s/1skRcIyL2. 解决安装时提示 OSInstall.mpkg似乎已缺失或已损坏 的问题解决方法：删除 /EFI/CLOVER/driv
+使用方法：
+将 SSDT-Disable-DGPU.aml 复制到 /EFI/CLOVER/ACPI/patched 目录下即可
+下载链接：https://pan.baidu.com/s/1skRcIyL
+2. 解决安装时提示 OSInstall.mpkg似乎已缺失或已损坏 的问题
+解决方法：
+删除 /EFI/CLOVER
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1725,10 +1747,11 @@ Clover默认config.plist为620/630/640/650；
         
           
           【黑果小兵】macOS High Sierra 10.13正式版 with Clover 4221原版镜像
+
 本镜像采用官方原版app制作，集成Clover 4221，支持UEFI启动安装。
 Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理
 Clover默认config.plist为620/630/640/650；
-其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/52
+其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1830,8 +1853,8 @@ Clover默认config.plist为620/630/640/650；
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-12T14:07:35+08:00">
-                2017-10-12
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-13T09:17:23+08:00">
+                2017-10-13
               </time>
             
           </span>
@@ -1900,11 +1923,13 @@ Clover默认config.plist为620/630/640/650；
         
           
           小米笔记本Pro安装10.13随手记
+
 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器
 
-
-安装中遇到的几个难点：无法进入安装界面，需要屏蔽独显卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。
-Clover无法识别苹果分区卷标显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何
+![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png)
+安装中遇到的几个难点：
+无法进入安装界面，需要屏蔽独显
+卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2087,10 +2112,11 @@ Clover无法识别苹果分区卷标显卡的问题解决了，终于进入安�
         
           
           【黑果小兵】macOS High Sierra 10.13GM 17A362a with Clover 4207原版镜像
+
 本镜像采用官方原版app制作，集成Clover 4207，支持UEFI启动安装。
 Clover默认config.plist为620/630/640/650；
 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；
-如果无法引导到安装界面，可于Clo
+如果无法引导到安装界面，可于Cl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2570,6 +2596,19 @@ $('.popup').click(function (e) {
 </script>
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 
