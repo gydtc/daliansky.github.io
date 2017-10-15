@@ -278,26 +278,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -787,8 +783,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Do-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html" rel="next" title="不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区">
-                <i class="fa fa-chevron-left"></i> 不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区
+              <a href="/macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive.html" rel="next" title="【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动">
+                <i class="fa fa-chevron-left"></i> 【黑果小兵】macOS Sierra 10.12.6 16G29 with Clover 4133原版镜像带多驱动
               </a>
             
           </div>
@@ -904,7 +900,7 @@ var jiathis_config={
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1319,19 +1315,6 @@ $('.popup').click(function (e) {
 </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 
