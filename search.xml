@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[clover使用教程]]></title>
     <url>%2Fclover-user-manual.html</url>
-    <content type="text"><![CDATA[Clover使用教程 前言：先将最最基本的操作发出来，然后再写完整的教程 如何打开啰嗦模式进行排错开机进入clover引导界面，在要引导的分区卷标上按 空格 即可进入勾选以下选项：选择 Boot macOS with selected options 启动出现错误画面拍照发群里寻求帮助。 Clover是什么什么是Clover（三叶草）呢？显然它不是指的草地里用来喂牛的草啦。Clover是一个软件，是一个新型的启动器，它能够让普通的PC上用上Mac OS X系统。 苹果公司（Apple）限制Mac OS X系统只能在Apple设备上使用，并且苹果不保证Mac OS X在其它设备上能够正常工作。所以，用户需要承担一定的风险。当然，为了避免其它的法律纠纷，你不应该用作商业用途。装上了Mac OS X的非苹果电脑，就叫做黑苹果(Hackintosh)。 名字的来源启动器的名字 Clover 由一位创建者kabyl命名。他发现了四叶草和Mac键盘上Commmand键的相似之处，由此起了Clover这个名字。 维基百科：四叶草是三叶草的稀有变种。根据西方传统，发现者四叶草意味的是好运，尤其是偶然发现的，更是祥瑞之兆。另外，第一片叶子代表信仰，第二片叶子代表希望，第三片叶子代表爱情，第四片叶子代表运气。 Clover能干什么Clover是一个操作系统启动加载器(boot loader)，能够同时运行于支持EFI方式启动的新式电脑和不支持它的老式电脑上。一些操作系统可以支持以EFI方式启动，比如OS X, Windows 7/8/10 64-bit, Linux；也有不支持的，比如Windows XP，它只能通过传统的BIOS方式来启动，也就是通过启动扇区来启动。 EFI不仅存在于操作系统的启动过程中，它还会创建操作系统可访问的表和服务(tables and services)，操作系统的运行依赖于EFI正确的提供功能。从内建的UEFI来启动OS X是不可能的，用原始的DUET来启动OS X也不可能。CloverEFI和CloverGUI做了大量的工作来修正内部表，让运行OS X成为可能。 译注：DUET(Developer’s UEFI Emulation)，开发者的UEFI模拟 Clover的两种启动方式启动方式A: 基于BIOS的电脑（老式主板）BIOS-&gt;MBR-&gt;PBR-&gt;boot-&gt;CLOVERX64.efi-&gt;OSLoader 启动方式B: 基于UEFI的电脑（新式主板）UEFI-&gt;CLOVERX64.efi-&gt;OSLoader Clover的目录结构QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[Clover的前世今生 前言：先将最最基本的操作发出来，然后再写完整的教程 如何打开啰嗦模式进行排错开机进入clover引导界面，在要引导的分区卷标上按 空格 即可进入勾选以下选项：选择 Boot macOS with selected options 启动出现错误画面拍照发群里寻求帮助。 Clover是什么什么是Clover（三叶草）呢？显然它不是指的草地里用来喂牛的草啦。Clover是一个软件，是一个新型的启动器，它能够让普通的PC上用上Mac OS X系统。 苹果公司（Apple）限制Mac OS X系统只能在Apple设备上使用，并且苹果不保证Mac OS X在其它设备上能够正常工作。所以，用户需要承担一定的风险。当然，为了避免其它的法律纠纷，你不应该用作商业用途。装上了Mac OS X的非苹果电脑，就叫做黑苹果(Hackintosh)。 名字的来源启动器的名字 Clover 由一位创建者kabyl命名。他发现了四叶草和Mac键盘上Commmand键的相似之处，由此起了Clover这个名字。 维基百科：四叶草是三叶草的稀有变种。根据西方传统，发现者四叶草意味的是好运，尤其是偶然发现的，更是祥瑞之兆。另外，第一片叶子代表信仰，第二片叶子代表希望，第三片叶子代表爱情，第四片叶子代表运气。 Clover能干什么Clover是一个操作系统启动加载器(boot loader)，能够同时运行于支持EFI方式启动的新式电脑和不支持它的老式电脑上。一些操作系统可以支持以EFI方式启动，比如OS X, Windows 7/8/10 64-bit, Linux；也有不支持的，比如Windows XP，它只能通过传统的BIOS方式来启动，也就是通过启动扇区来启动。 EFI不仅存在于操作系统的启动过程中，它还会创建操作系统可访问的表和服务(tables and services)，操作系统的运行依赖于EFI正确的提供功能。从内建的UEFI来启动OS X是不可能的，用原始的DUET来启动OS X也不可能。CloverEFI和CloverGUI做了大量的工作来修正内部表，让运行OS X成为可能。 译注：DUET(Developer’s UEFI Emulation)，开发者的UEFI模拟 Clover的两种启动方式启动方式A: 基于BIOS的电脑（老式主板）BIOS-&gt;MBR-&gt;PBR-&gt;boot-&gt;CLOVERX64.efi-&gt;OSLoader 启动方式B: 基于UEFI的电脑（新式主板）UEFI-&gt;CLOVERX64.efi-&gt;OSLoader Clover兼EFI的目录结构 Clover驱动程序详解BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEFI启动过程中（启动方式B）则使用 drivers64UEFI 目录。它们的内容会根据配置和BIOS版本而有所不同。必须要提的一点是这些驱动程序只在bootloader运行时有效，不会影响最终启动的操作系统。至于到底要使用哪些驱动程序由用户来决定。 Drivers64UEFI目录几必备的驱动程序： 驱动程序 详解 apfs.efi 苹果新推出的文件系统，macOS 10.13必备 FSInject.efi 控制文件系统注入kext到系统的可能性。详细解释请参照WithKexts HFSPlus.efi HFS+文件系统驱动程序。这个驱动对于通过启动方式B来启动Mac OS X是必须的。启动方式A中用到的启动程序(CloverEFI)已经包含了这个驱动 OsxAptioFixDrv-64.efi 修复AMI Aptio EFI内存映射。如果没有就不能启动OS X OsxFatBinaryDrv-64.efi 允许加载FAT模块比如boot.efi CsmVideoDxe.efi 比UEFI里提供更多分辨率的显卡驱动(可选) OsxAptioFix2Drv-64.efi 部分机型可能会需要(可选) QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -245,11 +245,11 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
@@ -345,9 +345,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -374,8 +374,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>

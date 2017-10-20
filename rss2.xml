@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 20 Oct 2017 05:26:28 GMT</pubDate>
+    <pubDate>Fri, 20 Oct 2017 05:44:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,12 +18,12 @@
       <pubDate>Fri, 20 Oct 2017 03:19:06 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;Clover使用教程&quot;&gt;&lt;a href=&quot;#Clover使用教程&quot; class=&quot;headerlink&quot; title=&quot;Clover使用教程&quot;&gt;&lt;/a&gt;Clover使用教程&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;前言：&lt;em&gt;先将最最基本的操作发出来，然后再写完
+        &lt;h1 id=&quot;Clover的前世今生&quot;&gt;&lt;a href=&quot;#Clover的前世今生&quot; class=&quot;headerlink&quot; title=&quot;Clover的前世今生&quot;&gt;&lt;/a&gt;Clover的前世今生&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;前言：&lt;em&gt;先将最最基本的操作发出来，然
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="Clover使用教程"><a href="#Clover使用教程" class="headerlink" title="Clover使用教程"></a>Clover使用教程</h2><blockquote>
+      <content:encoded><![CDATA[<h1 id="Clover的前世今生"><a href="#Clover的前世今生" class="headerlink" title="Clover的前世今生"></a>Clover的前世今生</h1><blockquote>
 <p>前言：<em>先将最最基本的操作发出来，然后再写完整的教程</em></p>
 </blockquote>
 <h2 id="如何打开啰嗦模式进行排错"><a href="#如何打开啰嗦模式进行排错" class="headerlink" title="如何打开啰嗦模式进行排错"></a>如何打开啰嗦模式进行排错</h2><p>开机进入clover引导界面，在要引导的分区卷标上按 <code>空格</code> 即可进入<br><img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main"><br><img src="http://ous2s14vo.bkt.clouddn.com/space.png" alt="space"><br>勾选以下选项：<br><img src="http://ous2s14vo.bkt.clouddn.com/space_-v_-alloff_dont reboot.png" alt="space_-v_-alloff_dont reboot"><br>选择 <code>Boot macOS with selected options</code> 启动<br>出现错误画面拍照发群里寻求帮助。</p>
@@ -40,7 +40,47 @@
 </blockquote>
 <h2 id="Clover的两种启动方式"><a href="#Clover的两种启动方式" class="headerlink" title="Clover的两种启动方式"></a>Clover的两种启动方式</h2><p>启动方式A: 基于BIOS的电脑（老式主板）<br><code>BIOS-&gt;MBR-&gt;PBR-&gt;boot-&gt;CLOVERX64.efi-&gt;OSLoader</code></p>
 <p>启动方式B: 基于UEFI的电脑（新式主板）<br><code>UEFI-&gt;CLOVERX64.efi-&gt;OSLoader</code></p>
-<h2 id="Clover的目录结构"><a href="#Clover的目录结构" class="headerlink" title="Clover的目录结构"></a>Clover的目录结构</h2><h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h2 id="Clover兼EFI的目录结构"><a href="#Clover兼EFI的目录结构" class="headerlink" title="Clover兼EFI的目录结构"></a>Clover兼EFI的目录结构</h2><p><img src="http://ous2s14vo.bkt.clouddn.com/EFI.png" alt="EFI"></p>
+<h2 id="Clover驱动程序详解"><a href="#Clover驱动程序详解" class="headerlink" title="Clover驱动程序详解"></a>Clover驱动程序详解</h2><p>BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEFI启动过程中（启动方式B）则使用 <code>drivers64UEFI</code> 目录。它们的内容会根据配置和BIOS版本而有所不同。<br><strong>必须要提的一点是这些驱动程序只在bootloader运行时有效，不会影响最终启动的操作系统。</strong><br>至于到底要使用哪些驱动程序由用户来决定。</p>
+<h3 id="Drivers64UEFI目录几必备的驱动程序："><a href="#Drivers64UEFI目录几必备的驱动程序：" class="headerlink" title="Drivers64UEFI目录几必备的驱动程序："></a>Drivers64UEFI目录几必备的驱动程序：</h3><table>
+<thead>
+<tr>
+<th>驱动程序</th>
+<th>详解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apfs.efi</td>
+<td>苹果新推出的文件系统，macOS 10.13必备</td>
+</tr>
+<tr>
+<td>FSInject.efi</td>
+<td>控制文件系统注入kext到系统的可能性。详细解释请参照WithKexts</td>
+</tr>
+<tr>
+<td>HFSPlus.efi</td>
+<td>HFS+文件系统驱动程序。这个驱动对于通过启动方式B来启动Mac OS X是必须的。启动方式A中用到的启动程序(CloverEFI)已经包含了这个驱动</td>
+</tr>
+<tr>
+<td>OsxAptioFixDrv-64.efi</td>
+<td>修复AMI Aptio EFI内存映射。如果没有就不能启动OS X</td>
+</tr>
+<tr>
+<td>OsxFatBinaryDrv-64.efi</td>
+<td>允许加载FAT模块比如boot.efi</td>
+</tr>
+<tr>
+<td>CsmVideoDxe.efi</td>
+<td>比UEFI里提供更多分辨率的显卡驱动(可选)</td>
+</tr>
+<tr>
+<td>OsxAptioFix2Drv-64.efi</td>
+<td>部分机型可能会需要(可选)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/clover-user-manual.html#disqus_thread</comments>
