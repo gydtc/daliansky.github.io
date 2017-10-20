@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 20 Oct 2017 03:29:21 GMT</pubDate>
+    <pubDate>Fri, 20 Oct 2017 03:44:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,6 +25,18 @@
       
       <content:encoded><![CDATA[<h1 id="Clover使用教程"><a href="#Clover使用教程" class="headerlink" title="Clover使用教程"></a>Clover使用教程</h1><p>先将最最基本的操作发出来，然后再写完整的教程</p>
 <h2 id="如何打开啰嗦模式进行排错"><a href="#如何打开啰嗦模式进行排错" class="headerlink" title="如何打开啰嗦模式进行排错"></a>如何打开啰嗦模式进行排错</h2><p>开机进入clover引导界面，在要引导的分区卷标上按 <code>空格</code> 即可进入<br><img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main"><br><img src="http://ous2s14vo.bkt.clouddn.com/space.png" alt="space"><br>勾选以下选项：<br><img src="http://ous2s14vo.bkt.clouddn.com/space_-v_-alloff_dont reboot.png" alt="space_-v_-alloff_dont reboot"><br>选择 <code>Boot macOS with selected options</code> 启动<br>出现错误画面拍照发群里寻求帮助。</p>
+<h2 id="Clover是什么"><a href="#Clover是什么" class="headerlink" title="Clover是什么"></a>Clover是什么</h2><p>什么是Clover（三叶草）呢？显然它不是指的草地里用来喂牛的草啦。Clover是一个软件，是一个新型的启动器，它能够让普通的PC上用上Mac OS X系统。</p>
+<p>苹果公司（Apple）限制Mac OS X系统只能在Apple设备上使用，并且苹果不保证Mac OS X在其它设备上能够正常工作。所以，用户需要承担一定的风险。当然，为了避免其它的法律纠纷，你不应该用作商业用途。装上了Mac OS X的非苹果电脑，就叫做黑苹果(Hackintosh)。</p>
+<h2 id="名字的来源"><a href="#名字的来源" class="headerlink" title="名字的来源"></a>名字的来源</h2><p>启动器的名字 <code>Clover</code> 由一位创建者kabyl命名。他发现了四叶草和Mac键盘上Commmand键的相似之处，由此起了Clover这个名字。</p>
+<blockquote>
+<p>维基百科：<em>四叶草是三叶草的稀有变种。根据西方传统，发现者四叶草意味的是好运，尤其是偶然发现的，更是祥瑞之兆。另外，第一片叶子代表信仰，第二片叶子代表希望，第三片叶子代表爱情，第四片叶子代表运气。</em></p>
+</blockquote>
+<h2 id="Clover能干什么"><a href="#Clover能干什么" class="headerlink" title="Clover能干什么"></a>Clover能干什么</h2><p>Clover是一个操作系统启动加载器(boot loader)，能够同时运行于支持EFI方式启动的新式电脑和不支持它的老式电脑上。一些操作系统可以支持以EFI方式启动，比如OS X, Windows 7/8/10 64-bit, Linux；也有不支持的，比如Windows XP，它只能通过传统的BIOS方式来启动，也就是通过启动扇区来启动。</p>
+<p>EFI不仅存在于操作系统的启动过程中，它还会创建操作系统可访问的表和服务(tables and services)，操作系统的运行依赖于EFI正确的提供功能。从内建的UEFI来启动OS X是不可能的，用原始的DUET来启动OS X也不可能。CloverEFI和CloverGUI做了大量的工作来修正内部表，让运行OS X成为可能。</p>
+<blockquote>
+<p>译注：<em>DUET(Developer’s UEFI Emulation)，开发者的UEFI模拟</em></p>
+</blockquote>
+<p>先写到这里，下午继续</p>
 <h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
