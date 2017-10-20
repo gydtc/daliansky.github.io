@@ -8,22 +8,24 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 20 Oct 2017 03:44:36 GMT</pubDate>
+    <pubDate>Fri, 20 Oct 2017 05:21:08 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>clover使用教程</title>
-      <link>http://blog.daliansky.net/clover-users-manual.html</link>
-      <guid>http://blog.daliansky.net/clover-users-manual.html</guid>
+      <link>http://blog.daliansky.net/clover-user-manual.html</link>
+      <guid>http://blog.daliansky.net/clover-user-manual.html</guid>
       <pubDate>Fri, 20 Oct 2017 03:19:06 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;Clover使用教程&quot;&gt;&lt;a href=&quot;#Clover使用教程&quot; class=&quot;headerlink&quot; title=&quot;Clover使用教程&quot;&gt;&lt;/a&gt;Clover使用教程&lt;/h1&gt;&lt;p&gt;先将最最基本的操作发出来，然后再写完整的教程&lt;/p&gt;
-&lt;h2 id=&quot;如何打
+        &lt;h1 id=&quot;Clover使用教程&quot;&gt;&lt;a href=&quot;#Clover使用教程&quot; class=&quot;headerlink&quot; title=&quot;Clover使用教程&quot;&gt;&lt;/a&gt;Clover使用教程&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;前言：&lt;em&gt;先将最最基本的操作发出来，然后再写完
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="Clover使用教程"><a href="#Clover使用教程" class="headerlink" title="Clover使用教程"></a>Clover使用教程</h1><p>先将最最基本的操作发出来，然后再写完整的教程</p>
+      <content:encoded><![CDATA[<h1 id="Clover使用教程"><a href="#Clover使用教程" class="headerlink" title="Clover使用教程"></a>Clover使用教程</h1><blockquote>
+<p>前言：<em>先将最最基本的操作发出来，然后再写完整的教程</em></p>
+</blockquote>
 <h2 id="如何打开啰嗦模式进行排错"><a href="#如何打开啰嗦模式进行排错" class="headerlink" title="如何打开啰嗦模式进行排错"></a>如何打开啰嗦模式进行排错</h2><p>开机进入clover引导界面，在要引导的分区卷标上按 <code>空格</code> 即可进入<br><img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main"><br><img src="http://ous2s14vo.bkt.clouddn.com/space.png" alt="space"><br>勾选以下选项：<br><img src="http://ous2s14vo.bkt.clouddn.com/space_-v_-alloff_dont reboot.png" alt="space_-v_-alloff_dont reboot"><br>选择 <code>Boot macOS with selected options</code> 启动<br>出现错误画面拍照发群里寻求帮助。</p>
 <h2 id="Clover是什么"><a href="#Clover是什么" class="headerlink" title="Clover是什么"></a>Clover是什么</h2><p>什么是Clover（三叶草）呢？显然它不是指的草地里用来喂牛的草啦。Clover是一个软件，是一个新型的启动器，它能够让普通的PC上用上Mac OS X系统。</p>
 <p>苹果公司（Apple）限制Mac OS X系统只能在Apple设备上使用，并且苹果不保证Mac OS X在其它设备上能够正常工作。所以，用户需要承担一定的风险。当然，为了避免其它的法律纠纷，你不应该用作商业用途。装上了Mac OS X的非苹果电脑，就叫做黑苹果(Hackintosh)。</p>
@@ -36,11 +38,12 @@
 <blockquote>
 <p>译注：<em>DUET(Developer’s UEFI Emulation)，开发者的UEFI模拟</em></p>
 </blockquote>
-<p>先写到这里，下午继续</p>
+<p>** Clover的两种启动方式<br>启动方式A: 基于BIOS的电脑（老式主板）<br><code>BIOS-&gt;MBR-&gt;PBR-&gt;boot-&gt;CLOVERX64.efi-&gt;OSLoader</code></p>
+<p>启动方式B: 基于UEFI的电脑（新式主板）<br><code>UEFI-&gt;CLOVERX64.efi-&gt;OSLoader</code></p>
 <h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
-      <comments>http://blog.daliansky.net/clover-users-manual.html#disqus_thread</comments>
+      <comments>http://blog.daliansky.net/clover-user-manual.html#disqus_thread</comments>
     </item>
     
     <item>
