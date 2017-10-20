@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 20 Oct 2017 05:44:41 GMT</pubDate>
+    <pubDate>Fri, 20 Oct 2017 06:14:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -56,7 +56,7 @@
 </tr>
 <tr>
 <td>FSInject.efi</td>
-<td>控制文件系统注入kext到系统的可能性。详细解释请参照WithKexts</td>
+<td>控制文件系统注入kext到系统的可能性。详细解释请参照<a href="https://clover-wiki.zetam.org/Configuration#boot-args" target="_blank" rel="external">WithKexts</a></td>
 </tr>
 <tr>
 <td>HFSPlus.efi</td>
@@ -80,7 +80,19 @@
 </tr>
 </tbody>
 </table>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="Clover-Bootloader详解"><a href="#Clover-Bootloader详解" class="headerlink" title="Clover Bootloader详解"></a>Clover Bootloader详解</h1><p>本节会详细介绍Clover各项功能的用法</p>
+<h2 id="Clover主界面"><a href="#Clover主界面" class="headerlink" title="Clover主界面"></a>Clover主界面</h2><p>使用Clover开机引导后，默认的系统界面如下：<br><img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main"></p>
+<p>本例中:</p>
+<ul>
+<li>蓝色图标为 <code>Windows 10</code> 的引导</li>
+<li>绿色图标为 <code>Ubuntu Linux</code> 的引导</li>
+<li>橙色图标为 <code>macOS High Sierra</code> 的引导</li>
+<li>红色图标为 <code>macOS Sierra</code>的引导</li>
+</ul>
+<p>当你想引导到不同的操作系统，只需要移动键盘上的左右键到各自的图标后回车即可。</p>
+<h2 id="帮助菜单-F1"><a href="#帮助菜单-F1" class="headerlink" title="帮助菜单 F1"></a>帮助菜单 F1</h2><p>按 <code>F1</code> 键会呼出 <code>Clover</code> 的帮助信息<br><img src="http://ous2s14vo.bkt.clouddn.com/f1.png" alt="f1"></p>
+<h3 id="ESC-退出子菜单，恢复到主菜单"><a href="#ESC-退出子菜单，恢复到主菜单" class="headerlink" title="ESC 退出子菜单，恢复到主菜单"></a>ESC 退出子菜单，恢复到主菜单</h3><h3 id="F1-帮助"><a href="#F1-帮助" class="headerlink" title="F1 帮助"></a>F1 帮助</h3><h3 id="F2-保存-preboot-log-到-EFI-CLOVER-misc-目录下，以便于您排错"><a href="#F2-保存-preboot-log-到-EFI-CLOVER-misc-目录下，以便于您排错" class="headerlink" title="F2 保存 preboot.log 到 EFI/CLOVER/misc/ 目录下，以便于您排错"></a>F2 保存 <code>preboot.log</code> 到 <code>EFI/CLOVER/misc/</code> 目录下，以便于您排错</h3><h3 id="F3-显示-被隐藏-的入口"><a href="#F3-显示-被隐藏-的入口" class="headerlink" title="F3 显示 被隐藏 的入口"></a>F3 显示 <code>被隐藏</code> 的入口</h3><p>比如你在 <code>config.plist</code> 中隐藏了 <code>Recovery HD</code> 当你想进入恢复模式的时候，可以不需要修改 <code>config.plist</code> 而直接按 <code>F3</code> 显示出那些被你隐藏的引导项</p>
+<h3 id="F4-提取-DSDT-保存到-EFI-CLOVER-ACPI-origin"><a href="#F4-提取-DSDT-保存到-EFI-CLOVER-ACPI-origin" class="headerlink" title="F4 提取 DSDT 保存到 EFI/CLOVER/ACPI/origin/"></a>F4 提取 <code>DSDT</code> 保存到 <code>EFI/CLOVER/ACPI/origin/</code></h3><h3 id="F5-提取修正过的-DSDT-保存到-EFI-CLOVER-ACPI-origin"><a href="#F5-提取修正过的-DSDT-保存到-EFI-CLOVER-ACPI-origin" class="headerlink" title="F5 提取修正过的 DSDT 保存到 EFI/CLOVER/ACPI/origin/"></a>F5 提取修正过的 <code>DSDT</code> 保存到 <code>EFI/CLOVER/ACPI/origin/</code></h3><h3 id="F6-提取显卡ROM-VideoBios-保存到-EFI-CLOVER-misc"><a href="#F6-提取显卡ROM-VideoBios-保存到-EFI-CLOVER-misc" class="headerlink" title="F6 提取显卡ROM VideoBios 保存到 EFI/CLOVER/misc/"></a>F6 提取显卡ROM <code>VideoBios</code> 保存到 <code>EFI/CLOVER/misc/</code></h3><h3 id="F10-截屏，截取当前界面，保存到-EFI-CLOVER-misc"><a href="#F10-截屏，截取当前界面，保存到-EFI-CLOVER-misc" class="headerlink" title="F10 截屏，截取当前界面，保存到 EFI/CLOVER/misc/"></a>F10 截屏，截取当前界面，保存到 <code>EFI/CLOVER/misc/</code></h3><h3 id="空格-选定菜单项的详细信息"><a href="#空格-选定菜单项的详细信息" class="headerlink" title="空格 选定菜单项的详细信息"></a>空格 选定菜单项的详细信息</h3><h3 id="数字-1-9-菜单项的快捷键"><a href="#数字-1-9-菜单项的快捷键" class="headerlink" title="数字 1-9 菜单项的快捷键"></a>数字 1-9 菜单项的快捷键</h3><h3 id="A-关于-Clover"><a href="#A-关于-Clover" class="headerlink" title="A 关于 Clover"></a>A 关于 <code>Clover</code></h3><h3 id="O-Clover-选项"><a href="#O-Clover-选项" class="headerlink" title="O Clover 选项"></a>O <code>Clover</code> 选项</h3><h3 id="R-软复位"><a href="#R-软复位" class="headerlink" title="R 软复位"></a>R 软复位</h3><h3 id="U-退出"><a href="#U-退出" class="headerlink" title="U 退出"></a>U 退出</h3><h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/clover-user-manual.html#disqus_thread</comments>
