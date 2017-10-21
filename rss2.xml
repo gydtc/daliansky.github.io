@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sat, 21 Oct 2017 09:22:47 GMT</pubDate>
+    <pubDate>Sat, 21 Oct 2017 11:14:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -298,7 +298,7 @@
 </li>
 </ul>
 <h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>Clover Bootloader的使用暂时先写到这里，还有更多的用法等着我们去发掘。您有什么想法或者需要补充的，请点击下面的QQ群与我联系更新。</p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>整整写了一天还没写完，如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>整整写了两天的博文，如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
 <h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
@@ -397,7 +397,8 @@
 <p><img src="http://ous2s14vo.bkt.clouddn.com/USB.png" alt="USB"></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/Power.png" alt="Power"></p>
 <h2 id="EFI下载"><a href="#EFI下载" class="headerlink" title="EFI下载"></a>EFI下载</h2><p>链接：<a href="https://pan.baidu.com/s/1o7LJVU6" target="_blank" rel="external">https://pan.baidu.com/s/1o7LJVU6</a> 密码: 请进群索取</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html#disqus_thread</comments>
@@ -436,7 +437,8 @@
 <li>选择 <code>Add Clover boot options for all entries</code> 回车<br><img src="http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png" alt="clover-boot-options2"></li>
 <li>拔掉U盘，重新开机，按 <code>Boot</code> 快捷键，你会发现多了很多以 <code>Clover start</code> 开头的引导项，选择 <code>Clover start boot.efi at MAC</code> 即可进入 <code>MacOS</code> 系统<br><img src="http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg" alt="UEFI_Boot"></li>
 </ol>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html#disqus_thread</comments>
@@ -449,14 +451,11 @@
       <pubDate>Sat, 07 Oct 2017 14:39:16 GMT</pubDate>
       <description>
       
-        &lt;blockquote&gt;
-&lt;p&gt;今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;命令及用法&quot;&gt;&lt;a href=&quot;#命令及用法&quot; class=&quot;headerl
+        &lt;h1 id=&quot;MacOS系统下使用gpt命令修复损坏的EFI分区&quot;&gt;&lt;a href=&quot;#MacOS系统下使用gpt命令修复损坏的EFI分区&quot; class=&quot;headerlink&quot; title=&quot;MacOS系统下使用gpt命令修复损坏的EFI分区&quot;&gt;&lt;/a&gt;MacOS系统下使用g
       
       </description>
       
-      <content:encoded><![CDATA[<blockquote>
+      <content:encoded><![CDATA[<h1 id="MacOS系统下使用gpt命令修复损坏的EFI分区"><a href="#MacOS系统下使用gpt命令修复损坏的EFI分区" class="headerlink" title="MacOS系统下使用gpt命令修复损坏的EFI分区"></a>MacOS系统下使用gpt命令修复损坏的EFI分区</h1><blockquote>
 <p>今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。</p>
 </blockquote>
 <h2 id="命令及用法"><a href="#命令及用法" class="headerlink" title="命令及用法"></a>命令及用法</h2><h3 id="显示gpt分区"><a href="#显示gpt分区" class="headerlink" title="显示gpt分区"></a>显示gpt分区</h3><p>命令如下：</p>
@@ -480,10 +479,11 @@
 </ul>
 <h3 id="重新添加分区与正确的布局和类型："><a href="#重新添加分区与正确的布局和类型：" class="headerlink" title="重新添加分区与正确的布局和类型："></a>重新添加分区与正确的布局和类型：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure>
 <p>执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初。</p>
-<h3 id="EFI分区备份到文件，命令如下："><a href="#EFI分区备份到文件，命令如下：" class="headerlink" title="EFI分区备份到文件，命令如下："></a>EFI分区备份到文件，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
-<h3 id="从备份文件恢复到ESP分区，命令如下："><a href="#从备份文件恢复到ESP分区，命令如下：" class="headerlink" title="从备份文件恢复到ESP分区，命令如下："></a>从备份文件恢复到ESP分区，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="dd命令的基本用法"><a href="#dd命令的基本用法" class="headerlink" title="dd命令的基本用法"></a>dd命令的基本用法</h1><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初。</p>
+<h2 id="EFI分区备份到文件，命令如下："><a href="#EFI分区备份到文件，命令如下：" class="headerlink" title="EFI分区备份到文件，命令如下："></a>EFI分区备份到文件，命令如下：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
+<h2 id="从备份文件恢复到ESP分区，命令如下："><a href="#从备份文件恢复到ESP分区，命令如下：" class="headerlink" title="从备份文件恢复到ESP分区，命令如下："></a>从备份文件恢复到ESP分区，命令如下：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html#disqus_thread</comments>
@@ -496,19 +496,20 @@
       <pubDate>Fri, 06 Oct 2017 13:52:35 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;a href=&quot;#MacOS多系统下蓝牙设备的自动连接&quot; class=&quot;headerlink&quot; title=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;/a&gt;MacOS多系统下蓝牙设备的自动连接&lt;/h2&gt;&lt;blockquo
+        &lt;h1 id=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;a href=&quot;#MacOS多系统下蓝牙设备的自动连接&quot; class=&quot;headerlink&quot; title=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;/a&gt;MacOS多系统下蓝牙设备的自动连接&lt;/h1&gt;&lt;blockquo
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="MacOS多系统下蓝牙设备的自动连接"><a href="#MacOS多系统下蓝牙设备的自动连接" class="headerlink" title="MacOS多系统下蓝牙设备的自动连接"></a>MacOS多系统下蓝牙设备的自动连接</h2><blockquote>
+      <content:encoded><![CDATA[<h1 id="MacOS多系统下蓝牙设备的自动连接"><a href="#MacOS多系统下蓝牙设备的自动连接" class="headerlink" title="MacOS多系统下蓝牙设备的自动连接"></a>MacOS多系统下蓝牙设备的自动连接</h1><blockquote>
 <p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。<br>我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。<br>我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
 </blockquote>
-<h3 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h3><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
+<h2 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h2><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure>
 <p>复制文件[10.13到10.13]：<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
 <p>复制文件[10.13到10.12]<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
 <p>这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。</p>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html#disqus_thread</comments>
