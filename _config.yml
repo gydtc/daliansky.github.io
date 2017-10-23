@@ -16,7 +16,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: ':lang'
-skip_render: null
+skip_render: README.md
 new_post_name: ':title.md'
 default_layout: post
 titlecase: false
@@ -49,7 +49,7 @@ feed:
   type: rss2
   path: rss2.xml
   limit: 5
-  hub: 
+  hub:
   content: 'true'
 
 search:

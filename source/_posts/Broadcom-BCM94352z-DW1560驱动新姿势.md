@@ -15,22 +15,22 @@ categories:
 - 教程
 ---
 
-### Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]
+# Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]
 引言
 > 
 > * 昨晚[口袋妖怪](https://github.com/pmheart)进群闲聊的时候提到过 `她` 之前维护的[BrcmWLFixup](https://github.com/PMheart/BrcmWLFixup)已被 [AirportBrcmFixup](https://sourceforge.net/p/airportbrcmfixup/) 取代。同时 `她` 发给我的[AirportBrcmFixup/kern_brcmfx.cpp](https://sourceforge.net/p/airportbrcmfixup/code/HEAD/tree/trunk/AirportBrcmFixup/kern_brcmfx.cpp#l242)源码中已经增加了包括 `_si_pmu_fvco_pllreg` / `Chip identificator checking patch` / `Wi-Fi 5 Ghz/Country code patch (required for 10.11)` / `Third party device patch` / `White list restriction patch` / `Failed PCIe configuration (device-id checking)` 等问题的修复补丁
 > * 之前我写的一篇[教程](https://blog.daliansky.net/Broadcom-WiFi-BlueTooth-BCM94352z-DW1560-the%20correct-drive-posture.html)已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果
 
-#### 问题的提出：
+## 问题的提出：
 
 黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似`TeamViewer`或者`向日葵`之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。
 
 * 在macOS上，当使用BMC94532z NGFF WiFi卡时，`AirportBrcm4360.kext`不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 
 
-### 解决方案：同时支持10.11-10.13系统
+## 解决方案：同时支持10.11-10.13系统
 
 
-#### Clover设置：
+### Clover设置：
 * 使用应用程序`Clover Configurator`
 * 在`Clover` - `Devices` - `FakeID` - `WIFI`中添加仿冒ID: `0x43a014e4`
 * 在`Clover` - `KextsToPatch` 应用以下补丁，以使BCM94352z启用蓝牙：
@@ -63,7 +63,7 @@ Replace:    41be0f00 0000eb44
 			</dict>
 ```
   
-#### 驱动：
+### 驱动：
 > 下载：[RehabMan-FakePCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads) [RehabMan-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads) [AirportBrcmFixup](https://sourceforge.net/p/airportbrcmfixup/)
 
 1. 将文件`BrcmFirmwareData.kext`和`BrcmPatchRAM2.kext`复制到`/EFI/CLOVER/kexts/Other`目录下
@@ -81,10 +81,14 @@ sudo touch /System/Library/Extensions/ && sudo kextcache -u /
 ```
 重启你的系统，检查WIFI/蓝牙是否工作正常。
 
-#### 写在最后
+## 写在最后
 这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。
 
-#### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

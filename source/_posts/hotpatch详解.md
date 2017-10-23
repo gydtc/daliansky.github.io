@@ -10,17 +10,17 @@ tags:
 - DSDT
 - SSDT
 ---
-## hotpatch详解
+# hotpatch详解
 这里阐述hotpatch的作用及各功能详解
 
 [TOC]<!--more-->
 
-#### 核心文件
+## 核心文件
 | 名称 | 解释 |
 | --- | --- |
 |SSDT-Config|SSDT控制入口文件|
 
-#### 系统
+## 系统
 | 名称 | 解释 |
 | --- | --- |
 |SSDT-LPC|      正确识别LPC总线到系统|
@@ -28,7 +28,7 @@ tags:
 |SSDT-DMAC|     将DMA控制器公开给系统|
 |SSDT-MCHC|     将内存控制器暴露在系统中|
 
-#### 显卡
+## 显卡
 | 名称 | 解释 |
 | --- | --- |
 |SSDT-IGPU|       将属性添加到集成显卡设备，可以实现HDMI音频以及正确显示|
@@ -37,14 +37,14 @@ tags:
 |SSDT-BRT6|       将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码|
 |SSDT-Dell_FN|    将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码<br>【部分DELL机型】|
 |SSDT-PNLF|       显示器亮度控制，为IntelBacklight.kext或AppleBacklight.kext + AppleBacklightInjector.kext添加PNLF设备|
-#### 声卡
+## 声卡
 
 | 名称 | 解释 |
 | --- | --- |
 |SSDT-HDAU|       自动注入HDAU属性 备注：适用于Haswell和Broadwell平台|
 |SSDT-HDEF|       自动注入HDEF属性 声卡layoutid注入点|
 
-#### 睡眠相关
+## 睡眠相关
 | 名称 | 解释 |
 | --- | --- |
 |SSDT-GPRW|       通过挂接GPRW或UPRW来解决即时唤醒|
@@ -55,7 +55,7 @@ tags:
 
 
 
-#### 其它杂项
+## 其它杂项
 
 | 名称 | 解释 |
 | --- | --- |
@@ -67,8 +67,11 @@ tags:
 |SSDT-XHC|自动注入XHC属性|
 |SSDT-XOSI|覆盖主机定义的_OSI来处理“Darwin”...<br>DSDT中的所有_OSI调用都被路由到XOSI<br>XOSI模拟“Windows 2009”（这是Windows 7）<br>XOSI模拟“Windows 2015”（这是Windows 10）<br>[这里是关于_OSI中微软操作系统的描述文件](http://download.microsoft.com/download/7/E/7/7E7662CF-CBEA-470B-A97E-CE7CE0D98DC2/WinACPI_OSI.docx)|
 
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
-#### QQ群：
+# QQ群：
 > 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

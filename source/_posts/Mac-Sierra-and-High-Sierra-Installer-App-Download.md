@@ -12,16 +12,20 @@ tags:
 ---
 
 
-### Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载
+# Mac Sierra(10.12.6)和High Sierra(10.13)安装文件下载
 > 需要在Mac系统下通过`App Store`进行下载
 
-#### Mac Sierra(10.12.6)正式版下载链接：
+## Mac Sierra(10.12.6)正式版下载链接：
 [https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12](https://itunes.apple.com/cn/app/macos-sierra/id1127487414?mt=12)
 
-#### Mac High Sierra(10.13)正式版下载链接：
+## Mac High Sierra(10.13)正式版下载链接：
 [https://itunes.apple.com/cn/app/macos-high-sierra/id1246284741?mt=12](https://itunes.apple.com/cn/app/macos-high-sierra/id1246284741?mt=12)
 
-#### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

@@ -18,7 +18,7 @@ categories:
 > hda-verb的由来
 > hda-verb是linux下面的`alsa-project`的一条命令，它的作用是发送`HD-audio`命令。
 
-#### 命令格式：
+## 命令格式：
 
 * linux:
     * `% hda-verb /dev/snd/hwC0D0 0x12 0x701 2` 
@@ -120,7 +120,7 @@ hda-verb for CodecCommander (based on alsa-tools hda-verb)
 |VOL_KNB_CAP                | 0x13|
 
 
-#### 例子：
+## 例子：
 设置节点0x19参数为SET_PIN_WIDGET_CONTROL，值为0x24
 
 ```sh
@@ -145,12 +145,16 @@ $ hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25
 $ hda-verb 0x21 SET_UNSOLICITED_ENABLE 0x83
 ```
 
-#### 备注：
+## 备注：
 > 字符串不区分大小写
 > 此外，它不一定是完整的字符串，但只能是唯一的
 > 例如 `par`和`PARAMETER`的参数是相同的
 > `set_a`就足以代替`SET_AMP_GAIN_MUTE`
 
-#### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 

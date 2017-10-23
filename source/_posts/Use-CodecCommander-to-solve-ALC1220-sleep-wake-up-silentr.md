@@ -11,11 +11,11 @@ tags:
 - CodecCommander
 ---
 
-#### 使用CodecCommander解决ALC1220唤醒无声
-##### AppleALC info.plist
+# 使用CodecCommander解决ALC1220唤醒无声
+## AppleALC info.plist
 f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01
 
-##### 解决过程
+## 解决过程
 1. 整理pinconfig:
    屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽
 2. 整理出两条cc命令：
@@ -46,9 +46,13 @@ Custom Commands
 ||||
 更多`hda-verb`的用法请前往[hda-verb参数详表](https://blog.daliansky.net/hda-verb-parameter-detail-table.html)
 
-##### 收工
+## 收工
 
-#### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

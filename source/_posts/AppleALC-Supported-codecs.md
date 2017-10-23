@@ -9,7 +9,7 @@ tags:
 categories:
 - 教程
 ---
-#### 如何使用AppleALC
+# 如何使用AppleALC
 如果您的编解码器[支持](https://github.com/vit9696/AppleALC/wiki/Supported-codecs)，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在`AppleHDA`之前加载`AppleALC`（有关更多详细信息，请参阅`sudo kextstat`输出）。
 
 **请注意**，[Lilu](https://github.com/vit9696/Lilu) 也必须出现在`AppleALC`上。
@@ -18,7 +18,7 @@ categories:
 
 备注：`AppleALC`不处理`layout-id`值，它希望你提供正确的DSDT(SSDT)。
 
-#### 如何控制AppleALC
+# 如何控制AppleALC
 
 `AppleALC`接受不同的引导参数来控制其行为：
 
@@ -28,7 +28,7 @@ categories:
 * `-x`或`-s` - 也将禁用AppleALC。
 * 所有[Lilu](https://github.com/vit9696/Lilu)启动参数都会影响AppleALC。
 
-#### 如何提取调试日志
+# 如何提取调试日志
 
 在使用`-alcdbg -liludbg`引导后，在终端`Terminal`中运行以下命令并保存输出。
 
@@ -42,7 +42,7 @@ categories:
 
 
 
-#### 附：AppleALC支持的编解码器列表
+# 附：AppleALC支持的编解码器列表
 | Vendor | Codec | Revisions | MinKernel | MaxKernel |
 |--------|-------|-----------|-----------|-----------|
 | Creative | [CA0132](https://github.com/vit9696/AppleALC/tree/master/Resources/CA0132)| 0x100918 layout 0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12 | 13 (10.9) | — |
@@ -138,10 +138,14 @@ categories:
 | Intel  | [HD630 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x59120000 | 15 (10.11) | — |
 | AMD  | [Radeon 290/290X](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| | 15 (10.11) | — |
 
-#### 扩展阅读：
+# 扩展阅读：
 [Lilu支持的内核参数及插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)
 
-#### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

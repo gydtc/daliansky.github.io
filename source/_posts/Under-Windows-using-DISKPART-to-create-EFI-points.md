@@ -12,10 +12,10 @@ tags:
 - ESP
 ---
 
-### Windows下使用diskpart建立EFI分区及挂载EFI分区
+# Windows下使用diskpart建立EFI分区及挂载EFI分区
 很多人在安装黑苹果的时候都需要在`Windows`下使用[DiskGenius](www.diskgenius.cn/download.php)进行分区，其实在`Windows 7`及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：`diskpart`
 
-#### 创建EFI分区
+## 创建EFI分区
 > 以下操作假设磁盘未分区没有其它数据
 
 ```sh
@@ -25,7 +25,7 @@ select disk n   # 选择需要制作EFI分区的磁盘，n为磁盘号
 create partition efi size=300   # efi分区大小为300Mb
 ```
 
-#### 挂载EFI分区
+## 挂载EFI分区
 
 ```sh
 diskpart
@@ -38,6 +38,10 @@ assign letter=X     # x为efi分区盘符
 打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式
 以后再操作EFI分区请重复输入上述命令
 
-### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 

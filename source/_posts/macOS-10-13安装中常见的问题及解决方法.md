@@ -14,7 +14,7 @@ tags:
 categories:
 - 教程
 ---
-
+# macOS 10.13安装中常见的问题及解决方法
 ## 1. 安装10.13时卡在`Service only ran for 0 seconds. Pushing respawn out by 10 second`
 > 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 `hotpatch` 方式进行独显屏蔽。
 
@@ -147,10 +147,13 @@ ioreg -l | grep "DisplayProductID"
 
 ## 写在最后
 > 本文会不定期更新
-> 最后更新：10-1-2017
+> 最后更新：10-19-2017
 
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
-## QQ群:
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

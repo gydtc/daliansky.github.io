@@ -18,7 +18,8 @@ categories:
 - 教程
 ---
 
-#### HD520/HD530/HD620/HD630显卡驱动的正确姿势
+# [持续更新] 黑苹果常见问题
+## HD520/HD530/HD620/HD630显卡驱动的正确姿势
 * 在CLOVER里注入platform-id，下表是整理出的部分资料供参考；更详细的资料请[移步](https://blog.daliansky.net/2017/08/31/Intel-core-display-platformID-finishing/#more)
 
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | HDMI |
@@ -35,17 +36,17 @@ categories:
 * 还需要在`CLOVER/kexts/Other`放入[Lilu.kext](https://github.com/vit9696/Lilu/releases)和[IntelGraphicsFixup.kext](https://sourceforge.net/projects/intelgraphicsfixup/)，其它的基于`Lilu`的插件列表请稳步：[Lilu插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)
 * 更多的`platform-id`请移步：[黑苹果必备：Intel核显platform ID整理](https://blog.daliansky.net/2017/08/31/Intel-core-display-platformID-finishing/#more)
 
-#### `系统偏好设置`里的`触控板`设置是空白的
+## `系统偏好设置`里的`触控板`设置是空白的
 * 请更新`VoodooPS2Controller.kext`到1.8.25或以上版本，[VoodooPS2Controller.kext下载链接](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller)
  
-#### HD4400 / HD4600在Safari浏览器播放视频崩溃
+## HD4400 / HD4600在Safari浏览器播放视频崩溃
 * 在`CLOVER/kexts/Other`放入[Lilu.kext](https://github.com/vit9696/Lilu/releases)和[IntelGraphicsFixup.kext](https://sourceforge.net/projects/intelgraphicsfixup/)
 * 还有可能会需要[IntelGraphicsDVMTFixup](https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup)
 ![lilu+IntelGraphicsFixup](http://ous2s14vo.bkt.clouddn.com/lilu+IntelGraphicsFixup.png)
 
 > 延伸阅读：其它的基于`Lilu`的插件列表请稳步：[Lilu插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)
 
-#### Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后/暂停/无响应
+## Haswell（和Broadwell）在引导后不久（睡眠醒来后）滞后/暂停/无响应
 * 登录后不久（有些在登录之前），鼠标和/或图形可能看起来没有反应。 这通常在大约20秒后清除。 从睡眠醒来后观察到相同的效果。
 * 这似乎只影响了Haswell的图形硬件。
 * 可能与SMBIOS的变化有关，当使用MacBookPro11,2与之前版本的OS X / macOS时，观察到类似的效果。 但现在的问题也出现在MacBookAir6,2和MacBookPro11,1上。
@@ -100,7 +101,7 @@ Replace:    02040900 00080000 87000000 FF000000 01000000 40000000
 ```
 >结果：登录后睡眠不再滞后。
 
-#### 解决10.13(High Sierra)/10.12(Sierra) Clover开机出现8个苹果
+## 解决10.13(High Sierra)/10.12(Sierra) Clover开机出现8个苹果
 使用`Clover Configurator`打开`config.plist` - `Kernel and Kext Patches` - `KextsToPatch`，新添加：
 
 ```sh
@@ -159,9 +160,13 @@ MatchOS:    10.13.x
 			</dict>
 ```
 
-### 未完待续
+## 未完待续
 
-#### QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 

@@ -12,6 +12,8 @@ categories:
 - 教程
 ---
 
+# MacOS系统下使用gpt命令修复损坏的EFI分区
+
 > 今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。
 
 ## 命令及用法
@@ -71,21 +73,25 @@ sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk
 ```
 执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。
 
-## 写在最后
+# dd命令的基本用法
 其实在做修复之前，也可以使用 `dd` 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 *玩坏* 后可以恢复如初。
 
-### EFI分区备份到文件，命令如下：
+## EFI分区备份到文件，命令如下：
 
 ```sh
 sudo dd if=/dev/rdisk0s1 of=~/Desktop/ESP.img   # 将EFI分区备份到用户目录-桌面，文件名为：ESP.img
 ```
 
-### 从备份文件恢复到ESP分区，命令如下：
+## 从备份文件恢复到ESP分区，命令如下：
 
 ```sh
 sudo dd if=~/Desktop/ESP.img of=/dev/rdisk0s1   # 将备份文件ESP.img恢复到EFI分区
 ```
 
-## QQ群:
+# 关于打赏
+您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
+
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 

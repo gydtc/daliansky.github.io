@@ -12,13 +12,13 @@ tags:
 ---
 
 # 黑苹果必备：Intel核显platform ID整理
-### 本文的由来
+## 本文的由来
 > 经常有网友进群问某某机型需要注入哪个`platform-id`才能正确地驱动显卡，每到这个时候，我都需要翻出`Clover`自带的`gma.c`查找显卡参数。于是我就想把它整理出来方便大家查询，`markdown`的表格排版对我来说是一种考验，但更像是一种折磨。还好还好，它没花费我太长的时间。
 
 -------
 
 
-### sandy bridge平台
+## sandy bridge平台
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | HDMI |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Intel HD Graphics 3000 | 0x00010000 | MacBookPro8,1 | 4 | 1 | 3 |  |
@@ -44,7 +44,7 @@ UINT8 sandy_bridge_hd_vals[13][4] = {
 };
 ```
 
-### ivy bridge平台
+## ivy bridge平台
 
 | 型号 | platform-id | 机型 | 接口 |LVDS | DP | HDMI |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -66,7 +66,7 @@ UINT8 ivy_bridge_hd_vals[1][4] = {
 };
 ```
 
-### haswell平台
+## haswell平台
 
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | eDP | HDMI |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -93,7 +93,7 @@ UINT8 haswell_hd_vals[1][4] = {
 };
 ```
 
-### broadwell平台
+## broadwell平台
 
 | 显卡型号 | platform-id | 机型 | 接口  | LVDS  | DP | eDP | HDMI |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -128,7 +128,7 @@ UINT8 broadwell_hd_vals[2][4] = {
 };
 ```
 
-### skylake平台
+## skylake平台
 
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | HDMI |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -161,7 +161,7 @@ UINT8 skylake_hd_vals[8][4] = {
 };
 ```
 
-### kabylake平台
+## kabylake平台
 
 
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | HDMI |
@@ -193,7 +193,7 @@ UINT8 kabylake_hd_vals[8][4] = {
 };
 ```
 
-### 新增平台
+## 新增平台
 
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | HDMI |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -204,7 +204,7 @@ UINT8 kabylake_hd_vals[8][4] = {
 | Intel UHD Graphics 630 | 0x3e920000 | Desktop | | | | |
 
 
-### 已知GPU的列表
+## 已知GPU的列表
 ```js
 static struct gma_gpu_t KnownGPUS[] = {
 
@@ -611,12 +611,16 @@ static struct gma_gpu_t KnownGPUS[] = {
 };
 ```
 
-### 写在最后
+## 写在最后
 > 本文会不间断更新
 > 最后更新：10-1-2017
 
+# 关于打赏
+您的支持就是我更新的动力！
+本篇文章会持续不间断更新，每个Clover的更新日志都需要阅读，如果有新的platform-id，我都会第一时间添加进来。
+so，如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
-#### QQ群:
+# QQ群:
 331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
 
