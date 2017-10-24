@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sat, 21 Oct 2017 11:14:15 GMT</pubDate>
+    <pubDate>Tue, 24 Oct 2017 01:27:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -99,7 +99,8 @@
 </li>
 <li><p>F3 显示 <code>被隐藏</code> 的入口</p>
 <ul>
-<li>比如你在 <code>config.plist</code> 中隐藏了 <code>Recovery HD</code> 当你想进入恢复模式的时候，可以不需要修改 <code>config.plist</code> 而直接按 <code>F3</code> 显示出那些被你隐藏的引导项。如下图：<br><img src="http://ous2s14vo.bkt.clouddn.com/f3.png" alt="f3"></li>
+<li>比如你在 <code>config.plist</code> 中隐藏了 <code>Recovery HD</code><br><img src="http://ous2s14vo.bkt.clouddn.com/HideVolume.png" alt="HideVolume"></li>
+<li>当你想进入恢复模式的时候，可以不需要修改 <code>config.plist</code> 而直接按 <code>F3</code> 显示出那些被你隐藏的引导项。如下图：<br><img src="http://ous2s14vo.bkt.clouddn.com/f3.png" alt="f3"></li>
 </ul>
 </li>
 <li><p>F4 提取 <code>DSDT</code> 保存到 <code>EFI/CLOVER/ACPI/origin/</code></p>
