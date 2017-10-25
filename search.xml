@@ -31,7 +31,7 @@
   <entry>
     <title><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势]]></title>
     <url>%2FAdd-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</url>
-    <content type="text"><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法 将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式： 请使用工具： Clover Configurator 或者 ESP Mounter Pro，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可 使用系统命令 diskutil ，具体操作请移步 单磁盘双系统最简单的分区结构是：一个 EFI 分区，一个 MacOS 分区，一个 Windows 分区 假设你想在同一块磁盘里同时安装 MacOS 和 Windows 10 双系统的话，那么我给你的建议是无论是先安装 MacOS 系统还是先安装 Windows 10 系统，都要在安装完 Windows 10 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 Windows 10 的系统后，它会重新将EFI分区格式化的。 安装完的 Windows 10 的EFI分区里面会有个EFI的目录，目录里面会包括 BOOT 和 MICROSOFT 这两个目录,它看起来是这样的： 将U盘里的EFI目录下面的 CLOVER 目录复制到磁盘里的EFI分区EFI目录下 切记一点：千万不要动另外的Boot和Microsoft目录 双磁盘双系统每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。 将 CLOVER 引导项添加进 UEFI Boot Option Menu两种方式： 通过BIOS添加，教程略通过 CLOVER 自带的工具添加 开机进入 CLOVER 引导界面，将光标移动到 Clover Boot Options ，回车进入 选择 Add Clover boot options for all entries 回车 拔掉U盘，重新开机，按 Boot 快捷键，你会发现多了很多以 Clover start 开头的引导项，选择 Clover start boot.efi at MAC 即可进入 MacOS 系统 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法 将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式： 请使用工具： Clover Configurator 或者 ESP Mounter Pro，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可 使用系统命令 diskutil ，具体操作请移步 单磁盘双系统最简单的分区结构是：一个 EFI 分区，一个 MacOS 分区，一个 Windows 分区 假设你想在同一块磁盘里同时安装 MacOS 和 Windows 10 双系统的话，那么我给你的建议是无论是先安装 MacOS 系统还是先安装 Windows 10 系统，都要在安装完 Windows 10 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 Windows 10 的系统后，它会重新将EFI分区格式化的。 安装完的 Windows 10 的EFI分区里面会有个EFI的目录，目录里面会包括 BOOT 和 MICROSOFT 这两个目录,它看起来是这样的： 将U盘里的EFI目录下面的 CLOVER 目录复制到磁盘里的EFI分区EFI目录下 切记一点：千万不要动另外的Boot和Microsoft目录 双磁盘双系统每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。 将 CLOVER 引导项添加进 UEFI Boot Option Menu两种方式： 通过BIOS添加，教程略通过 CLOVER 自带的工具添加 开机进入 CLOVER 引导界面，将光标移动到 Clover Boot Options ，回车进入 选择 Add Clover boot options for all entries 回车 拔掉U盘，重新开机，按 Boot 快捷键，你会发现多了很多以 Clover start 开头的引导项，选择 Clover start boot.efi at MAC 即可进入 MacOS 系统 备注：该种方法在Clover v4261版本后已经失效[感谢群里 @(￣(工)￣)_小哥哥 的反馈]，我先找个地方哭一会儿关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -245,11 +245,11 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
