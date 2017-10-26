@@ -105,7 +105,8 @@
 <meta property="og:description" content="Mac常用命令序言熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/EDID注入.png">
-<meta property="og:updated_time" content="2017-10-23T03:39:09.000Z">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/HWP.png">
+<meta property="og:updated_time" content="2017-10-26T12:59:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac常用到的命令[持续更新]">
 <meta name="twitter:description" content="Mac常用命令序言熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀">
@@ -371,8 +372,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-23T11:39:09+08:00">
-                2017-10-23
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-26T20:59:16+08:00">
+                2017-10-26
               </time>
             
           </span>
@@ -709,6 +710,25 @@
 <li>命令中 <code>col -b</code>是导出一个纯文本版本格式的手册且显示正常</li>
 </ul>
 <h1 id="使用log-show检查AppleALC和Lilu是否工作正常"><a href="#使用log-show检查AppleALC和Lilu是否工作正常" class="headerlink" title="使用log show检查AppleALC和Lilu是否工作正常"></a>使用log show检查AppleALC和Lilu是否工作正常</h1><p>(内容暂未添加)<br>命令格式：<br><code>log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source</code></p>
+<h1 id="一条命令教你如何确认自己的机型及如何开启-HWP"><a href="#一条命令教你如何确认自己的机型及如何开启-HWP" class="headerlink" title="一条命令教你如何确认自己的机型及如何开启 HWP"></a>一条命令教你如何确认自己的机型及如何开启 <code>HWP</code></h1><blockquote>
+<p>HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件<br>在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅<a href="http://www.insanelymac.com/forum/topic/321021-guide-hwpintel-speed-shift-enable-with-full-power-management/" target="_blank" rel="external">原文</a></p>
+</blockquote>
+<ul>
+<li>用到的工具： <code>freqVectorsEdit.sh</code></li>
+<li><p>用法：</p>
+<ul>
+<li><p>打开终端，复制下面命令：</p>
+<p><code>cd /tmp &amp;&amp; curl -s https://raw.githubusercontent.com/Piker-Alpha/freqVectorsEdit.sh/master/freqVectorsEdit.sh &gt; /tmp/freqVectorsEdit.sh &amp;&amp; chmod +x freqVectorsEdit.sh &amp;&amp; /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/Mac-*.bin</code></p>
+</li>
+<li><p><strong>注意上面的命令为一条，须全部复制</strong></p>
+</li>
+<li>系统会使用 <code>curl</code> 自动下载一个程序，保存到 <code>/tmp</code> ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；</li>
+<li>屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 <code>绿色</code> 显示的那三行前面括号里的机型为可选机型，带 <code>HWP</code> 字样的为可以开启 <code>HWPEnable</code><br><img src="http://ous2s14vo.bkt.clouddn.com/HWP.png" alt="HWP"></li>
+<li>输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 <code>HWP</code></li>
+<li>本文不讨论开启 <code>HWP</code> 的步骤及用法，更多的信息请参阅其它文章</li>
+</ul>
+</li>
+</ul>
 <h2 id="收工-2"><a href="#收工-2" class="headerlink" title="收工"></a>收工</h2><h1 id="————-未完待续-————"><a href="#————-未完待续-————" class="headerlink" title="———— 未完待续 ————"></a>———— 未完待续 ————</h1><h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
 <h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
@@ -901,7 +921,7 @@ var jiathis_config={
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -923,7 +943,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-count">99</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -989,7 +1009,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac常用命令"><span class="nav-number">1.</span> <span class="nav-text">Mac常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.1.</span> <span class="nav-text">序言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐藏“允许任何来源的应用”选项问题"><span class="nav-number">2.</span> <span class="nav-text">隐藏“允许任何来源的应用”选项问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><span class="nav-number">3.</span> <span class="nav-text">磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看磁盘分区表"><span class="nav-number">3.1.</span> <span class="nav-text">查看磁盘分区表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载磁盘EFI分区"><span class="nav-number">3.2.</span> <span class="nav-text">挂载磁盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载U盘EFI分区"><span class="nav-number">3.3.</span> <span class="nav-text">挂载U盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开Finder，注意后面有个"><span class="nav-number">3.4.</span> <span class="nav-text">打开Finder，注意后面有个.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工"><span class="nav-number">3.5.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的进阶操作：教你将apfs分区转换回hfs"><span class="nav-number">4.</span> <span class="nav-text">磁盘分区的进阶操作：教你将apfs分区转换回hfs+</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diskutil命令的进阶操作"><span class="nav-number">4.1.</span> <span class="nav-text">diskutil命令的进阶操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令："><span class="nav-number">4.2.</span> <span class="nav-text">命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查："><span class="nav-number">4.3.</span> <span class="nav-text">检查：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-1"><span class="nav-number">4.4.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何开启原生SSD-Trim功能"><span class="nav-number">5.</span> <span class="nav-text">如何开启原生SSD Trim功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题"><span class="nav-number">6.</span> <span class="nav-text">不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最简单的命令是："><span class="nav-number">6.1.</span> <span class="nav-text">最简单的命令是：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示信息如下："><span class="nav-number">6.2.</span> <span class="nav-text">显示信息如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着输入下面的两条命令："><span class="nav-number">6.3.</span> <span class="nav-text">接着输入下面的两条命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MacOS系统下导出man手册内容"><span class="nav-number">7.</span> <span class="nav-text">MacOS系统下导出man手册内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用log-show检查AppleALC和Lilu是否工作正常"><span class="nav-number">8.</span> <span class="nav-text">使用log show检查AppleALC和Lilu是否工作正常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-2"><span class="nav-number">8.1.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#————-未完待续-————"><span class="nav-number">9.</span> <span class="nav-text">———— 未完待续 ————</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">10.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">11.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac常用命令"><span class="nav-number">1.</span> <span class="nav-text">Mac常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.1.</span> <span class="nav-text">序言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐藏“允许任何来源的应用”选项问题"><span class="nav-number">2.</span> <span class="nav-text">隐藏“允许任何来源的应用”选项问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><span class="nav-number">3.</span> <span class="nav-text">磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看磁盘分区表"><span class="nav-number">3.1.</span> <span class="nav-text">查看磁盘分区表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载磁盘EFI分区"><span class="nav-number">3.2.</span> <span class="nav-text">挂载磁盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载U盘EFI分区"><span class="nav-number">3.3.</span> <span class="nav-text">挂载U盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开Finder，注意后面有个"><span class="nav-number">3.4.</span> <span class="nav-text">打开Finder，注意后面有个.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工"><span class="nav-number">3.5.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的进阶操作：教你将apfs分区转换回hfs"><span class="nav-number">4.</span> <span class="nav-text">磁盘分区的进阶操作：教你将apfs分区转换回hfs+</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diskutil命令的进阶操作"><span class="nav-number">4.1.</span> <span class="nav-text">diskutil命令的进阶操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令："><span class="nav-number">4.2.</span> <span class="nav-text">命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查："><span class="nav-number">4.3.</span> <span class="nav-text">检查：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-1"><span class="nav-number">4.4.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何开启原生SSD-Trim功能"><span class="nav-number">5.</span> <span class="nav-text">如何开启原生SSD Trim功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题"><span class="nav-number">6.</span> <span class="nav-text">不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最简单的命令是："><span class="nav-number">6.1.</span> <span class="nav-text">最简单的命令是：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示信息如下："><span class="nav-number">6.2.</span> <span class="nav-text">显示信息如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着输入下面的两条命令："><span class="nav-number">6.3.</span> <span class="nav-text">接着输入下面的两条命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MacOS系统下导出man手册内容"><span class="nav-number">7.</span> <span class="nav-text">MacOS系统下导出man手册内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用log-show检查AppleALC和Lilu是否工作正常"><span class="nav-number">8.</span> <span class="nav-text">使用log show检查AppleALC和Lilu是否工作正常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一条命令教你如何确认自己的机型及如何开启-HWP"><span class="nav-number">9.</span> <span class="nav-text">一条命令教你如何确认自己的机型及如何开启 HWP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-2"><span class="nav-number">9.1.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#————-未完待续-————"><span class="nav-number">10.</span> <span class="nav-text">———— 未完待续 ————</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">11.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">12.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>

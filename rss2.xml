@@ -8,8 +8,40 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 26 Oct 2017 06:15:22 GMT</pubDate>
+    <pubDate>Thu, 26 Oct 2017 13:05:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>一条命令教你如何确认自己的机型及如何开启HWP</title>
+      <link>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html</link>
+      <guid>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html</guid>
+      <pubDate>Thu, 26 Oct 2017 12:59:39 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件&lt;br&gt;在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅&lt;a href=&quot;http://www.in
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote>
+<p>HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件<br>在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅<a href="http://www.insanelymac.com/forum/topic/321021-guide-hwpintel-speed-shift-enable-with-full-power-management/" target="_blank" rel="external">原文</a></p>
+</blockquote>
+<h2 id="用到的工具：-freqVectorsEdit-sh"><a href="#用到的工具：-freqVectorsEdit-sh" class="headerlink" title="用到的工具： freqVectorsEdit.sh"></a>用到的工具： <code>freqVectorsEdit.sh</code></h2><h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><ul>
+<li><p>打开终端，复制下面命令：<br><code>cd /tmp &amp;&amp; curl -s https://raw.githubusercontent.com/Piker-Alpha/freqVectorsEdit.sh/master/freqVectorsEdit.sh &gt; /tmp/freqVectorsEdit.sh &amp;&amp; chmod +x freqVectorsEdit.sh &amp;&amp; /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/Mac-*.bin</code></p>
+</li>
+<li><p><strong>注意上面的命令为一条，须全部复制</strong></p>
+</li>
+<li>系统会使用 <code>curl</code> 自动下载一个程序，保存到 <code>/tmp</code> ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；</li>
+<li>屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 <code>绿色</code> 显示的那三行前面括号里的机型为可选机型，带 <code>HWP</code> 字样的为可以开启 <code>HWPEnable</code><br>  <img src="http://ous2s14vo.bkt.clouddn.com/HWP.png" alt="HWP"></li>
+<li>输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 <code>HWP</code></li>
+<li>本文不讨论开启 <code>HWP</code> 的步骤及用法，更多的信息请参阅其它文章</li>
+</ul>
+<h2 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h2><h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>MAC常用快捷键整理</title>
@@ -578,51 +610,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法</title>
-      <link>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html</link>
-      <guid>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html</guid>
-      <pubDate>Sat, 07 Oct 2017 14:39:16 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;MacOS系统下使用gpt命令修复损坏的EFI分区&quot;&gt;&lt;a href=&quot;#MacOS系统下使用gpt命令修复损坏的EFI分区&quot; class=&quot;headerlink&quot; title=&quot;MacOS系统下使用gpt命令修复损坏的EFI分区&quot;&gt;&lt;/a&gt;MacOS系统下使用g
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="MacOS系统下使用gpt命令修复损坏的EFI分区"><a href="#MacOS系统下使用gpt命令修复损坏的EFI分区" class="headerlink" title="MacOS系统下使用gpt命令修复损坏的EFI分区"></a>MacOS系统下使用gpt命令修复损坏的EFI分区</h1><blockquote>
-<p>今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。</p>
-</blockquote>
-<h2 id="命令及用法"><a href="#命令及用法" class="headerlink" title="命令及用法"></a>命令及用法</h2><h3 id="显示gpt分区"><a href="#显示gpt分区" class="headerlink" title="显示gpt分区"></a>显示gpt分区</h3><p>命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">sudo gpt -r show disk0</div><div class="line">    </div><div class="line">       start        size  index  contents</div><div class="line">           0           1         PMBR</div><div class="line">           1           1         Pri GPT header</div><div class="line">           2          32         Pri GPT table</div><div class="line">          34        2014         </div><div class="line">        2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</div><div class="line">      616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</div><div class="line">     1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   190722048      262144         </div><div class="line">   190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</div><div class="line">   387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   788038368      262144         </div><div class="line">   788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</div><div class="line">   789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">   920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">  1000215176           7         </div><div class="line">  1000215183          32         Sec GPT table</div><div class="line">  1000215215           1         Sec GPT header</div></pre></td></tr></table></figure>
-<p>其中：</p>
-<ul>
-<li><code>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</code> 是EFI系统分区(ESP)的标志</li>
-<li><code>index</code> 是指磁盘分区，这里的数值是 <code>1</code> ，也就是说是设备 <code>disk0</code> 的第一个分区</li>
-<li><code>start</code> 是指开始的扇区，这里的数值是: <code>2048</code></li>
-<li><code>size</code>  是指扇区的偏移量，这里的数值是: <code>614400</code></li>
-</ul>
-<h3 id="删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令："><a href="#删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：" class="headerlink" title="删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令："></a>删除“坏”的EFI分区，请先阅读下面的警告信息，再运行以下命令：</h3><ul>
-<li><strong>确保你知道你在做什么，然后再从这里开始 - 如果你搞砸，你可能会丢失数据。</strong></li>
-<li>您无法使用 <code>gpt</code> 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 </li>
-<li>您可能需要使用 <code>diskutil unmountDisk disk0</code> 卸载任何自动安装的卷，然后再继续执行下面的操作。</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt remove -i 1 disk0</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。</strong></li>
-<li>而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引 <code>1</code></li>
-</ul>
-<h3 id="重新添加分区与正确的布局和类型："><a href="#重新添加分区与正确的布局和类型：" class="headerlink" title="重新添加分区与正确的布局和类型："></a>重新添加分区与正确的布局和类型：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure>
-<p>执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。</p>
-<h1 id="dd命令的基本用法"><a href="#dd命令的基本用法" class="headerlink" title="dd命令的基本用法"></a>dd命令的基本用法</h1><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初。</p>
-<h2 id="EFI分区备份到文件，命令如下："><a href="#EFI分区备份到文件，命令如下：" class="headerlink" title="EFI分区备份到文件，命令如下："></a>EFI分区备份到文件，命令如下：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
-<h2 id="从备份文件恢复到ESP分区，命令如下："><a href="#从备份文件恢复到ESP分区，命令如下：" class="headerlink" title="从备份文件恢复到ESP分区，命令如下："></a>从备份文件恢复到ESP分区，命令如下：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html#disqus_thread</comments>
     </item>
     
   </channel>
