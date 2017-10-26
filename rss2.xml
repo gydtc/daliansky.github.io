@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 26 Oct 2017 05:34:18 GMT</pubDate>
+    <pubDate>Thu, 26 Oct 2017 06:15:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -115,7 +115,9 @@
 <li>Control + A 移至行或段落的开头。</li>
 </ul>
 <h3 id="更多快捷键"><a href="#更多快捷键" class="headerlink" title="更多快捷键"></a>更多快捷键</h3><p>如果你还想学习更多快捷键，请点击这里查看<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">苹果官方的快捷键帮助文档</a>。</p>
-<h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2><p>您的支持就是我的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2><ul>
+<li>您的支持就是我的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</li>
+</ul>
 <h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
@@ -306,8 +308,34 @@
 <li><p>DSDT fix mask</p>
 <ul>
 <li>DSDT修复遮盖</li>
-<li>详细说明如下：</li>
-<li>|参数|功能|<br>|—|—|<br>|AddDTGP|修改 DSDT 添加方法所必须依赖的函数。必不可缺|<br>|FIX_shutdown|关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. |<br>|FIX_HPET|修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 |<br>|FakeLPC|仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9|<br>|FIX_IPIC|从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能|<br>|FIX_SBUS|增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选 |<br>|FIX_DISPLAY|增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选|<br>|FIX_HDA|修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性 |<br>|FIX LAN|注入网卡属性，帮助网卡内建。建议启用|<br>|FIX USB|注入 USB 属性，帮助内建 USB|<br>|AddMCHC|这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用|<br>|FIX SATA|内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用|<br>|FIX IDE|修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用|<br>|FIX FIREWIRE|在火线控制装置中增加 fwhub 属性。一般不启用 |<br>|FIX Airport|为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用|</li>
+<li>详细说明如下：<ul>
+<li><code>AddDTGP</code> 修改 DSDT 添加方法所必须依赖的函数。必不可缺</li>
+<li><code>FIX_shutdown</code> 关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. </li>
+<li><code>FIX_HPET</code> 修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 </li>
+<li><code>FakeLPC</code> 仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9</li>
+<li><code>FIX_IPIC</code> 从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能</li>
+<li><code>FIX_SBUS</code> 增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选</li>
+<li><code>FIX_DISPLAY</code> 增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选</li>
+<li><code>FIX_HDA</code> 修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性</li>
+<li><code>FIX LAN</code> 注入网卡属性，帮助网卡内建。建议启用</li>
+<li><code>FIX USB</code> 注入 USB 属性，帮助内建 USB</li>
+<li><code>AddMCHC</code> 这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用</li>
+<li><code>FIX SATA</code> 内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 </li>
+<li><code>FIX IDE</code> 修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用</li>
+<li><code>FIX FIREWIRE</code> 在火线控制装置中增加 fwhub 属性。一般不启用</li>
+<li><code>FIX Airport</code> 为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用</li>
+</ul>
+</li>
+<li>光标移动到 <code>DSDT fix mask</code> 回车进入<br><img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png" alt="acpi-DSDT-fix-mask"></li>
+<li>通过移动光标按空格勾选各选项<br><img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected.png" alt="acpi-DSDT-fix-mask-selected"><br><img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected2.png" alt="acpi-DSDT-fix-mask-selected2"></li>
+<li>按 <code>ESC</code> 退出该子菜单</li>
+</ul>
+</li>
+<li>Custom DSDT patches<ul>
+<li>自定义的DSDT补丁</li>
+<li>光标移动到 <code>Custom DSDT patches</code> 回车进入<br><img src="http://ous2s14vo.bkt.clouddn.com/acpi-Custom-DSDT-patches.png" alt="acpi-Custom-DSDT-patches"></li>
+<li>通过移动光标按空格勾选各选项<br><img src="http://ous2s14vo.bkt.clouddn.com/acpi-Custom-DSDT-patches-selected.png" alt="acpi-Custom-DSDT-patches-selected"></li>
+<li>按 <code>ESC</code> 退出该子菜单</li>
 </ul>
 </li>
 </ul>
@@ -315,20 +343,7 @@
 </ul>
 </li>
 </ul>
-<pre><code>    * 光标移动到 `DSDT fix mask` 回车进入
-    ![acpi-DSDT-fix-mask](http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png)
-    * 通过移动光标按空格勾选各选项
-    ![acpi-DSDT-fix-mask-selected](http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected.png)
-    ![acpi-DSDT-fix-mask-selected2](http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected2.png)
-    * 按 `ESC` 退出该子菜单
-* Custom DSDT patches
-    * 自定义的DSDT补丁
-    * 光标移动到 `Custom DSDT patches` 回车进入
-    ![acpi-Custom-DSDT-patches](http://ous2s14vo.bkt.clouddn.com/acpi-Custom-DSDT-patches.png)
-    * 通过移动光标按空格勾选各选项
-    ![acpi-Custom-DSDT-patches-selected](http://ous2s14vo.bkt.clouddn.com/acpi-Custom-DSDT-patches-selected.png)
-    * 按 `ESC` 退出该子菜单
-</code></pre><h2 id="Kext-Inject-Management-管理你的驱动程序"><a href="#Kext-Inject-Management-管理你的驱动程序" class="headerlink" title="Kext Inject Management 管理你的驱动程序"></a>Kext Inject Management 管理你的驱动程序</h2><p>通过Clover加载的驱动程序位于 <code>EFI/CLOVER/kexts/Other</code> ，也有可能位于 <code>EFI/CLOVER/kexts/10.13</code> 或者 <code>EFI/CLOVER/kexts/10.12</code> 目录中。它至少包括以下驱动程序：</p>
+<h2 id="Kext-Inject-Management-管理你的驱动程序"><a href="#Kext-Inject-Management-管理你的驱动程序" class="headerlink" title="Kext Inject Management 管理你的驱动程序"></a>Kext Inject Management 管理你的驱动程序</h2><p>通过Clover加载的驱动程序位于 <code>EFI/CLOVER/kexts/Other</code> ，也有可能位于 <code>EFI/CLOVER/kexts/10.13</code> 或者 <code>EFI/CLOVER/kexts/10.12</code> 目录中。它至少包括以下驱动程序：</p>
 <table>
 <thead>
 <tr>
