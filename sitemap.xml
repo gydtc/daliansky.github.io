@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
+    
+    <lastmod>2017-10-26T05:53:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</loc>
     
     <lastmod>2017-10-26T05:34:18.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</loc>
     
     <lastmod>2017-10-25T06:47:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
-    
-    <lastmod>2017-10-24T01:28:16.000Z</lastmod>
     
   </url>
   
