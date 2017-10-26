@@ -8,8 +8,119 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Tue, 24 Oct 2017 01:28:16 GMT</pubDate>
+    <pubDate>Thu, 26 Oct 2017 05:32:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>MAC常用快捷键整理</title>
+      <link>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</link>
+      <guid>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</guid>
+      <pubDate>Thu, 26 Oct 2017 05:29:11 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;苹果 Mac 系统常用快捷键有很多，但是很多童鞋对于这些 Mac 快捷键都不是很熟悉，今天小编为大
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
+<p>苹果 Mac 系统常用快捷键有很多，但是很多童鞋对于这些 Mac 快捷键都不是很熟悉，今天小编为大家整理了一份 Mac 系统常用快捷键大全，大家快收藏起来吧!平时在使用 Mac 系统的时候可以提高不少工作效率哦!</p>
+<p>本文转自 <a href="http://xclient.info/a/36952668-9577-8ec9-4412-111ae375fde7.html?_=905734269077aa284ba54b095a93d187" target="_blank" rel="external">Xclient.info</a>，转载请注明原出处</p>
+</blockquote>
+<h2 id="小普及"><a href="#小普及" class="headerlink" title="小普及"></a>小普及</h2><ul>
+<li><p>Mac中主要有四个修饰键，分别是 Command，Control，Option 和 Shift。</p>
+</li>
+<li><p>这四个键分别有自己的图案，他们经常出现在Mac应用程序中的菜单栏里，方便你随时学习新的快捷键。</p>
+</li>
+</ul>
+<blockquote>
+<p>如下</p>
+</blockquote>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-01.png" alt="2017-10-26-01"></p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h3><blockquote>
+<p>Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Windows 下的 Ctrl，黑果通常是 Alt 键。</p>
+</blockquote>
+<ul>
+<li>Command + Z 撤销。</li>
+<li>Command + X 剪切。</li>
+<li>Command + C 拷贝(Copy)。</li>
+<li>Command + V 粘贴。</li>
+<li>Command + A 全选(All)。</li>
+<li>Command + S 保存(Save)。</li>
+<li>Command + F 查找(Find)。</li>
+</ul>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-02.png" alt="2017-10-26-02"></p>
+<h3 id="系统快捷键"><a href="#系统快捷键" class="headerlink" title="系统快捷键"></a>系统快捷键</h3><ul>
+<li>Option 开机后立即按下，将显示启动管理器。</li>
+<li>Command + R 开机后立即按下，可打开OS X 的恢复功能。</li>
+<li>Command + Option + P + R 开机后立即按下，重置 NVRAM。有些时候电脑会出现些小问题，重置 NVRAM 是你除了重新启动，尝试修复的第一选择。</li>
+<li>Command + Option + Control + Power 退出所有应用程序，允许你进行文稿储存，然后关机。</li>
+<li>按住 Power 按钮 5 秒 强制 Mac 关机。</li>
+</ul>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-03.png" alt="2017-10-26-03"></p>
+<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><ul>
+<li>Command + Shift + 3 截取全部屏幕到文件。</li>
+<li>Command + Shift + Control + 3 截取全部屏幕到剪贴板。</li>
+<li>Command + Shift + 4 截取所选屏幕区域到一个文件，或按空格键仅捕捉一个窗口。</li>
+<li>Command + Shift + Control + 4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗口。</li>
+</ul>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-04.png" alt="2017-10-26-04"></p>
+<h3 id="文件管理器"><a href="#文件管理器" class="headerlink" title="文件管理器"></a>文件管理器</h3><ul>
+<li>Command + Shift + N (New) 新建文件夹。</li>
+<li>Command + Shift + G (Go) 调出窗口，可输入绝对路径直达文件夹。</li>
+<li>return 这个其实不算快捷键，点击文件，按下可重命名文件。</li>
+<li>Command + O 打开所选项。在 Mac 里打开文件不像 Windows 里直接按 Enter。</li>
+<li>Command + Option + V 作用相当于Windows里的文件剪切。在其它位置上对文件复制(Command-C)，在目的位置按下这个快捷键，文件将被剪切到此位置。</li>
+<li>Command + ↑ 打开包含当前文件夹的文件夹，相当于 Windows 里的“向上”。</li>
+<li>Command + Delete 将文件移至废纸篓。</li>
+<li>Command + Shift + Delete 清倒废纸篓。</li>
+<li>Space 快速查看选中的文件，也就是预览功能。</li>
+</ul>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-05.png" alt="2017-10-26-05"></p>
+<h3 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h3><ul>
+<li>Command + Tab 在应用程序间切换。</li>
+<li>Command + Shift + Tab 在应用程序间切换(反向)。</li>
+<li>Command + ~ 在各应用中的窗口间切换。</li>
+</ul>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-06.png" alt="2017-10-26-06"></p>
+<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ul>
+<li>Command + L 光标直接跳至地址栏。</li>
+<li>Control + Tab 转向下一个标签页。</li>
+<li>Control + Shift + Tab 转向上一个标签页。</li>
+<li>Command + ‘+’或’=’ 放大页面。</li>
+<li>Command + ‘-‘ 缩小页面。</li>
+</ul>
+<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-07.png" alt="2017-10-26-07"></p>
+<h3 id="应用程序中"><a href="#应用程序中" class="headerlink" title="应用程序中"></a>应用程序中</h3><ul>
+<li>Command + H 隐藏(Hide)当前正在运行的应用程序窗口。</li>
+<li>Command + Option + H 隐藏(Hide)其他应用程序窗口。</li>
+<li>Command + Q 退出(Quit)最前面的应用程序。</li>
+<li>Command + Shift + Z 重做，也就是撤销的逆向操作。</li>
+<li>Command + Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于 Windows 中(Alt+Tab)。</li>
+<li>Command + Option + esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出。</li>
+</ul>
+<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><ul>
+<li>Command + B 切换所选文字粗体(Bold)显示。</li>
+<li>fn + Delete 相当于 PC 全尺寸键盘上的 Delete，也就是向后删除。</li>
+<li>fn + ↑ 向上滚动一页(Page Up)。</li>
+<li>fn + ↓ 向下滚动一页(Page Down)。</li>
+<li>fn + ← 滚动至文稿开头(Home)。</li>
+<li>fn + → 滚动至文稿末尾(End)。</li>
+<li>Command + → 将光标移至当前行的行尾。</li>
+<li>Command + ← 将光标移至当前行的行首。</li>
+<li>Command + ↓ 将光标移至文稿末尾。</li>
+<li>Command + ↑ 将光标移至文稿开头。</li>
+<li>Option + → 将光标移至下一个单词的末尾。</li>
+<li>Option + ← 将光标移至上一个单词的开头。</li>
+<li>Control + A 移至行或段落的开头。</li>
+</ul>
+<h3 id="更多快捷键"><a href="#更多快捷键" class="headerlink" title="更多快捷键"></a>更多快捷键</h3><p>如果你还想学习更多快捷键，请点击这里查看<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">苹果官方的快捷键帮助文档</a>。</p>
+<h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2><p>整整写了两天的博文，如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>clover使用教程</title>
@@ -489,32 +600,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>MacOS多系统下蓝牙设备的自动连接</title>
-      <link>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html</link>
-      <guid>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html</guid>
-      <pubDate>Fri, 06 Oct 2017 13:52:35 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;a href=&quot;#MacOS多系统下蓝牙设备的自动连接&quot; class=&quot;headerlink&quot; title=&quot;MacOS多系统下蓝牙设备的自动连接&quot;&gt;&lt;/a&gt;MacOS多系统下蓝牙设备的自动连接&lt;/h1&gt;&lt;blockquo
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="MacOS多系统下蓝牙设备的自动连接"><a href="#MacOS多系统下蓝牙设备的自动连接" class="headerlink" title="MacOS多系统下蓝牙设备的自动连接"></a>MacOS多系统下蓝牙设备的自动连接</h1><blockquote>
-<p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。<br>我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。<br>我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
-</blockquote>
-<h2 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h2><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure>
-<p>复制文件[10.13到10.13]：<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
-<p>复制文件[10.13到10.12]<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
-<p>这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。</p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html#disqus_thread</comments>
     </item>
     
   </channel>
