@@ -309,21 +309,24 @@
 <ul>
 <li>DSDT修复遮盖</li>
 <li>详细说明如下：<ul>
-<li><code>AddDTGP</code> 修改 DSDT 添加方法所必须依赖的函数。必不可缺</li>
-<li><code>FIX_shutdown</code> 关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. </li>
-<li><code>FIX_HPET</code> 修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 </li>
-<li><code>FakeLPC</code> 仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9</li>
-<li><code>FIX_IPIC</code> 从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能</li>
-<li><code>FIX_SBUS</code> 增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选</li>
-<li><code>FIX_DISPLAY</code> 增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选</li>
-<li><code>FIX_HDA</code> 修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性</li>
-<li><code>FIX LAN</code> 注入网卡属性，帮助网卡内建。建议启用</li>
-<li><code>FIX USB</code> 注入 USB 属性，帮助内建 USB</li>
-<li><code>AddMCHC</code> 这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用</li>
-<li><code>FIX SATA</code> 内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 </li>
-<li><code>FIX IDE</code> 修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用</li>
-<li><code>FIX FIREWIRE</code> 在火线控制装置中增加 fwhub 属性。一般不启用</li>
-<li><code>FIX Airport</code> 为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用</li>
+<li><code>Add DTGP</code> 修改 DSDT 添加方法所必须依赖的函数。必不可缺</li>
+<li><code>Fix shutdown</code> 关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. </li>
+<li><code>Fix HPET</code> 修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 </li>
+<li><code>Fake LPC</code> 仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9</li>
+<li><code>Fix IPIC</code> 从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能</li>
+<li><code>Add SBUS</code> 增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选</li>
+<li><code>Fix display</code> 增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选</li>
+<li><code>Fix sound</code> 修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性</li>
+<li><code>Fix LAN</code> 注入网卡属性，帮助网卡内建。建议启用</li>
+<li><code>Fix USB</code> 注入 USB 属性，帮助内建 USB</li>
+<li><code>Add MCHC</code> 这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用</li>
+<li><code>Fix SATA</code> 内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 </li>
+<li><code>Fix IDE</code> 修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用</li>
+<li><code>Fix FIREWIRE</code> 在火线控制装置中增加 fwhub 属性。一般不启用</li>
+<li><code>Fix  Airport</code> 为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用</li>
+<li><code>Fix _WAK</code> 修复睡眠唤醒错误</li>
+<li><code>Add PNLF</code> 加入背光亮度修复</li>
+<li><code>fix Headers</code> 修复 <code>MACH Reboot</code> 错误 </li>
 </ul>
 </li>
 <li>光标移动到 <code>DSDT fix mask</code> 回车进入<br><img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png" alt="acpi-DSDT-fix-mask"></li>
