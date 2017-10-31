@@ -296,6 +296,24 @@ man log | col -b > ~/Desktop/log_manual.txt
 命令格式：
 `log show --predicate 'process == "kernel" AND (eventMessage CONTAINS "AppleALC" OR eventMessage CONTAINS "Lilu")' --style syslog --source`
 
+# 一条命令教你如何确认自己的机型及如何开启 `HWP`
+> HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件
+> 在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅[原文](http://www.insanelymac.com/forum/topic/321021-guide-hwpintel-speed-shift-enable-with-full-power-management/)
+
+* 用到的工具： `freqVectorsEdit.sh`
+* 用法：
+    * 打开终端，复制下面命令：
+    
+    `cd /tmp && curl -s https://raw.githubusercontent.com/Piker-Alpha/freqVectorsEdit.sh/master/freqVectorsEdit.sh > /tmp/freqVectorsEdit.sh && chmod +x freqVectorsEdit.sh && /tmp/freqVectorsEdit.sh && sudo rm -rf /tmp/freqVectorsEdit.sh && sudo rm -rf /tmp/Mac-*.bin`
+    
+    * **注意上面的命令为一条，须全部复制**
+    * 系统会使用 `curl` 自动下载一个程序，保存到 `/tmp` ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；
+    * 屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 `绿色` 显示的那三行前面括号里的机型为可选机型，带 `HWP` 字样的为可以开启 `HWPEnable`
+    ![HWP](http://ous2s14vo.bkt.clouddn.com/HWP.png)
+    * 输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 `HWP`
+    * 本文不讨论开启 `HWP` 的步骤及用法，更多的信息请参阅其它文章
+   
+
 ## 收工
 
 # ———— 未完待续 ————

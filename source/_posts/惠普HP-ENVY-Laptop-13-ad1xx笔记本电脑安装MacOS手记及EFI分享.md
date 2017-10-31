@@ -70,8 +70,9 @@ categories:
 
 ![Power](http://ous2s14vo.bkt.clouddn.com/Power.png)
 
-## EFI下载
-链接：[https://pan.baidu.com/s/1o7LJVU6](https://pan.baidu.com/s/1o7LJVU6) 密码: 请进群索取
+## EFI更新源
+[https://github.com/daliansky/hp-envy13](https://github.com/daliansky/hp-envy13)
+
 
 # 关于打赏
 您的支持就是我更新的动力！

@@ -90,7 +90,9 @@ BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEF
 
 * F2 保存 `preboot.log` 到 `EFI/CLOVER/misc/` 目录下，以便于您排错
 * F3 显示 `被隐藏` 的入口
-    * 比如你在 `config.plist` 中隐藏了 `Recovery HD` 当你想进入恢复模式的时候，可以不需要修改 `config.plist` 而直接按 `F3` 显示出那些被你隐藏的引导项。如下图：
+    * 比如你在 `config.plist` 中隐藏了 `Recovery HD` 
+    ![HideVolume](http://ous2s14vo.bkt.clouddn.com/HideVolume.png)
+    * 当你想进入恢复模式的时候，可以不需要修改 `config.plist` 而直接按 `F3` 显示出那些被你隐藏的引导项。如下图：
     ![f3](http://ous2s14vo.bkt.clouddn.com/f3.png)
 
 * F4 提取 `DSDT` 保存到 `EFI/CLOVER/ACPI/origin/`
@@ -180,6 +182,25 @@ BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEF
             
         * DSDT fix mask
             * DSDT修复遮盖
+            * 详细说明如下：
+                * `Add DTGP` 修改 DSDT 添加方法所必须依赖的函数。必不可缺
+                * `Fix shutdown` 关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. 
+                * `Fix HPET` 修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 
+                * `Fake LPC` 仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9
+                * `Fix IPIC` 从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能
+                * `Add SBUS` 增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选
+                * `Fix display` 增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选
+                * `Fix sound` 修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性
+                * `Fix LAN` 注入网卡属性，帮助网卡内建。建议启用
+                * `Fix USB` 注入 USB 属性，帮助内建 USB
+                * `Add MCHC` 这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用
+                * `Fix SATA` 内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 
+                * `Fix IDE` 修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用
+                * `Fix FIREWIRE` 在火线控制装置中增加 fwhub 属性。一般不启用
+                * `Fix  Airport` 为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用
+                * `Fix _WAK` 修复睡眠唤醒错误
+                * `Add PNLF` 加入背光亮度修复
+                * `fix Headers` 修复 `MACH Reboot` 错误 
             * 光标移动到 `DSDT fix mask` 回车进入
             ![acpi-DSDT-fix-mask](http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png)
             * 通过移动光标按空格勾选各选项

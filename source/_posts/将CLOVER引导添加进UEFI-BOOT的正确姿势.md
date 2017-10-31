@@ -47,6 +47,8 @@ categories:
 3. 拔掉U盘，重新开机，按 `Boot` 快捷键，你会发现多了很多以 `Clover start` 开头的引导项，选择 `Clover start boot.efi at MAC` 即可进入 `MacOS` 系统
 ![UEFI_Boot](http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg)
 
+## 备注：该种方法在Clover v4261版本后已经失效[感谢群里 `@(￣(工)￣)_小哥哥` 的反馈]，我先找个地方哭一会儿
+
 # 关于打赏
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
