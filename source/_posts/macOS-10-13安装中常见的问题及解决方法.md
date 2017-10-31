@@ -2,6 +2,7 @@
 title: macOS 10.13安装中常见的问题及解决方法
 urlname: macOS-10.13-installation-of-common-problems-and-solutions
 date: 2017-09-28 09:50:25
+top: 100
 tags:
 - 10.13
 - High Sierra
