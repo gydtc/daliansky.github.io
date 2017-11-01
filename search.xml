@@ -10,11 +10,11 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
-        <tag>dmg</tag>
+        <tag>镜像</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
+        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
@@ -129,8 +129,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -181,15 +181,15 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[小米笔记本Pro安装10.13随手记及EFI分享]]></title>
     <url>%2FXiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html</url>
-    <content type="text"><![CDATA[小米笔记本Pro安装10.13随手记 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器 ![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png) 安装中遇到的几个难点： 无法进入安装界面，需要屏蔽独显 卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。 Clover无法识别苹果分区卷标 显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】 要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。 重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。 安装驱动程序 进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！ 于是乎，找出USB的无线网卡，安装驱动，联网成功； 显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡； 声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。 one more thing: *** 触控板开机正常，功能单一；睡眠唤醒后支持多手势 *** 收工喽！！！ ![屏幕快照 2017-09-22 下午6.20.24](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png) ![屏幕快照 2017-09-22 下午6.20.50](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png) ![屏幕快照 2017-09-22 下午6.20.46](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png) ![屏幕快照 2017-09-22 下午6.16.57](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png) ![屏幕快照 2017-09-22 下午6.21.07](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png) ![屏幕快照 2017-09-22 下午6.21.16](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png) 更新日期： 10-14-2017 EFI更新，触摸板工作正常 10-17-2017 EFI更新，修正显卡驱动 增加HDMI Audio声音输出 驱动更新： Lilu v1.2.0 AppleALC v1.2.1 IntelGraphicsDVMTFixup v1.2.0 AirportBrcmFixup v1.1.0 驱动修复： IntelGraphicsFixup v1.2.0 10-18-2017 经测试显卡驱动不如第一版的好，现将显卡驱动恢复为仿冒0x19160000 ACPI修复 驱动程序修正 去掉USBInjectAll采用SSDT-UIAL.aml内建USB设备 10-19-2017 显卡驱动正常 触摸板开机正常，睡眠唤醒后多手势使用正常 睡眠正常 电池信息正常 10-31-2017 更新声卡驱动，修复耳机问题 新驱动增加layoutid：13 支持四节点，支持耳麦自由切换，Mic/LineIn工作正常 EFI更新源 https://github.com/daliansky/XiaoMi-Pro 关于打赏 如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群: 331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[小米笔记本Pro安装10.13随手记 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器 ![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png) 安装中遇到的几个难点： 无法进入安装界面，需要屏蔽独显 卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。 Clover无法识别苹果分区卷标 显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】 要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。 重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。 安装驱动程序 进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！ 于是乎，找出USB的无线网卡，安装驱动，联网成功； 显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡； 声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。 one more thing: *** 触控板开机正常，功能单一；睡眠唤醒后支持多手势 *** 收工喽！！！ ![屏幕快照 2017-09-22 下午6.20.24](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png) ![屏幕快照 2017-09-22 下午6.20.50](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png) ![屏幕快照 2017-09-22 下午6.20.46](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png) ![屏幕快照 2017-09-22 下午6.16.57](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png) ![屏幕快照 2017-09-22 下午6.21.07](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png) ![屏幕快照 2017-09-22 下午6.21.16](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png) 更新日期： 10-14-2017 EFI更新，触摸板工作正常 10-17-2017 EFI更新，修正显卡驱动 增加HDMI Audio声音输出 驱动更新： Lilu v1.2.0 AppleALC v1.2.1 IntelGraphicsDVMTFixup v1.2.0 AirportBrcmFixup v1.1.0 驱动修复： IntelGraphicsFixup v1.2.0 10-18-2017 经测试显卡驱动不如第一版的好，现将显卡驱动恢复为仿冒0x19160000 ACPI修复 驱动程序修正 去掉USBInjectAll采用SSDT-UIAL.aml内建USB设备 10-19-2017 显卡驱动正常 触摸板开机正常，睡眠唤醒后多手势使用正常 睡眠正常 电池信息正常 10-31-2017 更新声卡驱动，修复耳机问题 新驱动增加layoutid：13 支持四节点，支持耳麦自由切换，Mic/LineIn工作正常 11-2-2017 Lilu v1.2.0更新，支持10.13.2Beta AppleALC更新，使用最新修正版Lilu联合编译，解决10.13.1更新后无法驱动的问题 EFI更新源 https://github.com/daliansky/XiaoMi-Pro 关于打赏 如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群: 331686786 一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -209,8 +209,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -291,11 +291,11 @@
       </categories>
       <tags>
         <tag>Lilu</tag>
+        <tag>Plugins</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
         <tag>platform-id</tag>
@@ -331,11 +331,11 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
+        <tag>dmg</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
-        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
@@ -346,9 +346,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -389,8 +389,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -418,9 +418,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -489,10 +489,10 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
-        <tag>安装</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -519,8 +519,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
