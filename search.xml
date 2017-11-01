@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像 本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。 Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理 Clover默认配置文件config.plist为620/630/640/650； 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 支持BCM94352z无线网卡，支持Realtek8111系列网卡，支持Intel网卡； 已更新Lilu(1.2.0)、AppleALC(1.2.0)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的小站 截图： 下载链接镜像上传中MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403eed5a18ffbbaaf53b3261c71c QQ群:331686786 一起黑苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像 本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。 Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理 Clover默认配置文件config.plist为620/630/640/650； 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 支持BCM94352z无线网卡，支持Realtek8111系列网卡，支持Intel网卡； 已更新Lilu(1.2.0)、AppleALC(1.2.0)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的小站 截图： 下载链接https://pan.baidu.com/s/1sla8aQhMD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403eed5a18ffbbaaf53b3261c71c 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起黑苹果]]></content>
       <categories>
         <category>镜像</category>
       </categories>
@@ -129,8 +129,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -181,8 +181,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -209,8 +209,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -296,8 +296,8 @@
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
         <tag>Plugins</tag>
-        <tag>Clover</tag>
         <tag>常见问题</tag>
+        <tag>Clover</tag>
         <tag>platform-id</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
@@ -331,8 +331,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -346,9 +346,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -389,10 +389,10 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -418,9 +418,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -489,8 +489,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
+        <tag>镜像</tag>
         <tag>安装</tag>
         <tag>dmg</tag>
       </tags>
@@ -519,8 +519,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>

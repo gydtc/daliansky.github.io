@@ -84,7 +84,7 @@
 <meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
 <meta property="og:type" content="website">
 <meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/tags/clover/index.html">
+<meta property="og:url" content="http://blog.daliansky.net/tags/Clover/index.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
 <meta property="og:locale" content="zh-Hans">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/tags/clover/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/tags/Clover/"/>
 
 
 
 
 
-  <title>标签: clover | 黑果小兵的部落阁</title>
+  <title>标签: Clover | 黑果小兵的部落阁</title>
   
 
 
@@ -292,7 +292,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>clover<small>标签</small>
+        <h1>Clover<small>标签</small>
         </h1>
       </div>
 
@@ -304,9 +304,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/clover-user-manual.html" itemprop="url">
+            <a class="post-title-link" href="/macOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html" itemprop="url">
               
-                <span itemprop="name">clover使用教程</span>
+                <span itemprop="name">【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像</span>
               
             </a>
         
@@ -314,9 +314,65 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-20T11:19:06+08:00"
-              content="2017-10-20" >
-          10-20
+              datetime="2017-11-01T09:22:58+08:00"
+              content="2017-11-01" >
+          11-01
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html" itemprop="url">
+              
+                <span itemprop="name">将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-10-11T09:41:29+08:00"
+              content="2017-10-11" >
+          10-11
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/Updated-Frequently-Asked-Questions-in-Sierra-or-high-sierra.html" itemprop="url">
+              
+                <span itemprop="name">[持续更新] 黑苹果常见问题（某些未解决的问题）</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-09-07T09:32:15+08:00"
+              content="2017-09-07" >
+          09-07
         </time>
       </div>
 
@@ -1018,67 +1074,6 @@
             counter.increment("time");
             counter.save(null, {
               success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-       success: function(counter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(counter.get('time'));
               },
