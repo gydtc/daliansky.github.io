@@ -429,9 +429,8 @@
         
           
           【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像
-
 本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。
-Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service
+Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -605,10 +604,8 @@ Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13
       
         
           
-          macOS 10.13安装中常见的问题及解决方法
-1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second
-
-此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatc
+          macOS 10.13安装中常见的问题及解决方法1. 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second
+此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -783,10 +780,10 @@ Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13
         
           
           小米笔记本Pro安装10.13随手记
-
 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器
 
-![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22
+
+安装中遇到的几个难点：无法进入安装界面，需要屏蔽独显卡在Service only ran for 0 seconds. Pushing respawn out by 1
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -961,13 +958,12 @@ Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13
         
           
           惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享
-
 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。
 
 电脑配置
 
 
-
+规
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1142,18 +1138,10 @@ Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13
         
           
           Clover的前世今生
-
 前言：先将最最基本的操作发出来，然后再写完整的教程
 
-如何打开啰嗦模式进行排错
-开机进入clover引导界面，
-
-在要引导的分区卷标上按 空格 即可进入
-
-勾选以下选项：
-
-选择 Boot macOS with selected options 启动
-出现错误画面拍照发群里
+如何打开啰嗦模式进行排错开机进入clover引导界面，在要引导的分区卷标上按 空格 即可进入勾选以下选项：选择 Boot macOS with selected options 启动出现错误画面拍照发群里寻求帮助。
+Clo
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1328,15 +1316,10 @@ Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13
         
           
           
-HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件
-在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅原文
+HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅原文
 
-用到的工具： freqVectorsEdit.sh
-用法：
-
-
-打开终端，复制下面命令：
-c
+用到的工具： freqVectorsEdit.sh用法：
+打开终端，复制下面命令：cd /tm
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1511,14 +1494,11 @@ c
         
           
           写在前面
-
 苹果 Mac 系统常用快捷键有很多，但是很多童鞋对于这些 Mac 快捷键都不是很熟悉，今天小编为大家整理了一份 Mac 系统常用快捷键大全，大家快收藏起来吧!平时在使用 Mac 系统的时候可以提高不少工作效率哦!
 本文转自 Xclient.info，转载请注明原出处
 
 小普及
-
-
-Mac
+Mac中主要
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1693,10 +1673,9 @@ Mac
         
           
           将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势
-
 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法
 
-将 MacOS 系统的EFI移动进磁盘的EFI分区里
+将 MacOS 系统的EFI移动进磁盘的EFI分区里单
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1871,13 +1850,10 @@ Mac
         
           
           MacOS系统下使用gpt命令修复损坏的EFI分区
-
 今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。
 
-命令及用法
-显示gpt分区
-命令如下：
-123456789101112131415161718192021222324sud
+命令及用法显示gpt分区命令如下：
+123456789101112131415161718192021222324sudo g
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2052,10 +2028,7 @@ Mac
         
           
           MacOS多系统下蓝牙设备的自动连接
-
-因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。
-我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。
-我的需求是希望把配对
+因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。我的需求是希望把配对好的蓝
           ...
           <!--noindex-->
           <div class="post-button text-center">
