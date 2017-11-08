@@ -124,7 +124,7 @@
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/kim.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/kimselect.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/kimoptions.png">
-<meta property="og:updated_time" content="2017-11-08T08:23:36.000Z">
+<meta property="og:updated_time" content="2017-11-08T08:26:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="clover使用教程">
 <meta name="twitter:description" content="Clover的前世今生  前言：先将最最基本的操作发出来，然后再写完整的教程  如何打开啰嗦模式进行排错 开机进入clover引导界面，  在要引导的分区卷标上按 空格 即可进入  勾选以下选项：  选择 Boot macOS with selected options 启动 出现错误画面拍照发群里寻求帮助。 Clover是什么 什么是Clover（三叶草）呢？显然它不是指的草地里用来喂牛的草啦。">
@@ -382,7 +382,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-08T16:23:36+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-08T16:26:17+08:00">
                 2017-11-08
               </time>
             
@@ -711,13 +711,9 @@
 <li>
 <p>DSDT fix mask</p>
 <ul>
-<li>
-<p>DSDT修复遮盖</p>
-</li>
-<li>
-<p>详细说明如下：</p>
-</li>
-<li>
+<li>DSDT修复遮盖</li>
+<li>详细说明如下：</li>
+</ul>
 <p>|参数|描述|
 |---|---|
 | <code>AddDTGP</code> |修改 DSDT 添加方法所必须依赖的函数。必不可缺|
@@ -750,19 +746,13 @@
 | <code>AddHDMI</code> |修复HDMI音频输出问题（无需修改AppleHDA）|
 | <code>FixRegions</code> |因为BIOS当中的一些内容改变了。这个浮动的区域导致无法使用自定义DSDT（custom DSDT），因为这个区域可移动且不符合当前的状态。这个补丁的目的是找到BIOS中所有这样的区域并在自定义DSDT中加以修正。所以现在你可以生成有错误区域的自定义DSDT然后使用这个补丁|
 | <code>FixHeaders</code> | MACH reboot修复|</p>
-</li>
-<li>
-<p>光标移动到 <code>DSDT fix mask</code> 回车进入
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png" alt="acpi-DSDT-fix-mask"></p>
-</li>
-<li>
-<p>通过移动光标按空格勾选各选项
+<ul>
+<li>光标移动到 <code>DSDT fix mask</code> 回车进入
+<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png" alt="acpi-DSDT-fix-mask"></li>
+<li>通过移动光标按空格勾选各选项
 <img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected.png" alt="acpi-DSDT-fix-mask-selected">
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected2.png" alt="acpi-DSDT-fix-mask-selected2"></p>
-</li>
-<li>
-<p>按 <code>ESC</code> 退出该子菜单</p>
-</li>
+<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected2.png" alt="acpi-DSDT-fix-mask-selected2"></li>
+<li>按 <code>ESC</code> 退出该子菜单</li>
 </ul>
 </li>
 <li>
