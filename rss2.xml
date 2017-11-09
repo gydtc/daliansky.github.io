@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 09 Nov 2017 13:44:17 GMT</pubDate>
+    <pubDate>Thu, 09 Nov 2017 13:48:27 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -39,12 +39,16 @@
 <li>依次打开<code>EDID</code>,<code>EDID</code>的目录中存在三种格式的文件,<img src="http://ous2s14vo.bkt.clouddn.com/EDID.BIN.png" alt="EDID.BIN">请选择打开<code>EDID.bin</code><br><img src="http://ous2s14vo.bkt.clouddn.com/FixEDID.png" alt="FixEDID"></li>
 <li>根据自己的显示器的分辨率选择16:9或者16:10,我的显示器是15.6寸,分辨率为1920x1080,长宽比为16:9,所以我需要将插图中的16:10通过下拉菜单选择调整为16:9,如下图<img src="http://ous2s14vo.bkt.clouddn.com/FixEDID2.png" alt="FixEDID2"><br>其中:前面的16:9是程序自动检测出的长宽比,后面的16:9通过下拉菜单选择,保持前后一致</li>
 <li><p>添加HIDPI高分辨率:请根据个人喜好添加,我通常会添加的分辨率如下:</p>
-<p> |分辨率|分辨率|分辨率|分辨率|分辨率|<br> |—|—|—|—|—|<br> |3200x1800|2880x1620|1920x1080|1600x900|1440x810|</p>
+<ul>
+<li>3200x1800</li>
+<li>2880x1620</li>
+<li>1920x1080</li>
+<li>1600x900</li>
+<li>1440x810<br><img src="http://ous2s14vo.bkt.clouddn.com/FixEDID3.png" alt="FixEDID3"></li>
+</ul>
 </li>
-</ol>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/FixEDID3.png" alt="FixEDID3"></p>
-<ol>
-<li>点击<code>Make</code>按钮,会自动在桌面生成一个新目录,比如我的目录为:<code>DisplayVendorID-dae</code></li>
+<li><p>点击<code>Make</code>按钮,会自动在桌面生成一个新目录,比如我的目录为:<code>DisplayVendorID-dae</code></p>
+</li>
 <li>将该目录复制到显示器设备描述目录下,打开终端,输入命令:</li>
 </ol>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cp ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resources/Overrides</div></pre></td></tr></table></figure>
