@@ -8,8 +8,106 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Tue, 07 Nov 2017 13:41:45 GMT</pubDate>
+    <pubDate>Thu, 09 Nov 2017 13:44:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>使用HIDPI解决睡眠唤醒黑屏、花屏及连接外部显示器的正确姿势</title>
+      <link>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</link>
+      <guid>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</guid>
+      <pubDate>Thu, 09 Nov 2017 11:50:39 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;经常会有网友反馈说自己的显示器黑屏或者花屏,早期的方式是&lt;a href=&quot;https://blog.dalians
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>经常会有网友反馈说自己的显示器黑屏或者花屏,早期的方式是<a href="https://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html">注入EDID</a>可有效解决类似问题.经常摸索后发现打开显示器的HIDPI高分辨率支持的同时可有效去掉这种现象,同时这种操作也会减少或者消除出现8个苹果的概率</p>
+</blockquote>
+<h1 id="提取EDID"><a href="#提取EDID" class="headerlink" title="提取EDID"></a>提取EDID</h1><p>使用工具<a href="https://bitbucket.org/blackosx/darwindumper" target="_blank" rel="external">DarwinDumper</a><br>操作步骤：</p>
+<ol>
+<li>打开 <code>DarwinDumper</code>，点击<code>Choose</code>，选择保存位置。可以将生成的文件保存到桌面</li>
+<li>点击<code>Deselect All Dumps</code>,取消所有的选择项</li>
+<li>勾选右侧的<code>EDID</code></li>
+<li>点击<code>Run</code>按钮,生成<code>EDID.BIN</code>,保存于桌面生成的新目录中<br><img src="http://ous2s14vo.bkt.clouddn.com/DarwinDumper.jpg" alt="DarwinDumper"><br>生成的HTML报告如下:<br><img src="http://ous2s14vo.bkt.clouddn.com/DarwinDumperReport.png" alt="DarwinDumperReport"><br><strong><em>如果选择<code>Select All Dumps</code>再按<code>Run</code>它会生成一份完整的系统信息,类似于<code>WINDOWS</code>下面的<code>AIDA64</code>导出的详细信息</em></strong><br><img src="http://ous2s14vo.bkt.clouddn.com/DarwinDumperReportFull.png" alt="DarwinDumperReportFull"></li>
+</ol>
+<h1 id="修正EDID及打开HIDPI显示支持"><a href="#修正EDID及打开HIDPI显示支持" class="headerlink" title="修正EDID及打开HIDPI显示支持"></a>修正EDID及打开HIDPI显示支持</h1><h2 id="目的-通过此操作可有效解决开机内屏黑屏-花屏-显示器睡眠唤醒黑屏-花屏-可直接连接外部显示器"><a href="#目的-通过此操作可有效解决开机内屏黑屏-花屏-显示器睡眠唤醒黑屏-花屏-可直接连接外部显示器" class="headerlink" title="目的:通过此操作可有效解决开机内屏黑屏/花屏,显示器睡眠唤醒黑屏/花屏,可直接连接外部显示器"></a>目的:通过此操作可有效解决开机内屏黑屏/花屏,显示器睡眠唤醒黑屏/花屏,可直接连接外部显示器</h2><p><strong><em>备注:部分显卡需要修正显示器<a href="https://blog.daliansky.net/Intel-core-display-platformID-finishing.html">接口数据</a>,可通过Clover打补丁实现</em></strong></p>
+<h2 id="使用工具-FixEDID"><a href="#使用工具-FixEDID" class="headerlink" title="使用工具:FixEDID"></a>使用工具:<a href="https://github.com/andyvand/FixEDID" target="_blank" rel="external">FixEDID</a></h2><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤:"></a>操作步骤:</h2><ol>
+<li>打开<code>FixEDID</code>,点击<code>Open EDID binary file</code>,选择上面生成的<code>EDID.BIN</code>,这个文件位于<code>~/Desktop/DarwinDumperxxx</code></li>
+<li>依次打开<code>EDID</code>,<code>EDID</code>的目录中存在三种格式的文件,<img src="http://ous2s14vo.bkt.clouddn.com/EDID.BIN.png" alt="EDID.BIN">请选择打开<code>EDID.bin</code><br><img src="http://ous2s14vo.bkt.clouddn.com/FixEDID.png" alt="FixEDID"></li>
+<li>根据自己的显示器的分辨率选择16:9或者16:10,我的显示器是15.6寸,分辨率为1920x1080,长宽比为16:9,所以我需要将插图中的16:10通过下拉菜单选择调整为16:9,如下图<img src="http://ous2s14vo.bkt.clouddn.com/FixEDID2.png" alt="FixEDID2"><br>其中:前面的16:9是程序自动检测出的长宽比,后面的16:9通过下拉菜单选择,保持前后一致</li>
+<li><p>添加HIDPI高分辨率:请根据个人喜好添加,我通常会添加的分辨率如下:</p>
+<p> |分辨率|分辨率|分辨率|分辨率|分辨率|<br> |—|—|—|—|—|<br> |3200x1800|2880x1620|1920x1080|1600x900|1440x810|</p>
+</li>
+</ol>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/FixEDID3.png" alt="FixEDID3"></p>
+<ol>
+<li>点击<code>Make</code>按钮,会自动在桌面生成一个新目录,比如我的目录为:<code>DisplayVendorID-dae</code></li>
+<li>将该目录复制到显示器设备描述目录下,打开终端,输入命令:</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cp ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resources/Overrides</div></pre></td></tr></table></figure>
+<h1 id="如何修改分辨率"><a href="#如何修改分辨率" class="headerlink" title="如何修改分辨率"></a>如何修改分辨率</h1><p>使用工具:<a href="https://github.com/avibrazil/RDM" target="_blank" rel="external">RDM</a><br><img src="http://ous2s14vo.bkt.clouddn.com/RDM.png" alt="RDM"><br>其中:分辨率后边带有闪电符号的即为HIDPI高分辨率</p>
+<h2 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h2><h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力!<br>整整写了两天的博文，如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>使用AppleALC声卡仿冒驱动AppleHDA的正确姿势</title>
+      <link>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</link>
+      <guid>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</guid>
+      <pubDate>Thu, 09 Nov 2017 01:23:23 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;大纲-写作中&quot;&gt;&lt;a href=&quot;#大纲-写作中&quot; class=&quot;headerlink&quot; title=&quot;大纲,写作中&quot;&gt;&lt;/a&gt;大纲,写作中&lt;/h1&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="大纲-写作中"><a href="#大纲-写作中" class="headerlink" title="大纲,写作中"></a>大纲,写作中</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经常给网友仿冒声卡驱动, 一直都没有将过程写下来,鉴于每天会有许多人问如何仿冒声卡,就想将过程记录下来,供大家参考学习</p>
+<h1 id="提取codec"><a href="#提取codec" class="headerlink" title="提取codec"></a>提取codec</h1><p>通过linux提取codec</p>
+<h1 id="整理有效节点兼治去除底噪"><a href="#整理有效节点兼治去除底噪" class="headerlink" title="整理有效节点兼治去除底噪"></a>整理有效节点兼治去除底噪</h1><p>使用到的工具：verbit.sh</p>
+<h1 id="整理有效路径兼治不发声"><a href="#整理有效路径兼治不发声" class="headerlink" title="整理有效路径兼治不发声"></a>整理有效路径兼治不发声</h1><p>使用codecgraph生成pathmap图</p>
+<h1 id="整理configdata"><a href="#整理configdata" class="headerlink" title="整理configdata"></a>整理configdata</h1><h1 id="找出适合你的id"><a href="#找出适合你的id" class="headerlink" title="找出适合你的id"></a>找出适合你的id</h1><table>
+<thead>
+<tr>
+<th>设备名称</th>
+<th>有效节点</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP Out</td>
+<td>0x16</td>
+<td>0x22-&gt;0x16</td>
+</tr>
+<tr>
+<td>Speaker Out</td>
+<td>0x17</td>
+<td>0x23-&gt;0x17</td>
+</tr>
+<tr>
+<td>Mic In</td>
+<td>0x1a</td>
+<td>0x26&lt;-0x19  0x26&lt;-0x20</td>
+</tr>
+<tr>
+<td>Line In</td>
+<td>0x19</td>
+<td>0x25&lt;-0x20  0x26&lt;-0x19</td>
+</tr>
+</tbody>
+</table>
+<h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
+<h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h1 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h1><p>耳机切换<br>睡眠唤醒</p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>使用CloverALC给AppleHDA打补丁，适用于台式机</title>
@@ -22,7 +120,7 @@
 &lt;li&gt;教程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;http://ous2s14vo.bkt.clouddn.com/sound.jpg&quot; alt=&quot;sound&quot;&gt;&lt;/p&gt;
-&lt;h1&gt;&lt;strong&gt;使用 &lt;code&gt;CloverALC&lt;/code&gt; 给 &lt;co
+&lt;h1 id=&quot;使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机
       
       </description>
       
@@ -30,8 +128,7 @@
 <li>教程</li>
 </ul>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/sound.jpg" alt="sound"></p>
-<h1><strong>使用 <code>CloverALC</code> 给 <code>AppleHDA</code> 打补丁， 适用于台式机</strong></h1>
-<blockquote>
+<h1 id="使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机"><a href="#使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机" class="headerlink" title="使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机"></a><strong>使用 <code>CloverALC</code> 给 <code>AppleHDA</code> 打补丁， 适用于台式机</strong></h1><blockquote>
 <p><em>原生支持 <code>AppleHDA</code></em></p>
 </blockquote>
 <p>使用 <code>Clover</code> 为Realtek ALC芯片打补丁，这种方法可以启用macOS <code>AppleHDA</code> 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 <code>AppleHDA.kext</code> 。</p>
@@ -42,60 +139,51 @@
 </ol>
 <p><strong>更新列表</strong></p>
 <ul>
-<li>9-26-17
-<ul>
+<li>9-26-17<ul>
 <li>支持10.13, 支持ALC269/ALC283</li>
 <li>支持PikeralphaALC弃用的</li>
 </ul>
 </li>
-<li>12-14-15
-<ul>
+<li>12-14-15<ul>
 <li>audio_pikeralpha-110 (Clover版本的Piker Aplha AppleHDA8Series.sh)</li>
 </ul>
 </li>
-<li>11-8-15
-<ul>
+<li>11-8-15<ul>
 <li>Skylake/100系统更新，加入ALC1150/Audio ID: 3</li>
 </ul>
 </li>
-<li>7-19-15
-<ul>
-<li>ALC283更新</li>
+<li>7-19-15<ul>
+<li>ALC283更新 </li>
 </ul>
 </li>
-<li>6-15-15
-<ul>
+<li>6-15-15<ul>
 <li>10.11 - El Capitan Realtek ALC AppleHDA.kext 初始支持</li>
 </ul>
 </li>
 </ul>
 <p><strong>A. 需求</strong></p>
 <ol>
-<li>macOS/Clover_v2696及以后版本
-<ol>
+<li>macOS/Clover_v2696及以后版本<ol>
 <li>10.13/High Sierra, 关闭 SIP, 挂载 EFI</li>
 <li>10.12/Sierra, 关闭 SIP, 挂载 EFI</li>
-<li>10.11/El Capitan, 设置 boot flag: <code>rootless=0</code></li>
+<li>10.11/El Capitan, 设置 boot flag: <code>rootless=0</code> </li>
 <li>10.10/Yosemite, 设置 boot flag: <code>kext-dev-mode=1</code></li>
 <li>10.9/Mavericks</li>
 <li>10.8/Mountain Lionon</li>
 </ol>
 </li>
-<li>原生的、未修改的 <code>AppleHDA.kext</code>
-<ol>
+<li>原生的、未修改的 <code>AppleHDA.kext</code><ol>
 <li><a href="https://github.com/toleda/audio_ALC_guides/blob/master/Restore%20native%20AppleHDA%20%5BGuide%5D.pdf" target="_blank" rel="external">Need native?</a></li>
 </ol>
 </li>
-<li>支持Realtek板载的音频编解码器
-<ol>
+<li>支持Realtek板载的音频编解码器<ol>
 <li><a href="https://github.com/toleda/audio_ALC_guides/blob/master/Identify%20Audio%20Codec%20%5BGuide%5D.pdf" target="_blank" rel="external">Unknown codec?</a></li>
 </ol>
 </li>
 </ol>
 <p><strong>B. Realtek ALCxxx</strong> (验证过的编解码器和音频ID)</p>
 <ol>
-<li>
-<p>支持的编解码器 (* 不支持 audio_pikeralpha-110)</p>
+<li><p>支持的编解码器 (* 不支持 audio_pikeralpha-110)</p>
 <ol>
 <li>885</li>
 <li>887</li>
@@ -107,25 +195,21 @@
 <li>1220</li>
 </ol>
 </li>
-<li>
-<p>支持的音频ID</p>
+<li><p>支持的音频ID</p>
 <ul>
-<li>
-<p>音频ID: <strong>1</strong></p>
+<li><p>音频ID: <strong>1</strong> </p>
 <ul>
 <li>支持 885, 887, 888, 889, 892, 898, 1150, 1220</li>
 <li>Realtek ALC audio (默认, 1/2/3/5/6 主板音频端口)</li>
 </ul>
 </li>
-<li>
-<p>音频ID: <strong>2</strong></p>
+<li><p>音频ID: <strong>2</strong></p>
 <ul>
 <li>支持 887, 888, 889, 892, 898, 1150, 1220</li>
 <li>Realtek ALC/5.1声道 (3主板音频端口，2进/1出变成3出)</li>
 </ul>
 </li>
-<li>
-<p>音频ID: <strong>3</strong></p>
+<li><p>音频ID: <strong>3</strong></p>
 <ul>
 <li>支持 887, 888, 889, 892, 898, 1150</li>
 <li>带有Realtek ALC音频的HD3000 / HD4000 HDMI音频</li>
@@ -136,8 +220,7 @@
 </ol>
 <p><strong>C. 安装</strong></p>
 <ol>
-<li>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁
-<ol>
+<li>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁<ol>
 <li><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a> <code>audio_cloverALC-1x0.command</code></li>
 <li>双击: <code>audio_cloverALC-1x0.command</code></li>
 <li>Password:</li>
@@ -149,34 +232,27 @@
 </ol>
 </li>
 <li>重启电脑</li>
-<li>验证ALC板载音频
-<ol>
+<li>验证ALC板载音频<ol>
 <li>系统偏好设置/声音/输出/选择音频设备</li>
 </ol>
 </li>
 </ol>
 <p><strong>D. 终端</strong></p>
 <ol>
-<li>
-<p>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁</p>
+<li><p>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁</p>
 <ol>
-<li>
-<p><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a>   <code>audio_cloverALC-1x0.sh</code></p>
+<li><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a>   <code>audio_cloverALC-1x0.sh</code></li>
+<li><p>打开终端</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./audio_cloverALC-1x0....sh</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>打开终端</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./audio_cloverALC-1x0....sh</div></pre></td></tr></table></figure></p>
-</li>
-<li>
-<p>其它步骤同 <code>C.</code></p>
+<li><p>其它步骤同 <code>C.</code></p>
 </li>
 </ol>
 </li>
 </ol>
 <p><strong>E. 更多的信息</strong></p>
 <ol>
-<li><a href="https://github.com/toleda/audio_RealtekALC/blob/master/DETAILS.md" target="_blank" rel="external">Details</a>
-<ol>
+<li><a href="https://github.com/toleda/audio_RealtekALC/blob/master/DETAILS.md" target="_blank" rel="external">Details</a><ol>
 <li>Onboard Audio Solutions</li>
 <li>Requirements - Supported/Unsupported</li>
 <li>Notes</li>
@@ -185,21 +261,16 @@
 <li>Problem Reporting</li>
 </ol>
 </li>
-<li>Terminal Saved Output
-<ol>
+<li>Terminal Saved Output<ol>
 <li><a href="https://github.com/toleda/audio_CloverALC/blob/master/Terminal%20Saved%20Output_v1.0.4-efi.txt" target="_blank" rel="external">Clover/EFI</a></li>
 <li><a href="https://github.com/toleda/audio_CloverALC/blob/master/Terminal%20Saved%20Output_v1.0.4-leg.txt" target="_blank" rel="external">Clover/Legacy</a></li>
 </ol>
 </li>
 </ol>
-<p><strong>Credit</strong>
-THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, <a href="http://applelife.ru/threads/patchim-applehda-s-pomoschju-zagruzchika.39406/#post-353647" target="_blank" rel="external">abxite</a></p>
-<p>toleda https://github.com/toleda/audio_cloverALC</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<p><strong>Credit</strong><br>THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, <a href="http://applelife.ru/threads/patchim-applehda-s-pomoschju-zagruzchika.39406/#post-353647" target="_blank" rel="external">abxite</a></p>
+<p>toleda <a href="https://github.com/toleda/audio_cloverALC" target="_blank" rel="external">https://github.com/toleda/audio_cloverALC</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html#disqus_thread</comments>
@@ -212,15 +283,11 @@ THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, li
       <pubDate>Wed, 01 Nov 2017 01:46:10 GMT</pubDate>
       <description>
       
-        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。&lt;/li&gt;
-&lt;li&gt;Clover特别增
+        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-1-17B48-正式版-with-Clover-4278原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-1-17B48-正式版-with-Clover-4278
       
       </description>
       
-      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像</h1>
-<ul>
+      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-1-17B48-正式版-with-Clover-4278原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-1-17B48-正式版-with-Clover-4278原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像</h1><ul>
 <li>本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。</li>
 <li>Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理</li>
 <li>Clover默认配置文件config.plist为620/630/640/650；</li>
@@ -231,23 +298,10 @@ THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, li
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
-<h1>截图：</h1>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/1_10.13.1_17B48.png" alt="1_10.13.1_17B48">
-<img src="http://ous2s14vo.bkt.clouddn.com/2About.png" alt="2About">
-<img src="http://ous2s14vo.bkt.clouddn.com/3Bluetooth.png" alt="3Bluetooth">
-<img src="http://ous2s14vo.bkt.clouddn.com/4Graphics.png" alt="4Graphics">
-<img src="http://ous2s14vo.bkt.clouddn.com/5USB.png" alt="5USB">
-<img src="http://ous2s14vo.bkt.clouddn.com/6Extensions.png" alt="6Extensions">
-<img src="http://ous2s14vo.bkt.clouddn.com/7_10.13.1.png" alt="7_10.13.1">
-<img src="http://ous2s14vo.bkt.clouddn.com/8config.plist.png" alt="8config.plist"></p>
-<h1>下载链接</h1>
-<p><a href="https://pan.baidu.com/s/1sla8aQh" target="_blank" rel="external">https://pan.baidu.com/s/1sla8aQh</a>
-MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403eed5a18ffbbaaf53b3261c71c</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://ous2s14vo.bkt.clouddn.com/1_10.13.1_17B48.png" alt="1_10.13.1_17B48"><br><img src="http://ous2s14vo.bkt.clouddn.com/2About.png" alt="2About"><br><img src="http://ous2s14vo.bkt.clouddn.com/3Bluetooth.png" alt="3Bluetooth"><br><img src="http://ous2s14vo.bkt.clouddn.com/4Graphics.png" alt="4Graphics"><br><img src="http://ous2s14vo.bkt.clouddn.com/5USB.png" alt="5USB"><br><img src="http://ous2s14vo.bkt.clouddn.com/6Extensions.png" alt="6Extensions"><br><img src="http://ous2s14vo.bkt.clouddn.com/7_10.13.1.png" alt="7_10.13.1"><br><img src="http://ous2s14vo.bkt.clouddn.com/8config.plist.png" alt="8config.plist"></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p><a href="https://pan.baidu.com/s/1sla8aQh" target="_blank" rel="external">https://pan.baidu.com/s/1sla8aQh</a><br>MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403eed5a18ffbbaaf53b3261c71c</p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html#disqus_thread</comments>
@@ -261,629 +315,28 @@ MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403e
       <description>
       
         &lt;blockquote&gt;
-&lt;p&gt;HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件
-在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅&lt;a href=&quot;http://www.insan
+&lt;p&gt;HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件&lt;br&gt;在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅&lt;a href=&quot;http://www.in
       
       </description>
       
       <content:encoded><![CDATA[<blockquote>
-<p>HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件
-在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅<a href="http://www.insanelymac.com/forum/topic/321021-guide-hwpintel-speed-shift-enable-with-full-power-management/" target="_blank" rel="external">原文</a></p>
+<p>HWP是什么？HWP是Hardware Work Package的简称，翻译过来叫做：硬件标准部件<br>在macOS下,HWP是指Intel SpeedShift，开启全功率的电源管理，更多的解释请参阅<a href="http://www.insanelymac.com/forum/topic/321021-guide-hwpintel-speed-shift-enable-with-full-power-management/" target="_blank" rel="external">原文</a></p>
 </blockquote>
-<h2>用到的工具： <code>freqVectorsEdit.sh</code></h2>
-<h2>用法：</h2>
-<ul>
-<li>
-<p>打开终端，复制下面命令：
-<code>cd /tmp &amp;&amp; curl -s https://raw.githubusercontent.com/Piker-Alpha/freqVectorsEdit.sh/master/freqVectorsEdit.sh &gt; /tmp/freqVectorsEdit.sh &amp;&amp; chmod +x freqVectorsEdit.sh &amp;&amp; /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/Mac-*.bin</code></p>
+<h2 id="用到的工具：-freqVectorsEdit-sh"><a href="#用到的工具：-freqVectorsEdit-sh" class="headerlink" title="用到的工具： freqVectorsEdit.sh"></a>用到的工具： <code>freqVectorsEdit.sh</code></h2><h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><ul>
+<li><p>打开终端，复制下面命令：<br><code>cd /tmp &amp;&amp; curl -s https://raw.githubusercontent.com/Piker-Alpha/freqVectorsEdit.sh/master/freqVectorsEdit.sh &gt; /tmp/freqVectorsEdit.sh &amp;&amp; chmod +x freqVectorsEdit.sh &amp;&amp; /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/freqVectorsEdit.sh &amp;&amp; sudo rm -rf /tmp/Mac-*.bin</code></p>
 </li>
-<li>
-<p><strong>注意上面的命令为一条，须全部复制</strong></p>
+<li><p><strong>注意上面的命令为一条，须全部复制</strong></p>
 </li>
-<li>
-<p>系统会使用 <code>curl</code> 自动下载一个程序，保存到 <code>/tmp</code> ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；</p>
-</li>
-<li>
-<p>屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 <code>绿色</code> 显示的那三行前面括号里的机型为可选机型，带 <code>HWP</code> 字样的为可以开启 <code>HWPEnable</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/HWP.png" alt="HWP"></p>
-</li>
-<li>
-<p>输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 <code>HWP</code></p>
-</li>
-<li>
-<p>本文不讨论开启 <code>HWP</code> 的步骤及用法，更多的信息请参阅其它文章</p>
-</li>
+<li>系统会使用 <code>curl</code> 自动下载一个程序，保存到 <code>/tmp</code> ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；</li>
+<li>屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 <code>绿色</code> 显示的那三行前面括号里的机型为可选机型，带 <code>HWP</code> 字样的为可以开启 <code>HWPEnable</code><br>  <img src="http://ous2s14vo.bkt.clouddn.com/HWP.png" alt="HWP"></li>
+<li>输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 <code>HWP</code></li>
+<li>本文不讨论开启 <code>HWP</code> 的步骤及用法，更多的信息请参阅其它文章</li>
 </ul>
-<h2>收工</h2>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h2 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h2><h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>MAC常用快捷键整理</title>
-      <link>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</link>
-      <guid>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</guid>
-      <pubDate>Thu, 26 Oct 2017 05:29:11 GMT</pubDate>
-      <description>
-      
-        &lt;h2&gt;写在前面&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;苹果 Mac 系统常用快捷键有很多，但是很多童鞋对于这些 Mac 快捷键都不是很熟悉，今天小编为大家整理了一份 Mac 系统常用快捷键大全，大家快收藏起来吧!平时在使用 Mac 系统的时候可以提高不少工作效率哦!&lt;/p&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2>写在前面</h2>
-<blockquote>
-<p>苹果 Mac 系统常用快捷键有很多，但是很多童鞋对于这些 Mac 快捷键都不是很熟悉，今天小编为大家整理了一份 Mac 系统常用快捷键大全，大家快收藏起来吧!平时在使用 Mac 系统的时候可以提高不少工作效率哦!</p>
-<p>本文转自 <a href="http://xclient.info/a/36952668-9577-8ec9-4412-111ae375fde7.html?_=905734269077aa284ba54b095a93d187" target="_blank" rel="external">Xclient.info</a>，转载请注明原出处</p>
-</blockquote>
-<h2>小普及</h2>
-<ul>
-<li>
-<p>Mac中主要有四个修饰键，分别是 Command，Control，Option 和 Shift。</p>
-</li>
-<li>
-<p>这四个键分别有自己的图案，他们经常出现在Mac应用程序中的菜单栏里，方便你随时学习新的快捷键。</p>
-</li>
-</ul>
-<blockquote>
-<p>如下</p>
-</blockquote>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-01.png" alt="2017-10-26-01"></p>
-<h2>正文</h2>
-<h3>通用快捷键</h3>
-<blockquote>
-<p>Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Windows 下的 Ctrl，黑果通常是 Alt 键。</p>
-</blockquote>
-<ul>
-<li>Command + Z 撤销。</li>
-<li>Command + X 剪切。</li>
-<li>Command + C 拷贝(Copy)。</li>
-<li>Command + V 粘贴。</li>
-<li>Command + A 全选(All)。</li>
-<li>Command + S 保存(Save)。</li>
-<li>Command + F 查找(Find)。</li>
-</ul>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-02.png" alt="2017-10-26-02"></p>
-<h3>系统快捷键</h3>
-<ul>
-<li>Option 开机后立即按下，将显示启动管理器。</li>
-<li>Command + R 开机后立即按下，可打开OS X 的恢复功能。</li>
-<li>Command + Option + P + R 开机后立即按下，重置 NVRAM。有些时候电脑会出现些小问题，重置 NVRAM 是你除了重新启动，尝试修复的第一选择。</li>
-<li>Command + Option + Control + Power 退出所有应用程序，允许你进行文稿储存，然后关机。</li>
-<li>按住 Power 按钮 5 秒 强制 Mac 关机。</li>
-</ul>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-03.png" alt="2017-10-26-03"></p>
-<h3>截图</h3>
-<ul>
-<li>Command + Shift + 3 截取全部屏幕到文件。</li>
-<li>Command + Shift + Control + 3 截取全部屏幕到剪贴板。</li>
-<li>Command + Shift + 4 截取所选屏幕区域到一个文件，或按空格键仅捕捉一个窗口。</li>
-<li>Command + Shift + Control + 4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗口。</li>
-</ul>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-04.png" alt="2017-10-26-04"></p>
-<h3>文件管理器</h3>
-<ul>
-<li>Command + Shift + N (New) 新建文件夹。</li>
-<li>Command + Shift + G (Go) 调出窗口，可输入绝对路径直达文件夹。</li>
-<li>return 这个其实不算快捷键，点击文件，按下可重命名文件。</li>
-<li>Command + O 打开所选项。在 Mac 里打开文件不像 Windows 里直接按 Enter。</li>
-<li>Command + Option + V 作用相当于Windows里的文件剪切。在其它位置上对文件复制(Command-C)，在目的位置按下这个快捷键，文件将被剪切到此位置。</li>
-<li>Command + ↑ 打开包含当前文件夹的文件夹，相当于 Windows 里的“向上”。</li>
-<li>Command + Delete 将文件移至废纸篓。</li>
-<li>Command + Shift + Delete 清倒废纸篓。</li>
-<li>Space 快速查看选中的文件，也就是预览功能。</li>
-</ul>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-05.png" alt="2017-10-26-05"></p>
-<h3>切换</h3>
-<ul>
-<li>Command + Tab 在应用程序间切换。</li>
-<li>Command + Shift + Tab 在应用程序间切换(反向)。</li>
-<li>Command + ~ 在各应用中的窗口间切换。</li>
-</ul>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-06.png" alt="2017-10-26-06"></p>
-<h3>浏览器</h3>
-<ul>
-<li>Command + L 光标直接跳至地址栏。</li>
-<li>Control + Tab 转向下一个标签页。</li>
-<li>Control + Shift + Tab 转向上一个标签页。</li>
-<li>Command + '+'或'=' 放大页面。</li>
-<li>Command + '-' 缩小页面。</li>
-</ul>
-<p><img src="http://ovefvi4g3.bkt.clouddn.com//2017-10-26-07.png" alt="2017-10-26-07"></p>
-<h3>应用程序中</h3>
-<ul>
-<li>Command + H 隐藏(Hide)当前正在运行的应用程序窗口。</li>
-<li>Command + Option + H 隐藏(Hide)其他应用程序窗口。</li>
-<li>Command + Q 退出(Quit)最前面的应用程序。</li>
-<li>Command + Shift + Z 重做，也就是撤销的逆向操作。</li>
-<li>Command + Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于 Windows 中(Alt+Tab)。</li>
-<li>Command + Option + esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出。</li>
-</ul>
-<h3>文本处理</h3>
-<ul>
-<li>Command + B 切换所选文字粗体(Bold)显示。</li>
-<li>fn + Delete 相当于 PC 全尺寸键盘上的 Delete，也就是向后删除。</li>
-<li>fn + ↑ 向上滚动一页(Page Up)。</li>
-<li>fn + ↓ 向下滚动一页(Page Down)。</li>
-<li>fn + ← 滚动至文稿开头(Home)。</li>
-<li>fn + → 滚动至文稿末尾(End)。</li>
-<li>Command + → 将光标移至当前行的行尾。</li>
-<li>Command + ← 将光标移至当前行的行首。</li>
-<li>Command + ↓ 将光标移至文稿末尾。</li>
-<li>Command + ↑ 将光标移至文稿开头。</li>
-<li>Option + → 将光标移至下一个单词的末尾。</li>
-<li>Option + ← 将光标移至上一个单词的开头。</li>
-<li>Control + A 移至行或段落的开头。</li>
-</ul>
-<h3>更多快捷键</h3>
-<p>如果你还想学习更多快捷键，请点击这里查看<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">苹果官方的快捷键帮助文档</a>。</p>
-<h2>关于打赏</h2>
-<ul>
-<li>您的支持就是我的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</li>
-</ul>
-<h2>QQ群:</h2>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>clover使用教程</title>
-      <link>http://blog.daliansky.net/clover-user-manual.html</link>
-      <guid>http://blog.daliansky.net/clover-user-manual.html</guid>
-      <pubDate>Fri, 20 Oct 2017 03:19:06 GMT</pubDate>
-      <description>
-      
-        &lt;h1&gt;Clover的前世今生&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;前言：&lt;em&gt;先将最最基本的操作发出来，然后再写完整的教程&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;如何打开啰嗦模式进行排错&lt;/h2&gt;
-&lt;p&gt;开机进入clover引导界面，
-&lt;img src=
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1>Clover的前世今生</h1>
-<blockquote>
-<p>前言：<em>先将最最基本的操作发出来，然后再写完整的教程</em></p>
-</blockquote>
-<h2>如何打开啰嗦模式进行排错</h2>
-<p>开机进入clover引导界面，
-<img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main">
-在要引导的分区卷标上按 <code>空格</code> 即可进入
-<img src="http://ous2s14vo.bkt.clouddn.com/space2.png" alt="space2">
-勾选以下选项：
-<img src="http://ous2s14vo.bkt.clouddn.com/space-selected.png" alt="space-selected">
-选择 <code>Boot macOS with selected options</code> 启动
-出现错误画面拍照发群里寻求帮助。</p>
-<h2>Clover是什么</h2>
-<p>什么是Clover（三叶草）呢？显然它不是指的草地里用来喂牛的草啦。Clover是一个软件，是一个新型的启动器，它能够让普通的PC上用上Mac OS X系统。</p>
-<p>苹果公司（Apple）限制Mac OS X系统只能在Apple设备上使用，并且苹果不保证Mac OS X在其它设备上能够正常工作。所以，用户需要承担一定的风险。当然，为了避免其它的法律纠纷，你不应该用作商业用途。装上了Mac OS X的非苹果电脑，就叫做黑苹果(Hackintosh)。</p>
-<h2>名字的来源</h2>
-<p>启动器的名字 <code>Clover</code> 由一位创建者kabyl命名。他发现了四叶草和Mac键盘上Commmand键的相似之处，由此起了Clover这个名字。</p>
-<blockquote>
-<p>维基百科：<em>四叶草是三叶草的稀有变种。根据西方传统，发现者四叶草意味的是好运，尤其是偶然发现的，更是祥瑞之兆。另外，第一片叶子代表信仰，第二片叶子代表希望，第三片叶子代表爱情，第四片叶子代表运气。</em></p>
-</blockquote>
-<h2>Clover能干什么</h2>
-<p>Clover是一个操作系统启动加载器(boot loader)，能够同时运行于支持EFI方式启动的新式电脑和不支持它的老式电脑上。一些操作系统可以支持以EFI方式启动，比如OS X, Windows 7/8/10 64-bit, Linux；也有不支持的，比如Windows XP，它只能通过传统的BIOS方式来启动，也就是通过启动扇区来启动。</p>
-<p>EFI不仅存在于操作系统的启动过程中，它还会创建操作系统可访问的表和服务(tables and services)，操作系统的运行依赖于EFI正确的提供功能。从内建的UEFI来启动OS X是不可能的，用原始的DUET来启动OS X也不可能。CloverEFI和CloverGUI做了大量的工作来修正内部表，让运行OS X成为可能。</p>
-<blockquote>
-<p>译注：<em>DUET(Developer's UEFI Emulation)，开发者的UEFI模拟</em></p>
-</blockquote>
-<h2>Clover的两种启动方式</h2>
-<p>启动方式A: 基于BIOS的电脑（老式主板）
-<code>BIOS-&gt;MBR-&gt;PBR-&gt;boot-&gt;CLOVERX64.efi-&gt;OSLoader</code></p>
-<p>启动方式B: 基于UEFI的电脑（新式主板）
-<code>UEFI-&gt;CLOVERX64.efi-&gt;OSLoader</code></p>
-<h2>Clover兼EFI的目录结构</h2>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/EFI.png" alt="EFI"></p>
-<h2>Clover驱动程序详解</h2>
-<p>BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEFI启动过程中（启动方式B）则使用 <code>drivers64UEFI</code> 目录。它们的内容会根据配置和BIOS版本而有所不同。
-<strong>必须要提的一点是这些驱动程序只在bootloader运行时有效，不会影响最终启动的操作系统。</strong>
-至于到底要使用哪些驱动程序由用户来决定。</p>
-<h3>Drivers64UEFI目录几必备的驱动程序：</h3>
-<table>
-<thead>
-<tr>
-<th>驱动程序</th>
-<th>详解</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>apfs.efi</td>
-<td>苹果新推出的文件系统，macOS 10.13必备</td>
-</tr>
-<tr>
-<td>FSInject.efi</td>
-<td>控制文件系统注入kext到系统的可能性。详细解释请参照<a href="https://clover-wiki.zetam.org/Configuration#boot-args" target="_blank" rel="external">WithKexts</a></td>
-</tr>
-<tr>
-<td>HFSPlus.efi</td>
-<td>HFS+文件系统驱动程序。这个驱动对于通过启动方式B来启动Mac OS X是必须的。启动方式A中用到的启动程序(CloverEFI)已经包含了这个驱动</td>
-</tr>
-<tr>
-<td>OsxAptioFixDrv-64.efi</td>
-<td>修复AMI Aptio EFI内存映射。如果没有就不能启动OS X</td>
-</tr>
-<tr>
-<td>OsxFatBinaryDrv-64.efi</td>
-<td>允许加载FAT模块比如boot.efi</td>
-</tr>
-<tr>
-<td>CsmVideoDxe.efi</td>
-<td>比UEFI里提供更多分辨率的显卡驱动(可选)</td>
-</tr>
-<tr>
-<td>OsxAptioFix2Drv-64.efi</td>
-<td>部分机型可能会需要(可选)</td>
-</tr>
-</tbody>
-</table>
-<h1>Clover Bootloader详解</h1>
-<p>本节会详细介绍Clover各项功能的用法</p>
-<h2>Clover主界面</h2>
-<p>使用Clover开机引导后，默认的系统界面如下：
-<img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main"></p>
-<p>本例中:</p>
-<ul>
-<li>蓝色图标为 <code>Windows 10</code> 的引导</li>
-<li>绿色图标为 <code>Ubuntu Linux</code> 的引导</li>
-<li>橙色图标为 <code>macOS High Sierra</code> 的引导</li>
-<li>红色图标为 <code>macOS Sierra</code>的引导</li>
-</ul>
-<p>当你想引导到不同的操作系统，只需要移动键盘上的左右键到各自的图标后回车即可。</p>
-<h2>帮助菜单 F1</h2>
-<p>按 <code>F1</code> 键会呼出 <code>Clover</code> 的帮助信息
-<img src="http://ous2s14vo.bkt.clouddn.com/f1-Large.png" alt="f1-Large"></p>
-<ul>
-<li>
-<p>ESC 退出子菜单，恢复到主菜单</p>
-</li>
-<li>
-<p>F1 帮助</p>
-</li>
-<li>
-<p>F2 保存 <code>preboot.log</code> 到 <code>EFI/CLOVER/misc/</code> 目录下，以便于您排错</p>
-</li>
-<li>
-<p>F3 显示 <code>被隐藏</code> 的入口</p>
-<ul>
-<li>比如你在 <code>config.plist</code> 中隐藏了 <code>Recovery HD</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/HideVolume.png" alt="HideVolume"></li>
-<li>当你想进入恢复模式的时候，可以不需要修改 <code>config.plist</code> 而直接按 <code>F3</code> 显示出那些被你隐藏的引导项。如下图：
-<img src="http://ous2s14vo.bkt.clouddn.com/f3.png" alt="f3"></li>
-</ul>
-</li>
-<li>
-<p>F4 提取 <code>DSDT</code> 保存到 <code>EFI/CLOVER/ACPI/origin/</code></p>
-<ul>
-<li>此选项会经常用到。比如你的机器出现问题，需要别人帮助你解决问题，人家会跟你要 <code>DSDT</code> ，这个时候你只需要在 <code>Clover</code> 引导界面按下快捷键 <code>F4</code> 即可提取</li>
-</ul>
-</li>
-<li>
-<p>F5 提取修正过的 <code>DSDT</code> 保存到 <code>EFI/CLOVER/ACPI/origin/</code></p>
-</li>
-<li>
-<p>F6 提取显卡ROM <code>VideoBios</code> 保存到 <code>EFI/CLOVER/misc/</code></p>
-</li>
-<li>
-<p>F10 截屏，截取当前界面，保存到 <code>EFI/CLOVER/misc/</code></p>
-</li>
-<li>
-<p>空格 选定菜单项的详细信息</p>
-</li>
-<li>
-<p>数字 1-9 菜单项的快捷键</p>
-</li>
-<li>
-<p>A 关于 <code>Clover</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/aboutclover.png" alt="aboutclover"></p>
-</li>
-</ul>
-<ul>
-<li>O <code>Clover</code> 选项
-<ul>
-<li>此选项是 <code>Clover</code> 的核心，所有的选项都在这个菜单里，当你无法引导进入 <code>macOS</code> 系统使用 <code>Clover Configurator</code> 进行选项调整时，可以通过该选项进行修改进入系统。<strong>后面会详细介绍</strong>
-<img src="http://ous2s14vo.bkt.clouddn.com/options.png" alt="options"></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>R 软复位</li>
-<li>U 退出</li>
-</ul>
-<h2>如何打开啰嗦模式进行排错【重复内容，目的是加深印象】</h2>
-<p>开机进入clover引导界面，
-<img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main">
-在要引导的分区卷标上按 <code>空格</code> 即可进入
-<img src="http://ous2s14vo.bkt.clouddn.com/space2.png" alt="space2">
-勾选以下选项：
-<img src="http://ous2s14vo.bkt.clouddn.com/space-selected.png" alt="space-selected">
-选择 <code>Boot macOS with selected options</code> 启动
-出现错误画面拍照发群里寻求帮助。</p>
-<h2>Clover Options：Clover选项</h2>
-<blockquote>
-<p>文章上面已经提到了Clover的选项是它的核心，那么现在就让我们走进Clover选项设置</p>
-</blockquote>
-<p>照例先上一张图：
-<img src="http://ous2s14vo.bkt.clouddn.com/options.png" alt="options"></p>
-<ul>
-<li>
-<p>Boot Args</p>
-<ul>
-<li>引导参数传递，比如前面教大家的使用 <code>-v</code> 打开啰嗦模式，就是通过它传递的；再比如你使用了不兼容版本的 <code>Lilu</code> 和 <code>AppleALC</code> 而导致无法进入系统时，可以在这上面手动添加上： <code>-liluoff</code> 或者 <code>-alcoff</code> 跳过相关的驱动而进入系统</li>
-</ul>
-</li>
-<li>
-<p>Configs</p>
-<ul>
-<li>配置文件选择。当你有不止一个 <code>config.plist</code> 配置文件时，可以通过该选项选择不同的配置文件进入系统</li>
-<li>操作过程
-<ul>
-<li>
-<p>光标移动到 <code>Configs</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/configs.png" alt="configs"></p>
-</li>
-<li>
-<p>回车后进入子菜单
-<img src="http://ous2s14vo.bkt.clouddn.com/configselect.png" alt="configselect"></p>
-</li>
-<li>
-<p>通过光标上下移动选择其它的配置文件，回车后按 <code>ESC</code> 键退到主菜单</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>GUI tuning</p>
-<ul>
-<li>Clover主题切换，当你有不止一套主题的时候，可以通过该选项切换主题</li>
-<li>操作过程
-<ul>
-<li>光标移动到 <code>GUI tuning</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/gui.png" alt="gui"></li>
-<li>回车后进入子菜单
-<img src="http://ous2s14vo.bkt.clouddn.com/guithemes.png" alt="guithemes"></li>
-<li>光标移动到 <code>Themes</code> ，回车后进入子菜单
-<img src="http://ous2s14vo.bkt.clouddn.com/guithemeselect.png" alt="guithemeselect"></li>
-<li>通过光标上下移动选择其它的主题，回车后按 <code>ESC</code> 键退到主菜单，Clover主界面已经刷新为选择的新主题</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>ACPI patching</p>
-<ul>
-<li>电源补丁：进不去电脑的，需要drop tables的，禁用/调用 <code>DSDT.aml</code> ，禁用 <code>hotpatch</code> ，无关关机的，无法重启的；总之跟电源相关的都在这里边。</li>
-<li>操作过程
-<ul>
-<li>
-<p>光标移动到 <code>ACPI patching</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi.png" alt="acpi"></p>
-</li>
-<li>
-<p>回车后进入子菜单
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-submenu.png" alt="acpi-submenu"></p>
-</li>
-<li>
-<p>Debug DSDT</p>
-<ul>
-<li>打开DSDT调试模式</li>
-</ul>
-</li>
-<li>
-<p>DSDT name</p>
-<ul>
-<li>默认文件名为：DSDT.aml</li>
-</ul>
-</li>
-<li>
-<p>Tables dropping</p>
-<ul>
-<li>光标移动到 <code>Tables dropping</code> 回车进入
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-tablesdrop.png" alt="acpi-tablesdrop"></li>
-<li>通过移动光标按空格勾选各选项，按 <code>ESC</code> 退出该子菜单
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-table-dropping.png" alt="acpi-table-dropping"></li>
-<li>该表格等同于使用 <code>Clover Configurator</code> 打开 <code>config.plist</code> 后，在 <code>ACPI</code> 选项的左下角 <code>Drop Tables</code>
-<img src="http://ous2s14vo.bkt.clouddn.com/Drop-Tables.png" alt="Drop-Tables"></li>
-</ul>
-</li>
-<li>
-<p>Drop OEM _DSM</p>
-<ul>
-<li>丢弃_DSM</li>
-<li>光标移动到 <code>Drop OEM _DSM</code> 回车进入
-<img src="http://ous2s14vo.bkt.clouddn.com/apci-drop-oem_dsm.png" alt="apci-drop-oem_dsm"></li>
-<li>通过移动光标按空格勾选各选项
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-drop-oem_dsm-selected.png" alt="acpi-drop-oem_dsm-selected"></li>
-<li>按 <code>ESC</code> 退出该子菜单</li>
-</ul>
-</li>
-<li>
-<p>DSDT fix mask</p>
-<ul>
-<li>DSDT修复遮盖</li>
-<li>详细说明如下：</li>
-</ul>
-<p>|参数|描述|
-|---|---|
-| <code>AddDTGP</code> |修改 DSDT 添加方法所必须依赖的函数。必不可缺|
-| <code>FixDarwin</code> ||
-| <code>Fixshutdown</code> |关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. |
-| <code>AddMCHC</code> |这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用|
-| <code>FixHPET</code> |修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 |
-| <code>FakeLPC</code> |仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9|
-| <code>FixIPIC</code> |从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能|
-| <code>FixSBUS</code> |增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选|
-| <code>Fixdisplay</code> |增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选|
-| <code>FixIDE</code> |修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用|
-| <code>FixSATA</code> |内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 |
-| <code>FixFIREWIRE</code> |在火线控制装置中增加 fwhub 属性。一般不启用|
-| <code>FixUSB</code> |注入 USB 属性，帮助内建 USB|
-| <code>FixLAN</code> |注入网卡属性，帮助网卡内建。建议启用|
-| <code>FixAirport</code> |为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用|
-| <code>FixHDA</code> |修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性|
-| <code>FixDarwin7</code> |这项补丁只有Darwin OS系统［苹果系统］识别|
-| <code>FixRTC</code> |从RTC装置中删除IRQ（0），作用是否与patch里的防RTC重置类似？|
-| <code>FixTMR</code> |从TMR装置中删除IRQ(8)，适用于较早的dos设备，现代新的计算机不需要补丁，这个问题只是以前没发现［作者］|
-| <code>AddIMEI</code> |这个设置用于intelHDxxx集成显卡，解决完美注入。这项也需要开启fakeid -&gt; IMEI|
-| <code>FixIntelGfx</code> |开启对IntelGFX显卡的新补丁设置，不开启则补丁不会生效［配合imei］|
-| <code>FixWAK</code> |这个补丁主要是消除警告，如在method_WAK下缺少返回语句则加入Return(Package(0))，我不知道会有什么|
-| <code>DeleteUnuse</code> |从DSDT中删除没有使用的设备如软盘驱动器，打印机端口和其他没用的设备|
-| <code>FixADP1</code> | 将“ AC0 ”设备 重命名为“ ADP1”设备.|
-| <code>AddPNLF</code> |添加一个非常实用的PNLF 设置代码：当然只有你可以调节亮度控制时才有用。这个补丁也会对系统良好的睡眠/唤醒|
-| <code>FixS3D</code> |修正了 _S3Dmethods函数，也解决了一些睡眠/唤醒的问题|
-| <code>FixACST</code> | ACST项含义对于苹果和华硕意义不同，对于华硕是AC适配器状态，而苹果是一个替代_cst，c-states table［CPU 闲置休眠状态的功能］。如果要没有冲突就要将其重名为其他名称的东西|
-| <code>AddHDMI</code> |修复HDMI音频输出问题（无需修改AppleHDA）|
-| <code>FixRegions</code> |因为BIOS当中的一些内容改变了。这个浮动的区域导致无法使用自定义DSDT（custom DSDT），因为这个区域可移动且不符合当前的状态。这个补丁的目的是找到BIOS中所有这样的区域并在自定义DSDT中加以修正。所以现在你可以生成有错误区域的自定义DSDT然后使用这个补丁|
-| <code>FixHeaders</code> | MACH reboot修复|</p>
-<ul>
-<li>光标移动到 <code>DSDT fix mask</code> 回车进入
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png" alt="acpi-DSDT-fix-mask"></li>
-<li>通过移动光标按空格勾选各选项
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected.png" alt="acpi-DSDT-fix-mask-selected">
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask-selected2.png" alt="acpi-DSDT-fix-mask-selected2"></li>
-<li>按 <code>ESC</code> 退出该子菜单</li>
-</ul>
-</li>
-<li>
-<p>Custom DSDT patches</p>
-<ul>
-<li>自定义的DSDT补丁</li>
-<li>光标移动到 <code>Custom DSDT patches</code> 回车进入
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-Custom-DSDT-patches.png" alt="acpi-Custom-DSDT-patches"></li>
-<li>通过移动光标按空格勾选各选项
-<img src="http://ous2s14vo.bkt.clouddn.com/acpi-Custom-DSDT-patches-selected.png" alt="acpi-Custom-DSDT-patches-selected"></li>
-<li>按 <code>ESC</code> 退出该子菜单</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2>Kext Inject Management 管理你的驱动程序</h2>
-<p>通过Clover加载的驱动程序位于 <code>EFI/CLOVER/kexts/Other</code> ，也有可能位于 <code>EFI/CLOVER/kexts/10.13</code> 或者 <code>EFI/CLOVER/kexts/10.12</code> 目录中。它至少包括以下驱动程序：</p>
-<table>
-<thead>
-<tr>
-<th>驱动程序</th>
-<th>详细信息</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FakeSMC.kext</td>
-<td>安装hackintosh的核心程序，没有它就没法在你的电脑上面运行macOS</td>
-<td>必备</td>
-</tr>
-<tr>
-<td>Lilu.kext</td>
-<td>内核扩展程序，离开它，下面的几个程序都无法正常运行</td>
-<td>必备</td>
-</tr>
-<tr>
-<td>AppleALC.kext</td>
-<td>动态对系统注入必要的文件/打补丁以驱动声卡(依赖于Lilu)</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>IntelGraphicsFixup.kext</td>
-<td>修补 Intel 核显综合问题 (开机花屏，Haswell/Skylake 因 PAVP 导致的死机等等)(依赖于Lilu)</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>IntelGraphicsDVMTFixup.kext</td>
-<td>修正 Broadwell/Skylake 平台核显因 DVMT 不足而导致的死机(依赖于Lilu)</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>NvidiaGraphicsFixup.kext</td>
-<td>修正 N 卡 (可能也适用于 I 卡) 使用某些 SMBios 如 MacPro6,1 等引发黑屏的问题(依赖于Lilu)</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>WhateverGreen.kext</td>
-<td>修补 AMD 独显综合问题 （单卡启动黑屏，唤醒黑屏 等等）(依赖于Lilu)</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>AirportBrcmFixup</td>
-<td>修补 Broadcom Wi-Fi 综合问题</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>FakePCIID.kext</td>
-<td>仿冒PCI设备核心驱动，部分驱动依赖于它</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>ACPIBatteryManager.kext</td>
-<td>笔记本电池管理驱动</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>RealtekRTL8xxx.kext</td>
-<td>Realtek 8xxx网卡驱动程序</td>
-<td>可选</td>
-</tr>
-<tr>
-<td>VoodooPS2Controller.kext</td>
-<td>Voodoo键盘/鼠标驱动程序</td>
-<td>可选</td>
-</tr>
-</tbody>
-</table>
-<p>当你面对这么一堆驱动的时候，如何让它们有条不紊地正常工作呢？万一出现问题的时候又如何让这些驱动在Clover引导的时候禁用它们呢？这个时候 <code>Kext Inject Management</code> 就派上用场了。新版的 <code>Clover Bootloader</code> 已经将 <code>Kext Inject Management</code> 放到了 <code>macOS</code> 系统分区的图标下面了。</p>
-<ul>
-<li>操作方法：
-<ul>
-<li>
-<p>开机进入clover引导界面，要引导的分区卷标上按 <code>空格</code> 即可进入
-<img src="http://ous2s14vo.bkt.clouddn.com/1-main.png" alt="1-main"></p>
-</li>
-<li>
-<p>光标移动到 <code>Kext Inject Management</code> 回车进入
-<img src="http://ous2s14vo.bkt.clouddn.com/kim.png" alt="kim"></p>
-</li>
-<li>
-<p>选择当前系统加载的驱动程序目录
-<img src="http://ous2s14vo.bkt.clouddn.com/kimselect.png" alt="kimselect"></p>
-</li>
-<li>
-<p>勾选禁用的驱动程序
-<img src="http://ous2s14vo.bkt.clouddn.com/kimoptions.png" alt="kimoptions"></p>
-</li>
-<li>
-<p>按 <code>ESC</code> 退出该子菜单</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1>后记</h1>
-<p>Clover Bootloader的使用暂时先写到这里，还有更多的用法等着我们去发掘。您有什么想法或者需要补充的，请点击下面的QQ群与我联系更新。</p>
-<h1>特别感谢</h1>
-<p>群友 <code>(￣(工)￣)_小哥哥</code> 帮忙整理部分资料</p>
-<h1>关于打赏</h1>
-<p>整整写了两天的博文，如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/clover-user-manual.html#disqus_thread</comments>
     </item>
     
   </channel>
