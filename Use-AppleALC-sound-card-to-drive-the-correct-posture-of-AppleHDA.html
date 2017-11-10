@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/diskutil_disk4.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/dd_error.png">
-<meta property="og:updated_time" content="2017-11-10T02:46:44.000Z">
+<meta property="og:updated_time" content="2017-11-10T02:50:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用AppleALC声卡仿冒驱动AppleHDA的正确姿势">
 <meta name="twitter:description" content="大纲,写作中前言经常给网友仿冒声卡驱动, 一直都没有将过程写下来,鉴于每天会有许多人问如何仿冒声卡,就想将过程记录下来,供大家参考学习 提取codec通过linux提取codec操作过程:  下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:网易 搜狐 阿里云  如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个ubuntu 14.04.5LTS,如果">
@@ -349,7 +349,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-10T10:46:44+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-10T10:50:09+08:00">
                 2017-11-10
               </time>
             
@@ -440,7 +440,7 @@
 <li><p>使用<code>dd</code>命令将下载的Ubuntu Linux镜像恢复到U盘上,操作之前我有必要<strong>提醒各位小白,万一你不小心输入错了设备名,那么你连哭的机会都没有,因为dd是按扇区直接物理写入磁盘,别到时候找不到数据了再悔不当初没有认真看到这段文字</strong></p>
   <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m</div></pre></td></tr></table></figure>
 <p>  命令输入完后,请仔细认真检查下,尤其是<code>of=/dev/disk4</code>这里,再三确认后回车执行,输入用户密码后请耐心等待6-7分钟,写盘速度取决于你的U盘,镜像恢复的过程中不会有任何的文字输出,U盘写入成功后会显示下面类似的输出信息:</p>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">            ~ % diskutil umountDisk disk4</div><div class="line">Unmount of all volumes on disk4 was successful</div><div class="line">~ % sudo dd <span class="keyword">if</span>=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m</div><div class="line">Password:</div><div class="line">1431+1 records <span class="keyword">in</span></div><div class="line">1431+1 records out</div><div class="line">1501102080 bytes transferred <span class="keyword">in</span> 906.101477 secs (1656660 bytes/sec)</div></pre></td></tr></table></figure>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">~ % diskutil umountDisk disk4</div><div class="line">Unmount of all volumes on disk4 was successful</div><div class="line">~ % sudo dd <span class="keyword">if</span>=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m</div><div class="line">Password:</div><div class="line">1431+1 records <span class="keyword">in</span></div><div class="line">1431+1 records out</div><div class="line">1501102080 bytes transferred <span class="keyword">in</span> 906.101477 secs (1656660 bytes/sec)</div></pre></td></tr></table></figure>
 <p>  同时系统会弹出一个错误的窗口,显示类似的信息:<br>  <img src="http://ous2s14vo.bkt.clouddn.com/dd_error.png" alt="dd_error"></p>
 <p>  那是因为Linux的分区格式是ext,在macOS系统下无法识别才会报错,但是其实一个支持UEFI引导的Ubuntu Linux 17.10启动U盘已经制作成功了.点击<code>Ignore</code>忽略或者<code>Eject</code>退出U盘</p>
 </li>
