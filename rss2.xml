@@ -201,7 +201,7 @@
 <li>0x12 Internal Mic</li>
 </ul>
 <p>暂且不讨论我的声卡是几节点,我发现通过linux完全可以得出声卡的有效节点,而且这种方式好像也不需要使用什么专用的工具,只是在linux下面通过内部命令<code>dmesg</code>无意中就被我发现了声卡中最挠头的找有效节点的打怪秘籍,这种方法在整个Hackintosh社区里还没见有人用过.看来这跟我之前使用linux经常会通过<code>dmesg</code>排错的使用习惯是分不开的,这里要由衷地给自己点一个大大的</p>
-<h1 id="赞"><a href="#赞" class="headerlink" title="赞"></a><code>赞</code></h1><p>在这个特别的日子里<code>11.11</code>,没有陪女朋友的小伙伴们,都可以使用我刚get到的新技能愉快地打怪升级啦!</p>
+<h1 id="赞"><a href="#赞" class="headerlink" title="赞"></a>赞</h1><h1 id="赞-1"><a href="#赞-1" class="headerlink" title="赞"></a>赞</h1><h1 id="赞-2"><a href="#赞-2" class="headerlink" title="赞"></a>赞</h1><p>在这个特别的日子里<code>11.11</code>,没有陪女朋友的小伙伴们,都可以使用我刚get到的新技能愉快地打怪升级啦!</p>
 <p>暂更于此,做个记号 2017年11月11日</p>
 <hr>
 <h1 id="整理有效路径兼治不发声"><a href="#整理有效路径兼治不发声" class="headerlink" title="整理有效路径兼治不发声"></a>整理有效路径兼治不发声</h1><p>使用codecgraph生成pathmap图</p>
