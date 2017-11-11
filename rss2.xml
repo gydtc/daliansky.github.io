@@ -156,7 +156,54 @@
 </li>
 </ul>
 <p>显示输出信息如下:<br><img src="http://ous2s14vo.bkt.clouddn.com/ubuntu_codec_and_DSDT.png" alt="ubuntu_codec_and_DSDT"><br>将桌面上的codec#0和tables目录复制到LINUX以外的支持写入的盘符下,Linux下面的工作已经完成,您可以继续试用或者重启/关机.</p>
-<h1 id="整理有效节点兼治去除底噪"><a href="#整理有效节点兼治去除底噪" class="headerlink" title="整理有效节点兼治去除底噪"></a>整理有效节点兼治去除底噪</h1><p>使用到的工具：verbit.sh</p>
+<h1 id="整理有效节点兼治去除底噪"><a href="#整理有效节点兼治去除底噪" class="headerlink" title="整理有效节点兼治去除底噪"></a>整理有效节点兼治去除底噪</h1><p>使用到的工具：<code>verbit.sh</code><br>用法: <code>verbit.sh codec#0</code>,它会生成如下显示的信息:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">Verbs from Linux Codec Dump File: codec#0</div><div class="line"></div><div class="line">Codec: Realtek ALC3246   Address: 0   DevID: 283902550 (0x10ec0256)</div><div class="line"></div><div class="line">   Jack   Color  Description                  Node     PinDefault             Original Verbs</div><div class="line">--------------------------------------------------------------------------------------------------------</div><div class="line">Digital Unknown  Mic at Int N/A              18 0x12   0x90a60170   01271c70 01271d01 01271ea6 01271f90</div><div class="line">Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 01371d00 01371e00 01371f40</div><div class="line"> Analog Unknown  Speaker at Int N/A          20 0x14   0x90170120   01471c20 01471d01 01471e17 01471f90</div><div class="line">    1/8   Black  Speaker at Ext Rear         24 0x18   0x411111f0   01871cf0 01871d11 01871e11 01871f41</div><div class="line">    1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   01971cf0 01971d11 01971e11 01971f41</div><div class="line">    1/8   Black  Speaker at Ext Rear         26 0x1a   0x411111f0   01a71cf0 01a71d11 01a71e11 01a71f41</div><div class="line"> Speaker at Ext Rear    0x1b 0x1b                        1091637744 01b71cf0 01b71d11     01b71e11 01b71f41  </div><div class="line"> Analog    Pink  Modem Hand at Ext N/A       29 0x1d   0x40779a2d   01d71c2d 01d71d9a 01d71e77 01d71f40</div><div class="line">    1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   01e71cf0 01e71d11 01e71e11 01e71f41</div><div class="line">    1/8   Black  HP Out at Ext Front         33 0x21   0x02211030   02171c30 02171d10 02171e21 02171f02</div><div class="line">--------------------------------------------------------------------------------------------------------</div><div class="line"></div><div class="line"></div><div class="line">   Jack   Color  Description                  Node     PinDefault             Modified Verbs</div><div class="line">--------------------------------------------------------------------------------------------------------</div><div class="line">Digital Unknown  Mic at Int N/A              18 0x12   0x90a60170   01271c70 01271d00 01271ea6 01271f90</div><div class="line">Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 01371d00 01371e00 01371f40</div><div class="line"> Analog Unknown  Speaker at Int N/A          20 0x14   0x90170120   01471c20 01471d00 01471e17 01471f90</div><div class="line"> Analog    Pink  Modem Hand at Ext N/A       29 0x1d   0x40779a2d   01d71c40 01d71d90 01d71e77 01d71f40</div><div class="line">    1/8   Black  HP Out at Ext Front         33 0x21   0x02211030   02171c30 02171d10 02171e21 02171f01</div><div class="line">--------------------------------------------------------------------------------------------------------</div><div class="line"></div><div class="line">Modified Verbs in One Line: 01271c70 01271d00 01271ea6 01271f90 01371c00 01371d00 01371e00 01371f40 01471c20 01471d00 01471e17 01471f90 01d71c40 01d71d90 01d71e77 01d71f40 02171c30 02171d10 02171e21 02171f01</div><div class="line">--------------------------------------------------------------------------------------------------------</div></pre></td></tr></table></figure>
+<p>如果你希望将输出结果保存下来,可以将命令改为:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">verbit.sh codec<span class="comment">#0 &gt; ALC256_dump.txt</span></div></pre></td></tr></table></figure>
+<p>这个ALC256_dump.txt就是上面显示的输出信息,你可以使用其它的文字编辑器打开它.<br>重要的信息不能漏掉了,后面我们在编译声卡驱动的时候会经常用到它们:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Codec: Realtek ALC3246   Address: 0   DevID: 283902550 (0x10ec0256)</div></pre></td></tr></table></figure>
+<p>其中的:</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Codec: Realtek ALC3246</td>
+<td>是告诉了你的声卡型号是ALC3245(ALC256)</td>
+</tr>
+<tr>
+<td>Address: 0</td>
+<td>会告诉你生成configdata的数据的前缀是0,比如上面显示输出信息最后一行的<code>Modified Verbs in One Line:</code>后面所有的数据中,每组数据的第一位就是这个 <code>0</code> ,如果<code>Address: 2</code>,那么每组数据的第一位就是 <code>2</code> ,这个后面我们会用到它</td>
+</tr>
+<tr>
+<td>DevID: 283902550 (0x10ec0256)</td>
+<td>283902550是0x10ec0256的10进制值,0x10ec 是指vendorID(芯片供应商ID),是REALTEK的设备标识,0256是指型号,去掉前面的0,您的声卡型号就是:ALC256</td>
+</tr>
+</tbody>
+</table>
+<p>过去的教程会告诉你,通过运行<code>verbit.sh</code>整理出来的节点是:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">18 0x12 Mic at Int</div><div class="line">20 0x14 Speaker at Int</div><div class="line">33 0x21 HP Out at Ext Front</div></pre></td></tr></table></figure>
+<p>至于上面输出信息里显示的0x13 0x1d都是无效的节点.而且它只有三个有效的节点,我的声卡ALC256是用于笔记本,按理说它至少还应该存在另一个Mic Ext的节点,我需要找出它来.看来使用传统的方法已经无法满足我的求知欲了.<br>既然使用Linux可以提取codec,那么有没有可能 </p>
+<h1 id="通过Linux找出有效的节点"><a href="#通过Linux找出有效的节点" class="headerlink" title="通过Linux找出有效的节点"></a><em>通过Linux找出有效的节点</em></h1><p>呢?<br>为了测试我的声卡存在第四个节点,我需要找出耳机的Mic输出节点,于是乎重新引导进入Linux,插上耳机,它弹出了这个窗口:<br><img src="http://ous2s14vo.bkt.clouddn.com/SelectAudioDevice.png" alt="SelectAudioDevice"><br>这三个选项的意思是让我选择声音设备,既然我希望找出耳机麦克风的输入,我就选择了中间带有耳麦的图标<br>进入<code>Sound Settings</code>,点击 <code>Input</code>,选择<code>Headset Microphone</code>,调节<code>Input volume</code>,对着耳麦说话,发现有输入电平了,再切换到内置麦克风<code>Internal Microphone</code>,也有输入电平,那么至少说明我的声卡功能是完整的,至少在Linux下它工作的很好.<br><img src="http://ous2s14vo.bkt.clouddn.com/SoundInputDeviceSelect.png" alt="SoundInputDeviceSelect"><br>测试结果已经出来了,我想要知道耳麦的有效节点是什么,使用组合键<code>CTRL+ALT+t</code>打开终端,输入命令:<code>dmesg</code>看看它会有什么变化,结果我就看到了下面的文字:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[    5.040591] snd_hda_codec_realtek hdaudioC0D0: autoconfig <span class="keyword">for</span> ALC3246: line_outs=1 (0x14/0x0/0x0/0x0/0x0) <span class="built_in">type</span>:speaker</div><div class="line">[    5.040593] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)</div><div class="line">[    5.040595] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x21/0x0/0x0/0x0/0x0)</div><div class="line">[    5.040595] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0</div><div class="line">[    5.040596] snd_hda_codec_realtek hdaudioC0D0:    inputs:</div><div class="line">[    5.040598] snd_hda_codec_realtek hdaudioC0D0:      Headset Mic=0x19</div><div class="line">[    5.040599] snd_hda_codec_realtek hdaudioC0D0:      Headphone Mic=0x1a</div><div class="line">[    5.040600] snd_hda_codec_realtek hdaudioC0D0:      Internal Mic=0x12</div></pre></td></tr></table></figure>
+<p>我不想看到其它的输出信息,我只需要得到我想要的信息,于是将命令改为:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">sky@sky-Inspiron-7560:~$ dmesg | grep snd_hda_codec_realtek</div><div class="line">[    5.040591] snd_hda_codec_realtek hdaudioC0D0: autoconfig <span class="keyword">for</span> ALC3246: line_outs=1 (0x14/0x0/0x0/0x0/0x0) <span class="built_in">type</span>:speaker</div><div class="line">[    5.040593] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)</div><div class="line">[    5.040595] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x21/0x0/0x0/0x0/0x0)</div><div class="line">[    5.040595] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0</div><div class="line">[    5.040596] snd_hda_codec_realtek hdaudioC0D0:    inputs:</div><div class="line">[    5.040598] snd_hda_codec_realtek hdaudioC0D0:      Headset Mic=0x19</div><div class="line">[    5.040599] snd_hda_codec_realtek hdaudioC0D0:      Headphone Mic=0x1a</div><div class="line">[    5.040600] snd_hda_codec_realtek hdaudioC0D0:      Internal Mic=0x12</div></pre></td></tr></table></figure>
+<p>得到的输出结果跟上面的相同,于是我发现了在Linux下我的声卡的有效节点分别为:</p>
+<ul>
+<li>0x14 Speaker out</li>
+<li>0x21 HP out </li>
+<li>0x19 Headset Mic in</li>
+<li>0x1a Headphone Mic</li>
+<li>0x12 Internal Mic</li>
+</ul>
+<p>暂且不讨论我的声卡是几节点,我发现通过linux完全可以得出声卡的有效节点,而且这种方式好像也不需要使用什么专用的工具,只是在linux下面通过内部命令<code>dmesg</code>无意中就被我发现了声卡中最挠头的找有效节点的打怪秘籍,这种方法在整个Hackintosh社区里还没见有人用过.看来这跟我之前使用linux经常会通过<code>dmesg</code>排错的使用习惯是分不开的,这里要由衷地给自己点一个大大的</p>
+<h1 id="赞"><a href="#赞" class="headerlink" title="赞"></a><code>赞</code></h1><p>在这个特别的日子里<code>11.11</code>,没有陪女朋友的小伙伴们,都可以使用我刚get到的新技能愉快地打怪升级啦!</p>
+<p>暂更于此,做个记号 2017年11月11日</p>
+<hr>
 <h1 id="整理有效路径兼治不发声"><a href="#整理有效路径兼治不发声" class="headerlink" title="整理有效路径兼治不发声"></a>整理有效路径兼治不发声</h1><p>使用codecgraph生成pathmap图</p>
 <h1 id="整理configdata"><a href="#整理configdata" class="headerlink" title="整理configdata"></a>整理configdata</h1><h1 id="找出适合你的id"><a href="#找出适合你的id" class="headerlink" title="找出适合你的id"></a>找出适合你的id</h1><table>
 <thead>
