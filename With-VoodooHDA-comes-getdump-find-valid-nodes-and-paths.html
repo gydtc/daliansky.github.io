@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="AppleALC,声卡仿冒,VoodooHDA,getdump," />
 
 
 
@@ -81,16 +81,21 @@
 
 
 
-<meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
-<meta property="og:type" content="website">
-<meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/archives/2017/10/index.html">
+<meta name="description" content="借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧.这里">
+<meta name="keywords" content="AppleALC,声卡仿冒,VoodooHDA,getdump">
+<meta property="og:type" content="article">
+<meta property="og:title" content="借助VoodooHDA自带的getdump找出有效节点和路径">
+<meta property="og:url" content="http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta property="og:description" content="借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧.这里">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path2.png">
+<meta property="og:updated_time" content="2017-11-13T02:44:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="黑果小兵的部落阁">
-<meta name="twitter:description" content="一些平时学习笔记以及搜集到的好的文章">
+<meta name="twitter:title" content="借助VoodooHDA自带的getdump找出有效节点和路径">
+<meta name="twitter:description" content="借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧.这里">
+<meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
 
 
 
@@ -120,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/archives/2017/10/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html"/>
 
 
 
 
 
-  <title>归档 | 黑果小兵的部落阁</title>
+  <title>借助VoodooHDA自带的getdump找出有效节点和路径 | 黑果小兵的部落阁</title>
   
 
 
@@ -145,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <a href="https://github.com/daliansky"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
@@ -285,332 +290,272 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 目前共计 42 篇日志。 继续努力。
-      </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html">
 
-      
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DalianSky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑果小兵的部落阁">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">借助VoodooHDA自带的getdump找出有效节点和路径</h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-13T10:35:55+08:00">
+                2017-11-13
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-13T10:44:02+08:00">
+                2017-11-13
+              </time>
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html" itemprop="url">
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
               
-                <span itemprop="name">一条命令教你如何确认自己的机型及如何开启HWP</span>
+                <span class="post-meta-item-text">分类于</span>
               
-            </a>
-        
-      </h2>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-26T20:59:39+08:00"
-              content="2017-10-26" >
-          10-26
-        </time>
-      </div>
+                
+                
+              
+            </span>
+          
 
-    </header>
-  </article>
+          
+            
+          
 
+          
+          
+             <span id="/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html" class="leancloud_visitors" data-flag-title="借助VoodooHDA自带的getdump找出有效节点和路径">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-item-text">℃</span>
+             </span>
+          
 
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/MAC-commonly-used-shortcut-keys-finishing.html" itemprop="url">
-              
-                <span itemprop="name">MAC常用快捷键整理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-26T13:29:11+08:00"
-              content="2017-10-26" >
-          10-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/clover-user-manual.html" itemprop="url">
-              
-                <span itemprop="name">clover使用教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-20T11:19:06+08:00"
-              content="2017-10-20" >
-          10-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="借助VoodooHDA自带的getdump找出有效节点和路径"><a href="#借助VoodooHDA自带的getdump找出有效节点和路径" class="headerlink" title="借助VoodooHDA自带的getdump找出有效节点和路径"></a>借助VoodooHDA自带的getdump找出有效节点和路径</h1><p>声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办<br>如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.<br>所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出<code>VoodooHDA</code>万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没<code>AppleALC</code>啥事儿了吧.这里可以借助<code>VoodooHDA</code>自带的应用程序:<code>getdump</code>,使用方法:打开终端,输入命令:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getdump &gt; ~/Desktop/voodoo_dump.txt</div></pre></td></tr></table></figure>
+<p>用它可以生成一份<code>voodoo_dump.txt</code>的文件,里面会有两段以<code>DUMPING Playback/Record Paths</code>开头的文字描述,这里面即包括了有效节点,同时也包括了有效的路径<br><img src="http://ous2s14vo.bkt.clouddn.com/path1.png" alt="path1"><br><img src="http://ous2s14vo.bkt.clouddn.com/path2.png" alt="path2"><br>从上面的两张截图中,可以将有效的节点和路径整理出下面的表格:</p>
+<table>
+<thead>
+<tr>
+<th>有效节点</th>
+<th>10进制</th>
+<th>设备名称</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x14</td>
+<td>20</td>
+<td>Speaker out</td>
+<td><strong>20-&gt;12-&gt;2</strong></td>
+</tr>
+<tr>
+<td>0x21</td>
+<td>33</td>
+<td>HP out</td>
+<td><strong>33-&gt;13-&gt;3</strong></td>
+</tr>
+<tr>
+<td>0x19</td>
+<td>25</td>
+<td>Headset Mic in</td>
+<td><strong>8-&gt;35-&gt;24</strong> <strong>8-&gt;35-&gt;29备用</strong></td>
+</tr>
+<tr>
+<td>0x12</td>
+<td>18</td>
+<td>Internal Mic in</td>
+<td><strong>9-&gt;34-&gt;18</strong> <strong>9-&gt;34-&gt;29备用</strong></td>
+</tr>
+</tbody>
+</table>
+<p>有了这个表格,再结合<code>configdata</code>,找出有效的ID,编译<code>AppleALC</code>,注入ID并使用声卡驱动.</p>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>该种方法摘自<a href="https://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html">使用AppleALC声卡仿冒驱动AppleHDA的正确姿势</a>的部分内容,之所以单独发布就是想让更多的人看到</p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html" itemprop="url">
-              
-                <span itemprop="name">惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-11T19:14:14+08:00"
-              content="2017-10-11" >
-          10-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html" itemprop="url">
-              
-                <span itemprop="name">将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-11T09:41:29+08:00"
-              content="2017-10-11" >
-          10-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html" itemprop="url">
-              
-                <span itemprop="name">MacOS系统下使用gpt命令修复损坏的EFI分区以及dd命令的基本用法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-07T22:39:16+08:00"
-              content="2017-10-07" >
-          10-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/MacOS-multi-system-Bluetooth-device-automatically-connected.html" itemprop="url">
-              
-                <span itemprop="name">MacOS多系统下蓝牙设备的自动连接</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-06T21:52:35+08:00"
-              content="2017-10-06" >
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html" itemprop="url">
-              
-                <span itemprop="name">【黑果小兵】macOS High Sierra 10.13正式版更新(17A405) with Clover 4238原版镜像</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-06T14:46:10+08:00"
-              content="2017-10-06" >
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AppleALC/" rel="tag"><i class="fa fa-tag"></i> AppleALC</a>
+          
+            <a href="/tags/声卡仿冒/" rel="tag"><i class="fa fa-tag"></i> 声卡仿冒</a>
+          
+            <a href="/tags/VoodooHDA/" rel="tag"><i class="fa fa-tag"></i> VoodooHDA</a>
+          
+            <a href="/tags/getdump/" rel="tag"><i class="fa fa-tag"></i> getdump</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/MacOS-use-the-dd-command-to-make-Ubuntu-install-USB-disk.html" rel="next" title="MacOS下使用dd命令制作Ubuntu安装USB盘">
+                <i class="fa fa-chevron-left"></i> MacOS下使用dd命令制作Ubuntu安装USB盘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -618,6 +563,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -638,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -728,6 +686,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#借助VoodooHDA自带的getdump找出有效节点和路径"><span class="nav-number">1.</span> <span class="nav-text">借助VoodooHDA自带的getdump找出有效节点和路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#备注"><span class="nav-number">2.</span> <span class="nav-text">备注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">3.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">4.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -870,6 +844,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
