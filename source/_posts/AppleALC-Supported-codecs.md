@@ -42,23 +42,25 @@ categories:
 
 
 
-# 附：AppleALC支持的编解码器列表
+# 附：AppleALC支持的编解码器列表 更新日期：11-3-2017
+
 | Vendor | Codec | Revisions | MinKernel | MaxKernel |
 |--------|-------|-----------|-----------|-----------|
 | Creative | [CA0132](https://github.com/vit9696/AppleALC/tree/master/Resources/CA0132)| 0x100918 layout 0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12 | 13 (10.9) | — |
 | CirrusLogic | [CS4210](https://github.com/vit9696/AppleALC/tree/master/Resources/CS4210)| 0x100101 layout 13 | 13 (10.9) | — |
 | CirrusLogic | [CS4213](https://github.com/vit9696/AppleALC/tree/master/Resources/CS4213)| 0x100100 layout 28 | 13 (10.9) | — |
+| Realtek | [ALC221](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC221)| layout 11 | 12 (10.8) | — |
 | Realtek | [ALC225/ALC3253](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC225)| layout 28 | 13 (10.9) | — |
 | Realtek | [ALC233](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC233)| layout 3, 13, 27 | 13 (10.9) | — |
-| Realtek | [ALC235](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC235)| layout 3, 11 | 13 (10.9) | — |
+| Realtek | [ALC235](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC235)| layout 3, 11, 28 | 13 (10.9) | — |
 | Realtek | [ALC236](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC236)| 0x100001, 0x100002 layout 3, 11, 13 | 13 (10.9) | — |
 | Realtek | [ALC3236](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC233)| layout 4, 5, 28, 29 | 13 (10.9) | — |
 | Realtek | [ALC255](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC255)| layout 3, 13, 17, 27, 28 | 13 (10.9) | — |
-| Realtek | [ALC256 (3246)](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC256)| layout 13, 28 | 13 (10.9) | — |
+| Realtek | [ALC256 (3246)](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC256)| layout 13 | 13 (10.9) | — |
 | Realtek | [ALC260](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC260)| layout 11, 12 | 13 (10.9) | — |
 | Realtek | [ALC262](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC262)| 0x100202 layout 11, 12 | 13 (10.9) | — |
 | Realtek | [ALC268](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC268)| layout 3 | 13 (10.9) | — |
-| Realtek | [ALC269](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC269)| 0x100004, 0x100100, 0x100202, 0x100203 layout 1-9, 11, 13, 14, 15, 16, 19, 20, 27, 28, 29, 32, 33, 35, 40, 76 | 12 (10.8) | — |
+| Realtek | [ALC269](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC269)| 0x100004, 0x100100, 0x100202, 0x100203 layout 1-9, 11, 13, 14, 15, 16, 18, 19, 20, 27, 28, 29, 32, 33, 35, 40, 76 | 12 (10.8) | — |
 | Realtek | [ALC270](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC270)| 0x100100, layout 3, 4, 27, 28 | 13 (10.9) | — |
 | Realtek | [ALC271x](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC269)| layout 9, 31 | 12 (10.8) | — |
 | Realtek | [ALC272](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC272)| 0x100001, layout 3, 11 | 13 (10.9) | — |
@@ -74,7 +76,7 @@ categories:
 | Realtek | [ALC292](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC292)| layout 12, 28 | 13 (10.9) | — |
 | Realtek | [ALC293](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC293)| layout 28, 29 | 13 (10.9) | — |
 | Realtek | [ALC295](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC295)| layout 3, 28 | 13 (10.9) | — |
-| Realtek | [ALC298](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC298)| 0x100103, layout 3, 13, 28, 72 | 13 (10.9) | — |
+| Realtek | [ALC298](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC298)| 0x100103, layout 3, 11, 13, 28, 29, 72 | 13 (10.9) | — |
 | Realtek | [ALC662](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC662)| 0x100101, 0x100300 layout 5, 7, 11, 12, 13 | 13 (10.9) | — |
 | Realtek | [ALC663](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC663)| 0x100002, layout 3, 4, 28 | 13 (10.9) | — |
 | Realtek | [ALC665](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC665)| layout 12, 13 | 13 (10.9) | — |
@@ -85,10 +87,10 @@ categories:
 | Realtek | [ALC885](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC885)| 0x100101, 0x100103 layout 1, 12 | 13 (10.9) | — |
 | Realtek | [ALC887](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC887)| 0x100202, 0x100302, layout 1, 2, 3, 5, 7, 11, 13, 17, 18, 33, 99 | 13 (10.9) | — |
 | Realtek | [ALC888/ALC1200](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC888)| 0x100101, 0x100001, 0x100202, 0x100302 layout 1, 2, 3, (4 for laptop), 5, 7, 11, 28, 29 | 13 (10.9) | — |
-| Realtek | [ALC889](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC889)| 0x100004, layout 1, 12 | 13 (10.9) | — |
+| Realtek | [ALC889](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC889)| 0x100004, layout 1, 11, 12 | 13 (10.9) | — |
 | Realtek | [ALC891/ALC867](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC891)| 0x100002, layout 13 | 13 (10.9) | — |
-| Realtek | [ALC892](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC892)| 0x100302, layout 1, 2, 3, (4 for laptop), 5, 7, 28, 92, 99 | 13 (10.9) | — |
-| Realtek | [ALC898/ALC899](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC898)| 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 28 | 13 (10.9) | — |
+| Realtek | [ALC892](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC892)| 0x100302, layout 1, 2, 3, (4 for laptop), 5, 7, 28, 31, 92, 99 | 13 (10.9) | — |
+| Realtek | [ALC898/ALC899](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC898)| 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 28, 65 | 13 (10.9) | — |
 | Realtek | [ALC1150](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC1150)| 0x100001, layout 1, 2, 3, 5, 7, 11 | 12 (10.8) | — |
 | Realtek | [ALC1220](https://github.com/vit9696/AppleALC/tree/master/Resources/ALC1220)| 0x100003, layout 1, 2, 5, 7, 11 | 15 (10.11) | — |
 | Realtek | [ALCS1220A](https://github.com/vit9696/AppleALC/tree/master/Resources/ALCS1220A)| layout 1, 2, 5, 7 | 15 (10.11) | — |
@@ -100,7 +102,7 @@ categories:
 | Conexant | [CX8200](https://github.com/vit9696/AppleALC/tree/master/Resources/CX8200)| layout 3 | 16 (10.12) | — |
 | Conexant | [CX20561](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20561)| 0x100000, layout 11 | 13 (10.9) | — |
 | Conexant | [CX20583](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20583)| layout 3 | 13 (10.9) | — |
-| Conexant | [CX20585](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20585)| layout 3 | 13 (10.9) | — |
+| Conexant | [CX20585](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20585)| layout 3, 13 | 13 (10.9) | — |
 | Conexant | [CX20588](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20588)| layout 3 | 13 (10.9) | — |
 | Conexant | [CX20590](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20590)| 0x100000, 0x100002, 0x100003, layout 3, 12, 28 | 13 (10.9) | — |
 | Conexant | [CX20722](https://github.com/vit9696/AppleALC/tree/master/Resources/CX20722)| layout 3 | 16 (10.12) | — |
@@ -126,7 +128,7 @@ categories:
 | IDT | [IDT92HD93BXX](https://github.com/vit9696/AppleALC/tree/master/Resources/IDT92HD93BXX)| 0x100203, layout 12 | 13 (10.9) | — |
 | IDT | [IDT92HD95](https://github.com/vit9696/AppleALC/tree/master/Resources/IDT92HD95)| layout 12 | 13 (10.9) | — |
 | VIA | [VT1802](https://github.com/vit9696/AppleALC/tree/master/Resources/VT1802)| 0x100000, layout 3, 33 | 13 (10.9) | — |
-| VIA | [VT2020/2021](https://github.com/vit9696/AppleALC/tree/master/Resources/VT2020_2021)| 0x100100, layout 5, 7 | 13 (10.9) | — |
+| VIA | [VT2020/2021](https://github.com/vit9696/AppleALC/tree/master/Resources/VT2020_2021)| 0x100100, layout 5, 7, 9 | 13 (10.9) | — |
 | Intel  | [HD4000 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x01660003, 0x01660009, 0x0166000A | 13 (10.9) | — |
 | Intel  | [HD4600 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x0d220003  | 13 (10.9) | — |
 | Intel  | [HD5500 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x16260006 | 15 (10.11) | — |
@@ -137,6 +139,7 @@ categories:
 | Intel  | [HD530 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x19160000, 0x191B0000, 0x19120000 | 15 (10.11) | — |
 | Intel  | [HD630 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x59120000 | 15 (10.11) | — |
 | AMD  | [Radeon 290/290X](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| | 15 (10.11) | — |
+
 
 # 扩展阅读：
 [Lilu支持的内核参数及插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)

@@ -184,24 +184,40 @@ BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEF
         * DSDT fix mask
             * DSDT修复遮盖
             * 详细说明如下：
-                * `Add DTGP` 修改 DSDT 添加方法所必须依赖的函数。必不可缺
-                * `Fix shutdown` 关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. 
-                * `Fix HPET` 修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 
-                * `Fake LPC` 仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9
-                * `Fix IPIC` 从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能
-                * `Add SBUS` 增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选
-                * `Fix display` 增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选
-                * `Fix sound` 修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性
-                * `Fix LAN` 注入网卡属性，帮助网卡内建。建议启用
-                * `Fix USB` 注入 USB 属性，帮助内建 USB
-                * `Add MCHC` 这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用
-                * `Fix SATA` 内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 
-                * `Fix IDE` 修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用
-                * `Fix FIREWIRE` 在火线控制装置中增加 fwhub 属性。一般不启用
-                * `Fix  Airport` 为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用
-                * `Fix _WAK` 修复睡眠唤醒错误
-                * `Add PNLF` 加入背光亮度修复
-                * `fix Headers` 修复 `MACH Reboot` 错误 
+            
+            |参数|描述|
+            |---|---|
+            | `AddDTGP` |修改 DSDT 添加方法所必须依赖的函数。必不可缺|
+            | `FixDarwin` ||
+            | `Fixshutdown` |关机修复，主要是添加 _PTS 函数，判断寄存器 arg0 值是否为 5 ，华硕主板建议勾选. |
+            | `AddMCHC` |这个功能是在 dsdt 中添加一装置具体是 DveiceID=0X0044,匹配 Intel Clarkdale 平台。有些芯片需要这个装置来解决 PCI 的电源管理问题，一般不启用|
+            | `FixHPET` |修复 HPET ，添加 IRQ(0,8,11) 加载原生电源管理，10.9 不需要 |
+            | `FakeLPC` |仿冒 LPC ，一般 Clover 会自动注入合适的芯片参数到 dsdt 中，来达到加载 AppleLPC.kext 的目的。对以 Intel and NForce 芯片，建议勾选。特别是芯片组比较老的如：ICH7,ICH9|
+            | `FixIPIC` |从 decice IPIC 移除中断语句 (IRQ(2)),有助于电源按钮的工作，对于笔记本而言，更希望增加这个中断功能|
+            | `FixSBUS` |增加 SMBusControlle 到设备树种，可修复因缺失 SBUS 控制而在系统 log 中出现的警告，建议勾选|
+            | `Fixdisplay` |增加 GFX0,和 HDMI 音频设置 HADU. 如果设置了 FAKEID 也会增加到这边，建议勾选|
+            | `FixIDE` |修复在 10.6 事五国出现的 AppleIntelPIIXATA 错误。 一般不启用|
+            | `FixSATA` |内建磁盘，用 ICH6 的 ID 匹配，解决橙色磁盘问题，一般启用 |
+            | `FixFIREWIRE` |在火线控制装置中增加 fwhub 属性。一般不启用|
+            | `FixUSB` |注入 USB 属性，帮助内建 USB|
+            | `FixLAN` |注入网卡属性，帮助网卡内建。建议启用|
+            | `FixAirport` |为支持 Airport 的无线网卡注入属性，以开启 Airport 功能，无此设备的不启用|
+            | `FixHDA` |修正 AZAL to HDEF or HDAU, 增加 layout -id 和 pinconfig,MaximumBootBeepVolume 属性|
+            | `FixDarwin7` |这项补丁只有Darwin OS系统［苹果系统］识别|
+            | `FixRTC` |从RTC装置中删除IRQ（0），作用是否与patch里的防RTC重置类似？|
+            | `FixTMR` |从TMR装置中删除IRQ(8)，适用于较早的dos设备，现代新的计算机不需要补丁，这个问题只是以前没发现［作者］|
+            | `AddIMEI` |这个设置用于intelHDxxx集成显卡，解决完美注入。这项也需要开启fakeid -> IMEI|
+            | `FixIntelGfx` |开启对IntelGFX显卡的新补丁设置，不开启则补丁不会生效［配合imei］|
+            | `FixWAK` |这个补丁主要是消除警告，如在method_WAK下缺少返回语句则加入Return(Package(0))，我不知道会有什么|
+            | `DeleteUnuse` |从DSDT中删除没有使用的设备如软盘驱动器，打印机端口和其他没用的设备|
+            | `FixADP1` | 将“ AC0 ”设备 重命名为“ ADP1”设备.|
+            | `AddPNLF` |添加一个非常实用的PNLF 设置代码：当然只有你可以调节亮度控制时才有用。这个补丁也会对系统良好的睡眠/唤醒|
+            | `FixS3D` |修正了 _S3Dmethods函数，也解决了一些睡眠/唤醒的问题|
+            | `FixACST` | ACST项含义对于苹果和华硕意义不同，对于华硕是AC适配器状态，而苹果是一个替代_cst，c-states table［CPU 闲置休眠状态的功能］。如果要没有冲突就要将其重名为其他名称的东西|
+            | `AddHDMI` |修复HDMI音频输出问题（无需修改AppleHDA）|
+            | `FixRegions` |因为BIOS当中的一些内容改变了。这个浮动的区域导致无法使用自定义DSDT（custom DSDT），因为这个区域可移动且不符合当前的状态。这个补丁的目的是找到BIOS中所有这样的区域并在自定义DSDT中加以修正。所以现在你可以生成有错误区域的自定义DSDT然后使用这个补丁|
+            | `FixHeaders` | MACH reboot修复|                
+            
             * 光标移动到 `DSDT fix mask` 回车进入
             ![acpi-DSDT-fix-mask](http://ous2s14vo.bkt.clouddn.com/acpi-DSDT-fix-mask.png)
             * 通过移动光标按空格勾选各选项
@@ -250,6 +266,9 @@ BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEF
 
 # 后记
 Clover Bootloader的使用暂时先写到这里，还有更多的用法等着我们去发掘。您有什么想法或者需要补充的，请点击下面的QQ群与我联系更新。
+
+# 特别感谢
+群友 `(￣(工)￣)_小哥哥` 帮忙整理部分资料
    
 # 关于打赏
 整整写了两天的博文，如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
