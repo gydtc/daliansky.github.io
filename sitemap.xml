@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
+    <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
     
-    <lastmod>2017-11-13T07:47:28.000Z</lastmod>
+    <lastmod>2017-11-13T14:26:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
+    <loc>http://blog.daliansky.net/hda-verb-parameter-detail-table.html</loc>
     
-    <lastmod>2017-11-13T07:29:32.000Z</lastmod>
+    <lastmod>2017-11-13T14:00:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
+    
+    <lastmod>2017-11-13T07:47:28.000Z</lastmod>
     
   </url>
   
@@ -131,13 +138,6 @@
     <loc>http://blog.daliansky.net/Existing-Lilu-Plugins.html</loc>
     
     <lastmod>2017-10-21T11:25:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/hda-verb-parameter-detail-table.html</loc>
-    
-    <lastmod>2017-10-21T11:24:00.000Z</lastmod>
     
   </url>
   
