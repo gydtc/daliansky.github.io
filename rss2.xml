@@ -479,61 +479,19 @@
 </ul>
 <p>更新于:11-15-2017 16:41</p>
 <p>继续更新<br><code>0x1d</code>的节点为无效节点,所以必须把它屏蔽起来,为了让它更符合<code>APPLE</code>的规范,我们使用<code>f0 00 00 40</code>来屏蔽,包括其它的不用的节点.修正后的数据为:</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Node    c  d  e  f      Description</div><div class="line"><span class="number">12</span>		<span class="number">70</span> <span class="number">01</span> a6 <span class="number">90</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">13</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">14</span>		<span class="number">40</span> <span class="number">01</span> <span class="number">17</span> <span class="number">90</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">18</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">19</span>		<span class="number">70</span> <span class="number">10</span> ab <span class="number">02</span>		[Jack]	Mic at Ext  </div><div class="line"><span class="number">1</span>a		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>b		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>d		<span class="number">2</span>d <span class="number">9</span>a <span class="number">77</span> <span class="number">40</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">1</span>e		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">21</span>		<span class="number">30</span> <span class="number">10</span> <span class="number">2</span>b <span class="number">02</span>		[Jack]	HP Out at Ext Front</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Node    c  d  e  f      Description</div><div class="line"><span class="number">12</span>		<span class="number">70</span> <span class="number">01</span> a6 <span class="number">90</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">13</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">14</span>		<span class="number">40</span> <span class="number">01</span> <span class="number">17</span> <span class="number">90</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">18</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">19</span>		<span class="number">70</span> <span class="number">10</span> ab <span class="number">02</span>		[Jack]	Mic at Ext  </div><div class="line"><span class="number">1</span>a		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>b		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>d		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">1</span>e		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">21</span>		<span class="number">30</span> <span class="number">10</span> <span class="number">2</span>b <span class="number">02</span>		[Jack]	HP Out at Ext Front</div></pre></td></tr></table></figure>
 <p>现在, 我们可以生成最终的<code>ConfigData</code>了,<br><code>ConfigData</code>的计算公式为:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Final Config:</div><div class="line">Address + Node + 71c +【c】</div><div class="line">Address + Node + 71d +【d】</div><div class="line">Address + Node + 71e +【e】</div><div class="line">Address + Node + 71f +【f】</div></pre></td></tr></table></figure>
 <p>这里的<code>c</code> <code>d</code> <code>e</code> <code>f</code>就是上面整理出来的2位数值<br>我的ALC256的<code>Address</code>值为0,现在我将节点<code>0x12</code>的<code>ConfigData</code>值通过上面的公式整理后得出:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">01271c70 01271d01 01271ea6 01271f90</div></pre></td></tr></table></figure>
 <p>相应地,其它的节点整理出来的数据如下:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">01270c70 01270d01 01270ea6 01270f90</div><div class="line">01370cf0 01370d00 01370e00 01370f40</div><div class="line">01470c40 01470d01 01470e17 01470f90 01470c02</div><div class="line">01870cf0 01870d00 01870e00 01870f40</div><div class="line">01970c70 01970d10 01970eab 01970f02</div><div class="line">01a70cf0 01a70d00 01a70e00 01a70f40</div><div class="line">01b70cf0 01b70d00 01b70e00 01b70f40</div><div class="line">01d70c2d 01d70d9a 01d70e77 01d70f40</div><div class="line">01e70cf0 01e70d00 01e70e00 01e70f40</div><div class="line">02170c30 02170d10 02170e2b 02170f02 02170c02</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">01270c70 01270d01 01270ea6 01270f90</div><div class="line">01370cf0 01370d00 01370e00 01370f40</div><div class="line">01470c40 01470d01 01470e17 01470f90 01470c02</div><div class="line">01870cf0 01870d00 01870e00 01870f40</div><div class="line">01970c70 01970d10 01970eab 01970f02</div><div class="line">01a70cf0 01a70d00 01a70e00 01a70f40</div><div class="line">01b70cf0 01b70d00 01b70e00 01b70f40</div><div class="line">01d70cf0 01d70d00 01d70e00 01d70f40</div><div class="line">01e70cf0 01e70d00 01e70e00 01e70f40</div><div class="line">02170c30 02170d10 02170e2b 02170f02 02170c02</div></pre></td></tr></table></figure>
 <p>我将编辑的过程做了段视频,方便大家理解.</p>
 <video width="640" height="480" controls><br><source src="http://ous2s14vo.bkt.clouddn.com/ConfigData.mp4"><br></video>
 
 <p>打开<code>Sublime Text.app</code>,按住鼠标中键打开块复制,将<code>c</code> <code>d</code> <code>e</code> <code>f</code>下面的数据块拷贝一份到最下面空白处,在第一列按鼠标中键一下拉到下面,输入<code>Address</code>值<code>0</code>,再把上方的<code>Node</code>下面的数据做块复制,粘贴到0后面,再输入:<code>70c</code>,再将<code>01270</code>做块复制到后面,再分别输入<code>d</code> <code>e</code> <code>f</code>即可.最后在<code>0x14</code>和<code>0x21</code>节点后面添加两组<code>EAPD</code>数据.<br>将上面整理出来的数据去掉每行的硬回车后得到的一组数据就是最终的<code>ConfigData</code></p>
-<p><code>01270c70 01270d01 01270ea6 01270f90 01370cf0 01370d00 01370e00 01370f40 01470c40 01470d01 01470e17 01470f90 01470c02 01870cf0 01870d00 01870e00 01870f40 01970c70 01970d10 01970eab 01970f02 01a70cf0 01a70d00 01a70e00 01a70f40 01b70cf0 01b70d00 01b70e00 01b70f40 01d70c2d 01d70d9a 01d70e77 01d70f40 01e70cf0 01e70d00 01e70e00 01e70f40 02170c30 02170d10 02170e2b 02170f02 02170c02</code></p>
-<p>到这里,<code>ConfigData</code>的数据就算整理完了.</p>
-<h1 id="找出适合你的id"><a href="#找出适合你的id" class="headerlink" title="找出适合你的id"></a>找出适合你的id</h1><table>
-<thead>
-<tr>
-<th>有效节点</th>
-<th>10进制</th>
-<th>设备名称</th>
-<th>路径</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x14</td>
-<td>20</td>
-<td>Speaker out</td>
-<td><strong>20-&gt;2</strong></td>
-</tr>
-<tr>
-<td>0x21</td>
-<td>33</td>
-<td>HP out</td>
-<td><strong>33-&gt;3</strong></td>
-</tr>
-<tr>
-<td>0x19</td>
-<td>25</td>
-<td>Headset Mic in</td>
-<td><strong>8-&gt;35-&gt;25</strong> <strong>9-&gt;34-&gt;25</strong></td>
-</tr>
-<tr>
-<td>0x1a</td>
-<td>26</td>
-<td>Headphone Mic in</td>
-<td><strong>8-&gt;35-&gt;26</strong> <strong>9-&gt;34-&gt;26</strong></td>
-</tr>
-<tr>
-<td>0x12</td>
-<td>18</td>
-<td>Internal Mic in</td>
-<td><strong>8-&gt;35-&gt;18</strong></td>
-</tr>
-</tbody>
-</table>
+<p><code>01270c70 01270d01 01270ea6 01270f90 01370cf0 01370d00 01370e00 01370f40 01470c40 01470d01 01470e17 01470f90 01470c02 01870cf0 01870d00 01870e00 01870f40 01970c70 01970d10 01970eab 01970f02 01a70cf0 01a70d00 01a70e00 01a70f40 01b70cf0 01b70d00 01b70e00 01b70f40 01d70cf0 01d70d00 01d70e00 01d70f40 01e70cf0 01e70d00 01e70e00 01e70f40 02170c30 02170d10 02170e2b 02170f02 02170c02</code><br>到这里,<code>ConfigData</code>的数据就算整理完了.</p>
+<h1 id="找出适合你的id"><a href="#找出适合你的id" class="headerlink" title="找出适合你的id"></a>找出适合你的id</h1><p>这一节里,我们就来一起动手找出最适合你的注入ID<br>正确的注入ID可以保证您的声卡各项功能都能正常使用,它至关重要,这里给出的方法也是为了进一步验证前面我们所做的工作.</p>
 <h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
 <h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h1 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h1><p>耳机切换<br>睡眠唤醒<br>去除底噪</p>
 <h2 id="声卡驱动了-音量调节的图标也显示正常-就是不发声怎么办"><a href="#声卡驱动了-音量调节的图标也显示正常-就是不发声怎么办" class="headerlink" title="声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办"></a>声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办</h2><p>如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.<br>所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10" target="_blank" rel="external">VoodooHDA</a>万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没<code>AppleALC</code>啥事儿了吧.这里可以借助<code>VoodooHDA</code>自带的应用程序:<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump" target="_blank" rel="external">getdump</a>,使用方法:打开终端,输入命令:</p>
