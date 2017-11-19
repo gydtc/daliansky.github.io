@@ -465,7 +465,7 @@
 </ul>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Node	PinDefault		Description </div><div class="line">----------------------------------------------------------</div><div class="line"><span class="number">0x12</span>	<span class="number">0x90a60170</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">0x13</span>	<span class="number">0x40000000</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">0x14</span>	<span class="number">0x90170140</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">0x18</span>	<span class="number">0x411111f0</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">0x19</span>	<span class="number">0x411111f0</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">0x1a</span>	<span class="number">0x411111f0</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">0x1b</span>	<span class="number">0x411111f0</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">0x1d</span>	<span class="number">0x40779a2d</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">0x1e</span>	<span class="number">0x411111f0</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">0x21</span>	<span class="number">0x02211030</span>		[Jack]	HP Out at Ext Front  </div><div class="line">----------------------------------------------------------</div></pre></td></tr></table></figure>
 <p>将<code>PinDefault</code>进行小端转换<a href="https://zh.wikipedia.org/zh-hans/字节序" target="_blank" rel="external">little-endian</a>,这里借用一张紫米教程里面的图片进行小端转换的理解:<br><img src="http://ous2s14vo.bkt.clouddn.com/little-endian.jpg" alt="little-endian"><br>就是把<code>PinDefault</code>的数据两两对调,比如:<code>0x12</code>节点的<code>[Fixed]    Mic at Int</code>原始数据为:<code>0x90a60170</code>,去掉前面的<code>0x</code>,变成<code>90 a6 01 70</code>,<br>最前面的<code>90</code>跑到了最后,最后的<code>70</code>又跑到了最前面,中间的<code>a6</code>和<code>01</code>再对调下,就变成了<code>70 01 a6 90</code>.整理后,变成如下的格式:</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Node    c  d  e  f      Description</div><div class="line"><span class="number">12</span>		<span class="number">70</span> <span class="number">01</span> a6 <span class="number">90</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">13</span>		<span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">14</span>		<span class="number">40</span> <span class="number">01</span> <span class="number">17</span> <span class="number">90</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">18</span>		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">19</span>		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>a		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>b		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>d		<span class="number">2</span>d <span class="number">9</span>a <span class="number">77</span> <span class="number">40</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">1</span>e		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">21</span>		<span class="number">30</span> <span class="number">10</span> <span class="number">21</span> <span class="number">02</span>		[Jack]	HP Out at Ext Front</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Node            c  d  e  f              Description</div><div class="line"><span class="number">12</span>		<span class="number">70</span> <span class="number">01</span> a6 <span class="number">90</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">13</span>		<span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">14</span>		<span class="number">40</span> <span class="number">01</span> <span class="number">17</span> <span class="number">90</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">18</span>		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">19</span>		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>a		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>b		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>d		<span class="number">2</span>d <span class="number">9</span>a <span class="number">77</span> <span class="number">40</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">1</span>e		f<span class="number">0</span> <span class="number">11</span> <span class="number">11</span> <span class="number">41</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">21</span>		<span class="number">30</span> <span class="number">10</span> <span class="number">21</span> <span class="number">02</span>		[Jack]	HP Out at Ext Front</div></pre></td></tr></table></figure>
 <p>下一步,我们要对数据进行修正,让它看起来更像<code>APPLE</code>.</p>
 <h2 id="修正PinDefault-并生成ConfigData"><a href="#修正PinDefault-并生成ConfigData" class="headerlink" title="修正PinDefault,并生成ConfigData"></a>修正<code>PinDefault</code>,并生成<code>ConfigData</code></h2><p>上一节我们只是把数据进一步地整理出来,并进行了格式化,我们并没有对数据进行修正.本节我们就开始进行<code>PinDefault</code>的修正,先上一张我整理出来的表格:<br><img src="http://ous2s14vo.bkt.clouddn.com/pinconfigs.png" alt="pinconfigs"></p>
 <ul>
@@ -479,7 +479,7 @@
 </ul>
 <p>更新于:11-15-2017 16:41</p>
 <p>继续更新<br><code>0x1d</code>的节点为无效节点,所以必须把它屏蔽起来,为了让它更符合<code>APPLE</code>的规范,我们使用<code>f0 00 00 40</code>来屏蔽,包括其它的不用的节点.修正后的数据为:</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Node    c  d  e  f      Description</div><div class="line"><span class="number">12</span>		<span class="number">70</span> <span class="number">01</span> a6 <span class="number">90</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">13</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">14</span>		<span class="number">40</span> <span class="number">01</span> <span class="number">17</span> <span class="number">90</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">18</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">19</span>		<span class="number">70</span> <span class="number">10</span> ab <span class="number">02</span>		[Jack]	Mic at Ext  </div><div class="line"><span class="number">1</span>a		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>b		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>d		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">1</span>e		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">21</span>		<span class="number">30</span> <span class="number">10</span> <span class="number">2</span>b <span class="number">02</span>		[Jack]	HP Out at Ext Front</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Node            c  d  e  f              Description</div><div class="line"><span class="number">12</span>		<span class="number">70</span> <span class="number">01</span> a6 <span class="number">90</span>		[Fixed]	Mic at Int       </div><div class="line"><span class="number">13</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Line Out at Ext N/A  </div><div class="line"><span class="number">14</span>		<span class="number">40</span> <span class="number">01</span> <span class="number">17</span> <span class="number">90</span>		[Fixed]	Speaker at Int   </div><div class="line"><span class="number">18</span>		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">19</span>		<span class="number">70</span> <span class="number">10</span> ab <span class="number">02</span>		[Jack]	Mic at Ext  </div><div class="line"><span class="number">1</span>a		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>b		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">1</span>d		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Modem Hand at Ext N/A</div><div class="line"><span class="number">1</span>e		f<span class="number">0</span> <span class="number">00</span> <span class="number">00</span> <span class="number">40</span>		[N/A]	Speaker at Ext Rear  </div><div class="line"><span class="number">21</span>		<span class="number">30</span> <span class="number">10</span> <span class="number">2</span>b <span class="number">02</span>		[Jack]	HP Out at Ext Front</div></pre></td></tr></table></figure>
 <p>现在, 我们可以生成最终的<code>ConfigData</code>了,<br><code>ConfigData</code>的计算公式为:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Final Config:</div><div class="line">Address + Node + 71c +【c】</div><div class="line">Address + Node + 71d +【d】</div><div class="line">Address + Node + 71e +【e】</div><div class="line">Address + Node + 71f +【f】</div></pre></td></tr></table></figure>
 <p>这里的<code>c</code> <code>d</code> <code>e</code> <code>f</code>就是上面整理出来的2位数值<br>我的ALC256的<code>Address</code>值为0,现在我将节点<code>0x12</code>的<code>ConfigData</code>值通过上面的公式整理后得出:</p>
@@ -491,9 +491,107 @@
 
 <p>打开<code>Sublime Text.app</code>,按住鼠标中键打开块复制,将<code>c</code> <code>d</code> <code>e</code> <code>f</code>下面的数据块拷贝一份到最下面空白处,在第一列按鼠标中键一下拉到下面,输入<code>Address</code>值<code>0</code>,再把上方的<code>Node</code>下面的数据做块复制,粘贴到0后面,再输入:<code>71c</code>,再将<code>01271</code>做块复制到后面,再分别输入<code>d</code> <code>e</code> <code>f</code>即可.最后在<code>0x14</code>和<code>0x21</code>节点后面添加两组<code>EAPD</code>数据.<br>将上面整理出来的数据去掉每行的硬回车后得到的一组数据就是最终的<code>ConfigData</code></p>
 <p><code>01271c70 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c70 01971d10 01971eab 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02</code><br>到这里,<code>ConfigData</code>的数据就算整理完了.</p>
-<h1 id="找出适合你的id"><a href="#找出适合你的id" class="headerlink" title="找出适合你的id"></a>找出适合你的id</h1><p>这一节里,我们就来一起动手找出最适合你的注入ID<br>正确的注入ID可以保证您的声卡各项功能都能正常使用,它至关重要,这里给出的方法也是为了进一步验证前面我们所做的工作.</p>
+<h1 id="找出适合你的id"><a href="#找出适合你的id" class="headerlink" title="找出适合你的id"></a>找出适合你的id</h1><p>这一节里,我们就来一起动手找出最适合你的注入id<br>正确的注入id可以保证您的声卡各项功能都能正常使用,它至关重要,这里给出的方法也是为了进一步验证前面我们所做的工作.<br>到找注入id这一步,您至少已经有了这些数据:</p>
+<ul>
+<li>声卡基础资料:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Codec: Realtek ALC3246</td>
+<td>是告诉了你的声卡型号是ALC3246(ALC256)</td>
+</tr>
+<tr>
+<td>Address: 0</td>
+<td>会告诉你生成configdata的数据的前缀是0,比如上面显示输出信息最后一行的<code>Modified Verbs in One Line:</code>后面所有的数据中,每组数据的第一位就是这个 <code>0</code> ,如果<code>Address: 2</code>,那么每组数据的第一位就是 <code>2</code> ,这个后面我们会用到它</td>
+</tr>
+<tr>
+<td>DevID: 283902550 (0x10ec0256)</td>
+<td>283902550是0x10ec0256的10进制值,0x10ec 是指vendorID(芯片供应商ID),是REALTEK的设备标识,0256是指型号,去掉前面的0,您的声卡型号就是:ALC256</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>整理出来的有效节点及路径</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>有效节点</th>
+<th>10进制</th>
+<th>设备名称</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x14</td>
+<td>20</td>
+<td>Speaker out</td>
+<td><strong>20-&gt;2</strong></td>
+</tr>
+<tr>
+<td>0x21</td>
+<td>33</td>
+<td>HP out</td>
+<td><strong>33-&gt;3</strong></td>
+</tr>
+<tr>
+<td>0x19</td>
+<td>25</td>
+<td>Headset Mic in</td>
+<td><strong>8-&gt;35-&gt;25</strong> <strong>9-&gt;34-&gt;25</strong></td>
+</tr>
+<tr>
+<td>0x1a</td>
+<td>26</td>
+<td>Headphone Mic in</td>
+<td><strong>8-&gt;35-&gt;26</strong> <strong>9-&gt;34-&gt;26</strong></td>
+</tr>
+<tr>
+<td>0x12</td>
+<td>18</td>
+<td>Internal Mic in</td>
+<td><strong>8-&gt;35-&gt;18</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>最终的<code>ConfigData</code>数据:</li>
+</ul>
+<p><code>01271c70 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c70 01971d10 01971eab 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02</code><br>下一步,我们就要将这些数据<code>放</code>进<code>AppleALC</code>相应的位置,让它发挥作用.<br>操作步骤:</p>
+<ol>
+<li><p>创建<code>AppleALC</code>的本地仓库的克隆版本:</p>
+<ul>
+<li><p>使用<code>git</code>命令,更多<code>git</code>命令的用法请参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git使用简易指南</a>:</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir ~/git <span class="comment"># 在家目录下新建立`git`目录</span></div><div class="line"><span class="built_in">cd</span> ~/git    <span class="comment"># 进入`git`目录</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/vit9696/AppleALC   <span class="comment"># 克隆AppleALC到本地</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>* 或者通过浏览器下载 [AppleALC最新版](https://github.com/vit9696/AppleALC/archive/master.zip) 
+</code></pre><ol>
+<li>打开<code>AppleALC</code>目录,进入<code>Resources</code>目录,你会发现这里面<code>躺</code>着截止到目前所支持的声卡的全部型号.我的声卡是<code>ALC256</code>,我就点击<code>ALC256</code>,如图显示:<br><img src="http://ous2s14vo.bkt.clouddn.com/ALC256_Resources.png" alt="ALC256_Resources"><br> 我们会发现该目录下包括了一个定义文件<code>Info.plist</code>,三个<code>layout</code>开头的文件以及三个<code>Platforms</code>开头的文件.其中<code>layout13.xml.zlib</code> <code>layout28.xml.zlib</code> <code>layout56.xml.zlib</code></li>
+</ol>
 <h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
-<h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h1 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h1><p>耳机切换<br>睡眠唤醒<br>去除底噪</p>
+<h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="检查AppleALC是否正确加载"><a href="#检查AppleALC是否正确加载" class="headerlink" title="检查AppleALC是否正确加载"></a>检查<code>AppleALC</code>是否正确加载</h2><p>打开终端,输入命令:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALc</div></pre></td></tr></table></figure>
+<p>显示内容如下:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALC</div><div class="line">   36    0 0xffffff7f8331b000 0xb0000    0xb0000</div><div class="line">       as.vit9696.AppleALC (1.2.1) </div><div class="line">       7CDA2635-8BE4-36E1-B882-8CA3B90284F3 &lt;35 7 5 4 3 2 1&gt;</div></pre></td></tr></table></figure>
+<p>我们可以看到<code>AppleALC</code>驱动已经被正确加载,版本是<code>1.2.1</code>,如果没有内容输出,那么就有可能没有加载.通常这种情况是因为<code>Lilu</code>的版本引起的,可以尝试使用<code>Lilu</code> Debug版本.</p>
+<h2 id="检查注入id是否正确"><a href="#检查注入id是否正确" class="headerlink" title="检查注入id是否正确"></a>检查注入id是否正确</h2><p>打开终端,输入命令:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep layout-id</div></pre></td></tr></table></figure>
+<p>显示内容如下:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">~ % ioreg -l <span class="params">| grep layout-id</span></div><div class="line"><span class="params">    |</span> <span class="params">|   |</span> <span class="params">|   "layout-id" = &lt;38000000&gt;</span></div><div class="line"><span class="params">    |</span> <span class="params">|   |</span>             <span class="params">| |</span>   <span class="string">"IOAudioEngineDeviceDescription"</span> = &#123;</div><div class="line">    <span class="string">"num-internal-mics"</span>=<span class="number">1</span>,</div><div class="line">    <span class="string">"driver digital input gain"</span>=<span class="number">0</span>,</div><div class="line">    <span class="string">"layout-id"</span>=<span class="number">56</span>,</div><div class="line">    <span class="string">"post-processing input gain"</span>=<span class="number">25</span>,</div><div class="line">    <span class="string">"VP-pregain"</span>=<span class="number">25</span>&#125;</div></pre></td></tr></table></figure>
+<p>为了便于讲解,我将内容做了换行处理.<br>其中的<code>&quot;layout-id&quot;=56</code>就是指注入id是 <code>56</code> ,而<code>&lt;38000000&gt;</code>是<code>56</code>的16进制</p>
+<h2 id="检查PinConfigurations"><a href="#检查PinConfigurations" class="headerlink" title="检查PinConfigurations"></a>检查<code>PinConfigurations</code></h2><p>使用<code>IORegistryExplorer.app</code>,找到<code>HDEF@1F,3</code>,右侧的<code>PinConfigurations</code>就是最终的四个节点的数值,同时我们发现其它的节点已经不存在了,这样的结果正是我们需要的.<br><img src="http://ous2s14vo.bkt.clouddn.com/ioreg_pinconfigurations.png" alt="ioreg_pinconfigurations"></p>
+<h1 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h1><p>耳机切换<br>睡眠唤醒<br>去除底噪</p>
 <h2 id="声卡驱动了-音量调节的图标也显示正常-就是不发声怎么办"><a href="#声卡驱动了-音量调节的图标也显示正常-就是不发声怎么办" class="headerlink" title="声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办"></a>声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办</h2><p>如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.<br>所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10" target="_blank" rel="external">VoodooHDA</a>万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没<code>AppleALC</code>啥事儿了吧.这里可以借助<code>VoodooHDA</code>自带的应用程序:<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump" target="_blank" rel="external">getdump</a>,使用方法:打开终端,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo cp ~/Downloads/getdump /usr/<span class="built_in">local</span>/bin  <span class="comment"># 将getdump命令复制到/usr/local/bin目录下</span></div><div class="line">sudo chmod +x /usr/<span class="built_in">local</span>/bin/getdump    <span class="comment"># 为getdump添加执行权限</span></div><div class="line">getdump &gt; ~/Desktop/voodoo_dump.txt</div></pre></td></tr></table></figure>
 <p>用它可以生成一份<code>voodoo_dump.txt</code>的文件,里面会有两段以<code>DUMPING Playback/Record Paths</code>开头的文字描述,这里面即包括了有效节点,同时也包括了有效的路径<br><img src="http://ous2s14vo.bkt.clouddn.com/path1.png" alt="path1"><br><img src="http://ous2s14vo.bkt.clouddn.com/path2.png" alt="path2"><br>从上面的两张截图中,可以将有效的节点和路径整理出下面的表格:</p>
