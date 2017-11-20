@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧.这里">
+<meta name="description" content="借助VoodooHDA自带的getdump找出有效节点和路径 声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办 如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面. 所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧">
 <meta name="keywords" content="AppleALC,声卡仿冒,VoodooHDA,getdump">
 <meta property="og:type" content="article">
 <meta property="og:title" content="借助VoodooHDA自带的getdump找出有效节点和路径">
 <meta property="og:url" content="http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧.这里">
+<meta property="og:description" content="借助VoodooHDA自带的getdump找出有效节点和路径 声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办 如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面. 所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path2.png">
 <meta property="og:updated_time" content="2017-11-13T07:47:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="借助VoodooHDA自带的getdump找出有效节点和路径">
-<meta name="twitter:description" content="借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧.这里">
+<meta name="twitter:description" content="借助VoodooHDA自带的getdump找出有效节点和路径 声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办 如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面. 所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出VoodooHDA万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没AppleALC啥事儿了吧">
 <meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
 
 
@@ -448,9 +448,15 @@
       
 
       
-        <h1 id="借助VoodooHDA自带的getdump找出有效节点和路径"><a href="#借助VoodooHDA自带的getdump找出有效节点和路径" class="headerlink" title="借助VoodooHDA自带的getdump找出有效节点和路径"></a>借助VoodooHDA自带的getdump找出有效节点和路径</h1><p>声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办<br>如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.<br>所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10" target="_blank" rel="external">VoodooHDA</a>万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没<code>AppleALC</code>啥事儿了吧.这里可以借助<code>VoodooHDA</code>自带的应用程序:<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump" target="_blank" rel="external">getdump</a>,使用方法:打开终端,输入命令:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getdump &gt; ~/Desktop/voodoo_dump.txt</div></pre></td></tr></table></figure>
-<p>用它可以生成一份<code>voodoo_dump.txt</code>的文件,里面会有两段以<code>DUMPING Playback/Record Paths</code>开头的文字描述,这里面即包括了有效节点,同时也包括了有效的路径<br><img src="http://ous2s14vo.bkt.clouddn.com/path1.png" alt="path1"><br><img src="http://ous2s14vo.bkt.clouddn.com/path2.png" alt="path2"><br>从上面的两张截图中,可以将有效的节点和路径整理出下面的表格:</p>
+        <h1>借助VoodooHDA自带的getdump找出有效节点和路径</h1>
+<p>声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办
+如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.
+所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10" target="_blank" rel="external">VoodooHDA</a>万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没<code>AppleALC</code>啥事儿了吧.这里可以借助<code>VoodooHDA</code>自带的应用程序:<a href="https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump" target="_blank" rel="external">getdump</a>,使用方法:打开终端,输入命令:</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getdump &gt; ~/Desktop/voodoo_dump.txt</div></pre></td></tr></table></figure></p>
+<p>用它可以生成一份<code>voodoo_dump.txt</code>的文件,里面会有两段以<code>DUMPING Playback/Record Paths</code>开头的文字描述,这里面即包括了有效节点,同时也包括了有效的路径
+<img src="http://ous2s14vo.bkt.clouddn.com/path1.png" alt="path1">
+<img src="http://ous2s14vo.bkt.clouddn.com/path2.png" alt="path2">
+从上面的两张截图中,可以将有效的节点和路径整理出下面的表格:</p>
 <table>
 <thead>
 <tr>
@@ -488,9 +494,13 @@
 </tbody>
 </table>
 <p>有了这个表格,再结合<code>configdata</code>,找出有效的ID,编译<code>AppleALC</code>,注入ID并使用声卡驱动.</p>
-<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>该种方法摘自<a href="https://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html">使用AppleALC声卡仿冒驱动AppleHDA的正确姿势</a>的部分内容,之所以单独发布就是想让更多的人看到</p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<h1>备注</h1>
+<p>该种方法摘自<a href="https://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html">使用AppleALC声卡仿冒驱动AppleHDA的正确姿势</a>的部分内容,之所以单独发布就是想让更多的人看到</p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -727,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#借助VoodooHDA自带的getdump找出有效节点和路径"><span class="nav-number">1.</span> <span class="nav-text">借助VoodooHDA自带的getdump找出有效节点和路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#备注"><span class="nav-number">2.</span> <span class="nav-text">备注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">3.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">4.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">借助VoodooHDA自带的getdump找出有效节点和路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">备注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
