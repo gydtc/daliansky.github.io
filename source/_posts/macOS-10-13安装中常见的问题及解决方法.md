@@ -16,6 +16,73 @@ categories:
 - 教程
 ---
 # macOS 10.13安装中常见的问题及解决方法
+
+## 去掉`Lilu`的输出信息,还原10.13内核恐慌的真相
+> 援引:如果你有一个内核恐慌，请确保你有一个DEBUG版本的扩展名，并且已经添加了`-v keepyms = 1 debug = 0x100`引导参数。 在10.13上，为了避免kext名字在恐慌日志中滚动，你也应该[修补你的内核]
+
+10.13的系统引导中,万一发生了`kernel panic`,也就是内核恐慌后,`Lilu`输出的信息过多,造成无法看清内核恐慌时的问题所在,这里教大家一种方法,去掉`Lilu`的输出信息,还原造成内核恐慌后面的真相
+
+### 解决方法1:
+使用文本编辑器打开`config.plist`文件,在
+
+```xml
+<key>KernelToPatch</key>
+```
+
+下面添加:
+
+```xml
+        <array>
+            <dict>
+                <key>Comment</key>
+                <string>Disable panic kext logging on 10.13 Debug kernel</string>
+                <key>Disabled</key>
+                <false/>
+                <key>Find</key>
+                <data>
+                sABMi1Xw
+                </data>
+                <key>MatchOS</key>
+                <string>10.13</string>
+                <key>Replace</key>
+                <data>
+                SIPEQF3D
+                </data>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>Disable panic kext logging on 10.13 Release kernel</string>
+                <key>Disabled</key>
+                <false/>
+                <key>Find</key>
+                <data>
+                igKEwHRE
+                </data>
+                <key>MatchOS</key>
+                <string>10.13</string>
+                <key>Replace</key>
+                <data>
+                igKEwOtE
+                </data>
+            </dict>
+        </array>
+```
+
+### 解决方法2:
+使用`Clover Configurator`打开`config.plist` - `Kernel and Kext Patches` - `kernelToPatch`，新添加：
+
+```xml
+Comment:    Disable panic kext logging on 10.13 Debug kernel
+Find:       b0004c8b 55f0
+Replace:    4883c440 5dc3
+MatchOS:    10.13
+
+Comment:    Disable panic kext logging on 10.13 Release kernel
+Find:       8a0284c0 7444
+Replace:    8a0284c0 eb44
+MatchOS:    10.13
+```
+
 ## 1. 安装10.13时卡在`Service only ran for 0 seconds. Pushing respawn out by 10 second`
 > 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 `hotpatch` 方式进行独显屏蔽。
 
@@ -146,9 +213,16 @@ ioreg -l | grep "DisplayProductID"
 其中<>里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover的 `config.plist` 中，顺便将 `VendorID` 和 `ProductID` 填入相应的位置，然后保存重启你的电脑。
 ![EDID注入](http://ous2s14vo.bkt.clouddn.com/EDID注入.png)
 
+## 7. 关于Clover卡在`user settings`的解决方法
+该种现象存在于您使用了镜像默认提供的`config.plist`不适合您的机型
+### 解决方法
+* 删除`/EFI/CLOVER/config.plist`,同时将适用于您机型的配置文件重新命名为:`config.plist`,即可解决您的问题
+* 或者使用与您相同机型的EFI直接替换
+
+
 ## 写在最后
 > 本文会不定期更新
-> 最后更新：10-19-2017
+> 最后更新：11-16-2017
 
 # 关于打赏
 您的支持就是我更新的动力！

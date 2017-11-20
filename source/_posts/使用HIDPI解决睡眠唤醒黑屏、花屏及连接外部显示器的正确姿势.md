@@ -1,7 +1,7 @@
 ---
 title: 使用HIDPI解决睡眠唤醒黑屏、花屏及连接外部显示器的正确姿势
 date: 2017-11-09 19:50:39
-top: 100
+top: 95
 urlname: Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture
 tags:
 - HIDPI

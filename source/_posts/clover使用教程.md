@@ -83,8 +83,7 @@ BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEF
 
 ## 帮助菜单 F1
 按 `F1` 键会呼出 `Clover` 的帮助信息
-![f1-Large](http://ous2s14vo.bkt.clouddn.com/f1-Large.png)
-
+![Help_F11](http://ous2s14vo.bkt.clouddn.com/Help_F11.png)
 
 * ESC 退出子菜单，恢复到主菜单
 * F1 帮助
@@ -101,6 +100,7 @@ BIOS启动过程中（启动方式A）要用到drivers32或drivers64目录，UEF
 * F5 提取修正过的 `DSDT` 保存到 `EFI/CLOVER/ACPI/origin/`
 * F6 提取显卡ROM `VideoBios` 保存到 `EFI/CLOVER/misc/`
 * F10 截屏，截取当前界面，保存到 `EFI/CLOVER/misc/`
+* F11 重置NVRAM,r4299版本新增
 * 空格 选定菜单项的详细信息
 * 数字 1-9 菜单项的快捷键
 * A 关于 `Clover`
