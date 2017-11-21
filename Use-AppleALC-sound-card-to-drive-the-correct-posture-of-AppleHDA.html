@@ -104,10 +104,11 @@
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/little-endian.jpg">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/pinconfigs.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC256_Info.plist.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ioreg_pinconfigurations.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path2.png">
-<meta property="og:updated_time" content="2017-11-21T14:09:47.000Z">
+<meta property="og:updated_time" content="2017-11-21T14:29:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用AppleALC声卡仿冒驱动AppleHDA的正确姿势">
 <meta name="twitter:description" content="大纲,写作中前言经常给网友仿冒声卡驱动, 一直都没有将过程写下来,鉴于每天会有许多人问如何仿冒声卡,就想将过程记录下来,供大家参考学习 提取codec通过linux提取codec制作Ubuntu Linux启动U盘: 下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:网易 搜狐 阿里云    如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个ubunt">
@@ -365,7 +366,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T22:09:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T22:29:32+08:00">
                 2017-11-21
               </time>
             
@@ -427,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7,405 字
+                  7,516 字
                 </span>
               
 
@@ -443,7 +444,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  31 分钟
+                  32 分钟
                 </span>
               
             </div>
@@ -864,8 +865,9 @@
 </ol>
 <pre><code>* 或者通过浏览器下载 [AppleALC最新版](https://github.com/vit9696/AppleALC/archive/master.zip) 
 </code></pre><ol>
-<li>打开<code>AppleALC</code>目录,进入<code>Resources</code>目录,你会发现这里面<code>躺</code>着截止到目前所支持的声卡的全部型号.我的声卡是<code>ALC256</code>,我就点击<code>ALC256</code>为便于理解,我将除了<code>ALC256</code>之外的其它型号的声卡目录全部删除了,它看起来如下图所示:<br><img src="http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png" alt="ALC_Folder">我们会发现该目录下包括了一个定义文件<code>Info.plist</code>,三个<code>layout</code>开头的文件以及三个<code>Platforms</code>开头的文件.其中<code>layout13.xml.zlib</code> <code>layout28.xml.zlib</code> <code>layout56.xml.zlib</code>就是注入的id,只是你的声卡需要注入的是哪个ID才能获得最佳效果,还需要分析其它的数据.</li>
+<li>打开<code>AppleALC</code>目录,进入<code>Resources</code>目录,你会发现这里面<code>躺</code>着截止到目前所支持的声卡的全部型号.我的声卡是<code>ALC256</code>,我就点击<code>ALC256</code>为便于理解,我将除了<code>ALC256</code>之外的其它型号的声卡目录全部删除了,它看起来如下图所示:<br><img src="http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png" alt="ALC_Folder">我们会发现该目录下包括了一个定义文件<code>Info.plist</code>,打开<code>Info.plist</code>,你会发现,它定义了一个声卡驱动所需要的数据,<code>CodecID</code>后面的<code>598</code>是<code>ALC256</code>的<code>0x256</code>的10进制数值,<code>CodecName</code>是声卡名称的描述,这里是<code>ALC256(3246)</code>,接下来是<code>Files</code>,它分成两部分,一部分是<code>Layouts</code>,它定义声卡设备的布局,另一部分是<code>Platforms</code>,它定义声卡的平台注入,包括有效节点和路径的定义.<br><img src="http://ous2s14vo.bkt.clouddn.com/ALC256_Info.plist.png" alt="ALC256_Info.plist"></li>
 </ol>
+<p>三个<code>layout</code>开头的文件以及三个<code>Platforms</code>开头的文件,<code>Platforms</code>为路径定义文件.其中<code>layout13.xml.zlib</code> <code>layout28.xml.zlib</code> <code>layout56.xml.zlib</code>就是注入的id,只是你的声卡需要注入的是哪个ID才能获得最佳效果,还需要分析其它的数据.</p>
 <h2 id="如何找出适合你的id"><a href="#如何找出适合你的id" class="headerlink" title="如何找出适合你的id"></a>如何找出适合你的id</h2><p>通过制作几十个声卡仿冒的驱动,我发现找出注入的id还是有些窍门的,比如说我可以通过<code>PinConfigs.kext</code>的<code>Info.plist</code>,将同一型号的声卡的<code>ConfigData</code>都找出来,方法:</p>
 <ul>
 <li>将<code>Address</code>不为<code>0</code>的排除出去</li>
@@ -876,7 +878,7 @@
 <blockquote>
 <p>这里插句题外话:之前给群友做声卡仿冒的时候,<code>ALC269</code>和<code>ALC887</code>我都是直接绕路走的,或者让群友用<code>VoodooHDA</code>,或者直接拒绝.现在可以使用排除法,很快就能找到注入的id</p>
 </blockquote>
-<p>更新于:11-21-2017 22:10</p>
+<p>更新于:11-21-2017 22:30</p>
 <h1 id="如何修改路径数据"><a href="#如何修改路径数据" class="headerlink" title="如何修改路径数据"></a>如何修改路径数据</h1><h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
 <h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="检查AppleALC是否正确加载"><a href="#检查AppleALC是否正确加载" class="headerlink" title="检查AppleALC是否正确加载"></a>检查<code>AppleALC</code>是否正确加载</h2><p>打开终端,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALc</div></pre></td></tr></table></figure>
