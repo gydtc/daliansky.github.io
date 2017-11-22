@@ -588,14 +588,25 @@
 <ul>
 <li>将<code>Address</code>不为<code>0</code>的排除出去</li>
 <li>剩下的<code>LayoutID</code>里,再通过<code>ConfigData</code>将有效节点的数据留下,无效的排除,这样剩下来的<code>LayoutID</code>也就没几个了</li>
-<li>最后,通过<code>PlatformID</code>,找出有效节点及路径,最终确定注入的id</li>
+<li>最后,通过<code>PlatformsID</code>,找出有效节点及路径,最终确定注入的id</li>
 <li>需要注意的是,某些型号的声卡的注入id可以是唯一的,也可以是多个,这些都需要通过分析数据进行确认</li>
 </ul>
 <blockquote>
 <p>这里插句题外话:之前给群友做声卡仿冒的时候,<code>ALC269</code>和<code>ALC887</code>我都是直接绕路走的,或者让群友用<code>VoodooHDA</code>,或者直接拒绝.现在可以使用排除法,很快就能找到注入的id</p>
 </blockquote>
 <p>更新于:11-21-2017 22:30</p>
-<h1 id="如何修改路径数据"><a href="#如何修改路径数据" class="headerlink" title="如何修改路径数据"></a>如何修改路径数据</h1><h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
+<h1 id="如何修改layout和Platforms数据"><a href="#如何修改layout和Platforms数据" class="headerlink" title="如何修改layout和Platforms数据"></a>如何修改<code>layout</code>和<code>Platforms</code>数据</h1><blockquote>
+<p>上文中我们提到了通过<code>PlatformsID</code>,找出有效节点及路径,最终确定注入的id</p>
+</blockquote>
+<p>如何确认路径是否正确,我应该怎么做呢?先打开<code>Platforms</code>文件,需要用到的工具:<code>zlib转换器.app</code>.<br>操作方法:</p>
+<ul>
+<li><p>打开<code>zlib转换器.app</code>,把需要解压缩的后缀为.zlib的文件拖进窗口里,按下<code>CONVERT</code>按钮,就会在当前的目录下生成去掉了.zlib后缀的可以编辑的.xml文件了.相应地,当你编辑好了的.xml文件,拖进窗口里,按下<code>CONVERT</code>按钮,会在当前目录下生成.zlib后缀的文件了.</p>
+<video width="640" height="480" controls><br><source src="http://ous2s14vo.bkt.clouddn.com/zlib.mp4"><br></video>
+
+</li>
+</ul>
+<p>使用工具<code>PlistEdit Pro.app</code>打开<code>Platforms56.xml</code>,</p>
+<h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
 <h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="检查AppleALC是否正确加载"><a href="#检查AppleALC是否正确加载" class="headerlink" title="检查AppleALC是否正确加载"></a>检查<code>AppleALC</code>是否正确加载</h2><p>打开终端,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALc</div></pre></td></tr></table></figure>
 <p>显示内容如下:</p>

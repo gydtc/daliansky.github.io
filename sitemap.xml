@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
+    <loc>http://blog.daliansky.net/Intel-core-display-platformID-finishing.html</loc>
     
-    <lastmod>2017-11-22T02:42:24.000Z</lastmod>
+    <lastmod>2017-11-22T07:21:49.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
     
-    <lastmod>2017-11-21T14:29:32.000Z</lastmod>
+    <lastmod>2017-11-22T03:45:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
+    
+    <lastmod>2017-11-22T02:42:24.000Z</lastmod>
     
   </url>
   
@@ -110,13 +117,6 @@
     <loc>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</loc>
     
     <lastmod>2017-10-25T06:47:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Intel-core-display-platformID-finishing.html</loc>
-    
-    <lastmod>2017-10-23T08:41:45.000Z</lastmod>
     
   </url>
   
