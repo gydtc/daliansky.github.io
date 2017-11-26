@@ -8,8 +8,77 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Mon, 13 Nov 2017 07:47:28 GMT</pubDate>
+    <pubDate>Sun, 26 Nov 2017 08:48:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>macOS安装教程兼小米Pro安装过程记录</title>
+      <link>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</link>
+      <guid>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</guid>
+      <pubDate>Sun, 26 Nov 2017 06:43:42 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;引言&lt;br&gt;一直以来就想写个&lt;code&gt;macOS&lt;/code&gt;的安装教程,可惜没有&lt;code&gt;TransMac&lt;/code&gt;以及&lt;code&gt;BIOS&lt;/code&gt;设置的截图,正好&lt;a href=&quot;https://shang.qq.com/wpa/
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote>
+<p>引言<br>一直以来就想写个<code>macOS</code>的安装教程,可惜没有<code>TransMac</code>以及<code>BIOS</code>设置的截图,正好<a href="https://shang.qq.com/wpa/qunwpa?idkey=7b6d1bfaf933337e2e6fa024cb947af43c2752537fb680f18fab001bd87c05e8" target="_blank" rel="external">小米PRO黑苹果高级群</a>的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善.</p>
+</blockquote>
+<h1 id="Windows下制作macOS安装盘"><a href="#Windows下制作macOS安装盘" class="headerlink" title="Windows下制作macOS安装盘"></a>Windows下制作macOS安装盘</h1><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><ul>
+<li>U盘大于8G</li>
+<li>U 盘大小不限做 PE 盘</li>
+<li>TransMac</li>
+<li>小米PRO专用EFI文件</li>
+<li>系统镜像</li>
+</ul>
+<h2 id="在-Windows-下安装-TransMac"><a href="#在-Windows-下安装-TransMac" class="headerlink" title="在 Windows 下安装 TransMac"></a>在 <code>Windows</code> 下安装 <code>TransMac</code></h2><p>安装完成后，右键→管理员权限运行 <code>TransMac</code></p>
+<h2 id="利用-TransMac-制作macOS安装USB盘"><a href="#利用-TransMac-制作macOS安装USB盘" class="headerlink" title="利用 TransMac 制作macOS安装USB盘"></a>利用 <code>TransMac</code> 制作<code>macOS</code>安装USB盘</h2><ol>
+<li><p>打开<code>TransMac</code>,选择欲制作的<code>USB</code>盘符<br><img src="http://ous2s14vo.bkt.clouddn.com/TransMac1.png" alt="TransMac1"></p>
+</li>
+<li><p>右键选择<code>Restore with Disk Image</code>,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续<br><img src="http://ous2s14vo.bkt.clouddn.com/TransMac2.png" alt="TransMac2"></p>
+</li>
+<li><p>在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成.<br><img src="http://ous2s14vo.bkt.clouddn.com/TransMac3.png" alt="TransMac3"></p>
+</li>
+<li><p>写入完成，系统弹出将其格式化，点击取消<br><img src="http://ous2s14vo.bkt.clouddn.com/TransMac4.png" alt="TransMac4"></p>
+</li>
+</ol>
+<h1 id="macOS下制作USB安装盘"><a href="#macOS下制作USB安装盘" class="headerlink" title="macOS下制作USB安装盘"></a>macOS下制作USB安装盘</h1><p>如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便.</p>
+<h2 id="准备工具-1"><a href="#准备工具-1" class="headerlink" title="准备工具"></a>准备工具</h2><ul>
+<li>下载好的dmg镜像</li>
+<li>用于安装macOS的USB盘,容量8GB以上</li>
+<li>磁盘工具</li>
+</ul>
+<h2 id="制作过程"><a href="#制作过程" class="headerlink" title="制作过程"></a>制作过程</h2><blockquote>
+<p>为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示</p>
+</blockquote>
+<ol>
+<li>打开欲制作的dmg镜像,两种方法:<ul>
+<li>使用磁盘工具,选择<code>File</code>-<code>Open Disk Image</code></li>
+<li>直接通过<code>Finder</code>双击dmg打开<br><img src="http://ous2s14vo.bkt.clouddn.com/DiskUtility.png" alt="DiskUtility"></li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>打开<code>磁盘工具</code>,选择<code>SANDISK 8GB USB</code><br><img src="http://ous2s14vo.bkt.clouddn.com/DiskUtility2.png" alt="DiskUtility2"></p>
+</li>
+<li><p>点击<code>恢复/Restore</code>按钮,选择<code>XiaoMiPro 10131</code>,点击<code>恢复/Restore</code><br><img src="http://ous2s14vo.bkt.clouddn.com/DiskUtility3.png" alt="DiskUtility3"><br>它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘<br><img src="http://ous2s14vo.bkt.clouddn.com/DiskUtility4.png" alt="DiskUtility4"></p>
+</li>
+<li><p>镜像恢复完成后,它会显示如图所示<br><img src="http://ous2s14vo.bkt.clouddn.com/DiskUtility5.png" alt="DiskUtility5"><br>点击<code>完成/Done</code>按钮后,会显示完成后的USB磁盘信息<br><img src="http://ous2s14vo.bkt.clouddn.com/DiskUtility6.png" alt="DiskUtility6"></p>
+</li>
+</ol>
+<p>安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里</p>
+<h2 id="将镜像里的EFI复制到USB安装盘的EFI分区下"><a href="#将镜像里的EFI复制到USB安装盘的EFI分区下" class="headerlink" title="将镜像里的EFI复制到USB安装盘的EFI分区下"></a>将镜像里的EFI复制到USB安装盘的EFI分区下</h2><h3 id="显示磁盘分区信息"><a href="#显示磁盘分区信息" class="headerlink" title="显示磁盘分区信息"></a>显示磁盘分区信息</h3><p>打开终端,输入命令:<code>diskutil list</code>,它会显示类似的信息:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/dev/disk4 (disk image):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        +8.0 GB     disk4</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk4s1</div><div class="line">   2:                  Apple_HFS XiaoMiPro 10131         7.7 GB     disk4s2</div><div class="line"></div><div class="line">/dev/disk5 (disk image):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        +7.0 GB     disk5</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk5s1</div><div class="line">   2:                  Apple_HFS XiaoMiPro 10131         6.7 GB     disk5s2</div></pre></td></tr></table></figure>
+<p>这里显示的<code>8.0 GB</code>的磁盘设备为:<code>disk4</code>,也就是我们刚才制作的安装磁盘,<code>EFI</code>分区的设备为:<code>disk4s1</code>;<br><code>7.0 GB</code>的磁盘设备为:<code>disk5</code>,这个是我们刚才打开的磁盘镜像,它包含的<code>EFI</code>分区的设备为:<code>disk5s1</code>;</p>
+<h3 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>我们使用<code>diskutil</code>命令分别挂载这两个<code>EFI</code>分区,命令如下:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk4s1  <span class="comment"># 挂载USB的EFI分区</span></div><div class="line">Volume EFI on disk4s1 mounted</div><div class="line">diskutil mount disk5s1  <span class="comment"># 挂载安装镜像的EFI分区</span></div><div class="line">Volume EFI on disk5s1 mounted</div><div class="line">open .                  <span class="comment"># 在当前位置打开Finder</span></div></pre></td></tr></table></figure>
+<h3 id="复制-替换EFI"><a href="#复制-替换EFI" class="headerlink" title="复制/替换EFI"></a>复制/替换EFI</h3><p>将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作</p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>借助VoodooHDA自带的getdump找出有效节点和路径</title>
@@ -586,7 +655,7 @@
 <p>三个<code>layout</code>开头的文件以及三个<code>Platforms</code>开头的文件,<code>Platforms</code>为路径定义文件.其中<code>layout13.xml.zlib</code> <code>layout28.xml.zlib</code> <code>layout56.xml.zlib</code>就是注入的id,只是你的声卡需要注入的是哪个ID才能获得最佳效果,还需要分析其它的数据.</p>
 <h2 id="如何找出适合你的id"><a href="#如何找出适合你的id" class="headerlink" title="如何找出适合你的id"></a>如何找出适合你的id</h2><p>通过制作几十个声卡仿冒的驱动,我发现找出注入的id还是有些窍门的,比如说我可以通过<code>PinConfigs.kext</code>的<code>Info.plist</code>,将同一型号的声卡的<code>ConfigData</code>都找出来,方法:</p>
 <ul>
-<li>将<code>Address</code>不为<code>0</code>的排除出去</li>
+<li>根据上面整理的声卡基础资料将<code>Address</code>不为<code>0</code>的排除出去</li>
 <li>剩下的<code>LayoutID</code>里,再通过<code>ConfigData</code>将有效节点的数据留下,无效的排除,这样剩下来的<code>LayoutID</code>也就没几个了</li>
 <li>最后,通过<code>PlatformsID</code>,找出有效节点及路径,最终确定注入的id</li>
 <li>需要注意的是,某些型号的声卡的注入id可以是唯一的,也可以是多个,这些都需要通过分析数据进行确认</li>
@@ -605,7 +674,7 @@
 
 </li>
 </ul>
-<p>使用工具<code>PlistEdit Pro.app</code>打开<code>Platforms56.xml</code>,</p>
+<p>使用工具<code>PlistEdit Pro.app</code>打开<code>Platforms56.xml</code>,依次打开<code>PathMap-&gt;0-&gt;0-&gt;0</code>,这里的<code>NodeID</code>就是节点id.为便于理解,我将<code>Mic Int</code>的路径做了说明,如下图显示:<br><img src="http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png" alt="Platforms_edit2"></p>
 <h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
 <h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="检查AppleALC是否正确加载"><a href="#检查AppleALC是否正确加载" class="headerlink" title="检查AppleALC是否正确加载"></a>检查<code>AppleALC</code>是否正确加载</h2><p>打开终端,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALc</div></pre></td></tr></table></figure>
@@ -682,173 +751,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>使用CloverALC给AppleHDA打补丁，适用于台式机</title>
-      <link>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</link>
-      <guid>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</guid>
-      <pubDate>Tue, 07 Nov 2017 13:35:16 GMT</pubDate>
-      <description>
-      
-        &lt;ul&gt;
-&lt;li&gt;教程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;http://ous2s14vo.bkt.clouddn.com/sound.jpg&quot; alt=&quot;sound&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机
-      
-      </description>
-      
-      <content:encoded><![CDATA[<ul>
-<li>教程</li>
-</ul>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/sound.jpg" alt="sound"></p>
-<h1 id="使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机"><a href="#使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机" class="headerlink" title="使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机"></a><strong>使用 <code>CloverALC</code> 给 <code>AppleHDA</code> 打补丁， 适用于台式机</strong></h1><blockquote>
-<p><em>原生支持 <code>AppleHDA</code></em></p>
-</blockquote>
-<p>使用 <code>Clover</code> 为Realtek ALC芯片打补丁，这种方法可以启用macOS <code>AppleHDA</code> 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 <code>AppleHDA.kext</code> 。</p>
-<p><strong>版本: audio_cloverALC-1x0</strong></p>
-<ol>
-<li>简单: <code>.command</code>命令, 请看 <code>C.安装</code></li>
-<li>Bash: <code>.sh命令</code>, 请看 <code>D. 终端</code></li>
-</ol>
-<p><strong>更新列表</strong></p>
-<ul>
-<li>9-26-17<ul>
-<li>支持10.13, 支持ALC269/ALC283</li>
-<li>支持PikeralphaALC弃用的</li>
-</ul>
-</li>
-<li>12-14-15<ul>
-<li>audio_pikeralpha-110 (Clover版本的Piker Aplha AppleHDA8Series.sh)</li>
-</ul>
-</li>
-<li>11-8-15<ul>
-<li>Skylake/100系统更新，加入ALC1150/Audio ID: 3</li>
-</ul>
-</li>
-<li>7-19-15<ul>
-<li>ALC283更新 </li>
-</ul>
-</li>
-<li>6-15-15<ul>
-<li>10.11 - El Capitan Realtek ALC AppleHDA.kext 初始支持</li>
-</ul>
-</li>
-</ul>
-<p><strong>A. 需求</strong></p>
-<ol>
-<li>macOS/Clover_v2696及以后版本<ol>
-<li>10.13/High Sierra, 关闭 SIP, 挂载 EFI</li>
-<li>10.12/Sierra, 关闭 SIP, 挂载 EFI</li>
-<li>10.11/El Capitan, 设置 boot flag: <code>rootless=0</code> </li>
-<li>10.10/Yosemite, 设置 boot flag: <code>kext-dev-mode=1</code></li>
-<li>10.9/Mavericks</li>
-<li>10.8/Mountain Lionon</li>
-</ol>
-</li>
-<li>原生的、未修改的 <code>AppleHDA.kext</code><ol>
-<li><a href="https://github.com/toleda/audio_ALC_guides/blob/master/Restore%20native%20AppleHDA%20%5BGuide%5D.pdf" target="_blank" rel="external">Need native?</a></li>
-</ol>
-</li>
-<li>支持Realtek板载的音频编解码器<ol>
-<li><a href="https://github.com/toleda/audio_ALC_guides/blob/master/Identify%20Audio%20Codec%20%5BGuide%5D.pdf" target="_blank" rel="external">Unknown codec?</a></li>
-</ol>
-</li>
-</ol>
-<p><strong>B. Realtek ALCxxx</strong> (验证过的编解码器和音频ID)</p>
-<ol>
-<li><p>支持的编解码器 (* 不支持 audio_pikeralpha-110)</p>
-<ol>
-<li>885</li>
-<li>887</li>
-<li>888</li>
-<li>889</li>
-<li>892</li>
-<li>898</li>
-<li>1150</li>
-<li>1220</li>
-</ol>
-</li>
-<li><p>支持的音频ID</p>
-<ul>
-<li><p>音频ID: <strong>1</strong> </p>
-<ul>
-<li>支持 885, 887, 888, 889, 892, 898, 1150, 1220</li>
-<li>Realtek ALC audio (默认, 1/2/3/5/6 主板音频端口)</li>
-</ul>
-</li>
-<li><p>音频ID: <strong>2</strong></p>
-<ul>
-<li>支持 887, 888, 889, 892, 898, 1150, 1220</li>
-<li>Realtek ALC/5.1声道 (3主板音频端口，2进/1出变成3出)</li>
-</ul>
-</li>
-<li><p>音频ID: <strong>3</strong></p>
-<ul>
-<li>支持 887, 888, 889, 892, 898, 1150</li>
-<li>带有Realtek ALC音频的HD3000 / HD4000 HDMI音频</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p><strong>C. 安装</strong></p>
-<ol>
-<li>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁<ol>
-<li><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a> <code>audio_cloverALC-1x0.command</code></li>
-<li>双击: <code>audio_cloverALC-1x0.command</code></li>
-<li>Password:</li>
-<li>Confirm Codec ALCxxx: (885, 887, 888, 889, 892, 898, 1150, 1220 only)</li>
-<li>Clover/Legacy: answer y to Confirm Clover Legacy Install (y/n)</li>
-<li>Clover Audio ID Injection (y/n):</li>
-<li>Use Audio ID: x (y/n):</li>
-<li>Optional: Terminal/Terminal Saved Output</li>
-</ol>
-</li>
-<li>重启电脑</li>
-<li>验证ALC板载音频<ol>
-<li>系统偏好设置/声音/输出/选择音频设备</li>
-</ol>
-</li>
-</ol>
-<p><strong>D. 终端</strong></p>
-<ol>
-<li><p>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁</p>
-<ol>
-<li><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a>   <code>audio_cloverALC-1x0.sh</code></li>
-<li><p>打开终端</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./audio_cloverALC-1x0....sh</div></pre></td></tr></table></figure>
-</li>
-<li><p>其它步骤同 <code>C.</code></p>
-</li>
-</ol>
-</li>
-</ol>
-<p><strong>E. 更多的信息</strong></p>
-<ol>
-<li><a href="https://github.com/toleda/audio_RealtekALC/blob/master/DETAILS.md" target="_blank" rel="external">Details</a><ol>
-<li>Onboard Audio Solutions</li>
-<li>Requirements - Supported/Unsupported</li>
-<li>Notes</li>
-<li>Guides</li>
-<li>Tools</li>
-<li>Problem Reporting</li>
-</ol>
-</li>
-<li>Terminal Saved Output<ol>
-<li><a href="https://github.com/toleda/audio_CloverALC/blob/master/Terminal%20Saved%20Output_v1.0.4-efi.txt" target="_blank" rel="external">Clover/EFI</a></li>
-<li><a href="https://github.com/toleda/audio_CloverALC/blob/master/Terminal%20Saved%20Output_v1.0.4-leg.txt" target="_blank" rel="external">Clover/Legacy</a></li>
-</ol>
-</li>
-</ol>
-<p><strong>Credit</strong><br>THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, <a href="http://applelife.ru/threads/patchim-applehda-s-pomoschju-zagruzchika.39406/#post-353647" target="_blank" rel="external">abxite</a></p>
-<p>toleda <a href="https://github.com/toleda/audio_cloverALC" target="_blank" rel="external">https://github.com/toleda/audio_cloverALC</a></p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html#disqus_thread</comments>
     </item>
     
   </channel>

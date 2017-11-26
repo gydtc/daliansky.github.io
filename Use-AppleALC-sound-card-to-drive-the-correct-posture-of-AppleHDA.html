@@ -105,10 +105,11 @@
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/pinconfigs.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC256_Info.plist.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ioreg_pinconfigurations.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path2.png">
-<meta property="og:updated_time" content="2017-11-22T03:45:37.000Z">
+<meta property="og:updated_time" content="2017-11-23T02:47:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用AppleALC声卡仿冒驱动AppleHDA的正确姿势">
 <meta name="twitter:description" content="大纲,写作中前言经常给网友仿冒声卡驱动, 一直都没有将过程写下来,鉴于每天会有许多人问如何仿冒声卡,就想将过程记录下来,供大家参考学习 提取codec通过linux提取codec制作Ubuntu Linux启动U盘: 下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:网易 搜狐 阿里云    如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个ubunt">
@@ -366,8 +367,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-22T11:45:37+08:00">
-                2017-11-22
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-23T10:47:53+08:00">
+                2017-11-23
               </time>
             
           </span>
@@ -428,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7,690 字
+                  7,740 字
                 </span>
               
 
@@ -444,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  32 分钟
+                  33 分钟
                 </span>
               
             </div>
@@ -870,7 +871,7 @@
 <p>三个<code>layout</code>开头的文件以及三个<code>Platforms</code>开头的文件,<code>Platforms</code>为路径定义文件.其中<code>layout13.xml.zlib</code> <code>layout28.xml.zlib</code> <code>layout56.xml.zlib</code>就是注入的id,只是你的声卡需要注入的是哪个ID才能获得最佳效果,还需要分析其它的数据.</p>
 <h2 id="如何找出适合你的id"><a href="#如何找出适合你的id" class="headerlink" title="如何找出适合你的id"></a>如何找出适合你的id</h2><p>通过制作几十个声卡仿冒的驱动,我发现找出注入的id还是有些窍门的,比如说我可以通过<code>PinConfigs.kext</code>的<code>Info.plist</code>,将同一型号的声卡的<code>ConfigData</code>都找出来,方法:</p>
 <ul>
-<li>将<code>Address</code>不为<code>0</code>的排除出去</li>
+<li>根据上面整理的声卡基础资料将<code>Address</code>不为<code>0</code>的排除出去</li>
 <li>剩下的<code>LayoutID</code>里,再通过<code>ConfigData</code>将有效节点的数据留下,无效的排除,这样剩下来的<code>LayoutID</code>也就没几个了</li>
 <li>最后,通过<code>PlatformsID</code>,找出有效节点及路径,最终确定注入的id</li>
 <li>需要注意的是,某些型号的声卡的注入id可以是唯一的,也可以是多个,这些都需要通过分析数据进行确认</li>
@@ -889,7 +890,7 @@
 
 </li>
 </ul>
-<p>使用工具<code>PlistEdit Pro.app</code>打开<code>Platforms56.xml</code>,</p>
+<p>使用工具<code>PlistEdit Pro.app</code>打开<code>Platforms56.xml</code>,依次打开<code>PathMap-&gt;0-&gt;0-&gt;0</code>,这里的<code>NodeID</code>就是节点id.为便于理解,我将<code>Mic Int</code>的路径做了说明,如下图显示:<br><img src="http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png" alt="Platforms_edit2"></p>
 <h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
 <h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="检查AppleALC是否正确加载"><a href="#检查AppleALC是否正确加载" class="headerlink" title="检查AppleALC是否正确加载"></a>检查<code>AppleALC</code>是否正确加载</h2><p>打开终端,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALc</div></pre></td></tr></table></figure>
@@ -1117,7 +1118,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1139,7 +1140,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">114</span>
+                  <span class="site-state-item-count">115</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
