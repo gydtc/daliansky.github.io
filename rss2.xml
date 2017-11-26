@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Sun, 26 Nov 2017 08:48:14 GMT</pubDate>
+    <pubDate>Sun, 26 Nov 2017 11:06:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -75,6 +75,19 @@
 <h3 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>我们使用<code>diskutil</code>命令分别挂载这两个<code>EFI</code>分区,命令如下:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk4s1  <span class="comment"># 挂载USB的EFI分区</span></div><div class="line">Volume EFI on disk4s1 mounted</div><div class="line">diskutil mount disk5s1  <span class="comment"># 挂载安装镜像的EFI分区</span></div><div class="line">Volume EFI on disk5s1 mounted</div><div class="line">open .                  <span class="comment"># 在当前位置打开Finder</span></div></pre></td></tr></table></figure>
 <h3 id="复制-替换EFI"><a href="#复制-替换EFI" class="headerlink" title="复制/替换EFI"></a>复制/替换EFI</h3><p>将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作</p>
+<h1 id="小米BIOS设置"><a href="#小米BIOS设置" class="headerlink" title="小米BIOS设置"></a>小米<code>BIOS</code>设置</h1><p>小米笔记本的BIOS默认开启了安全认证,UEFI引导需要关闭安全启动<code>Secure Boot Mode</code>方式,否则无法加载UEFI引导设备,比如刚制作好的macOS安装USB盘</p>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法:"></a>操作方法:</h2><ol>
+<li><p>开机按<code>F2</code>进入<code>BIOS</code>设置,光标移动到<code>Security</code>,点击<code>Set Supervisor Password</code>设置一个<code>BIOS</code>密码,输入两次相同的密码,点击<code>YES</code>保存<br><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios1.png" alt="XiaoMi-Bios1"><br><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios2.png" alt="XiaoMi-Bios2"><br><code>Supervisor Password</code>由<code>Not Installed</code>变为<code>Installed</code></p>
+</li>
+<li><p>关闭安全启动</p>
+</li>
+</ol>
+<p><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios3.png" alt="XiaoMi-Bios3"><br>点击<code>Secure Boot Mode</code>,设置为<code>Disabled</code>关闭安全启动<br><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios4.png" alt="XiaoMi-Bios4"></p>
+<ol>
+<li>按<code>F10</code>保存设置</li>
+</ol>
+<h1 id="安装macOS"><a href="#安装macOS" class="headerlink" title="安装macOS"></a>安装macOS</h1><p>开机按<code>F12</code>键进入<code>Boot Manager</code>引导管理,选择<code>EFI USB Device</code>,回车<br><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios5.png" alt="XiaoMi-Bios5"></p>
+<p>进入<code>Clover</code>主菜单<br><img src="http://ous2s14vo.bkt.clouddn.com/bootFormInstaller.png" alt="bootFormInstaller"><br>移动光标到<code>Boot OS X Install from Install macOS High Sierra</code>回车<br>如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考<a href="https://blog.daliansky.net/clover-user-manual.html">Clover使用教程</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html#disqus_thread</comments>

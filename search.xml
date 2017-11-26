@@ -3,13 +3,13 @@
   <entry>
     <title><![CDATA[macOS安装教程兼小米Pro安装过程记录]]></title>
     <url>%2FMacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</url>
-    <content type="text"><![CDATA[引言一直以来就想写个macOS的安装教程,可惜没有TransMac以及BIOS设置的截图,正好小米PRO黑苹果高级群的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善. Windows下制作macOS安装盘准备工具 U盘大于8G U 盘大小不限做 PE 盘 TransMac 小米PRO专用EFI文件 系统镜像 在 Windows 下安装 TransMac安装完成后，右键→管理员权限运行 TransMac 利用 TransMac 制作macOS安装USB盘 打开TransMac,选择欲制作的USB盘符 右键选择Restore with Disk Image,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续 在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成. 写入完成，系统弹出将其格式化，点击取消 macOS下制作USB安装盘如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便. 准备工具 下载好的dmg镜像 用于安装macOS的USB盘,容量8GB以上 磁盘工具 制作过程 为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示 打开欲制作的dmg镜像,两种方法: 使用磁盘工具,选择File-Open Disk Image 直接通过Finder双击dmg打开 打开磁盘工具,选择SANDISK 8GB USB 点击恢复/Restore按钮,选择XiaoMiPro 10131,点击恢复/Restore它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘 镜像恢复完成后,它会显示如图所示点击完成/Done按钮后,会显示完成后的USB磁盘信息 安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里 将镜像里的EFI复制到USB安装盘的EFI分区下显示磁盘分区信息打开终端,输入命令:diskutil list,它会显示类似的信息: 1234567891011/dev/disk4 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +8.0 GB disk4 1: EFI EFI 209.7 MB disk4s1 2: Apple_HFS XiaoMiPro 10131 7.7 GB disk4s2/dev/disk5 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +7.0 GB disk5 1: EFI EFI 209.7 MB disk5s1 2: Apple_HFS XiaoMiPro 10131 6.7 GB disk5s2 这里显示的8.0 GB的磁盘设备为:disk4,也就是我们刚才制作的安装磁盘,EFI分区的设备为:disk4s1;7.0 GB的磁盘设备为:disk5,这个是我们刚才打开的磁盘镜像,它包含的EFI分区的设备为:disk5s1; 挂载EFI分区我们使用diskutil命令分别挂载这两个EFI分区,命令如下: 12345diskutil mount disk4s1 # 挂载USB的EFI分区Volume EFI on disk4s1 mounteddiskutil mount disk5s1 # 挂载安装镜像的EFI分区Volume EFI on disk5s1 mountedopen . # 在当前位置打开Finder 复制/替换EFI将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作]]></content>
+    <content type="text"><![CDATA[引言一直以来就想写个macOS的安装教程,可惜没有TransMac以及BIOS设置的截图,正好小米PRO黑苹果高级群的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善. Windows下制作macOS安装盘准备工具 U盘大于8G U 盘大小不限做 PE 盘 TransMac 小米PRO专用EFI文件 系统镜像 在 Windows 下安装 TransMac安装完成后，右键→管理员权限运行 TransMac 利用 TransMac 制作macOS安装USB盘 打开TransMac,选择欲制作的USB盘符 右键选择Restore with Disk Image,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续 在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成. 写入完成，系统弹出将其格式化，点击取消 macOS下制作USB安装盘如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便. 准备工具 下载好的dmg镜像 用于安装macOS的USB盘,容量8GB以上 磁盘工具 制作过程 为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示 打开欲制作的dmg镜像,两种方法: 使用磁盘工具,选择File-Open Disk Image 直接通过Finder双击dmg打开 打开磁盘工具,选择SANDISK 8GB USB 点击恢复/Restore按钮,选择XiaoMiPro 10131,点击恢复/Restore它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘 镜像恢复完成后,它会显示如图所示点击完成/Done按钮后,会显示完成后的USB磁盘信息 安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里 将镜像里的EFI复制到USB安装盘的EFI分区下显示磁盘分区信息打开终端,输入命令:diskutil list,它会显示类似的信息: 1234567891011/dev/disk4 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +8.0 GB disk4 1: EFI EFI 209.7 MB disk4s1 2: Apple_HFS XiaoMiPro 10131 7.7 GB disk4s2/dev/disk5 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +7.0 GB disk5 1: EFI EFI 209.7 MB disk5s1 2: Apple_HFS XiaoMiPro 10131 6.7 GB disk5s2 这里显示的8.0 GB的磁盘设备为:disk4,也就是我们刚才制作的安装磁盘,EFI分区的设备为:disk4s1;7.0 GB的磁盘设备为:disk5,这个是我们刚才打开的磁盘镜像,它包含的EFI分区的设备为:disk5s1; 挂载EFI分区我们使用diskutil命令分别挂载这两个EFI分区,命令如下: 12345diskutil mount disk4s1 # 挂载USB的EFI分区Volume EFI on disk4s1 mounteddiskutil mount disk5s1 # 挂载安装镜像的EFI分区Volume EFI on disk5s1 mountedopen . # 在当前位置打开Finder 复制/替换EFI将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作 小米BIOS设置小米笔记本的BIOS默认开启了安全认证,UEFI引导需要关闭安全启动Secure Boot Mode方式,否则无法加载UEFI引导设备,比如刚制作好的macOS安装USB盘 操作方法: 开机按F2进入BIOS设置,光标移动到Security,点击Set Supervisor Password设置一个BIOS密码,输入两次相同的密码,点击YES保存Supervisor Password由Not Installed变为Installed 关闭安全启动 点击Secure Boot Mode,设置为Disabled关闭安全启动 按F10保存设置 安装macOS开机按F12键进入Boot Manager引导管理,选择EFI USB Device,回车 进入Clover主菜单移动光标到Boot OS X Install from Install macOS High Sierra回车如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考Clover使用教程]]></content>
       <categories>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>教程</tag>
+        <tag>安装</tag>
         <tag>小米</tag>
       </tags>
   </entry>
@@ -134,9 +134,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>clover</tag>
         <tag>手册</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -414,9 +414,9 @@
         <tag>High Sierra</tag>
         <tag>下载</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
+        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
@@ -573,8 +573,8 @@
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>镜像</tag>
-        <tag>安装</tag>
         <tag>dmg</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -603,8 +603,8 @@
         <tag>High Sierra</tag>
         <tag>下载</tag>
         <tag>镜像</tag>
-        <tag>17A344b</tag>
         <tag>dmg</tag>
+        <tag>17A344b</tag>
       </tags>
   </entry>
   <entry>
