@@ -140,6 +140,30 @@ categories:
 | Intel  | [HD630 HDMI](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| ig-platform-id 0x59120000 | 15 (10.11) | — |
 | AMD  | [Radeon 290/290X](https://github.com/vit9696/AppleALC/blob/master/Resources/Controllers.plist)| | 15 (10.11) | — |
 
+# 附表:已知的编解码器型号及厂商列表
+
+|声卡型号|厂商|
+|---|---|
+|ADXXXX|           Analog Devices|
+|AGEREXXXX|        LSI|
+|ALCXXXX|          Realtek|
+|ATIXXXX|          ATI|
+|CAXXXX|           Creative|
+|CMIXXXX|          CMedia|
+|CMIXXXX2|         CMedia|
+|CSXXXX|           Cirrus Logic|
+|CXXXXX|           Conexant|
+|CHXXXX|           Chrontel|
+|LGXXXX|           LG|
+|WMXXXX|           Wolfson Microelectronics|
+|QEMUXXXX|         QEMU|
+|IDTXXXX|          IDT|
+|INTELXXXX|        Intel|
+|MOTOXXXX|         Motorola|
+|NVIDIAXXXX|       NVIDIA|
+|SIIXXXX|          Silicon Image|
+|STACXXXX|         Sigmatel|
+|VTXXXX|           VIA|
 
 # 扩展阅读：
 [Lilu支持的内核参数及插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)

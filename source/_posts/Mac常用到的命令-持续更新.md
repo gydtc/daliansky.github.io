@@ -312,7 +312,20 @@ man log | col -b > ~/Desktop/log_manual.txt
     ![HWP](http://ous2s14vo.bkt.clouddn.com/HWP.png)
     * 输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 `HWP`
     * 本文不讨论开启 `HWP` 的步骤及用法，更多的信息请参阅其它文章
-   
+ 
+ # 检查自己的显卡驱动所使用的`platform-id`
+ 打开终端,输入命令:
+ 
+ ```sh
+ ioreg -l | grep -y platform-id
+ ```
+ 显示输出信息:
+ 
+ ```ruby
+     | |   | |   "AAPL,ig-platform-id" = <00001659>
+ ```
+ 进行一次小端转换,就是:`59160000`,也就是七代核显`Intel HD Graphics 620`的显卡注入信息.
+ 
 
 ## 收工
 

@@ -1,5 +1,5 @@
 ---
-title: 黑苹果必备：Intel核显platform ID整理
+title: 黑苹果必备：Intel核显platform ID整理及smbios速查表
 urlname: Intel-core-display-platformID-finishing
 date: 2017-08-31 21:13:07
 categories:
@@ -8,15 +8,130 @@ tags:
 - platform
 - Intel
 - 核显
-- 
+- smbios
 ---
 
-# 黑苹果必备：Intel核显platform ID整理
 ## 本文的由来
 > 经常有网友进群问某某机型需要注入哪个`platform-id`才能正确地驱动显卡，每到这个时候，我都需要翻出`Clover`自带的`gma.c`查找显卡参数。于是我就想把它整理出来方便大家查询，`markdown`的表格排版对我来说是一种考验，但更像是一种折磨。还好还好，它没花费我太长的时间。
 
 -------
 
+## smbios速查表
+
+SMBIOS ID      | CPU Family   | GPUs (S = Switchable)         | Year and size
+---|---|---|---
+MacBook1,1     | Yonah        | GMA 950                       | 13" 2006
+MacBook2,1     | Merom        | GMA 950                       | 13" 2006/07"
+MacBook3,1     | Merom        | GMA X3100                     | 13" 2007
+MacBook4,1     | Penryn       | GMA X3100                     | 13" 2008
+MacBook4,2     | Penryn       | GMA X3100                     | 13" 2008
+MacBook5,1     | Penryn       | GeForce 9400M                 | 13" 2008
+MacBook5,2     | Penryn       | GeForce 9400M                 | 13" 2009
+MacBook6,1     | Penryn       | GeForce 9400M                 | 13" 2009
+MacBook7,1     | Penryn       | GeForce 320M                  | 13" 2010
+MacBook8,1     | Broadwell m  | HD 5300                       | 12" 2015
+MacBook9,1     | Skylake m    | HD 515                        | 12" 2016
+MacBook10,1    | Kaby Lake m  | HD 615                        | 12" 2017
+---|---|---|---
+MacBookAir1,1  | Merom        | GMA X3100                     | 13" 2008
+MacBookAir2,1  | Penryn       | GeForce 9400M                 | 13" 2008/09"
+MacBookAir3,1  | Penryn       | GeForce 320M                  | 11" 2010
+MacBookAir3,2  | Penryn       | GeForce 320M                  | 13" 2010
+MacBookAir4,1  | Sandy Bridge | HD 3000                       | 11" 2011
+MacBookAir4,2  | Sandy Bridge | HD 3000                       | 13" 2011
+MacBookAir5,1  | Ivy Bridge   | HD 4000                       | 11" 2012
+MacBookAir5,2  | Ivy Bridge   | HD 4000                       | 13" 2012
+MacBookAir6,1  | Haswell      | HD 5000                       | 11" 2013
+MacBookAir6,2  | Haswell      | HD 5000                       | 13" 2013
+MacBookAir7,1  | Broadwell    | HD 6000                       | 11" 2015
+MacBookAir7,2  | Broadwell    | HD 6000                       | 13" 2015
+---|---|---|---
+MacBookPro1,1  | Yonah        | Radeon X1600                  | 15" 2006
+MacBookPro1,2  | Yonah        | Radeon X1600                  | 17" 2006
+MacBookPro2,1  | Merom        | Radeon X1600                  | 15" 2006
+MacBookPro2,2  | Merom        | Radeon X1600                  | 17" 2006
+MacBookPro3,1  | Merom        | GeForce 8600M GT              | 15"/17" 2007
+MacBookPro4,1  | Penryn       | GeForce 8600MG GT             | 17" 2008
+MacBookPro5,1  | Penryn       | GeForce 9400M/9600M GT        | S, 15" 2008/09"
+MacBookPro5,2  | Penryn       | GeForce 9400M/9600M GT        | S, 17" 2009
+MacBookPro5,3  | Penryn       | GeForce 9400M/9600M GT        | S, 15" 2009
+MacBookPro5,4  | Penryn       | GeForce 9400M/9600M GT        | S, 15" 2009
+MacBookPro5,5  | Penryn       | GeForce 9400M/9600M GT        | S, 13" 2009
+MacBookPro7,1  | Penryn       | GeForce 320M                  | 13" 2010
+MacBookPro6,1  | Arrandale    | HD Graphics/GeForce GT 330M   | S, 17" 2010
+MacBookPro6,2  | Arrandale    | HD Graphics/GeForce GT 330M   | S, 15" 2010
+MacBookPro8,1  | Sandy Bridge | HD 3000                       | 13" 2011
+MacBookPro8,2  | Sandy Bridge | HD 3000/Radeon HD 6490M       | S, 15" 2011
+MacBookPro8,3  | Sandy Bridge | HD 3000/Radeon HD 6750M       | S, 17" 2011
+MacBookPro9,1  | Ivy Bridge   | HD 4000/GeForce GT 650M       | S, 15" 2012
+MacBookPro9,2  | Ivy Bridge   | HD 4000                       | 13" 2012
+MacBookPro10,1 | Ivy Bridge   | HD 4000/GeForce GT 650M       | S, 15" 2012/13"
+MacBookPro10,2 | Ivy Bridge   | HD 4000                       | 13" 2012/13"
+MacBookPro11,1 | Haswell      | Iris 5100                     | 13" 2013/14"
+MacBookPro11,2 | Haswell      | Iris Pro 5200                 | 15" 2013/14"
+MacBookPro11,3 | Haswell      | Iris Pro 5200/GeForce GT 750M | S, 15" 2013/14"
+MacBookPro11,4 | Haswell      | Iris Pro 5200                 | 15" 2015
+MacBookPro11,5 | Haswell      | Iris Pro 5200/Radeon R9 M370X | S, 15" 2015
+MacBookPro12,1 | Broadwell    | Iris 6100                     | 13" 2015
+MacBookPro13,1 | Skylake      | Iris 540                      | 13" 2016
+MacBookPro13,2 | Skylake      | Iris 550                      | 13" 2016
+MacBookPro13,3 | Skylake      | HD 530/Radeon Pro 450         | S, 15" 2016
+MacBookPro14,1 | Kaby Lake    | Iris Plus 640                 | 13" 2017
+MacBookPro14,2 | Kaby Lake    | Iris Plus 650                 | 13" 2017
+MacBookPro14,3 | Kaby Lake    | HDs 630/Radeon Pro 555        | S, 15" 2017
+---|---|---|---
+iMac4,1        | Yonah        | Radeon X1600                  | 17"/20" 2006
+iMac4,2        | Yonah        | GMA 950                       | 17" 2006
+iMac5,1        | Merom        | Radeon X1600                  | 17"/20" 2006
+iMac5,2        | Merom        | GMA 950                       | 17" 2006
+iMac6,1        | Merom        | GeForce 7300GT                | 24" 2006
+iMac7,1        | Merom        | Radeon HD 2400 XT             | 20"/24" 2007
+iMac8,1        | Penryn       | Radeon HD 2400 XT             | 20"/24" 2008
+iMac9,1        | Penryn       | GeForce 9400M                 | 20"/24" 2009
+iMac10,1       | Wolfdale     | GeForce 9400M                 | 21.5"/27" 2009
+iMac10,1       | Wolfdale     | Radeon HD 4670                | 21.5"/27" 2009
+iMac11,1       | Lynnfield    | Radeon HD 4850                | 27" 2009
+iMac11,2       | Clarkdale    | Radeon HD 4670                | 21.5" 2010
+iMac11,3       | Clarkdale    | Radeon HD 5670                | 27" 2010
+iMac12,1       | Sandy Bridge | Radeon HD 6750M               | 21.5" 2011
+iMac12,2       | Sandy Bridge | Radeon HD 6770M               | 27" 2011
+iMac13,1       | Ivy Bridge   | GeForce GT 640M               | 21.5" 2012
+iMac13,2       | Ivy Bridge   | GeForce GTX 660M              | 27" 2012
+iMac13,1       | Ivy Bridge   | HD 4000                       | 21.5" 2013
+iMac14,1       | Haswell      | Iris Pro 5200                 | 21.5" 2013
+iMac14,1       | Haswell      | GeForce GT 750M               | 21.5" 2013
+iMac14,2       | Haswell      | GeForce GT 755M               | 27" 2013
+iMac14,4       | Haswell      | HD 5000                       | 21.5" 2014
+iMac15,1       | Haswell      | Radeon R9 M290X               | 27" 2014/15"
+iMac16,1       | Broadwell    | HD 6000 or Iris Pro 6200      | 21.5" 2015
+iMac16,2       | Broadwell    | Iris Pro 6200                 | 21.5" 2015
+iMac17,1       | Skylake      | Radeon R9 M380                | 27" 2015
+iMac18,1       | Kaby Lake    | Iris Plus 640                 | 21.5" 2017
+iMac18,2       | Kaby Lake    | Radeon Pro 555                | 21.5" 2017
+iMac18,3       | Kaby Lake    | Radeon Pro 570                | 27" 2017
+---|---|---|---
+Macmini1,1     | Yonah        | GMA 950                       | 2006
+Macmini2,1     | Merom        | GMA 950                       | 2007
+Macmini3,1     | Penryn       | GeForce 9400M                 | 2009
+Macmini4,1     | Penryn       | GeForce 320M                  | 2010
+Macmini5,1     | Sandy Bridge | HD 3000                       | 2011
+Macmini5,2     | Sandy Bridge | Radeon HD 6630M               | 2011
+Macmini5,3     | Sandy Bridge | HD 3000                       | 2011
+Macmini6,1     | Ivy Bridge   | HD 4000                       | 2012
+Macmini6,2     | Ivy Bridge   | HD 4000                       | 2012
+Macmini7,1     | Haswell      | HD 5000 or Iris 5100          | 2014
+---|---|---|---
+MacPro1,1      | Woodcrest    | GeForce 7300 GT               | 2006
+MacPro2,1      | Clovertown   | GeForce 7300 GT               | 2006
+MacPro3,1      | Harpertown   | Radeon HD 2600 XT             | 2008
+MacPro4,1      | Nehalem      | GeForce GT 120                | 2009
+MacPro5,1      | Nehalem      | Radeon HD 5770                | 2010
+MacPro5,1      | Westmere     | Radeon HD 5770                | 2012
+MacPro6,1      | Ivy BridgeEP | FirePro D300                  | 2013
+---|---|---|---
+Xserve1,1      | Woodcrest    | Radeon X1300                  | 2006
+Xserve2,1      | Harpertown   | Radeon X1300                  | 2008
+Xserve3,1      | Nehalem      | GeForce GT 120                | 2009
 
 ## sandy bridge平台
 | 显卡型号 | platform-id | 机型 | 接口 | LVDS | DP | HDMI |

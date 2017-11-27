@@ -20,13 +20,15 @@ categories:
 
 * 下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:
 [网易](http://mirrors.163.com/ubuntu-releases/) [搜狐](http://mirrors.sohu.com/ubuntu-releases/) [阿里云](https://mirrors.aliyun.com/ubuntu-releases/) 
-    * 如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个[ubuntu 14.04.5LTS](https://mirrors.aliyun.com/ubuntu-releases/14.04/ubuntu-14.04.5-desktop-amd64.iso),如果想作为日后的生产力工具的话,我推荐你下载最新发布的[ubuntu 17.10](https://mirrors.aliyun.com/ubuntu-releases/17.10/ubuntu-17.10-desktop-amd64.iso)
-* 制作Ubuntu Linux安装盘 
-    * Windows下请使用工具`UltraISO`,方法略
-    * macOS下制作过程:
-        * 插入U盘,确定设备名,方法为打开磁盘工具,选择U盘,可以看到U盘下面有两个分区:`disk4s1`和`disk4s2`,那么U盘的设备名就是:`disk4`![diskutil_disk4](http://ous2s14vo.bkt.clouddn.com/diskutil_disk4.png)
 
-        * 当然最简单的方法还是直接使用命令查看:`diskutil list`,输出的信息为:
+> 如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个[ubuntu 14.04.5LTS](https://mirrors.aliyun.com/ubuntu-releases/14.04/ubuntu-14.04.5-desktop-amd64.iso),如果想作为日后的生产力工具的话,我推荐你下载最新发布的[ubuntu 17.10](https://mirrors.aliyun.com/ubuntu-releases/17.10/ubuntu-17.10-desktop-amd64.iso)
+
+#### 制作Ubuntu Linux安装盘
+* Windows下请使用工具`UltraISO`,方法略
+* macOS下制作过程:
+    * 插入U盘,确定设备名,方法为打开磁盘工具,选择U盘,可以看到U盘下面有两个分区:`disk4s1`和`disk4s2`,那么U盘的设备名就是:`disk4`![diskutil_disk4](http://ous2s14vo.bkt.clouddn.com/diskutil_disk4.png)
+    
+    * 当然最简单的方法还是直接使用命令查看:`diskutil list`,输出的信息为:
         
         ```sh
  /dev/disk4 (internal, physical):
@@ -35,16 +37,16 @@ categories:
    1:        Apple_partition_map    4.1 KB disk4s1
    2:                  Apple_HFS    2.4 MB disk4s2
         ```
-        这个`disk4`就是你要操作的设备名,后面我们会用到它
+    这个`disk4`就是你要操作的设备名,后面我们会用到它
         
-        * 卸载U盘,准备写入镜像,输入命令:
+    * 卸载U盘,准备写入镜像,输入命令:
         `diskutil umountDisk disk4` # 卸载U盘
-        * 使用`dd`命令将下载的Ubuntu Linux镜像恢复到U盘上,操作之前我有必要**提醒各位小白,万一你不小心输入错了设备名,那么你连哭的机会都没有,因为dd是按扇区直接物理写入磁盘,别到时候找不到数据了再悔不当初没有认真看到这段文字**
+    * 使用`dd`命令将下载的Ubuntu Linux镜像恢复到U盘上,操作之前我有必要**提醒各位小白,万一你不小心输入错了设备名,那么你连哭的机会都没有,因为dd是按扇区直接物理写入磁盘,别到时候找不到数据了再悔不当初没有认真看到这段文字**
         
             ```sh
             sudo dd if=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m
             ```
-            命令输入完后,请仔细认真检查下,尤其是`of=/dev/disk4`这里,再三确认后回车执行,输入用户密码后请耐心等待6-7分钟,写盘速度取决于你的U盘,镜像恢复的过程中不会有任何的文字输出,U盘写入成功后会显示下面类似的输出信息:
+        命令输入完后,请仔细认真检查下,尤其是`of=/dev/disk4`这里,再三确认后回车执行,输入用户密码后请耐心等待6-7分钟,写盘速度取决于你的U盘,镜像恢复的过程中不会有任何的文字输出,U盘写入成功后会显示下面类似的输出信息:
         
             ```sh
 ~ % diskutil umountDisk disk4
@@ -60,7 +62,8 @@ Password:
             ![dd_error](http://ous2s14vo.bkt.clouddn.com/dd_error.png)
 
             那是因为Linux的分区格式是ext,在macOS系统下无法识别才会报错,但是其实一个支持UEFI引导的Ubuntu Linux 17.10启动U盘已经制作成功了.点击`Ignore`忽略或者`Eject`退出U盘
-        * 现在您可以使用这个新制作的Ubuntu Linux安装U盘引导Linux去提取codec
+* 现在您可以使用这个新制作的Ubuntu Linux安装U盘引导Linux去提取codec
+
 ## 提取codec
 开机按引导设备快捷键`F12`或者`F8`进入引导设备选单,选择`Ubuntu Linux`所在的USB盘回车
 ![Boot_select](http://ous2s14vo.bkt.clouddn.com/Boot_select.jpg)
@@ -70,14 +73,15 @@ Password:
 ![ubuntu1](http://ous2s14vo.bkt.clouddn.com/ubuntu1.png)
 按组合键`CTRL+ALT+t`打开终端,输入以下命令:
 
-            ```sh
-cd Desktop/ # 进入用户桌面
+```sh
+cd ~/Desktop/ # 进入用户桌面
 cp /proc/asound/card0/codec#0 . # 将codec#0复制到当时位置
 sudo cp -R /sys/firmware/acpi/tables .  # 将acpi/tables目录复制到当时位置,tables目录包括了全部的DSDT和SSDT
 ls -l   # 列表
 sudo chown -R ubuntu:ubuntu *   # 将当前目录下所有文件及目录所有人修改为ubuntu
 ls -l   # 列表
-            ```
+```
+
 显示输出信息如下:
 ![ubuntu_codec_and_DSDT](http://ous2s14vo.bkt.clouddn.com/ubuntu_codec_and_DSDT.png)
 将桌面上的codec#0和tables目录复制到LINUX以外的支持写入的盘符下,Linux下面的工作已经完成,您可以继续试用或者重启/关机.
@@ -527,6 +531,9 @@ Address + Node + 71f +【f】
 01271c70 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c70 01971d10 01971eab 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02
 `
 下一步,我们就要将这些数据`放`进`AppleALC`相应的位置,让它发挥作用.
+
+## 下载`AppleALC`
+
 操作步骤:
 
 1. 创建`AppleALC`的本地仓库的克隆版本:
@@ -540,9 +547,42 @@ Address + Node + 71f +【f】
         
     * 或者通过浏览器下载 [AppleALC最新版](https://github.com/vit9696/AppleALC/archive/master.zip) 
 
-2. 打开`AppleALC`目录,进入`Resources`目录,你会发现这里面`躺`着截止到目前所支持的声卡的全部型号.我的声卡是`ALC256`,我就点击`ALC256`,如图显示:
-   ![ALC256_Resources](http://ous2s14vo.bkt.clouddn.com/ALC256_Resources.png)
-    我们会发现该目录下包括了一个定义文件`Info.plist`,三个`layout`开头的文件以及三个`Platforms`开头的文件.其中`layout13.xml.zlib` `layout28.xml.zlib` `layout56.xml.zlib`
+2. 打开`AppleALC`目录,进入`Resources`目录,你会发现这里面`躺`着截止到目前所支持的声卡的全部型号.我的声卡是`ALC256`,我就点击`ALC256`为便于理解,我将除了`ALC256`之外的其它型号的声卡目录全部删除了,它看起来如下图所示:
+![ALC_Folder](http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png)我们会发现该目录下包括了一个定义文件`Info.plist`,打开`Info.plist`,你会发现,它定义了一个声卡驱动所需要的数据,`CodecID`后面的`598`是`ALC256`的`0x256`的10进制数值,`CodecName`是声卡名称的描述,这里是`ALC256(3246)`,接下来是`Files`,它分成两部分,一部分是`Layouts`,它定义声卡设备的布局,另一部分是`Platforms`,它定义声卡的平台注入,包括有效节点和路径的定义.
+![ALC256_Info.plist](http://ous2s14vo.bkt.clouddn.com/ALC256_Info.plist.png)
+
+
+三个`layout`开头的文件以及三个`Platforms`开头的文件,`Platforms`为路径定义文件.其中`layout13.xml.zlib` `layout28.xml.zlib` `layout56.xml.zlib`就是注入的id,只是你的声卡需要注入的是哪个ID才能获得最佳效果,还需要分析其它的数据.
+
+## 如何找出适合你的id
+通过制作几十个声卡仿冒的驱动,我发现找出注入的id还是有些窍门的,比如说我可以通过`PinConfigs.kext`的`Info.plist`,将同一型号的声卡的`ConfigData`都找出来,方法:
+
+* 根据上面整理的声卡基础资料将`Address`不为`0`的排除出去
+* 剩下的`LayoutID`里,再通过`ConfigData`将有效节点的数据留下,无效的排除,这样剩下来的`LayoutID`也就没几个了
+* 最后,通过`PlatformsID`,找出有效节点及路径,最终确定注入的id
+* 需要注意的是,某些型号的声卡的注入id可以是唯一的,也可以是多个,这些都需要通过分析数据进行确认
+
+> 这里插句题外话:之前给群友做声卡仿冒的时候,`ALC269`和`ALC887`我都是直接绕路走的,或者让群友用`VoodooHDA`,或者直接拒绝.现在可以使用排除法,很快就能找到注入的id
+
+更新于:11-21-2017 22:30
+
+# 如何修改`layout`和`Platforms`数据
+> 上文中我们提到了通过`PlatformsID`,找出有效节点及路径,最终确定注入的id
+ 
+如何确认路径是否正确,我应该怎么做呢?先打开`Platforms`文件,需要用到的工具:`zlib转换器.app`.
+操作方法:
+
+* 打开`zlib转换器.app`,把需要解压缩的后缀为.zlib的文件拖进窗口里,按下`CONVERT`按钮,就会在当前的目录下生成去掉了.zlib后缀的可以编辑的.xml文件了.相应地,当你编辑好了的.xml文件,拖进窗口里,按下`CONVERT`按钮,会在当前目录下生成.zlib后缀的文件了.
+  
+  <video width="640" height="480" controls>
+  <source src="http://ous2s14vo.bkt.clouddn.com/zlib.mp4">
+  </video>
+
+使用工具`PlistEdit Pro.app`打开`Platforms56.xml`,依次打开`PathMap->0->0->0`,这里的`NodeID`就是节点id.为便于理解,我将`Mic Int`的路径做了说明,如下图显示:
+![Platforms_edit2](http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png)
+
+
+# 如何新建一个注入id
 
 
 # 编译AppleALC

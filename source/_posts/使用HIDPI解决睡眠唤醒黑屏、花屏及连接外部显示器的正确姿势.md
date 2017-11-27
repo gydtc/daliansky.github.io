@@ -65,7 +65,7 @@ sudo cp -R ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resou
 ![RDM](http://ous2s14vo.bkt.clouddn.com/RDM.png)
 其中:分辨率后边带有闪电符号的即为HIDPI高分辨率
 
-# 另一种一键开启HIDPI并注入EDID 特别感谢[冰水加劲Q](https://github.com/xzhih)提供的方法
+# 另一种一键开启HIDPI并注入EDID的方法 特别感谢[冰水加劲Q](https://github.com/xzhih)提供
 
 此一键命令可开启接近原生的HIDPI设置，不需要RDM软件即可在系统显示器设置中设置
 双击安装命令即可进入设置，可选择安装或卸载
