@@ -3,13 +3,13 @@
   <entry>
     <title><![CDATA[macOS安装教程兼小米Pro安装过程记录]]></title>
     <url>%2FMacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</url>
-    <content type="text"><![CDATA[引言一直以来就想写个macOS的安装教程,可惜没有TransMac以及BIOS设置的截图,正好小米PRO黑苹果高级群的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善. Windows下制作macOS安装盘准备工具 U盘大于8G U 盘大小不限做 PE 盘 TransMac 小米PRO专用EFI文件 系统镜像 在 Windows 下安装 TransMac安装完成后，右键→管理员权限运行 TransMac 利用 TransMac 制作macOS安装USB盘 打开TransMac,选择欲制作的USB盘符 右键选择Restore with Disk Image,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续 在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成. 写入完成，系统弹出将其格式化，点击取消 macOS下制作USB安装盘如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便. 准备工具 下载好的dmg镜像 用于安装macOS的USB盘,容量8GB以上 磁盘工具 制作过程 为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示 打开欲制作的dmg镜像,两种方法: 使用磁盘工具,选择File-Open Disk Image 直接通过Finder双击dmg打开 打开磁盘工具,选择SANDISK 8GB USB 点击恢复/Restore按钮,选择XiaoMiPro 10131,点击恢复/Restore它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘 镜像恢复完成后,它会显示如图所示点击完成/Done按钮后,会显示完成后的USB磁盘信息 安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里 将镜像里的EFI复制到USB安装盘的EFI分区下显示磁盘分区信息打开终端,输入命令:diskutil list,它会显示类似的信息: 1234567891011/dev/disk4 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +8.0 GB disk4 1: EFI EFI 209.7 MB disk4s1 2: Apple_HFS XiaoMiPro 10131 7.7 GB disk4s2/dev/disk5 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +7.0 GB disk5 1: EFI EFI 209.7 MB disk5s1 2: Apple_HFS XiaoMiPro 10131 6.7 GB disk5s2 这里显示的8.0 GB的磁盘设备为:disk4,也就是我们刚才制作的安装磁盘,EFI分区的设备为:disk4s1;7.0 GB的磁盘设备为:disk5,这个是我们刚才打开的磁盘镜像,它包含的EFI分区的设备为:disk5s1; 挂载EFI分区我们使用diskutil命令分别挂载这两个EFI分区,命令如下: 12345diskutil mount disk4s1 # 挂载USB的EFI分区Volume EFI on disk4s1 mounteddiskutil mount disk5s1 # 挂载安装镜像的EFI分区Volume EFI on disk5s1 mountedopen . # 在当前位置打开Finder 复制/替换EFI将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作 小米BIOS设置小米笔记本的BIOS默认开启了安全认证,UEFI引导需要关闭安全启动Secure Boot Mode方式,否则无法加载UEFI引导设备,比如刚制作好的macOS安装USB盘 操作方法: 开机按F2进入BIOS设置,光标移动到Security,点击Set Supervisor Password设置一个BIOS密码,输入两次相同的密码,点击YES保存Supervisor Password由Not Installed变为Installed 关闭安全启动 点击Secure Boot Mode,设置为Disabled关闭安全启动 按F10保存设置 安装macOS开机按F12键进入Boot Manager引导管理,选择EFI USB Device,回车 进入Clover主菜单移动光标到Boot OS X Install from Install macOS High Sierra回车如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考Clover使用教程 11-26-2017 19:25更新 未完待续]]></content>
+    <content type="text"><![CDATA[引言一直以来就想写个macOS的安装教程,可惜没有TransMac以及BIOS设置的截图,正好小米PRO黑苹果高级群的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善. Windows下制作macOS安装盘准备工具 U盘大于8G U 盘大小不限做 PE 盘 TransMac 小米PRO专用EFI文件 系统镜像 在 Windows 下安装 TransMac安装完成后，右键→管理员权限运行 TransMac 利用 TransMac 制作macOS安装USB盘 打开TransMac,选择欲制作的USB盘符 右键选择Restore with Disk Image,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续 在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成. 写入完成，系统弹出将其格式化，点击取消 macOS下制作USB安装盘如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便. 准备工具 下载好的dmg镜像 用于安装macOS的USB盘,容量8GB以上 磁盘工具 制作过程 为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示 打开欲制作的dmg镜像,两种方法: 使用磁盘工具,选择File-Open Disk Image 直接通过Finder双击dmg打开 打开磁盘工具,选择SANDISK 8GB USB 点击恢复/Restore按钮,选择XiaoMiPro 10131,点击恢复/Restore它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘 镜像恢复完成后,它会显示如图所示点击完成/Done按钮后,会显示完成后的USB磁盘信息 安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里 将镜像里的EFI复制到USB安装盘的EFI分区下显示磁盘分区信息打开终端,输入命令:diskutil list,它会显示类似的信息: 1234567891011/dev/disk4 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +8.0 GB disk4 1: EFI EFI 209.7 MB disk4s1 2: Apple_HFS XiaoMiPro 10131 7.7 GB disk4s2/dev/disk5 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +7.0 GB disk5 1: EFI EFI 209.7 MB disk5s1 2: Apple_HFS XiaoMiPro 10131 6.7 GB disk5s2 这里显示的8.0 GB的磁盘设备为:disk4,也就是我们刚才制作的安装磁盘,EFI分区的设备为:disk4s1;7.0 GB的磁盘设备为:disk5,这个是我们刚才打开的磁盘镜像,它包含的EFI分区的设备为:disk5s1; 挂载EFI分区我们使用diskutil命令分别挂载这两个EFI分区,命令如下: 12345diskutil mount disk4s1 # 挂载USB的EFI分区Volume EFI on disk4s1 mounteddiskutil mount disk5s1 # 挂载安装镜像的EFI分区Volume EFI on disk5s1 mountedopen . # 在当前位置打开Finder 复制/替换EFI将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作 小米BIOS设置小米笔记本的BIOS默认开启了安全认证,UEFI引导需要关闭安全启动Secure Boot Mode方式,否则无法加载UEFI引导设备,比如刚制作好的macOS安装USB盘 操作方法: 开机按F2进入BIOS设置,光标移动到Security,点击Set Supervisor Password设置一个BIOS密码,输入两次相同的密码,点击YES保存Supervisor Password由Not Installed变为Installed 关闭安全启动 点击Secure Boot Mode,设置为Disabled关闭安全启动 按F10保存设置 安装macOS开机按F12键进入Boot Manager引导管理,选择EFI USB Device,回车 进入Clover主菜单 移动光标到Boot OS X Install from XiaoMiPro 10131回车如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考Clover使用教程 11-26-2017 19:25更新 未完待续 开始引导macOS系统 这个过程需要1-2分钟,耐心等待进入安装程序,出现语言选择界面,选择简体中文 出现macOS实用工具界面,选择磁盘工具选择显示所有设备:选择SSD Media,点击抹掉按钮,选择默认的Mac OS扩展(日志型),将名称修改为Macintosh HD,点击抹掉`按钮 假设您的磁盘是空的且数据是已经备份过的,别怪我没提醒你!!!抹盘成功后,它会自动生成一个200MB的EFI分区,这样做的好处是不会出现安装过程中的由于EFI分区尺寸小于200MB而引起的无法安装的错误.当然前提是你的磁盘中没有重要的数据,或者您的数据已经提前备份过了.到这里,磁盘工具的动作就已经结束了.]]></content>
       <categories>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>安装</tag>
+        <tag>教程</tag>
         <tag>小米</tag>
       </tags>
   </entry>
@@ -77,8 +77,8 @@
     <url>%2FClover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</url>
     <content type="text"><![CDATA[教程 使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机 原生支持 AppleHDA 使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio_cloverALC-1x0 简单: .command命令, 请看 C.安装 Bash: .sh命令, 请看 D. 终端 更新列表 9-26-17 支持10.13, 支持ALC269/ALC283 支持PikeralphaALC弃用的 12-14-15 audio_pikeralpha-110 (Clover版本的Piker Aplha AppleHDA8Series.sh) 11-8-15 Skylake/100系统更新，加入ALC1150/Audio ID: 3 7-19-15 ALC283更新 6-15-15 10.11 - El Capitan Realtek ALC AppleHDA.kext 初始支持 A. 需求 macOS/Clover_v2696及以后版本 10.13/High Sierra, 关闭 SIP, 挂载 EFI 10.12/Sierra, 关闭 SIP, 挂载 EFI 10.11/El Capitan, 设置 boot flag: rootless=0 10.10/Yosemite, 设置 boot flag: kext-dev-mode=1 10.9/Mavericks 10.8/Mountain Lionon 原生的、未修改的 AppleHDA.kext Need native? 支持Realtek板载的音频编解码器 Unknown codec? B. Realtek ALCxxx (验证过的编解码器和音频ID) 支持的编解码器 (* 不支持 audio_pikeralpha-110) 885 887 888 889 892 898 1150 1220 支持的音频ID 音频ID: 1 支持 885, 887, 888, 889, 892, 898, 1150, 1220 Realtek ALC audio (默认, 1/2/3/5/6 主板音频端口) 音频ID: 2 支持 887, 888, 889, 892, 898, 1150, 1220 Realtek ALC/5.1声道 (3主板音频端口，2进/1出变成3出) 音频ID: 3 支持 887, 888, 889, 892, 898, 1150 带有Realtek ALC音频的HD3000 / HD4000 HDMI音频 C. 安装 通过 Clover 为 AppleHDA 打补丁 下载 audio_cloverALC-1x0.command 双击: audio_cloverALC-1x0.command Password: Confirm Codec ALCxxx: (885, 887, 888, 889, 892, 898, 1150, 1220 only) Clover/Legacy: answer y to Confirm Clover Legacy Install (y/n) Clover Audio ID Injection (y/n): Use Audio ID: x (y/n): Optional: Terminal/Terminal Saved Output 重启电脑 验证ALC板载音频 系统偏好设置/声音/输出/选择音频设备 D. 终端 通过 Clover 为 AppleHDA 打补丁 下载 audio_cloverALC-1x0.sh 打开终端 1./audio_cloverALC-1x0....sh 其它步骤同 C. E. 更多的信息 Details Onboard Audio Solutions Requirements - Supported/Unsupported Notes Guides Tools Problem Reporting Terminal Saved Output Clover/EFI Clover/Legacy CreditTHe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, abxite toleda https://github.com/toleda/audio_cloverALC 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起黑苹果]]></content>
       <tags>
-        <tag>Clover</tag>
         <tag>AppleHDA</tag>
+        <tag>Clover</tag>
       </tags>
   </entry>
   <entry>
@@ -91,8 +91,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -134,9 +134,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>教程</tag>
         <tag>clover</tag>
         <tag>手册</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -210,8 +210,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -262,8 +262,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -290,8 +290,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -412,8 +412,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -427,9 +427,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -471,8 +471,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -500,9 +500,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -571,8 +571,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
+        <tag>镜像</tag>
         <tag>安装</tag>
         <tag>dmg</tag>
       </tags>
@@ -601,8 +601,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
