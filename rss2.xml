@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Tue, 28 Nov 2017 01:40:51 GMT</pubDate>
+    <pubDate>Tue, 28 Nov 2017 02:50:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -100,7 +100,8 @@
 <p>继续更新</p>
 <p>安装速度取决于你的磁盘速度,第二阶段的安装已经与USB安装盘没什么关系了.macOS 10.13的安装完全区别于10.12,它不能免二次安装,甚至还需要重启多次,这些都是正常现象,请不要大惊小怪的.<br>系统安装完成后,重启进入系统设备向导,<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer3.png" alt="Installer3"><br>首先让你选择国家,这里我选择中国<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer4.png" alt="Installer4"><br>点击<code>继续</code>,设置键盘<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer5.png" alt="Installer5"><br>这里询问你<code>是否传输信息到这台Mac</code><br><img src="http://ous2s14vo.bkt.clouddn.com/Installer6.png" alt="Installer6"><br>我选择<code>现在不传输任何信息</code>,点击<code>继续</code><br><img src="http://ous2s14vo.bkt.clouddn.com/Installer7.png" alt="Installer7"><br>选择是否<code>使用您的Apple ID登录</code>,如何想现在就登录到<code>Apple ID</code>,请输入<code>Apple ID</code>和密码登录,否则选择<code>不登录</code>,进入系统后也可以设置登录到<code>iCloud</code>,点击<code>继续</code><br><img src="http://ous2s14vo.bkt.clouddn.com/Installer8.png" alt="Installer8"><br>阅读条款与条件,选择<code>同意</code>继续<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer9.png" alt="Installer9"><br>出现<code>创建电脑用户</code>的窗口,输入用户名和密码,点击<code>继续</code><br><img src="http://ous2s14vo.bkt.clouddn.com/Installer10.png" alt="Installer10"><br>系统会创建初始用户<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer11.png" alt="Installer11"><br>用户创建成功后,弹出<code>iCloud</code>的<code>正在设置用户</code>的窗口<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer12.png" alt="Installer12"><br>紧接着弹出设置<code>iClound钥匙串</code>的设置窗口,选择<code>稍候设置</code>,点击<code>继续</code><br><img src="http://ous2s14vo.bkt.clouddn.com/Installer13.png" alt="Installer13"><br>出现<code>快捷设置</code>,点击<code>继续</code><br><img src="http://ous2s14vo.bkt.clouddn.com/Installer14.png" alt="Installer14"><br>出现<code>iCloud中的所有文件</code>,如果你需要<code>将文稿和桌面上的文件储存在 iCloud Drive中</code>,请勾选,否则取消勾选,点击继续<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer16.png" alt="Installer16"><br>出现<code>FileVault磁盘加密</code>,如果你需要<code>打开 Filevault 磁盘加密</code>,请勾选,否则取消勾选,点击继续<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer17.png" alt="Installer17"><br>出现<code>正在设置您的Mac</code>,请稍候完成设置向导<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer18.png" alt="Installer18"><br>出现桌面后,整个的安装向导就完成了.<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer19.png" alt="Installer19"></p>
 <p>更新于 11-27-2017 21:15<br>未完待续</p>
-<h1 id="安装后的系统设置"><a href="#安装后的系统设置" class="headerlink" title="安装后的系统设置"></a>安装后的系统设置</h1><h2 id="教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-macOS篇"><a href="#教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-macOS篇" class="headerlink" title="教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]"></a>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]</h2><blockquote>
+<h1 id="安装后的系统设置"><a href="#安装后的系统设置" class="headerlink" title="安装后的系统设置"></a>安装后的系统设置</h1><p>系统安装后,你可以先喝杯咖啡兴奋会儿,马上还有更艰巨的任务在等着你呢</p>
+<h2 id="教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-macOS篇"><a href="#教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-macOS篇" class="headerlink" title="教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]"></a>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]</h2><blockquote>
 <p>新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让<code>diskutil</code>登场了。</p>
 </blockquote>
 <p><code>diskutil</code>命令的基本用法：</p>
@@ -194,7 +195,12 @@
 <p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区<br>打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式,将USB的EFI分区下面的EFI目录复制到安装磁盘的EFI分区下</p>
 <h3 id="合并EFI分区-1"><a href="#合并EFI分区-1" class="headerlink" title="合并EFI分区"></a>合并EFI分区</h3><p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是**</em>合并<em>**的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
 <h3 id="复制EFI分区-1"><a href="#复制EFI分区-1" class="headerlink" title="复制EFI分区"></a>复制EFI分区</h3><p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
-<h2 id="添加UEFI引导选项-未完成"><a href="#添加UEFI引导选项-未完成" class="headerlink" title="添加UEFI引导选项[未完成]"></a>添加UEFI引导选项[未完成]</h2><h2 id="完善驱动"><a href="#完善驱动" class="headerlink" title="完善驱动"></a>完善驱动</h2><p>小米Pro的专用镜像已经包括了笔记本本身的所有的驱动.由于众所周知的原因,小米板载的INTEL无线网卡是焊死在主板上的,扩展槽又无法添加WIFI无线网卡,所以选择一个外置的USB无线网卡是种无奈之举.</p>
+<h2 id="添加UEFI引导选项"><a href="#添加UEFI引导选项" class="headerlink" title="添加UEFI引导选项"></a>添加UEFI引导选项</h2><p>使用工具:BOOTICE</p>
+<h3 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程:"></a>操作过程:</h3><ol>
+<li>打开BOOTICE软件,选择<code>物理磁盘</code>,选择欲操作的目标磁盘,点击<code>分区管理</code>,弹出分区管理的窗口,点击<code>分配盘符</code>,为<code>ESP</code>分区分配一个盘符,点击确定<br><img src="http://ous2s14vo.bkt.clouddn.com/BOOTICE1.jpg" alt="BOOTICE1"></li>
+<li>选择<code>UEFI</code>,点击<code>修改启动序列</code>,点击<code>添加</code>按钮,菜单标题填写:<code>CLOVER</code>,选择<code>启动文件</code>,在打开的窗口里选择<code>ESP</code>分区下的目录<code>\EFI\CLOVER\CLOVERX64.EFI</code>,点击<code>保存当前启动项设置</code><br><img src="http://ous2s14vo.bkt.clouddn.com/BOOTICE2.jpg" alt="BOOTICE2"></li>
+</ol>
+<h2 id="完善驱动"><a href="#完善驱动" class="headerlink" title="完善驱动"></a>完善驱动</h2><p>小米Pro的专用镜像已经包括了笔记本本身的所有的驱动.由于众所周知的原因,小米板载的INTEL无线网卡是焊死在主板上的,扩展槽又无法添加WIFI无线网卡,所以选择一个外置的USB无线网卡是种无奈之举.</p>
 <h3 id="USB无线网卡及安装驱动程序"><a href="#USB无线网卡及安装驱动程序" class="headerlink" title="USB无线网卡及安装驱动程序"></a>USB无线网卡及安装驱动程序</h3><p>补充</p>
 <p>最后更新:11-28-2017 AM9:40</p>
 <h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
