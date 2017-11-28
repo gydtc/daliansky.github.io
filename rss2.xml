@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Tue, 28 Nov 2017 03:17:45 GMT</pubDate>
+    <pubDate>Tue, 28 Nov 2017 03:27:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -84,22 +84,24 @@
 </ol>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios3.png" alt="XiaoMi-Bios3"><br>点击<code>Secure Boot Mode</code>,设置为<code>Disabled</code>关闭安全启动<br><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios4.png" alt="XiaoMi-Bios4"></p>
 <ol>
-<li>按<code>F10</code>保存设置</li>
+<li><p>按<code>F10</code>保存设置</p>
+<p>​</p>
+<h1 id="安装macOS"><a href="#安装macOS" class="headerlink" title="安装macOS"></a>安装macOS</h1></li>
 </ol>
-<h1 id="安装macOS"><a href="#安装macOS" class="headerlink" title="安装macOS"></a>安装macOS</h1><p>开机按<code>F12</code>键进入<code>Boot Manager</code>引导管理,选择<code>EFI USB Device</code>,回车<img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios5.png" alt="XiaoMi-Bios5"></p>
+<p>开机按<code>F12</code>键进入<code>Boot Manager</code>引导管理,选择<code>EFI USB Device</code>,回车<img src="http://ous2s14vo.bkt.clouddn.com/XiaoMi-Bios5.png" alt="XiaoMi-Bios5"></p>
 <p>进入<code>Clover</code>主菜单<br><img src="http://ous2s14vo.bkt.clouddn.com/XiaoMiCloverboot.png" alt="XiaoMiCloverboot"></p>
 <p>移动光标到<code>Boot OS X Install from XiaoMiPro 10131</code>回车<br>如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考<a href="https://blog.daliansky.net/clover-user-manual.html">Clover使用教程</a></p>
 <p>11-26-2017 19:25更新</p>
 <p>未完待续</p>
-<h3 id="安装第一阶段"><a href="#安装第一阶段" class="headerlink" title="安装第一阶段"></a>安装第一阶段</h3><h4 id="开始引导macOS系统"><a href="#开始引导macOS系统" class="headerlink" title="开始引导macOS系统"></a>开始引导macOS系统</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture.png" alt="ParallelsPicture"></p>
+<h2 id="安装第一阶段"><a href="#安装第一阶段" class="headerlink" title="安装第一阶段"></a>安装第一阶段</h2><h3 id="开始引导macOS系统"><a href="#开始引导macOS系统" class="headerlink" title="开始引导macOS系统"></a>开始引导macOS系统</h3><p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture.png" alt="ParallelsPicture"></p>
 <p>这个过程需要1-2分钟,耐心等待进入安装程序,出现语言选择界面</p>
-<h4 id="语言选择"><a href="#语言选择" class="headerlink" title="语言选择"></a>语言选择</h4><p>选择简体中文<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture1.png" alt="ParallelsPicture1"></p>
+<h3 id="语言选择"><a href="#语言选择" class="headerlink" title="语言选择"></a>语言选择</h3><p>选择简体中文<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture1.png" alt="ParallelsPicture1"></p>
 <p>出现<code>macOS实用工具</code>界面,选择磁盘工具</p>
-<h4 id="磁盘工具"><a href="#磁盘工具" class="headerlink" title="磁盘工具"></a>磁盘工具</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture0.png" alt="ParallelsPicture0"><br>选择<code>显示所有设备</code>:<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture2.png" alt="ParallelsPicture2"><br>选择<code>SSD Media</code>,点击<code>抹掉</code>按钮,选择默认的<code>Mac OS扩展(日志型)</code>,将名称修改为<code>Macintosh HD</code>,点击<code>抹掉</code>按钮</p>
+<h3 id="磁盘工具"><a href="#磁盘工具" class="headerlink" title="磁盘工具"></a>磁盘工具</h3><p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture0.png" alt="ParallelsPicture0"><br>选择<code>显示所有设备</code>:<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture2.png" alt="ParallelsPicture2"><br>选择<code>SSD Media</code>,点击<code>抹掉</code>按钮,选择默认的<code>Mac OS扩展(日志型)</code>,将名称修改为<code>Macintosh HD</code>,点击<code>抹掉</code>按钮</p>
 <p> <strong><em>假设您的磁盘是空的且数据是已经备份过的,别怪我没提醒你!!!</em></strong></p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture6.png" alt="ParallelsPicture6"><br>抹盘成功后,它会自动生成一个200MB的EFI分区,这样做的好处是不会出现安装过程中的由于EFI分区尺寸小于200MB而引起的无法安装的错误.当然前提是你的磁盘中没有重要的数据,或者您的数据已经提前备份过了.<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture7.png" alt="ParallelsPicture7"><br>到这里,磁盘工具的动作就已经结束了.退出磁盘工具进入安装界面,进行系统的安装了.</p>
-<h4 id="安装macOS-1"><a href="#安装macOS-1" class="headerlink" title="安装macOS"></a>安装macOS</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture8.png" alt="ParallelsPicture8"><br>进入安装界面<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture11.png" alt="ParallelsPicture11"><br>选择继续<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture12.png" alt="ParallelsPicture12"><br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture13.png" alt="ParallelsPicture13"><br>点击同意,选择<code>Macintosh HD</code><br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture 14.png" alt="ParallelsPicture 14"><br>选择安装<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture 15.png" alt="ParallelsPicture 15"><br>期间,它会把USB安装盘上的安装文件预复制到要安装的系统分区里,这个过程在小米Pro的笔记本上它跑得飞快,数据复制完后,它会自动重启<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture16.png" alt="ParallelsPicture16"><br>然后进行第二阶段的安装</p>
-<h3 id="安装第二阶段"><a href="#安装第二阶段" class="headerlink" title="安装第二阶段"></a>安装第二阶段</h3><p>第二阶段的安装会有两种界面,一种是不进安装界面直接安装,另一种是先进入安装界面直接安装,需要注意的是,无论是哪一种界面下,安装的过程中全程是禁用鼠标和键盘的,需要你做的只是耐心等待它安装完成</p>
+<h3 id="安装macOS-1"><a href="#安装macOS-1" class="headerlink" title="安装macOS"></a>安装macOS</h3><p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture8.png" alt="ParallelsPicture8"><br>进入安装界面<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture11.png" alt="ParallelsPicture11"><br>选择继续<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture12.png" alt="ParallelsPicture12"><br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture13.png" alt="ParallelsPicture13"><br>点击同意,选择<code>Macintosh HD</code><br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture 14.png" alt="ParallelsPicture 14"><br>选择安装<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture 15.png" alt="ParallelsPicture 15"><br>期间,它会把USB安装盘上的安装文件预复制到要安装的系统分区里,这个过程在小米Pro的笔记本上它跑得飞快,数据复制完后,它会自动重启<br><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture16.png" alt="ParallelsPicture16"><br>然后进行第二阶段的安装</p>
+<h2 id="安装第二阶段"><a href="#安装第二阶段" class="headerlink" title="安装第二阶段"></a>安装第二阶段</h2><p>第二阶段的安装会有两种界面,一种是不进安装界面直接安装,另一种是先进入安装界面直接安装,需要注意的是,无论是哪一种界面下,安装的过程中全程是禁用鼠标和键盘的,需要你做的只是耐心等待它安装完成</p>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/ParallelsPicture 17.png" alt="ParallelsPicture 17"></p>
 <p>安装速度取决于你的磁盘速度,第二阶段的安装已经与USB安装盘没什么关系了.macOS 10.13的安装完全区别于10.12,它不能免二次安装,甚至还需要重启多次,这些都是正常现象,请不要大惊小怪的.<br>系统安装完成后,重启进入系统设置向导</p>
 <h3 id="设置向导"><a href="#设置向导" class="headerlink" title="设置向导"></a>设置向导</h3><h4 id="国家选择"><a href="#国家选择" class="headerlink" title="国家选择"></a>国家选择</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/Installer3.png" alt="Installer3"><br>首先让你选择国家,这里我选择中国<br><img src="http://ous2s14vo.bkt.clouddn.com/Installer4.png" alt="Installer4"><br>点击<code>继续</code>,设置键盘</p>
