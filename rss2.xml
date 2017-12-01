@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 01 Dec 2017 03:35:14 GMT</pubDate>
+    <pubDate>Fri, 01 Dec 2017 03:41:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -28,7 +28,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"AAPL,ig-platform-id"</span> = &lt;00001659&gt;</div></pre></td></tr></table></figure>
 <h2 id="得出显卡注入ID是-59160000"><a href="#得出显卡注入ID是-59160000" class="headerlink" title="得出显卡注入ID是:59160000"></a>得出显卡注入ID是:59160000</h2><p>读取核显驱动的加载情况,使用命令:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep -y appleintel</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (3.0.60) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (3.0.60)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (3.0.60) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (4.0.0) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (10.2.8)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (2.0.1) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (10.2.8)</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (<span class="number">3.0</span>.<span class="number">60</span>)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (<span class="number">4.0</span>.<span class="number">0</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (<span class="number">10.2</span>.<span class="number">8</span>)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (<span class="number">2.0</span>.<span class="number">1</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (<span class="number">10.2</span>.<span class="number">8</span>)</div></pre></td></tr></table></figure>
 <p>由此可以判断所使用的驱动是<code>AppleIntelKBLGraphics</code>和<code>AppleIntelKBLGraphicsFramebuffer</code>,显示器的接口数据定义在<code>AppleIntelKBLGraphicsFramebuffer</code>里,通过<code>AppleIntelKBLGraphicsFramebuffer</code>提取接口数据</p>
 <h2 id="接口数据"><a href="#接口数据" class="headerlink" title="接口数据"></a>接口数据</h2><table>
 <thead>
@@ -72,7 +72,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="显存容量修改"><a href="#显存容量修改" class="headerlink" title="显存容量修改"></a>显存容量修改</h2><p>01030303 00002002 00000000 0000 0060 0600是16进制,转换成10进制就是:1536<br>01030303 00002002 00000000 0000 0080 0800是16进制,转换成10进制就是:2048</p>
+<h2 id="显存容量修改"><a href="#显存容量修改" class="headerlink" title="显存容量修改"></a>显存容量修改</h2><p>01030303 00002002 00000000 0000 0060 <strong>0600是16进制,转换成10进制就是:1536</strong><br>01030303 00002002 00000000 0000 0080 <strong>0800是16进制,转换成10进制就是:2048</strong></p>
 <h2 id="显示器接口数值定义"><a href="#显示器接口数值定义" class="headerlink" title="显示器接口数值定义"></a>显示器接口数值定义</h2><table>
 <thead>
 <tr>
