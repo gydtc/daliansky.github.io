@@ -20,7 +20,7 @@ tags:
 <!-- more -->
 # 隐藏“允许任何来源的应用”选项问题
 > 新的系统安装好后，通常你打开一个dmg文件准备安装的时候，系统会提示你`不允许打开未知来源的应用`，这是因为从macOS Sierra开始增强了GateKeeper的安全性，所以“`允许任何来源的应用`”选项被隐藏，目的在于避免除Mac AppStore和正规签名外的未知或未签名App在系统内被任意执行，从而威胁用户隐私和系统安全。但这也造成了很多不便。
-**操作方法**：打开终端，输入命令：
+> **操作方法**：打开终端，输入命令：
 
 ```bash
 sudo spctl --master-disable
@@ -39,20 +39,20 @@ diskutil list
 ```
 /dev/disk0(internal, physical):
 
-|#:|TYPE|NAME|SIZE|IDENTIFIER|
-|---|--:|---|---|---|---|
-|0:|GUID_partition_scheme||256 GB|disk0|
-|1:|EFI|EFI|200 MB|disk0s1|
-|2:|Apple_HFS|MAC|128 GB|disk0s2|
-|3:|Microsoft Basic Data|WIN10|127.7 GB|disk0s3|
+| #:   |                  TYPE | NAME  | SIZE     | IDENTIFIER |
+| ---- | --------------------: | ----- | -------- | ---------- |
+| 0:   | GUID_partition_scheme |       | 256 GB   | disk0      |
+| 1:   |                   EFI | EFI   | 200 MB   | disk0s1    |
+| 2:   |             Apple_HFS | MAC   | 128 GB   | disk0s2    |
+| 3:   |  Microsoft Basic Data | WIN10 | 127.7 GB | disk0s3    |
 
 /dev/disk1(internal, physical):
 
-|#:|TYPE|NAME|SIZE|IDENTIFIER|
-|---|--:|---|---|---|---|
-|0:|GUID_partition_scheme||16 GB|disk1|
-|1:|EFI|EFI|200 MB|disk1s1|
-|2:|Apple_HFS|Install macOS Sierra|15.8 GB|disk1s2|
+| #:   |                  TYPE | NAME                 | SIZE    | IDENTIFIER |
+| ---- | --------------------: | -------------------- | ------- | ---------- |
+| 0:   | GUID_partition_scheme |                      | 16 GB   | disk1      |
+| 1:   |                   EFI | EFI                  | 200 MB  | disk1s1    |
+| 2:   |             Apple_HFS | Install macOS Sierra | 15.8 GB | disk1s2    |
 
 ## 挂载磁盘EFI分区
 ```bash
@@ -84,23 +84,23 @@ diskutil list
 ```
 /dev/disk0(internal, physical):
 
-|#:|TYPE|NAME|SIZE|IDENTIFIER|
-|---|--:|:--|---|---|---|
-|0:|GUID_partition_scheme||512 GB|disk0|
-|1:|EFI|EFI|200 MB|disk0s1|
-|2:|Apple_HFS|MAC|128 GB|disk0s2|
-|...|...|...|...|...|
-|10:|Apple_APFS|Container disk1|29.2 GB|disk0s10|
+| #:   |                  TYPE | NAME            | SIZE    | IDENTIFIER |
+| ---- | --------------------: | :-------------- | ------- | ---------- |
+| 0:   | GUID_partition_scheme |                 | 512 GB  | disk0      |
+| 1:   |                   EFI | EFI             | 200 MB  | disk0s1    |
+| 2:   |             Apple_HFS | MAC             | 128 GB  | disk0s2    |
+| ...  |                   ... | ...             | ...     | ...        |
+| 10:  |            Apple_APFS | Container disk1 | 29.2 GB | disk0s10   |
 
 /dev/disk1 (synthesized):
 
-|#:|TYPE|NAME|SIZE|IDENTIFIER|
-|---|--:|:--|---|---|---|
-|0:|APFS Container Scheme|-<br>Physical Store disk0s5|+29.2 GB|disk1|
-|1:| APFS Volume|test|9.8 GB|disk1s1|
-|2:| APFS Volume|Preboot|20.6 MB|disk1s2|
-|3:| APFS Volume|Recovery|519.6 MB|disk1s3|
-|4:| APFS Volume|VM|1.1 GB|disk1s4|
+| #:   |                  TYPE | NAME                        | SIZE     | IDENTIFIER |
+| ---- | --------------------: | :-------------------------- | -------- | ---------- |
+| 0:   | APFS Container Scheme | -<br>Physical Store disk0s5 | +29.2 GB | disk1      |
+| 1:   |           APFS Volume | test                        | 9.8 GB   | disk1s1    |
+| 2:   |           APFS Volume | Preboot                     | 20.6 MB  | disk1s2    |
+| 3:   |           APFS Volume | Recovery                    | 519.6 MB | disk1s3    |
+| 4:   |           APFS Volume | VM                          | 1.1 GB   | disk1s4    |
 
 查看`apfs`分区表
 
@@ -236,13 +236,13 @@ diskutil list
 ```
 /dev/disk0(internal, physical):
 
-|#:|TYPE|NAME|SIZE|IDENTIFIER|
-|---|--:|:--|---|---|---|
-|0:|GUID_partition_scheme||512 GB|disk0|
-|1:|EFI|EFI|200 MB|disk0s1|
-|2:|Apple_HFS|MAC|128 GB|disk0s2|
-|...|...|...|...|...|
-|8:|Apple_HFS|test|29.1 GB|disk0s10|
+| #:   |                  TYPE | NAME | SIZE    | IDENTIFIER |
+| ---- | --------------------: | :--- | ------- | ---------- |
+| 0:   | GUID_partition_scheme |      | 512 GB  | disk0      |
+| 1:   |                   EFI | EFI  | 200 MB  | disk0s1    |
+| 2:   |             Apple_HFS | MAC  | 128 GB  | disk0s2    |
+| ...  |                   ... | ...  | ...     | ...        |
+| 8:   |             Apple_HFS | test | 29.1 GB | disk0s10   |
 可以看到test的分区格式已经变回`hfs+`了。
 
 本教程结束，更多的命令用法请使用命令：`man diskutil`
@@ -303,29 +303,29 @@ man log | col -b > ~/Desktop/log_manual.txt
 * 用到的工具： `freqVectorsEdit.sh`
 * 用法：
     * 打开终端，复制下面命令：
-    
+
     `cd /tmp && curl -s https://raw.githubusercontent.com/Piker-Alpha/freqVectorsEdit.sh/master/freqVectorsEdit.sh > /tmp/freqVectorsEdit.sh && chmod +x freqVectorsEdit.sh && /tmp/freqVectorsEdit.sh && sudo rm -rf /tmp/freqVectorsEdit.sh && sudo rm -rf /tmp/Mac-*.bin`
-    
+
     * **注意上面的命令为一条，须全部复制**
     * 系统会使用 `curl` 自动下载一个程序，保存到 `/tmp` ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；
     * 屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 `绿色` 显示的那三行前面括号里的机型为可选机型，带 `HWP` 字样的为可以开启 `HWPEnable`
-    ![HWP](http://ous2s14vo.bkt.clouddn.com/HWP.png)
+      ![HWP](http://ous2s14vo.bkt.clouddn.com/HWP.png)
     * 输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 `HWP`
     * 本文不讨论开启 `HWP` 的步骤及用法，更多的信息请参阅其它文章
- 
+
  # 检查自己的显卡驱动所使用的`platform-id`
  打开终端,输入命令:
- 
+
  ```sh
  ioreg -l | grep -y platform-id
  ```
  显示输出信息:
- 
+
  ```ruby
      | |   | |   "AAPL,ig-platform-id" = <00001659>
  ```
  进行一次小端转换,就是:`59160000`,也就是七代核显`Intel HD Graphics 620`的显卡注入信息.
- 
+
 
 ## 收工
 
