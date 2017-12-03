@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
+    
+    <lastmod>2017-12-03T12:36:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
     
     <lastmod>2017-12-03T02:28:30.000Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
     
     <lastmod>2017-11-20T03:13:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
-    
-    <lastmod>2017-11-13T15:28:51.000Z</lastmod>
     
   </url>
   
