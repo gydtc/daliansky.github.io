@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 07 Dec 2017 02:39:06 GMT</pubDate>
+    <pubDate>Thu, 07 Dec 2017 06:30:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -23,10 +23,8 @@
       </description>
       
       <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-2-17C88-正式版-with-Clover-4333原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-2-17C88-正式版-with-Clover-4333原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像</h1><ul>
-<li><p>本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;</p>
-</li>
-<li><p>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</p>
-</li>
+<li>本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;</li>
+<li>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</li>
 <li><p>Clover</p>
 <ul>
 <li>支持UHD620/UHD630等八代核显</li>
@@ -37,12 +35,14 @@
 <li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
 </ul>
 </li>
-<li><p>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡，支持Intel网卡；<br><em>已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；
-</em>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！<br>*本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></p>
-</li>
+<li>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡，支持Intel网卡；</li>
+<li>已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
+<li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
+<li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></li>
 </ul>
 <h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_17C88.png" alt="10.13.2_17C88"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_HD620.png" alt="10.13.2_HD620"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_Battery.png" alt="10.13.2_Battery"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_BlueTooth.png" alt="10.13.2_BlueTooth"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_Memory.png" alt="10.13.2_Memory"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_USB.png" alt="10.13.2_USB"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_RTL8111.png" alt="10.13.2_RTL8111"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_Wi-Fi.png" alt="10.13.2_Wi-Fi"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2_Configs.png" alt="10.13.2_Configs"><br><img src="http://ous2s14vo.bkt.clouddn.com/10.13.2.png" alt="10.13.2"></p>
-<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>[百度云]镜像上传中……<br>Mega网盘下载链接:<a href="https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ" target="_blank" rel="external">https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ</a></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接:<a href="https://pan.baidu.com/s/1i5hBZDV" target="_blank" rel="external">https://pan.baidu.com/s/1i5hBZDV</a></p>
+<p>Mega网盘下载链接:<a href="https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ" target="_blank" rel="external">https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
