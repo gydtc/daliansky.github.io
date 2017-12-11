@@ -92,7 +92,8 @@ MatchOS:    10.13
 
 ## 解决安装时提示 `OSInstall.mpkg似乎已缺失或已损坏` 的问题
 ### 解决方法：
-删除 `/EFI/CLOVER/drivers64UEFI/EmuVariableUefi-64.efi` 和 `/EFI/` 分区根目录下的 `nvram.plist`
+#### 删除 `/EFI/CLOVER/drivers64UEFI/EmuVariableUefi-64.efi` 和 `/EFI/` 分区根目录下的 `nvram.plist`
+#### 修改`SMBIOS`,使用`Clover Configurator`将机型设置为2012年及以后机型
 
 ## 解决10.13 NVIDIA安装Web Driver黑屏问题
 ### 解决方法：

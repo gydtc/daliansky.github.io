@@ -528,7 +528,7 @@ Address + Node + 71f +【f】
 * 最终的`ConfigData`数据:
 
 `
-01271c70 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c70 01971d10 01971eab 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02
+01271c20 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c10 01971d10 01971e8b 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02
 `
 下一步,我们就要将这些数据`放`进`AppleALC`相应的位置,让它发挥作用.
 
@@ -640,7 +640,7 @@ ioreg -l | grep layout-id
 去除底噪
 ## 声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办
 如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.
-所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出[VoodooHDA](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10)万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没`AppleALC`啥事儿了吧.这里可以借助`VoodooHDA`自带的应用程序:[getdump](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump),使用方法:打开终端,输入命令:
+所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出[VoodooHDA](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10)万能声卡驱动程序[下载链接](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/VoodooHDA_2.9.0_Clover-V11.dmg)了,说它万能是不正确的,如果它万能了估计就没`AppleALC`啥事儿了吧.这里可以借助`VoodooHDA`自带的应用程序:[getdump](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump),使用方法:打开终端,输入命令:
 
 ```sh
 sudo cp ~/Downloads/getdump /usr/local/bin  # 将getdump命令复制到/usr/local/bin目录下

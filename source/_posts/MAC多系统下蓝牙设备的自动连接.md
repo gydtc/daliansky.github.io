@@ -27,9 +27,11 @@ sudo -s     # 切换到root用户
 ```
 复制文件[10.13到10.13]：
 `cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences`
+`cp /private/var/root/Library/Preferences/com.apple.bluetoothd.plist /Volumes/test/private/var/root/Library/Preferences`
 
 复制文件[10.13到10.12]
 `cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist`
+`cp /private/var/root/Library/Preferences/com.apple.bluetoothd.plist /Volumes/test/private/var/root/Library/Preferences`
 
 这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。
 

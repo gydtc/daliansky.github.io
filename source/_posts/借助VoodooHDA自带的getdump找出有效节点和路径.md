@@ -14,7 +14,7 @@ categories:
 # 借助VoodooHDA自带的getdump找出有效节点和路径
 声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办
 如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.
-所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出[VoodooHDA](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10)万能声卡驱动程序了,说它万能是不正确的,如果它万能了估计就没`AppleALC`啥事儿了吧.这里可以借助`VoodooHDA`自带的应用程序:[getdump](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump),使用方法:打开终端,输入命令:
+所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出[VoodooHDA](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10)万能声卡驱动程序[下载链接](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/VoodooHDA_2.9.0_Clover-V11.dmg)了,说它万能是不正确的,如果它万能了估计就没`AppleALC`啥事儿了吧.这里可以借助`VoodooHDA`自带的应用程序:[getdump](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump),使用方法:打开终端,输入命令:
 
 ```sh
 getdump > ~/Desktop/voodoo_dump.txt
