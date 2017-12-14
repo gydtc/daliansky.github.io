@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="教程   使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机 原生支持 AppleHDA  使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio_">
+<meta name="description" content="教程   使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机  原生支持 AppleHDA  使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio">
 <meta name="keywords" content="Clover,AppleHDA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用CloverALC给AppleHDA打补丁，适用于台式机">
 <meta property="og:url" content="http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="教程   使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机 原生支持 AppleHDA  使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio_">
+<meta property="og:description" content="教程   使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机  原生支持 AppleHDA  使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/sound.jpg">
 <meta property="og:updated_time" content="2017-11-07T13:41:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用CloverALC给AppleHDA打补丁，适用于台式机">
-<meta name="twitter:description" content="教程   使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机 原生支持 AppleHDA  使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio_">
+<meta name="twitter:description" content="教程   使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机  原生支持 AppleHDA  使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio">
 <meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/sound.jpg">
 
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  678 字
+                  677 字
                 </span>
               
 
@@ -429,7 +429,8 @@
 <li>教程</li>
 </ul>
 <p><img src="http://ous2s14vo.bkt.clouddn.com/sound.jpg" alt="sound"></p>
-<h1 id="使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机"><a href="#使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机" class="headerlink" title="使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机"></a><strong>使用 <code>CloverALC</code> 给 <code>AppleHDA</code> 打补丁， 适用于台式机</strong></h1><blockquote>
+<h1><strong>使用 <code>CloverALC</code> 给 <code>AppleHDA</code> 打补丁， 适用于台式机</strong></h1>
+<blockquote>
 <p><em>原生支持 <code>AppleHDA</code></em></p>
 </blockquote>
 <p>使用 <code>Clover</code> 为Realtek ALC芯片打补丁，这种方法可以启用macOS <code>AppleHDA</code> 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 <code>AppleHDA.kext</code> 。</p>
@@ -440,51 +441,60 @@
 </ol>
 <p><strong>更新列表</strong></p>
 <ul>
-<li>9-26-17<ul>
+<li>9-26-17
+<ul>
 <li>支持10.13, 支持ALC269/ALC283</li>
 <li>支持PikeralphaALC弃用的</li>
 </ul>
 </li>
-<li>12-14-15<ul>
+<li>12-14-15
+<ul>
 <li>audio_pikeralpha-110 (Clover版本的Piker Aplha AppleHDA8Series.sh)</li>
 </ul>
 </li>
-<li>11-8-15<ul>
+<li>11-8-15
+<ul>
 <li>Skylake/100系统更新，加入ALC1150/Audio ID: 3</li>
 </ul>
 </li>
-<li>7-19-15<ul>
-<li>ALC283更新 </li>
+<li>7-19-15
+<ul>
+<li>ALC283更新</li>
 </ul>
 </li>
-<li>6-15-15<ul>
+<li>6-15-15
+<ul>
 <li>10.11 - El Capitan Realtek ALC AppleHDA.kext 初始支持</li>
 </ul>
 </li>
 </ul>
 <p><strong>A. 需求</strong></p>
 <ol>
-<li>macOS/Clover_v2696及以后版本<ol>
+<li>macOS/Clover_v2696及以后版本
+<ol>
 <li>10.13/High Sierra, 关闭 SIP, 挂载 EFI</li>
 <li>10.12/Sierra, 关闭 SIP, 挂载 EFI</li>
-<li>10.11/El Capitan, 设置 boot flag: <code>rootless=0</code> </li>
+<li>10.11/El Capitan, 设置 boot flag: <code>rootless=0</code></li>
 <li>10.10/Yosemite, 设置 boot flag: <code>kext-dev-mode=1</code></li>
 <li>10.9/Mavericks</li>
 <li>10.8/Mountain Lionon</li>
 </ol>
 </li>
-<li>原生的、未修改的 <code>AppleHDA.kext</code><ol>
+<li>原生的、未修改的 <code>AppleHDA.kext</code>
+<ol>
 <li><a href="https://github.com/toleda/audio_ALC_guides/blob/master/Restore%20native%20AppleHDA%20%5BGuide%5D.pdf" target="_blank" rel="external">Need native?</a></li>
 </ol>
 </li>
-<li>支持Realtek板载的音频编解码器<ol>
+<li>支持Realtek板载的音频编解码器
+<ol>
 <li><a href="https://github.com/toleda/audio_ALC_guides/blob/master/Identify%20Audio%20Codec%20%5BGuide%5D.pdf" target="_blank" rel="external">Unknown codec?</a></li>
 </ol>
 </li>
 </ol>
 <p><strong>B. Realtek ALCxxx</strong> (验证过的编解码器和音频ID)</p>
 <ol>
-<li><p>支持的编解码器 (* 不支持 audio_pikeralpha-110)</p>
+<li>
+<p>支持的编解码器 (* 不支持 audio_pikeralpha-110)</p>
 <ol>
 <li>885</li>
 <li>887</li>
@@ -496,21 +506,25 @@
 <li>1220</li>
 </ol>
 </li>
-<li><p>支持的音频ID</p>
+<li>
+<p>支持的音频ID</p>
 <ul>
-<li><p>音频ID: <strong>1</strong> </p>
+<li>
+<p>音频ID: <strong>1</strong></p>
 <ul>
 <li>支持 885, 887, 888, 889, 892, 898, 1150, 1220</li>
 <li>Realtek ALC audio (默认, 1/2/3/5/6 主板音频端口)</li>
 </ul>
 </li>
-<li><p>音频ID: <strong>2</strong></p>
+<li>
+<p>音频ID: <strong>2</strong></p>
 <ul>
 <li>支持 887, 888, 889, 892, 898, 1150, 1220</li>
 <li>Realtek ALC/5.1声道 (3主板音频端口，2进/1出变成3出)</li>
 </ul>
 </li>
-<li><p>音频ID: <strong>3</strong></p>
+<li>
+<p>音频ID: <strong>3</strong></p>
 <ul>
 <li>支持 887, 888, 889, 892, 898, 1150</li>
 <li>带有Realtek ALC音频的HD3000 / HD4000 HDMI音频</li>
@@ -521,7 +535,8 @@
 </ol>
 <p><strong>C. 安装</strong></p>
 <ol>
-<li>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁<ol>
+<li>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁
+<ol>
 <li><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a> <code>audio_cloverALC-1x0.command</code></li>
 <li>双击: <code>audio_cloverALC-1x0.command</code></li>
 <li>Password:</li>
@@ -533,27 +548,34 @@
 </ol>
 </li>
 <li>重启电脑</li>
-<li>验证ALC板载音频<ol>
+<li>验证ALC板载音频
+<ol>
 <li>系统偏好设置/声音/输出/选择音频设备</li>
 </ol>
 </li>
 </ol>
 <p><strong>D. 终端</strong></p>
 <ol>
-<li><p>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁</p>
+<li>
+<p>通过 <code>Clover</code> 为 <code>AppleHDA</code> 打补丁</p>
 <ol>
-<li><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a>   <code>audio_cloverALC-1x0.sh</code></li>
-<li><p>打开终端</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./audio_cloverALC-1x0....sh</div></pre></td></tr></table></figure>
+<li>
+<p><a href="https://github.com/toleda/audio_CloverALC" target="_blank" rel="external">下载</a>   <code>audio_cloverALC-1x0.sh</code></p>
 </li>
-<li><p>其它步骤同 <code>C.</code></p>
+<li>
+<p>打开终端</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./audio_cloverALC-1x0....sh</div></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>其它步骤同 <code>C.</code></p>
 </li>
 </ol>
 </li>
 </ol>
 <p><strong>E. 更多的信息</strong></p>
 <ol>
-<li><a href="https://github.com/toleda/audio_RealtekALC/blob/master/DETAILS.md" target="_blank" rel="external">Details</a><ol>
+<li><a href="https://github.com/toleda/audio_RealtekALC/blob/master/DETAILS.md" target="_blank" rel="external">Details</a>
+<ol>
 <li>Onboard Audio Solutions</li>
 <li>Requirements - Supported/Unsupported</li>
 <li>Notes</li>
@@ -562,16 +584,21 @@
 <li>Problem Reporting</li>
 </ol>
 </li>
-<li>Terminal Saved Output<ol>
+<li>Terminal Saved Output
+<ol>
 <li><a href="https://github.com/toleda/audio_CloverALC/blob/master/Terminal%20Saved%20Output_v1.0.4-efi.txt" target="_blank" rel="external">Clover/EFI</a></li>
 <li><a href="https://github.com/toleda/audio_CloverALC/blob/master/Terminal%20Saved%20Output_v1.0.4-leg.txt" target="_blank" rel="external">Clover/Legacy</a></li>
 </ol>
 </li>
 </ol>
-<p><strong>Credit</strong><br>THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, <a href="http://applelife.ru/threads/patchim-applehda-s-pomoschju-zagruzchika.39406/#post-353647" target="_blank" rel="external">abxite</a></p>
-<p>toleda <a href="https://github.com/toleda/audio_cloverALC" target="_blank" rel="external">https://github.com/toleda/audio_cloverALC</a></p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
+<p><strong>Credit</strong>
+THe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, <a href="http://applelife.ru/threads/patchim-applehda-s-pomoschju-zagruzchika.39406/#post-353647" target="_blank" rel="external">abxite</a></p>
+<p>toleda https://github.com/toleda/audio_cloverALC</p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -808,7 +835,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-CloverALC-给-AppleHDA-打补丁，-适用于台式机"><span class="nav-number">1.</span> <span class="nav-text">使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
