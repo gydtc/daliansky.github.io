@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/AppleALC-Supported-codecs.html</loc>
+    
+    <lastmod>2017-12-17T14:54:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
     
     <lastmod>2017-12-17T00:12:05.000Z</lastmod>
@@ -159,13 +166,6 @@
     <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
     
     <lastmod>2017-12-16T13:10:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/AppleALC-Supported-codecs.html</loc>
-    
-    <lastmod>2017-12-16T13:10:48.000Z</lastmod>
     
   </url>
   
