@@ -106,11 +106,12 @@
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/pinconfigs.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC298_ID99_ALC295_ID13.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ioreg_pinconfigurations.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALCPlugFix_ALC256.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path1.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/path2.png">
-<meta property="og:updated_time" content="2017-12-16T13:04:00.000Z">
+<meta property="og:updated_time" content="2017-12-17T00:12:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用AppleALC声卡仿冒驱动AppleHDA的正确姿势">
 <meta name="twitter:description" content="大纲,写作中前言经常给网友仿冒声卡驱动, 一直都没有将过程写下来,鉴于每天会有许多人问如何仿冒声卡,就想将过程记录下来,供大家参考学习 提取codec通过linux提取codec制作Ubuntu Linux启动U盘: 下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:网易 搜狐 阿里云    如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个ubunt">
@@ -368,8 +369,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-16T21:04:00+08:00">
-                2017-12-16
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-17T08:12:05+08:00">
+                2017-12-17
               </time>
             
           </span>
@@ -430,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  9,957 字
+                  10,333 字
                 </span>
               
 
@@ -446,7 +447,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  42 分钟
+                  43 分钟
                 </span>
               
             </div>
@@ -892,7 +893,12 @@
 </li>
 </ul>
 <p>使用工具<code>PlistEdit Pro.app</code>打开<code>Platforms56.xml</code>,依次打开<code>PathMap-&gt;0-&gt;0-&gt;0</code>,这里的<code>NodeID</code>就是节点id.为便于理解,我将<code>Mic Int</code>的路径做了说明,如下图显示:<br><img src="http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png" alt="Platforms_edit2"></p>
-<h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
+<h1 id="如何新建一个注入id"><a href="#如何新建一个注入id" class="headerlink" title="如何新建一个注入id"></a>如何新建一个注入id</h1><p>为什么要建立一个全新的layout-id呢?很多时候,我们其实仿冒声卡驱动,只是为了让自己的声卡驱动正常,而通常的做法是找出一个存在的ID,然后整理数据,修改路径和<code>ConfigData</code>,最后编译使用.</p>
+<p>那如果<code>AppleALC</code>的维护者<code>vit9696</code>更新了源代码怎么办呢?你总不能再重复做一遍驱动吧?或者说你好不容易找人帮你做好了一个驱动程序,然后<code>AppleALc</code>就升级了,旧的驱动无法用到新的系统当中,这个时候你的选择是什么?继续找人帮你做驱动?或者自己动手仿冒?</p>
+<p>其实最好的方法是:如果你的声卡不存在于<a href="https://blog.daliansky.net/AppleALC-Supported-codecs.html">AppleALC支持的Codecs列表</a>中,或者其中的某个注入id并不会很好地工作,那么你就需要新建一个注入id编译使用,测试无误后,你甚至还可以将这些修改提交给<code>vit9696</code>,他会将这些更新合并到<code>AppleALC</code>的源代码中,这样以后再有更新你只需要下载个<code>AppleALC</code>的发行版直接使用就好了.<br><img src="http://ous2s14vo.bkt.clouddn.com/ALC298_ID99_ALC295_ID13.png" alt="ALC298_ID99_ALC295_ID13"></p>
+<p>上图中,是我给小米Pro制作的全新的ALC298注入ID:99,只要是小米Pro的机型,可以直接注入id:99来驱动你的声卡.</p>
+<p>如果你想制作属于你的专属声卡注入ID,可添加文章最后的QQ群,进入群内一起讨论.</p>
+<h1 id="编译AppleALC"><a href="#编译AppleALC" class="headerlink" title="编译AppleALC"></a>编译AppleALC</h1><p>使用xcode<br>通过lilu联合编译</p>
 <h1 id="注入id"><a href="#注入id" class="headerlink" title="注入id"></a>注入id</h1><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="检查AppleALC是否正确加载"><a href="#检查AppleALC是否正确加载" class="headerlink" title="检查AppleALC是否正确加载"></a>检查<code>AppleALC</code>是否正确加载</h2><p>打开终端,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep AppleALC</div></pre></td></tr></table></figure>
 <p>显示内容如下:</p>
