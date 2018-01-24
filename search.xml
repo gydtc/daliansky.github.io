@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.3 17D47 正式版 with Clover 4391原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像 本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3Drv-64.efi 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 支持UHD620/UHD630等八代核显 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理 Clover默认配置文件config.plist为620/630/640/650； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.2)、AppleALC(1.2.2)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接: Mega网盘下载链接: 如果mega无法下载,请进群下载hosts_mega.txt MD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像 本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3Drv-64.efi 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 支持UHD620/UHD630等八代核显 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理 Clover默认配置文件config.plist为620/630/640/650； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.2)、AppleALC(1.2.2)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接: Mega网盘下载链接:https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo 如果mega无法下载,请进群下载hosts_mega.txt MD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -57,8 +57,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>platform-id</tag>
         <tag>接口</tag>
+        <tag>platform-id</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -134,8 +134,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>AppleHDA</tag>
         <tag>声卡仿冒</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -229,8 +229,8 @@
       </categories>
       <tags>
         <tag>EFI</tag>
-        <tag>Clover</tag>
         <tag>UEFI</tag>
+        <tag>Clover</tag>
         <tag>引导</tag>
       </tags>
   </entry>
@@ -371,8 +371,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>CPUFriend</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>CPU变频</tag>
         <tag>插件</tag>
@@ -404,9 +404,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>Lilu</tag>
         <tag>AppleALC</tag>
         <tag>Codec</tag>
-        <tag>Lilu</tag>
       </tags>
   </entry>
   <entry>
@@ -438,11 +438,11 @@
       </categories>
       <tags>
         <tag>Lilu</tag>
+        <tag>Plugins</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
         <tag>platform-id</tag>
