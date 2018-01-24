@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.3 17D47 正式版 with Clover 4391原版镜像]]></title>
+    <url>%2FmacOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html</url>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像 本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3Drv-64.efi 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 支持UHD620/UHD630等八代核显 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理 Clover默认配置文件config.plist为620/630/640/650； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.2)、AppleALC(1.2.2)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接: Mega网盘下载链接: 如果mega无法下载,请进群下载hosts_mega.txt MD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+      <categories>
+        <category>下载</category>
+        <category>镜像</category>
+      </categories>
+      <tags>
+        <tag>High Sierra</tag>
+        <tag>镜像</tag>
+        <tag>下载</tag>
+        <tag>dmg</tag>
+        <tag>10.13.2</tag>
+        <tag>17C88</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]]]></title>
+    <url>%2FFresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html</url>
+    <content type="text"><![CDATA[【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译] 这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装macOS有更多的步骤，也更难以为初学者工作，所以我尽可能地简化了这个过程，并尽可能使本指南更容易理解。 如果你有一个基于Intel的系统，请参阅： macOS安装教程兼小米Pro安装过程记录，因为本指南仅适用于Ryzen。 使用这个Ryzen High Sierra指南的基本步骤，以下设备工作正常： 声卡 以太网络 所有USB端口 USB3速度 Nvidia GPU AMD GPU 睡眠唤醒 Ryzen High Sierra Hackintosh概述稍微额外的努力，Ryzen可以在黑客行业工作，虽然它不会像英特尔的机器那样流畅，但是这是Mac的基础。 本指南基于Clover方法，并使用在Ryzen兼容性安装期间应用的定制Ryzen内核。 与英特尔的机器相比，安装的时间还要长得多。 您只需要一个备用闪存驱动器，硬盘驱动器以及能够运行虚拟机来完成此操作的Mac或Windows / Linux计算机。 我已经包含一个EFI文件夹以及执行安装所需的PreInstall＆PostInstall文件夹。 安装完成后，声音应该工作我使用VoodooHDA.kext驱动程序，USB 2/3端口工作正常，使用USBInjectAll.kext /GenericUSBXHCI.kext，而对于以太网我包含了所有的可能的驱动文件，我可以想到Ryzen主板使用的，所以安装完成后也要工作。 使用本指南中包含的步骤和文件，我可以同时获得AMD RX和Nvidia GTX显卡的功能。 使用Ryzen CPU会出现一些图形化的性能下降。更新的AMD显卡的性能下降了10-15%，而对于Nvidia来说，性能下降了50%，fps下降了50%。 睡眠也适用于我是否插入了AMD或Nvidia显卡。在Ryzen + Nvidia上使用睡眠工具已经导致其他人重新启动问题，而不是正常唤醒，但似乎从High Sierra 10.13开始已经解决。包括10.13.1 build (17B1003)和10.13.2 (Beta)，因为我没有遇到这个问题与我的GTX 1050钛使用本指南中包含的文件。 Ryzen hackintosh的一个重要问题是无法安装macOS更新。 例如，当我尝试时，我无法运行更新安装程序从10.13.1到10.13.2。 例如，当苹果有macOS的根问题时，小的更新可以工作10.13.1我能够更新到更新的版本10.13.1。 但是要升级到 10.13.2，我唯一的选择就是在应用商店下载更新后的版本，然后创建另一个USB安装程序，重新安装High Sierra。 这个和更慢的图形性能，特别是在我看来与Nvidia显卡配对时，是使用Ryzen黑金刚的最不方便的部分。 如果你还没有购买你的电脑零件，并计划使用macOS作为你的主要操作系统，我建议与英特尔一起，只为了更平滑的体验，但如果你已经有一台像我这样的Ryzen PC，让我们开始吧… Part 1 - 创建一个Ryzen安装程序要创建Ryzen hackintosh，您需要创建一个备用的8GB +闪存驱动器来安装High Sierra安装程序。 另外需要一个mac或没有Mac的人，你需要创建一个运行macOS的虚拟机 这是一个书面指南，但是如果你喜欢视频教程请参阅XLNC**创建的视频 1. 创建一个High Sierra USB安装程序学习如何做到如下： 如何创建MacOS系统安装U盘 2. Ryzen内核设置现在我们手中已经有了High Sierra的安装程序，我们需要将其配置为更友好的方式，方法是放入修改好的内核Bronya @ InsanelyMac和由XLNC创建的PreInstall/PostInstall的脚本。 2.1 文件夹可见性AMD内核文件被添加到默认情况下在macOS上隐藏的文件夹，所以让我们取消隐藏这些文件夹： 打开终端 输入以下两行命令： 12defaults write com.apple.Finder AppleShowAllFiles truekillall Finder ​ 屏幕输出如下： 打开你在步骤1中所做的闪存驱动器Install macOS High Sierra你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群] 688324116一起黑苹果]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>High Sierra</tag>
+        <tag>教程</tag>
+        <tag>AMD</tag>
+        <tag>Ryzen</tag>
+        <tag>安装指南</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html</url>
     <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像 本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装; 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; Clover 支持UHD620/UHD630等八代核显 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理 Clover默认配置文件config.plist为620/630/640/650； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 支持BCM94352z无线网卡，支持Realtek8111系列网卡，支持Intel网卡； 已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接:https://pan.baidu.com/s/1i5hBZDV Mega网盘下载链接:https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ 如果mega无法下载,请进群下载hosts_mega.txt MD5 (macOS High Sierra 10.13.2(17C88) Installer with Clover 4333.dmg) = 7a05f3e9ccaf81a4e8d2f5e558a075ae 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
@@ -10,8 +42,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -39,8 +71,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>安装</tag>
+        <tag>教程</tag>
         <tag>macOS</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
@@ -102,8 +134,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>AppleHDA</tag>
         <tag>声卡仿冒</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -125,8 +157,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -244,8 +276,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -296,8 +328,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -324,8 +356,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -446,8 +478,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -461,9 +493,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -505,10 +537,10 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>镜像</tag>
         <tag>下载</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -534,9 +566,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -605,8 +637,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>10.12.6</tag>
         <tag>镜像</tag>
+        <tag>10.12.6</tag>
         <tag>安装</tag>
         <tag>dmg</tag>
       </tags>
@@ -635,8 +667,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
