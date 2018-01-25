@@ -81,28 +81,21 @@
 
 
 
-<meta name="description" content="小米笔记本Pro安装10.13随手记 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器   安装中遇到的几个难点：无法进入安装界面，需要屏蔽独显卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两">
+<meta name="description" content="小米笔记本Pro安装10.13随手记  帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器  ![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png) 安装中遇到的几个难点： 无法进入安装界面，需要屏蔽独显 卡在Service onl">
 <meta name="keywords" content="EFI,小米Pro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小米笔记本Pro安装10.13随手记及EFI分享">
 <meta property="og:url" content="http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="小米笔记本Pro安装10.13随手记 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器   安装中遇到的几个难点：无法进入安装界面，需要屏蔽独显卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两">
+<meta property="og:description" content="小米笔记本Pro安装10.13随手记  帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器  ![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png) 安装中遇到的几个难点： 无法进入安装界面，需要屏蔽独显 卡在Service onl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png">
-<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC298for小米Pro声卡驱动安装.png">
+<meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC298for%E5%B0%8F%E7%B1%B3Pro%E5%A3%B0%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85.png">
 <meta property="og:image" content="http://ous2s14vo.bkt.clouddn.com/ALC298_LINEIN.png">
-<meta property="og:updated_time" content="2017-12-16T13:11:40.000Z">
+<meta property="og:updated_time" content="2018-01-25T12:06:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小米笔记本Pro安装10.13随手记及EFI分享">
-<meta name="twitter:description" content="小米笔记本Pro安装10.13随手记 帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器   安装中遇到的几个难点：无法进入安装界面，需要屏蔽独显卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两">
-<meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png">
+<meta name="twitter:description" content="小米笔记本Pro安装10.13随手记  帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器  ![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png) 安装中遇到的几个难点： 无法进入安装界面，需要屏蔽独显 卡在Service onl">
+<meta name="twitter:image" content="http://ous2s14vo.bkt.clouddn.com/ALC298for%E5%B0%8F%E7%B1%B3Pro%E5%A3%B0%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85.png">
 
 
 
@@ -356,8 +349,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-16T21:11:40+08:00">
-                2017-12-16
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-25T20:06:22+08:00">
+                2018-01-25
               </time>
             
           </span>
@@ -418,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,223 字
+                  1,557 字
                 </span>
               
 
@@ -434,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  6 分钟
                 </span>
               
             </div>
@@ -455,43 +448,71 @@
       
 
       
-        <h1 id="小米笔记本Pro安装10-13随手记"><a href="#小米笔记本Pro安装10-13随手记" class="headerlink" title="小米笔记本Pro安装10.13随手记"></a>小米笔记本Pro安装10.13随手记</h1><blockquote>
+        <h1>小米笔记本Pro安装10.13随手记</h1>
+<blockquote>
 <p>帮朋友订购的小米Pro笔记本，配置是i5-8250/8GB/256GB，15.6寸显示器</p>
 </blockquote>
-<p><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png" alt="屏幕快照 2017-09-22 下午6.22.58"></p>
-<h2 id="安装中遇到的几个难点："><a href="#安装中遇到的几个难点：" class="headerlink" title="安装中遇到的几个难点："></a>安装中遇到的几个难点：</h2><h3 id="无法进入安装界面，需要屏蔽独显"><a href="#无法进入安装界面，需要屏蔽独显" class="headerlink" title="无法进入安装界面，需要屏蔽独显"></a>无法进入安装界面，需要屏蔽独显</h3><p>卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。</p>
-<h3 id="Clover无法识别苹果分区卷标"><a href="#Clover无法识别苹果分区卷标" class="headerlink" title="Clover无法识别苹果分区卷标"></a>Clover无法识别苹果分区卷标</h3><p>显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】<br>要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。<br>重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。</p>
-<h3 id="安装驱动程序"><a href="#安装驱动程序" class="headerlink" title="安装驱动程序"></a>安装驱动程序</h3><p>进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！<br>于是乎，找出USB的无线网卡，安装驱动，联网成功；<br>显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡；<br>声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。</p>
-<h3 id="one-more-thing"><a href="#one-more-thing" class="headerlink" title="one more thing:"></a>one more thing:</h3><p><strong><em> 触控板开机正常，功能单一；睡眠唤醒后支持多手势 </em></strong><br>收工喽！！！<br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png" alt="屏幕快照 2017-09-22 下午6.20.24"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png" alt="屏幕快照 2017-09-22 下午6.20.50"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png" alt="屏幕快照 2017-09-22 下午6.20.46"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png" alt="屏幕快照 2017-09-22 下午6.16.57"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png" alt="屏幕快照 2017-09-22 下午6.21.07"><br><img src="http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png" alt="屏幕快照 2017-09-22 下午6.21.16"></p>
-<h2 id="更新日期："><a href="#更新日期：" class="headerlink" title="更新日期："></a>更新日期：</h2><ul>
-<li>10-14-2017<ul>
+<p>![屏幕快照 2017-09-22 下午6.22.58](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.22.58.png)</p>
+<h2>安装中遇到的几个难点：</h2>
+<h3>无法进入安装界面，需要屏蔽独显</h3>
+<p>卡在Service only ran for 0 seconds. Pushing respawn out by 10 second，这是由于没有屏蔽独显而加载显卡驱动造成的，于是又开始爬帖子学习如何禁用独显，经过两个小时的研究，总算是把独显给屏蔽了。感觉自己是不是年龄大了，变得越来越笨了呢。</p>
+<h3>Clover无法识别苹果分区卷标</h3>
+<p>显卡的问题解决了，终于进入安装界面了，10.13可以直接识别出NVME的磁盘而不需要任何的补丁，这点超赞。打开磁盘工具，直接把小米预装的Windows 10儿童版给干掉了，然后分了三个区，一个8GB的安装分区，省去制作安装U盘的麻烦，一个MAC，另一个WINDOWS，这么做的好处是直接会生成一个200MB的EFI分区。【这里插句题外话：我自从学习黑苹果以来，很少使用Windows工具，无论是调整分区还是恢复镜像，能在苹果环境下做的绝不进Windows】
+要说NVME的速度真不是盖的，10.13的第一阶段的安装也就10几秒就自动进入重启了，要知道这个过程中可是复制了5GB的数据呢。
+重启后发现个奇怪的问题：无论是安装分区还是MAC分区的卷标就是无法显示，于是停下来开始检查Drivers64UEFI目录下是否包含APFS及HFS驱动，发现这些驱动都躺在那儿，而且正常的情况下还没进第二阶段，磁盘的分区还没有自动转换成APFS。于是又不得不停下来开始继续爬帖，发现小米13.3的EFI，提取驱动及hotpatch做修正后CLOVER可以显示安装分区和MAC分区的卷标了，顺利进入第二阶段完成安装。</p>
+<h3>安装驱动程序</h3>
+<p>进入新安装的系统，发现面临的工作还是不少的：网卡没有驱动，显卡没有驱动，声卡没有驱动，那系统怎么用呀？！
+于是乎，找出USB的无线网卡，安装驱动，联网成功；
+显卡是UHD620，platform-id是:59170000，折腾了好久总是没驱动好，于是乎就先仿冒吧，使用0x19160000可以顺利驱动显卡；
+声卡通过linux提取codec，发现是ALC298，298的layoutid只有3、13、28、72这几个，于是直接编译个AppleALC，通过Clover注入总是无法发声，通过ioreg检查发现layoutid一直为3,于是又折回去检查hotpatch，发现有声卡的注入id，小刀一飞直接把它删除了。重启了三遍，发现id为28时可以正确发声。</p>
+<h3>one more thing:</h3>
+<p>*** 触控板开机正常，功能单一；睡眠唤醒后支持多手势 ***
+收工喽！！！
+![屏幕快照 2017-09-22 下午6.20.24](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.24.png)
+![屏幕快照 2017-09-22 下午6.20.50](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.50.png)
+![屏幕快照 2017-09-22 下午6.20.46](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.20.46.png)
+![屏幕快照 2017-09-22 下午6.16.57](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.16.57.png)
+![屏幕快照 2017-09-22 下午6.21.07](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.07.png)
+![屏幕快照 2017-09-22 下午6.21.16](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-22 下午6.21.16.png)</p>
+<h2>更新日期：</h2>
+<ul>
+<li>
+<p>10-14-2017</p>
+<ul>
 <li>EFI更新，触摸板工作正常</li>
 </ul>
 </li>
-<li>10-17-2017<ul>
+<li>
+<p>10-17-2017</p>
+<ul>
 <li>EFI更新，修正显卡驱动</li>
 <li>增加HDMI Audio声音输出</li>
-<li>驱动更新：<ul>
-<li>Lilu v1.2.0 </li>
+<li>驱动更新：
+<ul>
+<li>Lilu v1.2.0</li>
 <li>AppleALC v1.2.1</li>
 <li>IntelGraphicsDVMTFixup v1.2.0</li>
 <li>AirportBrcmFixup v1.1.0</li>
 </ul>
 </li>
-<li>驱动修复：<ul>
-<li>IntelGraphicsFixup v1.2.0 </li>
+<li>驱动修复：
+<ul>
+<li>IntelGraphicsFixup v1.2.0</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>10-18-2017<ul>
+<li>
+<p>10-18-2017</p>
+<ul>
 <li>经测试显卡驱动不如第一版的好，现将显卡驱动恢复为仿冒0x19160000</li>
 <li>ACPI修复</li>
 <li>驱动程序修正</li>
 <li>去掉USBInjectAll采用SSDT-UIAL.aml内建USB设备</li>
 </ul>
 </li>
-<li><p>10-19-2017</p>
+<li>
+<p>10-19-2017</p>
 <ul>
 <li>显卡驱动正常</li>
 <li>触摸板开机正常，睡眠唤醒后多手势使用正常</li>
@@ -499,35 +520,67 @@
 <li>电池信息正常</li>
 </ul>
 </li>
-<li><p>10-31-2017</p>
+<li>
+<p>10-31-2017</p>
 <ul>
 <li>更新声卡驱动，修复耳机问题</li>
 <li>新驱动增加layoutid：13</li>
-<li>支持四节点，支持耳麦自由切换，Mic/LineIn工作正常<br><img src="http://ous2s14vo.bkt.clouddn.com/ALC298for小米Pro声卡驱动安装.png" alt="ALC298for小米Pro声卡驱动安装"><br><img src="http://ous2s14vo.bkt.clouddn.com/ALC298_LINEIN.png" alt="ALC298_LINEIN"></li>
+<li>支持四节点，支持耳麦自由切换，Mic/LineIn工作正常
+<img src="http://ous2s14vo.bkt.clouddn.com/ALC298for%E5%B0%8F%E7%B1%B3Pro%E5%A3%B0%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85.png" alt="ALC298for小米Pro声卡驱动安装">
+<img src="http://ous2s14vo.bkt.clouddn.com/ALC298_LINEIN.png" alt="ALC298_LINEIN"></li>
 </ul>
 </li>
-<li>11-2-2017<ul>
+<li>
+<p>11-2-2017</p>
+<ul>
 <li>Lilu v1.2.0更新，支持10.13.2Beta</li>
 <li>AppleALC更新，使用最新修正版Lilu联合编译，解决10.13.1更新后无法驱动的问题</li>
 </ul>
 </li>
-<li>11-5-2017<ul>
+<li>
+<p>11-5-2017</p>
+<ul>
 <li>整合 <code>AppleALC_ALC298_id13_id28.kext</code> 驱动到EFI</li>
 <li>EFI目录下添加ALCPlugFix目录，请安装完成后进入ALCPlugFix目录，双击 <code>install双击自动安装.command</code> 安装耳机插入状态修正守护程序</li>
 <li>修正Drivers64UEFI，解决无法安装问题</li>
 <li>更新apfs.efi到10.13.1版本</li>
 </ul>
 </li>
-<li>11-7-2017<ul>
+<li>
+<p>11-7-2017</p>
+<ul>
 <li>Lilu v1.2.1目前还不稳定，存在无法进入系统的风险，所以降级到v1.2.0版本</li>
 <li>AppleALC降级到V1.2.0</li>
 </ul>
 </li>
 </ul>
-<p><strong>EFI暂不支持macOS 10.13.2Beta版本的安装，Lilu不抽风后会持续更新</strong>    </p>
-<h2 id="EFI更新源"><a href="#EFI更新源" class="headerlink" title="EFI更新源"></a>EFI更新源</h2><p><a href="https://github.com/daliansky/XiaoMi-Pro" target="_blank" rel="external">https://github.com/daliansky/XiaoMi-Pro</a></p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<p><strong>EFI暂不支持macOS 10.13.2Beta版本的安装，Lilu不抽风后会持续更新</strong></p>
+<ul>
+<li>
+<p>1-25-2018</p>
+<ul>
+<li>支持10.13.x安装使用</li>
+<li>更新<code>VoodooI2C</code>到2.0.1版本，支持多手势，触摸板开机可正常使用，不漂移，无需唤醒</li>
+<li>修复电量百分比不刷新的问题</li>
+<li>修复声卡睡眠唤醒无声音的问题</li>
+<li>修复屏幕亮度无法保存的问题</li>
+<li>更新<code>Lilu</code> v1.2.2</li>
+<li>更新<code>AppleALC</code> v1.2.2 支持小米Pro，注入ID:99</li>
+<li>更新<code>IntelGraphicsFixup</code> v1.2.3</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<h2>EFI更新源</h2>
+<p><a href="https://github.com/daliansky/XiaoMi-Pro" target="_blank" rel="external">https://github.com/daliansky/XiaoMi-Pro</a></p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>247451054 <a href="http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e" target="_blank" rel="external">小米PRO黑苹果高级群</a>
+331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
+688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
+257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 
       
     </div>
@@ -764,7 +817,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小米笔记本Pro安装10-13随手记"><span class="nav-number">1.</span> <span class="nav-text">小米笔记本Pro安装10.13随手记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装中遇到的几个难点："><span class="nav-number">1.1.</span> <span class="nav-text">安装中遇到的几个难点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无法进入安装界面，需要屏蔽独显"><span class="nav-number">1.1.1.</span> <span class="nav-text">无法进入安装界面，需要屏蔽独显</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Clover无法识别苹果分区卷标"><span class="nav-number">1.1.2.</span> <span class="nav-text">Clover无法识别苹果分区卷标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装驱动程序"><span class="nav-number">1.1.3.</span> <span class="nav-text">安装驱动程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#one-more-thing"><span class="nav-number">1.1.4.</span> <span class="nav-text">one more thing:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新日期："><span class="nav-number">1.2.</span> <span class="nav-text">更新日期：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFI更新源"><span class="nav-number">1.3.</span> <span class="nav-text">EFI更新源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">小米笔记本Pro安装10.13随手记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">安装中遇到的几个难点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.1.</span> <span class="nav-text">无法进入安装界面，需要屏蔽独显</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.2.</span> <span class="nav-text">Clover无法识别苹果分区卷标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.3.</span> <span class="nav-text">安装驱动程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.4.</span> <span class="nav-text">one more thing:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">更新日期：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">EFI更新源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
