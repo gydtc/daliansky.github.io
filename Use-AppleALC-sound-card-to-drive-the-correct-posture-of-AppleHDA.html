@@ -113,7 +113,7 @@
 <meta property="og:image" content="http://7.daliansky.net/ALCPlugFix_ALC256.png">
 <meta property="og:image" content="http://7.daliansky.net/path1.png">
 <meta property="og:image" content="http://7.daliansky.net/path2.png">
-<meta property="og:updated_time" content="2018-01-26T05:44:00.000Z">
+<meta property="og:updated_time" content="2018-02-13T02:31:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用AppleALC声卡仿冒驱动AppleHDA的正确姿势">
 <meta name="twitter:description" content="大纲,写作中前言经常给网友仿冒声卡驱动, 一直都没有将过程写下来,鉴于每天会有许多人问如何仿冒声卡,就想将过程记录下来,供大家参考学习 提取codec通过linux提取codec制作Ubuntu Linux启动U盘: 下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:网易 搜狐 阿里云    如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个ubunt">
@@ -371,8 +371,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-26T13:44:00+08:00">
-                2018-01-26
+              <time title="更新于" itemprop="dateModified" datetime="2018-02-13T10:31:38+08:00">
+                2018-02-13
               </time>
             
           </span>
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  11,367 字
+                  11,365 字
                 </span>
               
 
@@ -1252,8 +1252,13 @@
 </li>
 </ul>
 </li>
+<li><p>如何使用</p>
+<ul>
+<li>打开终端,输入命令,直接执行.例如:<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">verbit.sh codec<span class="comment">#0 &gt; codec_dump.txt    # 有效节点格式化</span></div><div class="line">codecgraph codec<span class="comment">#0    # 自动生成pathmap图,文件位于codec#0相同目录下</span></div><div class="line">hda-verb 0x19 0x707 0x20    <span class="comment"># 耳机睡眠唤醒无声修正</span></div><div class="line">widget_dump.sh  <span class="comment"># 读取SET_PIN_WIDGET_CONTROL数值</span></div></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">* 如何使用</div><div class="line">    * 打开终端,输入命令,直接执行.例如:</div><div class="line"></div><div class="line">    ```sh </div><div class="line">    verbit.sh codec#0 &gt; codec_dump.txt    # 有效节点格式化</div><div class="line">    codecgraph codec#0    # 自动生成pathmap图,文件位于codec#0相同目录下</div><div class="line">    hda-verb 0x19 0x707 0x20    # 耳机睡眠唤醒无声修正</div><div class="line">    widget_dump.sh  # 读取SET_PIN_WIDGET_CONTROL数值</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
 <h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]</p>
 <p>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>

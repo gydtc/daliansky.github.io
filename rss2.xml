@@ -96,12 +96,226 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.Finder AppleShowAllFiles true</div><div class="line">killall Finder</div></pre></td></tr></table></figure>
 <p>​    屏幕输出如下：<br><img src="http://7.daliansky.net/Xnip2018-01-23_16-12-00.jpg" alt="Xnip2018-01-23_16-12-00"></p>
 <ol>
-<li>打开你在步骤1中所做的闪存驱动器<strong>Install macOS High Sierra</strong>你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。</li>
+<li><strong>重新启动</strong> macOS，以便在编辑默认值后显示隐藏的文件。</li>
+<li>打开你在步骤1中所做的闪存驱动器<strong>Install macOS High Sierra</strong>你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。<br>  <img src="http://7.daliansky.net/Xnip2018-01-23_16-40-02.jpg" alt="Xnip2018-01-23_16-40-02"><pre><code>注意文件夹`.IABootFiles`和`System` ，这是你将要添加东西的目录。
+</code></pre></li>
 </ol>
+<h5 id="2-2-添加AMD修补的内核"><a href="#2-2-添加AMD修补的内核" class="headerlink" title="2.2 添加AMD修补的内核"></a>2.2 添加AMD修补的内核</h5><p>现在我们要开始将粘贴文件从可下载的文件夹复制到USB闪存驱动器</p>
+<ol>
+<li>下载<a href="https://mega.nz/#!U89kjQJQ!7gsIIySHfxpsv43YrM8Dp_5mw_Gi6qjzliO1yH01hIg" target="_blank" rel="external">Ryzen_Kernel_10.13.zip</a></li>
+<li>解压<code>Ryzen_Kernel_10.13</code></li>
+<li>进入<code>Ryzen_Kernel_10.13/PreInstall/Prelinkedkernel/</code>目录</li>
+<li>复制<code>prelinkedkernel</code> （<em>注意：是文件而不是文件夹</em>）</li>
+<li>我们将使用<code>prelinkedkernel</code>的补丁版本来替换安装<code>macOS High Sierra</code>上现有的Apple版本。 在以下位置粘贴并替换<code>prelinkedkernel</code><ol>
+<li><strong>/Volumes/Install macOS High Sierra/.IABootFiles/</strong></li>
+<li><strong>/Volumes/Install macOS High Sierra/System/Library/PrelinkedKernels/</strong></li>
+</ol>
+</li>
+<li>导航回Ryzen_Kernel_10.13文件夹</li>
+<li>复制PreInstall和PostInstall文件夹</li>
+<li>将它们粘贴到闪存驱动器<code>/Volumes/Install macOS High Sierra/</code></li>
+</ol>
+<h4 id="第3步。EFI分区配置"><a href="#第3步。EFI分区配置" class="headerlink" title="第3步。EFI分区配置"></a>第3步。EFI分区配置</h4><p>现在，必须通过添加预配置的EFI文件夹来配置闪存驱动器的启动分区。</p>
+<ol>
+<li><strong>装载EFI分区：</strong><ol>
+<li>下载<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://mackie100projects.altervista.org/download-clover-configurator/&amp;usg=ALkJrhhbSCnKKZ2-Wdfn59Q5lXNkwKRoAw" target="_blank" rel="external">Clover配置器</a></li>
+<li>打开<strong>三叶草配置程序</strong></li>
+<li>在工具下选择<strong>装载EFI</strong></li>
+<li>单击<strong>安装分区</strong>以安装macOS …。</li>
+<li>点击<strong>打开分区</strong></li>
+</ol>
+</li>
+<li>如果在挂载的分区中存在，则选择名为<strong>EFI</strong>的文件夹。</li>
+<li>下载<strong>Ryzen_High_Sierra_10.13_EFI.zip</strong></li>
+<li><strong>解压</strong> <strong>Ryzen_High_Sierra_10.13_EFI.zip</strong></li>
+<li><strong>复制</strong>解压缩的<strong>EFI</strong>文件夹</li>
+<li>将复制的<strong>EFI</strong>粘贴到已装入的EFI分区或<strong>/卷/ EFI中</strong></li>
+</ol>
+<h3 id="第2部分-在Ryzen上安装High-Sierra"><a href="#第2部分-在Ryzen上安装High-Sierra" class="headerlink" title="第2部分 - 在Ryzen上安装High Sierra"></a>第2部分 - 在Ryzen上安装High Sierra</h3><p>在Ryzen上安装High Sierra相对于兼容的英特尔机器来说更难执行，主要是因为需要时间加载各个部件，而且由于需要耐心处理失败的靴子，您可能经常遇到这个着名的屏幕：</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/12/hqdefault.jpg" alt="img"></p>
+<p>不用担心，只需重新启动系统，然后重试。 在启动Ryzen hackintosh的时候，斜线的圆/失败的启动图标也可能会出现，然后安装后，虽然它应该比安装发生的频率低。 如果你睡觉了，而不是把它关掉，那么这个问题不应该是一个大问题，这对AMD和Nvidia显卡都适用。</p>
+<h4 id="步骤1-BIOS设置"><a href="#步骤1-BIOS设置" class="headerlink" title="步骤1. BIOS设置"></a>步骤1. BIOS设置</h4><p>现在USB安装程序已经完成了，现在可以配置BIOS以兼容macOS。</p>
+<ol>
+<li>重新启动机器并进入BIOS，热键将为F8，F10，F11或F12</li>
+<li>转过“退出”部分并将BIOS设置重置为“默认”</li>
+<li>我建议将闪存驱动器的UEFI：分区设置为在Boot的引导部分下找不到的Boot＃1</li>
+<li>设置以下BIOS设置：（您可能没有所有这些设置，这没关系）<ol>
+<li>AMD-V / SVM =禁用（可以重新启用后<br>如果需要安装）</li>
+<li>SATA端口= AHCI</li>
+<li>IOMMU =禁用</li>
+<li>APU =禁用</li>
+<li>HPET =启用</li>
+<li>EHCI Hands-off =已启用</li>
+<li>XHCI Hands-off =已启用</li>
+<li>串行端口=禁用</li>
+<li>并行端口=禁用</li>
+</ol>
+</li>
+</ol>
+<h4 id="第2步。启动USB安装程序"><a href="#第2步。启动USB安装程序" class="headerlink" title="第2步。启动USB安装程序"></a>第2步。启动USB安装程序</h4><p>启动到MacOS USB闪存驱动器安装程序的UEFI以加载Clover启动菜单。</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/1.-Boot-OS-X-Install.jpg" alt="img">如果USB驱动器没有设置为默认启动音量，则在启动屏幕出现时更改临时启动设备，需要按下的按钮通常为F10，F11或F12。 出现临时选择屏幕时选择UEFI :( USB设备名称）。</p>
+<ol>
+<li>你现在在三叶草菜单。 使用箭头键验证<strong>Boot OS X安装从安装</strong>选择<strong>macOS High Sierra</strong></li>
+<li>按<strong>Enter键</strong></li>
+<li><em>安装程序现在将缓慢加载…如果您得到香烟十字标志而不是下面的图像，只需重新启动并再次尝试。</em> <em>当我通过安装程序的步骤时，发生了几次这样的事情，只是再次尝试让我解决这个问题。</em> **</li>
+</ol>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/Boot-Progress-Bar.jpg" alt="img"></p>
+<p>当安装程序加载时，我们希望在开始安装之前将磁盘格式化为适合黑客可用性的GUID。</p>
+<ol>
+<li><p>安装程序出现时按<strong>继续</strong></p>
+</li>
+<li><p>选择你的语言</p>
+</li>
+<li><p>从安装菜单中选择<strong>磁盘工具</strong></p>
+</li>
+<li><p>按下左上角左上角的查看按钮，从下拉菜单中选择<strong>显示所有设备</strong> 。 （注意： <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://hackintosher.com/blog/get-nvme-m-2-ssds-show-high-sierra-hackintosh-install/&amp;usg=ALkJrhhKFyGyZOKxRVJOIAdhalwOH9Vlzw" target="_blank" rel="external">NVME驱动器不显示？</a> ）</p>
+</li>
+<li><p>选择要安装macOS的磁盘，并使用以下设置删除它：</p>
+<ul>
+<li>名称:(可以任意命名）</li>
+<li>格式： <strong>Mac OS扩展（日志式）</strong></li>
+<li>Scheme： <strong>GUID分区映射</strong></li>
+</ul>
+<p>​</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/GUID-High-Sierra-1024x683.jpg" alt="img">记住为AMD内核选择的驱动器名称和禁用APFS转换非常重要。</p>
+</li>
+<li><p>按<strong>擦除</strong></p>
+</li>
+<li><p>关闭<strong>磁盘工具</strong></p>
+</li>
+<li><p><strong>安装macOS High Sierra</strong></p>
+</li>
+</ol>
+<p>注意：在安装macOS时，屏幕可能会变黑，显示屏正在睡眠，您可以按住键盘上的某个键或摇动鼠标来唤醒屏幕</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Disk-Install-1024x683.jpg" alt="img"></p>
+<p>安装程序完成后，计算机将重新启动，您将希望返回到Clover菜单。 </p>
+<h4 id="步骤3-AMD-PreInstall内核执行"><a href="#步骤3-AMD-PreInstall内核执行" class="headerlink" title="步骤3. AMD PreInstall内核执行"></a>步骤3. AMD PreInstall内核执行</h4><p>Clover现在有了第二个选项，但是在我们做这个之前，我们必须先做AMD内核的预安装部分</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/2.-Boot-OS-X-Terminal.png" alt="img"></p>
+<ol>
+<li><p>选择<strong>引导OS X从安装macOS高山</strong>再次<strong>安装</strong></p>
+</li>
+<li><p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
+</li>
+<li><p><strong>（可选） 禁用终端的APFS</strong></p>
+</li>
+<li><p>如果您忘记了您的驱动器名称，请键入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -1 /Volumes</div></pre></td></tr></table></figure>
+<p><em><code>ls -1 /Volumes</code>将列出可用卷。</em> <em>我们需要在步骤4.2中为下面一行设置的驱动器的名称</em></p>
+</li>
+<li><p>在**终端中输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PreInstall/pre</div></pre></td></tr></table></figure>
+</li>
+<li><p>按<strong>Enter键</strong></p>
+</li>
+<li><p><strong>卷名称：</strong>是您格式化时命名的驱动器。 所以输入并按回车。</p>
+</li>
+<li><p><strong>让它运行…</strong></p>
+</li>
+<li><p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+</li>
+</ol>
+<h4 id="第4步-完成安装程序"><a href="#第4步-完成安装程序" class="headerlink" title="第4步 完成安装程序"></a>第4步 完成安装程序</h4><p><img src="http://hackintosher.com/wp-content/uploads/2017/10/3.-Boot-macOS-Install.png" alt="img"></p>
+<ol>
+<li>在重新启动时重新进入Clover菜单</li>
+<li><strong>从“Hackintosh”</strong>选择<strong>启动macOS安装</strong></li>
+<li><em>安装程序将完成High Sierra安装…如果您在灰色屏幕重新启动，并再次尝试，直到它加载底部图像成功。</em> <em>另外这部分花了我很长时间才完成，我被困在“约18分钟”，等了约10分钟。</em></li>
+</ol>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Hackintosh-Loading-1024x683.jpg" alt="img">检查出<a href="http://hackintosher.com/guides/high-sierra-fix-macos-not-installed-computer/" target="_blank" rel="external">High Sierra fix - “macOS无法安装在您的计算机上”，</a>如果你得到一个重新启动错误提示，而不是这张照片。</p>
+<h4 id="步骤5-AMD-Post安装内核执行"><a href="#步骤5-AMD-Post安装内核执行" class="headerlink" title="步骤5. AMD Post安装内核执行"></a>步骤5. AMD Post安装内核执行</h4><ol>
+<li><p>选择<strong>Boot OS X Install from Install macOS High Sierra</strong>再次<strong>进行安装</strong></p>
+</li>
+<li><p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
+</li>
+<li><p>在<strong>终端中</strong>键入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PostInstall/kernel_kext_install_only</div></pre></td></tr></table></figure>
+</li>
+<li><p>按<strong>Enter键</strong></p>
+</li>
+<li><p>输入<strong>卷名称的</strong>驱动器<strong>名称：</strong></p>
+</li>
+<li><p><strong>让它运行…</strong></p>
+</li>
+<li><p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+</li>
+</ol>
+<h4 id="第6步。Ryzen最终安装和第一次启动"><a href="#第6步。Ryzen最终安装和第一次启动" class="headerlink" title="第6步。Ryzen最终安装和第一次启动"></a>第6步。Ryzen最终安装和第一次启动</h4><p>安装完成后电脑会自动重启。</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/4.-Boot-macOS-High-Sierra.png" alt="img"></p>
+<ol>
+<li><strong>从“Hackintosh”中</strong>选择<strong>Boot macOS</strong></li>
+<li>选择<strong>语言</strong></li>
+<li>选择<strong>键盘</strong></li>
+<li>选择<strong>我的电脑没有连接到互联网</strong></li>
+<li>选择<strong>不传输任何信息</strong></li>
+<li><strong>同意</strong>条款和条件</li>
+<li>填写<strong>登录信息</strong></li>
+<li>（可选）如果您不希望被跟踪，请在快速设置中选择<strong>自定义设置</strong> 。</li>
+<li><em>macOS High Sierra将首次启动…</em></li>
+</ol>
+<h3 id="第3部分-Ryzen-Hackintosh后安装"><a href="#第3部分-Ryzen-Hackintosh后安装" class="headerlink" title="第3部分 - Ryzen Hackintosh后安装"></a>第3部分 - Ryzen Hackintosh后安装</h3><p>还有很多事情可以从硬盘驱动器而不是闪存驱动器启动，并从图形卡获得适当的视频加速必须完成。</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Install-1024x576.jpg" alt="img"></p>
+<h4 id="步骤1-配置EFI分区"><a href="#步骤1-配置EFI分区" class="headerlink" title="步骤1.配置EFI分区"></a>步骤1.配置EFI分区</h4><p>现在我们在macOS中，我们希望能够在没有USB闪存驱动器插件的情况下加载macOS。为了能够从驱动器启动macOS，它需要被复制到启动驱动器的EFI分区上。 你也应该有互联网接入。</p>
+<ol>
+<li>打开<strong>三叶草配置程序</strong></li>
+<li><strong>安装</strong> <strong>闪存驱动器</strong>的<strong>EFI</strong></li>
+<li>按打开EFI或导航到取景器中的EFI位置</li>
+<li>将EFI文件夹复制到您的桌面上</li>
+<li>打开<strong>查找器</strong>并弹出闪存驱动器</li>
+<li>使用Clover Configurator安装磁盘的EFI</li>
+<li>按打开EFI或导航到取景器中的EFI位置</li>
+<li>将EFI粘贴到磁盘上的现有EFI上</li>
+<li>当它通过菜单提示您EFI文件夹已经存在时，选择Replace</li>
+</ol>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/04/replace_efi.png" alt="img"></p>
+<p><strong>现在，您将能够在没有USB闪存驱动器的情况下启动macOS</strong></p>
+<p><strong>建议：</strong>删除EFI文件夹中名为APPLE的文件夹（如果存在）。 这个文件夹是在安装过程中自动在闪存驱动器的EFI分区上创建的，可能会导致hainstintosh问题。 该文件夹最终将被重新创建，但只需要在安装macOS后删除一次。 </p>
+<h4 id="步骤2-AMD-CPU速度增强"><a href="#步骤2-AMD-CPU速度增强" class="headerlink" title="步骤2. AMD CPU速度增强"></a>步骤2. AMD CPU速度增强</h4><p>运行AMD Ryzen Hackintosh时，CPU的性能下降了大约20％。 这可以通过设置busratio bootflag来匹配你的Ryzen CPU来解决。</p>
+<p><strong>总线</strong> <strong>速率</strong>由以下公式计算： <strong>CPU速度时钟（MHz）/总线速度（MHz）=总线速率。</strong></p>
+<p>CPU速度时钟（MHz）= <strong>CPU速度（GHz）x 1000</strong></p>
+<p>所有Ryzen CPU的总线速度（Mhz）= <strong>100MHz</strong></p>
+<p><strong>例子：</strong></p>
+<ul>
+<li>Ryzen 1800X 3.6GHz; <strong>busratio = 36</strong></li>
+<li>Ryzen 1700x 3.4GHz; <strong>busratio = 34</strong></li>
+<li>Ryzen 1700 3.0GHz; <strong>busratio = 30</strong></li>
+<li>Ryzen 1600X 3.6GHz; <strong>busratio = 36</strong></li>
+<li>Ryzen 1600 3.2GHz; <strong>busratio = 32</strong></li>
+<li>Ryzen 1500X 3.5GHz; <strong>busratio = 35</strong></li>
+<li>Ryzen 1400 3.2GHz; <strong>busratio = 32</strong></li>
+</ul>
+<h5 id="设置公交车比例："><a href="#设置公交车比例：" class="headerlink" title="设置公交车比例："></a><strong>设置公交车比例：</strong></h5><ol>
+<li><p>装入EFI分区</p>
+</li>
+<li><p>导航到/卷/ EFI / EFI / CLOVER /</p>
+</li>
+<li><p>在Clover Configurator中打开config.plist</p>
+</li>
+<li><p>在左侧栏中选择<strong>引导</strong></p>
+</li>
+<li><p>在<strong>自定义标志</strong>下为你的CPU添加正确的busratio = xx：</p>
+</li>
+</ol>
+<p>   <img src="http://hackintosher.com/wp-content/uploads/2017/12/busratio-flag-in-Clover-Configurator.png" alt="img">我使用的是Ryzen 1700 CPU，所以我的busratio是30，因为3.0GHz的时钟速度。</p>
+<h4 id="第3步。专用GPU加速"><a href="#第3步。专用GPU加速" class="headerlink" title="第3步。专用GPU加速"></a>第3步。专用GPU加速</h4><p>对于您的特定主板，您可能需要将NVRAM检测修补程序添加到dGPU加速中。 我在AMD RX 560上不需要它，但是当我插入我认为很奇怪的Nvidia GTX 1050 Ti时需要它。</p>
+<p><strong>添加EmuVariableUefi-64.efi：</strong></p>
+<ol>
+<li>打开<strong>三叶草配置程序</strong></li>
+<li>安装您的<strong>EFI分区</strong></li>
+<li>使用Clover配置器打开<strong>config.plist</strong></li>
+<li>单击Clover Configurator左栏中的<strong>安装驱动程序</strong></li>
+<li>点击<strong>左下角的EmuVariableUefi</strong> 。</li>
+<li>在<strong>/卷/ EFI / EFI / Clover / Drivers64UEFI /</strong></li>
+</ol>
+<h5 id="AMD："><a href="#AMD：" class="headerlink" title="AMD："></a>AMD：</h5><p>我把这些文件包括在内，让AMD RX卡工作，除了Vega 56/64，这将需要更多的工作。如果您有RX 560，请添加引导标志<code>-rad4200</code>以防止冻结，如此<strong>处所述</strong> 。</p>
+<h5 id="NVIDIA："><a href="#NVIDIA：" class="headerlink" title="NVIDIA："></a>NVIDIA：</h5><p>除EmuVariableUefi-64.efi外，如果您使用的是最新发布的Nvidia GPU之一，您将安装网络驱动程序。 不应该有任何你需要做的事情我已经设置了适当的CsrActivateConfig并添加了必要的kexts。 如果在安装网络驱动程序后出于某种原因无法正常工作，则可能需要在BIOS中禁用CMS。</p>
+<p>转到驱动程序页面获取Web驱动程序：</p>
+<p><strong>下载 - Nvidia Web驱动程序</strong></p>
+<p>注意：如果由于隐私设置而未能成功安装，可能需要重新安装Nvidia网络驱动程序。</p>
+<p>步骤4.声音，以太网和其他一切</p>
+<p>声音使用VoodooHDA.kext启用。 我包括了所有的以太网kexts，我可以想到，这将与Ryzen，但我建议删除你不需要的kexts。</p>
 <h3 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h3><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
 <h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]</p>
 <p>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html#disqus_thread</comments>
     </item>
