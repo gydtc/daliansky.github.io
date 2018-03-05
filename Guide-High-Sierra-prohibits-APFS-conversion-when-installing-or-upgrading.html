@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="[指南]High Sierra全新安装或者升级时禁止进行APFS转换 假设安装的分区为 test ，挂载路径为 /Volumes/test  如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。  幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/m">
+<meta name="description" content="[指南]High Sierra全新安装或者升级时禁止进行APFS转换  假设安装的分区为 test ，挂载路径为 /Volumes/test  如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/m">
 <meta name="keywords" content="10.13,High Sierra,APFS,转换,Guide,conversion">
 <meta property="og:type" content="article">
 <meta property="og:title" content="High Sierra全新安装或者升级时禁止进行APFS转换">
 <meta property="og:url" content="http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="[指南]High Sierra全新安装或者升级时禁止进行APFS转换 假设安装的分区为 test ，挂载路径为 /Volumes/test  如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。  幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/m">
+<meta property="og:description" content="[指南]High Sierra全新安装或者升级时禁止进行APFS转换  假设安装的分区为 test ，挂载路径为 /Volumes/test  如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/m">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-16T13:13:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="High Sierra全新安装或者升级时禁止进行APFS转换">
-<meta name="twitter:description" content="[指南]High Sierra全新安装或者升级时禁止进行APFS转换 假设安装的分区为 test ，挂载路径为 /Volumes/test  如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。  幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/m">
+<meta name="twitter:description" content="[指南]High Sierra全新安装或者升级时禁止进行APFS转换  假设安装的分区为 test ，挂载路径为 /Volumes/test  如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 幸运的是，这种自动转换有一些方法。 它由 /macOS Install Data/m">
 
 
 
@@ -456,27 +456,36 @@
       
 
       
-        <h1 id="指南-High-Sierra全新安装或者升级时禁止进行APFS转换"><a href="#指南-High-Sierra全新安装或者升级时禁止进行APFS转换" class="headerlink" title="[指南]High Sierra全新安装或者升级时禁止进行APFS转换"></a>[指南]High Sierra全新安装或者升级时禁止进行APFS转换</h1><blockquote>
+        <h1>[指南]High Sierra全新安装或者升级时禁止进行APFS转换</h1>
+<blockquote>
 <p>假设安装的分区为 <code>test</code> ，挂载路径为 <code>/Volumes/test</code></p>
 </blockquote>
-<p>如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。 </p>
-<p>幸运的是，这种自动转换有一些方法。 它由 <code>/macOS Install Data/minstallconfig.xml</code> 中的<code>ConvertToAPFS</code> 选项控制。 </p>
-<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><p>升级方案比新安装程序稍微简单一些，因为我们可以运行一个命令行工具，可以使用命令行选项将 <code>ConvertToAPFS</code> 设置为 <code>false</code> 。 </p>
+<p>如您所知，macOS High Sierra包括一个新的文件系统APFS。 如果您的系统驱动器是固态，安装程序将在新的安装方案和更新方案中将HFS + J转换为APFS。</p>
+<p>幸运的是，这种自动转换有一些方法。 它由 <code>/macOS Install Data/minstallconfig.xml</code> 中的<code>ConvertToAPFS</code> 选项控制。</p>
+<h2>升级</h2>
+<p>升级方案比新安装程序稍微简单一些，因为我们可以运行一个命令行工具，可以使用命令行选项将 <code>ConvertToAPFS</code> 设置为 <code>false</code> 。</p>
 <p>下载10.13安装程序后，请退出。打开终端，输入命令：</p>
-<p><code>/Applications/&quot;Install macOS High Sierra.app&quot;/Contents/Resources/startosinstall --converttoapfs NO --agreetolicense --volume /Volumes/test</code><br>系统将复制一些文件，然后重新启动，您将可以启动安装程序（无需APFS转换），方法是在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项。 </p>
-<h2 id="全新安装"><a href="#全新安装" class="headerlink" title="全新安装"></a>全新安装</h2><p>假设您已经创建了一个用于全新安装的HFS+格式的U盘，如果安装目标是SSD，安装程序仍将转换为APFS。<br>为避免这种情况，在运行安装程序(第一阶段)之后，并且在首次重新启动之后(第二阶段之前)，重新通过 <code>Clover</code> 选择进入U盘 <code>Boot OS X Install from Install macOS High Sierra</code>，打开终端，进入要安装的系统分区(假设安装分区为 <code>test</code> )：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /Volume/<span class="built_in">test</span></div><div class="line"><span class="built_in">cd</span> <span class="string">"macOS Install Data"</span></div><div class="line">vi minstallconfig.xml</div></pre></td></tr></table></figure>
-<p>将 </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">true</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p><code>/Applications/&quot;Install macOS High Sierra.app&quot;/Contents/Resources/startosinstall --converttoapfs NO --agreetolicense --volume /Volumes/test</code>
+系统将复制一些文件，然后重新启动，您将可以启动安装程序（无需APFS转换），方法是在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项。</p>
+<h2>全新安装</h2>
+<p>假设您已经创建了一个用于全新安装的HFS+格式的U盘，如果安装目标是SSD，安装程序仍将转换为APFS。
+为避免这种情况，在运行安装程序(第一阶段)之后，并且在首次重新启动之后(第二阶段之前)，重新通过 <code>Clover</code> 选择进入U盘 <code>Boot OS X Install from Install macOS High Sierra</code>，打开终端，进入要安装的系统分区(假设安装分区为 <code>test</code> )：</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /Volume/<span class="built_in">test</span></div><div class="line"><span class="built_in">cd</span> <span class="string">"macOS Install Data"</span></div><div class="line">vi minstallconfig.xml</div></pre></td></tr></table></figure></p>
+<p>将</p>
+<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">true</span>/&gt;</span></div></pre></td></tr></table></figure></p>
 <p>修改为：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">false</span>/&gt;</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>ConvertToAPFS<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">false</span>/&gt;</span></div></pre></td></tr></table></figure></p>
 <p>输入:wq保存退出</p>
 <blockquote>
 <p>vi编辑器的用法请自行脑补或者google</p>
 </blockquote>
 <p>重启，在 <code>Clover</code> 中引导 <code>Boot macOS Install from test</code> 选项，进入第二阶段完成安装，您得到的是一个未转换成 <code>APFS</code> 的 <code>HFS+</code> 分区格式的系统。</p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
+688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -726,7 +735,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#指南-High-Sierra全新安装或者升级时禁止进行APFS转换"><span class="nav-number">1.</span> <span class="nav-text">[指南]High Sierra全新安装或者升级时禁止进行APFS转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#升级"><span class="nav-number">1.1.</span> <span class="nav-text">升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全新安装"><span class="nav-number">1.2.</span> <span class="nav-text">全新安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">[指南]High Sierra全新安装或者升级时禁止进行APFS转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">全新安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
