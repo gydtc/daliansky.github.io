@@ -18,14 +18,11 @@
       <pubDate>Wed, 24 Jan 2018 02:49:36 GMT</pubDate>
       <description>
       
-        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡&lt;code&gt;+++&lt;/code&gt;
+        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391
       
       </description>
       
-      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像</h1>
-<ul>
+      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像</h1><ul>
 <li>本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡<code>+++</code>请替换<code>Drivers64UEFI/Backup</code>目录下的<code>OsxAptioFix3Drv-64.efi</code></li>
 <li>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</li>
 <li>支持UHD620/UHD630等八代核显</li>
@@ -39,31 +36,16 @@
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></li>
 </ul>
-<h1>截图：</h1>
-<p><img src="http://7.daliansky.net/10.13.3_17D47.png" alt="10.13.3_17D47">
-<img src="http://7.daliansky.net/10.13.3_Audio.png" alt="10.13.3_Audio">
-<img src="http://7.daliansky.net/10.13.3_HD620.png" alt="10.13.3_HD620">
-<img src="http://7.daliansky.net/10.13.3_Bluetooth.png" alt="10.13.3_Bluetooth">
-<img src="http://7.daliansky.net/10.13.3_USB.png" alt="10.13.3_USB">
-<img src="http://7.daliansky.net/10.13.3_Kexts.png" alt="10.13.3_Kexts">
-<img src="http://7.daliansky.net/10.13.3_Wifi.png" alt="10.13.3_Wifi">
-<img src="http://7.daliansky.net/10.13.3_Display.png" alt="10.13.3_Display">
-<img src="http://7.daliansky.net/10.13.3.png" alt="10.13.3"></p>
-<h1>下载链接</h1>
-<p>百毒云下载链接：https://pan.baidu.com/s/1bqmWMLp 密码: 7pu8</p>
-<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5/macOS%20High%20Sierra%2010.13.3%2817D47%29%20Installer%20with%20Clover%204391.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.13.3_17D47.png" alt="10.13.3_17D47"><br><img src="http://7.daliansky.net/10.13.3_Audio.png" alt="10.13.3_Audio"><br><img src="http://7.daliansky.net/10.13.3_HD620.png" alt="10.13.3_HD620"><br><img src="http://7.daliansky.net/10.13.3_Bluetooth.png" alt="10.13.3_Bluetooth"><br><img src="http://7.daliansky.net/10.13.3_USB.png" alt="10.13.3_USB"><br><img src="http://7.daliansky.net/10.13.3_Kexts.png" alt="10.13.3_Kexts"><br><img src="http://7.daliansky.net/10.13.3_Wifi.png" alt="10.13.3_Wifi"><br><img src="http://7.daliansky.net/10.13.3_Display.png" alt="10.13.3_Display"><br><img src="http://7.daliansky.net/10.13.3.png" alt="10.13.3"></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接：<a href="https://pan.baidu.com/s/1bqmWMLp" target="_blank" rel="external">https://pan.baidu.com/s/1bqmWMLp</a> 密码: 7pu8</p>
+<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/黑果小兵/macOS%20High%20Sierra%2010.13.3%2817D47%29%20Installer%20with%20Clover%204391.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
 <p>Mega网盘下载链接:<a href="https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo" target="_blank" rel="external">https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
 <p>MD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
-688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
-257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a><br>688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]<br>257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html#disqus_thread</comments>
@@ -76,14 +58,11 @@
       <pubDate>Tue, 23 Jan 2018 01:42:05 GMT</pubDate>
       <description>
       
-        &lt;h3&gt;【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装
+        &lt;h3 id=&quot;【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译&quot;&gt;&lt;a href=&quot;#【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译&quot; class=&quot;headerlink&quot; tit
       
       </description>
       
-      <content:encoded><![CDATA[<h3>【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]</h3>
-<blockquote>
+      <content:encoded><![CDATA[<h3 id="【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译"><a href="#【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译" class="headerlink" title="【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]"></a>【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]</h3><blockquote>
 <p>这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装macOS有更多的步骤，也更难以为初学者工作，所以我尽可能地简化了这个过程，并尽可能使本指南更容易理解。</p>
 </blockquote>
 <p>如果你有一个基于Intel的系统，请参阅： <strong><a href="https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html">macOS安装教程兼小米Pro安装过程记录</a></strong>，因为本指南仅适用于Ryzen。</p>
@@ -97,46 +76,37 @@
 <li>AMD GPU</li>
 <li>睡眠唤醒</li>
 </ul>
-<h3>Ryzen High Sierra Hackintosh概述</h3>
-<p>稍微额外的努力，Ryzen可以在黑客行业工作，虽然它不会像英特尔的机器那样流畅，但是这是Mac的基础。</p>
-<p>本指南基于Clover方法，并使用在Ryzen兼容性安装期间应用的定制Ryzen内核。 与英特尔的机器相比，安装的时间还要长得多。</p>
+<h3 id="Ryzen-High-Sierra-Hackintosh概述"><a href="#Ryzen-High-Sierra-Hackintosh概述" class="headerlink" title="Ryzen High Sierra Hackintosh概述"></a>Ryzen High Sierra Hackintosh概述</h3><p>稍微额外的努力，Ryzen可以在黑客行业工作，虽然它不会像英特尔的机器那样流畅，但是这是Mac的基础。</p>
+<p>本指南基于Clover方法，并使用在Ryzen兼容性安装期间应用的定制Ryzen内核。 与英特尔的机器相比，安装的时间还要长得多。 </p>
 <p>您只需要一个备用闪存驱动器，硬盘驱动器以及能够运行虚拟机来完成此操作的Mac或Windows / Linux计算机。 我已经包含一个EFI文件夹以及执行安装所需的PreInstall＆PostInstall文件夹。 安装完成后，声音应该工作我使用<code>VoodooHDA.kext</code>驱动程序，USB 2/3端口工作正常，使用<code>USBInjectAll.kext</code> /<code>GenericUSBXHCI.kext</code>，而对于以太网我包含了所有的可能的驱动文件，我可以想到Ryzen主板使用的，所以安装完成后也要工作。</p>
 <p>使用本指南中包含的步骤和文件，我可以同时获得AMD RX和Nvidia GTX显卡的功能。 使用Ryzen CPU会出现一些图形化的性能下降。更新的AMD显卡的性能下降了10-15%，而对于Nvidia来说，性能下降了50%，fps下降了50%。</p>
-<p>睡眠也适用于我是否插入了AMD或Nvidia显卡。在Ryzen + Nvidia上使用睡眠工具已经导致其他人重新启动问题，而不是正常唤醒，但似乎从High Sierra 10.13开始已经解决。包括10.13.1 build (17B1003)和10.13.2 (Beta)，因为我没有遇到这个问题与我的GTX 1050钛使用本指南中包含的文件。</p>
+<p>睡眠也适用于我是否插入了AMD或Nvidia显卡。在Ryzen + Nvidia上使用睡眠工具已经导致其他人重新启动问题，而不是正常唤醒，但似乎从High Sierra 10.13开始已经解决。包括10.13.1 build (17B1003)和10.13.2 (Beta)，因为我没有遇到这个问题与我的GTX 1050钛使用本指南中包含的文件。 </p>
 <p>Ryzen hackintosh的一个<strong>重要问题是无法安装macOS更新</strong>。 例如，当我尝试时，我无法运行更新安装程序从10.13.1到10.13.2。 例如，当苹果有macOS的<a href="https://www.macrumors.com/2017/11/29/apple-fixes-root-password-bug-security-update/" target="_blank" rel="external">根问题</a>时，小的更新可以工作10.13.1我能够更新到更新的版本10.13.1。 但是要升级到 10.13.2，我唯一的选择就是在应用商店下载更新后的版本，然后创建另一个USB安装程序，重新安装High Sierra。</p>
-<p>这个和更慢的图形性能，特别是在我看来与Nvidia显卡配对时，是使用Ryzen黑金刚的最不方便的部分。 如果你还没有购买你的电脑零件，并计划使用macOS作为你的主要操作系统，我建议与英特尔一起，只为了更平滑的体验，但如果你已经有一台像我这样的Ryzen PC，让我们开始吧...</p>
-<h3>Part 1 - 创建一个Ryzen安装程序</h3>
-<p>要创建Ryzen hackintosh，您需要创建一个备用的8GB +闪存驱动器来安装High Sierra安装程序。</p>
+<p>这个和更慢的图形性能，特别是在我看来与Nvidia显卡配对时，是使用Ryzen黑金刚的最不方便的部分。 如果你还没有购买你的电脑零件，并计划使用macOS作为你的主要操作系统，我建议与英特尔一起，只为了更平滑的体验，但如果你已经有一台像我这样的Ryzen PC，让我们开始吧…</p>
+<h3 id="Part-1-创建一个Ryzen安装程序"><a href="#Part-1-创建一个Ryzen安装程序" class="headerlink" title="Part 1 - 创建一个Ryzen安装程序"></a>Part 1 - 创建一个Ryzen安装程序</h3><p>要创建Ryzen hackintosh，您需要创建一个备用的8GB +闪存驱动器来安装High Sierra安装程序。</p>
 <p>另外需要一个mac或没有Mac的人，你需要创建一个<a href="http://hackintosher.com/guides/virtual-macos-use-macos-sierra-virtual-machine-vmware/" target="_blank" rel="external">运行macOS</a>的<a href="http://hackintosher.com/guides/virtual-macos-use-macos-sierra-virtual-machine-vmware/" target="_blank" rel="external">虚拟机</a></p>
 <p>这是一个书面指南，但是如果你喜欢视频教程请参阅<a href="https://www.youtube.com/watch?v=ydHyAmxPb_Y" target="_blank" rel="external">XLNC**</a>创建的<a href="https://www.youtube.com/watch?v=ydHyAmxPb_Y" target="_blank" rel="external"><strong>视频</strong></a></p>
-<h4>1. 创建一个High Sierra USB安装程序</h4>
-<p>学习如何做到如下： <a href="http://hackintosher.com/guides/make-macos-flash-drive-installer/" target="_blank" rel="external">如何创建MacOS系统安装U盘</a></p>
-<h4>2. Ryzen内核设置</h4>
-<p>现在我们手中已经有了High Sierra的安装程序，我们需要将其配置为更友好的方式，方法是放入修改好的内核<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://wiki.osx86project.org/wiki/index.php/Patched_Kernels&amp;usg=ALkJrhivT46WUjtPLEE1rPwlo5O7TUjmTQ" target="_blank" rel="external"><strong>Bronya @ InsanelyMac</strong></a>和由<strong>XLNC</strong>创建的<code>PreInstall</code>/<code>PostInstall</code>的脚本。</p>
-<h5>2.1 文件夹可见性</h5>
-<p>AMD内核文件被添加到默认情况下在macOS上隐藏的文件夹，所以让我们取消隐藏这些文件夹：</p>
+<h4 id="1-创建一个High-Sierra-USB安装程序"><a href="#1-创建一个High-Sierra-USB安装程序" class="headerlink" title="1. 创建一个High Sierra USB安装程序"></a>1. 创建一个High Sierra USB安装程序</h4><p>学习如何做到如下： <a href="http://hackintosher.com/guides/make-macos-flash-drive-installer/" target="_blank" rel="external">如何创建MacOS系统安装U盘</a> </p>
+<h4 id="2-Ryzen内核设置"><a href="#2-Ryzen内核设置" class="headerlink" title="2. Ryzen内核设置"></a>2. Ryzen内核设置</h4><p>现在我们手中已经有了High Sierra的安装程序，我们需要将其配置为更友好的方式，方法是放入修改好的内核<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://wiki.osx86project.org/wiki/index.php/Patched_Kernels&amp;usg=ALkJrhivT46WUjtPLEE1rPwlo5O7TUjmTQ" target="_blank" rel="external"><strong>Bronya @ InsanelyMac</strong></a>和由<strong>XLNC</strong>创建的<code>PreInstall</code>/<code>PostInstall</code>的脚本。</p>
+<h5 id="2-1-文件夹可见性"><a href="#2-1-文件夹可见性" class="headerlink" title="2.1 文件夹可见性"></a>2.1 文件夹可见性</h5><p>AMD内核文件被添加到默认情况下在macOS上隐藏的文件夹，所以让我们取消隐藏这些文件夹：</p>
 <ol>
 <li>打开<strong>终端</strong></li>
 <li>输入以下两行命令：</li>
 </ol>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.Finder AppleShowAllFiles true</div><div class="line">killall Finder</div></pre></td></tr></table></figure></p>
-<p>​	屏幕输出如下：
-<img src="http://7.daliansky.net/Xnip2018-01-23_16-12-00.jpg" alt="Xnip2018-01-23_16-12-00"></p>
-<ol start="3">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.Finder AppleShowAllFiles true</div><div class="line">killall Finder</div></pre></td></tr></table></figure>
+<p>​    屏幕输出如下：<br><img src="http://7.daliansky.net/Xnip2018-01-23_16-12-00.jpg" alt="Xnip2018-01-23_16-12-00"></p>
+<ol>
 <li><strong>重新启动</strong> macOS，以便在编辑默认值后显示隐藏的文件。</li>
-<li>打开你在步骤1中所做的闪存驱动器<strong>Install macOS High Sierra</strong>你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。
-<img src="http://7.daliansky.net/Xnip2018-01-23_16-40-02.jpg" alt="Xnip2018-01-23_16-40-02">
-注意文件夹<code>.IABootFiles</code>和<code>System</code> ，这是你将要添加东西的目录。</li>
+<li>打开你在步骤1中所做的闪存驱动器<strong>Install macOS High Sierra</strong>你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。<br>  <img src="http://7.daliansky.net/Xnip2018-01-23_16-40-02.jpg" alt="Xnip2018-01-23_16-40-02"><pre><code>注意文件夹`.IABootFiles`和`System` ，这是你将要添加东西的目录。
+</code></pre></li>
 </ol>
-<h5>2.2 添加AMD修补的内核</h5>
-<p>现在我们要开始将粘贴文件从可下载的文件夹复制到USB闪存驱动器</p>
+<h5 id="2-2-添加AMD修补的内核"><a href="#2-2-添加AMD修补的内核" class="headerlink" title="2.2 添加AMD修补的内核"></a>2.2 添加AMD修补的内核</h5><p>现在我们要开始将粘贴文件从可下载的文件夹复制到USB闪存驱动器</p>
 <ol>
 <li>下载<a href="https://mega.nz/#!U89kjQJQ!7gsIIySHfxpsv43YrM8Dp_5mw_Gi6qjzliO1yH01hIg" target="_blank" rel="external">Ryzen_Kernel_10.13.zip</a></li>
 <li>解压<code>Ryzen_Kernel_10.13</code></li>
 <li>进入<code>Ryzen_Kernel_10.13/PreInstall/Prelinkedkernel/</code>目录</li>
 <li>复制<code>prelinkedkernel</code> （<em>注意：是文件而不是文件夹</em>）</li>
-<li>我们将使用<code>prelinkedkernel</code>的补丁版本来替换安装<code>macOS High Sierra</code>上现有的Apple版本。 在以下位置粘贴并替换<code>prelinkedkernel</code>
-<ol>
+<li>我们将使用<code>prelinkedkernel</code>的补丁版本来替换安装<code>macOS High Sierra</code>上现有的Apple版本。 在以下位置粘贴并替换<code>prelinkedkernel</code><ol>
 <li><strong>/Volumes/Install macOS High Sierra/.IABootFiles/</strong></li>
 <li><strong>/Volumes/Install macOS High Sierra/System/Library/PrelinkedKernels/</strong></li>
 </ol>
@@ -145,15 +115,13 @@
 <li>复制PreInstall和PostInstall文件夹</li>
 <li>将它们粘贴到闪存驱动器<code>/Volumes/Install macOS High Sierra/</code></li>
 </ol>
-<h4>第3步。EFI分区配置</h4>
-<p>现在，必须通过添加预配置的EFI文件夹来配置闪存驱动器的启动分区。</p>
+<h4 id="第3步。EFI分区配置"><a href="#第3步。EFI分区配置" class="headerlink" title="第3步。EFI分区配置"></a>第3步。EFI分区配置</h4><p>现在，必须通过添加预配置的EFI文件夹来配置闪存驱动器的启动分区。</p>
 <ol>
-<li><strong>装载EFI分区：</strong>
-<ol>
+<li><strong>装载EFI分区：</strong><ol>
 <li>下载<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://mackie100projects.altervista.org/download-clover-configurator/&amp;usg=ALkJrhhbSCnKKZ2-Wdfn59Q5lXNkwKRoAw" target="_blank" rel="external">Clover配置器</a></li>
 <li>打开<strong>三叶草配置程序</strong></li>
 <li>在工具下选择<strong>装载EFI</strong></li>
-<li>单击<strong>安装分区</strong>以安装macOS ...。</li>
+<li>单击<strong>安装分区</strong>以安装macOS …。</li>
 <li>点击<strong>打开分区</strong></li>
 </ol>
 </li>
@@ -161,22 +129,18 @@
 <li>下载<strong>Ryzen_High_Sierra_10.13_EFI.zip</strong></li>
 <li><strong>解压</strong> <strong>Ryzen_High_Sierra_10.13_EFI.zip</strong></li>
 <li><strong>复制</strong>解压缩的<strong>EFI</strong>文件夹</li>
-<li>将复制的<strong>EFI</strong>粘贴到已装入的EFI分区或**/卷/ EFI中**</li>
+<li>将复制的<strong>EFI</strong>粘贴到已装入的EFI分区或<strong>/卷/ EFI中</strong></li>
 </ol>
-<h3>第2部分 - 在Ryzen上安装High Sierra</h3>
-<p>在Ryzen上安装High Sierra相对于兼容的英特尔机器来说更难执行，主要是因为需要时间加载各个部件，而且由于需要耐心处理失败的靴子，您可能经常遇到这个着名的屏幕：</p>
+<h3 id="第2部分-在Ryzen上安装High-Sierra"><a href="#第2部分-在Ryzen上安装High-Sierra" class="headerlink" title="第2部分 - 在Ryzen上安装High Sierra"></a>第2部分 - 在Ryzen上安装High Sierra</h3><p>在Ryzen上安装High Sierra相对于兼容的英特尔机器来说更难执行，主要是因为需要时间加载各个部件，而且由于需要耐心处理失败的靴子，您可能经常遇到这个着名的屏幕：</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/12/hqdefault.jpg" alt="img"></p>
 <p>不用担心，只需重新启动系统，然后重试。 在启动Ryzen hackintosh的时候，斜线的圆/失败的启动图标也可能会出现，然后安装后，虽然它应该比安装发生的频率低。 如果你睡觉了，而不是把它关掉，那么这个问题不应该是一个大问题，这对AMD和Nvidia显卡都适用。</p>
-<h4>步骤1. BIOS设置</h4>
-<p>现在USB安装程序已经完成了，现在可以配置BIOS以兼容macOS。</p>
+<h4 id="步骤1-BIOS设置"><a href="#步骤1-BIOS设置" class="headerlink" title="步骤1. BIOS设置"></a>步骤1. BIOS设置</h4><p>现在USB安装程序已经完成了，现在可以配置BIOS以兼容macOS。</p>
 <ol>
 <li>重新启动机器并进入BIOS，热键将为F8，F10，F11或F12</li>
 <li>转过“退出”部分并将BIOS设置重置为“默认”</li>
 <li>我建议将闪存驱动器的UEFI：分区设置为在Boot的引导部分下找不到的Boot＃1</li>
-<li>设置以下BIOS设置：（您可能没有所有这些设置，这没关系）
-<ol>
-<li>AMD-V / SVM =禁用（可以重新启用后
-如果需要安装）</li>
+<li>设置以下BIOS设置：（您可能没有所有这些设置，这没关系）<ol>
+<li>AMD-V / SVM =禁用（可以重新启用后<br>如果需要安装）</li>
 <li>SATA端口= AHCI</li>
 <li>IOMMU =禁用</li>
 <li>APU =禁用</li>
@@ -188,31 +152,25 @@
 </ol>
 </li>
 </ol>
-<h4>第2步。启动USB安装程序</h4>
-<p>启动到MacOS USB闪存驱动器安装程序的UEFI以加载Clover启动菜单。</p>
+<h4 id="第2步。启动USB安装程序"><a href="#第2步。启动USB安装程序" class="headerlink" title="第2步。启动USB安装程序"></a>第2步。启动USB安装程序</h4><p>启动到MacOS USB闪存驱动器安装程序的UEFI以加载Clover启动菜单。</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/1.-Boot-OS-X-Install.jpg" alt="img">如果USB驱动器没有设置为默认启动音量，则在启动屏幕出现时更改临时启动设备，需要按下的按钮通常为F10，F11或F12。 出现临时选择屏幕时选择UEFI :( USB设备名称）。</p>
 <ol>
 <li>你现在在三叶草菜单。 使用箭头键验证<strong>Boot OS X安装从安装</strong>选择<strong>macOS High Sierra</strong></li>
 <li>按<strong>Enter键</strong></li>
-<li><em>安装程序现在将缓慢加载...如果您得到香烟十字标志而不是下面的图像，只需重新启动并再次尝试。</em> <em>当我通过安装程序的步骤时，发生了几次这样的事情，只是再次尝试让我解决这个问题。</em> **</li>
+<li><em>安装程序现在将缓慢加载…如果您得到香烟十字标志而不是下面的图像，只需重新启动并再次尝试。</em> <em>当我通过安装程序的步骤时，发生了几次这样的事情，只是再次尝试让我解决这个问题。</em> **</li>
 </ol>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/Boot-Progress-Bar.jpg" alt="img"></p>
 <p>当安装程序加载时，我们希望在开始安装之前将磁盘格式化为适合黑客可用性的GUID。</p>
 <ol>
-<li>
-<p>安装程序出现时按<strong>继续</strong></p>
+<li><p>安装程序出现时按<strong>继续</strong></p>
 </li>
-<li>
-<p>选择你的语言</p>
+<li><p>选择你的语言</p>
 </li>
-<li>
-<p>从安装菜单中选择<strong>磁盘工具</strong></p>
+<li><p>从安装菜单中选择<strong>磁盘工具</strong></p>
 </li>
-<li>
-<p>按下左上角左上角的查看按钮，从下拉菜单中选择<strong>显示所有设备</strong> 。 （注意： <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://hackintosher.com/blog/get-nvme-m-2-ssds-show-high-sierra-hackintosh-install/&amp;usg=ALkJrhhKFyGyZOKxRVJOIAdhalwOH9Vlzw" target="_blank" rel="external">NVME驱动器不显示？</a> ）</p>
+<li><p>按下左上角左上角的查看按钮，从下拉菜单中选择<strong>显示所有设备</strong> 。 （注意： <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://hackintosher.com/blog/get-nvme-m-2-ssds-show-high-sierra-hackintosh-install/&amp;usg=ALkJrhhKFyGyZOKxRVJOIAdhalwOH9Vlzw" target="_blank" rel="external">NVME驱动器不显示？</a> ）</p>
 </li>
-<li>
-<p>选择要安装macOS的磁盘，并使用以下设置删除它：</p>
+<li><p>选择要安装macOS的磁盘，并使用以下设置删除它：</p>
 <ul>
 <li>名称:(可以任意命名）</li>
 <li>格式： <strong>Mac OS扩展（日志式）</strong></li>
@@ -221,91 +179,66 @@
 <p>​</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/GUID-High-Sierra-1024x683.jpg" alt="img">记住为AMD内核选择的驱动器名称和禁用APFS转换非常重要。</p>
 </li>
-<li>
-<p>按<strong>擦除</strong></p>
+<li><p>按<strong>擦除</strong></p>
 </li>
-<li>
-<p>关闭<strong>磁盘工具</strong></p>
+<li><p>关闭<strong>磁盘工具</strong></p>
 </li>
-<li>
-<p><strong>安装macOS High Sierra</strong></p>
+<li><p><strong>安装macOS High Sierra</strong></p>
 </li>
 </ol>
 <p>注意：在安装macOS时，屏幕可能会变黑，显示屏正在睡眠，您可以按住键盘上的某个键或摇动鼠标来唤醒屏幕</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Disk-Install-1024x683.jpg" alt="img"></p>
-<p>安装程序完成后，计算机将重新启动，您将希望返回到Clover菜单。</p>
-<h4>步骤3. AMD PreInstall内核执行</h4>
-<p>Clover现在有了第二个选项，但是在我们做这个之前，我们必须先做AMD内核的预安装部分</p>
+<p>安装程序完成后，计算机将重新启动，您将希望返回到Clover菜单。 </p>
+<h4 id="步骤3-AMD-PreInstall内核执行"><a href="#步骤3-AMD-PreInstall内核执行" class="headerlink" title="步骤3. AMD PreInstall内核执行"></a>步骤3. AMD PreInstall内核执行</h4><p>Clover现在有了第二个选项，但是在我们做这个之前，我们必须先做AMD内核的预安装部分</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/2.-Boot-OS-X-Terminal.png" alt="img"></p>
 <ol>
-<li>
-<p>选择<strong>引导OS X从安装macOS高山</strong>再次<strong>安装</strong></p>
+<li><p>选择<strong>引导OS X从安装macOS高山</strong>再次<strong>安装</strong></p>
 </li>
-<li>
-<p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
+<li><p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
 </li>
-<li>
-<p><strong>（可选） 禁用终端的APFS</strong></p>
+<li><p><strong>（可选） 禁用终端的APFS</strong></p>
 </li>
-<li>
-<p>如果您忘记了您的驱动器名称，请键入以下内容：</p>
-</li>
-</ol>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -1 /Volumes</div></pre></td></tr></table></figure></p>
+<li><p>如果您忘记了您的驱动器名称，请键入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -1 /Volumes</div></pre></td></tr></table></figure>
 <p><em><code>ls -1 /Volumes</code>将列出可用卷。</em> <em>我们需要在步骤4.2中为下面一行设置的驱动器的名称</em></p>
-<ol start="5">
-<li>
-<p>在**终端中输入以下命令：</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PreInstall/pre</div></pre></td></tr></table></figure></p>
 </li>
-<li>
-<p>按<strong>Enter键</strong></p>
+<li><p>在**终端中输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PreInstall/pre</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>**卷名称：**是您格式化时命名的驱动器。 所以输入并按回车。</p>
+<li><p>按<strong>Enter键</strong></p>
 </li>
-<li>
-<p><strong>让它运行...</strong></p>
+<li><p><strong>卷名称：</strong>是您格式化时命名的驱动器。 所以输入并按回车。</p>
 </li>
-<li>
-<p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+<li><p><strong>让它运行…</strong></p>
+</li>
+<li><p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
 </li>
 </ol>
-<h4>第4步 完成安装程序</h4>
-<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/3.-Boot-macOS-Install.png" alt="img"></p>
+<h4 id="第4步-完成安装程序"><a href="#第4步-完成安装程序" class="headerlink" title="第4步 完成安装程序"></a>第4步 完成安装程序</h4><p><img src="http://hackintosher.com/wp-content/uploads/2017/10/3.-Boot-macOS-Install.png" alt="img"></p>
 <ol>
 <li>在重新启动时重新进入Clover菜单</li>
-<li><strong>从“Hackintosh”<strong>选择</strong>启动macOS安装</strong></li>
-<li><em>安装程序将完成High Sierra安装...如果您在灰色屏幕重新启动，并再次尝试，直到它加载底部图像成功。</em> <em>另外这部分花了我很长时间才完成，我被困在“约18分钟”，等了约10分钟。</em></li>
+<li><strong>从“Hackintosh”</strong>选择<strong>启动macOS安装</strong></li>
+<li><em>安装程序将完成High Sierra安装…如果您在灰色屏幕重新启动，并再次尝试，直到它加载底部图像成功。</em> <em>另外这部分花了我很长时间才完成，我被困在“约18分钟”，等了约10分钟。</em></li>
 </ol>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Hackintosh-Loading-1024x683.jpg" alt="img">检查出<a href="http://hackintosher.com/guides/high-sierra-fix-macos-not-installed-computer/" target="_blank" rel="external">High Sierra fix - “macOS无法安装在您的计算机上”，</a>如果你得到一个重新启动错误提示，而不是这张照片。</p>
-<h4>步骤5. AMD Post安装内核执行</h4>
-<ol>
-<li>
-<p>选择<strong>Boot OS X Install from Install macOS High Sierra</strong>再次<strong>进行安装</strong></p>
+<h4 id="步骤5-AMD-Post安装内核执行"><a href="#步骤5-AMD-Post安装内核执行" class="headerlink" title="步骤5. AMD Post安装内核执行"></a>步骤5. AMD Post安装内核执行</h4><ol>
+<li><p>选择<strong>Boot OS X Install from Install macOS High Sierra</strong>再次<strong>进行安装</strong></p>
 </li>
-<li>
-<p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
+<li><p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
 </li>
-<li>
-<p>在<strong>终端中</strong>键入以下内容：</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PostInstall/kernel_kext_install_only</div></pre></td></tr></table></figure></p>
+<li><p>在<strong>终端中</strong>键入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PostInstall/kernel_kext_install_only</div></pre></td></tr></table></figure>
 </li>
-<li>
-<p>按<strong>Enter键</strong></p>
+<li><p>按<strong>Enter键</strong></p>
 </li>
-<li>
-<p>输入<strong>卷名称的</strong>驱动器<strong>名称：</strong></p>
+<li><p>输入<strong>卷名称的</strong>驱动器<strong>名称：</strong></p>
 </li>
-<li>
-<p><strong>让它运行...</strong></p>
+<li><p><strong>让它运行…</strong></p>
 </li>
-<li>
-<p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+<li><p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
 </li>
 </ol>
-<h4>第6步。Ryzen最终安装和第一次启动</h4>
-<p>安装完成后电脑会自动重启。</p>
+<h4 id="第6步。Ryzen最终安装和第一次启动"><a href="#第6步。Ryzen最终安装和第一次启动" class="headerlink" title="第6步。Ryzen最终安装和第一次启动"></a>第6步。Ryzen最终安装和第一次启动</h4><p>安装完成后电脑会自动重启。</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/4.-Boot-macOS-High-Sierra.png" alt="img"></p>
 <ol>
 <li><strong>从“Hackintosh”中</strong>选择<strong>Boot macOS</strong></li>
@@ -316,13 +249,11 @@
 <li><strong>同意</strong>条款和条件</li>
 <li>填写<strong>登录信息</strong></li>
 <li>（可选）如果您不希望被跟踪，请在快速设置中选择<strong>自定义设置</strong> 。</li>
-<li><em>macOS High Sierra将首次启动...</em></li>
+<li><em>macOS High Sierra将首次启动…</em></li>
 </ol>
-<h3>第3部分 - Ryzen Hackintosh后安装</h3>
-<p>还有很多事情可以从硬盘驱动器而不是闪存驱动器启动，并从图形卡获得适当的视频加速必须完成。</p>
+<h3 id="第3部分-Ryzen-Hackintosh后安装"><a href="#第3部分-Ryzen-Hackintosh后安装" class="headerlink" title="第3部分 - Ryzen Hackintosh后安装"></a>第3部分 - Ryzen Hackintosh后安装</h3><p>还有很多事情可以从硬盘驱动器而不是闪存驱动器启动，并从图形卡获得适当的视频加速必须完成。</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Install-1024x576.jpg" alt="img"></p>
-<h4>步骤1.配置EFI分区</h4>
-<p>现在我们在macOS中，我们希望能够在没有USB闪存驱动器插件的情况下加载macOS。为了能够从驱动器启动macOS，它需要被复制到启动驱动器的EFI分区上。 你也应该有互联网接入。</p>
+<h4 id="步骤1-配置EFI分区"><a href="#步骤1-配置EFI分区" class="headerlink" title="步骤1.配置EFI分区"></a>步骤1.配置EFI分区</h4><p>现在我们在macOS中，我们希望能够在没有USB闪存驱动器插件的情况下加载macOS。为了能够从驱动器启动macOS，它需要被复制到启动驱动器的EFI分区上。 你也应该有互联网接入。</p>
 <ol>
 <li>打开<strong>三叶草配置程序</strong></li>
 <li><strong>安装</strong> <strong>闪存驱动器</strong>的<strong>EFI</strong></li>
@@ -336,9 +267,8 @@
 </ol>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/04/replace_efi.png" alt="img"></p>
 <p><strong>现在，您将能够在没有USB闪存驱动器的情况下启动macOS</strong></p>
-<p>**建议：**删除EFI文件夹中名为APPLE的文件夹（如果存在）。 这个文件夹是在安装过程中自动在闪存驱动器的EFI分区上创建的，可能会导致hainstintosh问题。 该文件夹最终将被重新创建，但只需要在安装macOS后删除一次。</p>
-<h4>步骤2. AMD CPU速度增强</h4>
-<p>运行AMD Ryzen Hackintosh时，CPU的性能下降了大约20％。 这可以通过设置busratio bootflag来匹配你的Ryzen CPU来解决。</p>
+<p><strong>建议：</strong>删除EFI文件夹中名为APPLE的文件夹（如果存在）。 这个文件夹是在安装过程中自动在闪存驱动器的EFI分区上创建的，可能会导致hainstintosh问题。 该文件夹最终将被重新创建，但只需要在安装macOS后删除一次。 </p>
+<h4 id="步骤2-AMD-CPU速度增强"><a href="#步骤2-AMD-CPU速度增强" class="headerlink" title="步骤2. AMD CPU速度增强"></a>步骤2. AMD CPU速度增强</h4><p>运行AMD Ryzen Hackintosh时，CPU的性能下降了大约20％。 这可以通过设置busratio bootflag来匹配你的Ryzen CPU来解决。</p>
 <p><strong>总线</strong> <strong>速率</strong>由以下公式计算： <strong>CPU速度时钟（MHz）/总线速度（MHz）=总线速率。</strong></p>
 <p>CPU速度时钟（MHz）= <strong>CPU速度（GHz）x 1000</strong></p>
 <p>所有Ryzen CPU的总线速度（Mhz）= <strong>100MHz</strong></p>
@@ -352,27 +282,20 @@
 <li>Ryzen 1500X 3.5GHz; <strong>busratio = 35</strong></li>
 <li>Ryzen 1400 3.2GHz; <strong>busratio = 32</strong></li>
 </ul>
-<h5><strong>设置公交车比例：</strong></h5>
-<ol>
-<li>
-<p>装入EFI分区</p>
+<h5 id="设置公交车比例："><a href="#设置公交车比例：" class="headerlink" title="设置公交车比例："></a><strong>设置公交车比例：</strong></h5><ol>
+<li><p>装入EFI分区</p>
 </li>
-<li>
-<p>导航到/卷/ EFI / EFI / CLOVER /</p>
+<li><p>导航到/卷/ EFI / EFI / CLOVER /</p>
 </li>
-<li>
-<p>在Clover Configurator中打开config.plist</p>
+<li><p>在Clover Configurator中打开config.plist</p>
 </li>
-<li>
-<p>在左侧栏中选择<strong>引导</strong></p>
+<li><p>在左侧栏中选择<strong>引导</strong></p>
 </li>
-<li>
-<p>在<strong>自定义标志</strong>下为你的CPU添加正确的busratio = xx：</p>
+<li><p>在<strong>自定义标志</strong>下为你的CPU添加正确的busratio = xx：</p>
 </li>
 </ol>
-<p><img src="http://hackintosher.com/wp-content/uploads/2017/12/busratio-flag-in-Clover-Configurator.png" alt="img">我使用的是Ryzen 1700 CPU，所以我的busratio是30，因为3.0GHz的时钟速度。</p>
-<h4>第3步。专用GPU加速</h4>
-<p>对于您的特定主板，您可能需要将NVRAM检测修补程序添加到dGPU加速中。 我在AMD RX 560上不需要它，但是当我插入我认为很奇怪的Nvidia GTX 1050 Ti时需要它。</p>
+<p>   <img src="http://hackintosher.com/wp-content/uploads/2017/12/busratio-flag-in-Clover-Configurator.png" alt="img">我使用的是Ryzen 1700 CPU，所以我的busratio是30，因为3.0GHz的时钟速度。</p>
+<h4 id="第3步。专用GPU加速"><a href="#第3步。专用GPU加速" class="headerlink" title="第3步。专用GPU加速"></a>第3步。专用GPU加速</h4><p>对于您的特定主板，您可能需要将NVRAM检测修补程序添加到dGPU加速中。 我在AMD RX 560上不需要它，但是当我插入我认为很奇怪的Nvidia GTX 1050 Ti时需要它。</p>
 <p><strong>添加EmuVariableUefi-64.efi：</strong></p>
 <ol>
 <li>打开<strong>三叶草配置程序</strong></li>
@@ -380,25 +303,19 @@
 <li>使用Clover配置器打开<strong>config.plist</strong></li>
 <li>单击Clover Configurator左栏中的<strong>安装驱动程序</strong></li>
 <li>点击<strong>左下角的EmuVariableUefi</strong> 。</li>
-<li>在**/卷/ EFI / EFI / Clover / Drivers64UEFI /**</li>
+<li>在<strong>/卷/ EFI / EFI / Clover / Drivers64UEFI /</strong></li>
 </ol>
-<h5>AMD：</h5>
-<p>我把这些文件包括在内，让AMD RX卡工作，除了Vega 56/64，这将需要更多的工作。如果您有RX 560，请添加引导标志<code>-rad4200</code>以防止冻结，如此<strong>处所述</strong> 。</p>
-<h5>NVIDIA：</h5>
-<p>除EmuVariableUefi-64.efi外，如果您使用的是最新发布的Nvidia GPU之一，您将安装网络驱动程序。 不应该有任何你需要做的事情我已经设置了适当的CsrActivateConfig并添加了必要的kexts。 如果在安装网络驱动程序后出于某种原因无法正常工作，则可能需要在BIOS中禁用CMS。</p>
+<h5 id="AMD："><a href="#AMD：" class="headerlink" title="AMD："></a>AMD：</h5><p>我把这些文件包括在内，让AMD RX卡工作，除了Vega 56/64，这将需要更多的工作。如果您有RX 560，请添加引导标志<code>-rad4200</code>以防止冻结，如此<strong>处所述</strong> 。</p>
+<h5 id="NVIDIA："><a href="#NVIDIA：" class="headerlink" title="NVIDIA："></a>NVIDIA：</h5><p>除EmuVariableUefi-64.efi外，如果您使用的是最新发布的Nvidia GPU之一，您将安装网络驱动程序。 不应该有任何你需要做的事情我已经设置了适当的CsrActivateConfig并添加了必要的kexts。 如果在安装网络驱动程序后出于某种原因无法正常工作，则可能需要在BIOS中禁用CMS。</p>
 <p>转到驱动程序页面获取Web驱动程序：</p>
 <p><strong>下载 - Nvidia Web驱动程序</strong></p>
 <p>注意：如果由于隐私设置而未能成功安装，可能需要重新安装Nvidia网络驱动程序。</p>
 <p>步骤4.声音，以太网和其他一切</p>
 <p>声音使用VoodooHDA.kext启用。 我包括了所有的以太网kexts，我可以想到，这将与Ryzen，但我建议删除你不需要的kexts。</p>
-<h3>关于打赏</h3>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h3>QQ群:</h3>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]</p>
+<h3 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h3><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]</p>
 <p>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-]]></content:encoded>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html#disqus_thread</comments>
     </item>
@@ -410,81 +327,37 @@
       <pubDate>Wed, 06 Dec 2017 20:59:10 GMT</pubDate>
       <description>
       
-        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
+        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-2-17C88-正式版-with-Clover-4333原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-2-17C88-正式版-with-Clover-4333
       
       </description>
       
-      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像</h1>
+      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-2-17C88-正式版-with-Clover-4333原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-2-17C88-正式版-with-Clover-4333原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像</h1><ul>
+<li>本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;</li>
+<li>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</li>
+<li><p>Clover</p>
 <ul>
-<li>
-<p>本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;</p>
-</li>
-<li>
-<p>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</p>
-</li>
-<li>
-<p>Clover</p>
-</li>
-<li>
-<p>支持UHD620/UHD630等八代核显</p>
-</li>
-<li>
-<p>特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理</p>
-</li>
-<li>
-<p>Clover默认配置文件config.plist为620/630/640/650；</p>
-</li>
-<li>
-<p>config_DalianSky.plist为部分机型增加<code>Drop Tables</code>,如果默认的<code>config.plist</code>无法进入安装界面,可以试试这个</p>
-</li>
-<li>
-<p>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</p>
-</li>
-<li>
-<p>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</p>
-</li>
-<li>
-<p>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡，支持Intel网卡；</p>
-</li>
-<li>
-<p>已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</p>
-</li>
-<li>
-<p>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</p>
-</li>
-<li>
-<p>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
-</li>
+<li>支持UHD620/UHD630等八代核显</li>
+<li>特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理</li>
+<li>Clover默认配置文件config.plist为620/630/640/650；</li>
+<li>config_DalianSky.plist为部分机型增加<code>Drop Tables</code>,如果默认的<code>config.plist</code>无法进入安装界面,可以试试这个</li>
+<li>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</li>
+<li>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</li>
 </ul>
-<h1>截图：</h1>
-<p><img src="http://7.daliansky.net/10.13.2_17C88.png" alt="10.13.2_17C88">
-<img src="http://7.daliansky.net/10.13.2_HD620.png" alt="10.13.2_HD620">
-<img src="http://7.daliansky.net/10.13.2_Battery.png" alt="10.13.2_Battery">
-<img src="http://7.daliansky.net/10.13.2_BlueTooth.png" alt="10.13.2_BlueTooth">
-<img src="http://7.daliansky.net/10.13.2_Memory.png" alt="10.13.2_Memory">
-<img src="http://7.daliansky.net/10.13.2_USB.png" alt="10.13.2_USB">
-<img src="http://7.daliansky.net/10.13.2_RTL8111.png" alt="10.13.2_RTL8111">
-<img src="http://7.daliansky.net/10.13.2_Wi-Fi.png" alt="10.13.2_Wi-Fi">
-<img src="http://7.daliansky.net/10.13.2_Configs.png" alt="10.13.2_Configs">
-<img src="http://7.daliansky.net/10.13.2.png" alt="10.13.2"></p>
-<h1>下载链接</h1>
-<p>百毒云下载链接:<a href="https://pan.baidu.com/s/1i5hBZDV" target="_blank" rel="external">https://pan.baidu.com/s/1i5hBZDV</a></p>
+</li>
+<li>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列网卡，支持Intel网卡；</li>
+<li>已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；</li>
+<li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
+<li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></li>
+</ul>
+<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.13.2_17C88.png" alt="10.13.2_17C88"><br><img src="http://7.daliansky.net/10.13.2_HD620.png" alt="10.13.2_HD620"><br><img src="http://7.daliansky.net/10.13.2_Battery.png" alt="10.13.2_Battery"><br><img src="http://7.daliansky.net/10.13.2_BlueTooth.png" alt="10.13.2_BlueTooth"><br><img src="http://7.daliansky.net/10.13.2_Memory.png" alt="10.13.2_Memory"><br><img src="http://7.daliansky.net/10.13.2_USB.png" alt="10.13.2_USB"><br><img src="http://7.daliansky.net/10.13.2_RTL8111.png" alt="10.13.2_RTL8111"><br><img src="http://7.daliansky.net/10.13.2_Wi-Fi.png" alt="10.13.2_Wi-Fi"><br><img src="http://7.daliansky.net/10.13.2_Configs.png" alt="10.13.2_Configs"><br><img src="http://7.daliansky.net/10.13.2.png" alt="10.13.2"></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接:<a href="https://pan.baidu.com/s/1i5hBZDV" target="_blank" rel="external">https://pan.baidu.com/s/1i5hBZDV</a></p>
 <p>Mega网盘下载链接:<a href="https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ" target="_blank" rel="external">https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
 <p>MD5 (macOS High Sierra 10.13.2(17C88) Installer with Clover 4333.dmg) = 7a05f3e9ccaf81a4e8d2f5e558a075ae</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
-688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html#disqus_thread</comments>
@@ -497,24 +370,19 @@
       <pubDate>Fri, 01 Dec 2017 03:31:00 GMT</pubDate>
       <description>
       
-        &lt;h2&gt;查看显卡&lt;code&gt;platform-id&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;显卡注入&lt;code&gt;platform-id&lt;/code&gt;通过命令读取:&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+        &lt;h2 id=&quot;查看显卡platform-id&quot;&gt;&lt;a href=&quot;#查看显卡platform-id&quot; class=&quot;headerlink&quot; title=&quot;查看显卡platform-id&quot;&gt;&lt;/a&gt;查看显卡&lt;code&gt;platform-id&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;显卡注入&lt;
       
       </description>
       
-      <content:encoded><![CDATA[<h2>查看显卡<code>platform-id</code></h2>
-<p>显卡注入<code>platform-id</code>通过命令读取:</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep platform-id</div></pre></td></tr></table></figure></p>
+      <content:encoded><![CDATA[<h2 id="查看显卡platform-id"><a href="#查看显卡platform-id" class="headerlink" title="查看显卡platform-id"></a>查看显卡<code>platform-id</code></h2><p>显卡注入<code>platform-id</code>通过命令读取:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep platform-id</div></pre></td></tr></table></figure>
 <p>显示结果如下</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"AAPL,ig-platform-id"</span> = &lt;00001659&gt;</div></pre></td></tr></table></figure></p>
-<h2>得出显卡注入ID是:59160000</h2>
-<p>读取核显驱动的加载情况,使用命令:</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep -y appleintel</div></pre></td></tr></table></figure></p>
-<p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (<span class="number">3.0</span>.<span class="number">60</span>)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (<span class="number">4.0</span>.<span class="number">0</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (<span class="number">10.2</span>.<span class="number">8</span>)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (<span class="number">2.0</span>.<span class="number">1</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (<span class="number">10.2</span>.<span class="number">8</span>)</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"AAPL,ig-platform-id"</span> = &lt;00001659&gt;</div></pre></td></tr></table></figure>
+<h2 id="得出显卡注入ID是-59160000"><a href="#得出显卡注入ID是-59160000" class="headerlink" title="得出显卡注入ID是:59160000"></a>得出显卡注入ID是:59160000</h2><p>读取核显驱动的加载情况,使用命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep -y appleintel</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (<span class="number">3.0</span>.<span class="number">60</span>)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (<span class="number">4.0</span>.<span class="number">0</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (<span class="number">10.2</span>.<span class="number">8</span>)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (<span class="number">2.0</span>.<span class="number">1</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (<span class="number">10.2</span>.<span class="number">8</span>)</div></pre></td></tr></table></figure>
 <p>由此可以判断所使用的驱动是<code>AppleIntelKBLGraphics</code>和<code>AppleIntelKBLGraphicsFramebuffer</code>,显示器的接口数据定义在<code>AppleIntelKBLGraphicsFramebuffer</code>里,通过<code>AppleIntelKBLGraphicsFramebuffer</code>提取接口数据</p>
-<h2>接口数据</h2>
-<table>
+<h2 id="接口数据"><a href="#接口数据" class="headerlink" title="接口数据"></a>接口数据</h2><table>
 <thead>
 <tr>
 <th>接口数据</th>
@@ -556,15 +424,10 @@
 </tr>
 </tbody>
 </table>
-<h2>显存容量修改</h2>
-<p>01030303 00002002 00000000 0000 0060 <strong>0600是16进制,转换成10进制就是:1536</strong>
-01030303 00002002 00000000 0000 0080 <strong>0800是16进制,转换成10进制就是:2048</strong></p>
-<h2>视频教程</h2>
-<p>&lt;video width=&quot;640&quot; height=&quot;480&quot; controls&gt;
-&lt;source src=&quot;http://7.daliansky.net/1536MB-2048MB.mp4&quot;&gt;
-&lt;/video&gt;</p>
-<h2>显示器接口数值定义</h2>
-<table>
+<h2 id="显存容量修改"><a href="#显存容量修改" class="headerlink" title="显存容量修改"></a>显存容量修改</h2><p>01030303 00002002 00000000 0000 0060 <strong>0600是16进制,转换成10进制就是:1536</strong><br>01030303 00002002 00000000 0000 0080 <strong>0800是16进制,转换成10进制就是:2048</strong></p>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><video width="640" height="480" controls><br><source src="http://7.daliansky.net/1536MB-2048MB.mp4"><br></video>
+
+<h2 id="显示器接口数值定义"><a href="#显示器接口数值定义" class="headerlink" title="显示器接口数值定义"></a>显示器接口数值定义</h2><table>
 <thead>
 <tr>
 <th>连接类型(connetor type)</th>
@@ -594,12 +457,8 @@
 </tr>
 </tbody>
 </table>
-<h2>关于打赏</h2>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h2>QQ群:</h2>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
-688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html#disqus_thread</comments>
@@ -613,219 +472,116 @@
       <description>
       
         &lt;blockquote&gt;
-&lt;p&gt;引言
-一直以来就想写个&lt;code&gt;macOS&lt;/code&gt;的安装教程,可惜没有&lt;code&gt;TransMac&lt;/code&gt;以及&lt;code&gt;BIOS&lt;/code&gt;设置的截图,正好&lt;a href=&quot;https://shang.qq.com/wpa/qun
+&lt;p&gt;引言&lt;br&gt;一直以来就想写个&lt;code&gt;macOS&lt;/code&gt;的安装教程,可惜没有&lt;code&gt;TransMac&lt;/code&gt;以及&lt;code&gt;BIOS&lt;/code&gt;设置的截图,正好&lt;a href=&quot;https://shang.qq.com/wpa/
       
       </description>
       
       <content:encoded><![CDATA[<blockquote>
-<p>引言
-一直以来就想写个<code>macOS</code>的安装教程,可惜没有<code>TransMac</code>以及<code>BIOS</code>设置的截图,正好<a href="https://shang.qq.com/wpa/qunwpa?idkey=7b6d1bfaf933337e2e6fa024cb947af43c2752537fb680f18fab001bd87c05e8" target="_blank" rel="external">小米PRO黑苹果高级群</a>的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善.</p>
+<p>引言<br>一直以来就想写个<code>macOS</code>的安装教程,可惜没有<code>TransMac</code>以及<code>BIOS</code>设置的截图,正好<a href="https://shang.qq.com/wpa/qunwpa?idkey=7b6d1bfaf933337e2e6fa024cb947af43c2752537fb680f18fab001bd87c05e8" target="_blank" rel="external">小米PRO黑苹果高级群</a>的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善.</p>
 </blockquote>
-<h1>Windows下制作macOS安装盘</h1>
-<h2>准备工具</h2>
-<ul>
+<h1 id="Windows下制作macOS安装盘"><a href="#Windows下制作macOS安装盘" class="headerlink" title="Windows下制作macOS安装盘"></a>Windows下制作macOS安装盘</h1><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><ul>
 <li>U盘大于8G</li>
 <li>U 盘大小不限做 PE 盘</li>
 <li>TransMac</li>
 <li>小米PRO专用EFI文件</li>
 <li>系统镜像</li>
 </ul>
-<h2>在 <code>Windows</code> 下安装 <code>TransMac</code></h2>
-<p>安装完成后，右键→管理员权限运行 <code>TransMac</code></p>
-<h2>利用 <code>TransMac</code> 制作<code>macOS</code>安装USB盘</h2>
-<ol>
-<li>
-<p>打开<code>TransMac</code>,选择欲制作的<code>USB</code>盘符
-<img src="http://7.daliansky.net/TransMac1.png" alt="TransMac1"></p>
+<h2 id="在-Windows-下安装-TransMac"><a href="#在-Windows-下安装-TransMac" class="headerlink" title="在 Windows 下安装 TransMac"></a>在 <code>Windows</code> 下安装 <code>TransMac</code></h2><p>安装完成后，右键→管理员权限运行 <code>TransMac</code></p>
+<h2 id="利用-TransMac-制作macOS安装USB盘"><a href="#利用-TransMac-制作macOS安装USB盘" class="headerlink" title="利用 TransMac 制作macOS安装USB盘"></a>利用 <code>TransMac</code> 制作<code>macOS</code>安装USB盘</h2><ol>
+<li><p>打开<code>TransMac</code>,选择欲制作的<code>USB</code>盘符<br>  <img src="http://7.daliansky.net/TransMac1.png" alt="TransMac1"></p>
 </li>
-<li>
-<p>右键选择<code>Restore with Disk Image</code>,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续
-<img src="http://7.daliansky.net/TransMac2.png" alt="TransMac2"></p>
+<li><p>右键选择<code>Restore with Disk Image</code>,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续<br>  <img src="http://7.daliansky.net/TransMac2.png" alt="TransMac2"></p>
 </li>
-<li>
-<p>在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成.
-<img src="http://7.daliansky.net/TransMac3.png" alt="TransMac3"></p>
+<li><p>在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成.<br>  <img src="http://7.daliansky.net/TransMac3.png" alt="TransMac3"></p>
 </li>
-<li>
-<p>写入完成，系统弹出将其格式化，点击取消
-<img src="http://7.daliansky.net/TransMac4.png" alt="TransMac4"></p>
+<li><p>写入完成，系统弹出将其格式化，点击取消<br>  <img src="http://7.daliansky.net/TransMac4.png" alt="TransMac4"></p>
 </li>
 </ol>
-<h1>macOS下制作USB安装盘</h1>
-<p>如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便.</p>
-<h2>准备工具</h2>
-<ul>
+<h1 id="macOS下制作USB安装盘"><a href="#macOS下制作USB安装盘" class="headerlink" title="macOS下制作USB安装盘"></a>macOS下制作USB安装盘</h1><p>如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便.</p>
+<h2 id="准备工具-1"><a href="#准备工具-1" class="headerlink" title="准备工具"></a>准备工具</h2><ul>
 <li>下载好的dmg镜像</li>
 <li>用于安装macOS的USB盘,容量8GB以上</li>
 <li>磁盘工具</li>
 </ul>
-<h2>制作过程</h2>
-<blockquote>
+<h2 id="制作过程"><a href="#制作过程" class="headerlink" title="制作过程"></a>制作过程</h2><blockquote>
 <p>为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示</p>
 </blockquote>
 <ol>
-<li>打开欲制作的dmg镜像,两种方法:
-<ul>
+<li>打开欲制作的dmg镜像,两种方法:<ul>
 <li>使用磁盘工具,选择<code>File</code>-<code>Open Disk Image</code></li>
-<li>直接通过<code>Finder</code>双击dmg打开
-<img src="http://7.daliansky.net/DiskUtility.png" alt="DiskUtility"></li>
+<li>直接通过<code>Finder</code>双击dmg打开<br><img src="http://7.daliansky.net/DiskUtility.png" alt="DiskUtility"></li>
 </ul>
 </li>
 </ol>
-<ol start="2">
-<li>
-<p>打开<code>磁盘工具</code>,选择<code>SANDISK 8GB USB</code>
-<img src="http://7.daliansky.net/DiskUtility2.png" alt="DiskUtility2"></p>
+<ol>
+<li><p>打开<code>磁盘工具</code>,选择<code>SANDISK 8GB USB</code><br>  <img src="http://7.daliansky.net/DiskUtility2.png" alt="DiskUtility2"></p>
 </li>
-<li>
-<p>点击<code>恢复/Restore</code>按钮,选择<code>XiaoMiPro 10131</code>,点击<code>恢复/Restore</code>
-<img src="http://7.daliansky.net/DiskUtility3.png" alt="DiskUtility3">
-它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘
-<img src="http://7.daliansky.net/DiskUtility4.png" alt="DiskUtility4"></p>
-</li>
-<li>
-<p>镜像恢复完成后,它会显示如图所示
-<img src="http://7.daliansky.net/DiskUtility5.png" alt="DiskUtility5">
-点击<code>完成/Done</code>按钮后,会显示完成后的USB磁盘信息
-<img src="http://7.daliansky.net/DiskUtility6.png" alt="DiskUtility6"></p>
-</li>
+<li><p>点击<code>恢复/Restore</code>按钮,选择<code>XiaoMiPro 10131</code>,点击<code>恢复/Restore</code><br>  <img src="http://7.daliansky.net/DiskUtility3.png" alt="DiskUtility3"></p>
+<pre><code>它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘
+![DiskUtility4](http://7.daliansky.net/DiskUtility4.png)
+</code></pre></li>
+<li><p>镜像恢复完成后,它会显示如图所示<br>  <img src="http://7.daliansky.net/DiskUtility5.png" alt="DiskUtility5"></p>
+<pre><code>点击`完成/Done`按钮后,会显示完成后的USB磁盘信息
+![DiskUtility6](http://7.daliansky.net/DiskUtility6.png)
+</code></pre></li>
 </ol>
 <p>安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里</p>
-<h2>将镜像里的EFI复制到USB安装盘的EFI分区下</h2>
-<h3>显示磁盘分区信息</h3>
-<p>打开终端,输入命令:<code>diskutil list</code>,它会显示类似的信息:</p>
-<p><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/dev/disk4 (disk image):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        +8.0 GB     disk4</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk4s1</div><div class="line">   2:                  Apple_HFS XiaoMiPro 10131         7.7 GB     disk4s2</div><div class="line"></div><div class="line">/dev/disk5 (disk image):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        +7.0 GB     disk5</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk5s1</div><div class="line">   2:                  Apple_HFS XiaoMiPro 10131         6.7 GB     disk5s2</div></pre></td></tr></table></figure></p>
-<p>这里显示的<code>8.0 GB</code>的磁盘设备为:<code>disk4</code>,也就是我们刚才制作的安装磁盘,<code>EFI</code>分区的设备为:<code>disk4s1</code>;
-<code>7.0 GB</code>的磁盘设备为:<code>disk5</code>,这个是我们刚才打开的磁盘镜像,它包含的<code>EFI</code>分区的设备为:<code>disk5s1</code>;</p>
-<h3>挂载EFI分区</h3>
-<p>我们使用<code>diskutil</code>命令分别挂载这两个<code>EFI</code>分区,命令如下:</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk4s1  <span class="comment"># 挂载USB的EFI分区</span></div><div class="line">Volume EFI on disk4s1 mounted</div><div class="line">diskutil mount disk5s1  <span class="comment"># 挂载安装镜像的EFI分区</span></div><div class="line">Volume EFI on disk5s1 mounted</div><div class="line">open .                  <span class="comment"># 在当前位置打开Finder</span></div></pre></td></tr></table></figure></p>
-<h3>复制/替换EFI</h3>
-<p>将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作</p>
-<h1>小米BIOS设置</h1>
-<p>小米笔记本的BIOS默认开启了安全认证,UEFI引导需要关闭安全启动<code>Secure Boot Mode</code>方式,否则无法加载UEFI引导设备,比如刚制作好的macOS安装USB盘</p>
-<h2>操作方法:</h2>
+<h2 id="将镜像里的EFI复制到USB安装盘的EFI分区下"><a href="#将镜像里的EFI复制到USB安装盘的EFI分区下" class="headerlink" title="将镜像里的EFI复制到USB安装盘的EFI分区下"></a>将镜像里的EFI复制到USB安装盘的EFI分区下</h2><h3 id="显示磁盘分区信息"><a href="#显示磁盘分区信息" class="headerlink" title="显示磁盘分区信息"></a>显示磁盘分区信息</h3><p>打开终端,输入命令:<code>diskutil list</code>,它会显示类似的信息:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/dev/disk4 (disk image):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        +8.0 GB     disk4</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk4s1</div><div class="line">   2:                  Apple_HFS XiaoMiPro 10131         7.7 GB     disk4s2</div><div class="line"></div><div class="line">/dev/disk5 (disk image):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        +7.0 GB     disk5</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk5s1</div><div class="line">   2:                  Apple_HFS XiaoMiPro 10131         6.7 GB     disk5s2</div></pre></td></tr></table></figure>
+<p>这里显示的<code>8.0 GB</code>的磁盘设备为:<code>disk4</code>,也就是我们刚才制作的安装磁盘,<code>EFI</code>分区的设备为:<code>disk4s1</code>;<br><code>7.0 GB</code>的磁盘设备为:<code>disk5</code>,这个是我们刚才打开的磁盘镜像,它包含的<code>EFI</code>分区的设备为:<code>disk5s1</code>;</p>
+<h3 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>我们使用<code>diskutil</code>命令分别挂载这两个<code>EFI</code>分区,命令如下:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk4s1  <span class="comment"># 挂载USB的EFI分区</span></div><div class="line">Volume EFI on disk4s1 mounted</div><div class="line">diskutil mount disk5s1  <span class="comment"># 挂载安装镜像的EFI分区</span></div><div class="line">Volume EFI on disk5s1 mounted</div><div class="line">open .                  <span class="comment"># 在当前位置打开Finder</span></div></pre></td></tr></table></figure>
+<h3 id="复制-替换EFI"><a href="#复制-替换EFI" class="headerlink" title="复制/替换EFI"></a>复制/替换EFI</h3><p>将EFI复制进USB的EFI分区下即可,至于你想替换EFI也可以参考此方法操作</p>
+<h1 id="小米BIOS设置"><a href="#小米BIOS设置" class="headerlink" title="小米BIOS设置"></a>小米BIOS设置</h1><p>小米笔记本的BIOS默认开启了安全认证,UEFI引导需要关闭安全启动<code>Secure Boot Mode</code>方式,否则无法加载UEFI引导设备,比如刚制作好的macOS安装USB盘</p>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法:"></a>操作方法:</h2><ol>
+<li><p>开机按<code>F2</code>进入<code>BIOS</code>设置,光标移动到<code>Security</code>,点击<code>Set Supervisor Password</code>设置一个<code>BIOS</code>密码,输入两次相同的密码,点击<code>YES</code>保存<br>  <img src="http://7.daliansky.net/XiaoMi-Bios1.png" alt="XiaoMi-Bios1"></p>
+<pre><code>![XiaoMi-Bios2](http://7.daliansky.net/XiaoMi-Bios2.png)
+`Supervisor Password`由`Not Installed`变为`Installed`
+</code></pre></li>
+<li><p>关闭安全启动</p>
+</li>
+</ol>
+<p><img src="http://7.daliansky.net/XiaoMi-Bios3.png" alt="XiaoMi-Bios3"><br>点击<code>Secure Boot Mode</code>,设置为<code>Disabled</code>关闭安全启动<br><img src="http://7.daliansky.net/XiaoMi-Bios4.png" alt="XiaoMi-Bios4"></p>
 <ol>
-<li>
-<p>开机按<code>F2</code>进入<code>BIOS</code>设置,光标移动到<code>Security</code>,点击<code>Set Supervisor Password</code>设置一个<code>BIOS</code>密码,输入两次相同的密码,点击<code>YES</code>保存
-<img src="http://7.daliansky.net/XiaoMi-Bios1.png" alt="XiaoMi-Bios1">
-<img src="http://7.daliansky.net/XiaoMi-Bios2.png" alt="XiaoMi-Bios2">
-<code>Supervisor Password</code>由<code>Not Installed</code>变为<code>Installed</code></p>
-</li>
-<li>
-<p>关闭安全启动</p>
-</li>
-</ol>
-<p><img src="http://7.daliansky.net/XiaoMi-Bios3.png" alt="XiaoMi-Bios3">
-点击<code>Secure Boot Mode</code>,设置为<code>Disabled</code>关闭安全启动
-<img src="http://7.daliansky.net/XiaoMi-Bios4.png" alt="XiaoMi-Bios4"></p>
-<ol start="3">
-<li>
-<p>按<code>F10</code>保存设置</p>
+<li><p>按<code>F10</code>保存设置</p>
 <p>​</p>
-</li>
+<h1 id="安装macOS"><a href="#安装macOS" class="headerlink" title="安装macOS"></a>安装macOS</h1></li>
 </ol>
-<h1>安装macOS</h1>
 <p>开机按<code>F12</code>键进入<code>Boot Manager</code>引导管理,选择<code>EFI USB Device</code>,回车<img src="http://7.daliansky.net/XiaoMi-Bios5.png" alt="XiaoMi-Bios5"></p>
-<p>进入<code>Clover</code>主菜单
-<img src="http://7.daliansky.net/XiaoMiCloverboot.png" alt="XiaoMiCloverboot"></p>
-<p>移动光标到<code>Boot OS X Install from XiaoMiPro 10131</code>回车
-如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考<a href="https://blog.daliansky.net/clover-user-manual.html">Clover使用教程</a></p>
+<p>进入<code>Clover</code>主菜单<br><img src="http://7.daliansky.net/XiaoMiCloverboot.png" alt="XiaoMiCloverboot"></p>
+<p>移动光标到<code>Boot OS X Install from XiaoMiPro 10131</code>回车<br>如果无法进入安装界面,需要打开啰嗦模式进行排错,具体的操作方法请参考<a href="https://blog.daliansky.net/clover-user-manual.html">Clover使用教程</a></p>
 <p>11-26-2017 19:25更新</p>
 <p>未完待续</p>
-<h2>安装第一阶段</h2>
-<h3>开始引导macOS系统</h3>
-<p><img src="http://7.daliansky.net/ParallelsPicture.png" alt="ParallelsPicture"></p>
+<h2 id="安装第一阶段"><a href="#安装第一阶段" class="headerlink" title="安装第一阶段"></a>安装第一阶段</h2><h3 id="开始引导macOS系统"><a href="#开始引导macOS系统" class="headerlink" title="开始引导macOS系统"></a>开始引导macOS系统</h3><p><img src="http://7.daliansky.net/ParallelsPicture.png" alt="ParallelsPicture"></p>
 <p>这个过程需要1-2分钟,耐心等待进入安装程序,出现语言选择界面</p>
-<h3>语言选择</h3>
-<p>选择简体中文
-<img src="http://7.daliansky.net/ParallelsPicture1.png" alt="ParallelsPicture1"></p>
+<h3 id="语言选择"><a href="#语言选择" class="headerlink" title="语言选择"></a>语言选择</h3><p>选择简体中文<br><img src="http://7.daliansky.net/ParallelsPicture1.png" alt="ParallelsPicture1"></p>
 <p>出现<code>macOS实用工具</code>界面,选择磁盘工具</p>
-<h3>磁盘工具</h3>
-<p><img src="http://7.daliansky.net/ParallelsPicture0.png" alt="ParallelsPicture0">
-选择<code>显示所有设备</code>:
-<img src="http://7.daliansky.net/ParallelsPicture2.png" alt="ParallelsPicture2">
-选择<code>SSD Media</code>,点击<code>抹掉</code>按钮,选择默认的<code>Mac OS扩展(日志型)</code>,将名称修改为<code>Macintosh HD</code>,点击<code>抹掉</code>按钮</p>
-<p><strong><em>假设您的磁盘是空的且数据是已经备份过的,别怪我没提醒你!!!</em></strong></p>
-<p><img src="http://7.daliansky.net/ParallelsPicture6.png" alt="ParallelsPicture6">
-抹盘成功后,它会自动生成一个200MB的EFI分区,这样做的好处是不会出现安装过程中的由于EFI分区尺寸小于200MB而引起的无法安装的错误.当然前提是你的磁盘中没有重要的数据,或者您的数据已经提前备份过了.
-<img src="http://7.daliansky.net/ParallelsPicture7.png" alt="ParallelsPicture7">
-到这里,磁盘工具的动作就已经结束了.退出磁盘工具进入安装界面,进行系统的安装了.</p>
-<h3>安装macOS</h3>
-<p><img src="http://7.daliansky.net/ParallelsPicture8.png" alt="ParallelsPicture8">
-进入安装界面
-<img src="http://7.daliansky.net/ParallelsPicture11.png" alt="ParallelsPicture11">
-选择继续
-<img src="http://7.daliansky.net/ParallelsPicture12.png" alt="ParallelsPicture12">
-<img src="http://7.daliansky.net/ParallelsPicture13.png" alt="ParallelsPicture13">
-点击同意,选择<code>Macintosh HD</code>
-![ParallelsPicture 14](http://7.daliansky.net/ParallelsPicture 14.png)
-选择安装
-![ParallelsPicture 15](http://7.daliansky.net/ParallelsPicture 15.png)
-期间,它会把USB安装盘上的安装文件预复制到要安装的系统分区里,这个过程在小米Pro的笔记本上它跑得飞快,数据复制完后,它会自动重启
-<img src="http://7.daliansky.net/ParallelsPicture16.png" alt="ParallelsPicture16">
-然后进行第二阶段的安装</p>
-<h2>安装第二阶段</h2>
-<p>第二阶段的安装会有两种界面,一种是不进安装界面直接安装,另一种是先进入安装界面直接安装,需要注意的是,无论是哪一种界面下,安装的过程中全程是禁用鼠标和键盘的,需要你做的只是耐心等待它安装完成</p>
-<p>![ParallelsPicture 17](http://7.daliansky.net/ParallelsPicture 17.png)</p>
-<p>安装速度取决于你的磁盘速度,第二阶段的安装已经与USB安装盘没什么关系了.macOS 10.13的安装完全区别于10.12,它不能免二次安装,甚至还需要重启多次,这些都是正常现象,请不要大惊小怪的.
-系统安装完成后,重启进入系统设置向导</p>
-<h2>设置向导</h2>
-<h3>国家选择</h3>
-<p><img src="http://7.daliansky.net/Installer3.png" alt="Installer3">
-首先让你选择国家,这里我选择中国
-<img src="http://7.daliansky.net/Installer4.png" alt="Installer4">
-点击<code>继续</code>,设置键盘</p>
-<h3>设置键盘</h3>
-<p><img src="http://7.daliansky.net/Installer5.png" alt="Installer5">
-这里询问你<code>是否传输信息到这台Mac</code></p>
-<h3>数据恢复</h3>
-<p>可以从Mac或者Time Machine备份恢复</p>
-<p><img src="http://7.daliansky.net/Installer6.png" alt="Installer6">
-我选择<code>现在不传输任何信息</code>,点击<code>继续</code></p>
-<h3>Apple ID登录</h3>
-<p><img src="http://7.daliansky.net/Installer7.png" alt="Installer7">
-选择是否<code>使用您的Apple ID登录</code>,如何想现在就登录到<code>Apple ID</code>,请输入<code>Apple ID</code>和密码登录,否则选择<code>不登录</code>,进入系统后也可以设置登录到<code>iCloud</code>,点击<code>继续</code>
-<img src="http://7.daliansky.net/Installer8.png" alt="Installer8">
-阅读条款与条件,选择<code>同意</code>继续
-<img src="http://7.daliansky.net/Installer9.png" alt="Installer9">
-出现<code>创建电脑用户</code>的窗口,输入用户名和密码,点击<code>继续</code></p>
-<h3>创建电脑用户</h3>
-<p><img src="http://7.daliansky.net/Installer10.png" alt="Installer10">
-系统会创建初始用户
-<img src="http://7.daliansky.net/Installer11.png" alt="Installer11">
-用户创建成功后,弹出<code>iCloud</code>的<code>正在设置用户</code>的窗口
-<img src="http://7.daliansky.net/Installer12.png" alt="Installer12">
-紧接着弹出设置<code>iClound钥匙串</code>的设置窗口,选择<code>稍候设置</code>,点击<code>继续</code></p>
-<h3>设置iCloud钥匙串</h3>
-<p><img src="http://7.daliansky.net/Installer13.png" alt="Installer13">
-出现<code>快捷设置</code>,点击<code>继续</code></p>
-<h3>快捷设置</h3>
-<p>自定义设置定位以及数据反馈,请根据自己的喜好进行设置</p>
-<p><img src="http://7.daliansky.net/Installer14.png" alt="Installer14">
-出现<code>iCloud中的所有文件</code>,如果你需要<code>将文稿和桌面上的文件储存在 iCloud Drive中</code>,请勾选,否则取消勾选,点击继续</p>
-<h3>iCloud文件同步设置</h3>
-<p><img src="http://7.daliansky.net/Installer16.png" alt="Installer16">
-出现<code>FileVault磁盘加密</code>,如果你需要<code>打开 Filevault 磁盘加密</code>,请勾选,否则取消勾选,点击继续</p>
-<h3>FileVault磁盘加密设置</h3>
-<p><img src="http://7.daliansky.net/Installer17.png" alt="Installer17">
-出现<code>正在设置您的Mac</code>,请稍候完成设置向导</p>
-<h3>设置向导完成</h3>
-<p><img src="http://7.daliansky.net/Installer18.png" alt="Installer18">
-出现桌面后,整个的安装向导就完成了.
-<img src="http://7.daliansky.net/Installer19.png" alt="Installer19"></p>
-<p>更新于 11-27-2017 21:15
-未完待续</p>
-<h1>安装后的系统设置</h1>
-<p>系统安装后,你可以先喝杯咖啡兴奋会儿,马上还有更艰巨的任务在等着你呢</p>
-<h2>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]</h2>
-<blockquote>
+<h3 id="磁盘工具"><a href="#磁盘工具" class="headerlink" title="磁盘工具"></a>磁盘工具</h3><p><img src="http://7.daliansky.net/ParallelsPicture0.png" alt="ParallelsPicture0"><br>选择<code>显示所有设备</code>:<br><img src="http://7.daliansky.net/ParallelsPicture2.png" alt="ParallelsPicture2"><br>选择<code>SSD Media</code>,点击<code>抹掉</code>按钮,选择默认的<code>Mac OS扩展(日志型)</code>,将名称修改为<code>Macintosh HD</code>,点击<code>抹掉</code>按钮</p>
+<p> <strong><em>假设您的磁盘是空的且数据是已经备份过的,别怪我没提醒你!!!</em></strong></p>
+<p><img src="http://7.daliansky.net/ParallelsPicture6.png" alt="ParallelsPicture6"><br>抹盘成功后,它会自动生成一个200MB的EFI分区,这样做的好处是不会出现安装过程中的由于EFI分区尺寸小于200MB而引起的无法安装的错误.当然前提是你的磁盘中没有重要的数据,或者您的数据已经提前备份过了.<br><img src="http://7.daliansky.net/ParallelsPicture7.png" alt="ParallelsPicture7"><br>到这里,磁盘工具的动作就已经结束了.退出磁盘工具进入安装界面,进行系统的安装了.</p>
+<h3 id="安装macOS-1"><a href="#安装macOS-1" class="headerlink" title="安装macOS"></a>安装macOS</h3><p><img src="http://7.daliansky.net/ParallelsPicture8.png" alt="ParallelsPicture8"><br>进入安装界面<br><img src="http://7.daliansky.net/ParallelsPicture11.png" alt="ParallelsPicture11"><br>选择继续<br><img src="http://7.daliansky.net/ParallelsPicture12.png" alt="ParallelsPicture12"><br><img src="http://7.daliansky.net/ParallelsPicture13.png" alt="ParallelsPicture13"><br>点击同意,选择<code>Macintosh HD</code><br><img src="http://7.daliansky.net/ParallelsPicture 14.png" alt="ParallelsPicture 14"><br>选择安装<br><img src="http://7.daliansky.net/ParallelsPicture 15.png" alt="ParallelsPicture 15"><br>期间,它会把USB安装盘上的安装文件预复制到要安装的系统分区里,这个过程在小米Pro的笔记本上它跑得飞快,数据复制完后,它会自动重启<br><img src="http://7.daliansky.net/ParallelsPicture16.png" alt="ParallelsPicture16"><br>然后进行第二阶段的安装</p>
+<h2 id="安装第二阶段"><a href="#安装第二阶段" class="headerlink" title="安装第二阶段"></a>安装第二阶段</h2><p>第二阶段的安装会有两种界面,一种是不进安装界面直接安装,另一种是先进入安装界面直接安装,需要注意的是,无论是哪一种界面下,安装的过程中全程是禁用鼠标和键盘的,需要你做的只是耐心等待它安装完成</p>
+<p><img src="http://7.daliansky.net/ParallelsPicture 17.png" alt="ParallelsPicture 17"></p>
+<p>安装速度取决于你的磁盘速度,第二阶段的安装已经与USB安装盘没什么关系了.macOS 10.13的安装完全区别于10.12,它不能免二次安装,甚至还需要重启多次,这些都是正常现象,请不要大惊小怪的.<br>系统安装完成后,重启进入系统设置向导</p>
+<h2 id="设置向导"><a href="#设置向导" class="headerlink" title="设置向导"></a>设置向导</h2><h3 id="国家选择"><a href="#国家选择" class="headerlink" title="国家选择"></a>国家选择</h3><p><img src="http://7.daliansky.net/Installer3.png" alt="Installer3"><br>首先让你选择国家,这里我选择中国<br><img src="http://7.daliansky.net/Installer4.png" alt="Installer4"><br>点击<code>继续</code>,设置键盘</p>
+<h3 id="设置键盘"><a href="#设置键盘" class="headerlink" title="设置键盘"></a>设置键盘</h3><p><img src="http://7.daliansky.net/Installer5.png" alt="Installer5"><br>这里询问你<code>是否传输信息到这台Mac</code></p>
+<h3 id="数据恢复"><a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h3><p>可以从Mac或者Time Machine备份恢复</p>
+<p><img src="http://7.daliansky.net/Installer6.png" alt="Installer6"><br>我选择<code>现在不传输任何信息</code>,点击<code>继续</code></p>
+<h3 id="Apple-ID登录"><a href="#Apple-ID登录" class="headerlink" title="Apple ID登录"></a>Apple ID登录</h3><p><img src="http://7.daliansky.net/Installer7.png" alt="Installer7"><br>选择是否<code>使用您的Apple ID登录</code>,如何想现在就登录到<code>Apple ID</code>,请输入<code>Apple ID</code>和密码登录,否则选择<code>不登录</code>,进入系统后也可以设置登录到<code>iCloud</code>,点击<code>继续</code><br><img src="http://7.daliansky.net/Installer8.png" alt="Installer8"><br>阅读条款与条件,选择<code>同意</code>继续<br><img src="http://7.daliansky.net/Installer9.png" alt="Installer9"><br>出现<code>创建电脑用户</code>的窗口,输入用户名和密码,点击<code>继续</code></p>
+<h3 id="创建电脑用户"><a href="#创建电脑用户" class="headerlink" title="创建电脑用户"></a>创建电脑用户</h3><p><img src="http://7.daliansky.net/Installer10.png" alt="Installer10"><br>系统会创建初始用户<br><img src="http://7.daliansky.net/Installer11.png" alt="Installer11"><br>用户创建成功后,弹出<code>iCloud</code>的<code>正在设置用户</code>的窗口<br><img src="http://7.daliansky.net/Installer12.png" alt="Installer12"><br>紧接着弹出设置<code>iClound钥匙串</code>的设置窗口,选择<code>稍候设置</code>,点击<code>继续</code></p>
+<h3 id="设置iCloud钥匙串"><a href="#设置iCloud钥匙串" class="headerlink" title="设置iCloud钥匙串"></a>设置iCloud钥匙串</h3><p><img src="http://7.daliansky.net/Installer13.png" alt="Installer13"><br>出现<code>快捷设置</code>,点击<code>继续</code></p>
+<h3 id="快捷设置"><a href="#快捷设置" class="headerlink" title="快捷设置"></a>快捷设置</h3><p>自定义设置定位以及数据反馈,请根据自己的喜好进行设置</p>
+<p><img src="http://7.daliansky.net/Installer14.png" alt="Installer14"><br>出现<code>iCloud中的所有文件</code>,如果你需要<code>将文稿和桌面上的文件储存在 iCloud Drive中</code>,请勾选,否则取消勾选,点击继续</p>
+<h3 id="iCloud文件同步设置"><a href="#iCloud文件同步设置" class="headerlink" title="iCloud文件同步设置"></a>iCloud文件同步设置</h3><p><img src="http://7.daliansky.net/Installer16.png" alt="Installer16"><br>出现<code>FileVault磁盘加密</code>,如果你需要<code>打开 Filevault 磁盘加密</code>,请勾选,否则取消勾选,点击继续</p>
+<h3 id="FileVault磁盘加密设置"><a href="#FileVault磁盘加密设置" class="headerlink" title="FileVault磁盘加密设置"></a>FileVault磁盘加密设置</h3><p><img src="http://7.daliansky.net/Installer17.png" alt="Installer17"><br>出现<code>正在设置您的Mac</code>,请稍候完成设置向导</p>
+<h3 id="设置向导完成"><a href="#设置向导完成" class="headerlink" title="设置向导完成"></a>设置向导完成</h3><p><img src="http://7.daliansky.net/Installer18.png" alt="Installer18"><br>出现桌面后,整个的安装向导就完成了.<br><img src="http://7.daliansky.net/Installer19.png" alt="Installer19"></p>
+<p>更新于 11-27-2017 21:15<br>未完待续</p>
+<h1 id="安装后的系统设置"><a href="#安装后的系统设置" class="headerlink" title="安装后的系统设置"></a>安装后的系统设置</h1><p>系统安装后,你可以先喝杯咖啡兴奋会儿,马上还有更艰巨的任务在等着你呢</p>
+<h2 id="教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-macOS篇"><a href="#教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-macOS篇" class="headerlink" title="教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]"></a>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]</h2><blockquote>
 <p>新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让<code>diskutil</code>登场了。</p>
 </blockquote>
 <p><code>diskutil</code>命令的基本用法：</p>
-<h3>查看磁盘分区表</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure></p>
+<h3 id="查看磁盘分区表"><a href="#查看磁盘分区表" class="headerlink" title="查看磁盘分区表"></a>查看磁盘分区表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil list</div></pre></td></tr></table></figure>
 <p>/dev/disk0(internal, physical):</p>
 <table>
 <thead>
@@ -903,51 +659,29 @@
 </tr>
 </tbody>
 </table>
-<h3>挂载磁盘EFI分区</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk0s1</div></pre></td></tr></table></figure></p>
-<h3>挂载U盘EFI分区</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk1s1</div></pre></td></tr></table></figure></p>
-<p>打开Finder，注意后面有个<code>.</code></p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open .</div></pre></td></tr></table></figure></p>
+<h3 id="挂载磁盘EFI分区"><a href="#挂载磁盘EFI分区" class="headerlink" title="挂载磁盘EFI分区"></a>挂载磁盘EFI分区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk0s1</div></pre></td></tr></table></figure>
+<h3 id="挂载U盘EFI分区"><a href="#挂载U盘EFI分区" class="headerlink" title="挂载U盘EFI分区"></a>挂载U盘EFI分区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskutil mount disk1s1</div></pre></td></tr></table></figure>
+<p> 打开Finder，注意后面有个<code>.</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open .</div></pre></td></tr></table></figure>
 <p>左侧会显示挂载了两个EFI分区，将U盘EFI目录全部复制到磁盘的EFI分区即可。</p>
-<h3>合并EFI分区</h3>
-<p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是</em><strong>合并</strong><em>的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
-<h3>复制EFI分区</h3>
-<p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
-<h2>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[Windows篇]</h2>
-<h3>挂载EFI分区</h3>
-<p>Windows操作系统下面,打开<code>cmd</code>窗口,输入命令:</p>
-<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div></pre></td></tr></table></figure></p>
-<p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区
-打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式,将USB的EFI分区下面的EFI目录复制到安装磁盘的EFI分区下</p>
-<h3>合并EFI分区</h3>
-<p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是</em><strong>合并</strong><em>的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
-<h3>复制EFI分区</h3>
-<p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
-<h2>添加UEFI引导选项</h2>
-<p>使用工具:BOOTICE</p>
-<h3>操作过程:</h3>
-<ol>
-<li>打开BOOTICE软件,选择<code>物理磁盘</code>,选择欲操作的目标磁盘,点击<code>分区管理</code>,弹出分区管理的窗口,点击<code>分配盘符</code>,为<code>ESP</code>分区分配一个盘符,点击确定
-<img src="http://7.daliansky.net/BOOTICE1.jpg" alt="BOOTICE1"></li>
-<li>选择<code>UEFI</code>,点击<code>修改启动序列</code>,点击<code>添加</code>按钮,菜单标题填写:<code>CLOVER</code>,选择<code>启动文件</code>,在打开的窗口里选择<code>ESP</code>分区下的目录<code>\EFI\CLOVER\CLOVERX64.EFI</code>,点击<code>保存当前启动项设置</code>
-<img src="http://7.daliansky.net/BOOTICE2.jpg" alt="BOOTICE2"></li>
+<h3 id="合并EFI分区"><a href="#合并EFI分区" class="headerlink" title="合并EFI分区"></a>合并EFI分区</h3><p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是**</em>合并<em>**的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
+<h3 id="复制EFI分区"><a href="#复制EFI分区" class="headerlink" title="复制EFI分区"></a>复制EFI分区</h3><p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
+<h2 id="教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-Windows篇"><a href="#教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-Windows篇" class="headerlink" title="教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[Windows篇]"></a>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[Windows篇]</h2><h3 id="挂载EFI分区-1"><a href="#挂载EFI分区-1" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>Windows操作系统下面,打开<code>cmd</code>窗口,输入命令:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div></pre></td></tr></table></figure>
+<p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区<br>打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式,将USB的EFI分区下面的EFI目录复制到安装磁盘的EFI分区下</p>
+<h3 id="合并EFI分区-1"><a href="#合并EFI分区-1" class="headerlink" title="合并EFI分区"></a>合并EFI分区</h3><p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是**</em>合并<em>**的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
+<h3 id="复制EFI分区-1"><a href="#复制EFI分区-1" class="headerlink" title="复制EFI分区"></a>复制EFI分区</h3><p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
+<h2 id="添加UEFI引导选项"><a href="#添加UEFI引导选项" class="headerlink" title="添加UEFI引导选项"></a>添加UEFI引导选项</h2><p>使用工具:BOOTICE</p>
+<h3 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程:"></a>操作过程:</h3><ol>
+<li>打开BOOTICE软件,选择<code>物理磁盘</code>,选择欲操作的目标磁盘,点击<code>分区管理</code>,弹出分区管理的窗口,点击<code>分配盘符</code>,为<code>ESP</code>分区分配一个盘符,点击确定<br>  <img src="http://7.daliansky.net/BOOTICE1.jpg" alt="BOOTICE1"></li>
+<li>选择<code>UEFI</code>,点击<code>修改启动序列</code>,点击<code>添加</code>按钮,菜单标题填写:<code>CLOVER</code>,选择<code>启动文件</code>,在打开的窗口里选择<code>ESP</code>分区下的目录<code>\EFI\CLOVER\CLOVERX64.EFI</code>,点击<code>保存当前启动项设置</code><br>  <img src="http://7.daliansky.net/BOOTICE2.jpg" alt="BOOTICE2"></li>
 </ol>
-<h2>完善驱动</h2>
-<p>小米Pro的专用镜像已经包括了笔记本本身的所有的驱动.由于众所周知的原因,小米板载的INTEL无线网卡是焊死在主板上的,扩展槽又无法添加WIFI无线网卡,所以选择一个外置的USB无线网卡是种无奈之举.</p>
-<h3>USB无线网卡及安装驱动程序</h3>
-<p>补充</p>
+<h2 id="完善驱动"><a href="#完善驱动" class="headerlink" title="完善驱动"></a>完善驱动</h2><p>小米Pro的专用镜像已经包括了笔记本本身的所有的驱动.由于众所周知的原因,小米板载的INTEL无线网卡是焊死在主板上的,扩展槽又无法添加WIFI无线网卡,所以选择一个外置的USB无线网卡是种无奈之举.</p>
+<h3 id="USB无线网卡及安装驱动程序"><a href="#USB无线网卡及安装驱动程序" class="headerlink" title="USB无线网卡及安装驱动程序"></a>USB无线网卡及安装驱动程序</h3><p>补充</p>
 <p>最后更新:11-28-2017 AM11:30</p>
-<h1>特别鸣谢:</h1>
-<p><code>@原味菠萝</code> <code>@(￣(工)￣)_小哥哥</code> <code>@_</code> 为本教程提供的部分素材</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>247451054 <a href="http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e" target="_blank" rel="external">小米PRO黑苹果高级群</a>
-331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
-688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
-257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
+<h1 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢:"></a>特别鸣谢:</h1><p><code>@原味菠萝</code> <code>@(￣(工)￣)_小哥哥</code> <code>@_</code> 为本教程提供的部分素材</p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>247451054 <a href="http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e" target="_blank" rel="external">小米PRO黑苹果高级群</a><br>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a><br>688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]<br>257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html#disqus_thread</comments>
