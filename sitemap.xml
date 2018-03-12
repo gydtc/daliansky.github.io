@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/AppleALC-Supported-codecs.html</loc>
+    
+    <lastmod>2018-03-12T03:34:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Intel-core-display-platformID-finishing.html</loc>
     
     <lastmod>2018-03-05T02:04:23.000Z</lastmod>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html</loc>
+    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
     
     <lastmod>2018-01-26T05:52:45.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
+    <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
     
     <lastmod>2018-01-26T05:52:45.000Z</lastmod>
     
@@ -65,7 +72,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html</loc>
     
     <lastmod>2018-01-26T05:52:45.000Z</lastmod>
     
@@ -87,13 +94,6 @@
   
   <url>
     <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
-    
-    <lastmod>2018-01-26T05:44:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-and-Clover-4221-original-image.html</loc>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -170,16 +170,16 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13GM-17A362a-and-clover-4207-original-mirror.html</loc>
+    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/AppleALC-Supported-codecs.html</loc>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-and-Clover-4221-original-image.html</loc>
     
-    <lastmod>2017-12-17T14:56:44.000Z</lastmod>
+    <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
   </url>
   

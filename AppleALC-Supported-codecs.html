@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="如何使用AppleALC如果您的编解码器支持，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在AppleHDA之前加载AppleALC（有关更多详细信息，请参阅sudo kextstat输出）。 请注意，Lilu 也必须出现在AppleALC上。 按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。 备">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-17T14:56:44.000Z">
+<meta property="og:updated_time" content="2018-03-12T03:34:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AppleALC支持的Codecs列表及AppleALC的使用">
 <meta name="twitter:description" content="如何使用AppleALC如果您的编解码器支持，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在AppleHDA之前加载AppleALC（有关更多详细信息，请参阅sudo kextstat输出）。 请注意，Lilu 也必须出现在AppleALC上。 按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。 备">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-17T22:56:44+08:00">
-                2017-12-17
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-12T11:34:34+08:00">
+                2018-03-12
               </time>
             
           </span>
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,091 字
+                  1,111 字
                 </span>
               
 
@@ -472,7 +472,7 @@
 <p><code>log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source</code></p>
 <p>10.11及以前版本</p>
 <p><code>cat /var/log/system.log | egrep &#39;(AppleALC|Lilu)&#39;</code></p>
-<h1 id="附：AppleALC支持的编解码器列表-更新日期：12-18-2017"><a href="#附：AppleALC支持的编解码器列表-更新日期：12-18-2017" class="headerlink" title="附：AppleALC支持的编解码器列表 更新日期：12-18-2017"></a>附：AppleALC支持的编解码器列表 更新日期：12-18-2017</h1><table>
+<h1 id="附：AppleALC支持的编解码器列表-更新日期：3-12-2018"><a href="#附：AppleALC支持的编解码器列表-更新日期：3-12-2018" class="headerlink" title="附：AppleALC支持的编解码器列表 更新日期：3-12-2018"></a>附：AppleALC支持的编解码器列表 更新日期：3-12-2018</h1><table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -514,7 +514,7 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC225" target="_blank" rel="external">ALC225/ALC3253</a></td>
-<td>layout 28</td>
+<td>layout 28,33</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -535,7 +535,7 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC236" target="_blank" rel="external">ALC236</a></td>
-<td>0x100001, 0x100002 layout 3, 11, 13</td>
+<td>0x100001, 0x100002 layout 3, 11, 13,15</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -549,7 +549,7 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC255" target="_blank" rel="external">ALC255</a></td>
-<td>layout 3, 13, 17, 27, 28,99</td>
+<td>layout 3, 13, 17,18, 27, 28,99</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -570,7 +570,7 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC262" target="_blank" rel="external">ALC262</a></td>
-<td>0x100202 layout 11, 12</td>
+<td>0x100202 layout 11, 12,13,28</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -619,21 +619,21 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC280" target="_blank" rel="external">ALC280</a></td>
-<td>layout 3, 4, 11</td>
+<td>layout 3, 4, 11,13</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC282" target="_blank" rel="external">ALC282</a></td>
-<td>0x100003, layout 3, 4, 13, 27, 28, 29, 86</td>
+<td>0x100003, layout 3, 4, 13, 27, 28, 29, 76,86,127</td>
 <td>12 (10.8)</td>
 <td>—</td>
 </tr>
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC283" target="_blank" rel="external">ALC283</a></td>
-<td>layout 3, 11, 66</td>
+<td>layout 1,3, 11, 66</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -688,8 +688,15 @@
 </tr>
 <tr>
 <td>Realtek</td>
+<td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC294" target="_blank" rel="external">ALC294</a></td>
+<td>layout 13</td>
+<td>13 (10.9)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC295" target="_blank" rel="external">ALC295</a></td>
-<td>layout 3, 28</td>
+<td>layout 3, 13,28</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -787,21 +794,21 @@
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC891" target="_blank" rel="external">ALC891/ALC867</a></td>
-<td>0x100002, layout 13</td>
+<td>0x100002, layout 11,13</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC892" target="_blank" rel="external">ALC892</a></td>
-<td>0x100302, layout 1, 2, 3, (4 for laptop), 5, 7, 28, 31, 92, 99</td>
+<td>0x100302, layout 1, 2, 3, (4 for laptop), 5, 7, 28, 31, 92, 98,99</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
 <tr>
 <td>Realtek</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/ALC898" target="_blank" rel="external">ALC898/ALC899</a></td>
-<td>0x100003, layout 1, 2, 3, 5, 7, 11, 13, 28, 65</td>
+<td>0x100003, layout 1, 2, 3, 5, 7, 11, 13, 28, 65,101</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -1018,7 +1025,7 @@
 <tr>
 <td>IDT</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/IDT92HD87B1_3" target="_blank" rel="external">IDT92HD87B1/3</a></td>
-<td>layout 12</td>
+<td>layout 12,13</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -1039,7 +1046,7 @@
 <tr>
 <td>IDT</td>
 <td><a href="https://github.com/vit9696/AppleALC/tree/master/Resources/IDT92HD91BXX" target="_blank" rel="external">IDT92HD91BXX</a></td>
-<td>0x100102, 0x100303 layout 3, 12, 33</td>
+<td>0x100102, 0x100303 layout 3, 12, 13,33,84</td>
 <td>13 (10.9)</td>
 <td>—</td>
 </tr>
@@ -1485,7 +1492,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何使用AppleALC"><span class="nav-number">1.</span> <span class="nav-text">如何使用AppleALC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何控制AppleALC"><span class="nav-number">2.</span> <span class="nav-text">如何控制AppleALC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何提取调试日志"><span class="nav-number">3.</span> <span class="nav-text">如何提取调试日志</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附：AppleALC支持的编解码器列表-更新日期：12-18-2017"><span class="nav-number">4.</span> <span class="nav-text">附：AppleALC支持的编解码器列表 更新日期：12-18-2017</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附表-已知的编解码器型号及厂商列表"><span class="nav-number">5.</span> <span class="nav-text">附表:已知的编解码器型号及厂商列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展阅读："><span class="nav-number">6.</span> <span class="nav-text">扩展阅读：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">7.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">8.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何使用AppleALC"><span class="nav-number">1.</span> <span class="nav-text">如何使用AppleALC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何控制AppleALC"><span class="nav-number">2.</span> <span class="nav-text">如何控制AppleALC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何提取调试日志"><span class="nav-number">3.</span> <span class="nav-text">如何提取调试日志</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附：AppleALC支持的编解码器列表-更新日期：3-12-2018"><span class="nav-number">4.</span> <span class="nav-text">附：AppleALC支持的编解码器列表 更新日期：3-12-2018</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附表-已知的编解码器型号及厂商列表"><span class="nav-number">5.</span> <span class="nav-text">附表:已知的编解码器型号及厂商列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展阅读："><span class="nav-number">6.</span> <span class="nav-text">扩展阅读：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">7.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">8.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
