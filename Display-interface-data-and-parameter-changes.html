@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.">
+<meta name="description" content="查看显卡platform-id 显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000 读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.appl">
 <meta name="keywords" content="接口,platform-id,显存,显示器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="显示器接口数据及参数修改">
 <meta property="og:url" content="http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.">
+<meta property="og:description" content="查看显卡platform-id 显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000 读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.appl">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-21T10:52:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="显示器接口数据及参数修改">
-<meta name="twitter:description" content="查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.">
+<meta name="twitter:description" content="查看显卡platform-id 显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000 读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.appl">
 
 
 
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  358 字
+                  373 字
                 </span>
               
 
@@ -455,15 +455,18 @@
       
 
       
-        <h2 id="查看显卡platform-id"><a href="#查看显卡platform-id" class="headerlink" title="查看显卡platform-id"></a>查看显卡<code>platform-id</code></h2><p>显卡注入<code>platform-id</code>通过命令读取:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep platform-id</div></pre></td></tr></table></figure>
+        <h2>查看显卡<code>platform-id</code></h2>
+<p>显卡注入<code>platform-id</code>通过命令读取:</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep platform-id</div></pre></td></tr></table></figure></p>
 <p>显示结果如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"AAPL,ig-platform-id"</span> = &lt;00001659&gt;</div></pre></td></tr></table></figure>
-<h2 id="得出显卡注入ID是-59160000"><a href="#得出显卡注入ID是-59160000" class="headerlink" title="得出显卡注入ID是:59160000"></a>得出显卡注入ID是:59160000</h2><p>读取核显驱动的加载情况,使用命令:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep -y appleintel</div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (<span class="number">3.0</span>.<span class="number">60</span>)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (<span class="number">4.0</span>.<span class="number">0</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (<span class="number">10.2</span>.<span class="number">8</span>)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (<span class="number">2.0</span>.<span class="number">1</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (<span class="number">10.2</span>.<span class="number">8</span>)</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"AAPL,ig-platform-id"</span> = &lt;00001659&gt;</div></pre></td></tr></table></figure></p>
+<h2>得出显卡注入ID是:59160000</h2>
+<p>读取核显驱动的加载情况,使用命令:</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep -y appleintel</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (<span class="number">3.0</span>.<span class="number">60</span>)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (<span class="number">4.0</span>.<span class="number">0</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (<span class="number">10.2</span>.<span class="number">8</span>)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (<span class="number">2.0</span>.<span class="number">1</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (<span class="number">10.2</span>.<span class="number">8</span>)</div></pre></td></tr></table></figure></p>
 <p>由此可以判断所使用的驱动是<code>AppleIntelKBLGraphics</code>和<code>AppleIntelKBLGraphicsFramebuffer</code>,显示器的接口数据定义在<code>AppleIntelKBLGraphicsFramebuffer</code>里,通过<code>AppleIntelKBLGraphicsFramebuffer</code>提取接口数据</p>
-<h2 id="接口数据"><a href="#接口数据" class="headerlink" title="接口数据"></a>接口数据</h2><table>
+<h2>接口数据</h2>
+<table>
 <thead>
 <tr>
 <th>接口数据</th>
@@ -505,10 +508,15 @@
 </tr>
 </tbody>
 </table>
-<h2 id="显存容量修改"><a href="#显存容量修改" class="headerlink" title="显存容量修改"></a>显存容量修改</h2><p>01030303 00002002 00000000 0000 0060 <strong>0600是16进制,转换成10进制就是:1536</strong><br>01030303 00002002 00000000 0000 0080 <strong>0800是16进制,转换成10进制就是:2048</strong></p>
-<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><video width="640" height="480" controls><br><source src="http://7.daliansky.net/1536MB-2048MB.mp4"><br></video>
-
-<h2 id="显示器接口数值定义"><a href="#显示器接口数值定义" class="headerlink" title="显示器接口数值定义"></a>显示器接口数值定义</h2><table>
+<h2>显存容量修改</h2>
+<p>01030303 00002002 00000000 0000 0060 <strong>0600是16进制,转换成10进制就是:1536</strong>
+01030303 00002002 00000000 0000 0080 <strong>0800是16进制,转换成10进制就是:2048</strong></p>
+<h2>视频教程</h2>
+<p>&lt;video width=&quot;640&quot; height=&quot;480&quot; controls&gt;
+&lt;source src=&quot;http://7.daliansky.net/1536MB-2048MB.mp4&quot;&gt;
+&lt;/video&gt;</p>
+<h2>显示器接口数值定义</h2>
+<table>
 <thead>
 <tr>
 <th>连接类型(connetor type)</th>
@@ -538,8 +546,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h2>关于打赏</h2>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h2>QQ群:</h2>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
+688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -784,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看显卡platform-id"><span class="nav-number">1.</span> <span class="nav-text">查看显卡platform-id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#得出显卡注入ID是-59160000"><span class="nav-number">2.</span> <span class="nav-text">得出显卡注入ID是:59160000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口数据"><span class="nav-number">3.</span> <span class="nav-text">接口数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显存容量修改"><span class="nav-number">4.</span> <span class="nav-text">显存容量修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频教程"><span class="nav-number">5.</span> <span class="nav-text">视频教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示器接口数值定义"><span class="nav-number">6.</span> <span class="nav-text">显示器接口数值定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于打赏"><span class="nav-number">7.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QQ群"><span class="nav-number">8.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">查看显卡platform-id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">得出显卡注入ID是:59160000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">接口数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">显存容量修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">视频教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">显示器接口数值定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>

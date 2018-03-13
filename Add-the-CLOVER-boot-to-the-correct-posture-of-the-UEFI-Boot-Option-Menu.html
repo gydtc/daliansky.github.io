@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="EFI,UEFI,Clover,引导," />
+  <meta name="keywords" content="EFI,Clover,UEFI,引导," />
 
 
 
@@ -81,23 +81,22 @@
 
 
 
-<meta name="description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：  请使用工具： Clover Configurator 或者 E">
-<meta name="keywords" content="EFI,UEFI,Clover,引导">
+<meta name="description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势  很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里 单磁盘单 MacOS 系统 两种方式：  请使用工具： Clover Configurator 或">
+<meta name="keywords" content="EFI,Clover,UEFI,引导">
 <meta property="og:type" content="article">
 <meta property="og:title" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势">
 <meta property="og:url" content="http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：  请使用工具： Clover Configurator 或者 E">
+<meta property="og:description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势  很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里 单磁盘单 MacOS 系统 两种方式：  请使用工具： Clover Configurator 或">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/Windows-EFI.png">
 <meta property="og:image" content="http://7.daliansky.net/Windows_Clover.png">
-<meta property="og:image" content="http://7.daliansky.net/clover boot options.png">
 <meta property="og:image" content="http://7.daliansky.net/clover-boot-options2.png">
 <meta property="og:image" content="http://7.daliansky.net/UEFI_Boot.jpg">
 <meta property="og:updated_time" content="2018-01-26T05:44:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势">
-<meta name="twitter:description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势 很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里单磁盘单 MacOS 系统两种方式：  请使用工具： Clover Configurator 或者 E">
+<meta name="twitter:description" content="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势  很多网友在安装完 MacOS 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法  将 MacOS 系统的EFI移动进磁盘的EFI分区里 单磁盘单 MacOS 系统 两种方式：  请使用工具： Clover Configurator 或">
 <meta name="twitter:image" content="http://7.daliansky.net/Windows-EFI.png">
 
 
@@ -424,7 +423,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  676 字
+                  687 字
                 </span>
               
 
@@ -461,30 +460,48 @@
       
 
       
-        <h1 id="将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势"><a href="#将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势" class="headerlink" title="将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势"></a>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</h1><blockquote>
+        <h1>将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</h1>
+<blockquote>
 <p>很多网友在安装完 <code>MacOS</code> 后的第一件事情就是要将USB的EFI复制进磁盘里，同时需要将CLOVER的引导项添加UEFI BOOT里，这里我教大家一个最简单的方法</p>
 </blockquote>
-<h2 id="将-MacOS-系统的EFI移动进磁盘的EFI分区里"><a href="#将-MacOS-系统的EFI移动进磁盘的EFI分区里" class="headerlink" title="将 MacOS 系统的EFI移动进磁盘的EFI分区里"></a>将 <code>MacOS</code> 系统的EFI移动进磁盘的EFI分区里</h2><h3 id="单磁盘单-MacOS-系统"><a href="#单磁盘单-MacOS-系统" class="headerlink" title="单磁盘单 MacOS 系统"></a>单磁盘单 <code>MacOS</code> 系统</h3><p>两种方式：</p>
+<h2>将 <code>MacOS</code> 系统的EFI移动进磁盘的EFI分区里</h2>
+<h3>单磁盘单 <code>MacOS</code> 系统</h3>
+<p>两种方式：</p>
 <ol>
 <li>请使用工具： <code>Clover Configurator</code> 或者 <code>ESP Mounter Pro</code>，分别挂载U盘的EFI分区和磁盘里的EFI分区，然后将U盘下的EFI分区里面的EFI目录复制到磁盘里的EFI分区下即可</li>
 <li>使用系统命令 <code>diskutil</code> ，具体操作请<a href="https://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html">移步</a></li>
 </ol>
-<h3 id="单磁盘双系统"><a href="#单磁盘双系统" class="headerlink" title="单磁盘双系统"></a>单磁盘双系统</h3><p>最简单的分区结构是：一个 <code>EFI</code> 分区，一个 <code>MacOS</code> 分区，一个 <code>Windows</code> 分区</p>
+<h3>单磁盘双系统</h3>
+<p>最简单的分区结构是：一个 <code>EFI</code> 分区，一个 <code>MacOS</code> 分区，一个 <code>Windows</code> 分区</p>
 <ul>
 <li>假设你想在同一块磁盘里同时安装 <code>MacOS</code> 和 <code>Windows 10</code> 双系统的话，那么我给你的建议是无论是先安装 <code>MacOS</code> 系统还是先安装 <code>Windows 10</code> 系统，都要在安装完 <code>Windows 10</code> 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 <code>Windows 10</code> 的系统后，它会重新将EFI分区格式化的。</li>
-<li>安装完的 <code>Windows 10</code> 的EFI分区里面会有个EFI的目录，目录里面会包括 <code>BOOT</code> 和 <code>MICROSOFT</code> 这两个目录,它看起来是这样的：<br><img src="http://7.daliansky.net/Windows-EFI.png" alt="Windows-EFI"></li>
-<li>将U盘里的EFI目录下面的 <code>CLOVER</code> 目录复制到磁盘里的EFI分区EFI目录下<br><img src="http://7.daliansky.net/Windows_Clover.png" alt="Windows_Clover"></li>
+<li>安装完的 <code>Windows 10</code> 的EFI分区里面会有个EFI的目录，目录里面会包括 <code>BOOT</code> 和 <code>MICROSOFT</code> 这两个目录,它看起来是这样的：
+<img src="http://7.daliansky.net/Windows-EFI.png" alt="Windows-EFI"></li>
+<li>将U盘里的EFI目录下面的 <code>CLOVER</code> 目录复制到磁盘里的EFI分区EFI目录下
+<img src="http://7.daliansky.net/Windows_Clover.png" alt="Windows_Clover"></li>
 </ul>
-<p><strong><em> 切记一点：千万不要动另外的Boot和Microsoft目录 </em></strong></p>
-<h3 id="双磁盘双系统"><a href="#双磁盘双系统" class="headerlink" title="双磁盘双系统"></a>双磁盘双系统</h3><p>每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
-<h2 id="将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu"><a href="#将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu" class="headerlink" title="将 CLOVER 引导项添加进 UEFI Boot Option Menu"></a>将 <code>CLOVER</code> 引导项添加进 <code>UEFI Boot Option Menu</code></h2><p>两种方式：</p>
-<h3 id="通过BIOS添加，教程略"><a href="#通过BIOS添加，教程略" class="headerlink" title="通过BIOS添加，教程略"></a>通过BIOS添加，教程略</h3><h3 id="通过-CLOVER-自带的工具添加"><a href="#通过-CLOVER-自带的工具添加" class="headerlink" title="通过 CLOVER 自带的工具添加"></a>通过 <code>CLOVER</code> 自带的工具添加</h3><ol>
-<li>开机进入 <code>CLOVER</code> 引导界面，将光标移动到 <code>Clover Boot Options</code> ，回车进入<br><img src="http://7.daliansky.net/clover boot options.png" alt="clover boot options"></li>
-<li>选择 <code>Add Clover boot options for all entries</code> 回车<br><img src="http://7.daliansky.net/clover-boot-options2.png" alt="clover-boot-options2"></li>
-<li>拔掉U盘，重新开机，按 <code>Boot</code> 快捷键，你会发现多了很多以 <code>Clover start</code> 开头的引导项，选择 <code>Clover start boot.efi at MAC</code> 即可进入 <code>MacOS</code> 系统<br><img src="http://7.daliansky.net/UEFI_Boot.jpg" alt="UEFI_Boot"></li>
+<p>*** 切记一点：千万不要动另外的Boot和Microsoft目录 ***</p>
+<h3>双磁盘双系统</h3>
+<p>每块磁盘都分别包括各自不同的EFI分区，两块磁盘通过开机按Boot快捷键选择引导进入不同的系统，该种情况不在本教程讨论范围内。</p>
+<h2>将 <code>CLOVER</code> 引导项添加进 <code>UEFI Boot Option Menu</code></h2>
+<p>两种方式：</p>
+<h3>通过BIOS添加，教程略</h3>
+<h3>通过 <code>CLOVER</code> 自带的工具添加</h3>
+<ol>
+<li>开机进入 <code>CLOVER</code> 引导界面，将光标移动到 <code>Clover Boot Options</code> ，回车进入
+![clover boot options](http://7.daliansky.net/clover boot options.png)</li>
+<li>选择 <code>Add Clover boot options for all entries</code> 回车
+<img src="http://7.daliansky.net/clover-boot-options2.png" alt="clover-boot-options2"></li>
+<li>拔掉U盘，重新开机，按 <code>Boot</code> 快捷键，你会发现多了很多以 <code>Clover start</code> 开头的引导项，选择 <code>Clover start boot.efi at MAC</code> 即可进入 <code>MacOS</code> 系统
+<img src="http://7.daliansky.net/UEFI_Boot.jpg" alt="UEFI_Boot"></li>
 </ol>
-<h2 id="备注：该种方法在Clover-v4261版本后已经失效-感谢群里-￣-工-￣-小哥哥-的反馈-，我先找个地方哭一会儿"><a href="#备注：该种方法在Clover-v4261版本后已经失效-感谢群里-￣-工-￣-小哥哥-的反馈-，我先找个地方哭一会儿" class="headerlink" title="备注：该种方法在Clover v4261版本后已经失效[感谢群里 @(￣(工)￣)_小哥哥 的反馈]，我先找个地方哭一会儿"></a>备注：该种方法在Clover v4261版本后已经失效[感谢群里 <code>@(￣(工)￣)_小哥哥</code> 的反馈]，我先找个地方哭一会儿</h2><h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h2>备注：该种方法在Clover v4261版本后已经失效[感谢群里 <code>@(￣(工)￣)_小哥哥</code> 的反馈]，我先找个地方哭一会儿</h2>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
+688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -535,9 +552,9 @@
           
             <a href="/tags/EFI/" rel="tag"><i class="fa fa-tag"></i> EFI</a>
           
-            <a href="/tags/UEFI/" rel="tag"><i class="fa fa-tag"></i> UEFI</a>
-          
             <a href="/tags/Clover/" rel="tag"><i class="fa fa-tag"></i> Clover</a>
+          
+            <a href="/tags/UEFI/" rel="tag"><i class="fa fa-tag"></i> UEFI</a>
           
             <a href="/tags/引导/" rel="tag"><i class="fa fa-tag"></i> 引导</a>
           
@@ -729,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将CLOVER引导添加进UEFI-BOOT-Option-Menu的正确姿势"><span class="nav-number">1.</span> <span class="nav-text">将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将-MacOS-系统的EFI移动进磁盘的EFI分区里"><span class="nav-number">1.1.</span> <span class="nav-text">将 MacOS 系统的EFI移动进磁盘的EFI分区里</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单磁盘单-MacOS-系统"><span class="nav-number">1.1.1.</span> <span class="nav-text">单磁盘单 MacOS 系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单磁盘双系统"><span class="nav-number">1.1.2.</span> <span class="nav-text">单磁盘双系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双磁盘双系统"><span class="nav-number">1.1.3.</span> <span class="nav-text">双磁盘双系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将-CLOVER-引导项添加进-UEFI-Boot-Option-Menu"><span class="nav-number">1.2.</span> <span class="nav-text">将 CLOVER 引导项添加进 UEFI Boot Option Menu</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过BIOS添加，教程略"><span class="nav-number">1.2.1.</span> <span class="nav-text">通过BIOS添加，教程略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过-CLOVER-自带的工具添加"><span class="nav-number">1.2.2.</span> <span class="nav-text">通过 CLOVER 自带的工具添加</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备注：该种方法在Clover-v4261版本后已经失效-感谢群里-￣-工-￣-小哥哥-的反馈-，我先找个地方哭一会儿"><span class="nav-number">1.3.</span> <span class="nav-text">备注：该种方法在Clover v4261版本后已经失效[感谢群里 @(￣(工)￣)_小哥哥 的反馈]，我先找个地方哭一会儿</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">将CLOVER引导添加进UEFI BOOT Option Menu的正确姿势</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">将 MacOS 系统的EFI移动进磁盘的EFI分区里</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.1.</span> <span class="nav-text">单磁盘单 MacOS 系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.2.</span> <span class="nav-text">单磁盘双系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.3.</span> <span class="nav-text">双磁盘双系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">将 CLOVER 引导项添加进 UEFI Boot Option Menu</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.1.</span> <span class="nav-text">通过BIOS添加，教程略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.2.</span> <span class="nav-text">通过 CLOVER 自带的工具添加</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">备注：该种方法在Clover v4261版本后已经失效[感谢群里 @(￣(工)￣)_小哥哥 的反馈]，我先找个地方哭一会儿</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
