@@ -1,5 +1,5 @@
+http://blog.daliansky.net/Modify-DSDT-to-achieve-power-display-method.html
 http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html
 http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html
 http://blog.daliansky.net/macOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html
 http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html
-http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html
