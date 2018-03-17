@@ -71,8 +71,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -86,8 +86,8 @@
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>macOS</tag>
         <tag>安装</tag>
+        <tag>macOS</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
         <tag>XiaoMiPro</tag>
@@ -173,9 +173,9 @@
         <tag>High Sierra</tag>
         <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
-        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
@@ -256,9 +256,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
+        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -452,11 +452,11 @@
       </categories>
       <tags>
         <tag>Lilu</tag>
-        <tag>Plugins</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
         <tag>platform-id</tag>
@@ -494,9 +494,9 @@
         <tag>High Sierra</tag>
         <tag>下载</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
+        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
@@ -534,10 +534,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
-        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
