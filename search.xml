@@ -24,8 +24,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -56,8 +56,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -148,8 +148,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>AppleHDA</tag>
         <tag>声卡仿冒</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -157,8 +157,8 @@
     <url>%2FClover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</url>
     <content type="text"><![CDATA[教程 使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机 原生支持 AppleHDA 使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio_cloverALC-1x0 简单: .command命令, 请看 C.安装 Bash: .sh命令, 请看 D. 终端 更新列表 9-26-17 支持10.13, 支持ALC269/ALC283 支持PikeralphaALC弃用的 12-14-15 audio_pikeralpha-110 (Clover版本的Piker Aplha AppleHDA8Series.sh) 11-8-15 Skylake/100系统更新，加入ALC1150/Audio ID: 3 7-19-15 ALC283更新 6-15-15 10.11 - El Capitan Realtek ALC AppleHDA.kext 初始支持 A. 需求 macOS/Clover_v2696及以后版本 10.13/High Sierra, 关闭 SIP, 挂载 EFI 10.12/Sierra, 关闭 SIP, 挂载 EFI 10.11/El Capitan, 设置 boot flag: rootless=0 10.10/Yosemite, 设置 boot flag: kext-dev-mode=1 10.9/Mavericks 10.8/Mountain Lionon 原生的、未修改的 AppleHDA.kext Need native? 支持Realtek板载的音频编解码器 Unknown codec? B. Realtek ALCxxx (验证过的编解码器和音频ID) 支持的编解码器 (* 不支持 audio_pikeralpha-110) 885 887 888 889 892 898 1150 1220 支持的音频ID 音频ID: 1 支持 885, 887, 888, 889, 892, 898, 1150, 1220 Realtek ALC audio (默认, 1/2/3/5/6 主板音频端口) 音频ID: 2 支持 887, 888, 889, 892, 898, 1150, 1220 Realtek ALC/5.1声道 (3主板音频端口，2进/1出变成3出) 音频ID: 3 支持 887, 888, 889, 892, 898, 1150 带有Realtek ALC音频的HD3000 / HD4000 HDMI音频 C. 安装 通过 Clover 为 AppleHDA 打补丁 下载 audio_cloverALC-1x0.command 双击: audio_cloverALC-1x0.command Password: Confirm Codec ALCxxx: (885, 887, 888, 889, 892, 898, 1150, 1220 only) Clover/Legacy: answer y to Confirm Clover Legacy Install (y/n) Clover Audio ID Injection (y/n): Use Audio ID: x (y/n): Optional: Terminal/Terminal Saved Output 重启电脑 验证ALC板载音频 系统偏好设置/声音/输出/选择音频设备 D. 终端 通过 Clover 为 AppleHDA 打补丁 下载 audio_cloverALC-1x0.sh 打开终端 1./audio_cloverALC-1x0....sh 其它步骤同 C. E. 更多的信息 Details Onboard Audio Solutions Requirements - Supported/Unsupported Notes Guides Tools Problem Reporting Terminal Saved Output Clover/EFI Clover/Legacy CreditTHe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, abxite toleda https://github.com/toleda/audio_cloverALC 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <tags>
-        <tag>AppleHDA</tag>
         <tag>Clover</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -171,8 +171,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -256,9 +256,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
-        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -290,8 +290,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -342,8 +342,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -370,8 +370,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -492,8 +492,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -507,9 +507,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -529,15 +529,15 @@
   <entry>
     <title><![CDATA[Windows下使用diskpart建立EFI分区及挂载EFI分区]]></title>
     <url>%2FUnder-Windows-using-DISKPART-to-create-EFI-points.html</url>
-    <content type="text"><![CDATA[Windows下使用diskpart建立EFI分区及挂载EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart 创建EFI分区 以下操作假设磁盘未分区没有其它数据 1234diskpartlist disk # 磁盘列表select disk n # 选择需要制作EFI分区的磁盘，n为磁盘号create partition efi size=300 # efi分区大小为300Mb 挂载EFI分区123456diskpartlist disk # 磁盘列表select disk n # 选择需要制作EFI分区的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择efi分区，n为efi分区号assign letter=X # x为efi分区盘符 打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式以后再操作EFI分区请重复输入上述命令 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[Windows下使用diskpart建立EFI分区及挂载EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart 创建EFI分区 以下操作假设磁盘未分区没有其它数据 1234diskpartlist disk # 磁盘列表select disk n # 选择需要制作EFI分区的磁盘，n为磁盘号create partition efi size=300 # efi分区大小为300Mb 挂载EFI分区123456diskpartlist disk # 磁盘列表select disk n # 选择需要制作EFI分区的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择efi分区，n为efi分区号assign # x为efi分区盘符 打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式以后再操作EFI分区请重复输入上述命令 如果拒绝访问的话，可以使用xcopy命令进行复制。 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
+        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
@@ -551,8 +551,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -580,9 +580,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -651,8 +651,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
+        <tag>镜像</tag>
         <tag>安装</tag>
         <tag>dmg</tag>
       </tags>
@@ -681,8 +681,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
