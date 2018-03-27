@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Lilu,CPUFriend,Plugins,CPU变频,插件," />
+  <meta name="keywords" content="CPUFriend,Lilu,Plugins,CPU变频,插件," />
 
 
 
@@ -82,14 +82,14 @@
 
 
 <meta name="description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
-<meta name="keywords" content="Lilu,CPUFriend,Plugins,CPU变频,插件">
+<meta name="keywords" content="CPUFriend,Lilu,Plugins,CPU变频,插件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CPUFriend的安装与使用">
 <meta property="og:url" content="http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-16T13:12:54.000Z">
+<meta property="og:updated_time" content="2018-03-27T01:13:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CPUFriend的安装与使用">
 <meta name="twitter:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-16T21:12:54+08:00">
-                2017-12-16
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-27T09:13:41+08:00">
+                2018-03-27
               </time>
             
           </span>
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  439 字
+                  508 字
                 </span>
               
 
@@ -462,6 +462,8 @@
 <h2 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h2><p>执行命令如下：</p>
 <p>`./ResourceConverter.sh –kext “/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist”</p>
 <p>它会在当前目录生成<code>CPUFriendProvider.kext</code>,将<code>CPUFriendProvider.kext</code>和<a href="https://github.com/PMheart/CPUFriend/releases" target="_blank" rel="external">CPUFriend.kext</a>复制到<code>/EFI/Clover/kexts/Other</code>，重建缓存，然后重启。</p>
+<p>重建缓存的命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">sudo chmod -Rf 755 /S*/L*/E*</div><div class="line">sudo chown -Rf 0:0 /S*/L*/E*</div><div class="line">sudo chmod -Rf 755 /L*/E*</div><div class="line">sudo chown -Rf 0:0 /L*/E*</div><div class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</div><div class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</div><div class="line">sudo touch -f /S*/L*/E*</div><div class="line">sudo touch -f /L*/E*</div><div class="line">sudo kextcache -Boot -U /</div></pre></td></tr></table></figure>
 <p>说明：</p>
 <blockquote>
 <p>其中的<code>/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist</code>是我自行修改的，可以通过直接调用系统提供的<code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist</code></p>
@@ -524,9 +526,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Lilu/" rel="tag"><i class="fa fa-tag"></i> Lilu</a>
-          
             <a href="/tags/CPUFriend/" rel="tag"><i class="fa fa-tag"></i> CPUFriend</a>
+          
+            <a href="/tags/Lilu/" rel="tag"><i class="fa fa-tag"></i> Lilu</a>
           
             <a href="/tags/Plugins/" rel="tag"><i class="fa fa-tag"></i> Plugins</a>
           
@@ -638,7 +640,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -660,7 +662,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">129</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

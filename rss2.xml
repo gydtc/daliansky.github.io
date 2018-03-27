@@ -8,8 +8,29 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Thu, 15 Mar 2018 05:22:18 GMT</pubDate>
+    <pubDate>Fri, 23 Mar 2018 04:56:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>小米PRO蓝牙设备驱动的正确姿势</title>
+      <link>http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html</link>
+      <guid>http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html</guid>
+      <pubDate>Fri, 23 Mar 2018 04:29:12 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;经常使用小米Pro笔记本安装使用&lt;code&gt;macOS&lt;/code&gt;的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote>
+<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
+</blockquote>
+<p>正题来了：屏蔽蓝牙或者加装USB蓝牙</p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>修改DSDT实现电量显示方法【转载】</title>
@@ -635,107 +656,6 @@
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>显示器接口数据及参数修改</title>
-      <link>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</link>
-      <guid>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</guid>
-      <pubDate>Fri, 01 Dec 2017 03:31:00 GMT</pubDate>
-      <description>
-      
-        &lt;h2 id=&quot;查看显卡platform-id&quot;&gt;&lt;a href=&quot;#查看显卡platform-id&quot; class=&quot;headerlink&quot; title=&quot;查看显卡platform-id&quot;&gt;&lt;/a&gt;查看显卡&lt;code&gt;platform-id&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;显卡注入&lt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="查看显卡platform-id"><a href="#查看显卡platform-id" class="headerlink" title="查看显卡platform-id"></a>查看显卡<code>platform-id</code></h2><p>显卡注入<code>platform-id</code>通过命令读取:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ioreg -l | grep platform-id</div></pre></td></tr></table></figure>
-<p>显示结果如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"AAPL,ig-platform-id"</span> = &lt;00001659&gt;</div></pre></td></tr></table></figure>
-<h2 id="得出显卡注入ID是-59160000"><a href="#得出显卡注入ID是-59160000" class="headerlink" title="得出显卡注入ID是:59160000"></a>得出显卡注入ID是:59160000</h2><p>读取核显驱动的加载情况,使用命令:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kextstat | grep -y appleintel</div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">com.apple.driver.AppleIntelLpssI2C (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelLpssDmac (<span class="number">3.0</span>.<span class="number">60</span>)</div><div class="line">com.apple.driver.AppleIntelLpssI2CController (<span class="number">3.0</span>.<span class="number">60</span>) </div><div class="line">com.apple.driver.AppleIntelSlowAdaptiveClocking (<span class="number">4.0</span>.<span class="number">0</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphicsFramebuffer (<span class="number">10.2</span>.<span class="number">8</span>)</div><div class="line">com.apple.driver.AppleIntelPCHPMC (<span class="number">2.0</span>.<span class="number">1</span>) </div><div class="line">com.apple.driver.AppleIntelKBLGraphics (<span class="number">10.2</span>.<span class="number">8</span>)</div></pre></td></tr></table></figure>
-<p>由此可以判断所使用的驱动是<code>AppleIntelKBLGraphics</code>和<code>AppleIntelKBLGraphicsFramebuffer</code>,显示器的接口数据定义在<code>AppleIntelKBLGraphicsFramebuffer</code>里,通过<code>AppleIntelKBLGraphicsFramebuffer</code>提取接口数据</p>
-<h2 id="接口数据"><a href="#接口数据" class="headerlink" title="接口数据"></a>接口数据</h2><table>
-<thead>
-<tr>
-<th>接口数据</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>00001659 00000000 2A8A0800</td>
-<td>注入ID</td>
-</tr>
-<tr>
-<td>00000000 01030303 00002002</td>
-<td>端口数量定义</td>
-</tr>
-<tr>
-<td>00000000 00000060 6C050000</td>
-<td>显存</td>
-</tr>
-<tr>
-<td>6C050000 00000000 00000000</td>
-<td></td>
-</tr>
-<tr>
-<td>00000800 02000000 98000000</td>
-<td>eDP接口</td>
-</tr>
-<tr>
-<td>01050900 00040000 87010000</td>
-<td>0105接口</td>
-</tr>
-<tr>
-<td>02040A00 00080000 87010000</td>
-<td>0204接口</td>
-</tr>
-<tr>
-<td>FF000000 01000000 20000000</td>
-<td>0306预留</td>
-</tr>
-</tbody>
-</table>
-<h2 id="显存容量修改"><a href="#显存容量修改" class="headerlink" title="显存容量修改"></a>显存容量修改</h2><p>01030303 00002002 00000000 0000 0060 <strong>0600是16进制,转换成10进制就是:1536</strong><br>01030303 00002002 00000000 0000 0080 <strong>0800是16进制,转换成10进制就是:2048</strong></p>
-<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><video width="640" height="480" controls><br><source src="http://7.daliansky.net/1536MB-2048MB.mp4"><br></video>
-
-<h2 id="显示器接口数值定义"><a href="#显示器接口数值定义" class="headerlink" title="显示器接口数值定义"></a>显示器接口数值定义</h2><table>
-<thead>
-<tr>
-<th>连接类型(connetor type)</th>
-<th>数值(Data)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HDMI</td>
-<td>00 08 00 00</td>
-</tr>
-<tr>
-<td>DVI</td>
-<td>00 02 00 00</td>
-</tr>
-<tr>
-<td>eDP</td>
-<td>00 04 00 00</td>
-</tr>
-<tr>
-<td>DP</td>
-<td>00 04 00 00</td>
-</tr>
-<tr>
-<td>LVDS</td>
-<td>02 00 00 00</td>
-</tr>
-</tbody>
-</table>
-<h2 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h2><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html#disqus_thread</comments>
     </item>
     
   </channel>

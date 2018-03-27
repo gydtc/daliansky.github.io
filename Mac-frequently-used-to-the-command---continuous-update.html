@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="diskutil,shell,spctl,trimforce,ioreg,EDID,APFS,HFS+," />
+  <meta name="keywords" content="shell,spctl,diskutil,trimforce,ioreg,EDID,APFS,HFS+," />
 
 
 
@@ -82,7 +82,7 @@
 
 
 <meta name="description" content="Mac常用命令序言熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀">
-<meta name="keywords" content="diskutil,shell,spctl,trimforce,ioreg,EDID,APFS,HFS+">
+<meta name="keywords" content="shell,spctl,diskutil,trimforce,ioreg,EDID,APFS,HFS+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac常用到的命令[持续更新]">
 <meta property="og:url" content="http://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html">
@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/EDID注入.png">
 <meta property="og:image" content="http://7.daliansky.net/HWP.png">
-<meta property="og:updated_time" content="2018-03-13T06:12:24.000Z">
+<meta property="og:updated_time" content="2018-03-27T01:15:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac常用到的命令[持续更新]">
 <meta name="twitter:description" content="Mac常用命令序言熟练使用Mac终端操作的常用命令，可以让你更快、更加高效地进行系统操作，shell就是你的瑞士军刀">
@@ -349,8 +349,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T14:12:24+08:00">
-                2018-03-13
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-27T09:15:07+08:00">
+                2018-03-27
               </time>
             
           </span>
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,367 字
+                  2,443 字
                 </span>
               
 
@@ -437,7 +437,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10 分钟
+                  11 分钟
                 </span>
               
             </div>
@@ -464,6 +464,8 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo spctl --master-disable</div></pre></td></tr></table></figure>
 <p>验证口令后即可。</p>
+<h1 id="重建缓存的命令"><a href="#重建缓存的命令" class="headerlink" title="重建缓存的命令"></a>重建缓存的命令</h1><p>打开终端，输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">sudo chmod -Rf 755 /S*/L*/E*</div><div class="line">sudo chown -Rf 0:0 /S*/L*/E*</div><div class="line">sudo chmod -Rf 755 /L*/E*</div><div class="line">sudo chown -Rf 0:0 /L*/E*</div><div class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</div><div class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</div><div class="line">sudo touch -f /S*/L*/E*</div><div class="line">sudo touch -f /L*/E*</div><div class="line">sudo kextcache -Boot -U /</div></pre></td></tr></table></figure>
 <h1 id="磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><a href="#磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区" class="headerlink" title="磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"></a>磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</h1><blockquote>
 <p>新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让<code>diskutil</code>登场了。</p>
 </blockquote>
@@ -808,11 +810,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/diskutil/" rel="tag"><i class="fa fa-tag"></i> diskutil</a>
-          
             <a href="/tags/shell/" rel="tag"><i class="fa fa-tag"></i> shell</a>
           
             <a href="/tags/spctl/" rel="tag"><i class="fa fa-tag"></i> spctl</a>
+          
+            <a href="/tags/diskutil/" rel="tag"><i class="fa fa-tag"></i> diskutil</a>
           
             <a href="/tags/trimforce/" rel="tag"><i class="fa fa-tag"></i> trimforce</a>
           
@@ -928,7 +930,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -950,7 +952,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">129</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1012,7 +1014,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac常用命令"><span class="nav-number">1.</span> <span class="nav-text">Mac常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.1.</span> <span class="nav-text">序言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐藏“允许任何来源的应用”选项问题"><span class="nav-number">2.</span> <span class="nav-text">隐藏“允许任何来源的应用”选项问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><span class="nav-number">3.</span> <span class="nav-text">磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看磁盘分区表"><span class="nav-number">3.1.</span> <span class="nav-text">查看磁盘分区表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载磁盘EFI分区"><span class="nav-number">3.2.</span> <span class="nav-text">挂载磁盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载U盘EFI分区"><span class="nav-number">3.3.</span> <span class="nav-text">挂载U盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开Finder，注意后面有个"><span class="nav-number">3.4.</span> <span class="nav-text">打开Finder，注意后面有个.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工"><span class="nav-number">3.5.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的进阶操作：教你将apfs分区转换回hfs"><span class="nav-number">4.</span> <span class="nav-text">磁盘分区的进阶操作：教你将apfs分区转换回hfs+</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diskutil命令的进阶操作"><span class="nav-number">4.1.</span> <span class="nav-text">diskutil命令的进阶操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令："><span class="nav-number">4.2.</span> <span class="nav-text">命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查："><span class="nav-number">4.3.</span> <span class="nav-text">检查：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-1"><span class="nav-number">4.4.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何开启原生SSD-Trim功能"><span class="nav-number">5.</span> <span class="nav-text">如何开启原生SSD Trim功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题"><span class="nav-number">6.</span> <span class="nav-text">不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最简单的命令是："><span class="nav-number">6.1.</span> <span class="nav-text">最简单的命令是：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示信息如下："><span class="nav-number">6.2.</span> <span class="nav-text">显示信息如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着输入下面的两条命令："><span class="nav-number">6.3.</span> <span class="nav-text">接着输入下面的两条命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MacOS系统下导出man手册内容"><span class="nav-number">7.</span> <span class="nav-text">MacOS系统下导出man手册内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用log-show检查AppleALC和Lilu是否工作正常"><span class="nav-number">8.</span> <span class="nav-text">使用log show检查AppleALC和Lilu是否工作正常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一条命令教你如何确认自己的机型及如何开启-HWP"><span class="nav-number">9.</span> <span class="nav-text">一条命令教你如何确认自己的机型及如何开启 HWP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查自己的显卡驱动所使用的platform-id"><span class="nav-number">10.</span> <span class="nav-text">检查自己的显卡驱动所使用的platform-id</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#笔记本开启插电源出提示音"><span class="nav-number">11.</span> <span class="nav-text">笔记本开启插电源出提示音:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启"><span class="nav-number">11.1.</span> <span class="nav-text">开启:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭"><span class="nav-number">11.2.</span> <span class="nav-text">关闭:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何去掉apfs-efi最新版本的日志调试显示"><span class="nav-number">12.</span> <span class="nav-text">如何去掉apfs.efi最新版本的日志调试显示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#打开终端，输入以下命令："><span class="nav-number">12.1.</span> <span class="nav-text">打开终端，输入以下命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将生成的apfs-efi复制到-EFI-CLOVER-drivers64UEFI目录下，重启测试"><span class="nav-number">12.2.</span> <span class="nav-text">将生成的apfs.efi复制到/EFI/CLOVER/drivers64UEFI目录下，重启测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-2"><span class="nav-number">12.3.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最近更新：3-13-2018"><span class="nav-number">13.</span> <span class="nav-text">最近更新：3-13-2018</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#————-未完待续-————"><span class="nav-number">14.</span> <span class="nav-text">———— 未完待续 ————</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">15.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">16.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac常用命令"><span class="nav-number">1.</span> <span class="nav-text">Mac常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.1.</span> <span class="nav-text">序言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐藏“允许任何来源的应用”选项问题"><span class="nav-number">2.</span> <span class="nav-text">隐藏“允许任何来源的应用”选项问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重建缓存的命令"><span class="nav-number">3.</span> <span class="nav-text">重建缓存的命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区"><span class="nav-number">4.</span> <span class="nav-text">磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看磁盘分区表"><span class="nav-number">4.1.</span> <span class="nav-text">查看磁盘分区表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载磁盘EFI分区"><span class="nav-number">4.2.</span> <span class="nav-text">挂载磁盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载U盘EFI分区"><span class="nav-number">4.3.</span> <span class="nav-text">挂载U盘EFI分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开Finder，注意后面有个"><span class="nav-number">4.4.</span> <span class="nav-text">打开Finder，注意后面有个.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工"><span class="nav-number">4.5.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区的进阶操作：教你将apfs分区转换回hfs"><span class="nav-number">5.</span> <span class="nav-text">磁盘分区的进阶操作：教你将apfs分区转换回hfs+</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diskutil命令的进阶操作"><span class="nav-number">5.1.</span> <span class="nav-text">diskutil命令的进阶操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令："><span class="nav-number">5.2.</span> <span class="nav-text">命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查："><span class="nav-number">5.3.</span> <span class="nav-text">检查：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-1"><span class="nav-number">5.4.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何开启原生SSD-Trim功能"><span class="nav-number">6.</span> <span class="nav-text">如何开启原生SSD Trim功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏-花屏的问题"><span class="nav-number">7.</span> <span class="nav-text">不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最简单的命令是："><span class="nav-number">7.1.</span> <span class="nav-text">最简单的命令是：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示信息如下："><span class="nav-number">7.2.</span> <span class="nav-text">显示信息如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着输入下面的两条命令："><span class="nav-number">7.3.</span> <span class="nav-text">接着输入下面的两条命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MacOS系统下导出man手册内容"><span class="nav-number">8.</span> <span class="nav-text">MacOS系统下导出man手册内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用log-show检查AppleALC和Lilu是否工作正常"><span class="nav-number">9.</span> <span class="nav-text">使用log show检查AppleALC和Lilu是否工作正常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一条命令教你如何确认自己的机型及如何开启-HWP"><span class="nav-number">10.</span> <span class="nav-text">一条命令教你如何确认自己的机型及如何开启 HWP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查自己的显卡驱动所使用的platform-id"><span class="nav-number">11.</span> <span class="nav-text">检查自己的显卡驱动所使用的platform-id</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#笔记本开启插电源出提示音"><span class="nav-number">12.</span> <span class="nav-text">笔记本开启插电源出提示音:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启"><span class="nav-number">12.1.</span> <span class="nav-text">开启:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭"><span class="nav-number">12.2.</span> <span class="nav-text">关闭:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何去掉apfs-efi最新版本的日志调试显示"><span class="nav-number">13.</span> <span class="nav-text">如何去掉apfs.efi最新版本的日志调试显示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#打开终端，输入以下命令："><span class="nav-number">13.1.</span> <span class="nav-text">打开终端，输入以下命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将生成的apfs-efi复制到-EFI-CLOVER-drivers64UEFI目录下，重启测试"><span class="nav-number">13.2.</span> <span class="nav-text">将生成的apfs.efi复制到/EFI/CLOVER/drivers64UEFI目录下，重启测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工-2"><span class="nav-number">13.3.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最近更新：3-13-2018"><span class="nav-number">14.</span> <span class="nav-text">最近更新：3-13-2018</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#————-未完待续-————"><span class="nav-number">15.</span> <span class="nav-text">———— 未完待续 ————</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">16.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">17.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="蓝牙,教程,小米," />
 
 
 
@@ -81,20 +81,18 @@
 
 
 
-<meta name="description" content="Hey,Guys. 欢迎来到黑果小兵的部落阁这里记录了Hackintosh的心路历程，包括了我制作的macOS各个发行版测/试版的镜像资源，以及黑苹果所需要的各种工具等。当然更多的是我写的一些原创性的文章，尽管有些文章是通过翻译的形式呈现给大家，但是这中间夹杂着很多我的心得体会以及写作的思维模式。这个博客从2008年开始就陆续更新了，之前的文章已经全部删除掉了。从2001年开始接触Linux到现在">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://blog.daliansky.net/about/index.html">
+<meta name="description" content="经常使用小米Pro笔记本安装使用macOS的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那">
+<meta name="keywords" content="蓝牙,教程,小米">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小米PRO蓝牙设备驱动的正确姿势">
+<meta property="og:url" content="http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="Hey,Guys. 欢迎来到黑果小兵的部落阁这里记录了Hackintosh的心路历程，包括了我制作的macOS各个发行版测/试版的镜像资源，以及黑苹果所需要的各种工具等。当然更多的是我写的一些原创性的文章，尽管有些文章是通过翻译的形式呈现给大家，但是这中间夹杂着很多我的心得体会以及写作的思维模式。这个博客从2008年开始就陆续更新了，之前的文章已经全部删除掉了。从2001年开始接触Linux到现在">
+<meta property="og:description" content="经常使用小米Pro笔记本安装使用macOS的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7.daliansky.net/wechatpay_160.jpg">
-<meta property="og:image" content="http://7.daliansky.net/alipay_160.jpg">
-<meta property="og:updated_time" content="2018-03-17T08:49:03.000Z">
+<meta property="og:updated_time" content="2018-03-23T04:56:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="Hey,Guys. 欢迎来到黑果小兵的部落阁这里记录了Hackintosh的心路历程，包括了我制作的macOS各个发行版测/试版的镜像资源，以及黑苹果所需要的各种工具等。当然更多的是我写的一些原创性的文章，尽管有些文章是通过翻译的形式呈现给大家，但是这中间夹杂着很多我的心得体会以及写作的思维模式。这个博客从2008年开始就陆续更新了，之前的文章已经全部删除掉了。从2001年开始接触Linux到现在">
-<meta name="twitter:image" content="http://7.daliansky.net/wechatpay_160.jpg">
+<meta name="twitter:title" content="小米PRO蓝牙设备驱动的正确姿势">
+<meta name="twitter:description" content="经常使用小米Pro笔记本安装使用macOS的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那">
 
 
 
@@ -124,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/about/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html"/>
 
 
 
 
 
-  <title>关于 | 黑果小兵的部落阁</title>
+  <title>小米PRO蓝牙设备驱动的正确姿势 | 黑果小兵的部落阁</title>
   
 
 
@@ -291,55 +289,269 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DalianSky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑果小兵的部落阁">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>Hey,Guys.</p>
-<h1 id="欢迎来到黑果小兵的部落阁"><a href="#欢迎来到黑果小兵的部落阁" class="headerlink" title="欢迎来到黑果小兵的部落阁"></a>欢迎来到黑果小兵的部落阁</h1><p>这里记录了Hackintosh的心路历程，包括了我制作的macOS各个发行版测/试版的镜像资源，以及黑苹果所需要的各种工具等。当然更多的是我写的一些原创性的文章，尽管有些文章是通过翻译的形式呈现给大家，但是这中间夹杂着很多我的心得体会以及写作的思维模式。<br>这个博客从2008年开始就陆续更新了，之前的文章已经全部删除掉了。<br>从2001年开始接触Linux到现在开始转而使用Hackintosh，我觉得就是个积少成多水到渠成的过程。之前在Linux下面积累的经验可以让我更快地上手macOS，对于我来说macOS的生态要比Linux好很多，应用程序多，兼容性也不错，最最重要的是还有个shell，用它可以连通世界。<br>如果你想飞，那么请关注我，老司机带你一起飞保证不翻车！</p>
-<h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>姓名：唐志忠<br>性别：男<br>出生日期：1969年<br>目前居住地：大连<br>业余爱好：旅游,毽球,羽毛球,排球,台球,保龄球,徒步,摄影,音乐,美食</p>
-<h1 id="联络方式："><a href="#联络方式：" class="headerlink" title="联络方式："></a>联络方式：</h1><ul>
-<li>QQ: 11641</li>
-<li>微信: daliansky</li>
-<li>E_Mail: daliansky2008(at)gmail.com</li>
-</ul>
-<h2 id="如果你认可我的工作，可以通过打赏支持我后续的更新"><a href="#如果你认可我的工作，可以通过打赏支持我后续的更新" class="headerlink" title="如果你认可我的工作，可以通过打赏支持我后续的更新"></a>如果你认可我的工作，可以通过打赏支持我后续的更新</h2><table>
-<thead>
-<tr>
-<th>微信</th>
-<th>支付宝</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="http://7.daliansky.net/wechatpay_160.jpg" alt="wechatpay_160"></td>
-<td><img src="http://7.daliansky.net/alipay_160.jpg" alt="alipay_160"></td>
-</tr>
-</tbody>
-</table>
-
+          <h1 class="post-title" itemprop="name headline">小米PRO蓝牙设备驱动的正确姿势</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T12:29:12+08:00">
+                2018-03-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-23T12:56:17+08:00">
+                2018-03-23
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/XiaoMiPro-Bluetooth-device-driver-correct-posture.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/XiaoMiPro-Bluetooth-device-driver-correct-posture.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/XiaoMiPro-Bluetooth-device-driver-correct-posture.html" class="leancloud_visitors" data-flag-title="小米PRO蓝牙设备驱动的正确姿势">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-item-text">℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  187 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
+</blockquote>
+<p>正题来了：屏蔽蓝牙或者加装USB蓝牙</p>
+
       
     </div>
     
     
     
+
+    
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="DalianSky 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="DalianSky 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/蓝牙/" rel="tag"><i class="fa fa-tag"></i> 蓝牙</a>
+          
+            <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+          
+            <a href="/tags/小米/" rel="tag"><i class="fa fa-tag"></i> 小米</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Modify-DSDT-to-achieve-power-display-method.html" rel="next" title="修改DSDT实现电量显示方法【转载】">
+                <i class="fa fa-chevron-left"></i> 修改DSDT实现电量显示方法【转载】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -376,17 +588,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -475,22 +678,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欢迎来到黑果小兵的部落阁"><span class="nav-number">1.</span> <span class="nav-text">欢迎来到黑果小兵的部落阁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于我"><span class="nav-number">2.</span> <span class="nav-text">关于我</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联络方式："><span class="nav-number">3.</span> <span class="nav-text">联络方式：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如果你认可我的工作，可以通过打赏支持我后续的更新"><span class="nav-number">3.1.</span> <span class="nav-text">如果你认可我的工作，可以通过打赏支持我后续的更新</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

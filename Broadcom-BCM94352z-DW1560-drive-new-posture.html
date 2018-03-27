@@ -90,7 +90,7 @@
 <meta property="og:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identif">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/brcm94352z驱动.png">
-<meta property="og:updated_time" content="2018-01-26T05:44:00.000Z">
+<meta property="og:updated_time" content="2018-03-27T01:11:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
 <meta name="twitter:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identif">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-26T13:44:00+08:00">
-                2018-01-26
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-27T09:11:07+08:00">
+                2018-03-27
               </time>
             
           </span>
@@ -420,7 +420,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  718 字
+                  753 字
                 </span>
               
 
@@ -488,7 +488,7 @@
 <li>包括这些文件的目录看起来是这样的：<br><img src="http://7.daliansky.net/brcm94352z驱动.png" alt="brcm94352z驱动"></li>
 </ol>
 <p>当然，在重启前，还要重建一下系统的缓存，命令为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache</div><div class="line">sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel</div><div class="line">sudo touch /System/Library/Extensions/ &amp;&amp; sudo kextcache -u /</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">sudo chmod -Rf 755 /S*/L*/E*</div><div class="line">sudo chown -Rf 0:0 /S*/L*/E*</div><div class="line">sudo chmod -Rf 755 /L*/E*</div><div class="line">sudo chown -Rf 0:0 /L*/E*</div><div class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</div><div class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</div><div class="line">sudo touch -f /S*/L*/E*</div><div class="line">sudo touch -f /L*/E*</div><div class="line">sudo kextcache -Boot -U /</div></pre></td></tr></table></figure>
 <p>重启你的系统，检查WIFI/蓝牙是否工作正常。</p>
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。</p>
 <h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
@@ -661,7 +661,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -683,7 +683,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">129</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
