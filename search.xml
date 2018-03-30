@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.4 17E199 正式版 with Clover 4418原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像 10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题 本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题； 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 更新apfs.efi到10.13.4正式版； 更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]； Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接： 迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源 Mega网盘下载链接: 如果mega无法下载,请进群下载hosts_mega.txt MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像 10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题 本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题； 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 更新apfs.efi到10.13.4正式版； 更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]； Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接： 迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源 Mega网盘下载链接:请点击下载 如果mega无法下载,请进群下载hosts_mega.txt MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -415,8 +415,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>CPUFriend</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>CPU变频</tag>
         <tag>插件</tag>
@@ -448,9 +448,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>Lilu</tag>
         <tag>AppleALC</tag>
         <tag>Codec</tag>
-        <tag>Lilu</tag>
       </tags>
   </entry>
   <entry>
@@ -481,11 +481,11 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
@@ -683,8 +683,8 @@
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>安装</tag>
+        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
