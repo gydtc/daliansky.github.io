@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Fri, 30 Mar 2018 16:02:27 GMT</pubDate>
+    <pubDate>Fri, 30 Mar 2018 22:04:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,54 +18,89 @@
       <pubDate>Sat, 24 Mar 2018 02:49:36 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-4418原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-44
+        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见&lt;a href=&quot;http:/
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-4418原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-4418原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像</h1><blockquote>
+      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像</h1>
+<blockquote>
 <p>10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见<a href="http://bbs.pcbeta.com/viewthread-1780071-1-1.html" target="_blank" rel="external">解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题</a></p>
 </blockquote>
 <ul>
-<li><p>本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;<code>Drivers64UEFI/</code>目录下只保留的<code>AptioMemoryFix.efi</code>以解决卡+++问题；</p>
+<li>
+<p>本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;<code>Drivers64UEFI/</code>目录下只保留的<code>AptioMemoryFix.efi</code>以解决卡+++问题；</p>
 </li>
-<li><p>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</p>
+<li>
+<p>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</p>
 </li>
-<li><p>更新<code>apfs.efi</code>到<code>10.13.4</code>正式版；</p>
+<li>
+<p>更新<code>apfs.efi</code>到<code>10.13.4</code>正式版；</p>
 </li>
-<li><p>更新<code>IntelGraphicsFixup</code> 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入<code>platform-id</code></p>
+<li>
+<p>更新<code>IntelGraphicsFixup</code> 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入<code>platform-id</code></p>
 <p><img src="http://7.daliansky.net/dell/IntelGraphicsFixup.jpg" alt="http://7.daliansky.net/dell/IntelGraphicsFixup.jpg"></p>
 </li>
-<li><p>特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理<strong>[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]</strong>；</p>
+<li>
+<p>特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理**[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]**；</p>
 </li>
-<li><p>Clover默认配置文件<code>config.plist</code>原生支持七代HD620/HD630、八代UHD620/UHD630，<code>platform-id</code> 使用自动侦测；</p>
+<li>
+<p>Clover默认配置文件<code>config.plist</code>原生支持七代HD620/HD630、八代UHD620/UHD630，<code>platform-id</code> 使用自动侦测；</p>
 </li>
-<li><p>config_DalianSky.plist为部分机型增加<code>Drop Tables</code>,如果默认的<code>config.plist</code>无法进入安装界面,可以试试这个</p>
+<li>
+<p>config_DalianSky.plist为部分机型增加<code>Drop Tables</code>,如果默认的<code>config.plist</code>无法进入安装界面,可以试试这个</p>
 </li>
-<li><p>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</p>
+<li>
+<p>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</p>
 </li>
-<li><p>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</p>
+<li>
+<p>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</p>
 </li>
-<li><p>本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：<a href="http://bbs.pcbeta.com/viewthread-1753483-1-1.html" target="_blank" rel="external">macOS High Sierra区笔记本安装情况集合帖</a></p>
+<li>
+<p>本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：<a href="http://bbs.pcbeta.com/viewthread-1753483-1-1.html" target="_blank" rel="external">macOS High Sierra区笔记本安装情况集合帖</a></p>
 </li>
-<li><p>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；</p>
+<li>
+<p>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；</p>
 </li>
-<li><p>已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动；</p>
+<li>
+<p>已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动；</p>
 </li>
-<li><p>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 <code>黑果小兵</code> 的大力支持，由于人员众多，恕不一一列名致谢！</p>
+<li>
+<p>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 <code>黑果小兵</code> 的大力支持，由于人员众多，恕不一一列名致谢！</p>
 </li>
-<li><p>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
+<li>
+<p>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
 </li>
 </ul>
-<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.13.4/10.13.4_17E199.jpg" alt="10.13.4_17E199.jpg"><br><img src="http://7.daliansky.net/10.13.4/Audio.jpg" alt="Audio.jpg"><br><img src="http://7.daliansky.net/10.13.4/BlueTooth.jpg" alt="BlueTooth.jpg"><br><img src="http://7.daliansky.net/10.13.4/Displays.jpg" alt="Displays.jpg"><br><img src="http://7.daliansky.net/10.13.4/HD620.jpg" alt="HD620.jpg"><br><img src="http://7.daliansky.net/10.13.4/HDMI_Audio.jpg" alt="HDMI_Audio.jpg"><br><img src="http://7.daliansky.net/10.13.4/KEXTS.jpg" alt="KEXTS.jpg"><br><img src="http://7.daliansky.net/10.13.4/PCI_List.jpg" alt="PCI_List.jpg"><br><img src="http://7.daliansky.net/10.13.4/SATA.jpg" alt="SATA.jpg"><br><img src="http://7.daliansky.net/10.13.4/Storage.jpg" alt="Storage.jpg"><br><img src="http://7.daliansky.net/10.13.4/USB.jpg" alt="USB.jpg"><br><img src="http://7.daliansky.net/10.13.4/WIFI.jpg" alt="WIFI.jpg"></p>
-<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接：</p>
-<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/黑果小兵/" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<h1>截图：</h1>
+<p><img src="http://7.daliansky.net/10.13.4/10.13.4_17E199.jpg" alt="10.13.4_17E199.jpg">
+<img src="http://7.daliansky.net/10.13.4/Audio.jpg" alt="Audio.jpg">
+<img src="http://7.daliansky.net/10.13.4/BlueTooth.jpg" alt="BlueTooth.jpg">
+<img src="http://7.daliansky.net/10.13.4/Displays.jpg" alt="Displays.jpg">
+<img src="http://7.daliansky.net/10.13.4/HD620.jpg" alt="HD620.jpg">
+<img src="http://7.daliansky.net/10.13.4/HDMI_Audio.jpg" alt="HDMI_Audio.jpg">
+<img src="http://7.daliansky.net/10.13.4/KEXTS.jpg" alt="KEXTS.jpg">
+<img src="http://7.daliansky.net/10.13.4/PCI_List.jpg" alt="PCI_List.jpg">
+<img src="http://7.daliansky.net/10.13.4/SATA.jpg" alt="SATA.jpg">
+<img src="http://7.daliansky.net/10.13.4/Storage.jpg" alt="Storage.jpg">
+<img src="http://7.daliansky.net/10.13.4/USB.jpg" alt="USB.jpg">
+<img src="http://7.daliansky.net/10.13.4/WIFI.jpg" alt="WIFI.jpg"></p>
+<h1>下载链接</h1>
+<p>百毒云下载链接：<a href="https://pan.baidu.com/s/1UbqIbltVRDAAY7zQPIHtrw" target="_blank" rel="external">请点击下载</a></p>
 <p>Mega网盘下载链接:<a href="https://mega.nz/#!B5kxmZgb!yP3SDWns61V82WHElF7hJvxvapGjNkhZJmfWCbBBSBk" target="_blank" rel="external">请点击下载</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
+<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5/" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
 <p>MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3</p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a><br>688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]<br>257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
+688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
+257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html#disqus_thread</comments>
@@ -84,7 +119,7 @@
       </description>
       
       <content:encoded><![CDATA[<blockquote>
-<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
+<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：&quot;你让太监射精可能吗？！&quot;，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
 </blockquote>
 <p>正题来了：屏蔽蓝牙或者加装USB蓝牙</p>
 ]]></content:encoded>
@@ -100,42 +135,61 @@
       <description>
       
         &lt;blockquote&gt;
-&lt;p&gt;这篇帖子主要来源于论坛&lt;a href=&quot;https://github.com/RehabMan/Laptop-DSDT-Patch。&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/RehabM
+&lt;p&gt;这篇帖子主要来源于论坛https://github.com/RehabMan/Laptop-DSDT-Patch。&lt;/p&gt;
+&lt;p&gt;但是很多笔记本并未出现在这个补丁源里，并且我们要了解补丁的意思才知道它适不适合我们的电脑。&lt;/p&gt;
+&lt;/blockqu
       
       </description>
       
       <content:encoded><![CDATA[<blockquote>
-<p>这篇帖子主要来源于论坛<a href="https://github.com/RehabMan/Laptop-DSDT-Patch。" target="_blank" rel="external">https://github.com/RehabMan/Laptop-DSDT-Patch。</a></p>
+<p>这篇帖子主要来源于论坛https://github.com/RehabMan/Laptop-DSDT-Patch。</p>
 <p>但是很多笔记本并未出现在这个补丁源里，并且我们要了解补丁的意思才知道它适不适合我们的电脑。</p>
 </blockquote>
-<h2 id="电量补丁制作过程"><a href="#电量补丁制作过程" class="headerlink" title="电量补丁制作过程"></a>电量补丁制作过程</h2><ol>
-<li><p>我们需要确定DSDT里的哪些部分需要改。</p>
-<p>用<code>MaciASL</code>软件打开DSDT，搜索<strong><code>EmbeddedControl</code></strong>。在<code>DSDT</code>里，可能会有一到多个。同时注意一个计算机名字如下图为<strong><code>EC0</code></strong></p>
+<h2>电量补丁制作过程</h2>
+<ol>
+<li>
+<p>我们需要确定DSDT里的哪些部分需要改。</p>
+<p>用<code>MaciASL</code>软件打开DSDT，搜索**<code>EmbeddedControl</code><strong>。在<code>DSDT</code>里，可能会有一到多个。同时注意一个计算机名字如下图为</strong><code>EC0</code>**</p>
 </li>
 </ol>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">OperationRegion</span> (<span class="type">ECF2</span>, <span class="type">EmbeddedControl</span>, <span class="type">Zero</span>, <span class="number">0xFF</span>)</div></pre></td></tr></table></figure>
-<p>​     上面的代码，我们只需要关注<code>ec</code>域声明的名字，即<strong><code>ECF2</code></strong>（别的可能是<code>ECF0</code>等）。<br>​     我们开始搜索<strong><code>Field（ECF2</code></strong>。</p>
-<ol>
+<p><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">OperationRegion</span> (<span class="type">ECF2</span>, <span class="type">EmbeddedControl</span>, <span class="type">Zero</span>, <span class="number">0xFF</span>)</div></pre></td></tr></table></figure></p>
+<p>​     上面的代码，我们只需要关注<code>ec</code>域声明的名字，即**<code>ECF2</code><strong>（别的可能是<code>ECF0</code>等）。
+​     我们开始搜索</strong><code>Field（ECF2</code>**。</p>
+<ol start="2">
 <li>我们需要查看Field里所有<strong>大于8位</strong>的元素，例如：</li>
 </ol>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="type">Field</span> (<span class="type">ECF2</span>, <span class="type">ByteAcc</span>, <span class="type">Lock</span>, <span class="type">Preserve</span>)</div><div class="line">   &#123;</div><div class="line">       <span class="type">Offset</span> (<span class="number">0x10</span>),</div><div class="line">       <span class="type">BDN0</span>,   <span class="number">56</span>,</div><div class="line">...</div></pre></td></tr></table></figure>
-<p>​    可以看到<strong><code>BDN0</code></strong>是一个大于8位的字段。</p>
-<p>​    我们对其进行记录。之后我们要确定除了这里还有没有其他地方调用了这个字段。搜索他的名字：<strong><code>BDN0</code></strong>。如果<strong>只有这里被用到则不用拆分可以删除记录，</strong>如果除了这里还有其他地方用到，则进行记录。</p>
-<p>​    整理到如下的结果：</p>
-<p>​    可以看到我有意对16位 32位以及高于32位进行了一个空行的区分，大家也可以这样，这对下面的修改操作有着重要意义。</p>
-<h3 id="补丁的制作方法"><a href="#补丁的制作方法" class="headerlink" title="补丁的制作方法"></a>补丁的制作方法</h3><h4 id="对于16位和32位字段的处理"><a href="#对于16位和32位字段的处理" class="headerlink" title="对于16位和32位字段的处理"></a>对于16位和32位字段的处理</h4><p>对于16位的<code>BDC0</code>，我么需要把它拆分为两部分（低字节，高字节）。在拆分的时候，<strong>需要注意两点</strong>：<br>​       1.拆分后，它的名字应该是 4个字符 。不能多，也不能少。如图</p>
+<p><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="type">Field</span> (<span class="type">ECF2</span>, <span class="type">ByteAcc</span>, <span class="type">Lock</span>, <span class="type">Preserve</span>)</div><div class="line">   &#123;</div><div class="line">       <span class="type">Offset</span> (<span class="number">0x10</span>),</div><div class="line">       <span class="type">BDN0</span>,   <span class="number">56</span>,</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p>​	可以看到**<code>BDN0</code>**是一个大于8位的字段。</p>
+<p>​	我们对其进行记录。之后我们要确定除了这里还有没有其他地方调用了这个字段。搜索他的名字：<strong><code>BDN0</code></strong>。如果**只有这里被用到则不用拆分可以删除记录，**如果除了这里还有其他地方用到，则进行记录。</p>
+<p>​	整理到如下的结果：</p>
+<p>​	可以看到我有意对16位 32位以及高于32位进行了一个空行的区分，大家也可以这样，这对下面的修改操作有着重要意义。</p>
+<h3>补丁的制作方法</h3>
+<h4>对于16位和32位字段的处理</h4>
+<p>对于16位的<code>BDC0</code>，我么需要把它拆分为两部分（低字节，高字节）。在拆分的时候，<strong>需要注意两点</strong>：
+​       1.拆分后，它的名字应该是 4个字符 。不能多，也不能少。如图</p>
 <ol>
 <li>// 拆分前： BDC0, 16</li>
 <li>DC00, 8,</li>
 <li>DC01, 8,</li>
 </ol>
 <p>复制代码</p>
-<p>​       2.<strong>拆分后到名字不能已经出现在dsdt中（最好也不要与拆分到名字重复，虽然没什么问题，但是如果多次打这个补丁就会发生错误）</strong>，可以先想好几个名字，然后在dsdt中搜索，如果没有就可以。<br>​       然后。重点来了，<strong>拆分16位字段的补丁结构</strong>。（这里只会拆分ec域内的名称）</p>
+<p>​       2.<strong>拆分后到名字不能已经出现在dsdt中（最好也不要与拆分到名字重复，虽然没什么问题，但是如果多次打这个补丁就会发生错误）</strong>，可以先想好几个名字，然后在dsdt中搜索，如果没有就可以。
+​       然后。重点来了，<strong>拆分16位字段的补丁结构</strong>。（这里只会拆分ec域内的名称）</p>
 <ol>
 <li>into device label H_EC code_regex BDC0,\s+16, replace_matched begin DC00,8,DC01,8, end;</li>
 </ol>
 <p>复制代码</p>
-<p>​           对于各部分的含义以及修改方法：<br>​           1.into device label<strong> H_EC</strong><br>​             含义：针对H_EC这个设备操作。对于自己电脑的名称请查看<strong>制作过程第一步的截屏处</strong>。<br>​           2.code_regex<strong> BDC0,\s+16,</strong><br>含义：code_regex表示寻找后面的匹配项。  后面的BDC0,\s+16,是寻找的内容，对于小白，只要知道把<strong>BDC0</strong>替换成你所记录的16位名称即可。<br>相关解释：\s+表示多个空格。所以这句话的意思是搜索BDCO，16，<br>​              个人建议：这一步中的最后的“，”个人觉得没必要加，因为如果这个数据出现在右括号前贼不会有这个“，”。<br>​           3.replace_matched begin<strong> DC00,8,DC01,8,</strong> end;<br>​              含义：replace_matched begin…..end表示将前面搜索到的字段替换为省略后里的字段。<strong>DC00,8,DC01,8,</strong>即替换为的内容。这里DC00 DC01即你要改为的名   字。<br>​              注意和上文的对应，如过上文按照我的建议不加最后的“，”则这里应为“<strong>DC00,8,DC01,8”</strong>！<br>​       到了这里，我们已经可以自己写替换（或者说拆分）16位字段的补丁了。但是，对于示例DSDT，BDC0是被用到的字段，因此，只是拆分它是不行的。用到它的地方也需要修改。例如这些地方：</p>
+<p>​           对于各部分的含义以及修改方法：
+​           1.into device label** H_EC**
+​             含义：针对H_EC这个设备操作。对于自己电脑的名称请查看<strong>制作过程第一步的截屏处</strong>。
+​           2.code_regex** BDC0,\s+16,**
+含义：code_regex表示寻找后面的匹配项。  后面的BDC0,\s+16,是寻找的内容，对于小白，只要知道把<strong>BDC0</strong>替换成你所记录的16位名称即可。
+相关解释：\s+表示多个空格。所以这句话的意思是搜索BDCO，16，
+​              个人建议：这一步中的最后的“，”个人觉得没必要加，因为如果这个数据出现在右括号前贼不会有这个“，”。
+​           3.replace_matched begin** DC00,8,DC01,8,** end;
+​              含义：replace_matched begin.....end表示将前面搜索到的字段替换为省略后里的字段。**DC00,8,DC01,8,**即替换为的内容。这里DC00 DC01即你要改为的名   字。
+​              注意和上文的对应，如过上文按照我的建议不加最后的“，”则这里应为“<strong>DC00,8,DC01,8”</strong>！
+​       到了这里，我们已经可以自己写替换（或者说拆分）16位字段的补丁了。但是，对于示例DSDT，BDC0是被用到的字段，因此，只是拆分它是不行的。用到它的地方也需要修改。例如这些地方：</p>
 <ol>
 <li>Store (BDC0, Index (DerefOf (Index (Local0, 0x02)), Zero))</li>
 <li>Store (ShiftRight (BDC0, 0x08), Index (DerefOf (Index (Local0, 0x02)), One))</li>
@@ -153,7 +207,11 @@
 <li>end;</li>
 </ol>
 <p>复制代码</p>
-<p>​          对于小白直接将这个加入加入你的补丁中就ok。<br>​          对这个补丁的解读：<br>​           1.into method label B1B2 remove_entry;       查找B1B2方法，如果有，删除它。<br>​           2.into definitionblock code_regex . insert     把后面的内容插入DefinitionBlock { }（每个dsdt的第一个就是这个）内。<br>​       对于dsdt内其他部分的修改，如下：上面是本身的效果，下面为修改结束的效果：</p>
+<p>​          对于小白直接将这个加入加入你的补丁中就ok。
+​          对这个补丁的解读：
+​           1.into method label B1B2 remove_entry;       查找B1B2方法，如果有，删除它。
+​           2.into definitionblock code_regex . insert     把后面的内容插入DefinitionBlock { }（每个dsdt的第一个就是这个）内。
+​       对于dsdt内其他部分的修改，如下：上面是本身的效果，下面为修改结束的效果：</p>
 <ol>
 <li>Store (BDC0, Index (DerefOf (Index (Local0, 0x02)), Zero))</li>
 <li>Store (ShiftRight (BDC0, 0x08), Index (DerefOf (Index (Local0, 0x02)), One))</li>
@@ -169,16 +227,23 @@
 <li>into method label GBTI code_regex (BDC0, replaceall_matched begin (B1B2(DC00,DC01), end;</li>
 </ol>
 <p>复制代码</p>
-<p>​       主要介绍下几个参数： </p>
+<p>​       主要介绍下几个参数：</p>
 <p>​          1.into method label <strong>GBTI</strong></p>
-<p>这部分GBTI为dsdt出现的BDC0的方法，至于如何查看，点中你想要的参数，maciasl自然会显示，如下图：灰色部分即为你要修改为的名称，注意有些是有_的也要完全相同的加进去<br>​         2.code_regex <strong>(BDC0,</strong></p>
+<p>这部分GBTI为dsdt出现的BDC0的方法，至于如何查看，点中你想要的参数，maciasl自然会显示，如下图：灰色部分即为你要修改为的名称，注意有些是有_的也要完全相同的加进去
+​         2.code_regex <strong>(BDC0,</strong></p>
 <p>这部分(BDC0,与上面的查找相同，不过这部分并不能直接把BDC0改成你自己的方法就完事！！！举个例子：</p>
 <ol>
 <li>Store (^^PCI0.LPCB.EC0.XIF1, Index (PAK0, One))</li>
 </ol>
 <p>复制代码</p>
-<p>​            如果我要改这个中的XIF1应该怎么写？            应该写为：(\^\^PCI0.LPCB.EC0.XIF1,<br>​          所以这个地方就是看自己的代码具体的情况，改成自己的形式，并且每个标点符号左边要加”\”<br>​        3. replaceall_matched begin <strong>(B1B2(DC00,DC01),</strong> end;<br>​             这部分括号内就是你要修改为的内容，还以2中例子，应该改成什么？<br>​           应该改为：(B1B2(^^PCI0.LPCB.EC0.XID1,^^PCI0.LPCB.EC0.XID2),<br>​             这个地方就是把B1B2括号内的两个参数改成你本身括号内的内容，并且把你想改的参数分别改掉。<br>​     <strong>特别提醒：1.**</strong>以上都是对于在dsdt中，store（要修改参数，xxx）的形式<strong>
-</strong>                      如果出现store（xxx，要修改的参数）则我们要改前改后的形式如下：**</p>
+<p>​            如果我要改这个中的XIF1应该怎么写？            应该写为：(^^PCI0.LPCB.EC0.XIF1,
+​          所以这个地方就是看自己的代码具体的情况，改成自己的形式，并且每个标点符号左边要加&quot;&quot;
+​        3. replaceall_matched begin <strong>(B1B2(DC00,DC01),</strong> end;
+​             这部分括号内就是你要修改为的内容，还以2中例子，应该改成什么？
+​           应该改为：(B1B2(^^PCI0.LPCB.EC0.XID1,^^PCI0.LPCB.EC0.XID2),
+​             这个地方就是把B1B2括号内的两个参数改成你本身括号内的内容，并且把你想改的参数分别改掉。
+​     **特别提醒：1.<strong><strong>以上都是对于在dsdt中，store（要修改参数，xxx）的形式</strong>
+**                      如果出现store（xxx，要修改的参数）则我们要改前改后的形式如下：</strong></p>
 <ol>
 <li>Store (Arg0, ENCR)//修改前</li>
 <li>Store (ShiftRight(Arg0,8),ENC2)</li>
@@ -192,7 +257,7 @@
 <li>Store(Or(B1B2(BTD0,BTD1),0xC0), BTD0)</li>
 </ol>
 <p>复制代码</p>
-<p>​                  3.<strong>如果出现**</strong>And （你要修改的参数，xxx，你要修改的参数）<strong><strong>的</strong></strong>形式则修改形式如下：**</p>
+<p>​                  3.<strong>如果出现</strong><strong>And （你要修改的参数，xxx，你要修改的参数）<strong><strong>的</strong></strong>形式则修改形式如下：</strong></p>
 <ol>
 <li>And  (BATD, 0xFF3F, BATD)//修改前</li>
 <li>Store(ShiftRight(And(B1B2(BTD0,BTD1),0xFF3F),8), BTD1)</li>
@@ -218,7 +283,8 @@
 <li>into method label ITLB code_regex (BFC1, replaceall_matched begin (B1B2(FC10,FC11), end;</li>
 </ol>
 <p>复制代码</p>
-<p>   接着是32位字段的修改<br>​       这是与16位类似的处理方法：直接打进去就好</p>
+<p>接着是32位字段的修改
+​       这是与16位类似的处理方法：直接打进去就好</p>
 <ol>
 <li>nto method label B1B4 remove_entry;</li>
 <li>into definitionblock code_regex . insert</li>
@@ -243,7 +309,10 @@
 <li>into method label GBTI code_regex (BTY0, replaceall_matched begin (B1B4(TY00,TY01,TY02,TY03), end;</li>
 </ol>
 <p>复制代码</p>
-<p>​       这部分不懂的去看16位的修改方法，完全相同，只是数据变成了四个！<strong>二、大于32位的字段补丁处理</strong><br><strong>对于大于32位的字段不用进行拆分操作，只需要将用到的地方进行处理就行了。</strong><br><strong>       我们先来认识个东西：偏移量。偏移量是啥？  看看图中的offset代表的就是偏移量。中间的咋算？</strong><br><strong>       偏移量逢8进1，所以在对嘴上面的offset往下加就可以得出，如图：</strong></p>
+<p>​       这部分不懂的去看16位的修改方法，完全相同，只是数据变成了四个！<strong>二、大于32位的字段补丁处理</strong>
+<strong>对于大于32位的字段不用进行拆分操作，只需要将用到的地方进行处理就行了。</strong>
+**       我们先来认识个东西：偏移量。偏移量是啥？  看看图中的offset代表的就是偏移量。中间的咋算？**
+**       偏移量逢8进1，所以在对嘴上面的offset往下加就可以得出，如图：**</p>
 <ol>
 <li>Offset (0x04),</li>
 <li>​                        CMCM,   8, //0x04</li>
@@ -347,8 +416,8 @@
 <p>复制代码</p>
 <p>最后总结下补丁结构：</p>
 <ol>
-<li># Tip: If you get a 0% battery status,you should also patch the Rehabman’s “Fix Mutex with non-zero SyncLevel” patch.</li>
-<li># You also can patch the both of your computer’s battery patch and the Rehabman’s patch at one time.</li>
+<li># Tip: If you get a 0% battery status,you should also patch the Rehabman's &quot;Fix Mutex with non-zero SyncLevel&quot; patch.</li>
+<li># You also can patch the both of your computer's battery patch and the Rehabman's patch at one time.</li>
 <li></li>
 <li># 注意：如果打过电量补丁后，有获取的电池状态显示为0%的情况，还需要打 Rehabman的 “Fix Mutex with non-zero SyncLevel” 补丁。</li>
 <li># 你也可以，一次性打好 自己电脑的电量补丁 和 Rehabman 的那个补丁。</li>
@@ -360,7 +429,14 @@
 <li># ==== Data handling method 数据处理方法 ====</li>
 </ol>
 <p>复制代码</p>
-<p>最后的解释：文中多次提到特殊情况和离括号的的远近不同的处理方法，这是为什么呢？<br>  很简答的原因是sotre（A，B）是一个从左到右的操作，也就是将A写到B<br>   所以如果A是你的参数则是读的操作，而如果是B则是写的操作，也就用到不同的方法。<br>  而Or 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。<br>  And 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。<br>  不过能理解store就够了。<br><strong>  将整理好的补丁保存位txt格式就能打入了 软件中点patch。点open就行</strong><br>最后，特别感谢翻译贴和r神的帖子，也希望你们都能搞定电量显示的问题，另外，如果成功请回馈社会将补丁放于最上面所说帖子的补丁源！</p>
+<p>最后的解释：文中多次提到特殊情况和离括号的的远近不同的处理方法，这是为什么呢？
+很简答的原因是sotre（A，B）是一个从左到右的操作，也就是将A写到B
+所以如果A是你的参数则是读的操作，而如果是B则是写的操作，也就用到不同的方法。
+而Or 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。
+And 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。
+不过能理解store就够了。
+**  将整理好的补丁保存位txt格式就能打入了 软件中点patch。点open就行**
+最后，特别感谢翻译贴和r神的帖子，也希望你们都能搞定电量显示的问题，另外，如果成功请回馈社会将补丁放于最上面所说帖子的补丁源！</p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Modify-DSDT-to-achieve-power-display-method.html#disqus_thread</comments>
@@ -373,11 +449,14 @@
       <pubDate>Wed, 24 Jan 2018 02:49:36 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391
+        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡&lt;code&gt;+++&lt;/code&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像</h1><ul>
+      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像</h1>
+<ul>
 <li>本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡<code>+++</code>请替换<code>Drivers64UEFI/Backup</code>目录下的<code>OsxAptioFix3Drv-64.efi</code></li>
 <li>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</li>
 <li>支持UHD620/UHD630等八代核显</li>
@@ -391,16 +470,31 @@
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></li>
 </ul>
-<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.13.3_17D47.png" alt="10.13.3_17D47"><br><img src="http://7.daliansky.net/10.13.3_Audio.png" alt="10.13.3_Audio"><br><img src="http://7.daliansky.net/10.13.3_HD620.png" alt="10.13.3_HD620"><br><img src="http://7.daliansky.net/10.13.3_Bluetooth.png" alt="10.13.3_Bluetooth"><br><img src="http://7.daliansky.net/10.13.3_USB.png" alt="10.13.3_USB"><br><img src="http://7.daliansky.net/10.13.3_Kexts.png" alt="10.13.3_Kexts"><br><img src="http://7.daliansky.net/10.13.3_Wifi.png" alt="10.13.3_Wifi"><br><img src="http://7.daliansky.net/10.13.3_Display.png" alt="10.13.3_Display"><br><img src="http://7.daliansky.net/10.13.3.png" alt="10.13.3"></p>
-<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接：<a href="https://pan.baidu.com/s/1bqmWMLp" target="_blank" rel="external">https://pan.baidu.com/s/1bqmWMLp</a> 密码: 7pu8</p>
-<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/黑果小兵/macOS%20High%20Sierra%2010.13.3%2817D47%29%20Installer%20with%20Clover%204391.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<h1>截图：</h1>
+<p><img src="http://7.daliansky.net/10.13.3_17D47.png" alt="10.13.3_17D47">
+<img src="http://7.daliansky.net/10.13.3_Audio.png" alt="10.13.3_Audio">
+<img src="http://7.daliansky.net/10.13.3_HD620.png" alt="10.13.3_HD620">
+<img src="http://7.daliansky.net/10.13.3_Bluetooth.png" alt="10.13.3_Bluetooth">
+<img src="http://7.daliansky.net/10.13.3_USB.png" alt="10.13.3_USB">
+<img src="http://7.daliansky.net/10.13.3_Kexts.png" alt="10.13.3_Kexts">
+<img src="http://7.daliansky.net/10.13.3_Wifi.png" alt="10.13.3_Wifi">
+<img src="http://7.daliansky.net/10.13.3_Display.png" alt="10.13.3_Display">
+<img src="http://7.daliansky.net/10.13.3.png" alt="10.13.3"></p>
+<h1>下载链接</h1>
+<p>百毒云下载链接：https://pan.baidu.com/s/1bqmWMLp 密码: 7pu8</p>
+<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5/macOS%20High%20Sierra%2010.13.3%2817D47%29%20Installer%20with%20Clover%204391.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
 <p>Mega网盘下载链接:<a href="https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo" target="_blank" rel="external">https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
 <p>MD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec</p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a><br>688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]<br>257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
+688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
+257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html#disqus_thread</comments>
@@ -413,11 +507,14 @@
       <pubDate>Tue, 23 Jan 2018 01:42:05 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译&quot;&gt;&lt;a href=&quot;#【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译&quot; class=&quot;headerlink&quot; tit
+        &lt;h3&gt;【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装
       
       </description>
       
-      <content:encoded><![CDATA[<h3 id="【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译"><a href="#【黑果小兵】AMD-Ryzen安装macOS-High-Sierra-10-13-指南-授权翻译" class="headerlink" title="【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]"></a>【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]</h3><blockquote>
+      <content:encoded><![CDATA[<h3>【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]</h3>
+<blockquote>
 <p>这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装macOS有更多的步骤，也更难以为初学者工作，所以我尽可能地简化了这个过程，并尽可能使本指南更容易理解。</p>
 </blockquote>
 <p>如果你有一个基于Intel的系统，请参阅： <strong><a href="https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html">macOS安装教程兼小米Pro安装过程记录</a></strong>，因为本指南仅适用于Ryzen。</p>
@@ -431,37 +528,46 @@
 <li>AMD GPU</li>
 <li>睡眠唤醒</li>
 </ul>
-<h3 id="Ryzen-High-Sierra-Hackintosh概述"><a href="#Ryzen-High-Sierra-Hackintosh概述" class="headerlink" title="Ryzen High Sierra Hackintosh概述"></a>Ryzen High Sierra Hackintosh概述</h3><p>稍微额外的努力，Ryzen可以在黑客行业工作，虽然它不会像英特尔的机器那样流畅，但是这是Mac的基础。</p>
-<p>本指南基于Clover方法，并使用在Ryzen兼容性安装期间应用的定制Ryzen内核。 与英特尔的机器相比，安装的时间还要长得多。 </p>
+<h3>Ryzen High Sierra Hackintosh概述</h3>
+<p>稍微额外的努力，Ryzen可以在黑客行业工作，虽然它不会像英特尔的机器那样流畅，但是这是Mac的基础。</p>
+<p>本指南基于Clover方法，并使用在Ryzen兼容性安装期间应用的定制Ryzen内核。 与英特尔的机器相比，安装的时间还要长得多。</p>
 <p>您只需要一个备用闪存驱动器，硬盘驱动器以及能够运行虚拟机来完成此操作的Mac或Windows / Linux计算机。 我已经包含一个EFI文件夹以及执行安装所需的PreInstall＆PostInstall文件夹。 安装完成后，声音应该工作我使用<code>VoodooHDA.kext</code>驱动程序，USB 2/3端口工作正常，使用<code>USBInjectAll.kext</code> /<code>GenericUSBXHCI.kext</code>，而对于以太网我包含了所有的可能的驱动文件，我可以想到Ryzen主板使用的，所以安装完成后也要工作。</p>
 <p>使用本指南中包含的步骤和文件，我可以同时获得AMD RX和Nvidia GTX显卡的功能。 使用Ryzen CPU会出现一些图形化的性能下降。更新的AMD显卡的性能下降了10-15%，而对于Nvidia来说，性能下降了50%，fps下降了50%。</p>
-<p>睡眠也适用于我是否插入了AMD或Nvidia显卡。在Ryzen + Nvidia上使用睡眠工具已经导致其他人重新启动问题，而不是正常唤醒，但似乎从High Sierra 10.13开始已经解决。包括10.13.1 build (17B1003)和10.13.2 (Beta)，因为我没有遇到这个问题与我的GTX 1050钛使用本指南中包含的文件。 </p>
+<p>睡眠也适用于我是否插入了AMD或Nvidia显卡。在Ryzen + Nvidia上使用睡眠工具已经导致其他人重新启动问题，而不是正常唤醒，但似乎从High Sierra 10.13开始已经解决。包括10.13.1 build (17B1003)和10.13.2 (Beta)，因为我没有遇到这个问题与我的GTX 1050钛使用本指南中包含的文件。</p>
 <p>Ryzen hackintosh的一个<strong>重要问题是无法安装macOS更新</strong>。 例如，当我尝试时，我无法运行更新安装程序从10.13.1到10.13.2。 例如，当苹果有macOS的<a href="https://www.macrumors.com/2017/11/29/apple-fixes-root-password-bug-security-update/" target="_blank" rel="external">根问题</a>时，小的更新可以工作10.13.1我能够更新到更新的版本10.13.1。 但是要升级到 10.13.2，我唯一的选择就是在应用商店下载更新后的版本，然后创建另一个USB安装程序，重新安装High Sierra。</p>
-<p>这个和更慢的图形性能，特别是在我看来与Nvidia显卡配对时，是使用Ryzen黑金刚的最不方便的部分。 如果你还没有购买你的电脑零件，并计划使用macOS作为你的主要操作系统，我建议与英特尔一起，只为了更平滑的体验，但如果你已经有一台像我这样的Ryzen PC，让我们开始吧…</p>
-<h3 id="Part-1-创建一个Ryzen安装程序"><a href="#Part-1-创建一个Ryzen安装程序" class="headerlink" title="Part 1 - 创建一个Ryzen安装程序"></a>Part 1 - 创建一个Ryzen安装程序</h3><p>要创建Ryzen hackintosh，您需要创建一个备用的8GB +闪存驱动器来安装High Sierra安装程序。</p>
+<p>这个和更慢的图形性能，特别是在我看来与Nvidia显卡配对时，是使用Ryzen黑金刚的最不方便的部分。 如果你还没有购买你的电脑零件，并计划使用macOS作为你的主要操作系统，我建议与英特尔一起，只为了更平滑的体验，但如果你已经有一台像我这样的Ryzen PC，让我们开始吧...</p>
+<h3>Part 1 - 创建一个Ryzen安装程序</h3>
+<p>要创建Ryzen hackintosh，您需要创建一个备用的8GB +闪存驱动器来安装High Sierra安装程序。</p>
 <p>另外需要一个mac或没有Mac的人，你需要创建一个<a href="http://hackintosher.com/guides/virtual-macos-use-macos-sierra-virtual-machine-vmware/" target="_blank" rel="external">运行macOS</a>的<a href="http://hackintosher.com/guides/virtual-macos-use-macos-sierra-virtual-machine-vmware/" target="_blank" rel="external">虚拟机</a></p>
 <p>这是一个书面指南，但是如果你喜欢视频教程请参阅<a href="https://www.youtube.com/watch?v=ydHyAmxPb_Y" target="_blank" rel="external">XLNC**</a>创建的<a href="https://www.youtube.com/watch?v=ydHyAmxPb_Y" target="_blank" rel="external"><strong>视频</strong></a></p>
-<h4 id="1-创建一个High-Sierra-USB安装程序"><a href="#1-创建一个High-Sierra-USB安装程序" class="headerlink" title="1. 创建一个High Sierra USB安装程序"></a>1. 创建一个High Sierra USB安装程序</h4><p>学习如何做到如下： <a href="http://hackintosher.com/guides/make-macos-flash-drive-installer/" target="_blank" rel="external">如何创建MacOS系统安装U盘</a> </p>
-<h4 id="2-Ryzen内核设置"><a href="#2-Ryzen内核设置" class="headerlink" title="2. Ryzen内核设置"></a>2. Ryzen内核设置</h4><p>现在我们手中已经有了High Sierra的安装程序，我们需要将其配置为更友好的方式，方法是放入修改好的内核<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://wiki.osx86project.org/wiki/index.php/Patched_Kernels&amp;usg=ALkJrhivT46WUjtPLEE1rPwlo5O7TUjmTQ" target="_blank" rel="external"><strong>Bronya @ InsanelyMac</strong></a>和由<strong>XLNC</strong>创建的<code>PreInstall</code>/<code>PostInstall</code>的脚本。</p>
-<h5 id="2-1-文件夹可见性"><a href="#2-1-文件夹可见性" class="headerlink" title="2.1 文件夹可见性"></a>2.1 文件夹可见性</h5><p>AMD内核文件被添加到默认情况下在macOS上隐藏的文件夹，所以让我们取消隐藏这些文件夹：</p>
+<h4>1. 创建一个High Sierra USB安装程序</h4>
+<p>学习如何做到如下： <a href="http://hackintosher.com/guides/make-macos-flash-drive-installer/" target="_blank" rel="external">如何创建MacOS系统安装U盘</a></p>
+<h4>2. Ryzen内核设置</h4>
+<p>现在我们手中已经有了High Sierra的安装程序，我们需要将其配置为更友好的方式，方法是放入修改好的内核<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://wiki.osx86project.org/wiki/index.php/Patched_Kernels&amp;usg=ALkJrhivT46WUjtPLEE1rPwlo5O7TUjmTQ" target="_blank" rel="external"><strong>Bronya @ InsanelyMac</strong></a>和由<strong>XLNC</strong>创建的<code>PreInstall</code>/<code>PostInstall</code>的脚本。</p>
+<h5>2.1 文件夹可见性</h5>
+<p>AMD内核文件被添加到默认情况下在macOS上隐藏的文件夹，所以让我们取消隐藏这些文件夹：</p>
 <ol>
 <li>打开<strong>终端</strong></li>
 <li>输入以下两行命令：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.Finder AppleShowAllFiles true</div><div class="line">killall Finder</div></pre></td></tr></table></figure>
-<p>​    屏幕输出如下：<br><img src="http://7.daliansky.net/Xnip2018-01-23_16-12-00.jpg" alt="Xnip2018-01-23_16-12-00"></p>
-<ol>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.Finder AppleShowAllFiles true</div><div class="line">killall Finder</div></pre></td></tr></table></figure></p>
+<p>​	屏幕输出如下：
+<img src="http://7.daliansky.net/Xnip2018-01-23_16-12-00.jpg" alt="Xnip2018-01-23_16-12-00"></p>
+<ol start="3">
 <li><strong>重新启动</strong> macOS，以便在编辑默认值后显示隐藏的文件。</li>
-<li>打开你在步骤1中所做的闪存驱动器<strong>Install macOS High Sierra</strong>你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。<br>  <img src="http://7.daliansky.net/Xnip2018-01-23_16-40-02.jpg" alt="Xnip2018-01-23_16-40-02"><pre><code>注意文件夹`.IABootFiles`和`System` ，这是你将要添加东西的目录。
-</code></pre></li>
+<li>打开你在步骤1中所做的闪存驱动器<strong>Install macOS High Sierra</strong>你看到一堆半透明的文件夹。 这些是我们将要更改的隐藏文件夹。
+<img src="http://7.daliansky.net/Xnip2018-01-23_16-40-02.jpg" alt="Xnip2018-01-23_16-40-02">
+注意文件夹<code>.IABootFiles</code>和<code>System</code> ，这是你将要添加东西的目录。</li>
 </ol>
-<h5 id="2-2-添加AMD修补的内核"><a href="#2-2-添加AMD修补的内核" class="headerlink" title="2.2 添加AMD修补的内核"></a>2.2 添加AMD修补的内核</h5><p>现在我们要开始将粘贴文件从可下载的文件夹复制到USB闪存驱动器</p>
+<h5>2.2 添加AMD修补的内核</h5>
+<p>现在我们要开始将粘贴文件从可下载的文件夹复制到USB闪存驱动器</p>
 <ol>
 <li>下载<a href="https://mega.nz/#!U89kjQJQ!7gsIIySHfxpsv43YrM8Dp_5mw_Gi6qjzliO1yH01hIg" target="_blank" rel="external">Ryzen_Kernel_10.13.zip</a></li>
 <li>解压<code>Ryzen_Kernel_10.13</code></li>
 <li>进入<code>Ryzen_Kernel_10.13/PreInstall/Prelinkedkernel/</code>目录</li>
 <li>复制<code>prelinkedkernel</code> （<em>注意：是文件而不是文件夹</em>）</li>
-<li>我们将使用<code>prelinkedkernel</code>的补丁版本来替换安装<code>macOS High Sierra</code>上现有的Apple版本。 在以下位置粘贴并替换<code>prelinkedkernel</code><ol>
+<li>我们将使用<code>prelinkedkernel</code>的补丁版本来替换安装<code>macOS High Sierra</code>上现有的Apple版本。 在以下位置粘贴并替换<code>prelinkedkernel</code>
+<ol>
 <li><strong>/Volumes/Install macOS High Sierra/.IABootFiles/</strong></li>
 <li><strong>/Volumes/Install macOS High Sierra/System/Library/PrelinkedKernels/</strong></li>
 </ol>
@@ -470,13 +576,15 @@
 <li>复制PreInstall和PostInstall文件夹</li>
 <li>将它们粘贴到闪存驱动器<code>/Volumes/Install macOS High Sierra/</code></li>
 </ol>
-<h4 id="第3步。EFI分区配置"><a href="#第3步。EFI分区配置" class="headerlink" title="第3步。EFI分区配置"></a>第3步。EFI分区配置</h4><p>现在，必须通过添加预配置的EFI文件夹来配置闪存驱动器的启动分区。</p>
+<h4>第3步。EFI分区配置</h4>
+<p>现在，必须通过添加预配置的EFI文件夹来配置闪存驱动器的启动分区。</p>
 <ol>
-<li><strong>装载EFI分区：</strong><ol>
+<li><strong>装载EFI分区：</strong>
+<ol>
 <li>下载<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://mackie100projects.altervista.org/download-clover-configurator/&amp;usg=ALkJrhhbSCnKKZ2-Wdfn59Q5lXNkwKRoAw" target="_blank" rel="external">Clover配置器</a></li>
 <li>打开<strong>三叶草配置程序</strong></li>
 <li>在工具下选择<strong>装载EFI</strong></li>
-<li>单击<strong>安装分区</strong>以安装macOS …。</li>
+<li>单击<strong>安装分区</strong>以安装macOS ...。</li>
 <li>点击<strong>打开分区</strong></li>
 </ol>
 </li>
@@ -484,18 +592,22 @@
 <li>下载<strong>Ryzen_High_Sierra_10.13_EFI.zip</strong></li>
 <li><strong>解压</strong> <strong>Ryzen_High_Sierra_10.13_EFI.zip</strong></li>
 <li><strong>复制</strong>解压缩的<strong>EFI</strong>文件夹</li>
-<li>将复制的<strong>EFI</strong>粘贴到已装入的EFI分区或<strong>/卷/ EFI中</strong></li>
+<li>将复制的<strong>EFI</strong>粘贴到已装入的EFI分区或**/卷/ EFI中**</li>
 </ol>
-<h3 id="第2部分-在Ryzen上安装High-Sierra"><a href="#第2部分-在Ryzen上安装High-Sierra" class="headerlink" title="第2部分 - 在Ryzen上安装High Sierra"></a>第2部分 - 在Ryzen上安装High Sierra</h3><p>在Ryzen上安装High Sierra相对于兼容的英特尔机器来说更难执行，主要是因为需要时间加载各个部件，而且由于需要耐心处理失败的靴子，您可能经常遇到这个着名的屏幕：</p>
+<h3>第2部分 - 在Ryzen上安装High Sierra</h3>
+<p>在Ryzen上安装High Sierra相对于兼容的英特尔机器来说更难执行，主要是因为需要时间加载各个部件，而且由于需要耐心处理失败的靴子，您可能经常遇到这个着名的屏幕：</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/12/hqdefault.jpg" alt="img"></p>
 <p>不用担心，只需重新启动系统，然后重试。 在启动Ryzen hackintosh的时候，斜线的圆/失败的启动图标也可能会出现，然后安装后，虽然它应该比安装发生的频率低。 如果你睡觉了，而不是把它关掉，那么这个问题不应该是一个大问题，这对AMD和Nvidia显卡都适用。</p>
-<h4 id="步骤1-BIOS设置"><a href="#步骤1-BIOS设置" class="headerlink" title="步骤1. BIOS设置"></a>步骤1. BIOS设置</h4><p>现在USB安装程序已经完成了，现在可以配置BIOS以兼容macOS。</p>
+<h4>步骤1. BIOS设置</h4>
+<p>现在USB安装程序已经完成了，现在可以配置BIOS以兼容macOS。</p>
 <ol>
 <li>重新启动机器并进入BIOS，热键将为F8，F10，F11或F12</li>
 <li>转过“退出”部分并将BIOS设置重置为“默认”</li>
 <li>我建议将闪存驱动器的UEFI：分区设置为在Boot的引导部分下找不到的Boot＃1</li>
-<li>设置以下BIOS设置：（您可能没有所有这些设置，这没关系）<ol>
-<li>AMD-V / SVM =禁用（可以重新启用后<br>如果需要安装）</li>
+<li>设置以下BIOS设置：（您可能没有所有这些设置，这没关系）
+<ol>
+<li>AMD-V / SVM =禁用（可以重新启用后
+如果需要安装）</li>
 <li>SATA端口= AHCI</li>
 <li>IOMMU =禁用</li>
 <li>APU =禁用</li>
@@ -507,25 +619,31 @@
 </ol>
 </li>
 </ol>
-<h4 id="第2步。启动USB安装程序"><a href="#第2步。启动USB安装程序" class="headerlink" title="第2步。启动USB安装程序"></a>第2步。启动USB安装程序</h4><p>启动到MacOS USB闪存驱动器安装程序的UEFI以加载Clover启动菜单。</p>
+<h4>第2步。启动USB安装程序</h4>
+<p>启动到MacOS USB闪存驱动器安装程序的UEFI以加载Clover启动菜单。</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/1.-Boot-OS-X-Install.jpg" alt="img">如果USB驱动器没有设置为默认启动音量，则在启动屏幕出现时更改临时启动设备，需要按下的按钮通常为F10，F11或F12。 出现临时选择屏幕时选择UEFI :( USB设备名称）。</p>
 <ol>
 <li>你现在在三叶草菜单。 使用箭头键验证<strong>Boot OS X安装从安装</strong>选择<strong>macOS High Sierra</strong></li>
 <li>按<strong>Enter键</strong></li>
-<li><em>安装程序现在将缓慢加载…如果您得到香烟十字标志而不是下面的图像，只需重新启动并再次尝试。</em> <em>当我通过安装程序的步骤时，发生了几次这样的事情，只是再次尝试让我解决这个问题。</em> **</li>
+<li><em>安装程序现在将缓慢加载...如果您得到香烟十字标志而不是下面的图像，只需重新启动并再次尝试。</em> <em>当我通过安装程序的步骤时，发生了几次这样的事情，只是再次尝试让我解决这个问题。</em> **</li>
 </ol>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/Boot-Progress-Bar.jpg" alt="img"></p>
 <p>当安装程序加载时，我们希望在开始安装之前将磁盘格式化为适合黑客可用性的GUID。</p>
 <ol>
-<li><p>安装程序出现时按<strong>继续</strong></p>
+<li>
+<p>安装程序出现时按<strong>继续</strong></p>
 </li>
-<li><p>选择你的语言</p>
+<li>
+<p>选择你的语言</p>
 </li>
-<li><p>从安装菜单中选择<strong>磁盘工具</strong></p>
+<li>
+<p>从安装菜单中选择<strong>磁盘工具</strong></p>
 </li>
-<li><p>按下左上角左上角的查看按钮，从下拉菜单中选择<strong>显示所有设备</strong> 。 （注意： <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://hackintosher.com/blog/get-nvme-m-2-ssds-show-high-sierra-hackintosh-install/&amp;usg=ALkJrhhKFyGyZOKxRVJOIAdhalwOH9Vlzw" target="_blank" rel="external">NVME驱动器不显示？</a> ）</p>
+<li>
+<p>按下左上角左上角的查看按钮，从下拉菜单中选择<strong>显示所有设备</strong> 。 （注意： <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=zh-CN&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com.hk&amp;sl=en&amp;sp=nmt4&amp;tl=zh-CN&amp;u=http://hackintosher.com/blog/get-nvme-m-2-ssds-show-high-sierra-hackintosh-install/&amp;usg=ALkJrhhKFyGyZOKxRVJOIAdhalwOH9Vlzw" target="_blank" rel="external">NVME驱动器不显示？</a> ）</p>
 </li>
-<li><p>选择要安装macOS的磁盘，并使用以下设置删除它：</p>
+<li>
+<p>选择要安装macOS的磁盘，并使用以下设置删除它：</p>
 <ul>
 <li>名称:(可以任意命名）</li>
 <li>格式： <strong>Mac OS扩展（日志式）</strong></li>
@@ -534,66 +652,91 @@
 <p>​</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/GUID-High-Sierra-1024x683.jpg" alt="img">记住为AMD内核选择的驱动器名称和禁用APFS转换非常重要。</p>
 </li>
-<li><p>按<strong>擦除</strong></p>
+<li>
+<p>按<strong>擦除</strong></p>
 </li>
-<li><p>关闭<strong>磁盘工具</strong></p>
+<li>
+<p>关闭<strong>磁盘工具</strong></p>
 </li>
-<li><p><strong>安装macOS High Sierra</strong></p>
+<li>
+<p><strong>安装macOS High Sierra</strong></p>
 </li>
 </ol>
 <p>注意：在安装macOS时，屏幕可能会变黑，显示屏正在睡眠，您可以按住键盘上的某个键或摇动鼠标来唤醒屏幕</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Disk-Install-1024x683.jpg" alt="img"></p>
-<p>安装程序完成后，计算机将重新启动，您将希望返回到Clover菜单。 </p>
-<h4 id="步骤3-AMD-PreInstall内核执行"><a href="#步骤3-AMD-PreInstall内核执行" class="headerlink" title="步骤3. AMD PreInstall内核执行"></a>步骤3. AMD PreInstall内核执行</h4><p>Clover现在有了第二个选项，但是在我们做这个之前，我们必须先做AMD内核的预安装部分</p>
+<p>安装程序完成后，计算机将重新启动，您将希望返回到Clover菜单。</p>
+<h4>步骤3. AMD PreInstall内核执行</h4>
+<p>Clover现在有了第二个选项，但是在我们做这个之前，我们必须先做AMD内核的预安装部分</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/2.-Boot-OS-X-Terminal.png" alt="img"></p>
 <ol>
-<li><p>选择<strong>引导OS X从安装macOS高山</strong>再次<strong>安装</strong></p>
+<li>
+<p>选择<strong>引导OS X从安装macOS高山</strong>再次<strong>安装</strong></p>
 </li>
-<li><p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
+<li>
+<p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
 </li>
-<li><p><strong>（可选） 禁用终端的APFS</strong></p>
+<li>
+<p><strong>（可选） 禁用终端的APFS</strong></p>
 </li>
-<li><p>如果您忘记了您的驱动器名称，请键入以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -1 /Volumes</div></pre></td></tr></table></figure>
-<p><em><code>ls -1 /Volumes</code>将列出可用卷。</em> <em>我们需要在步骤4.2中为下面一行设置的驱动器的名称</em></p>
-</li>
-<li><p>在**终端中输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PreInstall/pre</div></pre></td></tr></table></figure>
-</li>
-<li><p>按<strong>Enter键</strong></p>
-</li>
-<li><p><strong>卷名称：</strong>是您格式化时命名的驱动器。 所以输入并按回车。</p>
-</li>
-<li><p><strong>让它运行…</strong></p>
-</li>
-<li><p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+<li>
+<p>如果您忘记了您的驱动器名称，请键入以下内容：</p>
 </li>
 </ol>
-<h4 id="第4步-完成安装程序"><a href="#第4步-完成安装程序" class="headerlink" title="第4步 完成安装程序"></a>第4步 完成安装程序</h4><p><img src="http://hackintosher.com/wp-content/uploads/2017/10/3.-Boot-macOS-Install.png" alt="img"></p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -1 /Volumes</div></pre></td></tr></table></figure></p>
+<p><em><code>ls -1 /Volumes</code>将列出可用卷。</em> <em>我们需要在步骤4.2中为下面一行设置的驱动器的名称</em></p>
+<ol start="5">
+<li>
+<p>在**终端中输入以下命令：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PreInstall/pre</div></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>按<strong>Enter键</strong></p>
+</li>
+<li>
+<p>**卷名称：**是您格式化时命名的驱动器。 所以输入并按回车。</p>
+</li>
+<li>
+<p><strong>让它运行...</strong></p>
+</li>
+<li>
+<p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+</li>
+</ol>
+<h4>第4步 完成安装程序</h4>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/10/3.-Boot-macOS-Install.png" alt="img"></p>
 <ol>
 <li>在重新启动时重新进入Clover菜单</li>
-<li><strong>从“Hackintosh”</strong>选择<strong>启动macOS安装</strong></li>
-<li><em>安装程序将完成High Sierra安装…如果您在灰色屏幕重新启动，并再次尝试，直到它加载底部图像成功。</em> <em>另外这部分花了我很长时间才完成，我被困在“约18分钟”，等了约10分钟。</em></li>
+<li><strong>从“Hackintosh”<strong>选择</strong>启动macOS安装</strong></li>
+<li><em>安装程序将完成High Sierra安装...如果您在灰色屏幕重新启动，并再次尝试，直到它加载底部图像成功。</em> <em>另外这部分花了我很长时间才完成，我被困在“约18分钟”，等了约10分钟。</em></li>
 </ol>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Hackintosh-Loading-1024x683.jpg" alt="img">检查出<a href="http://hackintosher.com/guides/high-sierra-fix-macos-not-installed-computer/" target="_blank" rel="external">High Sierra fix - “macOS无法安装在您的计算机上”，</a>如果你得到一个重新启动错误提示，而不是这张照片。</p>
-<h4 id="步骤5-AMD-Post安装内核执行"><a href="#步骤5-AMD-Post安装内核执行" class="headerlink" title="步骤5. AMD Post安装内核执行"></a>步骤5. AMD Post安装内核执行</h4><ol>
-<li><p>选择<strong>Boot OS X Install from Install macOS High Sierra</strong>再次<strong>进行安装</strong></p>
+<h4>步骤5. AMD Post安装内核执行</h4>
+<ol>
+<li>
+<p>选择<strong>Boot OS X Install from Install macOS High Sierra</strong>再次<strong>进行安装</strong></p>
 </li>
-<li><p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
+<li>
+<p>一旦安装程序完成加载，在顶部菜单栏中通过实用程序打开<strong>终端</strong> 。</p>
 </li>
-<li><p>在<strong>终端中</strong>键入以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PostInstall/kernel_kext_install_only</div></pre></td></tr></table></figure>
+<li>
+<p>在<strong>终端中</strong>键入以下内容：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Volumes/Image\ Volume/PostInstall/kernel_kext_install_only</div></pre></td></tr></table></figure></p>
 </li>
-<li><p>按<strong>Enter键</strong></p>
+<li>
+<p>按<strong>Enter键</strong></p>
 </li>
-<li><p>输入<strong>卷名称的</strong>驱动器<strong>名称：</strong></p>
+<li>
+<p>输入<strong>卷名称的</strong>驱动器<strong>名称：</strong></p>
 </li>
-<li><p><strong>让它运行…</strong></p>
+<li>
+<p><strong>让它运行...</strong></p>
 </li>
-<li><p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
+<li>
+<p>在终端中提示您<strong>重新启动</strong>计算机时，将从顶部的银色菜单栏中<strong>重新启动</strong>计算机</p>
 </li>
 </ol>
-<h4 id="第6步。Ryzen最终安装和第一次启动"><a href="#第6步。Ryzen最终安装和第一次启动" class="headerlink" title="第6步。Ryzen最终安装和第一次启动"></a>第6步。Ryzen最终安装和第一次启动</h4><p>安装完成后电脑会自动重启。</p>
+<h4>第6步。Ryzen最终安装和第一次启动</h4>
+<p>安装完成后电脑会自动重启。</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/4.-Boot-macOS-High-Sierra.png" alt="img"></p>
 <ol>
 <li><strong>从“Hackintosh”中</strong>选择<strong>Boot macOS</strong></li>
@@ -604,11 +747,13 @@
 <li><strong>同意</strong>条款和条件</li>
 <li>填写<strong>登录信息</strong></li>
 <li>（可选）如果您不希望被跟踪，请在快速设置中选择<strong>自定义设置</strong> 。</li>
-<li><em>macOS High Sierra将首次启动…</em></li>
+<li><em>macOS High Sierra将首次启动...</em></li>
 </ol>
-<h3 id="第3部分-Ryzen-Hackintosh后安装"><a href="#第3部分-Ryzen-Hackintosh后安装" class="headerlink" title="第3部分 - Ryzen Hackintosh后安装"></a>第3部分 - Ryzen Hackintosh后安装</h3><p>还有很多事情可以从硬盘驱动器而不是闪存驱动器启动，并从图形卡获得适当的视频加速必须完成。</p>
+<h3>第3部分 - Ryzen Hackintosh后安装</h3>
+<p>还有很多事情可以从硬盘驱动器而不是闪存驱动器启动，并从图形卡获得适当的视频加速必须完成。</p>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/10/High-Sierra-Install-1024x576.jpg" alt="img"></p>
-<h4 id="步骤1-配置EFI分区"><a href="#步骤1-配置EFI分区" class="headerlink" title="步骤1.配置EFI分区"></a>步骤1.配置EFI分区</h4><p>现在我们在macOS中，我们希望能够在没有USB闪存驱动器插件的情况下加载macOS。为了能够从驱动器启动macOS，它需要被复制到启动驱动器的EFI分区上。 你也应该有互联网接入。</p>
+<h4>步骤1.配置EFI分区</h4>
+<p>现在我们在macOS中，我们希望能够在没有USB闪存驱动器插件的情况下加载macOS。为了能够从驱动器启动macOS，它需要被复制到启动驱动器的EFI分区上。 你也应该有互联网接入。</p>
 <ol>
 <li>打开<strong>三叶草配置程序</strong></li>
 <li><strong>安装</strong> <strong>闪存驱动器</strong>的<strong>EFI</strong></li>
@@ -622,8 +767,9 @@
 </ol>
 <p><img src="http://hackintosher.com/wp-content/uploads/2017/04/replace_efi.png" alt="img"></p>
 <p><strong>现在，您将能够在没有USB闪存驱动器的情况下启动macOS</strong></p>
-<p><strong>建议：</strong>删除EFI文件夹中名为APPLE的文件夹（如果存在）。 这个文件夹是在安装过程中自动在闪存驱动器的EFI分区上创建的，可能会导致hainstintosh问题。 该文件夹最终将被重新创建，但只需要在安装macOS后删除一次。 </p>
-<h4 id="步骤2-AMD-CPU速度增强"><a href="#步骤2-AMD-CPU速度增强" class="headerlink" title="步骤2. AMD CPU速度增强"></a>步骤2. AMD CPU速度增强</h4><p>运行AMD Ryzen Hackintosh时，CPU的性能下降了大约20％。 这可以通过设置busratio bootflag来匹配你的Ryzen CPU来解决。</p>
+<p>**建议：**删除EFI文件夹中名为APPLE的文件夹（如果存在）。 这个文件夹是在安装过程中自动在闪存驱动器的EFI分区上创建的，可能会导致hainstintosh问题。 该文件夹最终将被重新创建，但只需要在安装macOS后删除一次。</p>
+<h4>步骤2. AMD CPU速度增强</h4>
+<p>运行AMD Ryzen Hackintosh时，CPU的性能下降了大约20％。 这可以通过设置busratio bootflag来匹配你的Ryzen CPU来解决。</p>
 <p><strong>总线</strong> <strong>速率</strong>由以下公式计算： <strong>CPU速度时钟（MHz）/总线速度（MHz）=总线速率。</strong></p>
 <p>CPU速度时钟（MHz）= <strong>CPU速度（GHz）x 1000</strong></p>
 <p>所有Ryzen CPU的总线速度（Mhz）= <strong>100MHz</strong></p>
@@ -637,20 +783,27 @@
 <li>Ryzen 1500X 3.5GHz; <strong>busratio = 35</strong></li>
 <li>Ryzen 1400 3.2GHz; <strong>busratio = 32</strong></li>
 </ul>
-<h5 id="设置公交车比例："><a href="#设置公交车比例：" class="headerlink" title="设置公交车比例："></a><strong>设置公交车比例：</strong></h5><ol>
-<li><p>装入EFI分区</p>
+<h5><strong>设置公交车比例：</strong></h5>
+<ol>
+<li>
+<p>装入EFI分区</p>
 </li>
-<li><p>导航到/卷/ EFI / EFI / CLOVER /</p>
+<li>
+<p>导航到/卷/ EFI / EFI / CLOVER /</p>
 </li>
-<li><p>在Clover Configurator中打开config.plist</p>
+<li>
+<p>在Clover Configurator中打开config.plist</p>
 </li>
-<li><p>在左侧栏中选择<strong>引导</strong></p>
+<li>
+<p>在左侧栏中选择<strong>引导</strong></p>
 </li>
-<li><p>在<strong>自定义标志</strong>下为你的CPU添加正确的busratio = xx：</p>
+<li>
+<p>在<strong>自定义标志</strong>下为你的CPU添加正确的busratio = xx：</p>
 </li>
 </ol>
-<p>   <img src="http://hackintosher.com/wp-content/uploads/2017/12/busratio-flag-in-Clover-Configurator.png" alt="img">我使用的是Ryzen 1700 CPU，所以我的busratio是30，因为3.0GHz的时钟速度。</p>
-<h4 id="第3步。专用GPU加速"><a href="#第3步。专用GPU加速" class="headerlink" title="第3步。专用GPU加速"></a>第3步。专用GPU加速</h4><p>对于您的特定主板，您可能需要将NVRAM检测修补程序添加到dGPU加速中。 我在AMD RX 560上不需要它，但是当我插入我认为很奇怪的Nvidia GTX 1050 Ti时需要它。</p>
+<p><img src="http://hackintosher.com/wp-content/uploads/2017/12/busratio-flag-in-Clover-Configurator.png" alt="img">我使用的是Ryzen 1700 CPU，所以我的busratio是30，因为3.0GHz的时钟速度。</p>
+<h4>第3步。专用GPU加速</h4>
+<p>对于您的特定主板，您可能需要将NVRAM检测修补程序添加到dGPU加速中。 我在AMD RX 560上不需要它，但是当我插入我认为很奇怪的Nvidia GTX 1050 Ti时需要它。</p>
 <p><strong>添加EmuVariableUefi-64.efi：</strong></p>
 <ol>
 <li>打开<strong>三叶草配置程序</strong></li>
@@ -658,19 +811,25 @@
 <li>使用Clover配置器打开<strong>config.plist</strong></li>
 <li>单击Clover Configurator左栏中的<strong>安装驱动程序</strong></li>
 <li>点击<strong>左下角的EmuVariableUefi</strong> 。</li>
-<li>在<strong>/卷/ EFI / EFI / Clover / Drivers64UEFI /</strong></li>
+<li>在**/卷/ EFI / EFI / Clover / Drivers64UEFI /**</li>
 </ol>
-<h5 id="AMD："><a href="#AMD：" class="headerlink" title="AMD："></a>AMD：</h5><p>我把这些文件包括在内，让AMD RX卡工作，除了Vega 56/64，这将需要更多的工作。如果您有RX 560，请添加引导标志<code>-rad4200</code>以防止冻结，如此<strong>处所述</strong> 。</p>
-<h5 id="NVIDIA："><a href="#NVIDIA：" class="headerlink" title="NVIDIA："></a>NVIDIA：</h5><p>除EmuVariableUefi-64.efi外，如果您使用的是最新发布的Nvidia GPU之一，您将安装网络驱动程序。 不应该有任何你需要做的事情我已经设置了适当的CsrActivateConfig并添加了必要的kexts。 如果在安装网络驱动程序后出于某种原因无法正常工作，则可能需要在BIOS中禁用CMS。</p>
+<h5>AMD：</h5>
+<p>我把这些文件包括在内，让AMD RX卡工作，除了Vega 56/64，这将需要更多的工作。如果您有RX 560，请添加引导标志<code>-rad4200</code>以防止冻结，如此<strong>处所述</strong> 。</p>
+<h5>NVIDIA：</h5>
+<p>除EmuVariableUefi-64.efi外，如果您使用的是最新发布的Nvidia GPU之一，您将安装网络驱动程序。 不应该有任何你需要做的事情我已经设置了适当的CsrActivateConfig并添加了必要的kexts。 如果在安装网络驱动程序后出于某种原因无法正常工作，则可能需要在BIOS中禁用CMS。</p>
 <p>转到驱动程序页面获取Web驱动程序：</p>
 <p><strong>下载 - Nvidia Web驱动程序</strong></p>
 <p>注意：如果由于隐私设置而未能成功安装，可能需要重新安装Nvidia网络驱动程序。</p>
 <p>步骤4.声音，以太网和其他一切</p>
 <p>声音使用VoodooHDA.kext启用。 我包括了所有的以太网kexts，我可以想到，这将与Ryzen，但我建议删除你不需要的kexts。</p>
-<h3 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h3><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]</p>
+<h3>关于打赏</h3>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h3>QQ群:</h3>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]</p>
 <p>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>]]></content:encoded>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html#disqus_thread</comments>
     </item>
