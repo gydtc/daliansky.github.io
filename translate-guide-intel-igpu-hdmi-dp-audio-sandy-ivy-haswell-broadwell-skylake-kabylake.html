@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://7.daliansky.net/HDMI/0204patch.png">
 <meta property="og:image" content="http://7.daliansky.net/HDMI/0204connector-type-HDMI.png">
 <meta property="og:image" content="http://7.daliansky.net/HDMI/0204connector-type-DP.png">
-<meta property="og:updated_time" content="2018-04-04T12:13:16.000Z">
+<meta property="og:updated_time" content="2018-04-04T12:29:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[翻译][指南]英特尔IGPU HDMI&#x2F;DP音频(Sandy&#x2F;Ivy&#x2F;Haswell&#x2F;Broadwell&#x2F;Skylake&#x2F;Kabylake)">
 <meta name="twitter:description" content="翻译[指南]英特尔IGPU HDMI/DP音频(Sandy/Ivy/Haswell/Broadwell/Skylake/Kabylake) 早上起床，习惯性打开手机浏览，随着macOS发布了最新的10.13.4，最近几天远景上面关于Intel核显的显卡驱动以及HDMI的声音输出的求助帖很多，于是就跑去[RehabMan](https://www.tonymacx86.com/members/reh">
@@ -351,7 +351,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-04T20:13:16+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-04T20:29:05+08:00">
                 2018-04-04
               </time>
             
@@ -423,7 +423,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,835 字
+                  2,829 字
                 </span>
               
 
@@ -475,11 +475,11 @@
 </li>
 <li><p>Haswell/Broadwell：将B0D3重命名为HDAU（设备位于0x00030000）</p>
 </li>
-<li><p>在HDAU，IGPU，HDEF对象上注入属性“hda-gfx”=“onboard-1”。</p>
+<li><p>在HDAU，IGPU，HDEF对象上注入属性<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code>。</p>
 </li>
 <li><p>Haswell/Broadwell：在HDAU上注入layout-id以匹配HDEF上的布局ID </p>
 </li>
-<li><p>Haswell：安装FakePCIID.kext和FakePCIID_Intel_HDMI_Audio.kext </p>
+<li><p>Haswell：安装<code>FakePCIID.kext</code>和<code>FakePCIID_Intel_HDMI_Audio.kext</code> </p>
 </li>
 </ul>
 <p>注意：通常，对于PC笔记本电脑，英特尔图形设备的ACPI标识符为GFX0产品使用VID）。由于此标识符通常更改为IGPU以启用IGPU电源管理，因此本指南将其称为IGPU。请记住，如果您尚未实施IGPU PM。</p>
@@ -490,7 +490,7 @@
 <p>您可以将config.plist/Devices中的#AddProperties重命名为AddProperties，它将启用所需的“hda-gfx”和其他音频注入。</p>
 <p>看看它… </p>
 <h2 id="帧缓冲区修补"><a href="#帧缓冲区修补" class="headerlink" title="帧缓冲区修补"></a>帧缓冲区修补</h2><p>与ig-platform-id（或具有Sandy Bridge的snb-platform-id）关联的数据对于每个连接器具有代表连接器类型（以及其他连接器相关数据）的位。由于大多数Apple产品使用DP，因此大多数连接器默认为DP。为了使HDMI音频正常工作，您必须修补kext，使连接器数据与物理连接器匹配。如果您的连接器是DP，则无需执行任何操作，但如果您的端口是HDMI，则可能需要修补连接器，使其成为HDMI连接器而不是DP连接器。</p>
-<p>DP连接器通过连接器类型在ioreg中标识<00 04="" 00=""><br>HDMI连接器通过连接器类型在ioreg中标识<00 08="" 00=""> </00></00></p>
+<p>DP连接器通过连接器类型在ioreg中标识<code>&lt;00 04 00 00&gt;</code><br>HDMI连接器通过连接器类型在ioreg中标识<code>&lt;00 08 00 00&gt;</code></p>
 <p>在ioreg中标识。在我的向导中链接的plist中，您将找到各种连接器ig-platform-id数据。</p>
 <p><a href="http://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html" target="_blank" rel="external">http://www.tonymacx86.com/el-capita…de-boot-os-x-installer-laptops-clover.html</a></p>
 <p>默认情况下，每个补丁都是禁用的。您可以阅读关于禁用的修补程序以及如何在指南的第2篇后启用它们。</p>
@@ -509,19 +509,19 @@
 <p>您可以使用笔记本修补程序存储库中的“将B0D3重命名为HDAU”来重命名设备。该补丁应该适用于包含B0D3参考的任何DSDT或SSDT。同一个补丁还定义了一个在HDAU上注入“hda-gfx”=“onboard-1”的_DSM。它还包含一个补丁，为IGPU注入“hda-gfx”。</p>
 <p>请参阅ACPI修补指南更多有关ACPI修补程序的信息：<a href="http://www.tonymacx86.com/el-capitan-laptop-support/152573-guide-patching-laptop-dsdt-ssdts.html" target="_blank" rel="external">http</a> : <a href="http://www.tonymacx86.com/el-capitan-laptop-support/152573-guide-patching-laptop-dsdt-ssdts.html" target="_blank" rel="external">//www.tonymacx86.com/el-capitan-laptop-support/152573-guide-patching-laptop-dsdt-ssdts.html</a></p>
 <p>注意：Skylake似乎使用单个音频设备，通常名为HDAS。它必须被重新命名为HDEF为OS X </p>
-<h2 id="注入性质HDA-GFX（和布局-ID）"><a href="#注入性质HDA-GFX（和布局-ID）" class="headerlink" title="注入性质HDA-GFX（和布局-ID）"></a>注入性质HDA-GFX（和布局-ID）</h2><p>对于桑迪桥和常春藤桥（HD3000/HD4000），“HDA-GFX” =“板载-1”必须在注入iGPU的和HDEF。</p>
-<p>对于Haswell和Broadwell，必须在IGPU和HDAU上注入“hda-gfx”=“onboard-1”。没有必要在HDEF上注入“hda-gfx”，尽管它似乎不会引起问题。</p>
-<p>“音频布局*”音色（“音频布局3”，“音频布局12”或为您的布局ID自定义的音色）会在HDEF中注入“hda-gfx”。通常情况下，HDEF在DSDT中定义。</p>
+<h2 id="注入性质HDA-GFX（和布局-ID）"><a href="#注入性质HDA-GFX（和布局-ID）" class="headerlink" title="注入性质HDA-GFX（和布局-ID）"></a>注入性质HDA-GFX（和布局-ID）</h2><p>对于桑迪桥和常春藤桥（HD3000/HD4000），<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code>必须在注入iGPU的和HDEF。</p>
+<p>对于Haswell和Broadwell，必须在IGPU和HDAU上注入<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code>。没有必要在HDEF上注入“hda-gfx”，尽管它似乎不会引起问题。</p>
+<p><code>Audio Layout</code>音色（<code>Audio Layout 3</code>，<code>Audio Layout 12</code>或为您的布局ID自定义的音色）会在HDEF中注入“hda-gfx”。通常情况下，HDEF在DSDT中定义。</p>
 <p>注意：HDAU/IGPU“hda-gfx”来自“将B0D3重命名为HDAU”，或者对于IGPU其他IGPU相关的修补程序。搜索“hda-gfx”的回购补丁，你会看到几个。</p>
-<p>“将B0D3重命名为HDAU”补丁也为IGPU注入“hda-gfx”。通常，HDAU和IGPU对象在相同的SSDT中定义，但有可能是一个不同的文件（如DSDT）。仅在应用修补程序时查看它是否适用于给定文件没有任何坏处。</p>
+<p><code>Rename B0D3 to HDAU&quot;</code>补丁也为IGPU注入“hda-gfx”。通常，HDAU和IGPU对象在相同的SSDT中定义，但有可能是一个不同的文件（如DSDT）。仅在应用修补程序时查看它是否适用于给定文件没有任何坏处。</p>
 <p>通常情况下，以下工作将完成所有必需的重命名和注入操作：</p>
 <ul>
 <li>将“Audio Layout *”（布局ID取决于您修补的AppleHDA）应用于DSDT </li>
-<li>将“将B0D3重命名为HDAU”应用于DSDT和所有OEM SSDT。</li>
+<li>将<code>Rename B0D3 to HDAU</code>应用于DSDT和所有OEM SSDT。</li>
 </ul>
 <p>另请注意，“将B0D3重命名为HDAU”补丁会在HDAU上注入布局ID。布局ID必须与HDEF上的布局ID匹配。在应用之前，根据需要修改修补程序中的布局ID。</p>
 <p>注意：Haswell和Broadwell不需要HDEF上的hda-gfx。</p>
-<h2 id="安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio"><a href="#安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio" class="headerlink" title="安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio"></a>安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio</h2><p>AppleHDAController kext实现了某些HDAU设备的白名单。一些PC使用不直接支持的设备。但FakePCIID_Intel_HDMI_Audio可以欺骗PCI ID以满足AppleHDAController’</p>
+<h2 id="安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio"><a href="#安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio" class="headerlink" title="安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio"></a>安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio</h2><p><code>AppleHDAController kext</code>实现了某些HDAU设备的白名单。一些PC使用不直接支持的设备。但<code>FakePCIID_Intel_HDMI_Audio</code>可以欺骗PCI ID以满足AppleHDAController</p>
 <p>安装FakePCIID.kext和FakePCIID_Intel_HDMI_Audio.kext：<a href="https://github.com/RehabMan/OS-X-Fake-PCI-ID" target="_blank" rel="external">https</a>：<a href="https://github.com/RehabMan/OS-X-Fake-PCI-ID" target="_blank" rel="external">//github.com/RehabMan/OS-X-Fake-PCI-ID</a></p>
 <p>阅读README以查找预构建的kext二进制文件。</p>
 <p>即使在您拥有支持的HDAU设备的情况下，安装FakePCIID_Intel_HDMI_Audio也不会造成任何伤害。kext不会附加到本机支持的设备。</p>
@@ -531,11 +531,11 @@
 <li>从这里下载（附加到帖子）：<a href="http://www.tonymacx86.com/audio/58368-guide-how-make-copy-ioreg.html" target="_blank" rel="external">http</a> : <a href="http://www.tonymacx86.com/audio/58368-guide-how-make-copy-ioreg.html" target="_blank" rel="external">//www.tonymacx86.com/audio/58368-guide-how-make-copy-ioreg.html</a></li>
 <li>首选项 - &gt;查找，勾选“属性键“ </li>
 </ul>
-<p>检查”hda-gfx“=”onboard-1“ </p>
+<p>检查<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code></p>
 <ul>
 <li>在搜索框中输入”</li>
 <li>你应该在HDEF/IGPU（Sandy/Ivy/Skylake/Kabylake）和HDAU/IGPU（Haswell/Broadwell）上找到它。</li>
-<li>查看物业价值，您应该看到“onboard-1” </li>
+<li>查看属性值，您应该看到“onboard-1” </li>
 </ul>
 <p>检查HDAU（仅限Haswell/Broadwell）：</p>
 <ul>

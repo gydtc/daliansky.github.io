@@ -459,12 +459,9 @@
         
           
           不需要制作安装盘！教你在 MacOS 系统下安装 High Sierra 系统到另一个分区
-
-
 此方法不支持APFS分区。 只有HFS分区才能通过此安装 High Sierra 。 而且，您还需要一个 GUID 分区表来安装它。
 
-
-我无法通过我的安装 USB 启动 macOS High Sierr
+我无法通过我的安装 USB 启动 macOS High Sierra 安
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -680,13 +677,12 @@
         
           
           惠普HP ENVY Laptop 13-ad1xx笔记本电脑安装MacOS手记及EFI分享
-
 群里有网友新购买了惠普HP ENVY Laptop 13-ad110tu笔记本电脑，想安装MacOS系统。本着折腾的原则，制作了hotpatch补丁。现将安装过程记录下来，以供后来者参考。
 
 电脑配置
 
 
-
+规
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -913,8 +909,7 @@
         
           
           【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像
-
-本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3D
+本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3Dr
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1018,7 +1013,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-04T20:13:16+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-04T20:29:05+08:00">
                 2018-04-04
               </time>
             
@@ -1090,7 +1085,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,835 字
+                  2,829 字
                 </span>
               
 
@@ -1566,10 +1561,8 @@
 但是很多笔记本并未出现在这个补丁源里，并且我们要了解补丁的意思才知道它适不适合我们的电脑。
 
 电量补丁制作过程
-
-
 我们需要确定DSDT里的哪些部分需要改。
-用MaciASL软件打开
+用MaciASL软件打开DS
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1745,7 +1738,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,965 字
+                  3,966 字
                 </span>
               
 
@@ -1785,8 +1778,7 @@
         
           
           【黑果小兵】AMD Ryzen安装macOS High Sierra(10.13)指南[授权翻译]
-
-这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装macOS有更多的步骤，也更难以为初学者工作，所以我尽可能地简化了这
+这是一个基本指南，可以用来得到一台运行macOS High Sierra 10.13.x的Ryzen台式电脑。 在AMD版本上安装macOS有更多的步骤，也更难以为初学者工作，所以我尽可能地简化了这个
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2013,12 +2005,8 @@
         
           
           【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像
-
-
 本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;
-
-
-所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel
+所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pan
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2194,7 +2182,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  373 字
+                  358 字
                 </span>
               
 
@@ -2233,13 +2221,11 @@
       
         
           
-          查看显卡platform-id
-显卡注入platform-id通过命令读取:
+          查看显卡platform-id显卡注入platform-id通过命令读取:
 1ioreg -l | grep platform-id
 显示结果如下
 1"AAPL,ig-platform-id" = &lt;00001659&gt;
-得出显卡注入ID是:59160000
-读取核显驱动的加载情况,使用
+得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2454,10 +2440,7 @@
       
         
           
-          借助VoodooHDA自带的getdump找出有效节点和路径
-声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办
-如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.
-所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出Vo
+          借助VoodooHDA自带的getdump找出有效节点和路径声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出Voodo
           ...
           <!--noindex-->
           <div class="post-button text-center">

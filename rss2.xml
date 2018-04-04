@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Wed, 04 Apr 2018 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 04 Apr 2018 12:29:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -37,11 +37,11 @@
 </li>
 <li><p>Haswell/Broadwell：将B0D3重命名为HDAU（设备位于0x00030000）</p>
 </li>
-<li><p>在HDAU，IGPU，HDEF对象上注入属性“hda-gfx”=“onboard-1”。</p>
+<li><p>在HDAU，IGPU，HDEF对象上注入属性<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code>。</p>
 </li>
 <li><p>Haswell/Broadwell：在HDAU上注入layout-id以匹配HDEF上的布局ID </p>
 </li>
-<li><p>Haswell：安装FakePCIID.kext和FakePCIID_Intel_HDMI_Audio.kext </p>
+<li><p>Haswell：安装<code>FakePCIID.kext</code>和<code>FakePCIID_Intel_HDMI_Audio.kext</code> </p>
 </li>
 </ul>
 <p>注意：通常，对于PC笔记本电脑，英特尔图形设备的ACPI标识符为GFX0产品使用VID）。由于此标识符通常更改为IGPU以启用IGPU电源管理，因此本指南将其称为IGPU。请记住，如果您尚未实施IGPU PM。</p>
@@ -52,7 +52,7 @@
 <p>您可以将config.plist/Devices中的#AddProperties重命名为AddProperties，它将启用所需的“hda-gfx”和其他音频注入。</p>
 <p>看看它… </p>
 <h2 id="帧缓冲区修补"><a href="#帧缓冲区修补" class="headerlink" title="帧缓冲区修补"></a>帧缓冲区修补</h2><p>与ig-platform-id（或具有Sandy Bridge的snb-platform-id）关联的数据对于每个连接器具有代表连接器类型（以及其他连接器相关数据）的位。由于大多数Apple产品使用DP，因此大多数连接器默认为DP。为了使HDMI音频正常工作，您必须修补kext，使连接器数据与物理连接器匹配。如果您的连接器是DP，则无需执行任何操作，但如果您的端口是HDMI，则可能需要修补连接器，使其成为HDMI连接器而不是DP连接器。</p>
-<p>DP连接器通过连接器类型在ioreg中标识<00 04="" 00=""><br>HDMI连接器通过连接器类型在ioreg中标识<00 08="" 00=""> </00></00></p>
+<p>DP连接器通过连接器类型在ioreg中标识<code>&lt;00 04 00 00&gt;</code><br>HDMI连接器通过连接器类型在ioreg中标识<code>&lt;00 08 00 00&gt;</code></p>
 <p>在ioreg中标识。在我的向导中链接的plist中，您将找到各种连接器ig-platform-id数据。</p>
 <p><a href="http://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html" target="_blank" rel="external">http://www.tonymacx86.com/el-capita…de-boot-os-x-installer-laptops-clover.html</a></p>
 <p>默认情况下，每个补丁都是禁用的。您可以阅读关于禁用的修补程序以及如何在指南的第2篇后启用它们。</p>
@@ -71,19 +71,19 @@
 <p>您可以使用笔记本修补程序存储库中的“将B0D3重命名为HDAU”来重命名设备。该补丁应该适用于包含B0D3参考的任何DSDT或SSDT。同一个补丁还定义了一个在HDAU上注入“hda-gfx”=“onboard-1”的_DSM。它还包含一个补丁，为IGPU注入“hda-gfx”。</p>
 <p>请参阅ACPI修补指南更多有关ACPI修补程序的信息：<a href="http://www.tonymacx86.com/el-capitan-laptop-support/152573-guide-patching-laptop-dsdt-ssdts.html" target="_blank" rel="external">http</a> : <a href="http://www.tonymacx86.com/el-capitan-laptop-support/152573-guide-patching-laptop-dsdt-ssdts.html" target="_blank" rel="external">//www.tonymacx86.com/el-capitan-laptop-support/152573-guide-patching-laptop-dsdt-ssdts.html</a></p>
 <p>注意：Skylake似乎使用单个音频设备，通常名为HDAS。它必须被重新命名为HDEF为OS X </p>
-<h2 id="注入性质HDA-GFX（和布局-ID）"><a href="#注入性质HDA-GFX（和布局-ID）" class="headerlink" title="注入性质HDA-GFX（和布局-ID）"></a>注入性质HDA-GFX（和布局-ID）</h2><p>对于桑迪桥和常春藤桥（HD3000/HD4000），“HDA-GFX” =“板载-1”必须在注入iGPU的和HDEF。</p>
-<p>对于Haswell和Broadwell，必须在IGPU和HDAU上注入“hda-gfx”=“onboard-1”。没有必要在HDEF上注入“hda-gfx”，尽管它似乎不会引起问题。</p>
-<p>“音频布局*”音色（“音频布局3”，“音频布局12”或为您的布局ID自定义的音色）会在HDEF中注入“hda-gfx”。通常情况下，HDEF在DSDT中定义。</p>
+<h2 id="注入性质HDA-GFX（和布局-ID）"><a href="#注入性质HDA-GFX（和布局-ID）" class="headerlink" title="注入性质HDA-GFX（和布局-ID）"></a>注入性质HDA-GFX（和布局-ID）</h2><p>对于桑迪桥和常春藤桥（HD3000/HD4000），<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code>必须在注入iGPU的和HDEF。</p>
+<p>对于Haswell和Broadwell，必须在IGPU和HDAU上注入<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code>。没有必要在HDEF上注入“hda-gfx”，尽管它似乎不会引起问题。</p>
+<p><code>Audio Layout</code>音色（<code>Audio Layout 3</code>，<code>Audio Layout 12</code>或为您的布局ID自定义的音色）会在HDEF中注入“hda-gfx”。通常情况下，HDEF在DSDT中定义。</p>
 <p>注意：HDAU/IGPU“hda-gfx”来自“将B0D3重命名为HDAU”，或者对于IGPU其他IGPU相关的修补程序。搜索“hda-gfx”的回购补丁，你会看到几个。</p>
-<p>“将B0D3重命名为HDAU”补丁也为IGPU注入“hda-gfx”。通常，HDAU和IGPU对象在相同的SSDT中定义，但有可能是一个不同的文件（如DSDT）。仅在应用修补程序时查看它是否适用于给定文件没有任何坏处。</p>
+<p><code>Rename B0D3 to HDAU&quot;</code>补丁也为IGPU注入“hda-gfx”。通常，HDAU和IGPU对象在相同的SSDT中定义，但有可能是一个不同的文件（如DSDT）。仅在应用修补程序时查看它是否适用于给定文件没有任何坏处。</p>
 <p>通常情况下，以下工作将完成所有必需的重命名和注入操作：</p>
 <ul>
 <li>将“Audio Layout *”（布局ID取决于您修补的AppleHDA）应用于DSDT </li>
-<li>将“将B0D3重命名为HDAU”应用于DSDT和所有OEM SSDT。</li>
+<li>将<code>Rename B0D3 to HDAU</code>应用于DSDT和所有OEM SSDT。</li>
 </ul>
 <p>另请注意，“将B0D3重命名为HDAU”补丁会在HDAU上注入布局ID。布局ID必须与HDEF上的布局ID匹配。在应用之前，根据需要修改修补程序中的布局ID。</p>
 <p>注意：Haswell和Broadwell不需要HDEF上的hda-gfx。</p>
-<h2 id="安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio"><a href="#安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio" class="headerlink" title="安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio"></a>安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio</h2><p>AppleHDAController kext实现了某些HDAU设备的白名单。一些PC使用不直接支持的设备。但FakePCIID_Intel_HDMI_Audio可以欺骗PCI ID以满足AppleHDAController’</p>
+<h2 id="安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio"><a href="#安装FakePCIID-kext-FakePCIID-Intel-HDMI-Audio" class="headerlink" title="安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio"></a>安装FakePCIID.kext FakePCIID_Intel_HDMI_Audio</h2><p><code>AppleHDAController kext</code>实现了某些HDAU设备的白名单。一些PC使用不直接支持的设备。但<code>FakePCIID_Intel_HDMI_Audio</code>可以欺骗PCI ID以满足AppleHDAController</p>
 <p>安装FakePCIID.kext和FakePCIID_Intel_HDMI_Audio.kext：<a href="https://github.com/RehabMan/OS-X-Fake-PCI-ID" target="_blank" rel="external">https</a>：<a href="https://github.com/RehabMan/OS-X-Fake-PCI-ID" target="_blank" rel="external">//github.com/RehabMan/OS-X-Fake-PCI-ID</a></p>
 <p>阅读README以查找预构建的kext二进制文件。</p>
 <p>即使在您拥有支持的HDAU设备的情况下，安装FakePCIID_Intel_HDMI_Audio也不会造成任何伤害。kext不会附加到本机支持的设备。</p>
@@ -93,11 +93,11 @@
 <li>从这里下载（附加到帖子）：<a href="http://www.tonymacx86.com/audio/58368-guide-how-make-copy-ioreg.html" target="_blank" rel="external">http</a> : <a href="http://www.tonymacx86.com/audio/58368-guide-how-make-copy-ioreg.html" target="_blank" rel="external">//www.tonymacx86.com/audio/58368-guide-how-make-copy-ioreg.html</a></li>
 <li>首选项 - &gt;查找，勾选“属性键“ </li>
 </ul>
-<p>检查”hda-gfx“=”onboard-1“ </p>
+<p>检查<code>&quot;hda-gfx&quot; = &lt;&quot;onboard-1&quot;&gt;</code></p>
 <ul>
 <li>在搜索框中输入”</li>
 <li>你应该在HDEF/IGPU（Sandy/Ivy/Skylake/Kabylake）和HDAU/IGPU（Haswell/Broadwell）上找到它。</li>
-<li>查看物业价值，您应该看到“onboard-1” </li>
+<li>查看属性值，您应该看到“onboard-1” </li>
 </ul>
 <p>检查HDAU（仅限Haswell/Broadwell）：</p>
 <ul>
@@ -133,89 +133,54 @@
       <pubDate>Sat, 24 Mar 2018 02:49:36 GMT</pubDate>
       <description>
       
-        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见&lt;a href=&quot;http:/
+        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-4418原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-44
       
       </description>
       
-      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像</h1>
-<blockquote>
+      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-4418原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-4-17E199-正式版-with-Clover-4418原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像</h1><blockquote>
 <p>10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见<a href="http://bbs.pcbeta.com/viewthread-1780071-1-1.html" target="_blank" rel="external">解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题</a></p>
 </blockquote>
 <ul>
-<li>
-<p>本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;<code>Drivers64UEFI/</code>目录下只保留的<code>AptioMemoryFix.efi</code>以解决卡+++问题；</p>
+<li><p>本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;<code>Drivers64UEFI/</code>目录下只保留的<code>AptioMemoryFix.efi</code>以解决卡+++问题；</p>
 </li>
-<li>
-<p>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</p>
+<li><p>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</p>
 </li>
-<li>
-<p>更新<code>apfs.efi</code>到<code>10.13.4</code>正式版；</p>
+<li><p>更新<code>apfs.efi</code>到<code>10.13.4</code>正式版；</p>
 </li>
-<li>
-<p>更新<code>IntelGraphicsFixup</code> 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入<code>platform-id</code></p>
+<li><p>更新<code>IntelGraphicsFixup</code> 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入<code>platform-id</code></p>
 <p><img src="http://7.daliansky.net/dell/IntelGraphicsFixup.jpg" alt="http://7.daliansky.net/dell/IntelGraphicsFixup.jpg"></p>
 </li>
-<li>
-<p>特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理**[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]**；</p>
+<li><p>特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code>的问题，特别感谢<code>@宪武</code>的搜集整理<strong>[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]</strong>；</p>
 </li>
-<li>
-<p>Clover默认配置文件<code>config.plist</code>原生支持七代HD620/HD630、八代UHD620/UHD630，<code>platform-id</code> 使用自动侦测；</p>
+<li><p>Clover默认配置文件<code>config.plist</code>原生支持七代HD620/HD630、八代UHD620/UHD630，<code>platform-id</code> 使用自动侦测；</p>
 </li>
-<li>
-<p>config_DalianSky.plist为部分机型增加<code>Drop Tables</code>,如果默认的<code>config.plist</code>无法进入安装界面,可以试试这个</p>
+<li><p>config_DalianSky.plist为部分机型增加<code>Drop Tables</code>,如果默认的<code>config.plist</code>无法进入安装界面,可以试试这个</p>
 </li>
-<li>
-<p>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</p>
+<li><p>其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；</p>
 </li>
-<li>
-<p>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</p>
+<li><p>如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；</p>
 </li>
-<li>
-<p>本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：<a href="http://bbs.pcbeta.com/viewthread-1753483-1-1.html" target="_blank" rel="external">macOS High Sierra区笔记本安装情况集合帖</a></p>
+<li><p>本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：<a href="http://bbs.pcbeta.com/viewthread-1753483-1-1.html" target="_blank" rel="external">macOS High Sierra区笔记本安装情况集合帖</a></p>
 </li>
-<li>
-<p>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；</p>
+<li><p>支持<a href="https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more">BCM94352z无线网卡</a>，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；</p>
 </li>
-<li>
-<p>已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动；</p>
+<li><p>已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动；</p>
 </li>
-<li>
-<p>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 <code>黑果小兵</code> 的大力支持，由于人员众多，恕不一一列名致谢！</p>
+<li><p>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 <code>黑果小兵</code> 的大力支持，由于人员众多，恕不一一列名致谢！</p>
 </li>
-<li>
-<p>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
+<li><p>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
 </li>
 </ul>
-<h1>截图：</h1>
-<p><img src="http://7.daliansky.net/10.13.4/10.13.4_17E199.jpg" alt="10.13.4_17E199.jpg">
-<img src="http://7.daliansky.net/10.13.4/Audio.jpg" alt="Audio.jpg">
-<img src="http://7.daliansky.net/10.13.4/BlueTooth.jpg" alt="BlueTooth.jpg">
-<img src="http://7.daliansky.net/10.13.4/Displays.jpg" alt="Displays.jpg">
-<img src="http://7.daliansky.net/10.13.4/HD620.jpg" alt="HD620.jpg">
-<img src="http://7.daliansky.net/10.13.4/HDMI_Audio.jpg" alt="HDMI_Audio.jpg">
-<img src="http://7.daliansky.net/10.13.4/KEXTS.jpg" alt="KEXTS.jpg">
-<img src="http://7.daliansky.net/10.13.4/PCI_List.jpg" alt="PCI_List.jpg">
-<img src="http://7.daliansky.net/10.13.4/SATA.jpg" alt="SATA.jpg">
-<img src="http://7.daliansky.net/10.13.4/Storage.jpg" alt="Storage.jpg">
-<img src="http://7.daliansky.net/10.13.4/USB.jpg" alt="USB.jpg">
-<img src="http://7.daliansky.net/10.13.4/WIFI.jpg" alt="WIFI.jpg"></p>
-<h1>下载链接</h1>
-<p>百毒云下载链接：<a href="https://pan.baidu.com/s/1UbqIbltVRDAAY7zQPIHtrw" target="_blank" rel="external">请点击下载</a></p>
+<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.13.4/10.13.4_17E199.jpg" alt="10.13.4_17E199.jpg"><br><img src="http://7.daliansky.net/10.13.4/Audio.jpg" alt="Audio.jpg"><br><img src="http://7.daliansky.net/10.13.4/BlueTooth.jpg" alt="BlueTooth.jpg"><br><img src="http://7.daliansky.net/10.13.4/Displays.jpg" alt="Displays.jpg"><br><img src="http://7.daliansky.net/10.13.4/HD620.jpg" alt="HD620.jpg"><br><img src="http://7.daliansky.net/10.13.4/HDMI_Audio.jpg" alt="HDMI_Audio.jpg"><br><img src="http://7.daliansky.net/10.13.4/KEXTS.jpg" alt="KEXTS.jpg"><br><img src="http://7.daliansky.net/10.13.4/PCI_List.jpg" alt="PCI_List.jpg"><br><img src="http://7.daliansky.net/10.13.4/SATA.jpg" alt="SATA.jpg"><br><img src="http://7.daliansky.net/10.13.4/Storage.jpg" alt="Storage.jpg"><br><img src="http://7.daliansky.net/10.13.4/USB.jpg" alt="USB.jpg"><br><img src="http://7.daliansky.net/10.13.4/WIFI.jpg" alt="WIFI.jpg"></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接：<a href="https://pan.baidu.com/s/1UbqIbltVRDAAY7zQPIHtrw" target="_blank" rel="external">请点击下载</a></p>
 <p>Mega网盘下载链接:<a href="https://mega.nz/#!B5kxmZgb!yP3SDWns61V82WHElF7hJvxvapGjNkhZJmfWCbBBSBk" target="_blank" rel="external">请点击下载</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
-<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5/" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/黑果小兵/" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
 <p>MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
-688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
-257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a><br>688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]<br>257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html#disqus_thread</comments>
@@ -234,7 +199,7 @@
       </description>
       
       <content:encoded><![CDATA[<blockquote>
-<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：&quot;你让太监射精可能吗？！&quot;，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
+<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：”你让太监射精可能吗？！”，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
 </blockquote>
 <p>正题来了：屏蔽蓝牙或者加装USB蓝牙</p>
 ]]></content:encoded>
@@ -250,61 +215,42 @@
       <description>
       
         &lt;blockquote&gt;
-&lt;p&gt;这篇帖子主要来源于论坛https://github.com/RehabMan/Laptop-DSDT-Patch。&lt;/p&gt;
-&lt;p&gt;但是很多笔记本并未出现在这个补丁源里，并且我们要了解补丁的意思才知道它适不适合我们的电脑。&lt;/p&gt;
-&lt;/blockqu
+&lt;p&gt;这篇帖子主要来源于论坛&lt;a href=&quot;https://github.com/RehabMan/Laptop-DSDT-Patch。&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/RehabM
       
       </description>
       
       <content:encoded><![CDATA[<blockquote>
-<p>这篇帖子主要来源于论坛https://github.com/RehabMan/Laptop-DSDT-Patch。</p>
+<p>这篇帖子主要来源于论坛<a href="https://github.com/RehabMan/Laptop-DSDT-Patch。" target="_blank" rel="external">https://github.com/RehabMan/Laptop-DSDT-Patch。</a></p>
 <p>但是很多笔记本并未出现在这个补丁源里，并且我们要了解补丁的意思才知道它适不适合我们的电脑。</p>
 </blockquote>
-<h2>电量补丁制作过程</h2>
-<ol>
-<li>
-<p>我们需要确定DSDT里的哪些部分需要改。</p>
-<p>用<code>MaciASL</code>软件打开DSDT，搜索**<code>EmbeddedControl</code><strong>。在<code>DSDT</code>里，可能会有一到多个。同时注意一个计算机名字如下图为</strong><code>EC0</code>**</p>
+<h2 id="电量补丁制作过程"><a href="#电量补丁制作过程" class="headerlink" title="电量补丁制作过程"></a>电量补丁制作过程</h2><ol>
+<li><p>我们需要确定DSDT里的哪些部分需要改。</p>
+<p>用<code>MaciASL</code>软件打开DSDT，搜索<strong><code>EmbeddedControl</code></strong>。在<code>DSDT</code>里，可能会有一到多个。同时注意一个计算机名字如下图为<strong><code>EC0</code></strong></p>
 </li>
 </ol>
-<p><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">OperationRegion</span> (<span class="type">ECF2</span>, <span class="type">EmbeddedControl</span>, <span class="type">Zero</span>, <span class="number">0xFF</span>)</div></pre></td></tr></table></figure></p>
-<p>​     上面的代码，我们只需要关注<code>ec</code>域声明的名字，即**<code>ECF2</code><strong>（别的可能是<code>ECF0</code>等）。
-​     我们开始搜索</strong><code>Field（ECF2</code>**。</p>
-<ol start="2">
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">OperationRegion</span> (<span class="type">ECF2</span>, <span class="type">EmbeddedControl</span>, <span class="type">Zero</span>, <span class="number">0xFF</span>)</div></pre></td></tr></table></figure>
+<p>​     上面的代码，我们只需要关注<code>ec</code>域声明的名字，即<strong><code>ECF2</code></strong>（别的可能是<code>ECF0</code>等）。<br>​     我们开始搜索<strong><code>Field（ECF2</code></strong>。</p>
+<ol>
 <li>我们需要查看Field里所有<strong>大于8位</strong>的元素，例如：</li>
 </ol>
-<p><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="type">Field</span> (<span class="type">ECF2</span>, <span class="type">ByteAcc</span>, <span class="type">Lock</span>, <span class="type">Preserve</span>)</div><div class="line">   &#123;</div><div class="line">       <span class="type">Offset</span> (<span class="number">0x10</span>),</div><div class="line">       <span class="type">BDN0</span>,   <span class="number">56</span>,</div><div class="line">...</div></pre></td></tr></table></figure></p>
-<p>​	可以看到**<code>BDN0</code>**是一个大于8位的字段。</p>
-<p>​	我们对其进行记录。之后我们要确定除了这里还有没有其他地方调用了这个字段。搜索他的名字：<strong><code>BDN0</code></strong>。如果**只有这里被用到则不用拆分可以删除记录，**如果除了这里还有其他地方用到，则进行记录。</p>
-<p>​	整理到如下的结果：</p>
-<p>​	可以看到我有意对16位 32位以及高于32位进行了一个空行的区分，大家也可以这样，这对下面的修改操作有着重要意义。</p>
-<h3>补丁的制作方法</h3>
-<h4>对于16位和32位字段的处理</h4>
-<p>对于16位的<code>BDC0</code>，我么需要把它拆分为两部分（低字节，高字节）。在拆分的时候，<strong>需要注意两点</strong>：
-​       1.拆分后，它的名字应该是 4个字符 。不能多，也不能少。如图</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="type">Field</span> (<span class="type">ECF2</span>, <span class="type">ByteAcc</span>, <span class="type">Lock</span>, <span class="type">Preserve</span>)</div><div class="line">   &#123;</div><div class="line">       <span class="type">Offset</span> (<span class="number">0x10</span>),</div><div class="line">       <span class="type">BDN0</span>,   <span class="number">56</span>,</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>​    可以看到<strong><code>BDN0</code></strong>是一个大于8位的字段。</p>
+<p>​    我们对其进行记录。之后我们要确定除了这里还有没有其他地方调用了这个字段。搜索他的名字：<strong><code>BDN0</code></strong>。如果<strong>只有这里被用到则不用拆分可以删除记录，</strong>如果除了这里还有其他地方用到，则进行记录。</p>
+<p>​    整理到如下的结果：</p>
+<p>​    可以看到我有意对16位 32位以及高于32位进行了一个空行的区分，大家也可以这样，这对下面的修改操作有着重要意义。</p>
+<h3 id="补丁的制作方法"><a href="#补丁的制作方法" class="headerlink" title="补丁的制作方法"></a>补丁的制作方法</h3><h4 id="对于16位和32位字段的处理"><a href="#对于16位和32位字段的处理" class="headerlink" title="对于16位和32位字段的处理"></a>对于16位和32位字段的处理</h4><p>对于16位的<code>BDC0</code>，我么需要把它拆分为两部分（低字节，高字节）。在拆分的时候，<strong>需要注意两点</strong>：<br>​       1.拆分后，它的名字应该是 4个字符 。不能多，也不能少。如图</p>
 <ol>
 <li>// 拆分前： BDC0, 16</li>
 <li>DC00, 8,</li>
 <li>DC01, 8,</li>
 </ol>
 <p>复制代码</p>
-<p>​       2.<strong>拆分后到名字不能已经出现在dsdt中（最好也不要与拆分到名字重复，虽然没什么问题，但是如果多次打这个补丁就会发生错误）</strong>，可以先想好几个名字，然后在dsdt中搜索，如果没有就可以。
-​       然后。重点来了，<strong>拆分16位字段的补丁结构</strong>。（这里只会拆分ec域内的名称）</p>
+<p>​       2.<strong>拆分后到名字不能已经出现在dsdt中（最好也不要与拆分到名字重复，虽然没什么问题，但是如果多次打这个补丁就会发生错误）</strong>，可以先想好几个名字，然后在dsdt中搜索，如果没有就可以。<br>​       然后。重点来了，<strong>拆分16位字段的补丁结构</strong>。（这里只会拆分ec域内的名称）</p>
 <ol>
 <li>into device label H_EC code_regex BDC0,\s+16, replace_matched begin DC00,8,DC01,8, end;</li>
 </ol>
 <p>复制代码</p>
-<p>​           对于各部分的含义以及修改方法：
-​           1.into device label** H_EC**
-​             含义：针对H_EC这个设备操作。对于自己电脑的名称请查看<strong>制作过程第一步的截屏处</strong>。
-​           2.code_regex** BDC0,\s+16,**
-含义：code_regex表示寻找后面的匹配项。  后面的BDC0,\s+16,是寻找的内容，对于小白，只要知道把<strong>BDC0</strong>替换成你所记录的16位名称即可。
-相关解释：\s+表示多个空格。所以这句话的意思是搜索BDCO，16，
-​              个人建议：这一步中的最后的“，”个人觉得没必要加，因为如果这个数据出现在右括号前贼不会有这个“，”。
-​           3.replace_matched begin** DC00,8,DC01,8,** end;
-​              含义：replace_matched begin.....end表示将前面搜索到的字段替换为省略后里的字段。**DC00,8,DC01,8,**即替换为的内容。这里DC00 DC01即你要改为的名   字。
-​              注意和上文的对应，如过上文按照我的建议不加最后的“，”则这里应为“<strong>DC00,8,DC01,8”</strong>！
-​       到了这里，我们已经可以自己写替换（或者说拆分）16位字段的补丁了。但是，对于示例DSDT，BDC0是被用到的字段，因此，只是拆分它是不行的。用到它的地方也需要修改。例如这些地方：</p>
+<p>​           对于各部分的含义以及修改方法：<br>​           1.into device label<strong> H_EC</strong><br>​             含义：针对H_EC这个设备操作。对于自己电脑的名称请查看<strong>制作过程第一步的截屏处</strong>。<br>​           2.code_regex<strong> BDC0,\s+16,</strong><br>含义：code_regex表示寻找后面的匹配项。  后面的BDC0,\s+16,是寻找的内容，对于小白，只要知道把<strong>BDC0</strong>替换成你所记录的16位名称即可。<br>相关解释：\s+表示多个空格。所以这句话的意思是搜索BDCO，16，<br>​              个人建议：这一步中的最后的“，”个人觉得没必要加，因为如果这个数据出现在右括号前贼不会有这个“，”。<br>​           3.replace_matched begin<strong> DC00,8,DC01,8,</strong> end;<br>​              含义：replace_matched begin…..end表示将前面搜索到的字段替换为省略后里的字段。<strong>DC00,8,DC01,8,</strong>即替换为的内容。这里DC00 DC01即你要改为的名   字。<br>​              注意和上文的对应，如过上文按照我的建议不加最后的“，”则这里应为“<strong>DC00,8,DC01,8”</strong>！<br>​       到了这里，我们已经可以自己写替换（或者说拆分）16位字段的补丁了。但是，对于示例DSDT，BDC0是被用到的字段，因此，只是拆分它是不行的。用到它的地方也需要修改。例如这些地方：</p>
 <ol>
 <li>Store (BDC0, Index (DerefOf (Index (Local0, 0x02)), Zero))</li>
 <li>Store (ShiftRight (BDC0, 0x08), Index (DerefOf (Index (Local0, 0x02)), One))</li>
@@ -322,11 +268,7 @@
 <li>end;</li>
 </ol>
 <p>复制代码</p>
-<p>​          对于小白直接将这个加入加入你的补丁中就ok。
-​          对这个补丁的解读：
-​           1.into method label B1B2 remove_entry;       查找B1B2方法，如果有，删除它。
-​           2.into definitionblock code_regex . insert     把后面的内容插入DefinitionBlock { }（每个dsdt的第一个就是这个）内。
-​       对于dsdt内其他部分的修改，如下：上面是本身的效果，下面为修改结束的效果：</p>
+<p>​          对于小白直接将这个加入加入你的补丁中就ok。<br>​          对这个补丁的解读：<br>​           1.into method label B1B2 remove_entry;       查找B1B2方法，如果有，删除它。<br>​           2.into definitionblock code_regex . insert     把后面的内容插入DefinitionBlock { }（每个dsdt的第一个就是这个）内。<br>​       对于dsdt内其他部分的修改，如下：上面是本身的效果，下面为修改结束的效果：</p>
 <ol>
 <li>Store (BDC0, Index (DerefOf (Index (Local0, 0x02)), Zero))</li>
 <li>Store (ShiftRight (BDC0, 0x08), Index (DerefOf (Index (Local0, 0x02)), One))</li>
@@ -342,23 +284,16 @@
 <li>into method label GBTI code_regex (BDC0, replaceall_matched begin (B1B2(DC00,DC01), end;</li>
 </ol>
 <p>复制代码</p>
-<p>​       主要介绍下几个参数：</p>
+<p>​       主要介绍下几个参数： </p>
 <p>​          1.into method label <strong>GBTI</strong></p>
-<p>这部分GBTI为dsdt出现的BDC0的方法，至于如何查看，点中你想要的参数，maciasl自然会显示，如下图：灰色部分即为你要修改为的名称，注意有些是有_的也要完全相同的加进去
-​         2.code_regex <strong>(BDC0,</strong></p>
+<p>这部分GBTI为dsdt出现的BDC0的方法，至于如何查看，点中你想要的参数，maciasl自然会显示，如下图：灰色部分即为你要修改为的名称，注意有些是有_的也要完全相同的加进去<br>​         2.code_regex <strong>(BDC0,</strong></p>
 <p>这部分(BDC0,与上面的查找相同，不过这部分并不能直接把BDC0改成你自己的方法就完事！！！举个例子：</p>
 <ol>
 <li>Store (^^PCI0.LPCB.EC0.XIF1, Index (PAK0, One))</li>
 </ol>
 <p>复制代码</p>
-<p>​            如果我要改这个中的XIF1应该怎么写？            应该写为：(^^PCI0.LPCB.EC0.XIF1,
-​          所以这个地方就是看自己的代码具体的情况，改成自己的形式，并且每个标点符号左边要加&quot;&quot;
-​        3. replaceall_matched begin <strong>(B1B2(DC00,DC01),</strong> end;
-​             这部分括号内就是你要修改为的内容，还以2中例子，应该改成什么？
-​           应该改为：(B1B2(^^PCI0.LPCB.EC0.XID1,^^PCI0.LPCB.EC0.XID2),
-​             这个地方就是把B1B2括号内的两个参数改成你本身括号内的内容，并且把你想改的参数分别改掉。
-​     **特别提醒：1.<strong><strong>以上都是对于在dsdt中，store（要修改参数，xxx）的形式</strong>
-**                      如果出现store（xxx，要修改的参数）则我们要改前改后的形式如下：</strong></p>
+<p>​            如果我要改这个中的XIF1应该怎么写？            应该写为：(\^\^PCI0.LPCB.EC0.XIF1,<br>​          所以这个地方就是看自己的代码具体的情况，改成自己的形式，并且每个标点符号左边要加”\”<br>​        3. replaceall_matched begin <strong>(B1B2(DC00,DC01),</strong> end;<br>​             这部分括号内就是你要修改为的内容，还以2中例子，应该改成什么？<br>​           应该改为：(B1B2(^^PCI0.LPCB.EC0.XID1,^^PCI0.LPCB.EC0.XID2),<br>​             这个地方就是把B1B2括号内的两个参数改成你本身括号内的内容，并且把你想改的参数分别改掉。<br>​     <strong>特别提醒：1.**</strong>以上都是对于在dsdt中，store（要修改参数，xxx）的形式<strong>
+</strong>                      如果出现store（xxx，要修改的参数）则我们要改前改后的形式如下：**</p>
 <ol>
 <li>Store (Arg0, ENCR)//修改前</li>
 <li>Store (ShiftRight(Arg0,8),ENC2)</li>
@@ -372,7 +307,7 @@
 <li>Store(Or(B1B2(BTD0,BTD1),0xC0), BTD0)</li>
 </ol>
 <p>复制代码</p>
-<p>​                  3.<strong>如果出现</strong><strong>And （你要修改的参数，xxx，你要修改的参数）<strong><strong>的</strong></strong>形式则修改形式如下：</strong></p>
+<p>​                  3.<strong>如果出现**</strong>And （你要修改的参数，xxx，你要修改的参数）<strong><strong>的</strong></strong>形式则修改形式如下：**</p>
 <ol>
 <li>And  (BATD, 0xFF3F, BATD)//修改前</li>
 <li>Store(ShiftRight(And(B1B2(BTD0,BTD1),0xFF3F),8), BTD1)</li>
@@ -398,8 +333,7 @@
 <li>into method label ITLB code_regex (BFC1, replaceall_matched begin (B1B2(FC10,FC11), end;</li>
 </ol>
 <p>复制代码</p>
-<p>接着是32位字段的修改
-​       这是与16位类似的处理方法：直接打进去就好</p>
+<p>   接着是32位字段的修改<br>​       这是与16位类似的处理方法：直接打进去就好</p>
 <ol>
 <li>nto method label B1B4 remove_entry;</li>
 <li>into definitionblock code_regex . insert</li>
@@ -424,10 +358,7 @@
 <li>into method label GBTI code_regex (BTY0, replaceall_matched begin (B1B4(TY00,TY01,TY02,TY03), end;</li>
 </ol>
 <p>复制代码</p>
-<p>​       这部分不懂的去看16位的修改方法，完全相同，只是数据变成了四个！<strong>二、大于32位的字段补丁处理</strong>
-<strong>对于大于32位的字段不用进行拆分操作，只需要将用到的地方进行处理就行了。</strong>
-**       我们先来认识个东西：偏移量。偏移量是啥？  看看图中的offset代表的就是偏移量。中间的咋算？**
-**       偏移量逢8进1，所以在对嘴上面的offset往下加就可以得出，如图：**</p>
+<p>​       这部分不懂的去看16位的修改方法，完全相同，只是数据变成了四个！<strong>二、大于32位的字段补丁处理</strong><br><strong>对于大于32位的字段不用进行拆分操作，只需要将用到的地方进行处理就行了。</strong><br><strong>       我们先来认识个东西：偏移量。偏移量是啥？  看看图中的offset代表的就是偏移量。中间的咋算？</strong><br><strong>       偏移量逢8进1，所以在对嘴上面的offset往下加就可以得出，如图：</strong></p>
 <ol>
 <li>Offset (0x04),</li>
 <li>​                        CMCM,   8, //0x04</li>
@@ -531,8 +462,8 @@
 <p>复制代码</p>
 <p>最后总结下补丁结构：</p>
 <ol>
-<li># Tip: If you get a 0% battery status,you should also patch the Rehabman's &quot;Fix Mutex with non-zero SyncLevel&quot; patch.</li>
-<li># You also can patch the both of your computer's battery patch and the Rehabman's patch at one time.</li>
+<li># Tip: If you get a 0% battery status,you should also patch the Rehabman’s “Fix Mutex with non-zero SyncLevel” patch.</li>
+<li># You also can patch the both of your computer’s battery patch and the Rehabman’s patch at one time.</li>
 <li></li>
 <li># 注意：如果打过电量补丁后，有获取的电池状态显示为0%的情况，还需要打 Rehabman的 “Fix Mutex with non-zero SyncLevel” 补丁。</li>
 <li># 你也可以，一次性打好 自己电脑的电量补丁 和 Rehabman 的那个补丁。</li>
@@ -544,14 +475,7 @@
 <li># ==== Data handling method 数据处理方法 ====</li>
 </ol>
 <p>复制代码</p>
-<p>最后的解释：文中多次提到特殊情况和离括号的的远近不同的处理方法，这是为什么呢？
-很简答的原因是sotre（A，B）是一个从左到右的操作，也就是将A写到B
-所以如果A是你的参数则是读的操作，而如果是B则是写的操作，也就用到不同的方法。
-而Or 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。
-And 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。
-不过能理解store就够了。
-**  将整理好的补丁保存位txt格式就能打入了 软件中点patch。点open就行**
-最后，特别感谢翻译贴和r神的帖子，也希望你们都能搞定电量显示的问题，另外，如果成功请回馈社会将补丁放于最上面所说帖子的补丁源！</p>
+<p>最后的解释：文中多次提到特殊情况和离括号的的远近不同的处理方法，这是为什么呢？<br>  很简答的原因是sotre（A，B）是一个从左到右的操作，也就是将A写到B<br>   所以如果A是你的参数则是读的操作，而如果是B则是写的操作，也就用到不同的方法。<br>  而Or 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。<br>  And 的第三个参数，是把前两个数的计算结果，写入到第三个参数的意思。<br>  不过能理解store就够了。<br><strong>  将整理好的补丁保存位txt格式就能打入了 软件中点patch。点open就行</strong><br>最后，特别感谢翻译贴和r神的帖子，也希望你们都能搞定电量显示的问题，另外，如果成功请回馈社会将补丁放于最上面所说帖子的补丁源！</p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Modify-DSDT-to-achieve-power-display-method.html#disqus_thread</comments>
@@ -564,14 +488,11 @@ And 的第三个参数，是把前两个数的计算结果，写入到第三个�
       <pubDate>Wed, 24 Jan 2018 02:49:36 GMT</pubDate>
       <description>
       
-        &lt;h1&gt;【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡&lt;code&gt;+++&lt;/code&gt;
+        &lt;h1 id=&quot;【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像&quot;&gt;&lt;a href=&quot;#【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391
       
       </description>
       
-      <content:encoded><![CDATA[<h1>【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像</h1>
-<ul>
+      <content:encoded><![CDATA[<h1 id="【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像"><a href="#【黑果小兵】macOS-High-Sierra-10-13-3-17D47-正式版-with-Clover-4391原版镜像" class="headerlink" title="【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像"></a>【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像</h1><ul>
 <li>本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡<code>+++</code>请替换<code>Drivers64UEFI/Backup</code>目录下的<code>OsxAptioFix3Drv-64.efi</code></li>
 <li>所有配置文件中默认去掉<code>Lilu</code>的输出信息,<a href="https://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html">让你看清10.13 内核崩溃(kernel pance)的真相</a>;</li>
 <li>支持UHD620/UHD630等八代核显</li>
@@ -585,31 +506,16 @@ And 的第三个参数，是把前两个数的计算结果，写入到第三个�
 <li>本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！</li>
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></li>
 </ul>
-<h1>截图：</h1>
-<p><img src="http://7.daliansky.net/10.13.3_17D47.png" alt="10.13.3_17D47">
-<img src="http://7.daliansky.net/10.13.3_Audio.png" alt="10.13.3_Audio">
-<img src="http://7.daliansky.net/10.13.3_HD620.png" alt="10.13.3_HD620">
-<img src="http://7.daliansky.net/10.13.3_Bluetooth.png" alt="10.13.3_Bluetooth">
-<img src="http://7.daliansky.net/10.13.3_USB.png" alt="10.13.3_USB">
-<img src="http://7.daliansky.net/10.13.3_Kexts.png" alt="10.13.3_Kexts">
-<img src="http://7.daliansky.net/10.13.3_Wifi.png" alt="10.13.3_Wifi">
-<img src="http://7.daliansky.net/10.13.3_Display.png" alt="10.13.3_Display">
-<img src="http://7.daliansky.net/10.13.3.png" alt="10.13.3"></p>
-<h1>下载链接</h1>
-<p>百毒云下载链接：https://pan.baidu.com/s/1bqmWMLp 密码: 7pu8</p>
-<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/%E9%BB%91%E6%9E%9C%E5%B0%8F%E5%85%B5/macOS%20High%20Sierra%2010.13.3%2817D47%29%20Installer%20with%20Clover%204391.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.13.3_17D47.png" alt="10.13.3_17D47"><br><img src="http://7.daliansky.net/10.13.3_Audio.png" alt="10.13.3_Audio"><br><img src="http://7.daliansky.net/10.13.3_HD620.png" alt="10.13.3_HD620"><br><img src="http://7.daliansky.net/10.13.3_Bluetooth.png" alt="10.13.3_Bluetooth"><br><img src="http://7.daliansky.net/10.13.3_USB.png" alt="10.13.3_USB"><br><img src="http://7.daliansky.net/10.13.3_Kexts.png" alt="10.13.3_Kexts"><br><img src="http://7.daliansky.net/10.13.3_Wifi.png" alt="10.13.3_Wifi"><br><img src="http://7.daliansky.net/10.13.3_Display.png" alt="10.13.3_Display"><br><img src="http://7.daliansky.net/10.13.3.png" alt="10.13.3"></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>百毒云下载链接：<a href="https://pan.baidu.com/s/1bqmWMLp" target="_blank" rel="external">https://pan.baidu.com/s/1bqmWMLp</a> 密码: 7pu8</p>
+<p>迅雷下载链接:<a href="https://mirrors.dtops.cc/iso/MAC%20OS/黑果小兵/macOS%20High%20Sierra%2010.13.3%2817D47%29%20Installer%20with%20Clover%204391.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
 <p>Mega网盘下载链接:<a href="https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo" target="_blank" rel="external">https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo</a></p>
 <blockquote>
 <p>如果mega无法下载,请进群下载<code>hosts_mega.txt</code></p>
 </blockquote>
 <p>MD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec</p>
-<h1>关于打赏</h1>
-<p>您的支持就是我更新的动力！
-如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1>QQ群:</h1>
-<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>
-688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]
-257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
+<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a><br>688324116 <a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a>[群已满,请加其它群]<br>257995340 <a href="http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8" target="_blank" rel="external">一起啃苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html#disqus_thread</comments>
