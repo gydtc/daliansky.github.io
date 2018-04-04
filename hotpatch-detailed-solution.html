@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  624 字
+                  633 字
                 </span>
               
 
@@ -459,9 +459,11 @@
       
 
       
-        <h1 id="hotpatch详解"><a href="#hotpatch详解" class="headerlink" title="hotpatch详解"></a>hotpatch详解</h1><p>这里阐述hotpatch的作用及各功能详解</p>
-<p>[TOC]<a id="more"></a></p>
-<h2 id="核心文件"><a href="#核心文件" class="headerlink" title="核心文件"></a>核心文件</h2><table>
+        <h1>hotpatch详解</h1>
+<p>这里阐述hotpatch的作用及各功能详解</p>
+<p>[TOC]&lt;!--more--&gt;</p>
+<h2>核心文件</h2>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -475,7 +477,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><table>
+<h2>系统</h2>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -501,7 +504,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h2><table>
+<h2>显卡</h2>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -527,7 +531,7 @@
 </tr>
 <tr>
 <td>SSDT-Dell_FN</td>
-<td>将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码<br>【部分DELL机型】</td>
+<td>将键盘的ACPI管理亮度键映射到VoodooPS2Controller.kext的PS2代码&lt;br&gt;【部分DELL机型】</td>
 </tr>
 <tr>
 <td>SSDT-PNLF</td>
@@ -535,7 +539,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h2><table>
+<h2>声卡</h2>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -553,7 +558,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="睡眠相关"><a href="#睡眠相关" class="headerlink" title="睡眠相关"></a>睡眠相关</h2><table>
+<h2>睡眠相关</h2>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -583,7 +589,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="其它杂项"><a href="#其它杂项" class="headerlink" title="其它杂项"></a>其它杂项</h2><table>
+<h2>其它杂项</h2>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -593,7 +600,7 @@
 <tbody>
 <tr>
 <td>SSDT-Debug</td>
-<td>用于ACPIDebug <br>该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的，使用“添加SSDT调试外部声明”从其他方式访问这些方法<br>hotpatch SSDT甚至打补丁的OEM ACPI文件</td>
+<td>用于ACPIDebug &lt;br&gt;该文件是通过将“添加DSDT调试方法”应用于空SSDT创建的，使用“添加SSDT调试外部声明”从其他方式访问这些方法&lt;br&gt;hotpatch SSDT甚至打补丁的OEM ACPI文件</td>
 </tr>
 <tr>
 <td>SSDT-ESEL</td>
@@ -605,7 +612,7 @@
 </tr>
 <tr>
 <td>SSDT-PluginType1</td>
-<td>在_PR.CPU0上插入plugin-type = 1<br>可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入</td>
+<td>在_PR.CPU0上插入plugin-type = 1&lt;br&gt;可能是所有支持XCPM的SMBIOS只需要这种插件类型的注入</td>
 </tr>
 <tr>
 <td>SSDT-SATA</td>
@@ -617,12 +624,16 @@
 </tr>
 <tr>
 <td>SSDT-XOSI</td>
-<td>覆盖主机定义的_OSI来处理“Darwin”…<br>DSDT中的所有_OSI调用都被路由到XOSI<br>XOSI模拟“Windows 2009”（这是Windows 7）<br>XOSI模拟“Windows 2015”（这是Windows 10）<br><a href="http://download.microsoft.com/download/7/E/7/7E7662CF-CBEA-470B-A97E-CE7CE0D98DC2/WinACPI_OSI.docx" target="_blank" rel="external">这里是关于_OSI中微软操作系统的描述文件</a></td>
+<td>覆盖主机定义的_OSI来处理“Darwin”...&lt;br&gt;DSDT中的所有_OSI调用都被路由到XOSI&lt;br&gt;XOSI模拟“Windows 2009”（这是Windows 7）&lt;br&gt;XOSI模拟“Windows 2015”（这是Windows 10）&lt;br&gt;<a href="http://download.microsoft.com/download/7/E/7/7E7662CF-CBEA-470B-A97E-CE7CE0D98DC2/WinACPI_OSI.docx" target="_blank" rel="external">这里是关于_OSI中微软操作系统的描述文件</a></td>
 </tr>
 </tbody>
 </table>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群："><a href="#QQ群：" class="headerlink" title="QQ群："></a>QQ群：</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群：</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
+688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -781,7 +792,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -803,7 +814,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">133</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -865,7 +876,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hotpatch详解"><span class="nav-number">1.</span> <span class="nav-text">hotpatch详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心文件"><span class="nav-number">1.1.</span> <span class="nav-text">核心文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统"><span class="nav-number">1.2.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显卡"><span class="nav-number">1.3.</span> <span class="nav-text">显卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声卡"><span class="nav-number">1.4.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#睡眠相关"><span class="nav-number">1.5.</span> <span class="nav-text">睡眠相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它杂项"><span class="nav-number">1.6.</span> <span class="nav-text">其它杂项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群："><span class="nav-number">3.</span> <span class="nav-text">QQ群：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">hotpatch详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">核心文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">显卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">睡眠相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.6.</span> <span class="nav-text">其它杂项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群：</span></a></li></ol></div>
             
 
           </div>

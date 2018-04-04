@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
+<meta name="description" content="CPUFriend安装和使用 系统要求 CPUFriend 需要macOS v10.8或更高版本 安装 强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志 添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用） 添加-cpufoff来关闭CPUFriend 添加-cpufbeta以在不支持的操作系统版本上">
 <meta name="keywords" content="Lilu,CPUFriend,Plugins,CPU变频,插件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CPUFriend的安装与使用">
 <meta property="og:url" content="http://blog.daliansky.net/CPUFriend-Installation-and-Usage.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
+<meta property="og:description" content="CPUFriend安装和使用 系统要求 CPUFriend 需要macOS v10.8或更高版本 安装 强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志 添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用） 添加-cpufoff来关闭CPUFriend 添加-cpufbeta以在不支持的操作系统版本上">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-03-27T01:13:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CPUFriend的安装与使用">
-<meta name="twitter:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
+<meta name="twitter:description" content="CPUFriend安装和使用 系统要求 CPUFriend 需要macOS v10.8或更高版本 安装 强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志 添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用） 添加-cpufoff来关闭CPUFriend 添加-cpufbeta以在不支持的操作系统版本上">
 
 
 
@@ -455,29 +455,42 @@
       
 
       
-        <h1 id="CPUFriend安装和使用"><a href="#CPUFriend安装和使用" class="headerlink" title="CPUFriend安装和使用"></a>CPUFriend安装和使用</h1><h2 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h2><p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
-<h2 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h2><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
-<h2 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h2><p>执行命令如下：</p>
-<p>`./ResourceConverter.sh –kext “/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist”</p>
+        <h1>CPUFriend安装和使用</h1>
+<h2>系统要求</h2>
+<p><code>CPUFriend</code> 需要macOS <strong><em>v10.8</em></strong>或更高版本</p>
+<h2>安装</h2>
+<p>强烈建议让引导程序注入<code>CPUFriend</code>，否则您将需要<a href="https://github.com/PMheart/LiluFriend" target="_blank" rel="external">LiluFriend</a>，以确保<code>CPUFriend</code>正常工作。</p>
+<h2>可用的内核标志</h2>
+<p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）
+添加<code>-cpufoff</code>来关闭<code>CPUFriend</code>
+添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
+<h2>配置</h2>
+<p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
+<h2>ResourceConverter.sh的使用</h2>
+<p>执行命令如下：</p>
+<p>`./ResourceConverter.sh --kext &quot;/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist&quot;</p>
 <p>它会在当前目录生成<code>CPUFriendProvider.kext</code>,将<code>CPUFriendProvider.kext</code>和<a href="https://github.com/PMheart/CPUFriend/releases" target="_blank" rel="external">CPUFriend.kext</a>复制到<code>/EFI/Clover/kexts/Other</code>，重建缓存，然后重启。</p>
 <p>重建缓存的命令为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">sudo chmod -Rf 755 /S*/L*/E*</div><div class="line">sudo chown -Rf 0:0 /S*/L*/E*</div><div class="line">sudo chmod -Rf 755 /L*/E*</div><div class="line">sudo chown -Rf 0:0 /L*/E*</div><div class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</div><div class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</div><div class="line">sudo touch -f /S*/L*/E*</div><div class="line">sudo touch -f /L*/E*</div><div class="line">sudo kextcache -Boot -U /</div></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">sudo chmod -Rf 755 /S*/L*/E*</div><div class="line">sudo chown -Rf 0:0 /S*/L*/E*</div><div class="line">sudo chmod -Rf 755 /L*/E*</div><div class="line">sudo chown -Rf 0:0 /L*/E*</div><div class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</div><div class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</div><div class="line">sudo touch -f /S*/L*/E*</div><div class="line">sudo touch -f /L*/E*</div><div class="line">sudo kextcache -Boot -U /</div></pre></td></tr></table></figure></p>
 <p>说明：</p>
 <blockquote>
 <p>其中的<code>/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist</code>是我自行修改的，可以通过直接调用系统提供的<code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist</code></p>
 </blockquote>
-<p><code>--kext &quot;file&quot;</code> 用”file”提供的信息创建<code>CPUFriendProvider.kext</code></p>
-<p><code>--acpi &quot;file&quot;</code> 使用”file”提供的信息创建<code>ssdt_data.dsl</code></p>
+<p><code>--kext &quot;file&quot;</code> 用&quot;file&quot;提供的信息创建<code>CPUFriendProvider.kext</code></p>
+<p><code>--acpi &quot;file&quot;</code> 使用&quot;file&quot;提供的信息创建<code>ssdt_data.dsl</code></p>
 <p>注意：</p>
 <ul>
 <li>创建的 kext/ssdt 位于当前工作目录中</li>
 <li>变量 <code>&quot;file&quot;</code> 应该是 <code>/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources</code> 中的一个完整的plist，具有某些修改，而不是像原始的 <code>FrequencyVectors</code> 条目</li>
 </ul>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://github.com/PMheart/CPUFriend/blob/master/Instructions.md" target="_blank" rel="external">CPUFriend Installation &amp; Usage</a></p>
-<h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h2>原文链接</h2>
+<p><a href="https://github.com/PMheart/CPUFriend/blob/master/Instructions.md" target="_blank" rel="external">CPUFriend Installation &amp; Usage</a></p>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
+688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -640,7 +653,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -662,7 +675,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">131</span>
+                  <span class="site-state-item-count">133</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -724,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CPUFriend安装和使用"><span class="nav-number">1.</span> <span class="nav-text">CPUFriend安装和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统要求"><span class="nav-number">1.1.</span> <span class="nav-text">系统要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可用的内核标志"><span class="nav-number">1.3.</span> <span class="nav-text">可用的内核标志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ResourceConverter-sh的使用"><span class="nav-number">1.5.</span> <span class="nav-text">ResourceConverter.sh的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原文链接"><span class="nav-number">1.6.</span> <span class="nav-text">原文链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">CPUFriend安装和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">系统要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">可用的内核标志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">ResourceConverter.sh的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.6.</span> <span class="nav-text">原文链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
