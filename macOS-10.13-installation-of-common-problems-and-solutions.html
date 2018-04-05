@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/EDID注入.png">
 <meta property="og:image" content="http://7.daliansky.net/10.13.4/About.png">
-<meta property="og:updated_time" content="2018-04-05T08:24:09.000Z">
+<meta property="og:updated_time" content="2018-04-05T08:58:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS 10.13安装中常见的问题及解决方法">
 <meta name="twitter:description" content="去掉Lilu的输出信息,还原10.13 内核崩溃(kernel pance)的真相 援引:如果你有一个kernel panic，请确保你有一个DEBUG版本的扩展，并且已经添加了-v keepyms = 1 debug = 0x100引导参数。 在10.13上，为了避免kext名字在崩溃日志(panic log)中滚动，你也应该[修补你的内核]  10.13的系统引导中,万一发生了kernel p">
@@ -349,7 +349,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-05T16:24:09+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-05T16:58:43+08:00">
                 2018-04-05
               </time>
             
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,589 字
+                  2,588 字
                 </span>
               
 
@@ -469,7 +469,7 @@
 <h3 id="解决方法2"><a href="#解决方法2" class="headerlink" title="解决方法2:"></a>解决方法2:</h3><p>使用<code>Clover Configurator</code>打开<code>config.plist</code> - <code>Kernel and Kext Patches</code> - <code>kernelToPatch</code>，新添加：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Comment:</span>    Disable panic kext logging on <span class="number">10.13</span> Debug kernel</div><div class="line"><span class="symbol">Find:</span>       b0004c8b <span class="number">55</span>f<span class="number">0</span></div><div class="line"><span class="symbol">Replace:</span>    <span class="number">4883</span>c44<span class="number">0</span> <span class="number">5</span>dc3</div><div class="line"><span class="symbol">MatchOS:</span>    <span class="number">10.13</span></div><div class="line"></div><div class="line"><span class="symbol">Comment:</span>    Disable panic kext logging on <span class="number">10.13</span> Release kernel</div><div class="line"><span class="symbol">Find:</span>       <span class="number">8</span>a0284c<span class="number">0</span> <span class="number">7444</span></div><div class="line"><span class="symbol">Replace:</span>    <span class="number">8</span>a0284c<span class="number">0</span> eb44</div><div class="line"><span class="symbol">MatchOS:</span>    <span class="number">10.13</span></div></pre></td></tr></table></figure>
 <h2 id="10-13-0-1-2-3-改变USB端口限制补丁"><a href="#10-13-0-1-2-3-改变USB端口限制补丁" class="headerlink" title="10.13.0/1/2/3 改变USB端口限制补丁"></a>10.13.0/1/2/3 改变USB端口限制补丁</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Comment	String	<span class="number">10.13</span>.<span class="number">0</span>/<span class="number">1</span>/<span class="number">2</span>/<span class="number">3</span> USB Port <span class="number">10</span>-&gt;<span class="number">26</span></div><div class="line">Find	Data	<span class="number">837</span>D8C1<span class="number">0</span></div><div class="line">Name	String	com.apple.driver.usb.AppleUSBXHCI</div><div class="line">Replace	Data	<span class="number">837</span>D8C1B</div><div class="line">MatchOS	String	<span class="number">10.13</span>.<span class="number">0</span>,<span class="number">10.13</span>.<span class="number">1</span>,<span class="number">10.13</span>.<span class="number">2</span>,<span class="number">10.13</span>.<span class="number">3</span></div></pre></td></tr></table></figure>
-<h2 id="10-13-4-5-关闭USB端口限制补丁"><a href="#10-13-4-5-关闭USB端口限制补丁" class="headerlink" title="10.13.4/5 关闭USB端口限制补丁"></a>10.13.4/5 关闭USB端口限制补丁</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Comment	String	<span class="number">10.13</span>.x disable USB Port Limit Patch</div><div class="line">Find	Data	<span class="number">837</span>D940F 0F839704 <span class="number">0000</span></div><div class="line">Name	String	com.apple.driver.usb.AppleUSBXHCI</div><div class="line">Replace	Data	<span class="number">837</span>D940F <span class="number">90909090</span> <span class="number">9090</span></div><div class="line">MatchOS	String	<span class="number">10.13</span>.x</div></pre></td></tr></table></figure>
+<h2 id="10-13-4-5-关闭USB端口限制补丁"><a href="#10-13-4-5-关闭USB端口限制补丁" class="headerlink" title="10.13.4/5 关闭USB端口限制补丁"></a>10.13.4/5 关闭USB端口限制补丁</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Comment	String	disable USB Port Limit Patch (PMheart)</div><div class="line">Find	Data	<span class="number">837</span>D940F 0F839704 <span class="number">0000</span></div><div class="line">Name	String	com.apple.driver.usb.AppleUSBXHCI</div><div class="line">Replace	Data	<span class="number">837</span>D940F <span class="number">90909090</span> <span class="number">9090</span></div><div class="line">MatchOS	String	<span class="number">10.13</span>.x</div></pre></td></tr></table></figure>
 <h2 id="macOS升级后应该先插入啥？"><a href="#macOS升级后应该先插入啥？" class="headerlink" title="macOS升级后应该先插入啥？"></a>macOS升级后应该先插入啥？</h2><p>有些群友通过<code>App Store</code>更新了系统后，就会在群里提出更新后某些功能不正常了，我的方法是直接使用<code>Kext Utility</code>重建缓存再重启，包治百病！比如：HDMI Audio输出没了，内屏背光亮度不可调等等。</p>
 <h2 id="误食了偏方进不了系统怎么办？"><a href="#误食了偏方进不了系统怎么办？" class="headerlink" title="误食了偏方进不了系统怎么办？"></a>误食了偏方进不了系统怎么办？</h2><blockquote>
 <p>经常会有群友说是安装了<code>ALCPlugFix</code>后重启无法进入系统的问题，这是由于新的10.13.2及以后的重建缓存的命令发生了改变，部分机器会出现类似的问题。现在我把恢复的方法公布出来，让更多的人看到，同时也在此提醒大家使用<code>KEXT UTILITY</code>这个应用程序来重建缓存。请及时更新各声卡驱动所配套的<code>ALCPlugFix</code>，我发布的程序中已经使用新的重建缓存的命令。</p>
