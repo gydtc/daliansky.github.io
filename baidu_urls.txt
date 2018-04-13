@@ -1,5 +1,5 @@
+http://blog.daliansky.net/CLOVER-v2-4-r4438-Integrated-Millet-Notebook-PRO-EFI-Installation-Instructions.html
 http://blog.daliansky.net/translate-guide-intel-igpu-hdmi-dp-audio-sandy-ivy-haswell-broadwell-skylake-kabylake.html
 http://blog.daliansky.net/macOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html
 http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html
 http://blog.daliansky.net/Modify-DSDT-to-achieve-power-display-method.html
-http://blog.daliansky.net/macOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html
