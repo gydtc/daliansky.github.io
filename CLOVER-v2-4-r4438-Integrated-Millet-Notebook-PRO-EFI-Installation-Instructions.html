@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg  本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区   点击继续  请先阅读更新内容，然后点击继续  如果是更新安装的情况下是不需要更改安装位置的，由于我是测试安装，所以点击更改安装位置  本例中，我选择的安装位置是E">
+<meta name="description" content="运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg  本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区（其实Clover会自动在你的macOS系统根目录下创建EFI-Backups并且自动备份）   点击继续  请先阅读更新内容，然后点击继续  如果是更新安装的情况下是">
 <meta name="keywords" content="教程,CLOVER,小米PRO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【黑果小兵】CLOVER v2.4 r4438集成小米笔记本PRO EFI安装说明">
 <meta property="og:url" content="http://blog.daliansky.net/CLOVER-v2-4-r4438-Integrated-Millet-Notebook-PRO-EFI-Installation-Instructions.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg  本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区   点击继续  请先阅读更新内容，然后点击继续  如果是更新安装的情况下是不需要更改安装位置的，由于我是测试安装，所以点击更改安装位置  本例中，我选择的安装位置是E">
+<meta property="og:description" content="运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg  本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区（其实Clover会自动在你的macOS系统根目录下创建EFI-Backups并且自动备份）   点击继续  请先阅读更新内容，然后点击继续  如果是更新安装的情况下是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/clover4438/1.png">
 <meta property="og:image" content="http://7.daliansky.net/clover4438/2.png">
@@ -99,10 +99,10 @@
 <meta property="og:image" content="http://7.daliansky.net/clover4438/8.png">
 <meta property="og:image" content="http://7.daliansky.net/clover4438/9.png">
 <meta property="og:image" content="http://7.daliansky.net/clover4438/10.png">
-<meta property="og:updated_time" content="2018-04-13T06:22:47.000Z">
+<meta property="og:updated_time" content="2018-04-13T06:25:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【黑果小兵】CLOVER v2.4 r4438集成小米笔记本PRO EFI安装说明">
-<meta name="twitter:description" content="运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg  本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区   点击继续  请先阅读更新内容，然后点击继续  如果是更新安装的情况下是不需要更改安装位置的，由于我是测试安装，所以点击更改安装位置  本例中，我选择的安装位置是E">
+<meta name="twitter:description" content="运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg  本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区（其实Clover会自动在你的macOS系统根目录下创建EFI-Backups并且自动备份）   点击继续  请先阅读更新内容，然后点击继续  如果是更新安装的情况下是">
 <meta name="twitter:image" content="http://7.daliansky.net/clover4438/1.png">
 
 
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-13T14:22:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-13T14:25:28+08:00">
                 2018-04-13
               </time>
             
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  587 字
+                  611 字
                 </span>
               
 
@@ -468,7 +468,7 @@
       
         <h2 id="运行Clover-v2-4k-r4438-pkg安装程序"><a href="#运行Clover-v2-4k-r4438-pkg安装程序" class="headerlink" title="运行Clover_v2.4k_r4438.pkg安装程序"></a>运行<code>Clover_v2.4k_r4438.pkg</code>安装程序</h2><p>下载链接：<a href="https://github.com/daliansky/XiaoMi-Pro/blob/master/Clover_v2.4k_r4438.pkg" target="_blank" rel="external">Clover_v2.4k_r4438.pkg</a></p>
 <blockquote>
-<p>本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区</p>
+<p>本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区（其实Clover会自动在你的macOS系统根目录下创建EFI-Backups并且自动备份）</p>
 </blockquote>
 <p><img src="http://7.daliansky.net/clover4438/1.png" alt="Clover_v2.4k_r4438"></p>
 <p>点击<code>继续</code></p>
