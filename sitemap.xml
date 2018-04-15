@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
+    
+    <lastmod>2018-04-15T12:31:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
+    
+    <lastmod>2018-04-15T12:24:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</loc>
     
     <lastmod>2018-04-15T11:38:11.000Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://blog.daliansky.net/Intel-core-display-platformID-finishing.html</loc>
     
     <lastmod>2018-04-06T06:38:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
-    
-    <lastmod>2018-04-05T08:58:43.000Z</lastmod>
     
   </url>
   
@@ -149,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
-    
-    <lastmod>2018-01-26T05:44:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
+    <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
+    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -205,7 +205,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</loc>
+    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
+    <loc>http://blog.daliansky.net/MacOS-use-the-dd-command-to-make-Ubuntu-install-USB-disk.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/MacOS-use-the-dd-command-to-make-Ubuntu-install-USB-disk.html</loc>
+    <loc>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
