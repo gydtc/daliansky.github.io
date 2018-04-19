@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[[转载][原创：草原企鹅]Clover Configurator中文汉化版]]></title>
+    <url>%2FClover-Configurator-Chinese-Version.html</url>
+    <content type="text"><![CDATA[原文：Clover Configurator是配置CLOVER配置文件首选工具，很多新手对满屏的英文比较蒙圈，所以汉化一下本工具，希望对新手有所帮助！首次汉化：道宏工作室本工具第一次翻译有得地方汉化不准确，经过一些大神的解释，重新修改部分字词！ 感谢：@草原企鹅 ACPI设置Boot设置Cpu设置 Devices设置 GUI设置 Graphics设置 Kernel and Kext Patches设置 Rt Variables设置 SMBIOS设置 System Parameters设置 Boot.log显示 Themes Editor主题编辑 NVRAM参数设置 下载链接：https://github.com/daliansky/dell7000/blob/master/Tools/CloverConfigurator_ChineseVersion.zip 鸣谢/致敬：草原企鹅@ThinkPad黑苹果交流群QQ群：128630866 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果257995340 一起啃苹果]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Clover</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【黑果小兵】CLOVER v2.4 r4438集成小米笔记本PRO EFI安装说明]]></title>
     <url>%2FCLOVER-v2-4-r4438-Integrated-Millet-Notebook-PRO-EFI-Installation-Instructions.html</url>
     <content type="text"><![CDATA[运行Clover_v2.4k_r4438.pkg安装程序下载链接：Clover_v2.4k_r4438.pkg 本安装程序会覆盖你的EFI，所以请事先备份EFI，再执行改名或者删除的操作，安装程序会安装全新的EFI到你的ESP分区（其实Clover会自动在你的macOS系统根目录下创建EFI-Backups并且自动备份） 点击继续 请先阅读更新内容，然后点击继续 如果是更新安装的情况下是不需要更改安装位置的，由于我是测试安装，所以点击更改安装位置 本例中，我选择的安装位置是EFI_TEST，点击继续 勾选仅安装UEFI开机版本，勾选安装Clover到EFI系统区，勾选附带的三套开机主题，点击Drivers64UEFI 勾选HFSPlus apfs AptioMemoryFix 勾选安装全部RC scripts到全部可开机的OSX磁区，点击安装 安装开始，系统会要求输入用户密码，请输入密码，之后点击安装软件 程序会自动将包含小米笔记本PRO的EFI安装到ESP分区 安装完成，请点击关闭 将config_4-13.plist重命名为config.plist打开终端，输入命令： 1diskutil mount ESP # 挂载ESP分区，假如你的ESP分区名称为：ESP 如果ESP分区没有命名的话，可以使用以下命令： 1diskutil list 命令输出信息： 12345/dev/disk4 (disk image): #: TYPE NAME SIZE IDENTIFIER 0: GUID_partition_scheme +6.0 GB disk4 1: EFI EFI 209.7 MB disk4s1 2: Apple_HFS EFI_TEST 5.7 GB disk4s2 系统显示disk4s1为EFI分区，使用重命名命令： 12diskutil rename disk4s1 ESP # 将disk4s1重命名为ESPdiskutil mount ESP # 挂载ESP分区 在本例子中，我使用的是disk image，也就是新建了个包含EFI分区的镜像做演示，你的设备名很有可能是disk0s1 当然你也可以直接使用应用程序CLOVER CONFIGURATOR至于如何重命名这个就不需要我多说了吧。 EFI下载/更新https://github.com/daliansky/XiaoMi-Pro 教程结束特别鸣谢:@Steve @风之痕 @烎⁵⁷ 提供的EFI测试及部分素材 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:247451054 小米PRO黑苹果高级群[群已满，请加其它群]137188006 小米PRO黑苹果689011732 小米笔记本Pro黑苹果]]></content>
@@ -8,9 +20,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>CLOVER</tag>
         <tag>小米PRO</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -129,8 +141,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -143,8 +155,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>安装</tag>
+        <tag>教程</tag>
         <tag>macOS</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
@@ -206,8 +218,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>声卡仿冒</tag>
         <tag>AppleHDA</tag>
+        <tag>声卡仿冒</tag>
       </tags>
   </entry>
   <entry>
@@ -272,9 +284,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>教程</tag>
         <tag>clover</tag>
         <tag>手册</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -301,8 +313,8 @@
       </categories>
       <tags>
         <tag>EFI</tag>
-        <tag>UEFI</tag>
         <tag>Clover</tag>
+        <tag>UEFI</tag>
         <tag>引导</tag>
       </tags>
   </entry>
@@ -471,7 +483,7 @@
   <entry>
     <title><![CDATA[AppleALC支持的Codecs列表及AppleALC的使用]]></title>
     <url>%2FAppleALC-Supported-codecs.html</url>
-    <content type="text"><![CDATA[如何使用AppleALC如果您的编解码器支持，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在AppleHDA之前加载AppleALC（有关更多详细信息，请参阅sudo kextstat输出）。 请注意，Lilu 也必须出现在AppleALC上。 按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。 备注：AppleALC不处理layout-id值，它希望你提供正确的DSDT(SSDT)。 如何控制AppleALCAppleALC接受不同的引导参数来控制其行为： -alcoff - 禁用自身; -alcdbg - 打印调试信息（如果扩展在调试模式下编译）; -alcbeta - 在不支持的系统（通常未发布或旧版）上启用AppleALC; -x或-s - 也将禁用AppleALC。 所有Lilu启动参数都会影响AppleALC。 如何提取调试日志在使用-alcdbg -liludbg引导后，在终端Terminal中运行以下命令并保存输出。 10.12及以后版本： log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source 10.11及以前版本 cat /var/log/system.log | egrep &#39;(AppleALC|Lilu)&#39; 附：AppleALC支持的编解码器列表 更新日期：3-12-2018 Vendor Codec Revisions MinKernel MaxKernel Creative CA0132 0x100918 layout 0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12 13 (10.9) — CirrusLogic CS4210 0x100101 layout 13 13 (10.9) — CirrusLogic CS4213 0x100100 layout 28 13 (10.9) — Realtek ALC221 layout 11 12 (10.8) — Realtek ALC225/ALC3253 layout 28,33 13 (10.9) — Realtek ALC233 layout 3, 13, 27 13 (10.9) — Realtek ALC235 layout 3, 11, 28 13 (10.9) — Realtek ALC236 0x100001, 0x100002 layout 3, 11, 13,15 13 (10.9) — Realtek ALC3236 layout 4, 5, 28, 29 13 (10.9) — Realtek ALC255 layout 3, 13, 17,18, 27, 28,99 13 (10.9) — Realtek ALC256 (3246) layout 13,28,56 13 (10.9) — Realtek ALC260 layout 11, 12 13 (10.9) — Realtek ALC262 0x100202 layout 11, 12,13,28 13 (10.9) — Realtek ALC268 layout 3 13 (10.9) — Realtek ALC269 0x100004, 0x100100, 0x100202, 0x100203 layout 1-9, 11, 13, 14, 15, 16, 18, 19, 20, 27, 28, 29, 32, 33, 35, 40, 76,93,99,127 12 (10.8) — Realtek ALC270 0x100100, layout 3, 4, 27, 28 13 (10.9) — Realtek ALC271x layout 9, 31 12 (10.8) — Realtek ALC272 0x100001, layout 3, 11 13 (10.9) — Realtek ALC275 0x100005, 0x100008, layout 3, 13, 28 13 (10.9) — Realtek ALC280 layout 3, 4, 11,13 13 (10.9) — Realtek ALC282 0x100003, layout 3, 4, 13, 27, 28, 29, 76,86,127 12 (10.8) — Realtek ALC283 layout 1,3, 11, 66 13 (10.9) — Realtek ALC284 layout 3 13 (10.9) — Realtek ALC286 0x100002, 0x100003 layout 3 13 (10.9) — Realtek ALC288 layout 3, 13 13 (10.9) — Realtek ALC290 layout 3, 28 13 (10.9) — Realtek ALC3241 layout 4 13 (10.9) — Realtek ALC292 layout 12, 18, 28 13 (10.9) — Realtek ALC293 layout 28, 29 13 (10.9) — Realtek ALC294 layout 13 13 (10.9) — Realtek ALC295 layout 3, 13,28 13 (10.9) — Realtek ALC298 0x100103, layout 3, 11, 13, 28, 29, 47, 72, 99 13 (10.9) — Realtek ALC662 0x100101, 0x100300 layout 5, 7, 11, 12, 13 13 (10.9) — Realtek ALC663 0x100002, layout 3, 4, 28 13 (10.9) — Realtek ALC665 layout 12, 13 13 (10.9) — Realtek ALC668 0x100003, layout 3, 20, 27, 28, 29 13 (10.9) — Realtek ALC670 0x100002, layout 12 13 (10.9) — Realtek ALC671 layout 12 13 (10.9) — Realtek ALC882 0x100101, layout 5, 7 13 (10.9) — Realtek ALC883 0x100002, layout 7 13 (10.9) — Realtek ALC885 0x100101, 0x100103 layout 1, 12 13 (10.9) — Realtek ALC887 0x100202, 0x100302, layout 1, 2, 3, 5, 7, 11, 13, 17, 18, 33, 99 13 (10.9) — Realtek ALC888/ALC1200 0x100101, 0x100001, 0x100202, 0x100302 layout 1, 2, 3, (4 for laptop), 5, 7, 11, 28, 29 13 (10.9) — Realtek ALC889 0x100004, layout 1, 11, 12 13 (10.9) — Realtek ALC891/ALC867 0x100002, layout 11,13 13 (10.9) — Realtek ALC892 0x100302, layout 1, 2, 3, (4 for laptop), 5, 7, 28, 31, 92, 98,99 13 (10.9) — Realtek ALC898/ALC899 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 28, 65,101 13 (10.9) — Realtek ALC1150 0x100001, layout 1, 2, 3, 5, 7, 11 12 (10.8) — Realtek ALC1220 0x100003, layout 1, 2, 5, 7, 11 15 (10.11) — Realtek ALCS1220A layout 1, 2, 5, 7 15 (10.11) — AnalogDevices AD1984 0x100400, layout 11 13 (10.9) — AnalogDevices AD1984A 0x100400, layout 11, 13 13 (10.9) — AnalogDevices AD1988B layout 5, 7, 12 13 (10.9) — AnalogDevices AD2000B layout 5, 7 13 (10.9) — Conexant CX8050 layout 3 16 (10.12) — Conexant CX8200 layout 3 16 (10.12) — Conexant CX20561 0x100000, layout 11 13 (10.9) — Conexant CX20583 layout 3 13 (10.9) — Conexant CX20585 layout 3, 13 13 (10.9) — Conexant CX20588 layout 3 13 (10.9) — Conexant CX20590 0x100000, 0x100002, 0x100003, layout 3, 12, 28 13 (10.9) — Conexant CX20722 layout 3 16 (10.12) — Conexant CX20724 layout 3, 13 13 (10.9) — Conexant CX20751/20752 layout 3, 28 13 (10.9) — Conexant CX20753/4 layout 3 16 (10.12) — Conexant CX20755 layout 3 13 (10.9) — Conexant CX20756 layout 3, 13 13 (10.9) — Conexant CX20757 layout 3 13 (10.9) — IDT IDT92HD66C3/65 layout 3 13 (10.9) — IDT IDT92HD71B7X layout 3 13 (10.9) — IDT IDT92HD73C1X5 layout 19 13 (10.9) — IDT IDT92HD75B2X5 layout 3 13 (10.9) — IDT IDT92HD75B3X5 layout 3, 11 13 (10.9) — IDT IDT92HD99BXX layout 3 13 (10.9) — IDT IDT92HD87B1 layout 3 13 (10.9) — IDT IDT92HD81B1C5 layout 3, 11 13 (10.9) — IDT IDT92HD81B1X5 layout 3, 11, 12, 20, 21, 28 13 (10.9) — IDT IDT92HD87B1/3 layout 12,13 13 (10.9) — IDT IDT92HD87B2/4 layout 12 13 (10.9) — IDT IDT92HD90BXX layout 3, 12 13 (10.9) — IDT IDT92HD91BXX 0x100102, 0x100303 layout 3, 12, 13,33,84 13 (10.9) — IDT IDT92HD93BXX 0x100203, layout 12 13 (10.9) — IDT IDT92HD95 layout 12 13 (10.9) — VIA VT1802 0x100000, layout 3, 33 13 (10.9) — VIA VT2020/2021 0x100100, layout 5, 7, 9 13 (10.9) — Intel HD4000 HDMI ig-platform-id 0x01660003, 0x01660009, 0x0166000A 13 (10.9) — Intel HD4600 HDMI ig-platform-id 0x0d220003 13 (10.9) — Intel HD5500 HDMI ig-platform-id 0x16260006 15 (10.11) — Intel HD5600 HDMI ig-platform-id 0x16260006 15 (10.11) — Intel HD6000 HDMI ig-platform-id 0x16260004 15 (10.11) — Intel HD515 HDMI ig-platform-id 0x191E0000 15 (10.11) — Intel HD520 HDMI ig-platform-id 0x19160000 15 (10.11) — Intel HD530 HDMI ig-platform-id 0x19160000, 0x191B0000, 0x19120000 15 (10.11) — Intel HD620 HDMI ig-platform-id 0x59160000 15 (10.11) — Intel HD630 HDMI ig-platform-id 0x59120000 15 (10.11) — AMD Radeon 290/290X 15 (10.11) — 附表:已知的编解码器型号及厂商列表 声卡型号 厂商 ADXXXX Analog Devices AGEREXXXX LSI ALCXXXX Realtek ATIXXXX ATI CAXXXX Creative CMIXXXX CMedia CMIXXXX2 CMedia CSXXXX Cirrus Logic CXXXXX Conexant CHXXXX Chrontel LGXXXX LG WMXXXX Wolfson Microelectronics QEMUXXXX QEMU IDTXXXX IDT INTELXXXX Intel MOTOXXXX Motorola NVIDIAXXXX NVIDIA SIIXXXX Silicon Image STACXXXX Sigmatel VTXXXX VIA 扩展阅读：Lilu支持的内核参数及插件列表 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[如何使用AppleALC如果您的编解码器支持，您需要完成的唯一任务是加载内核扩展，并查看它是否工作。您可以使用您的引导加载程序(比如：Clover)，但请记住在AppleHDA之前加载AppleALC（有关更多详细信息，请参阅sudo kextstat输出）。 请注意，Lilu 也必须出现在AppleALC上。 按照一个易于使用的指南来添加您的编解码器支持，如果它不在这里。请分享您的成功结果。 备注：AppleALC不处理layout-id值，它希望你提供正确的DSDT(SSDT)。 如何控制AppleALCAppleALC接受不同的引导参数来控制其行为： -alcoff - 禁用自身; -alcdbg - 打印调试信息（如果扩展在调试模式下编译）; -alcbeta - 在不支持的系统（通常未发布或旧版）上启用AppleALC; -x或-s - 也将禁用AppleALC。 所有Lilu启动参数都会影响AppleALC。 如何提取调试日志在使用-alcdbg -liludbg引导后，在终端Terminal中运行以下命令并保存输出。 10.12及以后版本： log show --predicate &#39;process == &quot;kernel&quot; AND (eventMessage CONTAINS &quot;AppleALC&quot; OR eventMessage CONTAINS &quot;Lilu&quot;)&#39; --style syslog --source 10.11及以前版本 cat /var/log/system.log | egrep &#39;(AppleALC|Lilu)&#39; 附：AppleALC支持的编解码器列表 更新日期：4-18-2018 Vendor Codec Revisions MinKernel MaxKernel Creative CA0132 0x100918 layout 0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12 13 (10.9) — CirrusLogic CS4210 0x100101 layout 13 13 (10.9) — CirrusLogic CS4213 0x100100 layout 28 13 (10.9) — Realtek ALC221 layout 11 12 (10.8) — Realtek ALC225/ALC3253 layout 28, 33 13 (10.9) — Realtek ALC233 layout 3, 13, 27, 33 13 (10.9) — Realtek ALC235 layout 3, 11, 28 13 (10.9) — Realtek ALC236 0x100001, 0x100002 layout 3, 11, 13, 15 13 (10.9) — Realtek ALC3236 layout 4, 5, 28, 29 13 (10.9) — Realtek ALC255 layout 3, 13, 17, 18, 27, 28, 99 13 (10.9) — Realtek ALC256 (3246) layout 13, 56 13 (10.9) — Realtek ALC260 layout 11, 12 13 (10.9) — Realtek ALC262 0x100202 layout 11, 12, 13, 28 13 (10.9) — Realtek ALC268 layout 3 13 (10.9) — Realtek ALC269 0x100004, 0x100100, 0x100202, 0x100203 layout 1-10, 11, 13, 14, 15, 16, 18, 19, 20, 27, 28, 29, 32, 33, 35, 40, 76, 93, 99, 127 12 (10.8) — Realtek ALC270 0x100100, layout 3, 4, 27, 28 13 (10.9) — Realtek ALC271x layout 9, 31 12 (10.8) — Realtek ALC272 0x100001, layout 3, 11 13 (10.9) — Realtek ALC275 0x100005, 0x100008, layout 3, 13, 28 13 (10.9) — Realtek ALC280 layout 3, 4, 11, 13, 15 13 (10.9) — Realtek ALC282 0x100003, layout 3, 4, 13, 27, 28, 29, 76, 86, 127 12 (10.8) — Realtek ALC283 layout 1, 3, 11, 66 13 (10.9) — Realtek ALC284 layout 3 13 (10.9) — Realtek ALC286 0x100002, 0x100003 layout 3 13 (10.9) — Realtek ALC288 layout 3, 13 13 (10.9) — Realtek ALC290 layout 3, 28 13 (10.9) — Realtek ALC3241 layout 4 13 (10.9) — Realtek ALC292 layout 12, 18, 28 13 (10.9) — Realtek ALC293 layout 28, 29 13 (10.9) — Realtek ALC294 layout 13 13 (10.9) — Realtek ALC295 layout 3, 13, 28 13 (10.9) — Realtek ALC298 0x100103, layout 3, 11, 13, 28, 29, 47, 72, 99 13 (10.9) — Realtek ALC662 0x100101, 0x100300 layout 5, 7, 11, 12, 13 13 (10.9) — Realtek ALC663 0x100001, 0x100002, layout 3, 4, 28, 99 13 (10.9) — Realtek ALC665 layout 12, 13 13 (10.9) — Realtek ALC668 0x100003, layout 3, 20, 27, 28, 29 13 (10.9) — Realtek ALC670 0x100002, layout 12 13 (10.9) — Realtek ALC671 layout 12 13 (10.9) — Realtek ALC882 0x100101, layout 5, 7 13 (10.9) — Realtek ALC883 0x100002, layout 7 13 (10.9) — Realtek ALC885 0x100101, 0x100103 layout 1, 12 13 (10.9) — Realtek ALC887 0x100202, 0x100302, layout 1, 2, 3, 5, 7, 11, 13, 17, 18, 33, 99 13 (10.9) — Realtek ALC888/ALC1200 0x100101, 0x100001, 0x100202, 0x100302 layout 1, 2, 3, (4 for laptop), 5, 7, 11, 28, 29 13 (10.9) — Realtek ALC889 0x100004, layout 1, 11, 12 13 (10.9) — Realtek ALC891/ALC867 0x100002, layout 11, 13 13 (10.9) — Realtek ALC892 0x100302, layout 1, 2, 3, (4 for laptop), 5, 7, 28, 31, 92, 98, 99 13 (10.9) — Realtek ALC898/ALC899 0x100003, layout 1, 2, 3, 5, 7, 11, 13, 65, 98, 99, 101 13 (10.9) — Realtek ALC1150 0x100001, layout 1, 2, 3, 5, 7, 11 12 (10.8) — Realtek ALC1220 0x100003, layout 1, 2, 5, 7, 11 15 (10.11) — Realtek ALCS1220A layout 1, 2, 5, 7 15 (10.11) — AnalogDevices AD1984 0x100400, layout 11 13 (10.9) — AnalogDevices AD1984A 0x100400, layout 11, 13 13 (10.9) — AnalogDevices AD1988B layout 5, 7, 12 13 (10.9) — AnalogDevices AD2000B layout 5, 7 13 (10.9) — Conexant CX8050 layout 3 16 (10.12) — Conexant CX8200 layout 3 16 (10.12) — Conexant CX20561 0x100000, layout 11 13 (10.9) — Conexant CX20583 layout 3 13 (10.9) — Conexant CX20585 layout 3, 13 13 (10.9) — Conexant CX20588 layout 3 13 (10.9) — Conexant CX20590 0x100000, 0x100002, 0x100003, layout 3, 12, 28 13 (10.9) — Conexant CX20641 layout 11, 13 13 (10.9) — Conexant CX20642 layout 11, 13 13 (10.9) — Conexant CX20722 layout 3 16 (10.12) — Conexant CX20724 layout 3, 13 13 (10.9) — Conexant CX20751/20752 layout 3, 28 13 (10.9) — Conexant CX20753/4 layout 3 16 (10.12) — Conexant CX20755 layout 3 13 (10.9) — Conexant CX20756 layout 3, 13 13 (10.9) — Conexant CX20757 layout 3 13 (10.9) — IDT IDT92HD66C3/65 layout 3 13 (10.9) — IDT IDT92HD71B7X layout 3 13 (10.9) — IDT IDT92HD73C1X5 layout 19 13 (10.9) — IDT IDT92HD75B2X5 layout 3 13 (10.9) — IDT IDT92HD75B3X5 layout 3, 11 13 (10.9) — IDT IDT92HD99BXX layout 3 13 (10.9) — IDT IDT92HD87B1 layout 3 13 (10.9) — IDT IDT92HD81B1C5 layout 3, 11 13 (10.9) — IDT IDT92HD81B1X5 layout 3, 11, 12, 20, 21, 28 13 (10.9) — IDT IDT92HD87B1/3 layout 12, 13 13 (10.9) — IDT IDT92HD87B2/4 layout 12 13 (10.9) — IDT IDT92HD90BXX layout 3, 12 13 (10.9) — IDT IDT92HD91BXX 0x100102, 0x100303 layout 3, 12, 13, 33, 84 13 (10.9) — IDT IDT92HD93BXX 0x100203, layout 12 13 (10.9) — IDT IDT92HD95 layout 12 13 (10.9) — VIA VT1802 0x100000, layout 3, 33 13 (10.9) — VIA VT2020/2021 0x100100, layout 5, 7, 9 13 (10.9) — Intel HD3000 HDMI snb-platform-id 0x00030010, 0x00010000 13 (10.9) — Intel HD4000 HDMI ig-platform-id 0x01660003, 0x01660009, 0x0166000A 13 (10.9) — Intel HD4x00 HDMI ig-platform-id 0x0d220003, 0x0a260005 13 (10.9) — Intel HD5500 HDMI ig-platform-id 0x16260006 15 (10.11) — Intel HD5600 HDMI ig-platform-id 0x16260006 15 (10.11) — Intel HD6000 HDMI ig-platform-id 0x16260004 15 (10.11) — Intel HD515 HDMI ig-platform-id 0x191E0000 15 (10.11) — Intel HD520 HDMI ig-platform-id 0x19160000 15 (10.11) — Intel HD530 HDMI ig-platform-id 0x19160000, 0x191B0000, 0x19120000 15 (10.11) — Intel HD630 HDMI ig-platform-id 0x59120000 15 (10.11) — AMD Radeon 290/290X 15 (10.11) — Nvidia GK208 17 (10.13.4) — Nvidia GM200 17 (10.13.4) — Nvidia GM204 17 (10.13.4) — Nvidia GM206 17 (10.13.4) — Nvidia GP102 17 (10.13.4) — Nvidia GP106 17 (10.13.4) — 附表:已知的编解码器型号及厂商列表 声卡型号 厂商 ADXXXX Analog Devices AGEREXXXX LSI ALCXXXX Realtek ATIXXXX ATI CAXXXX Creative CMIXXXX CMedia CMIXXXX2 CMedia CSXXXX Cirrus Logic CXXXXX Conexant CHXXXX Chrontel LGXXXX LG WMXXXX Wolfson Microelectronics QEMUXXXX QEMU IDTXXXX IDT INTELXXXX Intel MOTOXXXX Motorola NVIDIAXXXX NVIDIA SIIXXXX Silicon Image STACXXXX Sigmatel VTXXXX VIA 扩展阅读：Lilu支持的内核参数及插件列表 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
