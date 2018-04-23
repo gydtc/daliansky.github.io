@@ -141,8 +141,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -450,7 +450,7 @@
   <entry>
     <title><![CDATA[CPUFriend的安装与使用]]></title>
     <url>%2FCPUFriend-Installation-and-Usage.html</url>
-    <content type="text"><![CDATA[CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUFriend 配置使用CPUFriend/ResourceConverter.sh生成CPUFriendProvider.kext或ssdt_data.dsl的工作副本。如果您还有ssdtPRGen.sh生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用CPUFriendProvider.kext存储您的定制数据。 ResourceConverter.sh的使用执行命令如下： `./ResourceConverter.sh –kext “/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist” 它会在当前目录生成CPUFriendProvider.kext,将CPUFriendProvider.kext和CPUFriend.kext复制到/EFI/Clover/kexts/Other，重建缓存，然后重启。 重建缓存的命令为： 12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U / 说明： 其中的/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist是我自行修改的，可以通过直接调用系统提供的/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist --kext &quot;file&quot; 用”file”提供的信息创建CPUFriendProvider.kext --acpi &quot;file&quot; 使用”file”提供的信息创建ssdt_data.dsl 注意： 创建的 kext/ssdt 位于当前工作目录中 变量 &quot;file&quot; 应该是 /System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources 中的一个完整的plist，具有某些修改，而不是像原始的 FrequencyVectors 条目 原文链接CPUFriend Installation &amp; Usage 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUFriend 配置使用CPUFriend/ResourceConverter.sh生成CPUFriendProvider.kext或ssdt_data.dsl的工作副本。如果您还有ssdtPRGen.sh生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用CPUFriendProvider.kext存储您的定制数据。 ResourceConverter.sh的使用执行命令如下： 1./ResourceConverter.sh --kext "/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist 它会在当前目录生成CPUFriendProvider.kext,将CPUFriendProvider.kext和CPUFriend.kext复制到/EFI/Clover/kexts/Other，重建缓存，然后重启。 重建缓存的命令为： 12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U / 说明： 其中的/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist是我自行修改的，可以通过直接调用系统提供的/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist --kext &quot;file&quot; 用”file”提供的信息创建CPUFriendProvider.kext --acpi &quot;file&quot; 使用”file”提供的信息创建ssdt_data.dsl 注意： 创建的 kext/ssdt 位于当前工作目录中 变量 &quot;file&quot; 应该是 /System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources 中的一个完整的plist，具有某些修改，而不是像原始的 FrequencyVectors 条目 原文链接CPUFriend Installation &amp; Usage 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -723,8 +723,8 @@
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>安装</tag>
+        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>

@@ -84,7 +84,7 @@
 <meta name="description" content="一些平时学习笔记以及搜集到的好的文章">
 <meta property="og:type" content="website">
 <meta property="og:title" content="黑果小兵的部落阁">
-<meta property="og:url" content="http://blog.daliansky.net/tags/小米Pro/index.html">
+<meta property="og:url" content="http://blog.daliansky.net/tags/小米PRO/index.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="一些平时学习笔记以及搜集到的好的文章">
 <meta property="og:locale" content="zh-Hans">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.daliansky.net/tags/小米Pro/"/>
+  <link rel="canonical" href="http://blog.daliansky.net/tags/小米PRO/"/>
 
 
 
 
 
-  <title>标签: 小米Pro | 黑果小兵的部落阁</title>
+  <title>标签: 小米PRO | 黑果小兵的部落阁</title>
   
 
 
@@ -292,7 +292,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>小米Pro<small>标签</small>
+        <h1>小米PRO<small>标签</small>
         </h1>
       </div>
 
@@ -304,37 +304,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html" itemprop="url">
+            <a class="post-title-link" href="/CLOVER-v2-4-r4438-Integrated-Millet-Notebook-PRO-EFI-Installation-Instructions.html" itemprop="url">
               
-                <span itemprop="name">macOS安装教程兼小米Pro安装过程记录</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-26T06:43:42+08:00"
-              content="2017-11-26" >
-          11-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html" itemprop="url">
-              
-                <span itemprop="name">小米笔记本Pro安装10.13随手记及EFI分享</span>
+                <span itemprop="name">【黑果小兵】CLOVER v2.4 r4438集成小米笔记本PRO EFI安装说明</span>
               
             </a>
         
@@ -342,9 +314,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-23T11:12:16+08:00"
-              content="2017-09-23" >
-          09-23
+              datetime="2018-04-13T13:10:15+08:00"
+              content="2018-04-13" >
+          04-13
         </time>
       </div>
 
@@ -471,6 +443,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://syncanvas.github.io" title="Athlonreg" target="_blank">Athlonreg</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -1071,6 +1057,55 @@
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+og('Failed to create');
               }
             });
           }

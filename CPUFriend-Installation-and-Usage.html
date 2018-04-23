@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T01:13:41.000Z">
+<meta property="og:updated_time" content="2018-04-21T12:56:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CPUFriend的安装与使用">
 <meta name="twitter:description" content="CPUFriend安装和使用系统要求CPUFriend 需要macOS v10.8或更高版本 安装强烈建议让引导程序注入CPUFriend，否则您将需要LiluFriend，以确保CPUFriend正常工作。 可用的内核标志添加-cpufdbg以启用调试日志记录（仅在DEBUG二进制文件中可用）添加-cpufoff来关闭CPUFriend添加-cpufbeta以在不支持的操作系统版本上启用CPUF">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-27T09:13:41+08:00">
-                2018-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-21T20:56:52+08:00">
+                2018-04-21
               </time>
             
           </span>
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  508 字
+                  509 字
                 </span>
               
 
@@ -460,7 +460,7 @@
 <h2 id="可用的内核标志"><a href="#可用的内核标志" class="headerlink" title="可用的内核标志"></a>可用的内核标志</h2><p>添加<code>-cpufdbg</code>以启用调试日志记录（仅在DEBUG二进制文件中可用）<br>添加<code>-cpufoff</code>来关闭<code>CPUFriend</code><br>添加<code>-cpufbeta</code>以在不支持的操作系统版本上启用<code>CPUFriend</code></p>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>使用<code>CPUFriend/ResourceConverter.sh</code>生成<code>CPUFriendProvider.kext</code>或<code>ssdt_data.dsl</code>的工作副本。如果您还有<a href="https://github.com/Piker-Alpha/ssdtPRGen.sh" target="_blank" rel="external">ssdtPRGen.sh</a>生成的SSDT，则可能需要合并它们。我不建议暂时添加这样的支持。所以我建议你使用<code>CPUFriendProvider.kext</code>存储您的定制数据。</p>
 <h2 id="ResourceConverter-sh的使用"><a href="#ResourceConverter-sh的使用" class="headerlink" title="ResourceConverter.sh的使用"></a>ResourceConverter.sh的使用</h2><p>执行命令如下：</p>
-<p>`./ResourceConverter.sh –kext “/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist”</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./ResourceConverter.sh --kext <span class="string">"/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist</span></div></pre></td></tr></table></figure>
 <p>它会在当前目录生成<code>CPUFriendProvider.kext</code>,将<code>CPUFriendProvider.kext</code>和<a href="https://github.com/PMheart/CPUFriend/releases" target="_blank" rel="external">CPUFriend.kext</a>复制到<code>/EFI/Clover/kexts/Other</code>，重建缓存，然后重启。</p>
 <p>重建缓存的命令为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line">sudo chmod -Rf 755 /S*/L*/E*</div><div class="line">sudo chown -Rf 0:0 /S*/L*/E*</div><div class="line">sudo chmod -Rf 755 /L*/E*</div><div class="line">sudo chown -Rf 0:0 /L*/E*</div><div class="line">sudo rm -Rf /S*/L*/PrelinkedKernels/*</div><div class="line">sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*</div><div class="line">sudo touch -f /S*/L*/E*</div><div class="line">sudo touch -f /L*/E*</div><div class="line">sudo kextcache -Boot -U /</div></pre></td></tr></table></figure>
@@ -707,6 +707,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://syncanvas.github.io" title="Athlonreg" target="_blank">Athlonreg</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           

@@ -90,7 +90,7 @@
 <meta property="og:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identif">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/brcm94352z驱动.png">
-<meta property="og:updated_time" content="2018-03-27T01:11:07.000Z">
+<meta property="og:updated_time" content="2018-04-21T12:55:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
 <meta name="twitter:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identif">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-27T09:11:07+08:00">
-                2018-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-21T20:55:22+08:00">
+                2018-04-21
               </time>
             
           </span>
@@ -479,7 +479,7 @@
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h3><blockquote>
-<p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://sourceforge.net/p/airportbrcmfixup/" target="_blank" rel="external">AirportBrcmFixup</a></p>
+<p>下载：<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads" target="_blank" rel="external">RehabMan-FakePCIID</a> <a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads" target="_blank" rel="external">RehabMan-BrcmPatchRAM</a> <a href="https://github.com/lvs1974/AirportBrcmFixup/releases" target="_blank" rel="external">AirportBrcmFixup</a></p>
 </blockquote>
 <ol>
 <li>将文件<code>BrcmFirmwareData.kext</code>和<code>BrcmPatchRAM2.kext</code>复制到<code>/EFI/CLOVER/kexts/Other</code>目录下</li>
@@ -728,6 +728,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://syncanvas.github.io" title="Athlonreg" target="_blank">Athlonreg</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
