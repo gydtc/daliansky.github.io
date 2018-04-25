@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="platform-id,接口,显存,显示器," />
+  <meta name="keywords" content="接口,platform-id,显存,显示器," />
 
 
 
@@ -90,17 +90,24 @@
 
 
 <meta name="description" content="查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.">
-<meta name="keywords" content="platform-id,接口,显存,显示器">
+<meta name="keywords" content="接口,platform-id,显存,显示器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="显示器接口数据及参数修改">
 <meta property="og:url" content="http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-20T07:37:39.000Z">
+<meta property="og:image" content="http://7.daliansky.net/FB/FB.png">
+<meta property="og:image" content="http://7.daliansky.net/FB/FB2.png">
+<meta property="og:image" content="http://7.daliansky.net/FB/FB.png">
+<meta property="og:image" content="http://7.daliansky.net/FB/FB3.png">
+<meta property="og:image" content="http://7.daliansky.net/FB/FB4.png">
+<meta property="og:image" content="http://7.daliansky.net/FB/FB5.png">
+<meta property="og:updated_time" content="2018-04-25T12:54:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="显示器接口数据及参数修改">
 <meta name="twitter:description" content="查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1&quot;AAPL,ig-platform-id&quot; = &amp;lt;00001659&amp;gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.">
+<meta name="twitter:image" content="http://7.daliansky.net/FB/FB.png">
 
 
 
@@ -354,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-20T15:37:39+08:00">
-                2018-04-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-25T20:54:57+08:00">
+                2018-04-25
               </time>
             
           </span>
@@ -426,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  411 字
+                  542 字
                 </span>
               
 
@@ -550,6 +557,19 @@
 </tr>
 </tbody>
 </table>
+<h2 id="提取FB接口数据的新方法，感谢-emyself"><a href="#提取FB接口数据的新方法，感谢-emyself" class="headerlink" title="提取FB接口数据的新方法，感谢@emyself"></a>提取FB接口数据的新方法，感谢@<a href="https://github.com/lihaoyun6" target="_blank" rel="external">emyself</a></h2><p>打开<code>FB-VRAM Patcher</code></p>
+<p><img src="http://7.daliansky.net/FB/FB.png" alt="FB"></p>
+<p>点击<code>提取FB数据</code><img src="http://7.daliansky.net/FB/FB2.png" alt="FB2"></p>
+<p>窗口里显示出来的就是你的显卡的FB接口数据。当然，这个软件发布的初衷是为了自动生成1536MB-&gt;2048MB的补丁，只是被我们给玩坏了才增加了这个功能。</p>
+<h3 id="自动生成1536MB-gt-2048MB补丁"><a href="#自动生成1536MB-gt-2048MB补丁" class="headerlink" title="自动生成1536MB-&gt;2048MB补丁"></a>自动生成1536MB-&gt;2048MB补丁</h3><p>打开<code>FB-VRAM Patcher</code></p>
+<p><img src="http://7.daliansky.net/FB/FB.png" alt="FB"></p>
+<p>点击<code>生成显存补丁</code></p>
+<p><img src="http://7.daliansky.net/FB/FB3.png" alt="FB"></p>
+<p>它会自动生成两种格式的补丁，形式如下：</p>
+<p><code>16进制格式</code></p>
+<p><img src="http://7.daliansky.net/FB/FB4.png" alt="FB"></p>
+<p><code>Base64格式</code></p>
+<p><img src="http://7.daliansky.net/FB/FB5.png" alt="FB"></p>
 <h2 id="修改显示器接口数据"><a href="#修改显示器接口数据" class="headerlink" title="修改显示器接口数据"></a>修改显示器接口数据</h2><p>比如我想将0105这个接口修改为支持HDMI的显示器，怎么做呢？</p>
 <p>Find:     01050900 000<font color="#ff0000">4</font>0000 87010000    # eDP 00 04 00 00</p>
 <p>Replace:01050900 000<font color="#ff0000">8</font>0000 87010000    # HDMI 00 08 00 00</p>
@@ -603,9 +623,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/platform-id/" rel="tag"><i class="fa fa-tag"></i> platform-id</a>
-          
             <a href="/tags/接口/" rel="tag"><i class="fa fa-tag"></i> 接口</a>
+          
+            <a href="/tags/platform-id/" rel="tag"><i class="fa fa-tag"></i> platform-id</a>
           
             <a href="/tags/显存/" rel="tag"><i class="fa fa-tag"></i> 显存</a>
           
@@ -813,7 +833,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看显卡platform-id"><span class="nav-number">1.</span> <span class="nav-text">查看显卡platform-id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#得出显卡注入ID是-59160000"><span class="nav-number">2.</span> <span class="nav-text">得出显卡注入ID是:59160000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口数据"><span class="nav-number">3.</span> <span class="nav-text">接口数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显存容量修改"><span class="nav-number">4.</span> <span class="nav-text">显存容量修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频教程"><span class="nav-number">5.</span> <span class="nav-text">视频教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示器接口数值定义"><span class="nav-number">6.</span> <span class="nav-text">显示器接口数值定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改显示器接口数据"><span class="nav-number">7.</span> <span class="nav-text">修改显示器接口数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于打赏"><span class="nav-number">8.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QQ群"><span class="nav-number">9.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看显卡platform-id"><span class="nav-number">1.</span> <span class="nav-text">查看显卡platform-id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#得出显卡注入ID是-59160000"><span class="nav-number">2.</span> <span class="nav-text">得出显卡注入ID是:59160000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口数据"><span class="nav-number">3.</span> <span class="nav-text">接口数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显存容量修改"><span class="nav-number">4.</span> <span class="nav-text">显存容量修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频教程"><span class="nav-number">5.</span> <span class="nav-text">视频教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示器接口数值定义"><span class="nav-number">6.</span> <span class="nav-text">显示器接口数值定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提取FB接口数据的新方法，感谢-emyself"><span class="nav-number">7.</span> <span class="nav-text">提取FB接口数据的新方法，感谢@emyself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动生成1536MB-gt-2048MB补丁"><span class="nav-number">7.1.</span> <span class="nav-text">自动生成1536MB->2048MB补丁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改显示器接口数据"><span class="nav-number">8.</span> <span class="nav-text">修改显示器接口数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于打赏"><span class="nav-number">9.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QQ群"><span class="nav-number">10.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
