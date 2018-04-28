@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="使用CodecCommander解决ALC1220唤醒无声AppleALC info.plistf0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01 解决过程 整理pinconfig:屏蔽掉节点0x1a line in rear，使用f0111141，拆分">
+<meta name="description" content="使用CodecCommander解决ALC1220唤醒无声 AppleALC info.plist f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01 解决过程  整理pinconfig: 屏蔽掉节点0x1a line in rear，使用f011114">
 <meta name="keywords" content="AppleALC,CC,CodecCommander">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用CodecCommander解决ALC1220唤醒无声">
 <meta property="og:url" content="http://blog.daliansky.net/Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr.html">
 <meta property="og:site_name" content="黑果小兵的部落阁">
-<meta property="og:description" content="使用CodecCommander解决ALC1220唤醒无声AppleALC info.plistf0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01 解决过程 整理pinconfig:屏蔽掉节点0x1a line in rear，使用f0111141，拆分">
+<meta property="og:description" content="使用CodecCommander解决ALC1220唤醒无声 AppleALC info.plist f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01 解决过程  整理pinconfig: 屏蔽掉节点0x1a line in rear，使用f011114">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-28T03:08:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用CodecCommander解决ALC1220唤醒无声">
-<meta name="twitter:description" content="使用CodecCommander解决ALC1220唤醒无声AppleALC info.plistf0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01 解决过程 整理pinconfig:屏蔽掉节点0x1a line in rear，使用f0111141，拆分">
+<meta name="twitter:description" content="使用CodecCommander解决ALC1220唤醒无声 AppleALC info.plist f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01 解决过程  整理pinconfig: 屏蔽掉节点0x1a line in rear，使用f011114">
 
 
 
@@ -463,10 +463,15 @@
       
 
       
-        <h1 id="使用CodecCommander解决ALC1220唤醒无声"><a href="#使用CodecCommander解决ALC1220唤醒无声" class="headerlink" title="使用CodecCommander解决ALC1220唤醒无声"></a>使用CodecCommander解决ALC1220唤醒无声</h1><h2 id="AppleALC-info-plist"><a href="#AppleALC-info-plist" class="headerlink" title="AppleALC info.plist"></a>AppleALC info.plist</h2><p>f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01</p>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><ol>
-<li>整理pinconfig:<br>屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽</li>
-<li>整理出两条cc命令：<br> 01970724 01b70883</li>
+        <h1>使用CodecCommander解决ALC1220唤醒无声</h1>
+<h2>AppleALC info.plist</h2>
+<p>f0111141 10401190 20100101 30600101 00001740 4090a090 60908102 50308101 70402102 29e6e740 90614b01</p>
+<h2>解决过程</h2>
+<ol>
+<li>整理pinconfig:
+屏蔽掉节点0x1a line in rear，使用f0111141，拆分为01a71cf0 01a71d11 01a71e11 01a71f41进行屏蔽</li>
+<li>整理出两条cc命令：
+01970724 01b70883</li>
 <li>编译CodecCommander，增加10ec_1220，添加ALC1220，将两条cc命令添加进去</li>
 </ol>
 <table>
@@ -477,11 +482,7 @@
 <th>Realtek ALC1220</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
 <p>Custom Commands</p>
 <table>
@@ -558,12 +559,18 @@
 <tr>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <p>更多<code>hda-verb</code>的用法请前往<a href="https://blog.daliansky.net/hda-verb-parameter-detail-table.html">hda-verb参数详表</a></p>
-<h2 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h2><h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
-<h1 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h1><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]<br>688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
+<h2>收工</h2>
+<h1>关于打赏</h1>
+<p>您的支持就是我更新的动力！
+如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
+<h1>QQ群:</h1>
+<p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起吃苹果</a>[群已满,请加下面群]
+688324116<a href="https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82" target="_blank" rel="external">一起黑苹果</a></p>
 
       
     </div>
@@ -820,7 +827,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用CodecCommander解决ALC1220唤醒无声"><span class="nav-number">1.</span> <span class="nav-text">使用CodecCommander解决ALC1220唤醒无声</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleALC-info-plist"><span class="nav-number">1.1.</span> <span class="nav-text">AppleALC info.plist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决过程"><span class="nav-number">1.2.</span> <span class="nav-text">解决过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收工"><span class="nav-number">1.3.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于打赏"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QQ群"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">使用CodecCommander解决ALC1220唤醒无声</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">AppleALC info.plist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">解决过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">收工</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">关于打赏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">QQ群:</span></a></li></ol></div>
             
 
           </div>
