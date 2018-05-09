@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[Webmin的Mysql模块中警告缺少DBI和DBD::mysql的处理方法]]></title>
+      <url>/Webmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html</url>
+      <content type="html"><![CDATA[<p>好久没使用<code>Webmin</code>进行服务器的控制了，今天登录<code>Webmin</code>想查询下<code>mysql</code>的数据，打开<code>mysql</code>模板的时候，系统显示<strong>警告：您的系统未安装Perl模块DBI和DBD::mysql，Webmin将无法可靠地访问您的Mysql数据库。点击此处立刻安装它们</strong>的提示信息，通过搜索查询到的解决方案是安装<code>perl-DBD-Mysql</code>，使用命令：<code>pkg install perl-DBD-Mysql</code>，它顺利地执行完；但是返回<code>Webmin</code>的<code>Mysql</code>模块中，系统提示<code>Mysql未安装</code>，当时惊出一身冷汗，通过终端回拉输出信息，发现把<code>mariadb102-server</code>给删除了，转为安装了<code>mysql56-server</code>。这可不是我想要的结果，于是重新安装了<code>mariadb102-server</code>。</p>
+<h2>使用<code>cpan</code>的命令行安装缺失的<code>perl module</code>：</h2>
+<p><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cpan</div><div class="line">cpan[<span class="number">1</span>]&gt; install DBI</div><div class="line">cpan[<span class="number">2</span>]&gt; install DBD::mysql</div><div class="line">cpan[<span class="number">3</span>]&gt; <span class="keyword">q</span></div></pre></td></tr></table></figure></p>
+<p>缺失的模块安装后，再返回<code>Mysql</code>模块就不会再显示这个警告信息了。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 运维 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 运维 </tag>
+            
+            <tag> FreeBSD </tag>
+            
+            <tag> Mysql </tag>
+            
+            <tag> Webmin </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[[转载][原创：草原企鹅]Clover Configurator中文汉化版]]></title>
       <url>/Clover-Configurator-Chinese-Version.html</url>
       <content type="html"><![CDATA[<blockquote>
@@ -1390,9 +1420,9 @@ And 的第三个参数，是把前两个数的计算结果，写入到第三个�
         
         <tags>
             
-            <tag> platform-id </tag>
-            
             <tag> 接口 </tag>
+            
+            <tag> platform-id </tag>
             
             <tag> 显存 </tag>
             
@@ -4979,9 +5009,9 @@ MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403e
         
         <tags>
             
-            <tag> Lilu </tag>
-            
             <tag> CPUFriend </tag>
+            
+            <tag> Lilu </tag>
             
             <tag> Plugins </tag>
             
@@ -5949,11 +5979,11 @@ MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403e
         
         <tags>
             
+            <tag> Lilu </tag>
+            
             <tag> AppleALC </tag>
             
             <tag> Codec </tag>
-            
-            <tag> Lilu </tag>
             
         </tags>
         
@@ -6221,6 +6251,10 @@ HDMI连接到0204，所以我修补该端口的HDMI（启用HDMI音频）。
         
         <tags>
             
+            <tag> Lilu </tag>
+            
+            <tag> Plugins </tag>
+            
             <tag> 10.12 </tag>
             
             <tag> 10.13 </tag>
@@ -6228,10 +6262,6 @@ HDMI连接到0204，所以我修补该端口的HDMI（启用HDMI音频）。
             <tag> Sierra </tag>
             
             <tag> High Sierra </tag>
-            
-            <tag> Lilu </tag>
-            
-            <tag> Plugins </tag>
             
             <tag> 常见问题 </tag>
             
@@ -9461,9 +9491,9 @@ MD5 (macOS Sierra 10.12.6 16G29 Installer with Clover 4133.dmg) = 81ecbc29863381
             
             <tag> 镜像 </tag>
             
-            <tag> 安装 </tag>
-            
             <tag> dmg </tag>
+            
+            <tag> 安装 </tag>
             
         </tags>
         

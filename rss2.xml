@@ -8,8 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一些平时学习笔记以及搜集到的好的文章</description>
-    <pubDate>Tue, 08 May 2018 02:55:57 GMT</pubDate>
+    <pubDate>Wed, 09 May 2018 03:08:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Webmin的Mysql模块中警告缺少DBI和DBD::mysql的处理方法</title>
+      <link>http://blog.daliansky.net/Webmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html</link>
+      <guid>http://blog.daliansky.net/Webmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html</guid>
+      <pubDate>Wed, 09 May 2018 02:37:02 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;好久没使用&lt;code&gt;Webmin&lt;/code&gt;进行服务器的控制了，今天登录&lt;code&gt;Webmin&lt;/code&gt;想查询下&lt;code&gt;mysql&lt;/code&gt;的数据，打开&lt;code&gt;mysql&lt;/code&gt;模板的时候，系统显示&lt;strong&gt;警告：您的系统未安装Perl模块
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>好久没使用<code>Webmin</code>进行服务器的控制了，今天登录<code>Webmin</code>想查询下<code>mysql</code>的数据，打开<code>mysql</code>模板的时候，系统显示<strong>警告：您的系统未安装Perl模块DBI和DBD::mysql，Webmin将无法可靠地访问您的Mysql数据库。点击此处立刻安装它们</strong>的提示信息，通过搜索查询到的解决方案是安装<code>perl-DBD-Mysql</code>，使用命令：<code>pkg install perl-DBD-Mysql</code>，它顺利地执行完；但是返回<code>Webmin</code>的<code>Mysql</code>模块中，系统提示<code>Mysql未安装</code>，当时惊出一身冷汗，通过终端回拉输出信息，发现把<code>mariadb102-server</code>给删除了，转为安装了<code>mysql56-server</code>。这可不是我想要的结果，于是重新安装了<code>mariadb102-server</code>。</p>
+<h2>使用<code>cpan</code>的命令行安装缺失的<code>perl module</code>：</h2>
+<p><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cpan</div><div class="line">cpan[<span class="number">1</span>]&gt; install DBI</div><div class="line">cpan[<span class="number">2</span>]&gt; install DBD::mysql</div><div class="line">cpan[<span class="number">3</span>]&gt; <span class="keyword">q</span></div></pre></td></tr></table></figure></p>
+<p>缺失的模块安装后，再返回<code>Mysql</code>模块就不会再显示这个警告信息了。</p>
+]]></content:encoded>
+      
+      <comments>http://blog.daliansky.net/Webmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>[转载][原创：草原企鹅]Clover Configurator中文汉化版</title>
@@ -362,27 +382,6 @@ HDMI连接器通过连接器类型在ioreg中标识<code>&lt;00 08 00 00&gt;</co
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>小米PRO蓝牙设备驱动的正确姿势</title>
-      <link>http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html</link>
-      <guid>http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html</guid>
-      <pubDate>Fri, 23 Mar 2018 04:29:12 GMT</pubDate>
-      <description>
-      
-        &lt;blockquote&gt;
-&lt;p&gt;经常使用小米Pro笔记本安装使用&lt;code&gt;macOS&lt;/code&gt;的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它
-      
-      </description>
-      
-      <content:encoded><![CDATA[<blockquote>
-<p>经常使用小米Pro笔记本安装使用<code>macOS</code>的小伙伴们都会遇到一个尴尬的问题：板载的INTEL无线二合一网卡是焊死在主板上的，INTEL的WIFI无球无解，而附带的蓝牙芯片就更让人又爱又恨了：有的时候能用，有的时候不能用；它不好的一点是：总让人心存幻想，每每有群友问我蓝牙怎么办，我就半认真半玩笑地说：&quot;你让太监射精可能吗？！&quot;，尽管话说的比较难听，但是话糙理不糙。如果你想了解如何对待板载的蓝牙，那么就继续耐心往下看吧。</p>
-</blockquote>
-<p>正题来了：屏蔽蓝牙或者加装USB蓝牙</p>
-]]></content:encoded>
-      
-      <comments>http://blog.daliansky.net/XiaoMiPro-Bluetooth-device-driver-correct-posture.html#disqus_thread</comments>
     </item>
     
   </channel>
