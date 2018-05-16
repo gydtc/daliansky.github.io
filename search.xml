@@ -57,15 +57,15 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.4 17E199 正式版 with Clover 4418原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像 10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题 本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题； 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 更新apfs.efi到10.13.4正式版； 更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]； Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接：请点击下载 Mega网盘下载链接:请点击下载 如果mega无法下载,请进群下载hosts_mega.txt 迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源 MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像 10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题 本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题； 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 更新apfs.efi到10.13.4正式版； 更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]； Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测； config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！ 挂载EFI分区 Windows操作系统下面,打开cmd窗口,输入命令: 1234567diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="C12A7328-F81F-11D2-BA4B-00A0C93EC93B" # 设置为EFI分区assign letter=X # x为EFI分区盘符 您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接百毒云下载链接：请点击下载 Mega网盘下载链接:请点击下载 如果mega无法下载,请进群下载hosts_mega.txt 迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源 MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.4</tag>
         <tag>1.7e+200</tag>
@@ -108,8 +108,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -140,8 +140,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -155,8 +155,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>platform-id</tag>
         <tag>接口</tag>
+        <tag>platform-id</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -170,8 +170,8 @@
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>macOS</tag>
         <tag>安装</tag>
+        <tag>macOS</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
         <tag>XiaoMiPro</tag>
@@ -215,9 +215,9 @@
       </categories>
       <tags>
         <tag>EDID</tag>
-        <tag>HIDPI</tag>
-        <tag>黑屏</tag>
         <tag>花屏</tag>
+        <tag>黑屏</tag>
+        <tag>HIDPI</tag>
         <tag>睡眠唤醒</tag>
         <tag>内屏黑屏</tag>
         <tag>fixEDID</tag>
@@ -255,8 +255,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -374,8 +374,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -400,7 +400,7 @@
   <entry>
     <title><![CDATA[macOS 10.13安装中常见的问题及解决方法]]></title>
     <url>%2FmacOS-10.13-installation-of-common-problems-and-solutions.html</url>
-    <content type="text"><![CDATA[去掉Lilu的输出信息,还原10.13 内核崩溃(kernel pance)的真相 援引:如果你有一个kernel panic，请确保你有一个DEBUG版本的扩展，并且已经添加了-v keepyms = 1 debug = 0x100引导参数。 在10.13上，为了避免kext名字在崩溃日志(panic log)中滚动，你也应该[修补你的内核] 10.13的系统引导中,万一发生了kernel panic,也就是内核崩溃后,Lilu输出的信息过多,造成无法看清内核崩溃时的问题所在,这里教大家一种方法,去掉Lilu的输出信息,还原造成内核崩溃后面的真相 解决方法1:使用文本编辑器打开config.plist文件,在 1&lt;key&gt;KernelToPatch&lt;/key&gt; 下面添加: 12345678910111213141516171819202122232425262728293031323334&lt;array&gt; &lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;Disable panic kext logging on 10.13 Debug kernel&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; sABMi1Xw &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; SIPEQF3D &lt;/data&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;Disable panic kext logging on 10.13 Release kernel&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; igKEwHRE &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; igKEwOtE &lt;/data&gt; &lt;/dict&gt;&lt;/array&gt; 解决方法2:使用Clover Configurator打开config.plist - Kernel and Kext Patches - kernelToPatch，新添加： 123456789Comment: Disable panic kext logging on 10.13 Debug kernelFind: b0004c8b 55f0Replace: 4883c440 5dc3MatchOS: 10.13Comment: Disable panic kext logging on 10.13 Release kernelFind: 8a0284c0 7444Replace: 8a0284c0 eb44MatchOS: 10.13 10.13.0/1/2/3 改变USB端口限制补丁12345Comment String 10.13.0/1/2/3 USB Port 10-&gt;26Find Data 837D8C10Name String com.apple.driver.usb.AppleUSBXHCIReplace Data 837D8C1BMatchOS String 10.13.0,10.13.1,10.13.2,10.13.3 10.13.4/5 关闭USB端口限制补丁12345Comment String disable USB Port Limit Patch (PMheart)Find Data 837D940F 0F839704 0000Name String com.apple.driver.usb.AppleUSBXHCIReplace Data 837D940F 90909090 9090MatchOS String 10.13.x macOS升级后应该先插入啥？有些群友通过App Store更新了系统后，就会在群里提出更新后某些功能不正常了，我的方法是直接使用Kext Utility重建缓存再重启，包治百病！比如：HDMI Audio输出没了，内屏背光亮度不可调等等。 安装过程中出现错误信息good.win.HWPEnabler（1.1）该问题是由于新版的CLOVER中集成了HWPEnabler这个新平台的变频程序，如果你的机器比较老旧，那么就需要禁用掉这个驱动以使安装程序得以进行。那么如何操作呢？现在就让我们搬出CLOVER自带的Block Injected kexts吧 Block injected kexts 禁用无效的、未知的驱动程序当你面对这么一堆驱动的时候，如何让它们有条不紊地正常工作呢？万一出现问题的时候又如何让这些驱动在Clover引导的时候禁用它们呢？这个时候 Block injected kexts 就派上用场了。新版的 Clover Bootloader 已经将 Block injected kexts 放到了 macOS 系统分区的图标下面了。 操作方法： 开机进入clover引导界面，要引导的分区卷标上按 空格 即可进入 光标移动到 Block injected kexts 回车进入 选择当前系统加载的驱动程序目录 勾选禁用的驱动程序 按 ESC 退出该子菜单 误食了偏方进不了系统怎么办？ 经常会有群友说是安装了ALCPlugFix后重启无法进入系统的问题，这是由于新的10.13.2及以后的重建缓存的命令发生了改变，部分机器会出现类似的问题。现在我把恢复的方法公布出来，让更多的人看到，同时也在此提醒大家使用KEXT UTILITY这个应用程序来重建缓存。请及时更新各声卡驱动所配套的ALCPlugFix，我发布的程序中已经使用新的重建缓存的命令。 恢复方法： 在Clover 主界面选择Recovery进入恢复模式，如果没有Recovery的图标，请按下F3 打开终端，依次输入这三条命令： 123rm -rf /Volumes/MAC/System/Library/Caches/com.apple.kext.caches/Startup/kernelcacherm -rf /Volumes/MAC/System/Library/PrelinkedKernels/prelinkedkerneltouch /Volumes/MAC/System/Library/Extensions/ &amp;&amp; kextcache -u /Volumes/MAC ​ 其中的MAC是你安装macOS的卷标，请替换成你自己的 重启 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 方式进行独显屏蔽。 使用方法：将 SSDT-Disable-DGPU.aml 复制到 /EFI/CLOVER/ACPI/patched 目录下即可 下载链接：https://pan.baidu.com/s/1skRcIyL解决安装时提示 OSInstall.mpkg似乎已缺失或已损坏 的问题解决方法：删除 /EFI/CLOVER/drivers64UEFI/EmuVariableUefi-64.efi 和 /EFI/ 分区根目录下的 nvram.plist修改SMBIOS,使用Clover Configurator将机型设置为2012年及以后机型解决10.13 NVIDIA安装Web Driver黑屏问题解决方法：在 /EFI/CLOVER/kexts/Other 目录下添加驱动： NvidiaGraphicsFixup 该驱动依赖于 Lilu 更多基于Lilu的插件列表请移步：Lilu插件列表 解决10.13下某些机械硬盘无法读取的问题使用Clover Configurator打开config.plist - Kernel and Kext Patches - KextsToPatch，新添加： 12345Name: AppleAHCIPortComment: 修复ICH10芯片 I/O Error 错误Find: 4585F60F 95C289C8 83E0FE66 85C9780F 84D2750BReplace: 89C883E0 FE6685C9 0F98C141 08CC9090 9090750BMatchOS: 10.13.x 另一种格式： 1234567891011121314&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;修复ICH10芯片 I/O Error 错误&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt;RYX2D5XCiciD4P5mhcl4D4TSdQs=&lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AppleAHCIPort&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt;iciD4P5mhckPmMFBCMyQkJCQdQs=&lt;/data&gt; &lt;/dict&gt; 解决10.13(High Sierra)/10.12(Sierra) Clover开机出现8个苹果使用Clover Configurator打开config.plist - Kernel and Kext Patches - KextsToPatch，新添加： 12345Name: IOGraphicsFamilyComment: 10.12+-第二阶段花屏Find: 01000075 25Replace: 010000eb 25MatchOS: 10.12.x 12345Name: IOGraphicsFamilyComment: 10.13+-第二阶段花屏Find: 01000075 22Replace: 010000eb 22MatchOS: 10.13.x 另一种格式： 123456789101112131415161718192021222324252627282930313233343536&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.12+-第二阶段花屏补丁&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; AQAAdSU= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.12.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOGraphicsFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; AQAA6yU= &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.13+-第二阶段花屏补丁&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; AQAAdSI= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOGraphicsFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; AQAA6yI= &lt;/data&gt;&lt;/dict&gt; 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题 经常有网友需要解决笔记本显示器内屏黑屏问题，尤其新发布的10.13的系统会出现睡眠唤醒后屏幕花屏问题。 目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。 最简单的命令是：1ioreg -lw0 | grep -i "IODisplayEDID" | sed -e 's/.*&lt;//' -e 's/&gt;//' 显示信息如下：00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8 接着输入下面的两条命令：12345ioreg -l | grep "DisplayVendorID" "DisplayVendorID" = 3502 ioreg -l | grep "DisplayProductID" "DisplayProductID" = 5600 其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover的 config.plist 中，顺便将 VendorID 和 ProductID 填入相应的位置，然后保存重启你的电脑。 选择-v时出现Attempting system restart...MACH Reboot的解决方法 在安装High Sierra启动过程中，选择-v跑时会出现”Attempting system restart…MACH Reboot”，而不用-v图跑直接显示苹果标志时则不会出现。 解决方法在config.plist配置文件DropTables下添加以下代码： 123456789101112&lt;key&gt;ACPI&lt;/key&gt;&lt;key&gt;DropTables&lt;/key&gt;&lt;array&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;MATS&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;DMAR&lt;/string&gt; &lt;/dict&gt;&lt;/array&gt; 关于开机出现Welcome to Clover xxxx user settings卡住不动的解决方法 根源是Clover目录下自带的config.plist它并不适用于你的系统 解决方法 删除config.plist,找个适合你的机型的配置文件改名为:config.plist 如果还是卡住的话,就把ACPI/patched目录下除了SSDT-Disable-DGPU.aml的所有文件全部删除. 或者使用与您相同机型的EFI直接替换 抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”的原因及解决方法 群里遇到最多的问题就是抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”,一直想就此写个解决方法 原因出现该提示最根本的原因就是你之前的磁盘分区中ESP分区的尺寸小于200MB 解决方法 Windows下使用diskgenius删除掉MSR分区,将多出来的分区合并到ESP,正好凑成200MB,以满足安装macOS的基本需求. macOS下可以直接使用磁盘工具进行抹盘,它会自动生成一个200MB的EFI分区,当然前提条件是你需要先备份好磁盘里的数据,否则会造成全盘数据的丢失,请谨慎操作. macOS下使用brew安装android-platform-tools工具连接安卓设备 有群友反馈说HandShark无法连接安卓手机进行管理,于是将macOS下安装Android驱动的过程写下来,目的是为了让大家都能使用macOS管理安卓设备 什么是 ADB?Android调试桥（ adb ）是一个开发工具，帮助安卓设备和个人计算机之间的通信。 这种通信大多是在USB电缆下进行，但是也支持Wi-Fi连接。 adb 还可被用来与电脑上运行的安卓模拟器交流通信。 adb 对于安卓开发来说就像一把“瑞士军刀”。 macOS可以通过brew安装android-platform-tools驱动,用于连接安卓设备,方法如下: 安装Homebrew工具:打开终端,输入命令: 1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 它会自动安装brew及依赖包,同时也会安装XCODE Command Line Tools,出现密码请输入你的用户密码 安装android-platform-tools 1brew cask install android-platform-tools 这个过程有些漫长,请耐心等待. 安装完成后,连接安卓设备,输入命令: 1adb devices 正常情况下,它会显示出如下的信息: 13HX7N17114012345 device 也有可能需要在手机上确认允许来自macOS的连接 使用HandShark管理你的手机吧. 关于本机CPU处理器显示未知的解决方法：打开终端，输入： 12cd /System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/Resources/zh_CN.lproj/cp AppleSystemInfo.strings ~/Desktop 使用编辑器BBEdit打开AppleSystemInfo.strings，将 12&lt;key&gt;UnknownCPUKind&lt;/key&gt;&lt;string&gt;未知&lt;/string&gt; 修改为： 12&lt;key&gt;UnknownCPUKind&lt;/key&gt;&lt;string&gt;Intel Core i7-8700K&lt;/string&gt; 保存后退出。打开终端，输入： 1sudo cp ~/Desktop/AppleSystemInfo.strings /System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/Resources/zh_CN.lproj/ 输入用户密码，收工。 Nvidia WebDriver驱动小版本更新后使用之前版本的命令方法：打开终端，输入命令： 1sudo plutil -replace IOKitPersonalities.NVDAStartup.NVDARequiredOS -string $(sw_vers -buildVersion) /S*/L*/E*/NVDAStartupWeb.kext/C*/Info.plist 收工 重建缓存的命令打开终端，输入命令： 12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U / 写在最后 本文会不定期更新最后更新：4-5-2018 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
+    <content type="text"><![CDATA[去掉Lilu的输出信息,还原10.13 内核崩溃(kernel pance)的真相 援引:如果你有一个kernel panic，请确保你有一个DEBUG版本的扩展，并且已经添加了-v keepyms = 1 debug = 0x100引导参数。 在10.13上，为了避免kext名字在崩溃日志(panic log)中滚动，你也应该[修补你的内核] 10.13的系统引导中,万一发生了kernel panic,也就是内核崩溃后,Lilu输出的信息过多,造成无法看清内核崩溃时的问题所在,这里教大家一种方法,去掉Lilu的输出信息,还原造成内核崩溃后面的真相 解决方法1:使用文本编辑器打开config.plist文件,在 1&lt;key&gt;KernelToPatch&lt;/key&gt; 下面添加: 12345678910111213141516171819202122232425262728293031323334&lt;array&gt; &lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;Disable panic kext logging on 10.13 Debug kernel&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; sABMi1Xw &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; SIPEQF3D &lt;/data&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;Disable panic kext logging on 10.13 Release kernel&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; igKEwHRE &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; igKEwOtE &lt;/data&gt; &lt;/dict&gt;&lt;/array&gt; 解决方法2:使用Clover Configurator打开config.plist - Kernel and Kext Patches - kernelToPatch，新添加： 123456789Comment: Disable panic kext logging on 10.13 Debug kernelFind: b0004c8b 55f0Replace: 4883c440 5dc3MatchOS: 10.13Comment: Disable panic kext logging on 10.13 Release kernelFind: 8a0284c0 7444Replace: 8a0284c0 eb44MatchOS: 10.13 10.13.0/1/2/3 改变USB端口限制补丁12345Comment String 10.13.0/1/2/3 USB Port 10-&gt;26Find Data 837D8C10Name String com.apple.driver.usb.AppleUSBXHCIReplace Data 837D8C1BMatchOS String 10.13.0,10.13.1,10.13.2,10.13.3 10.13.4/5 关闭USB端口限制补丁12345Comment String disable USB Port Limit Patch (PMheart)Find Data 837D940F 0F839704 0000Name String com.apple.driver.usb.AppleUSBXHCIReplace Data 837D940F 90909090 9090MatchOS String 10.13.x macOS升级后应该先插入啥？有些群友通过App Store更新了系统后，就会在群里提出更新后某些功能不正常了，我的方法是直接使用Kext Utility重建缓存再重启，包治百病！比如：HDMI Audio输出没了，内屏背光亮度不可调等等。 安装过程中出现错误信息good.win.HWPEnabler（1.1）该问题是由于新版的CLOVER中集成了HWPEnabler这个新平台的变频程序，如果你的机器比较老旧，那么就需要禁用掉这个驱动以使安装程序得以进行。那么如何操作呢？现在就让我们搬出CLOVER自带的Block Injected kexts吧 Block injected kexts 禁用无效的、未知的驱动程序当你面对这么一堆驱动的时候，如何让它们有条不紊地正常工作呢？万一出现问题的时候又如何让这些驱动在Clover引导的时候禁用它们呢？这个时候 Block injected kexts 就派上用场了。新版的 Clover Bootloader 已经将 Block injected kexts 放到了 macOS 系统分区的图标下面了。 操作方法： 开机进入clover引导界面，要引导的分区卷标上按 空格 即可进入 光标移动到 Block injected kexts 回车进入 选择当前系统加载的驱动程序目录 勾选禁用的驱动程序 按 ESC 退出该子菜单 误食了偏方进不了系统怎么办？ 经常会有群友说是安装了ALCPlugFix后重启无法进入系统的问题，这是由于新的10.13.2及以后的重建缓存的命令发生了改变，部分机器会出现类似的问题。现在我把恢复的方法公布出来，让更多的人看到，同时也在此提醒大家使用KEXT UTILITY这个应用程序来重建缓存。请及时更新各声卡驱动所配套的ALCPlugFix，我发布的程序中已经使用新的重建缓存的命令。 恢复方法： 在Clover 主界面选择Recovery进入恢复模式，如果没有Recovery的图标，请按下F3 打开终端，依次输入这三条命令： 123rm -rf /Volumes/MAC/System/Library/Caches/com.apple.kext.caches/Startup/kernelcacherm -rf /Volumes/MAC/System/Library/PrelinkedKernels/prelinkedkerneltouch /Volumes/MAC/System/Library/Extensions/ &amp;&amp; kextcache -u /Volumes/MAC ​ 其中的MAC是你安装macOS的卷标，请替换成你自己的 重启 挂载EFI分区Windows操作系统下面,打开cmd窗口,输入命令: 1234567diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="C12A7328-F81F-11D2-BA4B-00A0C93EC93B" # 设置为EFI分区assign letter=X # x为EFI分区盘符 您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区 安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second 此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 hotpatch 方式进行独显屏蔽。 使用方法：将 SSDT-Disable-DGPU.aml 复制到 /EFI/CLOVER/ACPI/patched 目录下即可 下载链接：https://pan.baidu.com/s/1skRcIyL解决安装时提示 OSInstall.mpkg似乎已缺失或已损坏 的问题解决方法：删除 /EFI/CLOVER/drivers64UEFI/EmuVariableUefi-64.efi 和 /EFI/ 分区根目录下的 nvram.plist修改SMBIOS,使用Clover Configurator将机型设置为2012年及以后机型解决10.13 NVIDIA安装Web Driver黑屏问题解决方法：在 /EFI/CLOVER/kexts/Other 目录下添加驱动： NvidiaGraphicsFixup 该驱动依赖于 Lilu 更多基于Lilu的插件列表请移步：Lilu插件列表 解决10.13下某些机械硬盘无法读取的问题使用Clover Configurator打开config.plist - Kernel and Kext Patches - KextsToPatch，新添加： 12345Name: AppleAHCIPortComment: 修复ICH10芯片 I/O Error 错误Find: 4585F60F 95C289C8 83E0FE66 85C9780F 84D2750BReplace: 89C883E0 FE6685C9 0F98C141 08CC9090 9090750BMatchOS: 10.13.x 另一种格式： 1234567891011121314&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;修复ICH10芯片 I/O Error 错误&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt;RYX2D5XCiciD4P5mhcl4D4TSdQs=&lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;AppleAHCIPort&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt;iciD4P5mhckPmMFBCMyQkJCQdQs=&lt;/data&gt; &lt;/dict&gt; 解决10.13(High Sierra)/10.12(Sierra) Clover开机出现8个苹果使用Clover Configurator打开config.plist - Kernel and Kext Patches - KextsToPatch，新添加： 12345Name: IOGraphicsFamilyComment: 10.12+-第二阶段花屏Find: 01000075 25Replace: 010000eb 25MatchOS: 10.12.x 12345Name: IOGraphicsFamilyComment: 10.13+-第二阶段花屏Find: 01000075 22Replace: 010000eb 22MatchOS: 10.13.x 另一种格式： 123456789101112131415161718192021222324252627282930313233343536&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.12+-第二阶段花屏补丁&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; AQAAdSU= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.12.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOGraphicsFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; AQAA6yU= &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.13+-第二阶段花屏补丁&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; AQAAdSI= &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.13.x&lt;/string&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOGraphicsFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; AQAA6yI= &lt;/data&gt;&lt;/dict&gt; 不使用任何程序教你提取显示器的EDID，解决笔记本显示器内屏黑屏/花屏的问题 经常有网友需要解决笔记本显示器内屏黑屏问题，尤其新发布的10.13的系统会出现睡眠唤醒后屏幕花屏问题。 目前最简单的方案就是通过clover注入显示器的EDID信息，之前网上的教程都是使用Windows下的应用程序进行操作。其实显示器的EDID信息都会在显卡正确驱动后存在于ioreg中的。 最简单的命令是：1ioreg -lw0 | grep -i "IODisplayEDID" | sed -e 's/.*&lt;//' -e 's/&gt;//' 显示信息如下：00ffffffffffff000daee01500000000161a0104952213780228659759548e271e505400000001010101010101010101010101010101b43b804a713834405036680058c11000001ac32f804a713834405036680058c11000001a000000fe0035324b4636803135364843410a000000000000413196011000000a010a202000e8 接着输入下面的两条命令：12345ioreg -l | grep "DisplayVendorID" "DisplayVendorID" = 3502 ioreg -l | grep "DisplayProductID" "DisplayProductID" = 5600 其中&lt;&gt;里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover的 config.plist 中，顺便将 VendorID 和 ProductID 填入相应的位置，然后保存重启你的电脑。 选择-v时出现Attempting system restart...MACH Reboot的解决方法 在安装High Sierra启动过程中，选择-v跑时会出现”Attempting system restart…MACH Reboot”，而不用-v图跑直接显示苹果标志时则不会出现。 解决方法在config.plist配置文件DropTables下添加以下代码： 123456789101112&lt;key&gt;ACPI&lt;/key&gt;&lt;key&gt;DropTables&lt;/key&gt;&lt;array&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;MATS&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;DMAR&lt;/string&gt; &lt;/dict&gt;&lt;/array&gt; 关于开机出现Welcome to Clover xxxx user settings卡住不动的解决方法 根源是Clover目录下自带的config.plist它并不适用于你的系统 解决方法 删除config.plist,找个适合你的机型的配置文件改名为:config.plist 如果还是卡住的话,就把ACPI/patched目录下除了SSDT-Disable-DGPU.aml的所有文件全部删除. 或者使用与您相同机型的EFI直接替换 抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”的原因及解决方法 群里遇到最多的问题就是抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”,一直想就此写个解决方法 原因出现该提示最根本的原因就是你之前的磁盘分区中ESP分区的尺寸小于200MB 解决方法 Windows下使用diskgenius删除掉MSR分区,将多出来的分区合并到ESP,正好凑成200MB,以满足安装macOS的基本需求. macOS下可以直接使用磁盘工具进行抹盘,它会自动生成一个200MB的EFI分区,当然前提条件是你需要先备份好磁盘里的数据,否则会造成全盘数据的丢失,请谨慎操作. macOS下使用brew安装android-platform-tools工具连接安卓设备 有群友反馈说HandShark无法连接安卓手机进行管理,于是将macOS下安装Android驱动的过程写下来,目的是为了让大家都能使用macOS管理安卓设备 什么是 ADB?Android调试桥（ adb ）是一个开发工具，帮助安卓设备和个人计算机之间的通信。 这种通信大多是在USB电缆下进行，但是也支持Wi-Fi连接。 adb 还可被用来与电脑上运行的安卓模拟器交流通信。 adb 对于安卓开发来说就像一把“瑞士军刀”。 macOS可以通过brew安装android-platform-tools驱动,用于连接安卓设备,方法如下: 安装Homebrew工具:打开终端,输入命令: 1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 它会自动安装brew及依赖包,同时也会安装XCODE Command Line Tools,出现密码请输入你的用户密码 安装android-platform-tools 1brew cask install android-platform-tools 这个过程有些漫长,请耐心等待. 安装完成后,连接安卓设备,输入命令: 1adb devices 正常情况下,它会显示出如下的信息: 13HX7N17114012345 device 也有可能需要在手机上确认允许来自macOS的连接 使用HandShark管理你的手机吧. 关于本机CPU处理器显示未知的解决方法：打开终端，输入： 12cd /System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/Resources/zh_CN.lproj/cp AppleSystemInfo.strings ~/Desktop 使用编辑器BBEdit打开AppleSystemInfo.strings，将 12&lt;key&gt;UnknownCPUKind&lt;/key&gt;&lt;string&gt;未知&lt;/string&gt; 修改为： 12&lt;key&gt;UnknownCPUKind&lt;/key&gt;&lt;string&gt;Intel Core i7-8700K&lt;/string&gt; 保存后退出。打开终端，输入： 1sudo cp ~/Desktop/AppleSystemInfo.strings /System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/Resources/zh_CN.lproj/ 输入用户密码，收工。 Nvidia WebDriver驱动小版本更新后使用之前版本的命令方法：打开终端，输入命令： 1sudo plutil -replace IOKitPersonalities.NVDAStartup.NVDARequiredOS -string $(sw_vers -buildVersion) /S*/L*/E*/NVDAStartupWeb.kext/C*/Info.plist 收工 重建缓存的命令打开终端，输入命令： 12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U / 写在最后 本文会不定期更新最后更新：4-5-2018 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -409,10 +409,10 @@
         <tag>High Sierra</tag>
         <tag>EDID</tag>
         <tag>安装</tag>
-        <tag>黑屏</tag>
-        <tag>花屏</tag>
         <tag>常见问题</tag>
         <tag>屏蔽独显</tag>
+        <tag>花屏</tag>
+        <tag>黑屏</tag>
       </tags>
   </entry>
   <entry>
@@ -426,8 +426,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -454,8 +454,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -541,8 +541,8 @@
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
         <tag>Plugins</tag>
-        <tag>Clover</tag>
         <tag>常见问题</tag>
+        <tag>Clover</tag>
         <tag>platform-id</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
@@ -576,8 +576,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -591,9 +591,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -635,8 +635,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -664,9 +664,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -735,8 +735,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>10.12.6</tag>
         <tag>镜像</tag>
+        <tag>10.12.6</tag>
         <tag>dmg</tag>
         <tag>安装</tag>
       </tags>
@@ -765,8 +765,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
