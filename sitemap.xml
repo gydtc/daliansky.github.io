@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
+    
+    <lastmod>2018-05-16T07:47:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Under-Windows-using-DISKPART-to-create-EFI-points.html</loc>
+    
+    <lastmod>2018-05-16T07:46:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Webmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html</loc>
     
     <lastmod>2018-05-09T03:11:41.000Z</lastmod>
@@ -114,23 +128,9 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Under-Windows-using-DISKPART-to-create-EFI-points.html</loc>
-    
-    <lastmod>2018-03-22T13:04:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/about/index.html</loc>
     
     <lastmod>2018-03-17T08:49:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
-    
-    <lastmod>2018-03-17T08:35:59.000Z</lastmod>
     
   </url>
   

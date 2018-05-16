@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="黑果小兵的部落阁">
 <meta property="og:description" content="Windows下使用diskpart建立EFI分区及挂载EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart 创建EFI分区 以下操作假设磁盘未分区没有其它数据  1234diskpartlist disk       				# 磁盘列表select dis">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T13:04:13.000Z">
+<meta property="og:updated_time" content="2018-05-16T07:46:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows下使用diskpart建立EFI分区及挂载EFI分区">
 <meta name="twitter:description" content="Windows下使用diskpart建立EFI分区及挂载EFI分区很多人在安装黑苹果的时候都需要在Windows下使用DiskGenius进行分区，其实在Windows 7及之后的版本本身就包含了更实用的磁盘分区命令，这个命令就是：diskpart 创建EFI分区 以下操作假设磁盘未分区没有其它数据  1234diskpartlist disk       				# 磁盘列表select dis">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-22T21:04:13+08:00">
-                2018-03-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-16T15:46:24+08:00">
+                2018-05-16
               </time>
             
           </span>
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  331 字
+                  343 字
                 </span>
               
 
@@ -468,7 +468,7 @@
 <p>以下操作假设磁盘未分区没有其它数据</p>
 </blockquote>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk       				<span class="comment"># 磁盘列表</span></div><div class="line">select disk n   				<span class="comment"># 选择需要制作EFI分区的磁盘，n为磁盘号</span></div><div class="line">create partition efi size=300   <span class="comment"># efi分区大小为300Mb</span></div></pre></td></tr></table></figure>
-<h2 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择需要制作EFI分区的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择efi分区，n为efi分区号</span></div><div class="line">assign			    <span class="comment"># x为efi分区盘符</span></div></pre></td></tr></table></figure>
+<h2 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择需要制作EFI分区的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择efi分区，n为efi分区号</span></div><div class="line"><span class="built_in">set</span> id=<span class="string">"C12A7328-F81F-11D2-BA4B-00A0C93EC93B"</span>	<span class="comment"># 设置为EFI分区</span></div><div class="line">assign			    <span class="comment"># x为efi分区盘符</span></div></pre></td></tr></table></figure>
 <p>打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式<br>以后再操作EFI分区请重复输入上述命令</p>
 <p>如果拒绝访问的话，可以使用<code>xcopy</code>命令进行复制。</p>
 <h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>

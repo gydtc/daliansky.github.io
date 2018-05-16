@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="教程,安装,macOS,小米Pro,XiaoMi-Pro,XiaoMiPro," />
+  <meta name="keywords" content="教程,macOS,安装,小米Pro,XiaoMi-Pro,XiaoMiPro," />
 
 
 
@@ -90,7 +90,7 @@
 
 
 <meta name="description" content="引言一直以来就想写个macOS的安装教程,可惜没有TransMac以及BIOS设置的截图,正好小米PRO黑苹果高级群的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善.  Windows下制作macOS安装盘准备工具 U盘大于8G U 盘大小不限做 PE 盘 TransMac 小米PRO专用EFI文件 系统镜像  在 Win">
-<meta name="keywords" content="教程,安装,macOS,小米Pro,XiaoMi-Pro,XiaoMiPro">
+<meta name="keywords" content="教程,macOS,安装,小米Pro,XiaoMi-Pro,XiaoMiPro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS安装教程兼小米Pro安装过程记录">
 <meta property="og:url" content="http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html">
@@ -142,7 +142,7 @@
 <meta property="og:image" content="http://7.daliansky.net/Installer19.png">
 <meta property="og:image" content="http://7.daliansky.net/BOOTICE1.jpg">
 <meta property="og:image" content="http://7.daliansky.net/BOOTICE2.jpg">
-<meta property="og:updated_time" content="2018-03-17T08:35:59.000Z">
+<meta property="og:updated_time" content="2018-05-16T07:47:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS安装教程兼小米Pro安装过程记录">
 <meta name="twitter:description" content="引言一直以来就想写个macOS的安装教程,可惜没有TransMac以及BIOS设置的截图,正好小米PRO黑苹果高级群的班长@原味菠萝最近一直在写小米Pro安装黑苹果的教程,由于他工作繁忙,一直也没有完稿,我就在他写作的基础上将这篇教程完善.  Windows下制作macOS安装盘准备工具 U盘大于8G U 盘大小不限做 PE 盘 TransMac 小米PRO专用EFI文件 系统镜像  在 Win">
@@ -400,8 +400,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T16:35:59+08:00">
-                2018-03-17
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-16T15:47:00+08:00">
+                2018-05-16
               </time>
             
           </span>
@@ -472,7 +472,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,137 字
+                  3,149 字
                 </span>
               
 
@@ -700,7 +700,7 @@
 <h3 id="合并EFI分区"><a href="#合并EFI分区" class="headerlink" title="合并EFI分区"></a>合并EFI分区</h3><p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是**</em>合并<em>**的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
 <h3 id="复制EFI分区"><a href="#复制EFI分区" class="headerlink" title="复制EFI分区"></a>复制EFI分区</h3><p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
 <h2 id="教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-Windows篇"><a href="#教你将U盘上的EFI复制到磁盘的EFI分区-脱离USB运行-Windows篇" class="headerlink" title="教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[Windows篇]"></a>教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[Windows篇]</h2><h3 id="挂载EFI分区-1"><a href="#挂载EFI分区-1" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>Windows操作系统下面,打开<code>cmd</code>窗口,输入命令:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line"><span class="built_in">set</span> id=<span class="string">"C12A7328-F81F-11D2-BA4B-00A0C93EC93B"</span>	<span class="comment"># 设置为EFI分区</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div></pre></td></tr></table></figure>
 <p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区<br>打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式,将USB的EFI分区下面的EFI目录复制到安装磁盘的EFI分区下</p>
 <h3 id="合并EFI分区-1"><a href="#合并EFI分区-1" class="headerlink" title="合并EFI分区"></a>合并EFI分区</h3><p><strong>这里有一点需要注意</strong>:<em>如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是**</em>合并<em>**的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.</em></p>
 <h3 id="复制EFI分区-1"><a href="#复制EFI分区-1" class="headerlink" title="复制EFI分区"></a>复制EFI分区</h3><p>如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.</p>
@@ -765,9 +765,9 @@
           
             <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
           
-            <a href="/tags/安装/" rel="tag"><i class="fa fa-tag"></i> 安装</a>
-          
             <a href="/tags/macOS/" rel="tag"><i class="fa fa-tag"></i> macOS</a>
+          
+            <a href="/tags/安装/" rel="tag"><i class="fa fa-tag"></i> 安装</a>
           
             <a href="/tags/小米Pro/" rel="tag"><i class="fa fa-tag"></i> 小米Pro</a>
           
