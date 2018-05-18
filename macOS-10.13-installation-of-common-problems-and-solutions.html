@@ -103,7 +103,7 @@
 <meta property="og:image" content="http://7.daliansky.net/BIKChoose.png">
 <meta property="og:image" content="http://7.daliansky.net/EDID注入.png">
 <meta property="og:image" content="http://7.daliansky.net/10.13.4/About.png">
-<meta property="og:updated_time" content="2018-05-16T08:05:19.000Z">
+<meta property="og:updated_time" content="2018-05-18T22:10:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS 10.13安装中常见的问题及解决方法">
 <meta name="twitter:description" content="去掉Lilu的输出信息,还原10.13 内核崩溃(kernel pance)的真相 援引:如果你有一个kernel panic，请确保你有一个DEBUG版本的扩展，并且已经添加了-v keepyms = 1 debug = 0x100引导参数。 在10.13上，为了避免kext名字在崩溃日志(panic log)中滚动，你也应该[修补你的内核]  10.13的系统引导中,万一发生了kernel p">
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-16T16:05:19+08:00">
-                2018-05-16
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-19T06:10:48+08:00">
+                2018-05-19
               </time>
             
           </span>
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,978 字
+                  3,008 字
                 </span>
               
 
@@ -508,8 +508,8 @@
 <li><p>重启</p>
 </li>
 </ul>
-<h3 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>Windows操作系统下面,打开<code>cmd</code>窗口,输入命令:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line"><span class="built_in">set</span> id=<span class="string">"C12A7328-F81F-11D2-BA4B-00A0C93EC93B"</span>	<span class="comment"># 设置为EFI分区</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div></pre></td></tr></table></figure>
+<h3 id="挂载EFI分区"><a href="#挂载EFI分区" class="headerlink" title="挂载EFI分区"></a>挂载EFI分区</h3><p>Windows操作系统下面,以系统管理员身份打开<code>cmd</code>,输入命令:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">c:\&gt;diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line"><span class="built_in">set</span> id=<span class="string">"C12A7328-F81F-11D2-BA4B-00A0C93EC93B"</span>	<span class="comment"># 设置为EFI分区</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div><div class="line"><span class="built_in">exit</span>				<span class="comment"># 退出diskpart</span></div><div class="line">notepad				<span class="comment"># 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区</span></div></pre></td></tr></table></figure>
 <p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区</p>
 <h2 id="安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second"><a href="#安装10-13时卡在Service-only-ran-for-0-seconds-Pushing-respawn-out-by-10-second" class="headerlink" title="安装10.13时卡在Service only ran for 0 seconds. Pushing respawn out by 10 second"></a>安装10.13时卡在<code>Service only ran for 0 seconds. Pushing respawn out by 10 second</code></h2><blockquote>
 <p>此种现象常见于笔记本机型，由于10.13中的DSDT屏蔽独显方式失效，现使用 <code>hotpatch</code> 方式进行独显屏蔽。</p>
