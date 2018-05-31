@@ -148,9 +148,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[显示器接口数据及参数修改]]></title>
+    <title><![CDATA[显示器接口数据及显存等参数修改]]></title>
     <url>%2FDisplay-interface-data-and-parameter-changes.html</url>
-    <content type="text"><![CDATA[查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1"AAPL,ig-platform-id" = &lt;00001659&gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.driver.AppleIntelLpssI2C (3.0.60) com.apple.driver.AppleIntelLpssDmac (3.0.60)com.apple.driver.AppleIntelLpssI2CController (3.0.60) com.apple.driver.AppleIntelSlowAdaptiveClocking (4.0.0) com.apple.driver.AppleIntelKBLGraphicsFramebuffer (10.2.8)com.apple.driver.AppleIntelPCHPMC (2.0.1) com.apple.driver.AppleIntelKBLGraphics (10.2.8) 由此可以判断所使用的驱动是AppleIntelKBLGraphics和AppleIntelKBLGraphicsFramebuffer,显示器的接口数据定义在AppleIntelKBLGraphicsFramebuffer里,通过AppleIntelKBLGraphicsFramebuffer提取接口数据 接口数据 接口数据 说明 00001659 00000000 2A8A0800 注入ID 00000000 01030303 00002002 端口数量定义 00000000 00000060 6C050000 显存 6C050000 00000000 00000000 00000800 02000000 98000000 eDP接口 01050900 00040000 87010000 0105接口 02040A00 00080000 87010000 0204接口 FF000000 01000000 20000000 0306预留 显存容量修改01030303 00002002 00000000 0000 0060 0600是16进制,转换成10进制就是:153601030303 00002002 00000000 0000 0080 0800是16进制,转换成10进制就是:2048 视频教程 显示器接口数值定义 连接类型(connetor type) 数值(Data) HDMI 00 08 00 00 DVI 00 02 00 00 eDP 00 04 00 00 DP 00 04 00 00 LVDS 02 00 00 00 VGA 01 00 00 00 提取FB接口数据的新方法，感谢@emyself打开FB-VRAM Patcher 点击提取FB数据 窗口里显示出来的就是你的显卡的FB接口数据。当然，这个软件发布的初衷是为了自动生成1536MB-&gt;2048MB的补丁，只是被我们给玩坏了才增加了这个功能。 自动生成1536MB-&gt;2048MB补丁打开FB-VRAM Patcher 点击生成显存补丁 它会自动生成两种格式的补丁，形式如下： 16进制格式 Base64格式 修改显示器接口数据比如我想将0105这个接口修改为支持HDMI的显示器，怎么做呢？ Find: 01050900 00040000 87010000 # eDP 00 04 00 00 Replace:01050900 00080000 87010000 # HDMI 00 08 00 00 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[查看显卡platform-id显卡注入platform-id通过命令读取: 1ioreg -l | grep platform-id 显示结果如下 1"AAPL,ig-platform-id" = &lt;00001659&gt; 得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令: 1kextstat | grep -y appleintel 1234567com.apple.driver.AppleIntelLpssI2C (3.0.60) com.apple.driver.AppleIntelLpssDmac (3.0.60)com.apple.driver.AppleIntelLpssI2CController (3.0.60) com.apple.driver.AppleIntelSlowAdaptiveClocking (4.0.0) com.apple.driver.AppleIntelKBLGraphicsFramebuffer (10.2.8)com.apple.driver.AppleIntelPCHPMC (2.0.1) com.apple.driver.AppleIntelKBLGraphics (10.2.8) 由此可以判断所使用的驱动是AppleIntelKBLGraphics和AppleIntelKBLGraphicsFramebuffer,显示器的接口数据定义在AppleIntelKBLGraphicsFramebuffer里,通过AppleIntelKBLGraphicsFramebuffer提取接口数据 接口数据 接口数据 说明 00001659 00000000 2A8A0800 注入ID 00000000 01030303 00002002 端口数量定义 00000000 00000060 6C050000 显存 6C050000 00000000 00000000 00000800 02000000 98000000 LVDS接口 01050900 00040000 87010000 0105接口 02040A00 00080000 87010000 0204接口 FF000000 01000000 20000000 0306预留 显存容量修改01030303 00002002 00000000 0000 0060 0600是16进制,转换成10进制就是:153601030303 00002002 00000000 0000 0080 0800是16进制,转换成10进制就是:2048 视频教程 显示器接口数值定义 连接类型(connetor type) 数值(Data) HDMI 00 08 00 00 DVI 00 02 00 00 eDP 00 04 00 00 DP 00 04 00 00 LVDS 02 00 00 00 VGA 01 00 00 00 提取FB接口数据的新方法，感谢@emyself打开FB-VRAM Patcher 点击提取FB数据 窗口里显示出来的就是你的显卡的FB接口数据。当然，这个软件发布的初衷是为了自动生成1536MB-&gt;2048MB的补丁，只是被我们给玩坏了才增加了这个功能。 自动生成1536MB-&gt;2048MB补丁打开FB-VRAM Patcher 点击生成显存补丁 它会自动生成两种格式的补丁，形式如下： 16进制格式 Base64格式 修改显示器接口数据比如我想将0105这个接口修改为支持HDMI的显示器，怎么做呢？ Find: 01050900 00040000 87010000 # eDP 00 04 00 00 Replace:01050900 00080000 87010000 # HDMI 00 08 00 00 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -169,8 +169,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>教程</tag>
+        <tag>安装</tag>
         <tag>macOS</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
@@ -232,8 +232,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>声卡仿冒</tag>
         <tag>AppleHDA</tag>
+        <tag>声卡仿冒</tag>
       </tags>
   </entry>
   <entry>
@@ -340,9 +340,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
-        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -470,10 +470,10 @@
       </categories>
       <tags>
         <tag>Lilu</tag>
-        <tag>CPUFriend</tag>
         <tag>Plugins</tag>
-        <tag>CPU变频</tag>
         <tag>插件</tag>
+        <tag>CPUFriend</tag>
+        <tag>CPU变频</tag>
       </tags>
   </entry>
   <entry>
@@ -502,9 +502,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>Lilu</tag>
         <tag>AppleALC</tag>
         <tag>Codec</tag>
-        <tag>Lilu</tag>
       </tags>
   </entry>
   <entry>
@@ -618,10 +618,10 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
+        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
@@ -636,9 +636,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -665,8 +665,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>

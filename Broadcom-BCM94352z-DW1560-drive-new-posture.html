@@ -98,7 +98,7 @@
 <meta property="og:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identif">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7.daliansky.net/brcm94352z驱动.png">
-<meta property="og:updated_time" content="2018-04-21T12:55:22.000Z">
+<meta property="og:updated_time" content="2018-05-31T02:19:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Broadcom BCM94352z&#x2F;DW1560驱动新姿势[新方法]">
 <meta name="twitter:description" content="Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言   昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identif">
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-21T20:55:22+08:00">
-                2018-04-21
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-31T10:19:24+08:00">
+                2018-05-31
               </time>
             
           </span>
@@ -477,13 +477,13 @@
 <li>在macOS上，当使用BMC94532z NGFF WiFi卡时，<code>AirportBrcm4360.kext</code>不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 </li>
 </ul>
 <h2 id="解决方案：同时支持10-11-10-13系统"><a href="#解决方案：同时支持10-11-10-13系统" class="headerlink" title="解决方案：同时支持10.11-10.13系统"></a>解决方案：同时支持10.11-10.13系统</h2><h3 id="Clover设置："><a href="#Clover设置：" class="headerlink" title="Clover设置："></a>Clover设置：</h3><ul>
-<li>使用应用程序<code>Clover Configurator</code></li>
-<li>在<code>Clover</code> - <code>Devices</code> - <code>FakeID</code> - <code>WIFI</code>中添加仿冒ID: <code>0x43a014e4</code></li>
-<li>在<code>Clover</code> - <code>KextsToPatch</code> 应用以下补丁，以使BCM94352z启用蓝牙：</li>
+<li><del>使用应用程序<code>Clover Configurator</code></del></li>
+<li><del>在<code>Clover</code> - <code>Devices</code> - <code>FakeID</code> - <code>WIFI</code>中添加仿冒ID: <code>0x43a014e4</code></del></li>
+<li><del>在<code>Clover</code> - <code>KextsToPatch</code> 应用以下补丁，以使BCM94352z启用蓝牙：</del></li>
 </ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Name:       IOBluetoothFamily</div><div class="line">Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093</div><div class="line">Find:       4885ff74 47488b07 </div><div class="line">Replace:    41be0f00 0000eb44</div></pre></td></tr></table></figure>
 <ul>
-<li>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</li>
+<li><del>可以使用文本编辑器直接打开<code>config.plist</code>，将下面的内容粘贴到<code>&lt;key&gt;KextsToPatch&lt;/key&gt;</code>里</del></li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Comment<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>10.11+-BT4LE-Handoff-Hotspot-lisai9093<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Disabled<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">false</span>/&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Find<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	SIX/dEdIiwc=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>IOBluetoothFamily<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">key</span>&gt;</span>Replace<span class="tag">&lt;/<span class="name">key</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">	Qb4PAAAA60Q=</div><div class="line">	<span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="驱动："><a href="#驱动：" class="headerlink" title="驱动："></a>驱动：</h3><blockquote>
