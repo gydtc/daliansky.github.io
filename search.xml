@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.5(17F77)正式版 with Clover 4512原版镜像]]></title>
+    <url>%2FmacOS-High-Sierra-10.13.5-(17F77)-Release-Version-with-Clover-4512-original-mirror.html</url>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.5(17F77)正式版 with Clover 4512原版镜像 本镜像采用官方原版app制作，集成Clover 4512，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题； Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换； 所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相; 更新apfs.efi到最新的10.13.6Beta版本； 更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id 特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4及以后的版本可以不需要屏蔽独显而进行安装使用]； Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测； 添加了config_ASUS_B360_PRIME_UHD630.plist，B360主板的可以试用； 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒； 本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖 支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡； 已更新Lilu(1.2.4)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)、Shiki(2.2.7)等驱动； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！ 挂载EFI分区 Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令: 123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区 您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区 本镜像发布站点：远景论坛/ 黑果小兵的部落阁 截图： 下载链接白天事情太多，镜像晚上放出，敬请期待 MD5 (macOS High Sierra 10.13.5(17F77) Installer with Clover 4512.dmg) = 88acc4700692df2a2f60ec43a3cbb2fc 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果688324116 一起黑苹果257995340 一起啃苹果]]></content>
+      <categories>
+        <category>下载</category>
+        <category>镜像</category>
+      </categories>
+      <tags>
+        <tag>High Sierra</tag>
+        <tag>下载</tag>
+        <tag>镜像</tag>
+        <tag>dmg</tag>
+        <tag>10.13.5</tag>
+        <tag>17F77</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Webmin的Mysql模块中警告缺少DBI和DBD::mysql的处理方法]]></title>
     <url>%2FWebmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html</url>
     <content type="text"><![CDATA[好久没使用Webmin进行服务器的控制了，今天登录Webmin想查询下mysql的数据，打开mysql模板的时候，系统显示警告：您的系统未安装Perl模块DBI和DBD::mysql，Webmin将无法可靠地访问您的Mysql数据库。点击此处立刻安装它们的提示信息，通过搜索查询到的解决方案是安装perl-DBD-Mysql，使用命令：pkg install perl-DBD-Mysql，它顺利地执行完；但是返回Webmin的Mysql模块中，系统提示Mysql未安装，当时惊出一身冷汗，通过终端回拉输出信息，发现把mariadb102-server给删除了，转为安装了mysql56-server。这可不是我想要的结果，于是重新安装了mariadb102-server。 使用cpan的命令行安装缺失的perl module：打开终端，输入命令： 1cpan 出现cpan shell的命令行，在提示符后输入以下命令： 123cpan[1]&gt; install DBIcpan[2]&gt; install DBD::mysqlcpan[3]&gt; q 缺失的模块安装后，再返回Mysql模块就不会再显示这个警告信息了。]]></content>
@@ -169,9 +186,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>教程</tag>
         <tag>macOS</tag>
         <tag>安装</tag>
-        <tag>教程</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
         <tag>XiaoMiPro</tag>
@@ -232,8 +249,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>AppleHDA</tag>
         <tag>声卡仿冒</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -241,8 +258,8 @@
     <url>%2FClover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</url>
     <content type="text"><![CDATA[教程 使用 CloverALC 给 AppleHDA 打补丁， 适用于台式机 原生支持 AppleHDA 使用 Clover 为Realtek ALC芯片打补丁，这种方法可以启用macOS AppleHDA 板载音频，无论是否带有HDMI和DP音频。 该脚本添加了编解码器特定的布局和平台文件，并将二进制补丁和引脚配置数据注入到本地安装的 AppleHDA.kext 。 版本: audio_cloverALC-1x0 简单: .command命令, 请看 C.安装 Bash: .sh命令, 请看 D. 终端 更新列表 9-26-17 支持10.13, 支持ALC269/ALC283 支持PikeralphaALC弃用的 12-14-15 audio_pikeralpha-110 (Clover版本的Piker Aplha AppleHDA8Series.sh) 11-8-15 Skylake/100系统更新，加入ALC1150/Audio ID: 3 7-19-15 ALC283更新 6-15-15 10.11 - El Capitan Realtek ALC AppleHDA.kext 初始支持 A. 需求 macOS/Clover_v2696及以后版本 10.13/High Sierra, 关闭 SIP, 挂载 EFI 10.12/Sierra, 关闭 SIP, 挂载 EFI 10.11/El Capitan, 设置 boot flag: rootless=0 10.10/Yosemite, 设置 boot flag: kext-dev-mode=1 10.9/Mavericks 10.8/Mountain Lionon 原生的、未修改的 AppleHDA.kext Need native? 支持Realtek板载的音频编解码器 Unknown codec? B. Realtek ALCxxx (验证过的编解码器和音频ID) 支持的编解码器 (* 不支持 audio_pikeralpha-110) 885 887 888 889 892 898 1150 1220 支持的音频ID 音频ID: 1 支持 885, 887, 888, 889, 892, 898, 1150, 1220 Realtek ALC audio (默认, 1/2/3/5/6 主板音频端口) 音频ID: 2 支持 887, 888, 889, 892, 898, 1150, 1220 Realtek ALC/5.1声道 (3主板音频端口，2进/1出变成3出) 音频ID: 3 支持 887, 888, 889, 892, 898, 1150 带有Realtek ALC音频的HD3000 / HD4000 HDMI音频 C. 安装 通过 Clover 为 AppleHDA 打补丁 下载 audio_cloverALC-1x0.command 双击: audio_cloverALC-1x0.command Password: Confirm Codec ALCxxx: (885, 887, 888, 889, 892, 898, 1150, 1220 only) Clover/Legacy: answer y to Confirm Clover Legacy Install (y/n) Clover Audio ID Injection (y/n): Use Audio ID: x (y/n): Optional: Terminal/Terminal Saved Output 重启电脑 验证ALC板载音频 系统偏好设置/声音/输出/选择音频设备 D. 终端 通过 Clover 为 AppleHDA 打补丁 下载 audio_cloverALC-1x0.sh 打开终端 1./audio_cloverALC-1x0....sh 其它步骤同 C. E. 更多的信息 Details Onboard Audio Solutions Requirements - Supported/Unsupported Notes Guides Tools Problem Reporting Terminal Saved Output Clover/EFI Clover/Legacy CreditTHe KiNG, bcc9, RevoGirl, PikeRAlpha, SJ_UnderWater, RehabMan, TimeWalker75a, lisai9093, abxite toleda https://github.com/toleda/audio_cloverALC 关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！ QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <tags>
-        <tag>AppleHDA</tag>
         <tag>Clover</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -298,9 +315,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>clover</tag>
         <tag>手册</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -535,11 +552,11 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
@@ -636,9 +653,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -665,8 +682,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -737,8 +754,8 @@
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>镜像</tag>
-        <tag>安装</tag>
         <tag>dmg</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
