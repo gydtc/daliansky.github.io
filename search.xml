@@ -172,8 +172,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -187,8 +187,8 @@
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>macOS</tag>
         <tag>安装</tag>
+        <tag>macOS</tag>
         <tag>小米Pro</tag>
         <tag>XiaoMi-Pro</tag>
         <tag>XiaoMiPro</tag>
@@ -249,8 +249,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>声卡仿冒</tag>
         <tag>AppleHDA</tag>
+        <tag>声卡仿冒</tag>
       </tags>
   </entry>
   <entry>
@@ -344,8 +344,8 @@
       </categories>
       <tags>
         <tag>EFI</tag>
-        <tag>UEFI</tag>
         <tag>Clover</tag>
+        <tag>UEFI</tag>
         <tag>引导</tag>
       </tags>
   </entry>
@@ -357,9 +357,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
+        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -374,8 +374,8 @@
       <tags>
         <tag>10.12</tag>
         <tag>10.13</tag>
-        <tag>BlueTooth</tag>
         <tag>蓝牙</tag>
+        <tag>BlueTooth</tag>
         <tag>鼠标</tag>
         <tag>Mouse</tag>
       </tags>
@@ -540,8 +540,8 @@
         <tag>High Sierra</tag>
         <tag>驱动</tag>
         <tag>WIFI</tag>
-        <tag>BlueTooth</tag>
         <tag>蓝牙</tag>
+        <tag>BlueTooth</tag>
       </tags>
   </entry>
   <entry>
@@ -552,11 +552,11 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>Lilu</tag>
         <tag>10.12</tag>
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>常见问题</tag>
         <tag>Clover</tag>
@@ -635,10 +635,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
-        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
@@ -754,8 +754,8 @@
         <tag>Sierra</tag>
         <tag>10.12.6</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>安装</tag>
+        <tag>dmg</tag>
       </tags>
   </entry>
   <entry>
