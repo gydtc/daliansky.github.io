@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.6(17G2112)特别版 with Clover 4606原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.6-17G2112-Release-Special-with-Clover-4606-original-mirror.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.6(17G2112)特别版 with Clover 4606原版镜像随着苹果发布了最新的MacBookPro 15,1/15,2这两款产品，macOS也更新到了10.13.6 17G2112版本，它原生支持第八代核显;本镜像采用官方原版app制作，集成Clover 4606，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题；添加ApfsDriverLoader-64.efi，自动加载apfs.efi驱动，同时去除日志显示；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;更新WhateverGreen到V1.2.0，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了SHIKI的驱动，现在是三合一了；特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4及以后的版本可以不需要屏蔽独显而进行安装使用]；Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测；添加了config_ASUS_B360_PRIME_UHD630.plist，B360主板的可以试用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；已更新Lilu(v1.2.5)、AppleALC(v1.3.0)、WhateverGreen(v1.2.0)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：MD5 (macOS High Sierra 10.13.6(17G2112) Installer with Clover 4606.dmg) = 23c01542c04d67109e3ec76c43973e56关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果 2000人群688324116 一起黑苹果 500人群257995340 一起啃苹果 500人群]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.6(17G2112)特别版 with Clover 4606原版镜像随着苹果发布了最新的MacBookPro 15,1/15,2这两款产品，macOS也更新到了10.13.6 17G2112版本，它原生支持第八代核显;本镜像采用官方原版app制作，集成Clover 4606，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题；添加ApfsDriverLoader-64.efi，自动加载apfs.efi驱动，同时去除日志显示；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;更新WhateverGreen到V1.2.0，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了SHIKI的驱动，现在是三合一了；特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4及以后的版本可以不需要屏蔽独显而进行安装使用]；Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测；添加了config_ASUS_B360_PRIME_UHD630.plist，B360主板的可以试用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；已更新Lilu(v1.2.5)、AppleALC(v1.3.0)、WhateverGreen(v1.2.0)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：请点击下载MD5 (macOS High Sierra 10.13.6(17G2112) Installer with Clover 4606.dmg) = 23c01542c04d67109e3ec76c43973e56关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果 2000人群688324116 一起黑苹果 500人群257995340 一起啃苹果 500人群]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -108,7 +108,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.4 17E199 正式版 with Clover 4418原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题；所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;更新apfs.efi到10.13.4正式版；更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]；Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测；config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="C12A7328-F81F-11D2-BA4B-00A0C93EC93B" # 设置为EFI分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接百毒云下载链接：请点击下载Mega网盘下载链接:请点击下载如果mega无法下载,请进群下载hosts_mega.txt迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.4(17E199)正式版 with Clover 4418原版镜像10.13.4镜像的制作比较坑人，之前所有的制作方法都无法正常安装，详见解决10.13.4制作镜像出现的安装盘找不到和显卡代码刷屏问题本镜像采用官方原版app制作，集成Clover 4418，支持UEFI启动安装;Drivers64UEFI/目录下只保留的AptioMemoryFix.efi以解决卡+++问题；所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;更新apfs.efi到10.13.4正式版；更新IntelGraphicsFixup 到V1.2.7，原生支持UHD620/UHD630等八代核显，不需要注入platform-id特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理[最新的macOS 10.13.4可以不需要屏蔽独显而进行安装使用]；Clover默认配置文件config.plist原生支持七代HD620/HD630、八代UHD620/UHD630，platform-id 使用自动侦测；config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；已更新Lilu(1.2.3)、AppleALC(1.2.3)、IntelGraphicsFixup(1.2.7)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="C12A7328-F81F-11D2-BA4B-00A0C93EC93B" # 设置为EFI分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云下载链接：请点击下载Mega网盘下载链接:请点击下载如果mega无法下载,请进群下载hosts_mega.txt迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源MD5 (macOS High Sierra 10.13.4(17E199) Installer with Clover 4418.dmg) = e1d1fb0f036c35582a016d50035fc1a3关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -152,7 +152,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.3 17D47 正式版 with Clover 4391原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.3-(17D47)-official-version-and-Clover-4391-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3Drv-64.efi所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;支持UHD620/UHD630等八代核显特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理Clover默认配置文件config.plist为620/630/640/650；config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；已更新Lilu(1.2.2)、AppleALC(1.2.2)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接百毒云下载链接：https://pan.baidu.com/s/1bqmWMLp 密码: 7pu8迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源Mega网盘下载链接:https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo如果mega无法下载,请进群下载hosts_mega.txtMD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.3(17D47)正式版 with Clover 4391原版镜像本镜像采用官方原版app制作，集成Clover 4391，支持UEFI启动安装;如果卡+++请替换Drivers64UEFI/Backup目录下的OsxAptioFix3Drv-64.efi所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;支持UHD620/UHD630等八代核显特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理Clover默认配置文件config.plist为620/630/640/650；config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；支持BCM94352z无线网卡，支持Realtek8111系列有线网卡，支持Intel板载有线网卡；已更新Lilu(1.2.2)、AppleALC(1.2.2)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云下载链接：https://pan.baidu.com/s/1bqmWMLp 密码: 7pu8迅雷下载链接:请点击下载 感谢@难忘情怀提供下载资源Mega网盘下载链接:https://mega.nz/#!51tiVY6b!MFPR59UxDI54xHWORLwg4r121XI9ns6iXfJpShQE9lo如果mega无法下载,请进群下载hosts_mega.txtMD5 (macOS High Sierra 10.13.3(17D47) Installer with Clover 4391.dmg) = e984c189a3342bb6ae293ad9c1c8a1ec关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果688324116 一起黑苹果[群已满,请加其它群]257995340 一起啃苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -184,7 +184,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;Clover支持UHD620/UHD630等八代核显特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理Clover默认配置文件config.plist为620/630/640/650；config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；支持BCM94352z无线网卡，支持Realtek8111系列网卡，支持Intel网卡；已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接百毒云下载链接:https://pan.baidu.com/s/1i5hBZDVMega网盘下载链接:https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ如果mega无法下载,请进群下载hosts_mega.txtMD5 (macOS High Sierra 10.13.2(17C88) Installer with Clover 4333.dmg) = 7a05f3e9ccaf81a4e8d2f5e558a075ae关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.2(17C88)正式版 with Clover 4333原版镜像本镜像采用官方原版app制作，集成Clover 4333，支持UEFI启动安装;所有配置文件中默认去掉Lilu的输出信息,让你看清10.13 内核崩溃(kernel pance)的真相;Clover支持UHD620/UHD630等八代核显特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理Clover默认配置文件config.plist为620/630/640/650；config_DalianSky.plist为部分机型增加Drop Tables,如果默认的config.plist无法进入安装界面,可以试试这个其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；支持BCM94352z无线网卡，支持Realtek8111系列网卡，支持Intel网卡；已更新Lilu(1.2.1)、AppleALC(1.2.1)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！本镜像发布站点：远景论坛/ 黑果小兵的部落阁截图：下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云下载链接:https://pan.baidu.com/s/1i5hBZDVMega网盘下载链接:https://mega.nz/#!MgUymRaR!wMyIcgmOlihCj9pMCskP9Qxkru2uEDfmGY5LVSmWnrQ如果mega无法下载,请进群下载hosts_mega.txtMD5 (macOS High Sierra 10.13.2(17C88) Installer with Clover 4333.dmg) = 7a05f3e9ccaf81a4e8d2f5e558a075ae关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -299,7 +299,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像]]></title>
     <url>%2FmacOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理Clover默认配置文件config.plist为620/630/640/650；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；支持BCM94352z无线网卡，支持Realtek8111系列网卡，支持Intel网卡；已更新Lilu(1.2.0)、AppleALC(1.2.0)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！本镜像发布站点：远景论坛/ 黑果小兵的小站截图：下载链接https://pan.baidu.com/s/1sla8aQhMD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403eed5a18ffbbaaf53b3261c71c关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS High Sierra 10.13.1(17B48)正式版 with Clover 4278原版镜像本镜像采用官方原版app制作，集成Clover 4278，支持UEFI启动安装。Clover特别增加笔记本常用屏蔽独立显卡补丁，以解决安装10.13时会卡在Service only ran for 0 seconds. Pushing respawn out by 10 second的问题，特别感谢@宪武的搜集整理Clover默认配置文件config.plist为620/630/640/650； 其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4000/4200/4400/4600,HD3000；所有config配置文件都可通过Clover引导界面-Options-configs进行选择； 如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；支持[BCM94352z无线网卡](https://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html#more)，支持Realtek8111系列网卡，支持Intel网卡； 已更新Lilu(1.2.0)、AppleALC(1.2.0)、IntelGraphicsFixup、IntelGraphicsDVMTFixup等补丁； 本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对老朽的大力支持，由于人员众多，恕不一一列名致谢！ 本镜像发布站点：远景论坛/ [黑果小兵的小站](https://blog.daliansky.net) 截图：下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云下载链接：请点击下载MD5 (macOS High Sierra 10.13.1(17B48) Installer with Clover 4278.dmg) = 2e6b403eed5a18ffbbaaf53b3261c71c关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -520,11 +520,11 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>CPUFriend</tag>
         <tag>Lilu</tag>
         <tag>Plugins</tag>
-        <tag>插件</tag>
-        <tag>CPUFriend</tag>
         <tag>CPU变频</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -687,9 +687,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -716,8 +716,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>DB7</tag>
       </tags>
   </entry>
   <entry>
@@ -756,11 +756,11 @@
       <tags>
         <tag>diskutil</tag>
         <tag>EDID</tag>
+        <tag>APFS</tag>
         <tag>shell</tag>
         <tag>spctl</tag>
         <tag>trimforce</tag>
         <tag>ioreg</tag>
-        <tag>APFS</tag>
         <tag>HFS+</tag>
       </tags>
   </entry>
