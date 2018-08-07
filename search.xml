@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[macOS Mojave 10.14安装中常见的问题及解决方法]]></title>
     <url>%2FCommon-problems-and-solutions-in-macOS-Mojave-10.14-installation.html</url>
-    <content type="text"><![CDATA[随着macOS Mojave(莫哈韦) 10.14发行正式版本的临近，各种安装常见问题也需要同步更新，本篇文章就是针对10.14的常见问题的汇总，我会持续不间断更新，敬请期待关于Clover Bootloader的版本想要正确地安装macOS Mojave 10.14，它要求你的Clover Bootloader版本不低于r4515，截止到目前为止，Clover Bootloader的版本已经更新为v2.4k r4636。Clover Bootloader最新版本下载关于HD3000平台macOS Mojave 10.14已经不支持Sandy Bridge平台的安装使用，解决方法有两个：在引导标志(boot args)添加-no_compat_check跳过兼容性检查修改SMBIOS为：MacBookAir5,1Kaby Lake UHD 620显卡特别说明部分基于类似AAPL GfxYTile的注入参数在macOS Mojave 10.14中会失效，它要求将Clover Bootloader版本至少更新到r4587或以上，Clover Bootloader最新版本下载关于声卡注入的IDApple已从macOS Mojave 10.14上的AppleHDA.kext中删除了大量的Layouts，因此很多人需要修改/修补当前的AppleHDA.kext / AudioInjector才能使音频恢复到工作状态。Apple在macOS Mojave上删除的布局ID为：Layout1,3,8,9,11,12,13,18,22,23,24,25,26,27,28,29,30,31,32,34,36,37,38,39,41， 42,43,44,45,46,47,48,49,50等要查看已删除的布局的完整列表以及可用于替换已删除的布局的列表，下面是一张可以使用并可在macOS Mojave 10.14上使用的可用布局的图片：好消息是vit9696通过更新他的AppleALC解决了影响去除布局的问题。AppleALC最新版本的下载：https://github.com/acidanthera/AppleALC/releasesminStolenSize新补丁，用于Broadwell, Skylake 以及KabylakeKaby Lake1234Comment: Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)Name: com.apple.driver.AppleIntelKBLGraphicsFramebufferFind: 764648FF 05Replace: EB4648FF 05Sky Lake1234Comment: Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)Name: com.apple.driver.AppleIntelSKLGraphicsFramebufferFind: 764048FF 05Replace: EB4048FF 05Broadwall1234Comment: Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)Name: com.apple.driver.AppleIntelBDWGraphicsFramebufferFind: 764048FF 05Replace: EB4048FF 05USB解除端口限制补丁1234Comment: USB Port limit patch 10.14 (credits FredWst)Name: com.apple.driver.usb.AppleUSBXHCIFind: 83 FB 0F 0F 83 03 05 00 00Replace: 83 FB 0F 90 90 90 90 90 90Intel HD3000显卡驱动由于macOS Mojave 10.14中已经将AppleIntelHD3000Graphics.kext等相关驱动移除，一个折衷的解决方案是复制一份macOS Sierra 10.12.x的驱动到/System/Library/Extensions，重建缓存后重启即可享用。详见https://www.tonymacx86.com/threads/success-lenovo-b570e.255129/page-2#post-1770059关于10.14高通无线失效无法驱动的问题的解决方案[来自套路]升级到Mojave的大家应该都看到了，14的驱动删掉了好多，最惹人注意的就是A卡的一堆、hd3000的几个、N卡的几个加上高通的无线网卡驱动，用了很久也琢磨了好久后，终于找到了解决高通无线挂的解决方案，下面是方法：由于14系统内删除了Airport40的驱动，而ath9k插件又正是对其起的作用，因此前提条件是我们需要将13的这个kext拿来用，后面我会给出附件，ath9k插件的作者很久没有维护了，目前为止，作者源码只支持到10.13，因此需要我们手动修改源码使其能够支持到10.14，这里不做过多介绍，有兴趣的可以在下面评论，我会尽量解答，这里只把需要的附件做简要说明，大家也就不用再去clone源码修改编译了，附件主要包括3个，第一个是AtherosAirport40驱动，是我从13.6beta4中提取出来的，大家直接将其安装到/Library/Extensions/即可，然后就是我基于作者源码修改后的ath9k插件和最新的lilu（也是最新源码修改的），将这两个插件放到CLOVER，最后，为了保险起见，在config加上两个boot参数，分别是-lilubetaall 和 -ath9565，当然这是9565的参数，其余参数参见ath9k的说明文档，下面有链接，然后重建缓存、修复权限重启就可以了。详见：http://bbs.pcbeta.com/viewthread-1790406-1-1.html 感谢套路athlonregAPFS转换解决方法Apple已经删除了我们必须避免APFS转换的选项，常规的方法已经无法避免安装过程中自动将分区转换为APFS格式，包括在硬盘上安装以及SSD上面安装。以下是一些目前已知的替代品：1.使用Carbon Copy Cloner（CCC）应用程序格式驱动器备份到HFS + J并恢复备份。2.使用此应用程序将APFS分区转换为HFS + J：https：//www.paragon-software.com/home/apfs-hfs-converter/3.使用USB转SATA电缆从外部卸下HDD / SSD并安装macOS（似乎避免了APFS转换）。4.修补安装程序，由你来找到这个方法。安装中出现的IOConsoleUsers: time(0) 0-&gt;0, lin 0, llk 1, IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, nov 0, sm 0x0错误的临时解决方法群里最常见的安装过程中出现的一个错误是：12IOConsoleUsers: time(0) 0-&gt;0, lin 0, llk 1,IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, nov 0, sm 0x0原因是系统无法识别出你的显卡驱动，临时的解决方法是：取消勾选Inject Intel或者将platform-id修改为0x12345678两种方法二选一，不知道如何操作的请移步Clover使用教程安装完成后再通过Clover Configurator设置正确的FakeID和ig-plaform-id驱动你的显卡。去掉Lilu的输出信息,还原10.14 内核崩溃(kernel pance)的真相方法1：使用文本编辑器，在KernelToPatch段落添加内容：12345678910111213141516171819&lt;key&gt;KernelToPatch&lt;/key&gt;&lt;array&gt; &lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;Disable panic kext logging on 10.14 Release kernel (c) vit9696&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; igKEwHRC &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.14.x&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; igKEwOtC &lt;/data&gt; &lt;/dict&gt;&lt;/array&gt;方法2：使用Clover Configurator打开config.plist - Kernel and Kext Patches - kernelToPatch，新添加：1234Comment: Disable panic kext logging on 10.13 Release kernelFind: 8a0284c0 7442Replace: 8a0284c0 eb42MatchOS: 10.14.x其它的内核补丁备用，请自行食用：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455cpuid_set_info_rdmsr (c) vit9696B9A00100 000F32B9A00100 0031C010.12.x,10.13.x,10.14.x xcpm_idle_wrmsr (c) Pike R. AlphaB9E20000 000F30B9E20000 00909010.12.x,10.13.x,10.14.x xcpm_assert_rdmsr (c) SherlocksB9980100 000F32B9980100 0031C010.12.x,10.13.x,10.14.x xcpm_SMT_scope_msrs (c) Pike R. AlphaBE0B0000 005DE908 000000BE0B0000 005DC390 90909010.12.x,10.13.x,10.14.x cpuid_set_info (c) Pike R. Alpha04723CD004XX3CD0 10.13.x,10.14.x- XX: need value you want xcpm_bootstrap (c) Pike R. Alpha89D804C4 3C2289D804XX 3C2210.13.x,10.14.x- XX: need value you want xcpm_assert_wrmsr (c) SherlocksB9990100 000F30B9990100 00909010.13.x,10.14.x xcpm_core_scope_msrs (c) Pike R. AlphaBE030000 0031D2E8 79FCFFFFBE030000 0031D290 90909090 xcpm_pkg_scope_msrs (c) Pike R. AlphaBE070000 0031D2E8 91FCFFFFBE070000 0031D290 9090909010.14.x xcpm_program_msrs (c) Pike R. Alpha554889E5 41574156 41554154 53504189 D64889FB 4189F54C 8D3D6387C39089E5 41574156 41554154 53504189 D64889FB 4189F54C 8D3D638710.14.x xcpm_SMT_scope_msrs (c) Pike R. AlphaBE0B0000 0031D2E8 66FCFFFFBE0B0000 0031D290 9090909010.14.xBlock injected kexts 禁用无效的、未知的驱动程序当你面对这么一堆驱动的时候，如何让它们有条不紊地正常工作呢？万一出现问题的时候又如何让这些驱动在Clover引导的时候禁用它们呢？这个时候 Block injected kexts 就派上用场了。新版的 Clover Bootloader 已经将 Block injected kexts 放到了 macOS 系统分区的图标下面了。操作方法：开机进入clover引导界面，要引导的分区卷标上按 空格 即可进入光标移动到 Block injected kexts 回车进入选择当前系统加载的驱动程序目录勾选禁用的驱动程序按 ESC 退出该子菜单选择-v时出现Attempting system restart...MACH Reboot的解决方法在安装High Sierra启动过程中，选择-v跑时会出现1Attempting system restart...MACH Reboot而不用-v图跑直接显示苹果标志时则不会出现。解决方法在config.plist配置文件DropTables下添加以下代码：12345678910111213141516&lt;key&gt;ACPI&lt;/key&gt;&lt;key&gt;DropTables&lt;/key&gt;&lt;array&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;MATS&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;DMAR&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;BGRT&lt;/string&gt; &lt;/dict&gt;&lt;/array&gt;抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”的原因及解决方法群里遇到最多的问题就是抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”,一直想就此写个解决方法原因出现该提示最根本的原因就是你之前的磁盘分区中ESP分区的尺寸小于200MB解决方法Windows下使用diskgenius删除掉MSR分区,将多出来的分区合并到ESP,正好凑成200MB,以满足安装macOS的基本需求.macOS下可以直接使用磁盘工具进行抹盘,它会自动生成一个200MB的EFI分区,当然前提条件是你需要先备份好磁盘里的数据,否则会造成全盘数据的丢失,请谨慎操作.关于macOS Mojave 10.14下修改显存以及帧缓存、显示接口请移步另一篇教程：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理重建缓存的命令打开终端，输入命令：12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U /写在最后本文会不定期更新最后更新：8-5-2018关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[会员群到期，只出不进，,请加其它群]688324116 一起黑苹果257995340 一起啃苹果]]></content>
+    <content type="text"><![CDATA[随着macOS Mojave(莫哈韦) 10.14发行正式版本的临近，各种安装常见问题也需要同步更新，本篇文章就是针对10.14的常见问题的汇总，我会持续不间断更新，敬请期待关于Clover Bootloader的版本想要正确地安装macOS Mojave 10.14，它要求你的Clover Bootloader版本不低于r4515，截止到目前为止，Clover Bootloader的版本已经更新为v2.4k r4636。Clover Bootloader最新版本下载关于HD3000平台macOS Mojave 10.14已经不支持Sandy Bridge平台的安装使用，解决方法有两个：在引导标志(boot args)添加-no_compat_check跳过兼容性检查修改SMBIOS为：MacBookAir5,1Kaby Lake UHD 620显卡特别说明部分基于类似AAPL GfxYTile的注入参数在macOS Mojave 10.14中会失效，它要求将Clover Bootloader版本至少更新到r4587或以上，Clover Bootloader最新版本下载关于声卡注入的IDApple已从macOS Mojave 10.14上的AppleHDA.kext中删除了大量的Layouts，因此很多人需要修改/修补当前的AppleHDA.kext / AudioInjector才能使音频恢复到工作状态。Apple在macOS Mojave上删除的布局ID为：Layout1,3,8,9,11,12,13,18,22,23,24,25,26,27,28,29,30,31,32,34,36,37,38,39,41， 42,43,44,45,46,47,48,49,50等要查看已删除的布局的完整列表以及可用于替换已删除的布局的列表，下面是一张可以使用并可在macOS Mojave 10.14上使用的可用布局的图片：好消息是vit9696通过更新他的AppleALC解决了影响去除布局的问题。AppleALC最新版本的下载：https://github.com/acidanthera/AppleALC/releasesminStolenSize新补丁，用于Broadwell, Skylake 以及KabylakeKaby Lake1234Comment: Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)Name: com.apple.driver.AppleIntelKBLGraphicsFramebufferFind: 764648FF 05Replace: EB4648FF 05Sky Lake1234Comment: Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)Name: com.apple.driver.AppleIntelSKLGraphicsFramebufferFind: 764048FF 05Replace: EB4048FF 05Broadwall1234Comment: Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 Credits (Sniki)Name: com.apple.driver.AppleIntelBDWGraphicsFramebufferFind: 764048FF 05Replace: EB4048FF 05USB解除端口限制补丁1234Comment: USB Port limit patch 10.14 (credits FredWst)Name: com.apple.driver.usb.AppleUSBXHCIFind: 83 FB 0F 0F 83 03 05 00 00Replace: 83 FB 0F 90 90 90 90 90 90Intel HD3000显卡驱动由于macOS Mojave 10.14中已经将AppleIntelHD3000Graphics.kext等相关驱动移除，一个折衷的解决方案是复制一份macOS Sierra 10.12.x的驱动到/System/Library/Extensions，重建缓存后重启即可享用。详见https://www.tonymacx86.com/threads/success-lenovo-b570e.255129/page-2#post-1770059找回丢失的DW1560/Brcm94352Z驱动Mojave系统下的蓝牙会失效，截止到目前的解决方法是：将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/Library/Extensions目录下当然，在重启前，还要重建一下系统的缓存，命令为：12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U /如果嫌输入命令麻烦，也可以使用应用Kext Utility重建缓存。重启你的系统，检查WIFI/蓝牙是否工作正常。关于10.14高通无线失效无法驱动的问题的解决方案[来自套路]升级到Mojave的大家应该都看到了，14的驱动删掉了好多，最惹人注意的就是A卡的一堆、hd3000的几个、N卡的几个加上高通的无线网卡驱动，用了很久也琢磨了好久后，终于找到了解决高通无线挂的解决方案，下面是方法：由于14系统内删除了Airport40的驱动，而ath9k插件又正是对其起的作用，因此前提条件是我们需要将13的这个kext拿来用，后面我会给出附件，ath9k插件的作者很久没有维护了，目前为止，作者源码只支持到10.13，因此需要我们手动修改源码使其能够支持到10.14，这里不做过多介绍，有兴趣的可以在下面评论，我会尽量解答，这里只把需要的附件做简要说明，大家也就不用再去clone源码修改编译了，附件主要包括3个，第一个是AtherosAirport40驱动，是我从13.6beta4中提取出来的，大家直接将其安装到/Library/Extensions/即可，然后就是我基于作者源码修改后的ath9k插件和最新的lilu（也是最新源码修改的），将这两个插件放到CLOVER，最后，为了保险起见，在config加上两个boot参数，分别是-lilubetaall 和 -ath9565，当然这是9565的参数，其余参数参见ath9k的说明文档，下面有链接，然后重建缓存、修复权限重启就可以了。详见：http://bbs.pcbeta.com/viewthread-1790406-1-1.html 感谢套路athlonregAPFS转换解决方法Apple已经删除了我们必须避免APFS转换的选项，常规的方法已经无法避免安装过程中自动将分区转换为APFS格式，包括在硬盘上安装以及SSD上面安装。以下是一些目前已知的替代品：1.使用Carbon Copy Cloner（CCC）应用程序格式驱动器备份到HFS + J并恢复备份。2.使用此应用程序将APFS分区转换为HFS + J：https：//www.paragon-software.com/home/apfs-hfs-converter/3.使用USB转SATA电缆从外部卸下HDD / SSD并安装macOS（似乎避免了APFS转换）。4.修补安装程序，由你来找到这个方法。安装中出现的IOConsoleUsers: time(0) 0-&gt;0, lin 0, llk 1, IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, nov 0, sm 0x0错误的临时解决方法群里最常见的安装过程中出现的一个错误是：12IOConsoleUsers: time(0) 0-&gt;0, lin 0, llk 1,IOConsoleUsers: gIOScreenLockState 3, hs 0, bs 0, nov 0, sm 0x0原因是系统无法识别出你的显卡驱动，临时的解决方法是：取消勾选Inject Intel或者将platform-id修改为0x12345678两种方法二选一，不知道如何操作的请移步Clover使用教程安装完成后再通过Clover Configurator设置正确的FakeID和ig-plaform-id驱动你的显卡。去掉Lilu的输出信息,还原10.14 内核崩溃(kernel pance)的真相方法1：使用文本编辑器，在KernelToPatch段落添加内容：12345678910111213141516171819&lt;key&gt;KernelToPatch&lt;/key&gt;&lt;array&gt; &lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;Disable panic kext logging on 10.14 Release kernel (c) vit9696&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; igKEwHRC &lt;/data&gt; &lt;key&gt;MatchOS&lt;/key&gt; &lt;string&gt;10.14.x&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; igKEwOtC &lt;/data&gt; &lt;/dict&gt;&lt;/array&gt;方法2：使用Clover Configurator打开config.plist - Kernel and Kext Patches - kernelToPatch，新添加：1234Comment: Disable panic kext logging on 10.13 Release kernelFind: 8a0284c0 7442Replace: 8a0284c0 eb42MatchOS: 10.14.x其它的内核补丁备用，请自行食用：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455cpuid_set_info_rdmsr (c) vit9696B9A00100 000F32B9A00100 0031C010.12.x,10.13.x,10.14.x xcpm_idle_wrmsr (c) Pike R. AlphaB9E20000 000F30B9E20000 00909010.12.x,10.13.x,10.14.x xcpm_assert_rdmsr (c) SherlocksB9980100 000F32B9980100 0031C010.12.x,10.13.x,10.14.x xcpm_SMT_scope_msrs (c) Pike R. AlphaBE0B0000 005DE908 000000BE0B0000 005DC390 90909010.12.x,10.13.x,10.14.x cpuid_set_info (c) Pike R. Alpha04723CD004XX3CD0 10.13.x,10.14.x- XX: need value you want xcpm_bootstrap (c) Pike R. Alpha89D804C4 3C2289D804XX 3C2210.13.x,10.14.x- XX: need value you want xcpm_assert_wrmsr (c) SherlocksB9990100 000F30B9990100 00909010.13.x,10.14.x xcpm_core_scope_msrs (c) Pike R. AlphaBE030000 0031D2E8 79FCFFFFBE030000 0031D290 90909090 xcpm_pkg_scope_msrs (c) Pike R. AlphaBE070000 0031D2E8 91FCFFFFBE070000 0031D290 9090909010.14.x xcpm_program_msrs (c) Pike R. Alpha554889E5 41574156 41554154 53504189 D64889FB 4189F54C 8D3D6387C39089E5 41574156 41554154 53504189 D64889FB 4189F54C 8D3D638710.14.x xcpm_SMT_scope_msrs (c) Pike R. AlphaBE0B0000 0031D2E8 66FCFFFFBE0B0000 0031D290 9090909010.14.xBlock injected kexts 禁用无效的、未知的驱动程序当你面对这么一堆驱动的时候，如何让它们有条不紊地正常工作呢？万一出现问题的时候又如何让这些驱动在Clover引导的时候禁用它们呢？这个时候 Block injected kexts 就派上用场了。新版的 Clover Bootloader 已经将 Block injected kexts 放到了 macOS 系统分区的图标下面了。操作方法：开机进入clover引导界面，要引导的分区卷标上按 空格 即可进入光标移动到 Block injected kexts 回车进入选择当前系统加载的驱动程序目录勾选禁用的驱动程序按 ESC 退出该子菜单选择-v时出现Attempting system restart...MACH Reboot的解决方法在安装High Sierra启动过程中，选择-v跑时会出现1Attempting system restart...MACH Reboot而不用-v图跑直接显示苹果标志时则不会出现。解决方法在config.plist配置文件DropTables下添加以下代码：12345678910111213141516&lt;key&gt;ACPI&lt;/key&gt;&lt;key&gt;DropTables&lt;/key&gt;&lt;array&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;MATS&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;DMAR&lt;/string&gt; &lt;/dict&gt; &lt;dict&gt; &lt;key&gt;Signature&lt;/key&gt; &lt;string&gt;BGRT&lt;/string&gt; &lt;/dict&gt;&lt;/array&gt;抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”的原因及解决方法群里遇到最多的问题就是抹盘时提示”MediaKit报告设备上的空间不足以执行请求的操作”,一直想就此写个解决方法原因出现该提示最根本的原因就是你之前的磁盘分区中ESP分区的尺寸小于200MB解决方法Windows下使用diskgenius删除掉MSR分区,将多出来的分区合并到ESP,正好凑成200MB,以满足安装macOS的基本需求.macOS下可以直接使用磁盘工具进行抹盘,它会自动生成一个200MB的EFI分区,当然前提条件是你需要先备份好磁盘里的数据,否则会造成全盘数据的丢失,请谨慎操作.关于macOS Mojave 10.14下修改显存以及帧缓存、显示接口请移步另一篇教程：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理重建缓存的命令打开终端，输入命令：12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U /写在最后本文会不定期更新最后更新：8-5-2018关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[会员群到期，只出不进，,请加其它群]688324116 一起黑苹果257995340 一起啃苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -40,8 +40,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
@@ -57,8 +57,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G65</tag>
@@ -74,8 +74,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.5</tag>
         <tag>17F77</tag>
@@ -145,8 +145,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.4</tag>
         <tag>1.7e+200</tag>
@@ -189,8 +189,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -221,8 +221,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -336,8 +336,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -455,8 +455,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -507,8 +507,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -535,8 +535,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -560,7 +560,7 @@
   <entry>
     <title><![CDATA[Broadcom BCM94352z/DW1560驱动新姿势[新方法]]]></title>
     <url>%2FBroadcom-BCM94352z-DW1560-drive-new-posture.html</url>
-    <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificator checking patch / Wi-Fi 5 Ghz/Country code patch (required for 10.11) / Third party device patch / White list restriction patch / Failed PCIe configuration (device-id checking) 等问题的修复补丁之前我写的一篇教程已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果问题的提出：黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。在macOS上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。解决方案：同时支持10.11-10.13系统Clover设置：使用应用程序Clover Configurator在Clover - Devices - FakeID - WIFI中添加仿冒ID: 0x43a014e4在Clover - KextsToPatch 应用以下补丁，以使BCM94352z启用蓝牙：1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt;驱动：下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext包括这些文件的目录看起来是这样的：10.13.6系统的驱动方法是：将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/Library/Extensions目录下当然，在重启前，还要重建一下系统的缓存，命令为：12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U /如果嫌输入命令麻烦，也可以使用应用Kext Utility重建缓存。重启你的系统，检查WIFI/蓝牙是否工作正常。写在最后这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[Broadcom WiFi/BlueTooth BCM94352z(DW1560)驱动新姿势[新方法]引言昨晚口袋妖怪进群闲聊的时候提到过 她 之前维护的BrcmWLFixup已被 AirportBrcmFixup 取代。同时 她 发给我的AirportBrcmFixup/kern_brcmfx.cpp源码中已经增加了包括 _si_pmu_fvco_pllreg / Chip identificator checking patch / Wi-Fi 5 Ghz/Country code patch (required for 10.11) / Third party device patch / White list restriction patch / Failed PCIe configuration (device-id checking) 等问题的修复补丁之前我写的一篇教程已经不适用了，所以就测试之后重写一篇教程，目的是希望大家都少走弯路，更顺畅地用上黑苹果问题的提出：黑苹果的系统安装好后的第一件事情是得让它连接上互联网，以完善其它的驱动程序。也可借此安装类似TeamViewer或者向日葵之类的远程控制程序，让其它人通过远程的方式帮你完善系统。本文要介绍的就是教你如何驱动BCM94352z这款最常采用的无线网卡。在macOS上，当使用BMC94532z NGFF WiFi卡时，AirportBrcm4360.kext不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。解决方案：同时支持10.11-10.13系统Clover设置：使用应用程序Clover Configurator在Clover - Devices - FakeID - WIFI中添加仿冒ID: 0x43a014e4在Clover - KextsToPatch 应用以下补丁，以使BCM94352z启用蓝牙：1234Name: IOBluetoothFamilyComment: 10.11+-BT4LE-Handoff-Hotspot-lisai9093Find: 4885ff74 47488b07 Replace: 41be0f00 0000eb44可以使用文本编辑器直接打开config.plist，将下面的内容粘贴到&lt;key&gt;KextsToPatch&lt;/key&gt;里12345678910111213141516&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;10.11+-BT4LE-Handoff-Hotspot-lisai9093&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; SIX/dEdIiwc= &lt;/data&gt; &lt;key&gt;Name&lt;/key&gt; &lt;string&gt;IOBluetoothFamily&lt;/string&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; Qb4PAAAA60Q= &lt;/data&gt;&lt;/dict&gt;驱动：下载：RehabMan-FakePCIID RehabMan-BrcmPatchRAM AirportBrcmFixup将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/EFI/CLOVER/kexts/Other目录下将文件FakePCIID_Broadcom_WiFi.kext和FakePCIID.kext复制到/EFI/CLOVER/kexts/Other目录下将文件AirportBrcmFixup.kext复制到/EFI/CLOVER/kexts/Other目录下,由于AirportBrcmFixup.kext是依赖于Lilu运行的插件，所以还需要检查该目录下必须存在Lilu.kext包括这些文件的目录看起来是这样的：10.13.6系统的驱动方法将文件BrcmFirmwareData.kext和BrcmPatchRAM2.kext复制到/Library/Extensions目录下当然，在重启前，还要重建一下系统的缓存，命令为：12345678910#!/bin/shsudo chmod -Rf 755 /S*/L*/E*sudo chown -Rf 0:0 /S*/L*/E*sudo chmod -Rf 755 /L*/E*sudo chown -Rf 0:0 /L*/E*sudo rm -Rf /S*/L*/PrelinkedKernels/*sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*sudo touch -f /S*/L*/E*sudo touch -f /L*/E*sudo kextcache -Boot -U /如果嫌输入命令麻烦，也可以使用应用Kext Utility重建缓存。重启你的系统，检查WIFI/蓝牙是否工作正常。写在最后这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群]688324116一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -657,8 +657,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -672,9 +672,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -716,10 +716,10 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -745,8 +745,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB7</tag>
       </tags>
   </entry>
@@ -816,8 +816,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>10.12.6</tag>
         <tag>镜像</tag>
+        <tag>10.12.6</tag>
         <tag>dmg</tag>
         <tag>安装</tag>
       </tags>
@@ -846,8 +846,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
