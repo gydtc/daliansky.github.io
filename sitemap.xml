@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
+    
+    <lastmod>2018-08-09T06:17:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</loc>
     
     <lastmod>2018-08-07T07:35:51.000Z</lastmod>
@@ -163,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
-    
-    <lastmod>2018-04-15T12:24:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/CLOVER-v2-4-r4438-Integrated-Millet-Notebook-PRO-EFI-Installation-Instructions.html</loc>
     
     <lastmod>2018-04-13T07:17:37.000Z</lastmod>
@@ -226,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
+    <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -240,7 +240,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html</loc>
+    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
@@ -282,14 +282,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
+    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
+    <loc>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html</loc>
     
     <lastmod>2018-01-26T05:44:00.000Z</lastmod>
     
