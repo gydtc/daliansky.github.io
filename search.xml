@@ -9,9 +9,9 @@
       </categories>
       <tags>
         <tag>安装</tag>
+        <tag>常见问题</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
-        <tag>常见问题</tag>
       </tags>
   </entry>
   <entry>
@@ -231,13 +231,13 @@
   <entry>
     <title><![CDATA[显示器接口数据及显存等参数修改]]></title>
     <url>%2FDisplay-interface-data-and-parameter-changes.html</url>
-    <content type="text"><![CDATA[查看显卡platform-id显卡注入platform-id通过命令读取:1ioreg -l | grep platform-id显示结果如下1"AAPL,ig-platform-id" = &lt;00001659&gt;得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令:1kextstat | grep -y appleintel1234567com.apple.driver.AppleIntelLpssI2C (3.0.60) com.apple.driver.AppleIntelLpssDmac (3.0.60)com.apple.driver.AppleIntelLpssI2CController (3.0.60) com.apple.driver.AppleIntelSlowAdaptiveClocking (4.0.0) com.apple.driver.AppleIntelKBLGraphicsFramebuffer (10.2.8)com.apple.driver.AppleIntelPCHPMC (2.0.1) com.apple.driver.AppleIntelKBLGraphics (10.2.8)由此可以判断所使用的驱动是AppleIntelKBLGraphics和AppleIntelKBLGraphicsFramebuffer,显示器的接口数据定义在AppleIntelKBLGraphicsFramebuffer里,通过AppleIntelKBLGraphicsFramebuffer提取接口数据接口数据接口数据说明00001659 00000000 2A8A0800注入ID00000000 01030303 00002002端口数量定义00000000 00000060 6C050000显存6C050000 00000000 0000000000000800 02000000 98000000LVDS接口01050900 00040000 870100000105接口02040A00 00080000 870100000204接口FF000000 01000000 200000000306预留显存容量修改01030303 00002002 00000000 0000 0060 0600是16进制,转换成10进制就是:1536 01030303 00002002 00000000 0000 0080 0800是16进制,转换成10进制就是:2048视频教程&lt;video width=&quot;640&quot; height=&quot;480&quot; controls&gt; &lt;source src=&quot;http://7.daliansky.net/1536MB-2048MB.mp4&quot;&gt; &lt;/video&gt;显示器接口数值定义连接类型(connetor type)数值(Data)HDMI00 08 00 00DVI00 02 00 00eDP00 04 00 00DP00 04 00 00LVDS02 00 00 00VGA01 00 00 00提取FB接口数据的新方法，感谢@emyself打开FB-VRAM Patcher点击提取FB数据窗口里显示出来的就是你的显卡的FB接口数据。当然，这个软件发布的初衷是为了自动生成1536MB-&gt;2048MB的补丁，只是被我们给玩坏了才增加了这个功能。自动生成1536MB-&gt;2048MB补丁打开FB-VRAM Patcher点击生成显存补丁它会自动生成两种格式的补丁，形式如下：16进制格式Base64格式修改显示器接口数据比如我想将0105这个接口修改为支持HDMI的显示器，怎么做呢？Find: 01050900 000&lt;font color=#ff0000&gt;4&lt;/font&gt;0000 87010000 # eDP 00 04 00 00Replace:01050900 000&lt;font color=#ff0000&gt;8&lt;/font&gt;0000 87010000 # HDMI 00 08 00 00关于打赏您的支持就是我更新的动力！ 如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群] 688324116一起黑苹果]]></content>
+    <content type="text"><![CDATA[查看显卡platform-id显卡注入platform-id通过命令读取:1ioreg -l | grep platform-id显示结果如下1"AAPL,ig-platform-id" = &lt;00001659&gt;得出显卡注入ID是:59160000读取核显驱动的加载情况,使用命令:1kextstat | grep -y appleintel1234567com.apple.driver.AppleIntelLpssI2C (3.0.60) com.apple.driver.AppleIntelLpssDmac (3.0.60)com.apple.driver.AppleIntelLpssI2CController (3.0.60) com.apple.driver.AppleIntelSlowAdaptiveClocking (4.0.0) com.apple.driver.AppleIntelKBLGraphicsFramebuffer (10.2.8)com.apple.driver.AppleIntelPCHPMC (2.0.1) com.apple.driver.AppleIntelKBLGraphics (10.2.8)由此可以判断所使用的驱动是AppleIntelKBLGraphics和AppleIntelKBLGraphicsFramebuffer,显示器的接口数据定义在AppleIntelKBLGraphicsFramebuffer里,通过AppleIntelKBLGraphicsFramebuffer提取接口数据接口数据接口数据说明00001659 00000000 2A8A0800注入ID00000000 01030303 00002002端口数量定义00000000 00000060 6C050000显存6C050000 00000000 0000000000000800 02000000 98000000LVDS接口01050900 00040000 870100000105接口02040A00 00080000 870100000204接口FF000000 01000000 200000000306预留显存容量修改01030303 00002002 00000000 0000 0060 0600是16进制,转换成10进制就是:1536 01030303 00002002 00000000 0000 0080 0800是16进制,转换成10进制就是:2048视频教程&lt;video width=&quot;640&quot; height=&quot;480&quot; controls&gt; &lt;source src=&quot;http://7.daliansky.net/1536MB-2048MB.mp4&quot;&gt; &lt;/video&gt;显示器接口数值定义连接类型(connetor type)数值(Data)HDMI00 08 00 00DVI00 02 00 00eDP00 04 00 00DP00 04 00 00LVDS02 00 00 00VGA01 00 00 00提取FB接口数据的新方法，感谢@emyself打开FB-VRAM Patcher点击提取FB数据窗口里显示出来的就是你的显卡的FB接口数据。当然，这个软件发布的初衷是为了自动生成1536MB-&gt;2048MB的补丁，只是被我们给玩坏了才增加了这个功能。自动生成1536MB-&gt;2048MB补丁打开FB-VRAM Patcher点击生成显存补丁它会自动生成两种格式的补丁，形式如下：16进制格式Base64格式修改显示器接口数据比如我想将0105这个接口修改为支持HDMI的显示器，怎么做呢？Find: 01050900 00040000 87010000 # eDP 00 04 00 00Replace:01050900 00080000 87010000 # HDMI 00 08 00 00关于打赏您的支持就是我更新的动力！ 如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！QQ群:331686786 一起吃苹果[群已满,请加下面群] 688324116一起黑苹果]]></content>
       <categories>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>platform-id</tag>
         <tag>接口</tag>
+        <tag>platform-id</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -252,8 +252,8 @@
       <tags>
         <tag>教程</tag>
         <tag>安装</tag>
-        <tag>macOS</tag>
         <tag>小米Pro</tag>
+        <tag>macOS</tag>
         <tag>XiaoMi-Pro</tag>
         <tag>XiaoMiPro</tag>
       </tags>
@@ -295,12 +295,12 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EDID</tag>
         <tag>HIDPI</tag>
         <tag>黑屏</tag>
         <tag>花屏</tag>
         <tag>睡眠唤醒</tag>
         <tag>内屏黑屏</tag>
+        <tag>EDID</tag>
         <tag>fixEDID</tag>
       </tags>
   </entry>
@@ -489,10 +489,10 @@
         <tag>10.13</tag>
         <tag>High Sierra</tag>
         <tag>安装</tag>
-        <tag>EDID</tag>
-        <tag>常见问题</tag>
         <tag>黑屏</tag>
         <tag>花屏</tag>
+        <tag>EDID</tag>
+        <tag>常见问题</tag>
         <tag>屏蔽独显</tag>
       </tags>
   </entry>
@@ -623,8 +623,8 @@
         <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>Clover</tag>
-        <tag>常见问题</tag>
         <tag>platform-id</tag>
+        <tag>常见问题</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
@@ -717,9 +717,9 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -746,8 +746,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>下载</tag>
-        <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>DB7</tag>
       </tags>
   </entry>
   <entry>
@@ -785,12 +785,12 @@
       </categories>
       <tags>
         <tag>diskutil</tag>
+        <tag>EDID</tag>
+        <tag>APFS</tag>
         <tag>shell</tag>
         <tag>spctl</tag>
         <tag>trimforce</tag>
         <tag>ioreg</tag>
-        <tag>EDID</tag>
-        <tag>APFS</tag>
         <tag>HFS+</tag>
       </tags>
   </entry>

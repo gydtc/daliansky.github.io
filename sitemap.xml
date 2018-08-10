@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</loc>
+    
+    <lastmod>2018-08-10T11:51:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/clover-user-manual.html</loc>
     
     <lastmod>2018-08-09T06:17:08.000Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>http://blog.daliansky.net/Existing-Lilu-Plugins.html</loc>
     
     <lastmod>2018-05-31T02:37:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</loc>
-    
-    <lastmod>2018-05-31T01:42:27.000Z</lastmod>
     
   </url>
   
