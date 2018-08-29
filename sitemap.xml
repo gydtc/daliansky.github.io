@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/Coffee-Lake-frame-buffer-patch-and-UHD630-Coffee-Lake-ig-platform-id-data-finishing.html</loc>
+    
+    <lastmod>2018-08-29T03:32:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Intel-core-display-platformID-finishing.html</loc>
     
     <lastmod>2018-08-29T03:03:05.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.daliansky.net/AppleALC-Supported-codecs.html</loc>
     
     <lastmod>2018-08-29T02:54:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Coffee-Lake-frame-buffer-patch-and-UHD630-Coffee-Lake-ig-platform-id-data-finishing.html</loc>
-    
-    <lastmod>2018-08-24T08:15:23.000Z</lastmod>
     
   </url>
   
