@@ -1,5 +1,5 @@
+http://blog.daliansky.net/Add-CLOVER-boot-to-UEFI-without-any-tools.html
 http://blog.daliansky.net/macOS-Mojave-10.14-18A389-Release-with-Clover-4670-original-mirror.html
 http://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Mojave-10.14-installation.html
 http://blog.daliansky.net/Coffee-Lake-frame-buffer-patch-and-UHD630-Coffee-Lake-ig-platform-id-data-finishing.html
 http://blog.daliansky.net/macOS-High-Sierra-10.13.6-17G2112-Release-Special-with-Clover-4606-original-mirror.html
-http://blog.daliansky.net/macOS-High-Sierra-10.13.6-17G65-Release-Version-with-Clover-4596-original-mirror.html
