@@ -27,11 +27,11 @@ categories:
 2. 点击`Deselect All Dumps`,取消所有的选择项
 3. 勾选右侧的`EDID`
 4. 点击`Run`按钮,生成`EDID.BIN`,保存于桌面生成的新目录中
-![DarwinDumper](http://ous2s14vo.bkt.clouddn.com/DarwinDumper.jpg)
+![DarwinDumper](http://7.daliansky.net/DarwinDumper.jpg)
 生成的HTML报告如下:
-![DarwinDumperReport](http://ous2s14vo.bkt.clouddn.com/DarwinDumperReport.png)
+![DarwinDumperReport](http://7.daliansky.net/DarwinDumperReport.png)
 ***如果选择`Select All Dumps`再按`Run`它会生成一份完整的系统信息,类似于`WINDOWS`下面的`AIDA64`导出的详细信息***
-![DarwinDumperReportFull](http://ous2s14vo.bkt.clouddn.com/DarwinDumperReportFull.png)
+![DarwinDumperReportFull](http://7.daliansky.net/DarwinDumperReportFull.png)
 
 # 修正EDID及打开HIDPI显示支持
 ## 目的:通过此操作可有效解决开机内屏黑屏/花屏,显示器睡眠唤醒黑屏/花屏,可直接连接外部显示器
@@ -41,9 +41,9 @@ categories:
 ## 操作步骤:
 
 1. 打开`FixEDID`,点击`Open EDID binary file`,选择上面生成的`EDID.BIN`,这个文件位于`~/Desktop/DarwinDumperxxx`
-2. 依次打开`EDID`,`EDID`的目录中存在三种格式的文件,![EDID.BIN](http://ous2s14vo.bkt.clouddn.com/EDID.BIN.png)请选择打开`EDID.bin`
-![FixEDID](http://ous2s14vo.bkt.clouddn.com/FixEDID.png)
-3. 根据自己的显示器的分辨率选择16:9或者16:10,我的显示器是15.6寸,分辨率为1920x1080,长宽比为16:9,所以我需要将插图中的16:10通过下拉菜单选择调整为16:9,如下图![FixEDID2](http://ous2s14vo.bkt.clouddn.com/FixEDID2.png)
+2. 依次打开`EDID`,`EDID`的目录中存在三种格式的文件,![EDID.BIN](http://7.daliansky.net/EDID.BIN.png)请选择打开`EDID.bin`
+![FixEDID](http://7.daliansky.net/FixEDID.png)
+3. 根据自己的显示器的分辨率选择16:9或者16:10,我的显示器是15.6寸,分辨率为1920x1080,长宽比为16:9,所以我需要将插图中的16:10通过下拉菜单选择调整为16:9,如下图![FixEDID2](http://7.daliansky.net/FixEDID2.png)
 其中:前面的16:9是程序自动检测出的长宽比,后面的16:9通过下拉菜单选择,保持前后一致
 4. 添加HIDPI高分辨率:请根据个人喜好添加,我通常会添加的分辨率如下:
     *     3200x1800
@@ -51,7 +51,7 @@ categories:
     *     1920x1080
     *     1600x900
     *     1440x810
-![FixEDID3](http://ous2s14vo.bkt.clouddn.com/FixEDID3.png)
+![FixEDID3](http://7.daliansky.net/FixEDID3.png)
 
 5. 点击`Make`按钮,会自动在桌面生成一个新目录,比如我的目录为:`DisplayVendorID-dae`
 6. 将该目录复制到显示器设备描述目录下,打开终端,输入命令:
@@ -62,7 +62,7 @@ sudo cp -R ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resou
 
 # 如何修改分辨率
 使用工具:[RDM](https://github.com/avibrazil/RDM)
-![RDM](http://ous2s14vo.bkt.clouddn.com/RDM.png)
+![RDM](http://7.daliansky.net/RDM.png)
 其中:分辨率后边带有闪电符号的即为HIDPI高分辨率
 
 # 另一种一键开启HIDPI并注入EDID的方法 特别感谢[冰水加劲Q](https://github.com/xzhih)提供
@@ -71,7 +71,7 @@ sudo cp -R ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resou
 双击安装命令即可进入设置，可选择安装或卸载
 
 效果：
-![OneKeyOpenHiDPI](http://ous2s14vo.bkt.clouddn.com/OneKeyOpenHiDPI.png)
+![OneKeyOpenHiDPI](http://7.daliansky.net/OneKeyOpenHiDPI.png)
 **备注:此方法的分辨率是写死的,某些高分屏需要单独设备**
 
 ## 收工
@@ -83,6 +83,6 @@ sudo cp -R ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resou
  
  
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
-
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 

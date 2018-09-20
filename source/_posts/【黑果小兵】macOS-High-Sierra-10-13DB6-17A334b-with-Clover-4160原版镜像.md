@@ -15,7 +15,7 @@ tags:
 - dmg
 ---
 ### 【黑果小兵】macOS High Sierra 10.13DB6 17A334b with Clover 4160原版镜像
-![17A334b](http://ous2s14vo.bkt.clouddn.com/17A334b.png)
+![17A334b](http://7.daliansky.net/17A334b.png)
 
 * 本镜像采用官方原版app制作，集成Clover 4160，支持UEFI启动安装。
 * Clover默认config.plist支持`原生i5/i7七代移动版CPU`，`原生支持Intel HD Graphics 620`【platforms-id:59160000】；`【DELL 燃7000系列可直接安装使用】`
@@ -34,7 +34,8 @@ tags:
 	•	MD5 (macOS High Sierra 10.13 17A334b Installer with Clover 4160.dmg) = 8b46ab210917be9287ac3a38b4e8eb81
 	
 #### QQ群:
-158976808 [燃7000-黑苹果交流群](http://shang.qq.com/wpa/qunwpa?idkey=570e507664d7f263ed31300750dd5bc7f9f7e42d707ecf830c7b1b276b0d2600)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
      
 

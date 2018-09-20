@@ -99,14 +99,16 @@ tags:
 
 ## 原文链接：[口袋妖怪heart](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1741470&page=1#pid47122622)
 ## 扩展阅读：
-[AppleALC支持的Codecs列表及AppleALC的使用](https://blog.daliansky.net/2017/09/08/AppleALC-Supported-codecs/)
+[AppleALC支持的Codecs列表及AppleALC的使用](https://blog.daliansky.net/AppleALC-Supported-codecs.html)
 
 # 关于打赏
+
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 
 

@@ -2,6 +2,7 @@
 title: Broadcom BCM94352z/DW1560驱动新姿势[新方法]
 urlname: Broadcom-BCM94352z-DW1560-drive-new-posture
 date: 2017-09-09 09:35:23
+top: 96
 tags:
 - DW1560
 - BCM94352z
@@ -31,9 +32,9 @@ categories:
 
 
 ### Clover设置：
-* 使用应用程序`Clover Configurator`
-* 在`Clover` - `Devices` - `FakeID` - `WIFI`中添加仿冒ID: `0x43a014e4`
-* 在`Clover` - `KextsToPatch` 应用以下补丁，以使BCM94352z启用蓝牙：
+* ~~使用应用程序`Clover Configurator`~~
+* ~~在`Clover` - `Devices` - `FakeID` - `WIFI`中添加仿冒ID: `0x43a014e4`~~
+* ~~在`Clover` - `KextsToPatch` 应用以下补丁，以使BCM94352z启用蓝牙：~~
 
 ```sh
 Name:       IOBluetoothFamily
@@ -42,7 +43,7 @@ Find:       4885ff74 47488b07
 Replace:    41be0f00 0000eb44
 ```
 
-* 可以使用文本编辑器直接打开`config.plist`，将下面的内容粘贴到`<key>KextsToPatch</key>`里
+* ~~可以使用文本编辑器直接打开`config.plist`，将下面的内容粘贴到`<key>KextsToPatch</key>`里~~
 
 ```xml
 			<dict>
@@ -62,26 +63,41 @@ Replace:    41be0f00 0000eb44
 				</data>
 			</dict>
 ```
-  
+
 ### 驱动：
-> 下载：[RehabMan-FakePCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads) [RehabMan-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads) [AirportBrcmFixup](https://sourceforge.net/p/airportbrcmfixup/)
+
+> 下载：[RehabMan-FakePCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads) [RehabMan-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads) [AirportBrcmFixup](https://github.com/lvs1974/AirportBrcmFixup/releases)
 
 1. 将文件`BrcmFirmwareData.kext`和`BrcmPatchRAM2.kext`复制到`/EFI/CLOVER/kexts/Other`目录下
 2. 将文件`FakePCIID_Broadcom_WiFi.kext`和`FakePCIID.kext`复制到`/EFI/CLOVER/kexts/Other`目录下
 3. 将文件`AirportBrcmFixup.kext`复制到`/EFI/CLOVER/kexts/Other`目录下,由于`AirportBrcmFixup.kext`是依赖于[Lilu](https://github.com/vit9696/Lilu/releases)运行的插件，所以还需要检查该目录下必须存在`Lilu.kext`
 4. 包括这些文件的目录看起来是这样的：
-![brcm94352z驱动](http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png)
+![brcm94352z驱动](http://7.daliansky.net/brcm94352z驱动.png)
+
+### 10.13.6系统的驱动方法
+
+将文件`BrcmFirmwareData.kext`和`BrcmPatchRAM2.kext`复制到`/Library/Extensions`目录下
 
 当然，在重启前，还要重建一下系统的缓存，命令为：
 
 ```bash
-sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache
-sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel
-sudo touch /System/Library/Extensions/ && sudo kextcache -u /
+#!/bin/sh
+sudo chmod -Rf 755 /S*/L*/E*
+sudo chown -Rf 0:0 /S*/L*/E*
+sudo chmod -Rf 755 /L*/E*
+sudo chown -Rf 0:0 /L*/E*
+sudo rm -Rf /S*/L*/PrelinkedKernels/*
+sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*
+sudo touch -f /S*/L*/E*
+sudo touch -f /L*/E*
+sudo kextcache -Boot -U /
 ```
+如果嫌输入命令麻烦，也可以使用应用`Kext Utility`重建缓存。
+
 重启你的系统，检查WIFI/蓝牙是否工作正常。
 
 ## 写在最后
+
 这是驱动BCM94352z(DW1560)的基础教程，还有些高级设置需要各位多爬帖。
 
 # 关于打赏
@@ -89,6 +105,8 @@ sudo touch /System/Library/Extensions/ && sudo kextcache -u /
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
+
 
 

@@ -20,7 +20,7 @@ categories:
 * 制作Ubuntu Linux安装盘 
     * Windows下请使用工具`UltraISO`,方法略
     * macOS下制作过程:
-        * 插入U盘,确定设备名,方法为打开磁盘工具,选择U盘,可以看到U盘下面有两个分区:`disk4s1`和`disk4s2`,那么U盘的设备名就是:`disk4`![diskutil_disk4](http://ous2s14vo.bkt.clouddn.com/diskutil_disk4.png)
+        * 插入U盘,确定设备名,方法为打开磁盘工具,选择U盘,可以看到U盘下面有两个分区:`disk4s1`和`disk4s2`,那么U盘的设备名就是:`disk4`![diskutil_disk4](http://7.daliansky.net/diskutil_disk4.png)
 
         * 当然最简单的方法还是直接使用命令查看:`diskutil list`,输出的信息为:
         
@@ -53,7 +53,7 @@ Password:
             ```
             *我的U盘竟然写了906秒(15分钟),我先找个地方哭会儿去*
             同时系统会弹出一个错误的窗口,显示类似的信息:
-            ![dd_error](http://ous2s14vo.bkt.clouddn.com/dd_error.png)
+            ![dd_error](http://7.daliansky.net/dd_error.png)
 
             那是因为Linux的分区格式是ext,在macOS系统下无法识别才会报错,但是其实一个支持UEFI引导的Ubuntu Linux 17.10启动U盘已经制作成功了.点击`Ignore`忽略或者`Eject`退出U盘
         * 现在您可以使用这个新制作的Ubuntu Linux安装U盘引导Linux快乐地玩耍啦
@@ -65,5 +65,6 @@ Password:
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 

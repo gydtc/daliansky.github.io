@@ -26,9 +26,9 @@ categories:
 
 * 假设你想在同一块磁盘里同时安装 `MacOS` 和 `Windows 10` 双系统的话，那么我给你的建议是无论是先安装 `MacOS` 系统还是先安装 `Windows 10` 系统，都要在安装完 `Windows 10` 系统后再将U盘的EFI移动到磁盘的EFI分区里。因为当你安装完 `Windows 10` 的系统后，它会重新将EFI分区格式化的。
 * 安装完的 `Windows 10` 的EFI分区里面会有个EFI的目录，目录里面会包括 `BOOT` 和 `MICROSOFT` 这两个目录,它看起来是这样的：
-![Windows-EFI](http://ous2s14vo.bkt.clouddn.com/Windows-EFI.png)
+![Windows-EFI](http://7.daliansky.net/Windows-EFI.png)
 * 将U盘里的EFI目录下面的 `CLOVER` 目录复制到磁盘里的EFI分区EFI目录下
-![Windows_Clover](http://ous2s14vo.bkt.clouddn.com/Windows_Clover.png)
+![Windows_Clover](http://7.daliansky.net/Windows_Clover.png)
 
 *** 切记一点：千万不要动另外的Boot和Microsoft目录 ***
 
@@ -41,11 +41,11 @@ categories:
 
 ### 通过 `CLOVER` 自带的工具添加
 1. 开机进入 `CLOVER` 引导界面，将光标移动到 `Clover Boot Options` ，回车进入
-![clover boot options](http://ous2s14vo.bkt.clouddn.com/clover boot options.png)
+![clover boot options](http://7.daliansky.net/clover boot options.png)
 2. 选择 `Add Clover boot options for all entries` 回车
-![clover-boot-options2](http://ous2s14vo.bkt.clouddn.com/clover-boot-options2.png)
+![clover-boot-options2](http://7.daliansky.net/clover-boot-options2.png)
 3. 拔掉U盘，重新开机，按 `Boot` 快捷键，你会发现多了很多以 `Clover start` 开头的引导项，选择 `Clover start boot.efi at MAC` 即可进入 `MacOS` 系统
-![UEFI_Boot](http://ous2s14vo.bkt.clouddn.com/UEFI_Boot.jpg)
+![UEFI_Boot](http://7.daliansky.net/UEFI_Boot.jpg)
 
 ## 备注：该种方法在Clover v4261版本后已经失效[感谢群里 `@(￣(工)￣)_小哥哥` 的反馈]，我先找个地方哭一会儿
 
@@ -54,6 +54,7 @@ categories:
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 

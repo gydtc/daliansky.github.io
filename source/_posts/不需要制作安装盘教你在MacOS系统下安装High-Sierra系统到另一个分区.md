@@ -2,6 +2,7 @@
 title: 不需要制作安装盘！教你在MacOS系统下安装High Sierra系统到另一个分区
 urlname: Do-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition
 date: 2017-08-16 22:11:02
+top: 94
 updated: 2017-08-28 11:08:02
 categories:
 - 教程
@@ -28,7 +29,7 @@ tags:
 
 4. 打开安装的 InstallESD.dmg ，打开Packages文件夹，然后打开 OSInstall.mpkg 文件。 这将打开 macOS 安装程序。 是的，现在您可以从启动的 MacOS 系统桌面安装 High Sierra Beta 。 选择您创建的分区以安装它，安装完成后，按照步骤5。
 > 备注：如果无法安装请执行(其中 HighSierra 是指卷名)：
-> 
+>
 > diskutil umount HighSierra
 > diskutil mount HighSierra
 
@@ -59,6 +60,6 @@ $ bless --info /Volumes/HighSierra
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
 
-
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)

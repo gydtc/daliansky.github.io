@@ -27,11 +27,11 @@ tags:
 
 #### 截图：
 
-![10.13-17A405](http://ous2s14vo.bkt.clouddn.com/10.13-17A405.png)
-![Clover](http://ous2s14vo.bkt.clouddn.com/Clover.png)
-![Drivers64UEFI](http://ous2s14vo.bkt.clouddn.com/Drivers64UEFI.png)
-![Clover Main Menu](http://ous2s14vo.bkt.clouddn.com/Clover Main Menu.png)
-![About Clover](http://ous2s14vo.bkt.clouddn.com/About Clover.png)
+![10.13-17A405](http://7.daliansky.net/10.13-17A405.png)
+![Clover](http://7.daliansky.net/Clover.png)
+![Drivers64UEFI](http://7.daliansky.net/Drivers64UEFI.png)
+![Clover Main Menu](http://7.daliansky.net/Clover Main Menu.png)
+![About Clover](http://7.daliansky.net/About Clover.png)
 
 	
 #### 下载链接: [https://pan.baidu.com/s/1o8gIsY2](https://pan.baidu.com/s/1o8gIsY2)
@@ -39,6 +39,7 @@ tags:
 * MD5 (macOS High Sierra 10.13(17A405) Installer with Clover 4238.dmg) = 7a6894bad093285ffe6801c55f1a032c
 	
 #### QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 

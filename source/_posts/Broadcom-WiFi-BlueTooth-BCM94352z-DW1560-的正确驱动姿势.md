@@ -127,15 +127,22 @@ Replace:        81F952AA00006690
 			
 ```
 它看起来是这个样子的：
-![KextsToPatch_BCM4360](http://ous2s14vo.bkt.clouddn.com/KextsToPatch_BCM4360.png)
+![KextsToPatch_BCM4360](http://7.daliansky.net/KextsToPatch_BCM4360.png)
 
 `config.plist`文件的修改到此结束
 现在BCM94352z的WIFI应该已经可以工作了，你甚至都不需要添加仿冒WIFI的设备ID。当然，在重启前，还要重建一下系统的缓存，命令为：
 
 ```bash
-sudo rm -rf /System/Library/Caches/com.apple.kext.caches/Startup/kernelcache
-sudo rm -rf /System/Library/PrelinkedKernels/prelinkedkernel
-sudo touch /System/Library/Extensions/ && sudo kextcache -u /
+#!/bin/sh
+sudo chmod -Rf 755 /S*/L*/E*
+sudo chown -Rf 0:0 /S*/L*/E*
+sudo chmod -Rf 755 /L*/E*
+sudo chown -Rf 0:0 /L*/E*
+sudo rm -Rf /S*/L*/PrelinkedKernels/*
+sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*
+sudo touch -f /S*/L*/E*
+sudo touch -f /L*/E*
+sudo kextcache -Boot -U /
 ```
 重启你的系统，检查WIFI是否工作正常。
 #### 驱动你的蓝牙
@@ -169,7 +176,7 @@ Replace:    41be0f00 0000eb44
 				</data>
 			</dict>
 ```
-  
+
 ##### 驱动：
 > 下载：[RehabMan-FakePCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads) [RehabMan-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads) [AirportBrcmFixup](https://sourceforge.net/p/airportbrcmfixup/)
 
@@ -177,7 +184,7 @@ Replace:    41be0f00 0000eb44
 2. 将文件`FakePCIID_Broadcom_WiFi.kext`和`FakePCIID.kext`复制到`/EFI/CLOVER/kexts/Other`目录下
 3. 将文件`AirportBrcmFixup.kext`复制到`/EFI/CLOVER/kexts/Other`目录下,由于`AirportBrcmFixup.kext`是依赖于[Lilu](https://github.com/vit9696/Lilu/releases)运行的插件，所以还需要检查该目录下必须存在`Lilu.kext`
 4. 包括这些文件的目录看起来是这样的：
-![brcm94352z驱动](http://ous2s14vo.bkt.clouddn.com/brcm94352z驱动.png)
+![brcm94352z驱动](http://7.daliansky.net/brcm94352z驱动.png)
 
 当然，在重启前，还要重建一下系统的缓存，命令为：
 
@@ -192,6 +199,7 @@ sudo touch /System/Library/Extensions/ && sudo kextcache -u /
 这是驱动BCM94352z(DW1560)的基础设置，还有些高级设置需要各位多爬帖。
 
 #### QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 

@@ -26,15 +26,16 @@ tags:
 *	本镜像发布站点：远景论坛/ [黑果小兵的小站](https://blog.daliansky.net)
 
 #### 截图：
-![17A352a](http://ous2s14vo.bkt.clouddn.com/17A352a.png)
-![clover config](http://ous2s14vo.bkt.clouddn.com/clover config.png)
+![17A352a](http://7.daliansky.net/17A352a.png)
+![clover config](http://7.daliansky.net/clover config.png)
 	
 #### 下载链接: [百度云盘](https://pan.baidu.com/s/1i4DdUFN)
 
 * MD5 (macOS High Sierra 10.13DB7 17A352a with Clover 4182.dmg) = 48fc6f8cb402d4a3d8b6035ab4456efc
 	
 #### QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 
 

@@ -25,13 +25,13 @@ tags:
 *	本镜像发布站点：远景论坛/ [黑果小兵的小站](https://blog.daliansky.net)
 
 #### 截图：
-![Screen Shot 2017-09-26 at 3.55.30 AM](http://ous2s14vo.bkt.clouddn.com/Screen Shot 2017-09-26 at 3.55.30 AM.png)
+![Screen Shot 2017-09-26 at 3.55.30 AM](http://7.daliansky.net/Screen Shot 2017-09-26 at 3.55.30 AM.png)
 
-![屏幕快照 2017-09-26 上午6.01.52](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-26 上午6.01.52.png)
+![屏幕快照 2017-09-26 上午6.01.52](http://7.daliansky.net/屏幕快照 2017-09-26 上午6.01.52.png)
 
-![屏幕快照 2017-09-26 上午6.03.09](http://ous2s14vo.bkt.clouddn.com/屏幕快照 2017-09-26 上午6.03.09.png)
+![屏幕快照 2017-09-26 上午6.03.09](http://7.daliansky.net/屏幕快照 2017-09-26 上午6.03.09.png)
 
-![screenshot17](http://ous2s14vo.bkt.clouddn.com/screenshot17.png)
+![screenshot17](http://7.daliansky.net/screenshot17.png)
 
 	
 #### 下载链接: [http://pan.baidu.com/s/1dFCOnML](http://pan.baidu.com/s/1dFCOnML)
@@ -39,8 +39,8 @@ tags:
 * MD5 (macOS High Sierra 10.13 Installer with Clover 4221.dmg) = 524fc80704b693ad6191a9191436cb5c
 	
 #### QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
-
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 
 

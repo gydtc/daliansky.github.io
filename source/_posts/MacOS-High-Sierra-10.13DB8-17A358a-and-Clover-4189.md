@@ -26,11 +26,11 @@ tags:
 *	本镜像发布站点：远景论坛/ [黑果小兵的小站](https://blog.daliansky.net)
 
 #### 截图：
-![17A358a](http://ous2s14vo.bkt.clouddn.com/17A358a.png)
+![17A358a](http://7.daliansky.net/17A358a.png)
 
-![Clover Configurator](http://ous2s14vo.bkt.clouddn.com/Clover Configurator.png)
+![Clover Configurator](http://7.daliansky.net/Clover Configurator.png)
 
-![Other Drivers](http://ous2s14vo.bkt.clouddn.com/Other Drivers.png)
+![Other Drivers](http://7.daliansky.net/Other Drivers.png)
 
 	
 #### 下载链接: [https://pan.baidu.com/s/1qXTeYWc](https://pan.baidu.com/s/1qXTeYWc)
@@ -38,7 +38,8 @@ tags:
 * MD5 (macOS High Sierra 10.13DB8 17A358a with Clover 4189.dmg) = 559bbd4ad59f5f12cf058e271ef6d871
 	
 #### QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 
 

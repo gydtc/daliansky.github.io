@@ -31,9 +31,28 @@ categories:
 ## ResourceConverter.sh的使用
 执行命令如下：
 
-`./ResourceConverter.sh --kext "/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist"
+```bash
+./ResourceConverter.sh --kext "/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist
+```
 
 它会在当前目录生成`CPUFriendProvider.kext`,将`CPUFriendProvider.kext`和[CPUFriend.kext](https://github.com/PMheart/CPUFriend/releases)复制到`/EFI/Clover/kexts/Other`，重建缓存，然后重启。
+
+重建缓存的命令为：
+
+```bash
+#!/bin/sh
+sudo chmod -Rf 755 /S*/L*/E*
+sudo chown -Rf 0:0 /S*/L*/E*
+sudo chmod -Rf 755 /L*/E*
+sudo chown -Rf 0:0 /L*/E*
+sudo rm -Rf /S*/L*/PrelinkedKernels/*
+sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*
+sudo touch -f /S*/L*/E*
+sudo touch -f /L*/E*
+sudo kextcache -Boot -U /
+```
+
+
 
 说明：
 > 其中的`/Users/sky/Desktop/Mac-CAD6701F7CEA0921.plist`是我自行修改的，可以通过直接调用系统提供的`/System/Library/Extensions/IOPlatformPluginFamily.kext/Contents/PlugIns/X86PlatformPlugin.kext/Contents/Resources/Mac-CAD6701F7CEA0921.plist`
@@ -54,6 +73,7 @@ categories:
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 

@@ -2,6 +2,7 @@
 title: 'Mac常用到的命令[持续更新]'
 date: 2017-08-17 10:24:00
 urlname: Mac-frequently-used-to-the-command---continuous-update
+top: 95
 categories:
 - 教程
 tags:
@@ -27,7 +28,25 @@ sudo spctl --master-disable
 ```
 验证口令后即可。
 
+# 重建缓存的命令
+
+打开终端，输入命令：
+
+```bash
+#!/bin/sh
+sudo chmod -Rf 755 /S*/L*/E*
+sudo chown -Rf 0:0 /S*/L*/E*
+sudo chmod -Rf 755 /L*/E*
+sudo chown -Rf 0:0 /L*/E*
+sudo rm -Rf /S*/L*/PrelinkedKernels/*
+sudo rm -Rf /S*/L*/Caches/com.apple.kext.caches/*
+sudo touch -f /S*/L*/E*
+sudo touch -f /L*/E*
+sudo kextcache -Boot -U /
+```
+
 # 磁盘分区的基本操作：教你将U盘上的EFI复制到磁盘的EFI分区
+
 > 新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让`diskutil`登场了。
 
 `diskutil`命令的基本用法：
@@ -280,7 +299,7 @@ ioreg -l | grep "DisplayProductID"
     "DisplayProductID" = 5600
 ```
 其中<>里面的内容就是显示器的EDID信息，将提取出来的EDID信息粘贴到clover的 `config.plist` 中，顺便将 `VendorID` 和 `ProductID` 填入相应的位置，然后保存重启你的电脑。
-![EDID注入](http://ous2s14vo.bkt.clouddn.com/EDID注入.png)
+![EDID注入](http://7.daliansky.net/EDID注入.png)
 
 # MacOS系统下导出man手册内容
 经常使用shell命令的时候需要翻看man查询命令的用法以及参数，想把使用手册导出来查看。比如我想查看10.13系统下 `log show`命令的具体用法，使用以下命令：
@@ -309,11 +328,12 @@ man log | col -b > ~/Desktop/log_manual.txt
     * **注意上面的命令为一条，须全部复制**
     * 系统会使用 `curl` 自动下载一个程序，保存到 `/tmp` ,之后自动执行，期间需要你输入自己的用户密码，程序执行完后会自动清除临时文件；
     * 屏幕会输出40个机型，其中亮白加粗为你当时设置的机型，带 `绿色` 显示的那三行前面括号里的机型为可选机型，带 `HWP` 字样的为可以开启 `HWPEnable`
-      ![HWP](http://ous2s14vo.bkt.clouddn.com/HWP.png)
+      ![HWP](http://7.daliansky.net/HWP.png)
     * 输入方括号里面的数字并回车，可以修改相对应的机型，同时开启 `HWP`
     * 本文不讨论开启 `HWP` 的步骤及用法，更多的信息请参阅其它文章
 
- # 检查自己的显卡驱动所使用的`platform-id`
+# 检查自己的显卡驱动所使用的`platform-id`
+
  打开终端,输入命令:
 
  ```sh
@@ -327,16 +347,68 @@ man log | col -b > ~/Desktop/log_manual.txt
  进行一次小端转换,就是:`59160000`,也就是七代核显`Intel HD Graphics 620`的显卡注入信息.
 
 
+
+# 笔记本开启插电源出提示音:
+
+## 开启:
+
+打开终端,输入以下命令:
+
+```bash
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
+```
+
+## 关闭:
+
+打开终端,输入以下命令:
+
+```bash
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall PowerChime
+```
+
+
+
+# 如何去掉`apfs.efi`最新版本的日志调试显示
+
+## 打开终端，输入以下命令：
+
+```bash
+cd ~/Desktop							# 进入当前用户桌面
+cp /usr/standalone/i386/apfs.efi .		# 复制最新版本的apfs.efi到当前目录
+perl -i -pe 's|\x00\x74\x07\xb8\xff\xff|\x00\x90\x90\xb8\xff\xff|sg' ./apfs.efi	# 去掉日志调试回显
+```
+
+## 将生成的apfs.efi复制到`/EFI/CLOVER/drivers64UEFI`目录下，重启测试
+
+## 查看声卡型号及注入的ID以及ConfigData
+
+```bash
+ioreg -l | grep ALC | grep HDAConfigDefault
+```
+
+屏幕输出：
+
+```bash
+"HDAConfigDefault" = ({"AFGLowPowerState"=<03000000>,"CodecID"=283902550,"ConfigData"=<01470c02>,"FuncGroup"=1,"Codec"="DalianSky - Realtek ALC256 (3246) for Dell 7000 Series","WakeVerbReinit"=Yes,"LayoutID"=7,"BootConfigData"=<01271c3001271d0101271ea601271f9001371cf001371d0001371e0001371f4001471c1001471d0101471e1701471f9001470c0201871cf001871d0001871e0001871f4001971c4001971d1001971e8101971f0201a71cf001a71d0001a71e0001a71f4001b71cf001b71d0001b71e0001b71f4001d71cf001d71d0001d71e0001d71f4001e71cf001e71d0001e71e0001e71f4002171c2002171d1002171e2102171f0202170c02>})
+```
+
+
+
+
 ## 收工
+
+# 最近更新：8-14-2018
 
 # ———— 未完待续 ————
 
 # 关于打赏
+
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 
 

@@ -19,63 +19,66 @@ categories:
 ### 制作Ubuntu Linux启动U盘:
 
 * 下载Ubuntu Linux镜像,可以选择国内开源镜像站点下载:
-[网易](http://mirrors.163.com/ubuntu-releases/) [搜狐](http://mirrors.sohu.com/ubuntu-releases/) [阿里云](https://mirrors.aliyun.com/ubuntu-releases/) 
+  [网易](http://mirrors.163.com/ubuntu-releases/) [搜狐](http://mirrors.sohu.com/ubuntu-releases/) [阿里云](https://mirrors.aliyun.com/ubuntu-releases/) 
 
 > 如果你只是想通过Linux提取codec的话,可以随便下载个旧的版本即可,比如这个[ubuntu 14.04.5LTS](https://mirrors.aliyun.com/ubuntu-releases/14.04/ubuntu-14.04.5-desktop-amd64.iso),如果想作为日后的生产力工具的话,我推荐你下载最新发布的[ubuntu 17.10](https://mirrors.aliyun.com/ubuntu-releases/17.10/ubuntu-17.10-desktop-amd64.iso)
 
 #### 制作Ubuntu Linux安装盘
 * Windows下请使用工具`UltraISO`,方法略
 * macOS下制作过程:
-    * 插入U盘,确定设备名,方法为打开磁盘工具,选择U盘,可以看到U盘下面有两个分区:`disk4s1`和`disk4s2`,那么U盘的设备名就是:`disk4`![diskutil_disk4](http://ous2s14vo.bkt.clouddn.com/diskutil_disk4.png)
-    
-    * 当然最简单的方法还是直接使用命令查看:`diskutil list`,输出的信息为:
-        
-        ```sh
- /dev/disk4 (internal, physical):
-   #:                  TYPE NAME      SIZE IDENTIFIER
-   0:     Apple_partition_scheme   *2.0 GB disk4
-   1:        Apple_partition_map    4.1 KB disk4s1
-   2:                  Apple_HFS    2.4 MB disk4s2
-        ```
-    这个`disk4`就是你要操作的设备名,后面我们会用到它
-        
-    * 卸载U盘,准备写入镜像,输入命令:
-        `diskutil umountDisk disk4` # 卸载U盘
-    * 使用`dd`命令将下载的Ubuntu Linux镜像恢复到U盘上,操作之前我有必要**提醒各位小白,万一你不小心输入错了设备名,那么你连哭的机会都没有,因为dd是按扇区直接物理写入磁盘,别到时候找不到数据了再悔不当初没有认真看到这段文字**
-        
-            ```sh
-            sudo dd if=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m
-            ```
-        命令输入完后,请仔细认真检查下,尤其是`of=/dev/disk4`这里,再三确认后回车执行,输入用户密码后请耐心等待6-7分钟,写盘速度取决于你的U盘,镜像恢复的过程中不会有任何的文字输出,U盘写入成功后会显示下面类似的输出信息:
-        
-            ```sh
-~ % diskutil umountDisk disk4
-Unmount of all volumes on disk4 was successful
-~ % sudo dd if=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m
-Password:
-1431+1 records in
-1431+1 records out
-1501102080 bytes transferred in 906.101477 secs (1656660 bytes/sec)
-            ```
-            *我的U盘竟然写了906秒(15分钟),我先找个地方哭会儿去*
-            同时系统会弹出一个警告窗口,显示类似的信息:
-            ![dd_error](http://ous2s14vo.bkt.clouddn.com/dd_error.png)
+    * 插入U盘,确定设备名,方法为打开磁盘工具,选择U盘,可以看到U盘下面有两个分区:`disk4s1`和`disk4s2`,那么U盘的设备名就是:`disk4`![diskutil_disk4](http://7.daliansky.net/diskutil_disk4.png)
 
-            那是因为Linux的分区格式是ext,在macOS系统下无法识别才会报错,但是其实一个支持UEFI引导的Ubuntu Linux 17.10启动U盘已经制作成功了.点击`Ignore`忽略或者`Eject`退出U盘
+    * 当然最简单的方法还是直接使用命令查看:`diskutil list`,输出的信息为:
+
+    ```sh
+         /dev/disk4 (internal, physical):
+
+    #:                  TYPE NAME      SIZE IDENTIFIER
+    0:     Apple_partition_scheme   *2.0 GB disk4
+    1:        Apple_partition_map    4.1 KB disk4s1
+    2:                  Apple_HFS    2.4 MB disk4s2
+    ```
+    这个`disk4`就是你要操作的设备名,后面我们会用到它
+
+    * 卸载U盘,准备写入镜像,输入命令:
+
+        ```bash
+        diskutil umountDisk disk4 # 卸载U盘
+        ```
+    * 使用`dd`命令将下载的Ubuntu Linux镜像恢复到U盘上,操作之前我有必要**提醒各位小白,万一你不小心输入错了设备名,那么你连哭的机会都没有,因为dd是按扇区直接物理写入磁盘,别到时候找不到数据了再悔不当初没有认真看到这段文字**
+
+    ```bash
+    sudo dd if=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m
+    ```
+    命令输入完后,请仔细认真检查下,尤其是`of=/dev/disk4`这里,再三确认后回车执行,输入用户密码后请耐心等待6-7分钟,写盘速度取决于你的U盘,镜像恢复的过程中不会有任何的文字输出,U盘写入成功后会显示下面类似的输出信息:
+
+    ```bash
+    ~ % diskutil umountDisk disk4
+    Unmount of all volumes on disk4 was successful
+    ~ % sudo dd if=/Users/sky/Downloads/ISO/ubuntu-17.10-desktop-amd64.iso of=/dev/disk4 bs=1m
+    Password:
+    1431+1 records in
+    1431+1 records out
+    1501102080 bytes transferred in 906.101477 secs (1656660 bytes/sec)
+    ```
+    * 我的U盘竟然写了906秒(15分钟),我先找个地方哭会儿去*
+      同时系统会弹出一个警告窗口,显示类似的信息:
+      ![dd_error](http://7.daliansky.net/dd_error.png)
+      那是因为Linux的分区格式是ext,在macOS系统下无法识别才会报错,但是其实一个支持UEFI引导的Ubuntu Linux 17.10启动U盘已经制作成功了.点击`Ignore`忽略或者`Eject`退出U盘
 * 现在您可以使用这个新制作的Ubuntu Linux安装U盘引导Linux去提取codec
 
 ## 提取codec
 开机按引导设备快捷键`F12`或者`F8`进入引导设备选单,选择`Ubuntu Linux`所在的USB盘回车
-![Boot_select](http://ous2s14vo.bkt.clouddn.com/Boot_select.jpg)
+![Boot_select](http://7.daliansky.net/Boot_select.jpg)
 出现Ubuntu Linux的引导界面,选择`Try Ubuntu without installing`,该选项可以在不安装的情况下试用Ubuntu
-![Ubuntu_boot](http://ous2s14vo.bkt.clouddn.com/Ubuntu_boot.jpg)
+![Ubuntu_boot](http://7.daliansky.net/Ubuntu_boot.jpg)
 回车后稍候会进入Ubuntu桌面:
-![ubuntu1](http://ous2s14vo.bkt.clouddn.com/ubuntu1.png)
+![ubuntu1](http://7.daliansky.net/ubuntu1.png)
 按组合键`CTRL+ALT+t`打开终端,输入以下命令:
 
 ```sh
 cd ~/Desktop/ # 进入用户桌面
-cp /proc/asound/card0/codec#0 . # 将codec#0复制到当时位置
+cp /proc/asound/card0/codec* . # 将codec开头的文件复制到当时位置
 sudo cp -R /sys/firmware/acpi/tables .  # 将acpi/tables目录复制到当时位置,tables目录包括了全部的DSDT和SSDT
 ls -l   # 列表
 sudo chown -R ubuntu:ubuntu *   # 将当前目录下所有文件及目录所有人修改为ubuntu
@@ -83,14 +86,14 @@ ls -l   # 列表
 ```
 
 显示输出信息如下:
-![ubuntu_codec_and_DSDT](http://ous2s14vo.bkt.clouddn.com/ubuntu_codec_and_DSDT.png)
-将桌面上的codec#0和tables目录复制到LINUX以外的支持写入的盘符下,Linux下面的工作已经完成,您可以继续试用或者重启/关机.
+![ubuntu_codec_and_DSDT](http://7.daliansky.net/ubuntu_codec_and_DSDT.png)
+将桌面上的codec开头的文件和tables目录复制到LINUX以外的支持写入的盘符下,Linux下面的工作已经完成,您可以继续试用或者重启/关机.
 
 # 整理有效节点
 使用到的工具：`verbit.sh`,[下载链接](https://github.com/daliansky/dell7000/blob/master/hda-tools/verbit.sh)
 用法: `verbit.sh codec#0`,它会生成如下显示的信息:
 
-```ruby
+```js
 Verbs from Linux Codec Dump File: codec#0
 
 Codec: Realtek ALC3246   Address: 0   DevID: 283902550 (0x10ec0256)
@@ -103,7 +106,7 @@ Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 013
     1/8   Black  Speaker at Ext Rear         24 0x18   0x411111f0   01871cf0 01871d11 01871e11 01871f41
     1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   01971c10 01971d20 01971e81 01971f02
     1/8   Black  Speaker at Ext Rear         26 0x1a   0x411111f0   01a71cf0 01a71d11 01a71e11 01a71f41
- 	1/8   Black  Speaker at Ext Rear     	 27 0x1b   0x411111f0   01b71cf0 01b71d11 01b71e11 01b71f41  
+    1/8   Black  Speaker at Ext Rear         27 0x1b   0x411111f0   01b71cf0 01b71d11 01b71e11 01b71f41  
  Analog    Pink  Modem Hand at Ext N/A       29 0x1d   0x40779a2d   01d71c2d 01d71d9a 01d71e77 01d71f40
     1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   01e71cf0 01e71d11 01e71e11 01e71f41
     1/8   Black  HP Out at Ext Front         33 0x21   0x02211030   02171c30 02171d10 02171e21 02171f02
@@ -135,13 +138,13 @@ Codec: Realtek ALC3246   Address: 0   DevID: 283902550 (0x10ec0256)
 ```
 其中的:
 
-| 名称 | 解释 |
-|---|---|
-|Codec: Realtek ALC3246|是告诉了你的声卡型号是ALC3246(ALC256)|
-|Address: 0 | 会告诉你生成configdata的数据的前缀是0,比如上面显示输出信息最后一行的`Modified Verbs in One Line:`后面所有的数据中,每组数据的第一位就是这个 `0` ,如果`Address: 2`,那么每组数据的第一位就是 `2` ,这个后面我们会用到它 |
-|DevID: 283902550 (0x10ec0256) | 283902550是0x10ec0256的10进制值,0x10ec 是指vendorID(芯片供应商ID),是REALTEK的设备标识,0256是指型号,去掉前面的0,您的声卡型号就是:ALC256|
-    
-    
+| 名称                            | 解释                                       |
+| ----------------------------- | ---------------------------------------- |
+| Codec: Realtek ALC3246        | 是告诉了你的声卡型号是ALC3246(ALC256)               |
+| Address: 0                    | 会告诉你生成configdata的数据的前缀是0,比如上面显示输出信息最后一行的`Modified Verbs in One Line:`后面所有的数据中,每组数据的第一位就是这个 `0` ,如果`Address: 2`,那么每组数据的第一位就是 `2` ,这个后面我们会用到它 |
+| DevID: 283902550 (0x10ec0256) | 283902550是0x10ec0256的10进制值,0x10ec 是指vendorID(芯片供应商ID),是REALTEK的设备标识,0256是指型号,去掉前面的0,您的声卡型号就是:ALC256 |
+
+
 过去的教程会告诉你,通过运行`verbit.sh`整理出来的节点是:
 
 ```xml
@@ -154,10 +157,10 @@ Codec: Realtek ALC3246   Address: 0   DevID: 283902550 (0x10ec0256)
 # *通过Linux找出有效的节点*
 呢?
 为了测试我的声卡存在第四个节点,我需要找出耳机的Mic输入节点,于是乎重新引导进入Linux,插上耳机,它弹出了这个窗口:
-![SelectAudioDevice](http://ous2s14vo.bkt.clouddn.com/SelectAudioDevice.png)
+![SelectAudioDevice](http://7.daliansky.net/SelectAudioDevice.png)
 这三个选项的意思是让我选择声音设备,既然我希望找出耳机麦克风的输入,我就选择了中间带有耳麦的图标
 进入`Sound Settings`,点击 `Input`,选择`Headset Microphone`,调节`Input volume`,对着耳麦说话,发现有输入电平了,再切换到内置麦克风`Internal Microphone`,也有输入电平,那么至少说明我的声卡功能是完整的,至少在Linux下它工作的很好.
-![SoundInputDeviceSelect](http://ous2s14vo.bkt.clouddn.com/SoundInputDeviceSelect.png)
+![SoundInputDeviceSelect](http://7.daliansky.net/SoundInputDeviceSelect.png)
 测试结果已经出来了,我想要知道耳麦的有效节点是什么,使用组合键`CTRL+ALT+t`打开终端,输入命令:`dmesg`看看它会有什么变化,结果我就看到了下面的文字:
 
 ```sh
@@ -203,13 +206,13 @@ sky@sky-Inspiron-7560:~$ dmesg | grep snd_hda_codec_realtek
 
 先将节点整理成一个表格,这个表格里会包括之前整理出的数据
 
-|有效节点|10进制|设备名称|
-|---|---|---|
-| 0x14 | 20 | Speaker out
-| 0x21 | 21 | HP out 
-| 0x19 | 25 | Headset Mic in
-| 0x1a | 26 | Headphone Mic in
-| 0x12 | 18 | Internal Mic in
+| 有效节点 | 10进制 | 设备名称             |
+| ---- | ---- | ---------------- |
+| 0x14 | 20   | Speaker out      |
+| 0x21 | 21   | HP out           |
+| 0x19 | 25   | Headset Mic in   |
+| 0x1a | 26   | Headphone Mic in |
+| 0x12 | 18   | Internal Mic in  |
 
 之所以加上转换后的10进制,就是为了以后制作pathmap做准备
 
@@ -235,56 +238,56 @@ brew install graphviz   # 安装codecgraph所需要的依赖程序
 ```
 
 这个生成的codec#0.svg就是声卡的pathmap,使用`Sketch.app`打开它
-![codec](http://ous2s14vo.bkt.clouddn.com/codec.png)
+![codec](http://7.daliansky.net/codec.png)
 是不是看了头老大?没错,我刚开始看的时候也是一头的雾水,看多了后就会总结出经验来
 还记得我们在前面整理出的有效节点吧?!
 还是以我的声卡为例,上文中我已经整理出5个节点,按照顺序来:
     0x14,这个是Speaker的节点,也就是喇叭,我们也俗称为外放,如果想让它正确地发声,就需要看看跟它连接的节点都有哪些,在图片里找到0x14位于图片的最下方,我把它放大下:
-    ![node_output](http://ous2s14vo.bkt.clouddn.com/node_output.png)
+    ![node_output](http://7.daliansky.net/node_output.png)
 通过观察我们会发现,0x14与0x02连接,转换成10进制就是20->2,同样的,0x21与0x03连接,转换成10进制就是33->3,我们把它放到表格中
 
-|有效节点|10进制|设备名称|路径|
-|---|---|---|---|
-| 0x14 | 20 | Speaker out|**20->2**|
-| 0x21 | 33 | HP out |**33->3**|
-| 0x19 | 25 | Headset Mic in|
-| 0x1a | 26 | Headphone Mic in|
-| 0x12 | 18 | Internal Mic in|
+| 有效节点 | 10进制 | 设备名称             | 路径        |
+| ---- | ---- | ---------------- | --------- |
+| 0x14 | 20   | Speaker out      | **20->2** |
+| 0x21 | 33   | HP out           | **33->3** |
+| 0x19 | 25   | Headset Mic in   |           |
+| 0x1a | 26   | Headphone Mic in |           |
+| 0x12 | 18   | Internal Mic in  |           |
 怎么样?也没想像的那么复杂吧?两个输出设备的节点和路径已经整理出来,下一步,我们要把输入设备和节点整理出来
-![node_input](http://ous2s14vo.bkt.clouddn.com/node_input.png)
+![node_input](http://7.daliansky.net/node_input.png)
 再来看图片的上半部,最右侧的0x08和0x09是两个声音输入的节点,0x23和0x22是两个混音设备,最前方是设备节点,这个就是输入设备的路径.
 我的声卡的0x12声音输入路径包括了3个节点;为了便于理解,被我圈起来的红线部分就是0x12(Mic in)的路径(pathmap),8->35->18就是路径,照样还是要将数据放到表格里
-![node12_pathmap](http://ous2s14vo.bkt.clouddn.com/node12_pathmap.png)
+![node12_pathmap](http://7.daliansky.net/node12_pathmap.png)
 
-|有效节点|10进制|设备名称|路径|
-|---|---|---|---|
-| 0x14 | 20 | Speaker out|**20->2**
-| 0x21 | 33 | HP out |**33->3**|
-| 0x19 | 25 | Headset Mic in||
-| 0x1a | 26 | Headphone Mic in||
-| 0x12 | 18 | Internal Mic in|**8->35->18**|
+| 有效节点 | 10进制 | 设备名称             | 路径            |
+| ---- | ---- | ---------------- | ------------- |
+| 0x14 | 20   | Speaker out      | **20->2**     |
+| 0x21 | 33   | HP out           | **33->3**     |
+| 0x19 | 25   | Headset Mic in   |               |
+| 0x1a | 26   | Headphone Mic in |               |
+| 0x12 | 18   | Internal Mic in  | **8->35->18** |
 还记得文章前面通过linux找出来的有效节点不?我的耳麦可是支持输入的,节点也找出来了,是0x19(Headset Mic in),我需要将路径找出来,我发现0x19同时连接了两个节点:0x23和0x22,相应地路径为:8->35->25和9->34->25,顺手也把0x1a的路径也整理出来备用,将这两组数据补充进表格里
 
-|有效节点|10进制|设备名称|路径|
-|---|---|---|---|
-| 0x14 | 20 | Speaker out|**20->2**
-| 0x21 | 33 | HP out |**33->3**|
-| 0x19 | 25 | Headset Mic in|**8->35->25** **9->34->25**|
-| 0x1a | 26 | Headphone Mic in|**8->35->26** **9->34->26**|
-| 0x12 | 18 | Internal Mic in|**8->35->18**|
+| 有效节点 | 10进制 | 设备名称             | 路径                          |
+| ---- | ---- | ---------------- | --------------------------- |
+| 0x14 | 20   | Speaker out      | **20->2**                   |
+| 0x21 | 33   | HP out           | **33->3**                   |
+| 0x19 | 25   | Headset Mic in   | **8->35->25** **9->34->25** |
+| 0x1a | 26   | Headphone Mic in | **8->35->26** **9->34->26** |
+| 0x12 | 18   | Internal Mic in  | **8->35->18**               |
 
 至于0x1a是否有效暂且放到一边,一个包括了有效节点/设备名称/路径的表格就整理完成了,这里***需要强调的一点是:路径数值使用10进制***
 
 
 # 整理ConfigData
 > `ConfigData`的获得有两种方法:这两种方法分别为:通过`codec`里面的`Pin Default`提取以及通过`PinConfigs`提取,然后修正`ConfigData`.下面我们将分别介绍这两种提取方法
- 
+
 
 ## 通过PinConfigs提取ConfigData
 ConfigData数据位于`PinConfigs.kext/Contents/Info.plist`里,`PinConfigs.kext`作为`AppleALC`插件被加载.
 用到的工具:`Plist Editor Pro.app`
 还是以我的ALC256为例:打开`Info.plist`后,使用组合快捷键`⌘+f`打开搜索: `ALC256` 或者 `283902550` ,它会直接定位到你需要查找的数据位置,再按`⌘+g`,将相同的字符串全部搜索完毕,直到它又跳转到第一个搜索结果的位置,结果如下图:
-![PlistEditorPro](http://ous2s14vo.bkt.clouddn.com/PlistEditorPro.png)
+![PlistEditorPro](http://7.daliansky.net/PlistEditorPro.png)
 ALC256的ConfigData的数据有三组,分别对应的LayoutID为:13 28 56
 将这三组ConfigData复制出来:
 
@@ -382,7 +385,7 @@ Unknown Unknown  Line Out at Ext N/A         19 0x13   0x40000000   01371c00 013
     1/8   Black  Speaker at Ext Rear         24 0x18   0x411111f0   01871cf0 01871d11 01871e11 01871f41
     1/8   Black  Speaker at Ext Rear         25 0x19   0x411111f0   01971c10 01971d20 01971e81 01971f02
     1/8   Black  Speaker at Ext Rear         26 0x1a   0x411111f0   01a71cf0 01a71d11 01a71e11 01a71f41
- 	1/8   Black  Speaker at Ext Rear     	 27 0x1b   0x411111f0   01b71cf0 01b71d11 01b71e11 01b71f41  
+    1/8   Black  Speaker at Ext Rear         27 0x1b   0x411111f0   01b71cf0 01b71d11 01b71e11 01b71f41 
  Analog    Pink  Modem Hand at Ext N/A       29 0x1d   0x40779a2d   01d71c2d 01d71d9a 01d71e77 01d71f40
     1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   01e71cf0 01e71d11 01e71e11 01e71f41
     1/8   Black  HP Out at Ext Front         33 0x21   0x02211030   02171c30 02171d10 02171e21 02171f02
@@ -410,7 +413,7 @@ Node	PinDefault		Description
 ----------------------------------------------------------
 ```
 将`PinDefault`进行小端转换[little-endian](https://zh.wikipedia.org/zh-hans/字节序),这里借用一张紫米教程里面的图片进行小端转换的理解:
-![little-endian](http://ous2s14vo.bkt.clouddn.com/little-endian.jpg)
+![little-endian](http://7.daliansky.net/little-endian.jpg)
 就是把`PinDefault`的数据两两对调,比如:`0x12`节点的`[Fixed]	Mic at Int`原始数据为:`0x90a60170`,去掉前面的`0x`,变成`90 a6 01 70`,
 最前面的`90`跑到了最后,最后的`70`又跑到了最前面,中间的`a6`和`01`再对调下,就变成了`70 01 a6 90`.整理后,变成如下的格式:
 
@@ -430,8 +433,9 @@ Node            c  d  e  f              Description
 下一步,我们要对数据进行修正,让它看起来更像`APPLE`.
 
 ## 修正`PinDefault`,并生成`ConfigData`
+
 上一节我们只是把数据进一步地整理出来,并进行了格式化,我们并没有对数据进行修正.本节我们就开始进行`PinDefault`的修正,先上一张我整理出来的表格:
-![pinconfigs](http://ous2s14vo.bkt.clouddn.com/pinconfigs.png)
+![pinconfigs](http://7.daliansky.net/pinconfigs.png)
 
 * 前面我提到过通过Linux找到的节点`0x19`,它在Linux下面显示的设备为`Headset Mic`,在上一节中我们整理出的`0x19`的设备为:`[N/A]	Speaker at Ext Rear` , `PinDefault`值为:`f0 11 11 41`,通过上表我们得知,这个端口是被屏蔽掉的,就是不起作用的节点.
 * 现在我们希望它能正常工作,我的想法是把它修正为:`[Jack] Mic at Ext`,一个可以正常工作的外部麦克输入设备,结合上面的表格,我将`f0 11 11 41`修改为:`70 20 a1 02`.
@@ -439,9 +443,12 @@ Node            c  d  e  f              Description
     * `Mic at Ext` : `f0 11 11 41`->`70 20 ab 02`
     * `HP Out Ext` : `30 10 21 02`->`30 10 2b 02`
 
-更新于:11-15-2017 16:41
 
-继续更新
+
+## 屏蔽无效节点:`f0 00 00 40`
+
+屏蔽掉无效的节点,避免产生杂音和底噪,更详细的描述请见`其它问题`
+
 `0x1d`的节点为无效节点,所以必须把它屏蔽起来,为了让它更符合`APPLE`的规范,我们使用`f0 00 00 40`来屏蔽,包括其它的不用的节点.修正后的数据为:
 
 ```ruby
@@ -460,7 +467,7 @@ Node            c  d  e  f              Description
 现在, 我们可以生成最终的`ConfigData`了,
 `ConfigData`的计算公式为:
 
-```sh
+```Ruby
 Final Config:
 Address + Node + 71c +【c】
 Address + Node + 71d +【d】
@@ -475,7 +482,7 @@ Address + Node + 71f +【f】
 ```
 相应地,其它的节点整理出来的数据如下:
 
-```xml
+```Ruby
 01271c70 01271d01 01271ea6 01271f90
 01371cf0 01371d00 01371e00 01371f40
 01471c40 01471d01 01471e17 01471f90 01470c02
@@ -491,45 +498,42 @@ Address + Node + 71f +【f】
 我将编辑的过程做了段视频,方便大家理解.
 
 <video width="640" height="480" controls>
-<source src="http://ous2s14vo.bkt.clouddn.com/ConfigData.mp4">
+<source src="http://7.daliansky.net/ConfigData.mp4">
 </video>
 
 打开`Sublime Text.app`,按住鼠标中键打开块复制,将`c` `d` `e` `f`下面的数据块拷贝一份到最下面空白处,在第一列按鼠标中键一下拉到下面,输入`Address`值`0`,再把上方的`Node`下面的数据做块复制,粘贴到0后面,再输入:`71c`,再将`01271`做块复制到后面,再分别输入`d` `e` `f`即可.最后在`0x14`和`0x21`节点后面添加两组`EAPD`数据.
 将上面整理出来的数据去掉每行的硬回车后得到的一组数据就是最终的`ConfigData`
+`01271c70 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c70 01971d10 01971eab 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02`
 
-`
-01271c70 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c70 01971d10 01971eab 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02
-`
 到这里,`ConfigData`的数据就算整理完了.
 
 # 找出适合你的id
+
 这一节里,我们就来一起动手找出最适合你的注入id
 正确的注入id可以保证您的声卡各项功能都能正常使用,它至关重要,这里给出的方法也是为了进一步验证前面我们所做的工作.
 到找注入id这一步,您至少已经有了这些数据:
 
 * 声卡基础资料:
 
-| 名称 | 解释 |
-|---|---|
-|Codec: Realtek ALC3246|是告诉了你的声卡型号是ALC3246(ALC256)|
-|Address: 0 | 会告诉你生成configdata的数据的前缀是0,比如上面显示输出信息最后一行的`Modified Verbs in One Line:`后面所有的数据中,每组数据的第一位就是这个 `0` ,如果`Address: 2`,那么每组数据的第一位就是 `2` ,这个后面我们会用到它 |
-|DevID: 283902550 (0x10ec0256) | 283902550是0x10ec0256的10进制值,0x10ec 是指vendorID(芯片供应商ID),是REALTEK的设备标识,0256是指型号,去掉前面的0,您的声卡型号就是:ALC256|
+| 名称                            | 解释                                       |
+| ----------------------------- | ---------------------------------------- |
+| Codec: Realtek ALC3246        | 是告诉了你的声卡型号是ALC3246(ALC256)               |
+| Address: 0                    | 会告诉你生成configdata的数据的前缀是0,比如上面显示输出信息最后一行的`Modified Verbs in One Line:`后面所有的数据中,每组数据的第一位就是这个 `0` ,如果`Address: 2`,那么每组数据的第一位就是 `2` ,这个后面我们会用到它 |
+| DevID: 283902550 (0x10ec0256) | 283902550是0x10ec0256的10进制值,0x10ec 是指vendorID(芯片供应商ID),是REALTEK的设备标识,0256是指型号,去掉前面的0,您的声卡型号就是:ALC256 |
 
 * 整理出来的有效节点及路径
 
-|有效节点|10进制|设备名称|路径|
-|---|---|---|---|
-| 0x14 | 20 | Speaker out|**20->2**
-| 0x21 | 33 | HP out |**33->3**|
-| 0x19 | 25 | Headset Mic in|**8->35->25** **9->34->25**|
-| 0x1a | 26 | Headphone Mic in|**8->35->26** **9->34->26**|
-| 0x12 | 18 | Internal Mic in|**8->35->18**|
+| 有效节点 | 10进制 | 设备名称             | 路径                          |
+| ---- | ---- | ---------------- | --------------------------- |
+| 0x14 | 20   | Speaker out      | **20->2**                   |
+| 0x21 | 33   | HP out           | **33->3**                   |
+| 0x19 | 25   | Headset Mic in   | **8->35->25** **9->34->25** |
+| 0x1a | 26   | Headphone Mic in | **8->35->26** **9->34->26** |
+| 0x12 | 18   | Internal Mic in  | **8->35->18**               |
 
 * 最终的`ConfigData`数据:
+  `01271c20 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c10 01971d10 01971e8b 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02`
 
-`
-01271c20 01271d01 01271ea6 01271f90 01371cf0 01371d00 01371e00 01371f40 01471c40 01471d01 01471e17 01471f90 01470c02 01871cf0 01871d00 01871e00 01871f40 01971c10 01971d10 01971e8b 01971f02 01a71cf0 01a71d00 01a71e00 01a71f40 01b71cf0 01b71d00 01b71e00 01b71f40 01d71cf0 01d71d00 01d71e00 01d71f40 01e71cf0 01e71d00 01e71e00 01e71f40 02171c30 02171d10 02171e2b 02171f02 02170c02
-`
 下一步,我们就要将这些数据`放`进`AppleALC`相应的位置,让它发挥作用.
 
 ## 下载`AppleALC`
@@ -538,18 +542,18 @@ Address + Node + 71f +【f】
 
 1. 创建`AppleALC`的本地仓库的克隆版本:
     * 使用`git`命令,更多`git`命令的用法请参考[git使用简易指南](http://www.bootcss.com/p/git-guide/):
-        
+
         ```sh
         mkdir ~/git # 在家目录下新建立`git`目录
         cd ~/git    # 进入`git`目录
         git clone https://github.com/vit9696/AppleALC   # 克隆AppleALC到本地
         ```
-        
+
     * 或者通过浏览器下载 [AppleALC最新版](https://github.com/vit9696/AppleALC/archive/master.zip) 
 
 2. 打开`AppleALC`目录,进入`Resources`目录,你会发现这里面`躺`着截止到目前所支持的声卡的全部型号.我的声卡是`ALC256`,我就点击`ALC256`为便于理解,我将除了`ALC256`之外的其它型号的声卡目录全部删除了,它看起来如下图所示:
-![ALC_Folder](http://ous2s14vo.bkt.clouddn.com/ALC_Folder.png)我们会发现该目录下包括了一个定义文件`Info.plist`,打开`Info.plist`,你会发现,它定义了一个声卡驱动所需要的数据,`CodecID`后面的`598`是`ALC256`的`0x256`的10进制数值,`CodecName`是声卡名称的描述,这里是`ALC256(3246)`,接下来是`Files`,它分成两部分,一部分是`Layouts`,它定义声卡设备的布局,另一部分是`Platforms`,它定义声卡的平台注入,包括有效节点和路径的定义.
-![ALC256_Info.plist](http://ous2s14vo.bkt.clouddn.com/ALC256_Info.plist.png)
+     ![ALC_Folder](http://7.daliansky.net/ALC_Folder.png)我们会发现该目录下包括了一个定义文件`Info.plist`,打开`Info.plist`,你会发现,它定义了一个声卡驱动所需要的数据,`CodecID`后面的`598`是`ALC256`的`0x256`的10进制数值,`CodecName`是声卡名称的描述,这里是`ALC256(3246)`,接下来是`Files`,它分成两部分,一部分是`Layouts`,它定义声卡设备的布局,另一部分是`Platforms`,它定义声卡的平台注入,包括有效节点和路径的定义.
+     ![ALC256_Info.plist](http://7.daliansky.net/ALC256_Info.plist.png)
 
 
 三个`layout`开头的文件以及三个`Platforms`开头的文件,`Platforms`为路径定义文件.其中`layout13.xml.zlib` `layout28.xml.zlib` `layout56.xml.zlib`就是注入的id,只是你的声卡需要注入的是哪个ID才能获得最佳效果,还需要分析其它的数据.
@@ -568,21 +572,35 @@ Address + Node + 71f +【f】
 
 # 如何修改`layout`和`Platforms`数据
 > 上文中我们提到了通过`PlatformsID`,找出有效节点及路径,最终确定注入的id
- 
+
 如何确认路径是否正确,我应该怎么做呢?先打开`Platforms`文件,需要用到的工具:`zlib转换器.app`.
 操作方法:
 
 * 打开`zlib转换器.app`,把需要解压缩的后缀为.zlib的文件拖进窗口里,按下`CONVERT`按钮,就会在当前的目录下生成去掉了.zlib后缀的可以编辑的.xml文件了.相应地,当你编辑好了的.xml文件,拖进窗口里,按下`CONVERT`按钮,会在当前目录下生成.zlib后缀的文件了.
-  
+
   <video width="640" height="480" controls>
-  <source src="http://ous2s14vo.bkt.clouddn.com/zlib.mp4">
+  <source src="http://7.daliansky.net/zlib.mp4">
   </video>
 
 使用工具`PlistEdit Pro.app`打开`Platforms56.xml`,依次打开`PathMap->0->0->0`,这里的`NodeID`就是节点id.为便于理解,我将`Mic Int`的路径做了说明,如下图显示:
-![Platforms_edit2](http://ous2s14vo.bkt.clouddn.com/Platforms_edit2.png)
+![Platforms_edit2](http://7.daliansky.net/Platforms_edit2.png)
+
 
 
 # 如何新建一个注入id
+
+为什么要建立一个全新的layout-id呢?很多时候,我们其实仿冒声卡驱动,只是为了让自己的声卡驱动正常,而通常的做法是找出一个存在的ID,然后整理数据,修改路径和`ConfigData`,最后编译使用.
+
+那如果`AppleALC`的维护者`vit9696`更新了源代码怎么办呢?你总不能再重复做一遍驱动吧?或者说你好不容易找人帮你做好了一个驱动程序,然后`AppleALc`就升级了,旧的驱动无法用到新的系统当中,这个时候你的选择是什么?继续找人帮你做驱动?或者自己动手仿冒?
+
+其实最好的方法是:如果你的声卡不存在于[AppleALC支持的Codecs列表](https://blog.daliansky.net/AppleALC-Supported-codecs.html)中,或者其中的某个注入id并不会很好地工作,那么你就需要新建一个注入id编译使用,测试无误后,你甚至还可以将这些修改提交给`vit9696`,他会将这些更新合并到`AppleALC`的源代码中,这样以后再有更新你只需要下载个`AppleALC`的发行版直接使用就好了.
+![ALC298_ID99_ALC295_ID13](http://7.daliansky.net/ALC298_ID99_ALC295_ID13.png)
+
+上图中,是我给小米Pro制作的全新的ALC298注入ID:99,只要是小米Pro的机型,可以直接注入id:99来驱动你的声卡.
+
+如果你想制作属于你的专属声卡注入ID,可添加文章最后的QQ群,进入群内一起讨论.
+
+
 
 
 # 编译AppleALC
@@ -594,7 +612,7 @@ Address + Node + 71f +【f】
 打开终端,输入命令:
 
 ```sh
-kextstat | grep AppleALc
+kextstat | grep AppleALC
 ```
 显示内容如下:
 
@@ -630,15 +648,389 @@ ioreg -l | grep layout-id
 其中的`"layout-id"=56`就是指注入id是 `56` ,而`<38000000>`是`56`的16进制
 
 ## 检查`PinConfigurations`
-使用`IORegistryExplorer.app`,找到`HDEF@1F,3`,右侧的`PinConfigurations`就是最终的四个节点的数值,同时我们发现其它的节点已经不存在了,这样的结果正是我们需要的.
-![ioreg_pinconfigurations](http://ous2s14vo.bkt.clouddn.com/ioreg_pinconfigurations.png)
 
- 
+使用`IORegistryExplorer.app`,找到`HDEF@1F,3`,右侧的`PinConfigurations`就是最终的四个节点的数值,同时我们发现其它的节点已经不存在了,这样的结果正是我们需要的.
+![ioreg_pinconfigurations](http://7.daliansky.net/ioreg_pinconfigurations.png)
+
+
 # 其它问题
-耳机切换
-睡眠唤醒
-去除底噪
+## 解决耳机切换/睡眠唤醒/去除底噪等常见问题
+
+> 经常会有群友在使用`AppleALC`声卡仿冒驱动程序驱动了声卡后,出现最多的问题就是外放正常,耳机不正常,具体表现为:耳机在插入一半的时候有声音,完全插入后却没有声音的现象;另一种最常见的现象是开机声音正常,睡眠唤醒后无声/出现杂音/有电流声(底噪)/单声道/只有伴奏音,没有人声等等的问题.
+>
+> 本节教程就让我们来一起解决这些常见问题,还你一个干净的,没有杂音的声卡驱动.
+
+在我们着手解决这些问题之前,需要先说说这些问题是如何产生的:
+
+让我们打开电脑,进入`MacOS`系统后,`AppleALC`仿冒驱动会成功加载`AppleHDA`以驱动你的声卡,这个时候声卡通常工作都是正常的.为了证明`AppleALC`加载后的有效节点的状态,我们需要使用两个[工具](https://github.com/daliansky/dell7000/tree/master/hda-tools)`widget_dump.sh`和`node_dump.sh`,使用方法:打开终端,输入命令:
+
+```bash
+widget_dump.sh
+```
+
+显示的输出信息如下:
+
+```js
+ sky@skys-MacBookPro  ~  widget_dump.sh
+	Pin Widget Control
+		nid = 0x02 --> result 0x00000000
+		nid = 0x03 --> result 0x00000000
+		nid = 0x04 --> result 0x00000000
+		nid = 0x05 --> result 0x00000000
+		nid = 0x06 --> result 0x00000000
+		nid = 0x07 --> result 0x00000000
+		nid = 0x08 --> result 0x00000000
+		nid = 0x09 --> result 0x00000000
+		nid = 0x0a --> result 0x00000000
+		nid = 0x0b --> result 0x00000000
+		nid = 0x0c --> result 0x00000000
+		nid = 0x0d --> result 0x00000000
+		nid = 0x0e --> result 0x00000000
+		nid = 0x0f --> result 0x00000000
+		nid = 0x10 --> result 0x00000000
+		nid = 0x11 --> result 0x00000000
+		nid = 0x12 --> result 0x00000020	# 内置麦克风
+		nid = 0x13 --> result 0x00000000
+		nid = 0x14 --> result 0x00000040	# 喇叭
+		nid = 0x15 --> result 0x00000000
+		nid = 0x16 --> result 0x00000000
+		nid = 0x17 --> result 0x00000000
+		nid = 0x18 --> result 0x00000000
+		nid = 0x19 --> result 0x00000000	# 耳麦
+		nid = 0x1a --> result 0x00000000
+		nid = 0x1b --> result 0x00000000
+		nid = 0x1c --> result 0x00000000
+		nid = 0x1d --> result 0x00000000
+		nid = 0x1e --> result 0x00000000
+		nid = 0x1f --> result 0x00000000
+		nid = 0x20 --> result 0x00000000
+		nid = 0x21 --> result 0x00000000	# 耳机
+		nid = 0x22 --> result 0x00000000
+		nid = 0x23 --> result 0x00000000
+		nid = 0x24 --> result 0x00000000
+```
+
+我们可以看到,刚开机没有插入耳机的情况下,只有外放的喇叭和内置的麦克风是工作的,其它所有的节点的数据都是空白的.
+
+当我们插入耳机后,再输入命令:
+
+```bash
+widget_dump.sh
+```
+
+显示的输出信息如下:
+
+```js
+ sky@skys-MacBookPro  ~  widget_dump.sh
+	Pin Widget Control
+		nid = 0x02 --> result 0x00000000
+		nid = 0x03 --> result 0x00000000
+		nid = 0x04 --> result 0x00000000
+		nid = 0x05 --> result 0x00000000
+		nid = 0x06 --> result 0x00000000
+		nid = 0x07 --> result 0x00000000
+		nid = 0x08 --> result 0x00000000
+		nid = 0x09 --> result 0x00000000
+		nid = 0x0a --> result 0x00000000
+		nid = 0x0b --> result 0x00000000
+		nid = 0x0c --> result 0x00000000
+		nid = 0x0d --> result 0x00000000
+		nid = 0x0e --> result 0x00000000
+		nid = 0x0f --> result 0x00000000
+		nid = 0x10 --> result 0x00000000
+		nid = 0x11 --> result 0x00000000
+		nid = 0x12 --> result 0x00000000	# 内置麦克风
+		nid = 0x13 --> result 0x00000000
+		nid = 0x14 --> result 0x00000000	# 喇叭	
+		nid = 0x15 --> result 0x00000000
+		nid = 0x16 --> result 0x00000000
+		nid = 0x17 --> result 0x00000000
+		nid = 0x18 --> result 0x00000000
+		nid = 0x19 --> result 0x00000020	# 耳麦
+		nid = 0x1a --> result 0x00000000
+		nid = 0x1b --> result 0x00000000
+		nid = 0x1c --> result 0x00000000
+		nid = 0x1d --> result 0x00000000
+		nid = 0x1e --> result 0x00000000
+		nid = 0x1f --> result 0x00000000
+		nid = 0x20 --> result 0x00000000
+		nid = 0x21 --> result 0x000000c0	# 耳机
+		nid = 0x22 --> result 0x00000000
+		nid = 0x23 --> result 0x00000000
+		nid = 0x24 --> result 0x00000000
+```
+
+这时我们会发现,之前工作的喇叭和内置麦克风的数据已经发生了变化
+
+|  节点  |         名称          |      外放状态      |      耳机状态      |
+| :--: | :-----------------: | :------------: | :------------: |
+| 0x12 |   内置麦克风(Mic Int)    | 0x000000**20** |   0x00000000   |
+| 0x14 |   喇叭(Speaker Out)   |   0x00000040   |   0x00000000   |
+| 0x19 | 耳麦(Mic Ext/Line In) |   0x00000000   | 0x000000**20** |
+| 0x21 |     耳机(HP Out)      |   0x00000000   |   0x000000c0   |
+
+通过上面的表格,我们可以发现内部设备和外部设备正常工作的情况下会自动切换.
+
+**widget_dump.sh是调用`hda-verb`这个外部命令执行的,`hda-verb`依赖于`CodecCommander`,所以请确认你已经加载了`CodecCommander`**
+
+### CodecCommander *编解码器指挥官*
+
+`CodecCommander`用于更新在扬声器或耳机节点上使用给定放大器的HDA（高清晰度音频）编解码器上的EAPD（外部放大器）状态（两者，甚至在某些情况下甚至是额外的）。 在OSX中，EAPD在休眠状态下关闭，因此唤醒机器后音频仍然不起作用。
+
+通常情况下，这个外部放大器出现在笔记本电脑和ITX板上，在使用ALC269，ALC665和类似编解码器的机器上最常见。 当机器进入睡眠状态时，功放处于关机状态，在唤醒之后，即使音频正常工作，扬声器/耳机仍然没有声音，因为功放需要发送一个编解码器命令才能启动。
+
+最典型的两条命令是:
+
+```bash
+0x19 SET_PIN_WIDGET_CONTROL 0x24
+0x21 SET_UNSOLICITED_ENABLE 0x82
+```
+
+其中:`SET_PIN_WIDGET_CONTROL`是作用于`Mic Ext`节点,`SET_UNSOLICITED_ENABLE`是作用于`HP Out`节点
+
+![Pin-ctls](http://7.daliansky.net/Pin-ctls.png)
+
+#### Pin Widget Control
+
+关于`Pin Widget Control`的描述请参阅[英特尔HDA规范 7.3.3.13](https://www.intel.com/content/dam/www/public/us/en/documents/product-specifications/high-definition-audio-specification.pdf)
+
+Enable VRef
+
+|      | Verb ID | Payload (8 Bits)     | Response (32 Bits)                       |
+| ---- | ------- | -------------------- | ---------------------------------------- |
+| Get  | F07h    | 0                    | Bits 31:8 are 0<br />Bits 7:0 are PinCntl |
+| Set  | 707h    | Bits 7:0 are PinCntl | 0                                        |
+
+PinCntl定义:
+
+| 7            | 6          | 5         | 4:3  | 2         | 1:0             |
+| ------------ | ---------- | --------- | ---- | --------- | --------------- |
+| H-Phn Enable | Out Enable | In Enable | Rsvd | VrefEn[2] | VRefEn[1:0]/EPT |
+
+VRefEn 值:
+
+| VRefEn Encoding | VREF Signal Level |
+| --------------- | ----------------- |
+| 000b            | Hi-Z              |
+| 001b            | 50%               |
+| 010b            | Ground (0 V)      |
+| 011b            | Reserved          |
+| 100b            | 80%               |
+| 101b            | 100%              |
+| 110b-111b       | Reserved          |
+
+SET_PIN_WIDGET_CONTROL:
+
+|        |      |      |      | 7654 3210 |      |                             |
+| :----: | :--: | :--: | :--: | :-------: | :--: | :-------------------------: |
+| ALC256 |      |      |      |           |      |                             |
+|  0x19  | 707  |  24  |  ->  | 0010 0100 |  ->  |    In Enable,VrefEn 80%     |
+|  0x21  | 707  |  C0  |  ->  | 1100 0000 |  ->  | Headphone Enable,Out Enable |
+
+SET_PIN_WIDGET_CONTROL命令最终格式为:
+
+`Address`+`NodeID`+707+`Pin-ctls`
+
+最终的命令为:`01970724`
+
+关于这部分的讨论请参阅[Any fix to the Garbled/Distorted Headphone issue?](https://www.tonymacx86.com/threads/any-fix-to-the-garbled-distorted-headphone-issue.159031/page-3)
+
+> 原引:
+>
+> RehabMan对于VrefEn和EPT的部分讨论内容:
+>
+> 我也尝试了节点0x19的0x20。 这也工作。 所以不知道在我的情况下是否需要VrefEn或EPT。 但是他们与巫毒有关，所以我使用了这个价值。我没有看过Voodoo是否明确地设置了这些值，或者是复位后的状态结果。 
+>
+> 我认为我的设置0xC0到0x21也是没有必要的（仍在试验）。 节点0x19不在任何路径图上，所以我对于如何知道节点需要调整有些困惑。 尽管它在Linux转储中有连接到路径图上的其他节点。 进一步造成神秘，它被描述为Linux转储中的外部麦克风插孔。 为什么麦克风上的控件配置会影响耳机，这是一个谜。 
+>
+> 还要注意，VrefEn和EPT之间有一些奇怪的重叠，这在规范中是不清楚的（它们似乎都使用相同的位）。 例如，将VRefEn设置为001b或010b（50％/地面）将设置标记为“保留”的EPT编码01b / 10b。 它确实说EPT是特定于“关联的数字Pin Widget”，所以也许这个重叠解释了VrefEn不适用于这样的小部件。 它还指出VRefEn的有效值取决于PinCaps，所以推测数字Pin小部件的PinCap不包含任何有效的VRefEn值。 
+>
+> 如果你沿着这条路走下去，你应该计划阅读大量的东西，让整个过程神秘化。
+
+#### Unsolicited Response 未经请求的响应
+
+![Unsolicited](http://7.daliansky.net/Unsolicited.png)
+
+关于`Unsolicited Response`的描述请参阅[英特尔HDA规范 7.3.3.14](https://www.intel.com/content/dam/www/public/us/en/documents/product-specifications/high-definition-audio-specification.pdf)
+
+非请求响应控件确定节点是否被允许发送主动提供的响应，以及该标签将用于响应。此控制仅适用于支持主动响应的节点，如Function Group Type参数（第7.3.4.4节）和Audio Widget Capabilities参数（第7.3.4.6节）中所声明的。在获取或设置此控件之前，应该查询节点以确定它是否支持未经请求的响应。
+
+Connection Select Control连接选择控制:
+
+|      | Verb ID | Payload (8 Bits)        | Response (32 Bits)                       |
+| ---- | ------- | ----------------------- | ---------------------------------------- |
+| Get  | F08h    | 0                       | Bits 31:8 are 0<br />EnableUnsol is bits 7:0 |
+| Set  | 708h    | EnableUnsol is bits 7:0 | 0                                        |
+
+EnableUnsol 格式:
+
+| 7      | 6    | 5:0  |
+| ------ | ---- | ---- |
+| Enable | 0    | Tag  |
+
+设定值是8bits的一个数。记作a7 a6 a5 a4 a3 a2 a1 a0.
+a7=1，表示enabled。
+a6=0，没具体应用，不用管。
+a5-a0，存放tag，需要将tag的值用6为数的二进制值表示
+tag=1（十进制）=000001（二进制）
+则a7 a6 a5 a4 a3 a2 a1 a0=10000001
+a7 a6 a5 a4=1000（二进制）=8（十进制）
+a3 a2 a1 a0=0001（二进制）=1（十进制）
+则设定值=81
+最后加得到的设定值加1，即82
+
+`SET_UNSOLICITED_ENABLE`命令最终格式为:
+
+`Address`+`NodeID`+708+`Unsolicited`
+
+最终的命令为:
+
+`02170882`
+
+
+
+目前`CodecCommander`所起的作用有限,我基本上都忽略了`CodecCommander`的存在,因为它并不能从根本上解决这些问题.在我完善我的`ALC256`声卡驱动期间,我还试用过`EAPDFix`,最后都不得不放弃治疗.直到我遇到了`ALCPlugFix`,它能解决几乎所有的耳机切换问题.
+
+### ALCPlugFix能做什么?
+
+- 它可以解决耳机插拔状态的切换
+- 它是通过使用命令:`hda-verb 0xNode SET_PIN_WIDGET_CONTROL 0xVerbs`的方式进行状态切换
+  - `hda-verb`的由来
+  - `hda-verb`是linux下面的`alsa-project`的一条命令，它的作用是发送HD-audio命令 
+
+### ALCPlugFix如何使用?
+
+- 将`ALCPlugFix`同步到本地
+
+  ```sh
+  git clone https://github.com/daliansky/ALCPlugFix
+  ```
+
+- 打开`ALCPlugFix`目录下面的`main.m`,将包含`hda-verb`语句的几行修改成如图所示
+  ![ALCPlugFix_ALC256](http://7.daliansky.net/ALCPlugFix_ALC256.png)
+
+
+- 其中`0x12`是`Mic Int`节点,`0x19`是`Mic Ext`节点,之所以要这么修改,是因为我的`ALC256`的`0x19`节点总是无法工作,在插入耳机的时候我希望内置的`Mic Int`可以工作的同时还可以使用耳机.
+- 将`XCODE`编译生成的`ALCPlugFix`文件复制到`alc_fix`目录,然后双击`install双击自动安装.command`,输入用户密码即可.
+
+[ALCPlugFix](https://github.com/daliansky/ALCPlugFix)工具下载
+
+> 刚才我前面讲了,`ALCPlugFix`是依赖于`CodecCommander`执行的,那我为什么不介绍下`CodecCommander`的工作原理呢,其实说白了`CodecCommander`里面通常执行的也是`hda-verb 0x19 0x707 0x20`之类的语句,只是在睡醒唤醒后`CodecCommander`已经无法执行`hda-verb 0x19 0x707 0x20`这样的语句了,而`ALCPlugFix`却是以守护进程的方式存在于系统中,无论什么时候它都会监听声卡的状态,该切换时它就会发出命令切换,这样就保证了声卡总是可以工作在正确的状态下.
+
+基本上所有的耳机睡眠后没有声音的,只需要使用一条命令:`hda-verb 0x19 0x707 0x20`,就可以让你的耳机出声的.**当然前提是你得先加载了`CodecCommander`这个驱动**.估计我写完这段你们看完了还是一头雾水,我教大家一个简单的记法:`ALCPlugFix`作用于耳机,所以你需要知道自己的两个耳机节点,而`0x19`是耳麦的麦克风输入节点,只要找对了耳麦的节点,一条命令就可以搞定你的耳机切换.
+
+
+
+### 杂音和底噪的去除
+
+在着手解决这个问题之前,让我们先来搞清楚杂音和底噪产生的原因.
+
+打开终端,输入命令:
+
+```bash
+node_dump.sh
+```
+
+它会输出很多的信息出来,我们只需要最后面的这组数据:
+
+```js
+	Configuration Default
+		nid = 0x02 --> result 0x00000000
+		nid = 0x03 --> result 0x00000000
+		nid = 0x04 --> result 0x00000000
+		nid = 0x05 --> result 0x00000000
+		nid = 0x06 --> result 0x00000000
+		nid = 0x07 --> result 0x00000000
+		nid = 0x08 --> result 0x00000000
+		nid = 0x09 --> result 0x00000000
+		nid = 0x0a --> result 0x00000000
+		nid = 0x0b --> result 0x00000000
+		nid = 0x0c --> result 0x00000000
+		nid = 0x0d --> result 0x00000000
+		nid = 0x0e --> result 0x00000000
+		nid = 0x0f --> result 0x00000000
+		nid = 0x10 --> result 0x00000000
+		nid = 0x11 --> result 0x00000000
+		nid = 0x12 --> result 0x90a60170	# 内置麦克风
+		nid = 0x13 --> result 0x400000f0
+		nid = 0x14 --> result 0x90170140	# 喇叭
+		nid = 0x15 --> result 0x00000000
+		nid = 0x16 --> result 0x00000000
+		nid = 0x17 --> result 0x00000000
+		nid = 0x18 --> result 0x400000f0
+		nid = 0x19 --> result 0x02ab1070	# 耳麦
+		nid = 0x1a --> result 0x400000f0
+		nid = 0x1b --> result 0x400000f0
+		nid = 0x1c --> result 0x00000000
+		nid = 0x1d --> result 0x400000f0
+		nid = 0x1e --> result 0x400000f0
+		nid = 0x1f --> result 0x00000000
+		nid = 0x20 --> result 0x00000000
+		nid = 0x21 --> result 0x022b1030	# 耳机
+		nid = 0x22 --> result 0x00000000
+		nid = 0x23 --> result 0x00000000
+		nid = 0x24 --> result 0x00000000
+```
+
+这些数据里:`0x00000000`是无效的节点,`0x400000f0`是被屏蔽掉的节点.其它的四个有效的节点我做了备注,方便你们看清楚.这些`PinConfigurations`决定了你的声卡音质.如果你的命令输出信息里面除了有效节点和`0x400000f0`之外的其它任何格式的数据都会产生杂音和底噪.比如`0x40000000`或者`0x411111f0`,这些无效的节点就会一直在起作用,这就好比一个流行乐队里,需要一个架子鼓,一台电钢琴,两个吉他手,再加上一个歌手,如果你生硬地再加进一把小提琴,再弄个竖琴,就会不和谐,就会产生噪音.
+
+再让我们搬出`widget_dump.sh`命令:
+
+```bash
+widget_dump.sh
+```
+
+输出信息如下:
+
+```js
+	Pin Widget Control
+		nid = 0x02 --> result 0x00000000
+		nid = 0x03 --> result 0x00000000
+		nid = 0x04 --> result 0x00000000
+		nid = 0x05 --> result 0x00000000
+		nid = 0x06 --> result 0x00000000
+		nid = 0x07 --> result 0x00000000
+		nid = 0x08 --> result 0x00000000
+		nid = 0x09 --> result 0x00000000
+		nid = 0x0a --> result 0x00000000
+		nid = 0x0b --> result 0x00000000
+		nid = 0x0c --> result 0x00000000
+		nid = 0x0d --> result 0x00000000
+		nid = 0x0e --> result 0x00000000
+		nid = 0x0f --> result 0x00000000
+		nid = 0x10 --> result 0x00000000
+		nid = 0x11 --> result 0x00000000
+		nid = 0x12 --> result 0x00000000	# 内置麦克风
+		nid = 0x13 --> result 0x00000000
+		nid = 0x14 --> result 0x00000000	# 喇叭	
+		nid = 0x15 --> result 0x00000000
+		nid = 0x16 --> result 0x00000000
+		nid = 0x17 --> result 0x00000000
+		nid = 0x18 --> result 0x00000000
+		nid = 0x19 --> result 0x00000020	# 耳麦
+		nid = 0x1a --> result 0x00000020				# 无效节点
+		nid = 0x1b --> result 0x00000000
+		nid = 0x1c --> result 0x00000000
+		nid = 0x1d --> result 0x00000020				# 无效节点
+		nid = 0x1e --> result 0x00000000
+		nid = 0x1f --> result 0x00000000
+		nid = 0x20 --> result 0x00000000
+		nid = 0x21 --> result 0x000000c0	# 耳机
+		nid = 0x22 --> result 0x00000000
+		nid = 0x23 --> result 0x00000000
+		nid = 0x24 --> result 0x00000000
+```
+
+我故意在四个有效的节点之外添加了两个无效的节点,为了让大家看清楚一些,这些无效的节点就会工作,它会产生底噪,尤其是戴上耳机,关闭音源,就会听到沙沙沙的声音,也有人说它是电流声,严重时还会产生杂音,包括单声道输出等等.
+
+既然我们知道了问题是如何产生的,那么就让我们来消除这些杂音,还原干净的声音.
+
+让我们回到`整理ConfigData`这一章,**将有效节点之外的其它节点全部使用`f0 00 00 40`进行屏蔽**.
+
+
+
 ## 声卡驱动了,音量调节的图标也显示正常,就是不发声怎么办
+
 如果您的声卡使用了AppleALC,也注入了正确的ID后不发声怎么办呢?这个问题就出现在有效节点和路径不正确上面.
 所谓条条大路通罗马,我们总不能在同一棵树上吊死吧.现在可以请出[VoodooHDA](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10)万能声卡驱动程序[下载链接](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/VoodooHDA_2.9.0_Clover-V11.dmg)了,说它万能是不正确的,如果它万能了估计就没`AppleALC`啥事儿了吧.这里可以借助`VoodooHDA`自带的应用程序:[getdump](https://github.com/daliansky/VoodooHDA-2.9.0-Clover-V10/raw/master/getdump),使用方法:打开终端,输入命令:
 
@@ -648,43 +1040,58 @@ sudo chmod +x /usr/local/bin/getdump    # 为getdump添加执行权限
 getdump > ~/Desktop/voodoo_dump.txt
 ```
 用它可以生成一份`voodoo_dump.txt`的文件,里面会有两段以`DUMPING Playback/Record Paths`开头的文字描述,这里面即包括了有效节点,同时也包括了有效的路径
-![path1](http://ous2s14vo.bkt.clouddn.com/path1.png)
-![path2](http://ous2s14vo.bkt.clouddn.com/path2.png)
+![path1](http://7.daliansky.net/path1.png)
+![path2](http://7.daliansky.net/path2.png)
 从上面的两张截图中,可以将有效的节点和路径整理出下面的表格:
 
-|有效节点|10进制|设备名称|路径|
-|---|---|---|---|
-| 0x14 | 20 | Speaker out|**20->12->2**
-| 0x21 | 33 | HP out |**33->13->3**|
-| 0x19 | 25 | Headset Mic in|**8->35->24** **8->35->29备用**|
-| 0x12 | 18 | Internal Mic in|**9->34->18** **9->34->29备用**|
+| 有效节点 | 10进制 | 设备名称            | 路径                            |
+| ---- | ---- | --------------- | ----------------------------- |
+| 0x14 | 20   | Speaker out     | **20->12->2**                 |
+| 0x21 | 33   | HP out          | **33->13->3**                 |
+| 0x19 | 25   | Headset Mic in  | **8->35->24** **8->35->29备用** |
+| 0x12 | 18   | Internal Mic in | **9->34->18** **9->34->29备用** |
 有了这个表格,再结合`configdata`,找出有效的ID,编译`AppleALC`,注入ID并使用声卡驱动.
 
+## 如果还不出声怎么办？
+
+试试打开终端，输入这两条命令：
+
+```bash
+sudo kextunload /System/Library/Extensions/AppleHDA.kext
+sudo kextload /System/Library/Extensions/AppleHDA.kext 
+```
+
+**这两条命令是重新加载AppleHDA驱动**
+
+
+
 # HDA工具下载及使用
+
 制作声卡仿冒需要用到的工具,我已经同步到仓库,您可以打包下载也可以通过git同步到本地
 
 * 下载链接:[https://github.com/daliansky/dell7000/tree/master/hda-tools](https://github.com/daliansky/dell7000/tree/master/hda-tools)
 * 如何安装
     * 将`hda-tools`目录下的所有文件复制到`/usr/local/bin`下,如果`/usr/local/bin`目录不存在,需要新建立,命令如下:
-    
+
     ```sh
-sudo mkdir /usr/local/bin   # 建立/usr/local/bin子目录
-sudo cp ~/Downloads/hda-tools/* /usr/local/bin  # 将hda-tools目录下所有的应用程序复制到/usr/local/bin目录下
-```
+    sudo mkdir /usr/local/bin   # 建立/usr/local/bin子目录
+    sudo cp ~/Downloads/hda-tools/* /usr/local/bin  # 将hda-tools目录下所有的应用程序复制到/usr/local/bin目录下
+    ```
 * 如何使用
     * 打开终端,输入命令,直接执行.例如:
-
     ```sh 
     verbit.sh codec#0 > codec_dump.txt    # 有效节点格式化
     codecgraph codec#0    # 自动生成pathmap图,文件位于codec#0相同目录下
     hda-verb 0x19 0x707 0x20    # 耳机睡眠唤醒无声修正
     widget_dump.sh  # 读取SET_PIN_WIDGET_CONTROL数值 
-    ```
-    
+	```
+
 # 关于打赏
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 

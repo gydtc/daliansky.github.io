@@ -30,7 +30,7 @@ categories:
 |声卡|瑞昱  @ 英特尔 High Definition Audio 控制器|
 |网卡|英特尔 Dual Band Wireless-AC 7265|
 
-![HP_ENVY_Laptop_13-ad1xx](http://ous2s14vo.bkt.clouddn.com/HP_ENVY_Laptop_13-ad1xx.jpg)
+![HP_ENVY_Laptop_13-ad1xx](http://7.daliansky.net/HP_ENVY_Laptop_13-ad1xx.jpg)
 
 
 ## 制作EFI
@@ -47,7 +47,7 @@ categories:
 1. 声卡：型号为ALC298，注入ID：28，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息；
 2. 网卡：INTEL的无线网卡截止到目前还是全球无解，使用购买赠送的TYPE-C转EtherNet网卡免驱动直接使用；
 3. 显卡：Intel UHD Graphics 620，Platform-id为：0x59170000，目前还没法原生驱动，上次在安装[小米Pro](https://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html)的时候已经折腾很久也没有驱动上，昨晚又花了近三个小时还是无果，最后采取的是仿冒方式，Platform-id为：0x19160000，通过SSDT-Config.aml注入，修改显存为2048MB；通过读取Clover的源程序，发现UHD 620仿冒的是HD 620的Platform-id:0x59160000，有机会再测试吧。
-   ![59170000](http://ous2s14vo.bkt.clouddn.com/59170000.png)
+   ![59170000](http://7.daliansky.net/59170000.png)
 4. 蓝牙使用Intel，工作正常；
 5. 电池信息正常；
 6. 触摸板正常工作；
@@ -56,20 +56,20 @@ categories:
 9. PCI设备信息未修正；
 
 ## 系统截图
-![about](http://ous2s14vo.bkt.clouddn.com/about.png)
+![about](http://7.daliansky.net/about.png)
 *** 备注:该截图为显卡未驱动状态 ***
 
-![hw-list](http://ous2s14vo.bkt.clouddn.com/hw-list.png)
+![hw-list](http://7.daliansky.net/hw-list.png)
 
-![NVMe](http://ous2s14vo.bkt.clouddn.com/NVMe.png)
+![NVMe](http://7.daliansky.net/NVMe.png)
 
-![ALC298_ID28](http://ous2s14vo.bkt.clouddn.com/ALC298_ID28.png)
+![ALC298_ID28](http://7.daliansky.net/ALC298_ID28.png)
 
-![BlueTooth](http://ous2s14vo.bkt.clouddn.com/BlueTooth.png)
+![BlueTooth](http://7.daliansky.net/BlueTooth.png)
 
-![USB](http://ous2s14vo.bkt.clouddn.com/USB.png)
+![USB](http://7.daliansky.net/USB.png)
 
-![Power](http://ous2s14vo.bkt.clouddn.com/Power.png)
+![Power](http://7.daliansky.net/Power.png)
 
 ## EFI更新源
 [https://github.com/daliansky/hp-envy13](https://github.com/daliansky/hp-envy13)
@@ -80,6 +80,7 @@ categories:
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
 

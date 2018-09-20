@@ -20,8 +20,8 @@ categories:
 getdump > ~/Desktop/voodoo_dump.txt
 ```
 用它可以生成一份`voodoo_dump.txt`的文件,里面会有两段以`DUMPING Playback/Record Paths`开头的文字描述,这里面即包括了有效节点,同时也包括了有效的路径
-![path1](http://ous2s14vo.bkt.clouddn.com/path1.png)
-![path2](http://ous2s14vo.bkt.clouddn.com/path2.png)
+![path1](http://7.daliansky.net/path1.png)
+![path2](http://7.daliansky.net/path2.png)
 从上面的两张截图中,可以将有效的节点和路径整理出下面的表格:
 
 |有效节点|10进制|设备名称|路径|
@@ -40,5 +40,6 @@ getdump > ~/Desktop/voodoo_dump.txt
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 

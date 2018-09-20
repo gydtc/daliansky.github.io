@@ -34,15 +34,15 @@ categories:
 | Intel HD Graphics 630 | 0x591b0000 | MacBookPro14,3 | 3 | 1 | 1 | 1 |
 
 * 还需要在`CLOVER/kexts/Other`放入[Lilu.kext](https://github.com/vit9696/Lilu/releases)和[IntelGraphicsFixup.kext](https://sourceforge.net/projects/intelgraphicsfixup/)，其它的基于`Lilu`的插件列表请稳步：[Lilu插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)
-* 更多的`platform-id`请移步：[黑苹果必备：Intel核显platform ID整理](https://blog.daliansky.net/2017/08/31/Intel-core-display-platformID-finishing/#more)
+* 更多的`platform-id`请移步：[黑苹果必备：Intel核显platform ID整理](https://blog.daliansky.net/Intel-core-display-platformID-finishing/#more)
 
 ## `系统偏好设置`里的`触控板`设置是空白的
 * 请更新`VoodooPS2Controller.kext`到1.8.25或以上版本，[VoodooPS2Controller.kext下载链接](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller)
- 
+
 ## HD4400 / HD4600在Safari浏览器播放视频崩溃
 * 在`CLOVER/kexts/Other`放入[Lilu.kext](https://github.com/vit9696/Lilu/releases)和[IntelGraphicsFixup.kext](https://sourceforge.net/projects/intelgraphicsfixup/)
 * 还有可能会需要[IntelGraphicsDVMTFixup](https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup)
-![lilu+IntelGraphicsFixup](http://ous2s14vo.bkt.clouddn.com/lilu+IntelGraphicsFixup.png)
+![lilu+IntelGraphicsFixup](http://7.daliansky.net/lilu+IntelGraphicsFixup.png)
 
 > 延伸阅读：其它的基于`Lilu`的插件列表请稳步：[Lilu插件列表](https://blog.daliansky.net/2017/08/25/Existing-Lilu-Plugins/)
 
@@ -167,6 +167,6 @@ MatchOS:    10.13.x
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
 # QQ群:
-331686786 [一起黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)
-
+331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
+688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 
