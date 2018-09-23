@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Intel FB-Patcher使用教程及插入姿势]]></title>
+    <url>%2FIntel-FB-Patcher-tutorial-and-insertion-pose.html</url>
+    <content type="text"><![CDATA[Intel FB-Patcher使用教程及插入姿势随着macOS Mojave的发行，之前的通过CLOVER-KextsToPatch通过修补帧缓冲的方法已经失效了，尤其是SkyLake及以后架构。您现在必须使用Lilu + WhateverGreen的Debug版本以及在boot args中添加-igfxdump`引导标志，启动系统后，它会在系统的根目录下生成一个framebuffer的二进制转储。输出将在系统盘的根目录下：/AppleIntelFramebuffer_GEN_KERNX_Y（如AppleIntelFramebuffer_9_18.0）。然后，您可以使用INTEL FB-Patcher这个工具，文件- &gt;打开并可以查看帧缓冲器数据。然后，您可以用它来为您的platform-id生成帧缓冲的补丁，它位于config.plist/Devices/Properties。注意：您现在可以使用Framebuffer-&gt; MacOS的10.13.6（17G2112）菜单选项而不再创建这个二进制转储的补丁了。欲了解更多信息，请阅读使用WhateverGreen英特尔帧缓冲修补指南。中文版：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理功能支持Sandy Bridge，Ivy Bridge，Haswell，Broadwell，SKYLAKE，KabyLake，Coffee Lake, Cannon Lake Ice Lake几乎所有的平台创建所有的显示接口连接和VRAM补丁检测自动修补程序创建的变化创建Clover补丁，支持hex，base64或Devices/Properties等三种格式显示原生GPU和型号标识显示和编辑内存信息，如Stolen，Framebuffer，VRAM，Cursor等翻滚一些项目的其他信息（Tool tips）直接读取已加载生效的xxxFramebuffer kext的数据文件-&gt;打开通过Debug版本的WhatEverGreen.kext的-igfxdump引导标志生成的Framebuffer文件文件- &gt;导出&gt;Clover config.plist文件-&gt;导出- &gt; Framebuffer.txt修补音频布局ID添加USB端口限制补丁插拔USB2 / USB3/Type-C设备和设定的端口的连接器类型然后生成一个USBPower.kext高级修补选项（DVMT-prealloc 32 MB ，VRAM 2048 MB，禁用eGPU，启用HDMI20（4K），欺骗SKL音频，DP-&gt;HDMI，USB端口限制，FB端口限制等）Layout-id修补安装最新版本的Lilu和AppleALC设置config.plist/Devices/Audio/Inject=NO通过下拉列表设置Layout Id检查补丁：General-&gt;AudioFile-&gt;Export-&gt;Clover config.plist重启如果没生效请重复第3步：更换不同的layout-idUSB端口修补应用USB端口限制补丁(在Patch-&gt;Advanced) 然后导出 File-&gt;Export-&gt;Clover config.plist 将USBInjectAll.kext 驱动放进EFI/CLOVER/kexts/Other你也许还会需要XHCI-200-series-injector.kext,XHCI-300-series-injector.kext或者XHCI-x99-injector.kext，这取决于你所使用的INTEL芯片组重启机器，重新打开Intel FB-Patcher转到General-&gt;USB接口(见截屏)分别插入和拔出USB 2.0和USB 3.0设备，要求：将机器上的每个USB端口都插拔一遍。可用的端口将以突出的颜色标出设置每个端口，在下拉列表中选择适当的接口类型连接到USB3端口应设置为USB3(注HSxx端口)TypeC:如果使用相同的HSxx / SSxx在两个方向，则它有一个内部开关（使用“TypeC + SW”）如果在每个方向使用一个不同HSxx / SSxx，然后它没有开关（使用“TypeC” ）备注：这块不知道应该如何翻译，请知情者告知，万分感谢使用删除按钮移除无用的端口使用Export按钮创建USBPower.kext ，它位于你的桌面，将生成的USBPower.kext复制进 EFI/CLOVER/kexts/Other你现在可以删除掉USBInjectAll.kext 以及关闭端口限制的补丁了FAQQ. 什么是USBPower.kext?A. 它是一个Codeless Kernel Extension 用于注入USB端口，让所有的USB端口都能正常工作Q. 我还需要SSDT-UIAC.aml吗A. 不，这个方法生成的是一个空壳的无代码的kext驱动下载链接http://headsoft.com.au/download/mac/FBPatcher.zip鸣谢vit9696 for WhateverGreen (full credits), Lilu (full credits), AppleALC (full credits), USBPower.kext and additional helpvit9696 for IntelFramebuffer.bt with additional work by bcc9, Piker-Alpha and joevtDalianSky for Intel Core Platform ID and SMBIOS Quick Referencevandroiy2013 for audio id data from AppleALCRehabMan for AllData patch method and various technical info未完，持续更新中]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>FB</tag>
+        <tag>patcher</tag>
+        <tag>framebuffer</tag>
+        <tag>帧缓冲</tag>
+        <tag>USB</tag>
+        <tag>audio</tag>
+        <tag>VRAM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[不借助任何工具将CLOVER引导添加进UEFI的正确姿势]]></title>
     <url>%2FAdd-CLOVER-boot-to-UEFI-without-any-tools.html</url>
     <content type="text"><![CDATA[不借助任何工具将CLOVER引导添加进UEFI的正确姿势经常安装hackintosh的同学会发现，安装完macOS后，需要做的第一件事情就要将EFI移进机器自带的磁盘中，同时添加CLOVER引导项到UEFI中以实现CLOVER引导加载macOS。通常的作法是进Windows/PE工具里，使用类似EASY UEFI或者BOOTICE之类的工具添加一条引导记录到UEFI中。现在教给大家一招：不借助任何工具，使用CLOVER自带的功能添加一个CLOVER引导项到UEFI中。、操作步骤：1.进入CLOVER主界面：2.将光标移动到Clover Boot Options，回车：3.选择Add Clover Boot Options，回车：4.重新启动，按F8或者F12选择Boot Clover with EFI之类的引导项进入CLOVER引导macOS；5.收工。]]></content>
@@ -8,8 +26,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>CLOVER</tag>
         <tag>教程</tag>
+        <tag>CLOVER</tag>
         <tag>UEFI</tag>
       </tags>
   </entry>
@@ -52,11 +70,11 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>framebuffer</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
-        <tag>framebuffer</tag>
         <tag>patch</tag>
       </tags>
   </entry>
@@ -145,9 +163,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>教程</tag>
         <tag>CLOVER</tag>
         <tag>小米PRO</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -158,8 +176,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>AppleALC</tag>
         <tag>教程</tag>
+        <tag>AppleALC</tag>
         <tag>AppleHDA</tag>
         <tag>HDMI</tag>
         <tag>Audio</tag>
@@ -266,8 +284,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>platform-id</tag>
         <tag>接口</tag>
+        <tag>platform-id</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -310,11 +328,11 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>USB</tag>
         <tag>Ubuntu</tag>
         <tag>Linux</tag>
         <tag>dd</tag>
         <tag>diskutil</tag>
-        <tag>USB</tag>
       </tags>
   </entry>
   <entry>
@@ -422,8 +440,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>教程</tag>
+        <tag>EFI</tag>
         <tag>惠普</tag>
         <tag>ENVY</tag>
         <tag>ad1xx</tag>
@@ -653,8 +671,8 @@
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
         <tag>Clover</tag>
-        <tag>常见问题</tag>
         <tag>platform-id</tag>
+        <tag>常见问题</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
