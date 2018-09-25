@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS Mojave 10.14 18A391 正式版 with Clover 4674原版镜像]]></title>
     <url>%2FmacOS-Mojave-10.14-18A391-official-version-with-Clover-4674-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS Mojave 10.14(18A391)正式版 with Clover 4674原版镜像随着苹果发布了最新的MacBookPro 15,1/15,2这两款产品，macOS Mojave已于9月24日发布了正式版，它原生支持第八代核显;众多的8代CPU的朋友们可以彻底告别黑屏的痛苦镜像靓点：去除USB端口限制，减少禁行发生的几率；增加Lilu崩溃的日志信息显示；新增加HD620/UHD620的配置文件，原则上支持安装时驱动显卡；新增UHD630的配置文件，机型设置为MacBookPro15,2，显卡自动侦测；本镜像采用官方原版app制作，集成Clover 4674，支持UEFI启动安装;apfs.efi同时去除日志显示；其它的驱动位于drivers-Off；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认添加Lilu崩溃日志的输出信息,详见：macOS Mojave 10.14安装中常见的问题及解决方法;更新WhateverGreen到V1.2.3，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了Shiki和CoreDisplayFixup的驱动，现在是All In One了；Clover默认配置文件config.plist原则上支持各种机型引导安装；同时新增加了原生支持HD620/UHD620的配置文件config_UHD620_HD620_59160000.plist和八代UHD630的配置文件config_UHD630.plist，供您享用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；不会操作的请移步：Clover使用教程 macOS安装教程如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；不会操作的请移步：Clover使用教程 macOS安装教程本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于kexts/Other/其它驱动已更新Lilu(v1.2.7)、AppleALC(v1.3.2)、WhateverGreen(v1.2.3)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区本镜像发布站点：远景论坛 / 黑果小兵的部落阁截图：下载链接迅雷离线下载：镜像同步中，请稍候 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：https://pan.baidu.com/s/1mwfvEp1Ryq6cvYMnt2pIzQMD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bf关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS Mojave 10.14(18A391)正式版 with Clover 4674原版镜像随着苹果发布了最新的MacBookPro 15,1/15,2这两款产品，macOS Mojave已于9月24日发布了正式版，它原生支持第八代核显;众多的8代CPU的朋友们可以彻底告别黑屏的痛苦镜像靓点：去除USB端口限制，减少禁行发生的几率；增加Lilu崩溃的日志信息显示；新增加HD620/UHD620的配置文件，原则上支持安装时驱动显卡；新增UHD630的配置文件，机型设置为MacBookPro15,2，显卡自动侦测；本镜像采用官方原版app制作，集成Clover 4674，支持UEFI启动安装;apfs.efi同时去除日志显示；其它的驱动位于drivers-Off；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认添加Lilu崩溃日志的输出信息,详见：macOS Mojave 10.14安装中常见的问题及解决方法;更新WhateverGreen到V1.2.3，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了Shiki和CoreDisplayFixup的驱动，现在是All In One了；Clover默认配置文件config.plist原则上支持各种机型引导安装；同时新增加了原生支持HD620/UHD620的配置文件config_UHD620_HD620_59160000.plist和八代UHD630的配置文件config_UHD630.plist，供您享用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；不会操作的请移步：Clover使用教程 macOS安装教程如果无法引导到安装界面，可于Clover主界面-Options-Graphics进行显卡仿冒；不会操作的请移步：Clover使用教程 macOS安装教程本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于kexts/Other/其它驱动已更新Lilu(v1.2.7)、AppleALC(v1.3.2)、WhateverGreen(v1.2.3)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区本镜像发布站点：远景论坛 / 黑果小兵的部落阁截图：下载链接迅雷离线下载：镜像同步中，请稍候 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：有群友反馈这个资源下载下来的MD5值是错误的，已重新上传，稍候会更新下载链接MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bf关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
@@ -12,8 +12,8 @@
         <tag>下载</tag>
         <tag>镜像</tag>
         <tag>dmg</tag>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>18A391</tag>
       </tags>
   </entry>
@@ -60,9 +60,9 @@
         <tag>下载</tag>
         <tag>镜像</tag>
         <tag>dmg</tag>
+        <tag>Mojave</tag>
         <tag>10.14</tag>
         <tag>17A389</tag>
-        <tag>Mojave</tag>
       </tags>
   </entry>
   <entry>
@@ -73,8 +73,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>安装</tag>
         <tag>常见问题</tag>
       </tags>
@@ -90,8 +90,8 @@
         <tag>framebuffer</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>patch</tag>
       </tags>
   </entry>
