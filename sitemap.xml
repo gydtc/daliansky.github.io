@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html</loc>
+    
+    <lastmod>2018-10-01T14:20:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</loc>
     
     <lastmod>2018-09-29T06:36:15.000Z</lastmod>
@@ -345,13 +352,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html</loc>
-    
-    <lastmod>2018-09-23T03:32:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/Webmin-Mysql-module-warns-of-the-lack-of-DBI-and-DBD-mysql-processing.html</loc>
     
     <lastmod>2018-05-09T03:11:41.000Z</lastmod>
@@ -443,20 +443,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror.html</loc>
-    
-    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr.html</loc>
-    
-    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/How-macOS-Sierra-mid-operation-CORE-Keygen-breaks-down.html</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
@@ -464,7 +450,21 @@
   </url>
   
   <url>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror.html</loc>
+    
+    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Do-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html</loc>
+    
+    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr.html</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
     
