@@ -12,8 +12,8 @@
         <tag>下载</tag>
         <tag>镜像</tag>
         <tag>dmg</tag>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>18A391</tag>
       </tags>
   </entry>
@@ -60,9 +60,9 @@
         <tag>下载</tag>
         <tag>镜像</tag>
         <tag>dmg</tag>
+        <tag>Mojave</tag>
         <tag>10.14</tag>
         <tag>17A389</tag>
-        <tag>Mojave</tag>
       </tags>
   </entry>
   <entry>
@@ -73,8 +73,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>安装</tag>
         <tag>常见问题</tag>
       </tags>
@@ -89,8 +89,8 @@
       <tags>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>framebuffer</tag>
         <tag>patch</tag>
       </tags>
