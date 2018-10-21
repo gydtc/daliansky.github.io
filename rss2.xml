@@ -31,9 +31,9 @@
 <li>取消勾选<code>AddPNLF</code></li>
 </ul>
 </li>
-<li>Clover更新到v4707及以上，方法由<a href="https://github.com/headkaze" target="_blank" rel="noopener">headkaze</a>提供，<a href="https://github.com/Dids/clover-builder/releases" target="_blank" rel="noopener">clover下载</a></li>
-<li>添加了<code>igfxcflbklt</code>引导参数的<code>WhateverGreen</code>，方法由<a href="https://github.com/headkaze" target="_blank" rel="noopener">headkaze</a>提供，<a href="https://github.com/daliansky/XiaoMi-GLP/raw/dev/EFI/CLOVER/kexts/Other/WhateverGreen八代亮屏版.zip" target="_blank" rel="noopener">下载</a></li>
-<li>config.plist，可<a href="https://github.com/daliansky/XiaoMi-GLP/blob/dev/EFI/CLOVER/config.plist" target="_blank" rel="noopener">参考</a><ul>
+<li>Clover更新到v4707及以上，方法由<a href="https://github.com/headkaze" target="_blank" rel="external">headkaze</a>提供，<a href="https://github.com/Dids/clover-builder/releases" target="_blank" rel="external">clover下载</a></li>
+<li>添加了<code>igfxcflbklt</code>引导参数的<code>WhateverGreen</code>，方法由<a href="https://github.com/headkaze" target="_blank" rel="external">headkaze</a>提供，<a href="https://github.com/daliansky/XiaoMi-GLP/raw/dev/EFI/CLOVER/kexts/Other/WhateverGreen八代亮屏版.zip" target="_blank" rel="external">下载</a></li>
+<li>config.plist，可<a href="https://github.com/daliansky/XiaoMi-GLP/blob/dev/EFI/CLOVER/config.plist" target="_blank" rel="external">参考</a><ul>
 <li>Boot Args添加引导参数：<code>igfxcflbklt=force</code></li>
 <li>Devices/Properties添加：<code>enable-cfl-backlight-fix</code>参数设置为<code>01000000</code><img src="http://7.daliansky.net/FB-Patcher/UHD630-enable-cflbklt.png" alt="UHD630-enable-cflbklt"></li>
 </ul>
@@ -41,7 +41,7 @@
 </ul>
 <h2 id="亮度调整"><a href="#亮度调整" class="headerlink" title="亮度调整"></a>亮度调整</h2><h3 id="笔记本"><a href="#笔记本" class="headerlink" title="笔记本"></a>笔记本</h3><ul>
 <li>添加：<code>change GFX0 to IGPU</code>重命名</li>
-<li>勾选<code>AddPNLF</code>选项或者添加<code>SSDT-PNLF_CoffeeLake.aml</code>，特别感谢<code>@宪武</code>，<a href="https://github.com/daliansky/XiaoMi-GLP/raw/dev/EFI/CLOVER/ACPI/patched/SSDT-PNLF_CoffeeLake.aml" target="_blank" rel="noopener">下载链接</a></li>
+<li>勾选<code>AddPNLF</code>选项或者添加<code>SSDT-PNLF_CoffeeLake.aml</code>，特别感谢<code>@宪武</code>，<a href="https://github.com/daliansky/XiaoMi-GLP/raw/dev/EFI/CLOVER/ACPI/patched/SSDT-PNLF_CoffeeLake.aml" target="_blank" rel="external">下载链接</a></li>
 </ul>
 <h2 id="已测试过机型："><a href="#已测试过机型：" class="headerlink" title="已测试过机型："></a>已测试过机型：</h2><ul>
 <li>八代小米游戏本增强版</li>
@@ -51,11 +51,11 @@
 <h2 id="问题反馈"><a href="#问题反馈" class="headerlink" title="问题反馈"></a>问题反馈</h2><p>请通过QQ群讨论、反馈</p>
 <h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><ul>
 <li><code>@宪武</code>制作的众多的<code>hotpatch</code>补丁</li>
-<li>headkaze 制作了<a href="https://www.insanelymac.com/forum/topic/335018-intel-fb-patcher-v151/" target="_blank" rel="noopener">Intel FB Patcher</a> <a href="https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html">使用教程</a></li>
-<li>vit9696 for <a href="https://github.com/acidanthera/WhateverGreen" target="_blank" rel="noopener">WhateverGreen</a> (<a href="https://github.com/acidanthera/WhateverGreen#credits" target="_blank" rel="noopener">full credits</a>), <a href="https://github.com/acidanthera/Lilu" target="_blank" rel="noopener">Lilu</a> (<a href="https://github.com/acidanthera/Lilu#credits" target="_blank" rel="noopener">full credits</a>), <a href="https://github.com/acidanthera/AppleALC" target="_blank" rel="noopener">AppleALC</a> (<a href="https://github.com/acidanthera/AppleALC#credits" target="_blank" rel="noopener">full credits</a>), USBPower.kext and additional help</li>
-<li>vit9696 for <a href="https://github.com/acidanthera/WhateverGreen/blob/master/Manual/IntelFramebuffer.bt" target="_blank" rel="noopener">IntelFramebuffer.bt</a> with additional work by bcc9, Piker-Alpha and joevt </li>
+<li>headkaze 制作了<a href="https://www.insanelymac.com/forum/topic/335018-intel-fb-patcher-v151/" target="_blank" rel="external">Intel FB Patcher</a> <a href="https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html">使用教程</a></li>
+<li>vit9696 for <a href="https://github.com/acidanthera/WhateverGreen" target="_blank" rel="external">WhateverGreen</a> (<a href="https://github.com/acidanthera/WhateverGreen#credits" target="_blank" rel="external">full credits</a>), <a href="https://github.com/acidanthera/Lilu" target="_blank" rel="external">Lilu</a> (<a href="https://github.com/acidanthera/Lilu#credits" target="_blank" rel="external">full credits</a>), <a href="https://github.com/acidanthera/AppleALC" target="_blank" rel="external">AppleALC</a> (<a href="https://github.com/acidanthera/AppleALC#credits" target="_blank" rel="external">full credits</a>), USBPower.kext and additional help</li>
+<li>vit9696 for <a href="https://github.com/acidanthera/WhateverGreen/blob/master/Manual/IntelFramebuffer.bt" target="_blank" rel="external">IntelFramebuffer.bt</a> with additional work by bcc9, Piker-Alpha and joevt </li>
 <li>DalianSky for <a href="https://blog.daliansky.net/Intel-core-display-platformID-finishing.html">Intel Core Platform ID and SMBIOS Quick Reference</a> </li>
-<li>vandroiy2013 for audio id data from <a href="https://github.com/acidanthera/AppleALC" target="_blank" rel="noopener">AppleALC</a> </li>
+<li>vandroiy2013 for audio id data from <a href="https://github.com/acidanthera/AppleALC" target="_blank" rel="external">AppleALC</a> </li>
 <li>RehabMan for AllData patch method and various technical info</li>
 </ul>
 ]]></content:encoded>
@@ -102,15 +102,15 @@
 <ul>
 <li><p>macOS：打开终端，输入命令：</p>
 </li>
-<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">md5 macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg	<span class="comment"># 空格以\ 代替</span></span><br><span class="line">MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bf</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">md5 macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg	<span class="comment"># 空格以\ 代替</span></div><div class="line">MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bf</div></pre></td></tr></table></figure>
 </li>
-<li><p>Windows下：请使用<a href="http://www.winmd5.com" target="_blank" rel="noopener">winmd5</a>，将下载的安装镜像拖进winmd5窗口，核验md5值（截图略）</p>
+<li><p>Windows下：请使用<a href="http://www.winmd5.com" target="_blank" rel="external">winmd5</a>，将下载的安装镜像拖进winmd5窗口，核验md5值（截图略）</p>
 </li>
 </ul>
 </li>
 <li><p>镜像制作：</p>
 <ul>
-<li>下载<a href="https://etcher.io" target="_blank" rel="noopener">etcher</a>，打开镜像，选择U盘，点击Flash即可<img src="http://7.daliansky.net/etcher.png" alt="etcher"></li>
+<li>下载<a href="https://etcher.io" target="_blank" rel="external">etcher</a>，打开镜像，选择U盘，点击Flash即可<img src="http://7.daliansky.net/etcher.png" alt="etcher"></li>
 </ul>
 </li>
 <li><p>安装macOS：</p>
@@ -131,7 +131,7 @@
 </li>
 </ul>
 <ul>
-<li><p>本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：<a href="http://bbs.pcbeta.com/viewthread-1753483-1-1.html" target="_blank" rel="noopener">macOS High Sierra区笔记本安装情况集合帖</a></p>
+<li><p>本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：<a href="http://bbs.pcbeta.com/viewthread-1753483-1-1.html" target="_blank" rel="external">macOS High Sierra区笔记本安装情况集合帖</a></p>
 </li>
 <li><p>支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于<code>kexts/Other/其它驱动</code></p>
 </li>
@@ -141,18 +141,18 @@
 </li>
 <li><p>挂载EFI分区</p>
 <p>Windows操作系统下面,以系统管理员身份打开<code>cmd</code>窗口,输入命令:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">c:\&gt;diskpart</span><br><span class="line">list disk           <span class="comment"># 磁盘列表</span></span><br><span class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></span><br><span class="line">list partition      <span class="comment"># 磁盘分区列表</span></span><br><span class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></span><br><span class="line"><span class="built_in">set</span> id=<span class="string">"ebd0a0a2-b9e5-4433-87c0-68b6b72699c7"</span>	<span class="comment"># 设置为基本数据分区</span></span><br><span class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></span><br><span class="line"><span class="built_in">exit</span>				<span class="comment"># 退出diskpart</span></span><br><span class="line">notepad				<span class="comment"># 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">c:\&gt;diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line"><span class="built_in">set</span> id=<span class="string">"ebd0a0a2-b9e5-4433-87c0-68b6b72699c7"</span>	<span class="comment"># 设置为基本数据分区</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div><div class="line"><span class="built_in">exit</span>				<span class="comment"># 退出diskpart</span></div><div class="line">notepad				<span class="comment"># 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区</span></div></pre></td></tr></table></figure>
 <p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区</p>
 <p>另一种方法：直接 使用应用程序<code>diskgenius</code>挂载EFI分区进行操作</p>
 </li>
-<li><p>本镜像发布站点：<a href="http://bbs.pcbeta.com/forum.php?gid=86" target="_blank" rel="noopener">远景论坛</a> / <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
+<li><p>本镜像发布站点：<a href="http://bbs.pcbeta.com/forum.php?gid=86" target="_blank" rel="external">远景论坛</a> / <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
 </li>
 </ul>
 <h1 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h1><p><img src="http://7.daliansky.net/10.14GM/1About.png" alt="1About"><br><img src="http://7.daliansky.net/10.14GM/21Displays.png" alt="21Displays"><br><img src="http://7.daliansky.net/10.14GM/22Displays.png" alt="22Displays"><br><img src="http://7.daliansky.net/10.14GM/2Video.png" alt="2Video"><br><img src="http://7.daliansky.net/dell7000/1Audio.png" alt="1Audio"><br><img src="http://7.daliansky.net/dell7000/1Audio2.png" alt="1Audio2"><br><img src="http://7.daliansky.net/dell7000/1AudioPatch.png" alt="1AudioPatch"><br><img src="http://7.daliansky.net/dell7000/2BlueTooth.png" alt="2BlueTooth"><br><img src="http://7.daliansky.net/dell7000/2BlueTooth2.png" alt="2BlueTooth2"><br><img src="http://7.daliansky.net/dell7000/3Wifi.png" alt="3Wifi"><br><img src="http://7.daliansky.net/dell7000/4Sata.png" alt="4Sata"><br><img src="http://7.daliansky.net/dell7000/5Ethernet.png" alt="5Ethernet"><br><img src="http://7.daliansky.net/dell7000/6USB.png" alt="6USB"><br><img src="http://7.daliansky.net/dell7000/6USBFinal.png" alt="6USBFinal"><br><img src="http://7.daliansky.net/dell7000/7Light.png" alt="7Light"><br><img src="http://7.daliansky.net/dell7000/8Volume.png" alt="8Volume"><br><img src="http://7.daliansky.net/dell7000/9Drivers.png" alt="9Drivers"><br><img src="http://7.daliansky.net/10.14GM/4I2C.png" alt="4I2C"><br><img src="http://7.daliansky.net/10.14GM/5TouchPad.png" alt="5TouchPad"><br><img src="http://7.daliansky.net/10.14GM/8Drivers.png" alt="8Drivers"><br><img src="http://7.daliansky.net/10.14GM/Mojave18A391.png" alt="10About"></p>
 <h2 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h2><p>@宪武 提供的新的hotpatch的全套方法</p>
-<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>迅雷离线下载：<a href="https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/macOS%20Mojave%2010.14%2818A391%29%20Installer%20with%20Clover%204674.dmg" target="_blank" rel="noopener">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
-<p>http下载链接:<a href="https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/" target="_blank" rel="noopener">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
-<p>百毒云：<a href="https://pan.baidu.com/s/1b0dNTcBxLhWKbxmlbJMd0Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1b0dNTcBxLhWKbxmlbJMd0Q</a></p>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>迅雷离线下载：<a href="https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/macOS%20Mojave%2010.14%2818A391%29%20Installer%20with%20Clover%204674.dmg" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<p>http下载链接:<a href="https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/" target="_blank" rel="external">请点击下载</a> 感谢<code>@难忘情怀</code>提供下载资源</p>
+<p>百毒云：<a href="https://pan.baidu.com/s/1b0dNTcBxLhWKbxmlbJMd0Q" target="_blank" rel="external">https://pan.baidu.com/s/1b0dNTcBxLhWKbxmlbJMd0Q</a></p>
 <p>MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bf</p>
 <h1 id="关于打赏"><a href="#关于打赏" class="headerlink" title="关于打赏"></a>关于打赏</h1><p>您的支持就是我更新的动力！<br>如果不希望看到博主停更的话，请点击下方的 <code>打赏</code> 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！</p>
 ]]></content:encoded>
@@ -178,7 +178,7 @@
 <p>今天在远景论坛里看到有坛友将EFI的分区损坏，于是就跟帖回复，现将回复的内容整理下放到博客上，让更多遇到问题的人看到。</p>
 </blockquote>
 <h2 id="命令及用法"><a href="#命令及用法" class="headerlink" title="命令及用法"></a>命令及用法</h2><h3 id="显示gpt分区"><a href="#显示gpt分区" class="headerlink" title="显示gpt分区"></a>显示gpt分区</h3><p>命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">sudo gpt -r show disk0</span><br><span class="line">    </span><br><span class="line">       start        size  index  contents</span><br><span class="line">           0           1         PMBR</span><br><span class="line">           1           1         Pri GPT header</span><br><span class="line">           2          32         Pri GPT table</span><br><span class="line">          34        2014         </span><br><span class="line">        2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</span><br><span class="line">      616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</span><br><span class="line">     1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</span><br><span class="line">   158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</span><br><span class="line">   190722048      262144         </span><br><span class="line">   190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</span><br><span class="line">   387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</span><br><span class="line">   788038368      262144         </span><br><span class="line">   788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</span><br><span class="line">   789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</span><br><span class="line">   918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</span><br><span class="line">   920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</span><br><span class="line">   939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</span><br><span class="line">   998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</span><br><span class="line">  1000215176           7         </span><br><span class="line">  1000215183          32         Sec GPT table</span><br><span class="line">  1000215215           1         Sec GPT header</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">sudo gpt -r show disk0</div><div class="line">    </div><div class="line">       start        size  index  contents</div><div class="line">           0           1         PMBR</div><div class="line">           1           1         Pri GPT header</div><div class="line">           2          32         Pri GPT table</div><div class="line">          34        2014         </div><div class="line">        2048      614400      1  GPT part - C12A7328-F81F-11D2-BA4B-00A0C93EC93B</div><div class="line">      616448      409600      2  GPT part - E3C9E316-0B5C-4DB8-817D-F92DF00215AE</div><div class="line">     1026048   157696000      3  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   158722048    32000000      4  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   190722048      262144         </div><div class="line">   190984192   196116728      5  GPT part - 7C3457EF-0000-11AA-AA11-00306543ECAC</div><div class="line">   387100920   400937448      6  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   788038368      262144         </div><div class="line">   788300512     1280000      7  GPT part - 5361644D-6163-11AA-AA11-00306543ECAC</div><div class="line">   789580512   129175576      8  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   918756088     1269536      9  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">   920025624    19594968     10  GPT part - EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</div><div class="line">   939620592    59325048     11  GPT part - 48465300-0000-11AA-AA11-00306543ECAC</div><div class="line">   998945640     1269536     12  GPT part - 426F6F74-0000-11AA-AA11-00306543ECAC</div><div class="line">  1000215176           7         </div><div class="line">  1000215183          32         Sec GPT table</div><div class="line">  1000215215           1         Sec GPT header</div></pre></td></tr></table></figure>
 <p>其中：</p>
 <ul>
 <li><code>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</code> 是EFI系统分区(ESP)的标志</li>
@@ -191,17 +191,17 @@
 <li>您无法使用 <code>gpt</code> 编辑分区表，而驱动器上的分区已装入，因此您需要从另一个驱动器（例如，使用OSX安装程序的USB记忆棒）引导，或者以目标磁盘模式运行mac并从另一个mac进行分区操作。 </li>
 <li>您可能需要使用 <code>diskutil unmountDisk disk0</code> 卸载任何自动安装的卷，然后再继续执行下面的操作。</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gpt remove -i 1 disk0</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt remove -i 1 disk0</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>确保disk0真的是要更改的磁盘 - 数字可以在重新启动之间更改。</strong></li>
 <li>而且，只有在EFI系统分区(ESP)已经存在的情况下才能运行，如果没有，则删除分区1可能是灾难性的！ 在这种情况下，您需要移动索引，因为我认为ESP必须具有索引 <code>1</code></li>
 </ul>
-<h3 id="重新添加分区与正确的布局和类型："><a href="#重新添加分区与正确的布局和类型：" class="headerlink" title="重新添加分区与正确的布局和类型："></a>重新添加分区与正确的布局和类型：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</span><br></pre></td></tr></table></figure>
+<h3 id="重新添加分区与正确的布局和类型："><a href="#重新添加分区与正确的布局和类型：" class="headerlink" title="重新添加分区与正确的布局和类型："></a>重新添加分区与正确的布局和类型：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gpt add -b 2048 -i 1 -s 614400 -t C12A7328-F81F-11D2-BA4B-00A0C93EC93B disk3</div></pre></td></tr></table></figure>
 <p>执行完这三条命令，您的EFI系统分区(ESP)也就恢复正常了。</p>
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>其实在做修复之前，也可以使用 <code>dd</code> 命令将EFI分区做个备份，尤其是准备在同一块磁盘里面安装Windows和MacOS的同学，更应该先做个EFI分区的备份，以便EFI被 <em>玩坏</em> 后可以恢复如初。</p>
-<h3 id="EFI分区备份到文件，命令如下："><a href="#EFI分区备份到文件，命令如下：" class="headerlink" title="EFI分区备份到文件，命令如下："></a>EFI分区备份到文件，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></span><br></pre></td></tr></table></figure>
-<h3 id="从备份文件恢复到ESP分区，命令如下："><a href="#从备份文件恢复到ESP分区，命令如下：" class="headerlink" title="从备份文件恢复到ESP分区，命令如下："></a>从备份文件恢复到ESP分区，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></span><br></pre></td></tr></table></figure>
-<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="noopener">一起黑苹果</a></p>
+<h3 id="EFI分区备份到文件，命令如下："><a href="#EFI分区备份到文件，命令如下：" class="headerlink" title="EFI分区备份到文件，命令如下："></a>EFI分区备份到文件，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=/dev/rdisk0s1 of=~/Desktop/ESP.img   <span class="comment"># 将EFI分区备份到用户目录-桌面，文件名为：ESP.img</span></div></pre></td></tr></table></figure>
+<h3 id="从备份文件恢复到ESP分区，命令如下："><a href="#从备份文件恢复到ESP分区，命令如下：" class="headerlink" title="从备份文件恢复到ESP分区，命令如下："></a>从备份文件恢复到ESP分区，命令如下：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd <span class="keyword">if</span>=~/Desktop/ESP.img of=/dev/rdisk0s1   <span class="comment"># 将备份文件ESP.img恢复到EFI分区</span></div></pre></td></tr></table></figure>
+<h2 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h2><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html#disqus_thread</comments>
@@ -222,11 +222,11 @@
 <p>因为测试的需要，我的DELL燃7000笔记本上面同时安装了三套MacOS系统。<br>我使用的是logitech的M557蓝牙鼠标，当我在一套系统下面配对使用后，切换到另一套MacOS系统，需要重新配对使用；再切换回到前一个系统还需要重新配对。<br>我的需求是希望把配对好的蓝牙设备可以在这三套系统里同时使用而不需要重复配对</p>
 </blockquote>
 <h3 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h3><p>经爬帖发现蓝牙设备的配对连接信息文件位于 <code>/private/var/root/Library/Preferences/bluetoothaudiod.plist</code><br>将该文件复制到另外的MacOS系统，使用命令如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -s     <span class="comment"># 切换到root用户</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -s     <span class="comment"># 切换到root用户</span></div></pre></td></tr></table></figure>
 <p>复制文件[10.13到10.13]：<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences</code></p>
 <p>复制文件[10.13到10.12]<br><code>cp /private/var/root/Library/Preferences/bluetoothaudiod.plist /Volumes/test/private/var/root/Library/Preferences/blued.plist</code></p>
 <p>这样操作之后，就可以在不同的MacOS系统下使用配对过的蓝牙设备而无须重复配对。</p>
-<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="noopener">一起黑苹果</a></p>
+<h3 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h3><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/MacOS-multi-system-Bluetooth-device-automatically-connected.html#disqus_thread</comments>
@@ -255,10 +255,10 @@
 <li>本镜像发布站点：远景论坛/ <a href="https://blog.daliansky.net">黑果小兵的小站</a></li>
 </ul>
 <h4 id="截图："><a href="#截图：" class="headerlink" title="截图："></a>截图：</h4><p><img src="http://ous2s14vo.bkt.clouddn.com/10.13-17A405.png" alt="10.13-17A405"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover.png" alt="Clover"><br><img src="http://ous2s14vo.bkt.clouddn.com/Drivers64UEFI.png" alt="Drivers64UEFI"><br><img src="http://ous2s14vo.bkt.clouddn.com/Clover Main Menu.png" alt="Clover Main Menu"><br><img src="http://ous2s14vo.bkt.clouddn.com/About Clover.png" alt="About Clover"></p>
-<h4 id="下载链接-https-pan-baidu-com-s-1o8gIsY2"><a href="#下载链接-https-pan-baidu-com-s-1o8gIsY2" class="headerlink" title="下载链接: https://pan.baidu.com/s/1o8gIsY2"></a>下载链接: <a href="https://pan.baidu.com/s/1o8gIsY2" target="_blank" rel="noopener">https://pan.baidu.com/s/1o8gIsY2</a></h4><ul>
+<h4 id="下载链接-https-pan-baidu-com-s-1o8gIsY2"><a href="#下载链接-https-pan-baidu-com-s-1o8gIsY2" class="headerlink" title="下载链接: https://pan.baidu.com/s/1o8gIsY2"></a>下载链接: <a href="https://pan.baidu.com/s/1o8gIsY2" target="_blank" rel="external">https://pan.baidu.com/s/1o8gIsY2</a></h4><ul>
 <li>MD5 (macOS High Sierra 10.13(17A405) Installer with Clover 4238.dmg) = 7a6894bad093285ffe6801c55f1a032c</li>
 </ul>
-<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="noopener">一起黑苹果</a></p>
+<h4 id="QQ群"><a href="#QQ群" class="headerlink" title="QQ群:"></a>QQ群:</h4><p>331686786 <a href="http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91" target="_blank" rel="external">一起黑苹果</a></p>
 ]]></content:encoded>
       
       <comments>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html#disqus_thread</comments>
