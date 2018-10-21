@@ -143,6 +143,7 @@
 <p>Windows操作系统下面,以系统管理员身份打开<code>cmd</code>窗口,输入命令:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">c:\&gt;diskpart</div><div class="line">list disk           <span class="comment"># 磁盘列表</span></div><div class="line">select disk n       <span class="comment"># 选择EFI分区所在的磁盘，n为磁盘号</span></div><div class="line">list partition      <span class="comment"># 磁盘分区列表</span></div><div class="line">select partition n  <span class="comment"># 选择EFI分区，n为EFI分区号</span></div><div class="line"><span class="built_in">set</span> id=<span class="string">"ebd0a0a2-b9e5-4433-87c0-68b6b72699c7"</span>	<span class="comment"># 设置为基本数据分区</span></div><div class="line">assign letter=X     <span class="comment"># x为EFI分区盘符</span></div><div class="line"><span class="built_in">exit</span>				<span class="comment"># 退出diskpart</span></div><div class="line">notepad				<span class="comment"># 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区</span></div></pre></td></tr></table></figure>
 <p>您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区</p>
+<p>另一种方法：直接 使用应用程序<code>diskgenius</code>挂载EFI分区进行操作</p>
 </li>
 <li><p>本镜像发布站点：<a href="http://bbs.pcbeta.com/forum.php?gid=86" target="_blank" rel="external">远景论坛</a> / <a href="https://blog.daliansky.net">黑果小兵的部落阁</a></p>
 </li>
