@@ -33,9 +33,3 @@ tags:
 百度云：https://pan.baidu.com/s/1dFvkYZZ
 	•	MD5 (macOS High Sierra 10.13 17A334b Installer with Clover 4160.dmg) = 8b46ab210917be9287ac3a38b4e8eb81
 	
-#### QQ群:
-331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
-688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
-
-     
-

@@ -20,6 +20,16 @@ categories:
 
 
 
+## 找不到安装器资源的解决方法
+
+- 断网
+- 删除`drivers64UEFI`目录下的`EmuVariableUefi-64.efi`
+- 修改机型为最近三年，比如`MacBootPro13,1` `MacBookPro14,1` `iMac17,1` 等等
+- 如果是双硬盘，拔掉那个不安装的，待安装完后再插回去
+- 检查镜像的md5值
+
+
+
 ## 关于HD3000平台
 
 macOS Mojave 10.14已经不支持Sandy Bridge平台的安装使用，解决方法有两个：
@@ -78,9 +88,18 @@ Layout1,3,8,9,11,12,13,18,22,23,24,25,26,27,28,29,30,31,32,34,36,37,38,39,41， 
 ```ruby
 Comment: USB Port limit patch 10.14 (credits FredWst)
 Name: com.apple.driver.usb.AppleUSBXHCI
-Find: 83 FB 0F 0F 83 03 05 00 00
-Replace: 83 FB 0F 90 90 90 90 90 90
+Find: 83FB0F0F 83030500 00
+Replace: 83FB0F90 90909090 90
 ```
+
+```ruby
+Comment: USB Port limit patch 10.14.1 18B50C (credits DalianSky)
+Name: com.apple.driver.usb.AppleUSBXHCI
+Find: 83FB0F0F 838F0400 00
+Replace: 83FB0F90 90909090 90
+```
+
+
 
 ## Intel HD3000显卡驱动
 
@@ -431,8 +450,3 @@ sudo kextcache -Boot -U /
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
 
-## QQ群:
-
-331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[会员群到期，只出不进，,请加其它群]
-688324116 [一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
-257995340 [一起啃苹果](http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8)

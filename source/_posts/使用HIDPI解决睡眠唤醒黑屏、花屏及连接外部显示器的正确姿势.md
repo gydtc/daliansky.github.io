@@ -16,7 +16,7 @@ categories:
 ---
 # 前言
 > 经常会有网友反馈说自己的显示器黑屏或者花屏,早期的方式是[注入EDID](https://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html)可有效解决类似问题.经常摸索后发现打开显示器的HIDPI高分辨率支持的同时可有效去掉这种现象,同时这种操作也会减少或者消除出现8个苹果的概率
- 
+
 ## 教程开始
 
 # 提取EDID
@@ -76,13 +76,8 @@ sudo cp -R ~/Desktop/DisplayVendorID-dae /System/Library/Displays/Contents/Resou
 
 ## 收工
 
-   
+
 # 关于打赏
 您的支持就是我更新的动力!
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
- 
- 
-# QQ群:
-331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
-688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
 

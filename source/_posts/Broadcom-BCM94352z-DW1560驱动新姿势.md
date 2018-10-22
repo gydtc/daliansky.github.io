@@ -28,55 +28,20 @@ categories:
 
 * 在macOS上，当使用BMC94532z NGFF WiFi卡时，`AirportBrcm4360.kext`不再成功加载。这个问题是由于驱动程序无法初始化fvco（频率压控振荡器）等原因引起的。 
 
-## 解决方案：同时支持10.11-10.13系统
-
-
-### Clover设置：
-* ~~使用应用程序`Clover Configurator`~~
-* ~~在`Clover` - `Devices` - `FakeID` - `WIFI`中添加仿冒ID: `0x43a014e4`~~
-* ~~在`Clover` - `KextsToPatch` 应用以下补丁，以使BCM94352z启用蓝牙：~~
-
-```sh
-Name:       IOBluetoothFamily
-Comment:    10.11+-BT4LE-Handoff-Hotspot-lisai9093
-Find:       4885ff74 47488b07 
-Replace:    41be0f00 0000eb44
-```
-
-* ~~可以使用文本编辑器直接打开`config.plist`，将下面的内容粘贴到`<key>KextsToPatch</key>`里~~
-
-```xml
-			<dict>
-				<key>Comment</key>
-				<string>10.11+-BT4LE-Handoff-Hotspot-lisai9093</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIX/dEdIiwc=
-				</data>
-				<key>Name</key>
-				<string>IOBluetoothFamily</string>
-				<key>Replace</key>
-				<data>
-				Qb4PAAAA60Q=
-				</data>
-			</dict>
-```
+## 解决方案：同时支持10.11-10.14系统
 
 ### 驱动：
 
 > 下载：[RehabMan-FakePCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads) [RehabMan-BrcmPatchRAM](https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads) [AirportBrcmFixup](https://github.com/lvs1974/AirportBrcmFixup/releases)
 
 1. 将文件`BrcmFirmwareData.kext`和`BrcmPatchRAM2.kext`复制到`/EFI/CLOVER/kexts/Other`目录下
-2. 将文件`FakePCIID_Broadcom_WiFi.kext`和`FakePCIID.kext`复制到`/EFI/CLOVER/kexts/Other`目录下
-3. 将文件`AirportBrcmFixup.kext`复制到`/EFI/CLOVER/kexts/Other`目录下,由于`AirportBrcmFixup.kext`是依赖于[Lilu](https://github.com/vit9696/Lilu/releases)运行的插件，所以还需要检查该目录下必须存在`Lilu.kext`
-4. 包括这些文件的目录看起来是这样的：
-![brcm94352z驱动](http://7.daliansky.net/brcm94352z驱动.png)
+2. 将文件`AirportBrcmFixup.kext`复制到`/EFI/CLOVER/kexts/Other`目录下,由于`AirportBrcmFixup.kext`是依赖于[Lilu](https://github.com/vit9696/Lilu/releases)运行的插件，所以还需要检查该目录下必须存在`Lilu.kext`
+3. 包括这些文件的目录看起来是这样的：
+     ![brcm94352z驱动](http://7.daliansky.net/DW1560.png)
 
-### 10.13.6系统的驱动方法
+### 10.13.6/10.14蓝牙失效的解决方法
 
-将文件`BrcmFirmwareData.kext`和`BrcmPatchRAM2.kext`复制到`/Library/Extensions`目录下
+将文件`BrcmFirmwareData.kext`和`BrcmPatchRAM2.kext`和`AirportBrcmFixup.kext`复制到`/Library/Extensions`目录下，以解决睡眠唤醒后可能引起的蓝牙失效的问题。
 
 当然，在重启前，还要重建一下系统的缓存，命令为：
 
@@ -103,10 +68,4 @@ sudo kextcache -Boot -U /
 # 关于打赏
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
-
-# QQ群:
-331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91)[群已满,请加下面群]
-688324116[一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)
-
-
 

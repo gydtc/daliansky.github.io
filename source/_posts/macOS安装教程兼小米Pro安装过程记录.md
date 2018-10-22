@@ -22,56 +22,13 @@ categories:
 ## 准备工具
 * U盘大于8G
 * U 盘大小不限做 PE 盘
-* TransMac
+* [etcher](etcher.io)
 * 小米PRO专用EFI文件
 * 系统镜像
 
-## 在 `Windows` 下安装 `TransMac` 
-安装完成后，右键→管理员权限运行 `TransMac`
+## 制作安装镜像
 
-## 利用 `TransMac` 制作`macOS`安装USB盘
-1. 打开`TransMac`,选择欲制作的`USB`盘符
-     ![TransMac1](http://7.daliansky.net/TransMac1.png)
-
-2. 右键选择`Restore with Disk Image`,选择下载好的dmg文件,会弹出窗口,提示将要格式化USB磁盘,点击OK按钮继续
-     ![TransMac2](http://7.daliansky.net/TransMac2.png)
-
-3. 在此期间,您可以去给自己泡杯咖啡喝,耐心等待写盘的完成.
-     ![TransMac3](http://7.daliansky.net/TransMac3.png)
-
-4. 写入完成，系统弹出将其格式化，点击取消
-     ![TransMac4](http://7.daliansky.net/TransMac4.png)
-
-# macOS下制作USB安装盘
-如果您已经有了macOS的使用环境,那么制作用于安装的macOS将会更加方便.
-
-## 准备工具
-
-* 下载好的dmg镜像
-* 用于安装macOS的USB盘,容量8GB以上
-* 磁盘工具
-
-## 制作过程
-> 为便于截屏及加快制作时间,我没有使用USB制作,而是生成一个8GB的镜像做演示
-
-1. 打开欲制作的dmg镜像,两种方法:
-    * 使用磁盘工具,选择`File`-`Open Disk Image`
-    * 直接通过`Finder`双击dmg打开
-      ![DiskUtility](http://7.daliansky.net/DiskUtility.png)
-
-
-2. 打开`磁盘工具`,选择`SANDISK 8GB USB`
-     ![DiskUtility2](http://7.daliansky.net/DiskUtility2.png)
-
-3. 点击`恢复/Restore`按钮,选择`XiaoMiPro 10131`,点击`恢复/Restore`
-     ![DiskUtility3](http://7.daliansky.net/DiskUtility3.png)
-       它会开始执行恢复镜像到USB的动作,恢复速度取决于你的USB盘
-       ![DiskUtility4](http://7.daliansky.net/DiskUtility4.png)
-
-4. 镜像恢复完成后,它会显示如图所示
-     ![DiskUtility5](http://7.daliansky.net/DiskUtility5.png)
-       点击`完成/Done`按钮后,会显示完成后的USB磁盘信息
-       ![DiskUtility6](http://7.daliansky.net/DiskUtility6.png)
+镜像制作：下载[etcher](https://etcher.io)，打开镜像，选择U盘，点击Flash即可![etcher](http://7.daliansky.net/etcher.png)
 
 安装镜像的制作到这里就完成了,下一步,我们需要将EFI复制进刚制作好的USB磁盘的EFI分区里
 
@@ -379,7 +336,7 @@ assign letter=X     # x为EFI分区盘符
 
 # QQ群:
 
-247451054 [小米PRO黑苹果高级群](http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e)[群已满，请加其它群]
+247451054 [小米PRO黑苹果高级群](http://shang.qq.com/wpa/qunwpa?idkey=6223ea12a7f7efe58d5972d241000dd59cbd0260db2fdede52836ca220f7f20e)
 137188006 [小米PRO黑苹果](http://shang.qq.com/wpa/qunwpa?idkey=c17e190b9466a73cf12e8caec36e87124fce9e231a895353ee817e9921fdd74e)
 756750452 [小米游戏本吃黑果讨论](http://qm.qq.com/cgi-bin/qm/qr?k=6-mc7yVIzkdv-XTj9_HL8wKi5y74lgXE)
 

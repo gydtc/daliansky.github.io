@@ -58,11 +58,41 @@ search:
   format: html
   limit: 10000
 
+baidu_url_submit:
+  count: 5 ## 提交最新的5个链接
+  host: blog.daliansky.net ## 在百度站长平台中注册的域名
+  token: IrU415PQUFM8X4pG ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+#hexo-neat 优化提速插件
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+  
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+
 deploy:
   type: git
   repo:
-    github: 'git@github.com:daliansky/daliansky.github.io.git'
+#    github: 'git@github.com:daliansky/daliansky.github.io.git'
     coding: 'git@git.coding.net:daliansky/daliansky.coding.me.git'
   branch: master
 _config-github:
   yml: d
+  type: baidu_url_submitter ## 百度URL推送
+
+links_title: Links
+links:
+  Athlonreg: https://syncanvas.github.io
+  国光: http://www.sqlsec.com

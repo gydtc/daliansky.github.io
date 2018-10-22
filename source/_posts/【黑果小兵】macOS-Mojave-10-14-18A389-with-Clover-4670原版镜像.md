@@ -2,7 +2,7 @@
 title: 【黑果小兵】macOS Mojave 10.14(18A389) with Clover 4670原版镜像
 date: 2018-09-13 19:57:50
 urlname: macOS-Mojave-10.14-18A389-Release-with-Clover-4670-original-mirror
-top: 100
+top: 85
 categories:
 - 下载
 - 镜像
@@ -95,10 +95,4 @@ MD5 (macOS Mojave 10.14(18A389) Installer with Clover 4670.dmg) = fa9ae4c0124205
 
 您的支持就是我更新的动力！
 如果不希望看到博主停更的话，请点击下方的 `打赏` 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！
-
-# QQ群:
-
-331686786 [一起吃苹果](http://shang.qq.com/wpa/qunwpa?idkey=db511a29e856f37cbb871108ffa77a6e79dde47e491b8f2c8d8fe4d3c310de91) 1000人群
-688324116 [一起黑苹果](https://shang.qq.com/wpa/qunwpa?idkey=6bf69a6f4b983dce94ab42e439f02195dfd19a1601522c10ad41f4df97e0da82)   500人群
-257995340 [一起啃苹果](http://shang.qq.com/wpa/qunwpa?idkey=8a63c51acb2bb80184d788b9f419ffcc33aa1ed2080132c82173a3d881625be8)   500人群
 
