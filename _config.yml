@@ -85,7 +85,7 @@ neat_js:
 deploy:
   type: git
   repo:
-#    github: 'git@github.com:daliansky/daliansky.github.io.git'
+    github: 'git@github.com:daliansky/daliansky.github.io.git'
     coding: 'git@git.coding.net:daliansky/daliansky.coding.me.git'
   branch: master
 _config-github:
