@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【黑果小兵】CoffeeLake UHD 630黑屏、直接亮屏及亮度调整的正确插入姿势]]></title>
     <url>%2FCoffeeLake-UHD-630-black-screen-direct-bright-screen-and-correct-adjustment-of-brightness-adjustment.html</url>
-    <content type="text"><![CDATA[【黑果小兵】CoffeeLake UHD 630黑屏、直接亮屏及亮度调整的正确插入姿势适用于MacOS Mojave /macOS HighSierra 10.13.6(17G2112/17G2208)直接亮屏台式机/笔记本笔记本：移除SSDT-PNLF.aml取消勾选AddPNLFClover更新到v4707及以上，方法由headkaze提供，clover下载添加了igfxcflbklt引导参数的WhateverGreen，方法由headkaze提供，下载config.plist，可参考Boot Args添加引导参数：igfxcflbklt=forceDevices/Properties添加：enable-cfl-backlight-fix参数设置为01000000亮度调整笔记本添加：change GFX0 to IGPU重命名勾选AddPNLF选项或者添加SSDT-PNLF_CoffeeLake.aml，特别感谢@宪武，下载链接已测试过机型：八代小米游戏本增强版机械革命X8TiMSI GE63问题反馈请通过QQ群讨论、反馈鸣谢@宪武制作的众多的hotpatch补丁headkaze 制作了Intel FB Patcher 使用教程vit9696 for WhateverGreen (full credits), Lilu (full credits), AppleALC (full credits), USBPower.kext and additional helpvit9696 for IntelFramebuffer.bt with additional work by bcc9, Piker-Alpha and joevtDalianSky for Intel Core Platform ID and SMBIOS Quick Referencevandroiy2013 for audio id data from AppleALCRehabMan for AllData patch method and various technical info]]></content>
+    <content type="text"><![CDATA[【黑果小兵】CoffeeLake UHD 630黑屏、直接亮屏及亮度调整的正确插入姿势适用于MacOS Mojave /macOS HighSierra 10.13.6(17G2112/17G2208)直接亮屏台式机/笔记本笔记本：移除SSDT-PNLF.aml取消勾选AddPNLFClover更新到v4707及以上，方法由headkaze提供，clover下载添加了igfxcflbklt引导参数的WhateverGreen，方法由headkaze提供，下载config.plist，可参考Boot Args添加引导参数：igfxcflbklt=forceDevices/Properties添加：enable-cfl-backlight-fix参数设置为01000000亮度调整笔记本添加：change GFX0 to IGPU重命名勾选AddPNLF选项或者添加SSDT-PNLF_CoffeeLake.aml，特别感谢@宪武，下载链接已测试过机型：八代小米游戏本增强版机械革命X8TiMSI GE63联想Y7000问题反馈请通过QQ群讨论、反馈鸣谢@宪武制作的众多的hotpatch补丁headkaze 制作了Intel FB Patcher 使用教程vit9696 for WhateverGreen (full credits), Lilu (full credits), AppleALC (full credits), USBPower.kext and additional helpvit9696 for IntelFramebuffer.bt with additional work by bcc9, Piker-Alpha and joevtDalianSky for Intel Core Platform ID and SMBIOS Quick Referencevandroiy2013 for audio id data from AppleALCRehabMan for AllData patch method and various technical info]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -24,8 +24,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
@@ -58,8 +58,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>CLOVER</tag>
+        <tag>教程</tag>
         <tag>UEFI</tag>
       </tags>
   </entry>
@@ -72,8 +72,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>17A389</tag>
@@ -88,9 +88,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>安装</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
-        <tag>安装</tag>
         <tag>常见问题</tag>
       </tags>
   </entry>
@@ -103,10 +103,10 @@
       </categories>
       <tags>
         <tag>10.13.6</tag>
-        <tag>framebuffer</tag>
+        <tag>17G2112</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
-        <tag>17G2112</tag>
+        <tag>framebuffer</tag>
         <tag>patch</tag>
       </tags>
   </entry>
@@ -120,8 +120,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
@@ -137,8 +137,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G65</tag>
@@ -154,8 +154,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.5</tag>
         <tag>17F77</tag>
@@ -195,9 +195,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>CLOVER</tag>
         <tag>小米PRO</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -225,8 +225,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.4</tag>
         <tag>1.7e+200</tag>
@@ -269,8 +269,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -301,8 +301,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -316,8 +316,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>platform-id</tag>
         <tag>接口</tag>
+        <tag>platform-id</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -393,8 +393,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>AppleHDA</tag>
         <tag>声卡仿冒</tag>
+        <tag>AppleHDA</tag>
       </tags>
   </entry>
   <entry>
@@ -416,8 +416,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -535,8 +535,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -587,8 +587,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -615,8 +615,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -703,8 +703,8 @@
         <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>Clover</tag>
-        <tag>常见问题</tag>
         <tag>platform-id</tag>
+        <tag>常见问题</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
@@ -737,8 +737,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -752,9 +752,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -796,10 +796,10 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
-        <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -825,9 +825,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
         <tag>DB7</tag>
+        <tag>镜像</tag>
       </tags>
   </entry>
   <entry>
@@ -896,8 +896,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>安装</tag>
       </tags>
@@ -926,8 +926,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.daliansky.net/CoffeeLake-UHD-630-black-screen-direct-bright-screen-and-correct-adjustment-of-brightness-adjustment.html</loc>
+    
+    <lastmod>2018-10-30T11:28:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Intel-core-display-platformID-finishing.html</loc>
     
     <lastmod>2018-10-24T03:04:26.000Z</lastmod>
@@ -16,21 +23,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html</loc>
+    <loc>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/about/index.html</loc>
+    <loc>http://blog.daliansky.net/macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -45,13 +45,6 @@
   
   <url>
     <loc>http://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/hotpatch-detailed-solution.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -93,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/404.html</loc>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Guide-High-Sierra-prohibits-APFS-conversion-when-installing-or-upgrading.html</loc>
+    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -156,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive.html</loc>
+    <loc>http://blog.daliansky.net/about/index.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
+    <loc>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -177,6 +170,13 @@
   </url>
   
   <url>
+    <loc>http://blog.daliansky.net/404.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Existing-Lilu-Plugins.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
@@ -184,28 +184,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html</loc>
+    <loc>http://blog.daliansky.net/hotpatch-detailed-solution.html</loc>
     
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
@@ -275,7 +261,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
+    <loc>http://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
@@ -290,13 +276,6 @@
   
   <url>
     <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
@@ -380,6 +359,34 @@
   </url>
   
   <url>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.4-17E199-Release-Version-and-Clover-4418-Original-Image.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/tags/index.html</loc>
     
     <lastmod>2018-10-22T00:47:49.000Z</lastmod>
@@ -394,7 +401,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/an-nginx-405-not-allowed-error-solution.html</loc>
+    <loc>http://blog.daliansky.net/8-good-habit-chi-zha-in-the-workplace.html</loc>
     
     <lastmod>2018-10-22T00:47:48.000Z</lastmod>
     
@@ -408,7 +415,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/8-good-habit-chi-zha-in-the-workplace.html</loc>
+    <loc>http://blog.daliansky.net/an-nginx-405-not-allowed-error-solution.html</loc>
     
     <lastmod>2018-10-22T00:47:48.000Z</lastmod>
     
@@ -418,13 +425,6 @@
     <loc>http://blog.daliansky.net/macOS-Mojave-10.14-18A391-official-version-with-Clover-4674-original-image.html</loc>
     
     <lastmod>2018-10-21T12:24:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/CoffeeLake-UHD-630-black-screen-direct-bright-screen-and-correct-adjustment-of-brightness-adjustment.html</loc>
-    
-    <lastmod>2018-10-19T07:28:44.000Z</lastmod>
     
   </url>
   
@@ -457,6 +457,13 @@
   </url>
   
   <url>
+    <loc>http://blog.daliansky.net/How-macOS-Sierra-mid-operation-CORE-Keygen-breaks-down.html</loc>
+    
+    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.daliansky.net/Do-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
@@ -465,13 +472,6 @@
   
   <url>
     <loc>http://blog.daliansky.net/Use-CodecCommander-to-solve-ALC1220-sleep-wake-up-silentr.html</loc>
-    
-    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/How-macOS-Sierra-mid-operation-CORE-Keygen-breaks-down.html</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
     
