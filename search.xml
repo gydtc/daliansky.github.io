@@ -3,14 +3,14 @@
   <entry>
     <title><![CDATA[【黑果小兵】macOS Mojave 10.14.1 18B75 正式版 with Clover 4726原版镜像]]></title>
     <url>%2FmacOS-Mojave-10.14.1-18B75-official-version-with-Clover-4726-original-image.html</url>
-    <content type="text"><![CDATA[【黑果小兵】macOS Mojave 10.14.1(18B75)正式版 with Clover 4726原版镜像10月30日，苹果发布了MacOS Mojave 10.14.1的更新版本macOS 10.14.1的更新日志如下：增加了FaceTime视频和音频群聊功能，采用端对端加密保护隐私，支持多达32人同时通话，可从“信息”群组对话发起群聊，也可在通话过程中随时加入。新增了70多个表情符号形象，其中包括红发、白发和卷发的全新人物形象，新的光头人物表情符号，更富表现力的笑脸以及更多动物、运动和食物类表情符号。此外，苹果表示macOS Mojave 10.14.1更新提高了Mac的稳定性、兼容性和安全性，建议所有用户安装。以下是与macOS Mojave兼容的Mac机型：MacBook (2015年前期或之后的机型)MacBook Air (2012年中期或之后的机型)MacBook Pro (2012年中期或之后的机型)Mac mini (2012年后期或之后的机型)iMac (2012年后期或之后的机型)iMac Pro (2017年)Mac Pro (2013年后期的机型，以及支持特定Metal技术图形卡的2010年中期和2012年中期的机型)镜像靓点：去除USB端口限制，减少禁行发生的几率；增加Lilu崩溃的日志信息显示；新增加HD620/UHD620的配置文件，原则上支持安装时驱动显卡；新增UHD630的配置文件，机型设置为MacBookPro15,2，显卡自动侦测；本镜像采用官方原版app制作，集成Clover 4726，支持UEFI启动安装;apfs.efi同时去除日志显示；其它的驱动位于drivers-Off；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认添加Lilu崩溃日志的输出信息,详见：macOS Mojave 10.14安装中常见的问题及解决方法;更新WhateverGreen到V1.2.4，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了Shiki和CoreDisplayFixup的驱动，现在是All In One了；Clover默认配置文件config.plist原则上支持各种机型引导安装；同时新增加了原生支持HD620/UHD620的配置文件config_UHD620_HD620_59160000.plist和八代UHD630的配置文件config_UHD630.plist，供您享用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；不会操作的请移步：Clover使用教程 macOS安装教程安装教程简单版安装过程（简易版）：详细的安装教程请移步：macOS安装教程下载镜像：黑果小兵的部落阁校验md5值：macOS：打开终端，输入命令：12md5 macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg # 空格以\ 代替MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bfWindows下：请使用winmd5，将下载的安装镜像拖进winmd5窗口，核验md5值（截图略）镜像制作：下载etcher，打开镜像，选择U盘，点击Flash即可安装macOS：安装过程中不要先替换EFI，等安装全部结果后再执行替换EFI的操作安装过程中出现问题请参考：clover使用教程 以及 macOS Mojave 10.14安装中常见的问题及解决方法安装后所需要执行的动作：合并和替换EFI 不借助任何工具将CLOVER引导添加进UEFI的正确姿势驱动：显卡、声卡、USB定制：Intel FB-Patcher使用教程及插入姿势 / 黑苹果必备：Intel核显platform ID整理及smbios速查表 / Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理声卡仿冒：使用AppleALC声卡仿冒驱动AppleHDA的正确姿势无线网卡：Broadcom BCM94352z/DW1560驱动新姿势新方法本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于kexts/Other/其它驱动已更新Lilu(v1.2.8)、AppleALC(v1.3.3)、WhateverGreen(v1.2.4)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区另一种方法：直接 使用应用程序diskgenius挂载EFI分区进行操作本镜像发布站点：远景论坛 / 黑果小兵的部落阁截图：特别感谢@宪武 提供的新的hotpatch的全套方法下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：MD5 (macOS Mojave 10.14.1(18B75) Installer with Clover 4726.dmg) = 744b8154b1829123520e2685e99991a7关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！]]></content>
+    <content type="text"><![CDATA[【黑果小兵】macOS Mojave 10.14.1(18B75)正式版 with Clover 4726原版镜像10月30日，苹果发布了MacOS Mojave 10.14.1的更新版本macOS 10.14.1的更新日志如下：增加了FaceTime视频和音频群聊功能，采用端对端加密保护隐私，支持多达32人同时通话，可从“信息”群组对话发起群聊，也可在通话过程中随时加入。新增了70多个表情符号形象，其中包括红发、白发和卷发的全新人物形象，新的光头人物表情符号，更富表现力的笑脸以及更多动物、运动和食物类表情符号。此外，苹果表示macOS Mojave 10.14.1更新提高了Mac的稳定性、兼容性和安全性，建议所有用户安装。以下是与macOS Mojave兼容的Mac机型：MacBook (2015年前期或之后的机型)MacBook Air (2012年中期或之后的机型)MacBook Pro (2012年中期或之后的机型)Mac mini (2012年后期或之后的机型)iMac (2012年后期或之后的机型)iMac Pro (2017年)Mac Pro (2013年后期的机型，以及支持特定Metal技术图形卡的2010年中期和2012年中期的机型)镜像靓点：去除USB端口限制，减少禁行发生的几率；增加Lilu崩溃的日志信息显示；新增加HD620/UHD620的配置文件，原则上支持安装时驱动显卡；新增UHD630的配置文件，机型设置为MacBookPro15,2，显卡自动侦测；本镜像采用官方原版app制作，集成Clover 4726，支持UEFI启动安装;apfs.efi同时去除日志显示；其它的驱动位于drivers-Off；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认添加Lilu崩溃日志的输出信息,详见：macOS Mojave 10.14安装中常见的问题及解决方法;更新WhateverGreen到V1.2.4，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了Shiki和CoreDisplayFixup的驱动，现在是All In One了；Clover默认配置文件config.plist原则上支持各种机型引导安装；同时新增加了原生支持HD620/UHD620的配置文件config_UHD620_HD620_59160000.plist和八代UHD630的配置文件config_UHD630.plist，供您享用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；不会操作的请移步：Clover使用教程 macOS安装教程安装教程简单版安装过程（简易版）：详细的安装教程请移步：macOS安装教程下载镜像：黑果小兵的部落阁校验md5值：macOS：打开终端，输入命令：12md5 macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg # 空格以\ 代替MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bfWindows下：请使用winmd5，将下载的安装镜像拖进winmd5窗口，核验md5值（截图略）镜像制作：下载etcher，打开镜像，选择U盘，点击Flash即可安装macOS：安装过程中不要先替换EFI，等安装全部结果后再执行替换EFI的操作安装过程中出现问题请参考：clover使用教程 以及 macOS Mojave 10.14安装中常见的问题及解决方法安装后所需要执行的动作：合并和替换EFI 不借助任何工具将CLOVER引导添加进UEFI的正确姿势驱动：显卡、声卡、USB定制：Intel FB-Patcher使用教程及插入姿势 / 黑苹果必备：Intel核显platform ID整理及smbios速查表 / Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理声卡仿冒：使用AppleALC声卡仿冒驱动AppleHDA的正确姿势无线网卡：Broadcom BCM94352z/DW1560驱动新姿势新方法本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于kexts/Other/其它驱动已更新Lilu(v1.2.8)、AppleALC(v1.3.3)、WhateverGreen(v1.2.4)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区另一种方法：直接 使用应用程序diskgenius挂载EFI分区进行操作本镜像发布站点：远景论坛 / 黑果小兵的部落阁截图：特别感谢@宪武 提供的新的hotpatch的全套方法下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：https://pan.baidu.com/s/1M34keyVL3_0qYsLXTwcbpAMD5 (macOS Mojave 10.14.1(18B75) Installer with Clover 4726.dmg) = 744b8154b1829123520e2685e99991a7关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！]]></content>
       <categories>
         <category>下载</category>
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>Mojave</tag>
         <tag>10.14.1</tag>
@@ -41,8 +41,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
@@ -89,8 +89,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>17A389</tag>
@@ -137,8 +137,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
@@ -154,8 +154,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G65</tag>
@@ -171,8 +171,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.5</tag>
         <tag>17F77</tag>
@@ -242,8 +242,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.4</tag>
         <tag>1.7e+200</tag>
@@ -286,8 +286,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -318,8 +318,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -433,8 +433,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -552,8 +552,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -604,8 +604,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -632,8 +632,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -754,8 +754,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -769,9 +769,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -813,8 +813,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -842,9 +842,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -913,8 +913,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>10.12.6</tag>
         <tag>镜像</tag>
+        <tag>10.12.6</tag>
         <tag>dmg</tag>
         <tag>安装</tag>
       </tags>
@@ -943,8 +943,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
