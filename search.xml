@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【黑果小兵】macOS Mojave 10.14.1 18B75 正式版 with Clover 4726原版镜像]]></title>
+    <url>%2FmacOS-Mojave-10.14.1-18B75-official-version-with-Clover-4726-original-image.html</url>
+    <content type="text"><![CDATA[【黑果小兵】macOS Mojave 10.14.1(18B75)正式版 with Clover 4726原版镜像随着苹果发布了最新的MacBookPro 15,1/15,2这两款产品，macOS Mojave已于9月24日发布了正式版，它原生支持第八代核显;众多的8代CPU的朋友们可以彻底告别黑屏的痛苦镜像靓点：去除USB端口限制，减少禁行发生的几率；增加Lilu崩溃的日志信息显示；新增加HD620/UHD620的配置文件，原则上支持安装时驱动显卡；新增UHD630的配置文件，机型设置为MacBookPro15,2，显卡自动侦测；本镜像采用官方原版app制作，集成Clover 4726，支持UEFI启动安装;apfs.efi同时去除日志显示；其它的驱动位于drivers-Off；Clover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认添加Lilu崩溃日志的输出信息,详见：macOS Mojave 10.14安装中常见的问题及解决方法;更新WhateverGreen到V1.2.4，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了Shiki和CoreDisplayFixup的驱动，现在是All In One了；Clover默认配置文件config.plist原则上支持各种机型引导安装；同时新增加了原生支持HD620/UHD620的配置文件config_UHD620_HD620_59160000.plist和八代UHD630的配置文件config_UHD630.plist，供您享用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；不会操作的请移步：Clover使用教程 macOS安装教程安装教程简单版安装过程（简易版）：详细的安装教程请移步：macOS安装教程下载镜像：黑果小兵的部落阁校验md5值：macOS：打开终端，输入命令：12md5 macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg # 空格以\ 代替MD5 (macOS Mojave 10.14(18A391) Installer with Clover 4674.dmg) = 87928afc8f6d4d11e066a5044f8875bfWindows下：请使用winmd5，将下载的安装镜像拖进winmd5窗口，核验md5值（截图略）镜像制作：下载etcher，打开镜像，选择U盘，点击Flash即可安装macOS：安装过程中不要先替换EFI，等安装全部结果后再执行替换EFI的操作安装过程中出现问题请参考：clover使用教程 以及 macOS Mojave 10.14安装中常见的问题及解决方法安装后所需要执行的动作：合并和替换EFI 不借助任何工具将CLOVER引导添加进UEFI的正确姿势驱动：显卡、声卡、USB定制：Intel FB-Patcher使用教程及插入姿势 / 黑苹果必备：Intel核显platform ID整理及smbios速查表 / Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理声卡仿冒：使用AppleALC声卡仿冒驱动AppleHDA的正确姿势无线网卡：Broadcom BCM94352z/DW1560驱动新姿势新方法本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于kexts/Other/其它驱动已更新Lilu(v1.2.8)、AppleALC(v1.3.3)、WhateverGreen(v1.2.4)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区另一种方法：直接 使用应用程序diskgenius挂载EFI分区进行操作本镜像发布站点：远景论坛 / 黑果小兵的部落阁截图：特别感谢@宪武 提供的新的hotpatch的全套方法下载链接迅雷离线下载：请点击下载 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：MD5 (macOS Mojave 10.14.1(18B75) Installer with Clover 4726.dmg) = 744b8154b1829123520e2685e99991a7关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！]]></content>
+      <categories>
+        <category>下载</category>
+        <category>镜像</category>
+      </categories>
+      <tags>
+        <tag>下载</tag>
+        <tag>镜像</tag>
+        <tag>dmg</tag>
+        <tag>Mojave</tag>
+        <tag>10.14.1</tag>
+        <tag>18B75</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【黑果小兵】CoffeeLake UHD 630黑屏、直接亮屏及亮度调整的正确插入姿势]]></title>
     <url>%2FCoffeeLake-UHD-630-black-screen-direct-bright-screen-and-correct-adjustment-of-brightness-adjustment.html</url>
     <content type="text"><![CDATA[【黑果小兵】CoffeeLake UHD 630黑屏、直接亮屏及亮度调整的正确插入姿势适用于MacOS Mojave /macOS HighSierra 10.13.6(17G2112/17G2208)直接亮屏台式机/笔记本笔记本：移除SSDT-PNLF.aml取消勾选AddPNLFClover更新到v4707及以上，方法由headkaze提供，clover下载添加了igfxcflbklt引导参数的WhateverGreen，方法由headkaze提供，下载config.plist，可参考Boot Args添加引导参数：igfxcflbklt=forceDevices/Properties添加：enable-cfl-backlight-fix参数设置为01000000亮度调整笔记本添加：change GFX0 to IGPU重命名勾选AddPNLF选项或者添加SSDT-PNLF_CoffeeLake.aml，特别感谢@宪武，下载链接已测试过机型：八代小米游戏本增强版机械革命X8TiMSI GE63联想Y7000问题反馈请通过QQ群讨论、反馈鸣谢@宪武制作的众多的hotpatch补丁headkaze 制作了Intel FB Patcher 使用教程vit9696 for WhateverGreen (full credits), Lilu (full credits), AppleALC (full credits), USBPower.kext and additional helpvit9696 for IntelFramebuffer.bt with additional work by bcc9, Piker-Alpha and joevtDalianSky for Intel Core Platform ID and SMBIOS Quick Referencevandroiy2013 for audio id data from AppleALCRehabMan for AllData patch method and various technical info]]></content>
@@ -316,8 +333,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -393,8 +410,8 @@
       </categories>
       <tags>
         <tag>AppleALC</tag>
-        <tag>声卡仿冒</tag>
         <tag>AppleHDA</tag>
+        <tag>声卡仿冒</tag>
       </tags>
   </entry>
   <entry>
@@ -501,9 +518,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
+        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -703,8 +720,8 @@
         <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>Clover</tag>
-        <tag>platform-id</tag>
         <tag>常见问题</tag>
+        <tag>platform-id</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
@@ -779,10 +796,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
-        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
