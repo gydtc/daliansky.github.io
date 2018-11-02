@@ -105,9 +105,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>安装</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
-        <tag>安装</tag>
         <tag>常见问题</tag>
       </tags>
   </entry>
@@ -333,8 +333,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -720,8 +720,8 @@
         <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>Clover</tag>
-        <tag>platform-id</tag>
         <tag>常见问题</tag>
+        <tag>platform-id</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
