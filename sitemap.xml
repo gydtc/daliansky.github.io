@@ -4,7 +4,7 @@
   <url>
     <loc>http://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Mojave-10.14-installation.html</loc>
     
-    <lastmod>2018-11-07T05:57:31.000Z</lastmod>
+    <lastmod>2018-11-27T04:40:23.000Z</lastmod>
     
   </url>
   
@@ -44,21 +44,28 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/about/index.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/macOS-10.13-installation-of-common-problems-and-solutions.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Mac-frequently-used-to-the-command---continuous-update.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Broadcom-BCM94352z-DW1560-drive-new-posture.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/Use-the-gpt-command-to-repair-a-damaged-EFI-partition-under-Mac-OS-As-well-as-the-basic-usage-of-the-dd-command.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive.html</loc>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -170,28 +170,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/404.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/XiaoMiPro-notebook-Installation-10.13-readily-remember-and-share-EFI.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/Under-Windows-using-DISKPART-to-create-EFI-points.html</loc>
-    
-    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/hotpatch-detailed-solution.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
@@ -205,84 +184,42 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13-official-version-update-17A405-with-Clover-4238-original-mirror.html</loc>
+    <loc>http://blog.daliansky.net/macOS-Sierra-10-12-6-16G29-with-Clover-4133-original-mirror-with-multi-drive.html</loc>
     
     <lastmod>2018-10-22T06:17:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html</loc>
+    <loc>http://blog.daliansky.net/hotpatch-detailed-solution.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/404.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/about/index.html</loc>
+    
+    <lastmod>2018-10-22T06:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Clover-Configurator-Chinese-Version.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
+    <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
@@ -310,14 +247,28 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</loc>
+    <loc>http://blog.daliansky.net/Add-CLOVER-boot-to-UEFI-without-any-tools.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Add-CLOVER-boot-to-UEFI-without-any-tools.html</loc>
+    <loc>http://blog.daliansky.net/Clover-Configurator-Chinese-Version.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/HP-HP-ENVY-Laptop-13-ad1xx-Notebook-PC-Mac-OS-Note-and-EFI-Share.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
@@ -359,13 +310,6 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</loc>
-    
-    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.daliansky.net/CLOVER-v2-4-r4438-Integrated-Millet-Notebook-PRO-EFI-Installation-Instructions.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
@@ -387,7 +331,28 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html</loc>
+    <loc>http://blog.daliansky.net/Fresh-installing-macOS-High-Sierra(10.13)-on-AMD-Ryzen-Hackintosh-Guide.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.2-(17C88)-official-version-and-Clover-4333-original-image.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Display-interface-data-and-parameter-changes.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/With-VoodooHDA-comes-getdump-find-valid-nodes-and-paths.html</loc>
     
     <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
@@ -401,9 +366,37 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/tags/index.html</loc>
+    <loc>http://blog.daliansky.net/Clover-Patched-Desktop-AppleHDA-Realtek-ALC-Audio.html</loc>
     
-    <lastmod>2018-10-22T00:47:49.000Z</lastmod>
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10.13.1-(17B48)-official-version-and-Clover-4278-original-image.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/A-command-to-teach-you-how-to-confirm-their-own-models-and-how-to-open-the-HWP.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/MAC-commonly-used-shortcut-keys-finishing.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/Add-the-CLOVER-boot-to-the-correct-posture-of-the-UEFI-Boot-Option-Menu.html</loc>
+    
+    <lastmod>2018-10-22T03:25:29.000Z</lastmod>
     
   </url>
   
@@ -411,6 +404,20 @@
     <loc>http://blog.daliansky.net/categories/index.html</loc>
     
     <lastmod>2018-10-22T00:47:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/tags/index.html</loc>
+    
+    <lastmod>2018-10-22T00:47:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/an-nginx-405-not-allowed-error-solution.html</loc>
+    
+    <lastmod>2018-10-22T00:47:48.000Z</lastmod>
     
   </url>
   
@@ -423,13 +430,6 @@
   
   <url>
     <loc>http://blog.daliansky.net/10-interesting-things-that-google.html</loc>
-    
-    <lastmod>2018-10-22T00:47:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/an-nginx-405-not-allowed-error-solution.html</loc>
     
     <lastmod>2018-10-22T00:47:48.000Z</lastmod>
     
@@ -457,7 +457,14 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror.html</loc>
+    <loc>http://blog.daliansky.net/Do-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html</loc>
+    
+    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.daliansky.net/How-macOS-Sierra-mid-operation-CORE-Keygen-breaks-down.html</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
     
@@ -471,14 +478,7 @@
   </url>
   
   <url>
-    <loc>http://blog.daliansky.net/Do-not-need-to-make-installation-disk-Teach-you-to-install-the-High-Sierra-system-on-another-MacOS-system-to-another-partition.html</loc>
-    
-    <lastmod>2017-08-28T03:08:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.daliansky.net/How-macOS-Sierra-mid-operation-CORE-Keygen-breaks-down.html</loc>
+    <loc>http://blog.daliansky.net/macOS-High-Sierra-10-13DB6-17A334b-with-Clover-4160-original-mirror.html</loc>
     
     <lastmod>2017-08-28T03:08:02.000Z</lastmod>
     
