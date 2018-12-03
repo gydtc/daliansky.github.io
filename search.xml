@@ -9,8 +9,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>Mojave</tag>
         <tag>10.14.1</tag>
@@ -41,8 +41,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>Mojave</tag>
@@ -52,7 +52,7 @@
   <entry>
     <title><![CDATA[Intel FB-Patcher使用教程及插入姿势]]></title>
     <url>%2FIntel-FB-Patcher-tutorial-and-insertion-pose.html</url>
-    <content type="text"><![CDATA[Intel FB-Patcher使用教程及插入姿势功能支持Sandy Bridge，Ivy Bridge，Haswell，Broadwell，SKYLAKE，KabyLake，Coffee Lake, Cannon Lake Ice Lake几乎所有的平台创建所有的显示接口连接和VRAM补丁检测自动修补程序创建的变化创建Clover补丁，支持hex，base64或Devices/Properties等三种格式显示原生GPU和型号标识显示和编辑内存信息，如Stolen，Framebuffer，VRAM，Cursor等翻滚一些项目的其他信息（Tool tips）直接读取已加载生效的xxxFramebuffer kext的数据文件-&gt;打开通过Debug版本的WhatEverGreen.kext的-igfxdump引导标志生成的Framebuffer文件文件- &gt;导出&gt;Clover config.plist文件-&gt;导出- &gt; Framebuffer.txt修补音频布局ID添加USB端口限制补丁插拔USB2 / USB3/Type-C设备和设定的端口的连接器类型然后生成一个USBPorts.kext`的驱动程序高级修补选项（DVMT-prealloc 32 MB ，VRAM 2048 MB，禁用eGPU，启用HDMI20（4K），欺骗SKL音频，DP-&gt;HDMI，USB端口限制，FB端口限制等）先来两个开味小菜：Layout-id修补安装最新版本的Lilu和AppleALC设置config.plist/Devices/Audio/Inject=NO通过下拉列表设置Layout Id检查补丁：General-&gt;AudioFile-&gt;Export-&gt;Clover config.plist重启如果没生效请重复第3步：更换不同的layout-idUSB端口修补应用USB端口限制补丁(在Patch-&gt;Advanced) 然后导出 File-&gt;Export-&gt;Clover config.plist 将USBInjectAll.kext 驱动放进EFI/CLOVER/kexts/Other ，同时需要在config.plist-&gt;ACPI-&gt;DSDT Patches中添加重命名补丁change EHC1 to EH01change EHC2 to EH02change XHCI to XHC两种格式：123456789Comment: change EHC1 to EH01Find: 45484331Replace: 45483031Comment: change EHC2 to EH02Find: 45484332Replace: 45483032Comment: change XHCI to XHCFind: 58484349Replace: 5848435f123456789101112131415161718192021222324252627282930313233343536373839404142&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;change EHC1 to EH01&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; RUhDMQ== &lt;/data&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; RUgwMQ== &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;change EHC2 to EH02&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; RUhDMg== &lt;/data&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; RUgwMg== &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;change XHCI to XHC&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; WEhDSQ== &lt;/data&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; WEhDXw== &lt;/data&gt;&lt;/dict&gt;- 它通常位于 123456&lt;key&gt;ACPI&lt;/key&gt;&lt;dict&gt; &lt;key&gt;DSDT&lt;/key&gt; &lt;dict&gt; &lt;key&gt;Patches&lt;/key&gt; &lt;array&gt; 下面，如果使用文字编辑软件，请不要放错位置。 附图：重命令名字符串转换16进制示意图你也许还会需要XHCI-200-series-injector.kext,XHCI-300-series-injector.kext或者XHCI-x99-injector.kext，这取决于你所使用的INTEL芯片组重启机器，重新打开Intel FB-Patcher转到General-&gt;USB接口分别插入和拔出USB 2.0和USB 3.0设备，要求：将机器上的每个USB端口都插拔一遍。可用的端口将以突出的颜色标出设置每个端口，在下拉列表中选择适当的接口类型连接到USB3端口应设置为USB3(注HSxx端口)USB type-C型端口可以是9或10，这取决于硬件如何处理USB type-C型设备/电缆的两种可能方向如果USB-C在两个方向上使用相同的SSxx，则它具有内部开关（UsbConnector = 9）如果USB-C在每个方向使用不同的SSxx，则它没有开关（UsbConnector = 10）使用删除按钮移除无用的端口使用Export按钮创建USBPorts.kext ，它位于你的桌面，将生成的USBPorts.kext复制进 EFI/CLOVER/kexts/Other 备注:旧版本生成的驱动名称为USBPower.kext你现在可以删除掉USBInjectAll.kext 以及关闭端口限制的补丁了FAQQ. 什么是USBPorts.kext?A. 它是一个Codeless Kernel Extension 用于注入USB端口，让所有的USB端口都能正常工作Q. 我还需要SSDT-UIAC.aml吗A. 不，这个方法生成的是一个空壳的无代码的kext驱动核心功能：给FrameBuffer打补丁随着macOS Mojave的发行，之前的通过CLOVER-KextsToPatch通过修补帧缓冲的方法已经失效了，尤其是SkyLake及以后架构。您现在必须使用Lilu + WhateverGreen+FB Patcher的方式来驱动您的显卡。初步动作删除FakePCIID IntelGraphicsFixup,NvidiaGraphicsFixup,Shiki和CoreDisplayFixup关闭Clover里面关于Graphics注入的参数，这些参数包括：config.plist/Graphics/Inject/ATI=NOconfig.plist/Graphics/Inject/Intel=NOconfig.plist/Graphics/Inject/NVidia=NOconfig.plist/Graphics/ig-platform-id=config.plist/Devices/FakeID/IntelGFX=关闭Clover里面关于DSDT的修复：AddHDMIFixDisplayFixIntelGfxAddIMEI禁用UseIntelHDMI移除boot argument参数：-disablegfxfirmware移除IGPU和HDMI部分的全部内容，包括：config.plist/Devices/Arbitraryconfig.plist/Devices/Propertiesconfig.plist/Devices/AddProperties从以下位置删除任何与IGPU和HDMI相关的SSDT和DSDT：CLOVER/ACPI/patched使用方法打开应用：Intel FB Patcher.app通过菜单项：Framebuffer选择macOS 10.13.6 (17G2112) / macOS 10.14(18A389)选择显卡的次代，比如Intel HD Graphics 620就需要选择Kaby Lake，Intel HD Graphics 520就需要选择Skylake等等，之后选择Platform-id，这个就是能正确驱动你的显卡的id，至于这个ID如何确定，请参考黑苹果必备：Intel核显platform ID整理及smbios速查表。欲了解更多信息，请阅读使用WhateverGreen英特尔帧缓冲修补指南。中文版：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理点击Patch按钮，在Patch Options-General选项中勾选Auto Detect Changes，All,Connectors,VRAM这几个选项；在Patch Options-Advanced选项中勾选DVMT pre-alloc 32 MB，VRAM 2048 MB，Enable HDMI20(4K)勾选Device id，选择platfrom-id相对应的设置id，这通常跟你的显卡名称相吻合；点击Generate Patch生成显卡驱动补丁；通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件中；几个例子：Coffee Lake（八代）平台:Intel UHD Graphics 630(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件Kabe Lake（七代）平台Intel HD Graphics 620/Intel UHD Graphics 620(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件Sky Lake（六代）平台:Intel HD Graphics 530(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件Haswell（四代）平台：Intel HD Graphics 4600(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件本教程会随着新版本新增功能持续更新下载链接http://headsoft.com.au/download/mac/FBPatcher.zip扩展阅读macOS High Sierra 10.13.6(17G2112)/Mojave ig-platform-id数据整理鸣谢vit9696 for WhateverGreen (full credits), Lilu (full credits), AppleALC (full credits), USBPower.kext and additional helpvit9696 for IntelFramebuffer.bt with additional work by bcc9, Piker-Alpha and joevtDalianSky for Intel Core Platform ID and SMBIOS Quick Referencevandroiy2013 for audio id data from AppleALCRehabMan for AllData patch method and various technical info]]></content>
+    <content type="text"><![CDATA[Intel FB-Patcher使用教程及插入姿势功能支持Sandy Bridge，Ivy Bridge，Haswell，Broadwell，SKYLAKE，KabyLake，Coffee Lake, Cannon Lake Ice Lake几乎所有的平台创建所有的显示接口连接和VRAM补丁检测自动修补程序创建的变化创建Clover补丁，支持hex，base64或Devices/Properties等三种格式显示原生GPU和型号标识显示和编辑内存信息，如Stolen，Framebuffer，VRAM，Cursor等翻滚一些项目的其他信息（Tool tips）直接读取已加载生效的xxxFramebuffer kext的数据文件-&gt;打开通过Debug版本的WhatEverGreen.kext的-igfxdump引导标志生成的Framebuffer文件文件- &gt;导出&gt;Clover config.plist文件-&gt;导出- &gt; Framebuffer.txt修补音频布局ID添加USB端口限制补丁插拔USB2 / USB3/Type-C设备和设定的端口的连接器类型然后生成一个USBPorts.kext`的驱动程序高级修补选项（DVMT-prealloc 32 MB ，VRAM 2048 MB，禁用eGPU，启用HDMI20（4K），欺骗SKL音频，DP-&gt;HDMI，USB端口限制，FB端口限制等）先来两个开味小菜：Layout-id修补安装最新版本的Lilu和AppleALC设置config.plist/Devices/Audio/Inject=NO通过下拉列表设置Layout Id检查补丁：General-&gt;AudioFile-&gt;Export-&gt;Clover config.plist重启如果没生效请重复第3步：更换不同的layout-idUSB端口修补应用USB端口限制补丁(在Patch-&gt;Advanced) 然后导出 File-&gt;Export-&gt;Clover config.plist 将USBInjectAll.kext 驱动放进EFI/CLOVER/kexts/Other ，同时需要在config.plist-&gt;ACPI-&gt;DSDT Patches中添加重命名补丁change EHC1 to EH01change EHC2 to EH02change XHCI to XHC两种格式：123456789Comment: change EHC1 to EH01Find: 45484331Replace: 45483031Comment: change EHC2 to EH02Find: 45484332Replace: 45483032Comment: change XHCI to XHCFind: 58484349Replace: 5848435f123456789101112131415161718192021222324252627282930313233343536373839404142&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;change EHC1 to EH01&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; RUhDMQ== &lt;/data&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; RUgwMQ== &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;change EHC2 to EH02&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; RUhDMg== &lt;/data&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; RUgwMg== &lt;/data&gt;&lt;/dict&gt;&lt;dict&gt; &lt;key&gt;Comment&lt;/key&gt; &lt;string&gt;change XHCI to XHC&lt;/string&gt; &lt;key&gt;Disabled&lt;/key&gt; &lt;false/&gt; &lt;key&gt;Find&lt;/key&gt; &lt;data&gt; WEhDSQ== &lt;/data&gt; &lt;key&gt;Replace&lt;/key&gt; &lt;data&gt; WEhDXw== &lt;/data&gt;&lt;/dict&gt;- 它通常位于 123456&lt;key&gt;ACPI&lt;/key&gt;&lt;dict&gt; &lt;key&gt;DSDT&lt;/key&gt; &lt;dict&gt; &lt;key&gt;Patches&lt;/key&gt; &lt;array&gt; 下面，如果使用文字编辑软件，请不要放错位置。 附图：重命令名字符串转换16进制示意图你也许还会需要XHCI-200-series-injector.kext,XHCI-300-series-injector.kext或者XHCI-x99-injector.kext，这取决于你所使用的INTEL芯片组重启机器，重新打开Intel FB-Patcher转到General-&gt;USB接口分别插入和拔出USB 2.0和USB 3.0设备，要求：将机器上的每个USB端口都插拔一遍。可用的端口将以突出的颜色标出设置每个端口，在下拉列表中选择适当的接口类型连接到USB3端口应设置为USB3(注HSxx端口)USB type-C型端口可以是9或10，这取决于硬件如何处理USB type-C型设备/电缆的两种可能方向如果USB-C在两个方向上使用相同的SSxx，则它具有内部开关（UsbConnector = 9）如果USB-C在每个方向使用不同的SSxx，则它没有开关（UsbConnector = 10）使用删除按钮移除无用的端口使用Export按钮创建USBPorts.kext ，它位于你的桌面，将生成的USBPorts.kext复制进 EFI/CLOVER/kexts/Other 备注:旧版本生成的驱动名称为USBPower.kext你现在可以删除掉USBInjectAll.kext 以及关闭端口限制的补丁了USB端口补丁(macOS 10.14.1+)macOS 10.14.1+的USB端口限制补丁已经失效了，因此无法一次配置所有端口。 RehabMan已更新USBInjectAll.kext以包含用于排除端口组的引导标志将USBInjectAll.kext（用于端口发现）放入EFI/CLOVER/kexts/OtherUSBInjectAll.kext要求：Clover重命名XHC1 -&gt; XHCClover重命名EHC1 -&gt; EH01Clover重命名EHC2 -&gt; EH02运行FB-Patcher并转到General-&gt; USB选项卡以检查USB控制器列表基于USB控制器，您可能需要安装额外的kexts：8086:8CB1和macOS &lt;10.11.1 -&gt; XHCI-9-series.kext8086:8D31,8086:A2AF,8086:A36D,8086:9DED -&gt; XHCI-unsupported.kext8086:1E31,8086:8C31,8086:8CB1,8086:8D31,8086:9C31,8086:9CB1 -&gt; FakePCIID.kext + FakePCIID_XHCIMux.kext使用-uia_exclude_ss引导标志重新引导(在boot args添加：-uia_exclude_ss)鼠标和键盘：记下鼠标和键盘所连接的端口，并添加uia_include=x引导标志（例如，uia_include=HS01,HS02）以使它们保持活动状态运行Intel FB-Patcher，转到General-&gt;USB选项卡将USB 2.0和USB 3.0设备插入并拔出系统的每个USB端口活动的端口将保持突出显示使用下拉列表将每个端口设置为适当的连接器永久连接设备的USB端口（例如M.2蓝牙卡）应设置为“内部”连接到USB3端口的HSxx端口应设置为USB3内部集线器通常连接到端口PR11和PR21，因此应设置为“内部”TypeC：USB type-C型端口可以是9或10，这取决于硬件如何处理USB type-C型设备/电缆的两种可能方向如果USB-C在两个方向上使用相同的SSxx，则它具有内部开关（UsbConnector = 9）如果USB-C在每个方向使用不同的SSxx，则它没有开关（UsbConnector = 10）使用“删除”按钮删除所有未使用的端口使用添加的-uia_exclude_hs引导标志重新启动（删除-uia_exclude_ss引导标志）转到步骤4（第二次跳过此步骤）使用“导出”按钮在桌面上生成USBPorts.kext。将此文件复制到EFI/CLOVER/kexts/Other您现在可以执行清理并删除不必要的文件：删除自定义引导标志（-uia_exclude_ss -uia_exclude_hs uia_include = x）删除USBInjectAll.kext删除三叶草重命名（XHC，EH01，EH02）FAQQ. 什么是USBPorts.kext?A. 它是一个Codeless Kernel Extension 用于注入USB端口，让所有的USB端口都能正常工作Q. 我还需要SSDT-UIAC.aml吗A. 不，这个方法生成的是一个空壳的无代码的kext驱动核心功能：给FrameBuffer打补丁随着macOS Mojave的发行，之前的通过CLOVER-KextsToPatch通过修补帧缓冲的方法已经失效了，尤其是SkyLake及以后架构。您现在必须使用Lilu + WhateverGreen+FB Patcher的方式来驱动您的显卡。初步动作删除FakePCIID IntelGraphicsFixup,NvidiaGraphicsFixup,Shiki和CoreDisplayFixup关闭Clover里面关于Graphics注入的参数，这些参数包括：config.plist/Graphics/Inject/ATI=NOconfig.plist/Graphics/Inject/Intel=NOconfig.plist/Graphics/Inject/NVidia=NOconfig.plist/Graphics/ig-platform-id=config.plist/Devices/FakeID/IntelGFX=关闭Clover里面关于DSDT的修复：AddHDMIFixDisplayFixIntelGfxAddIMEI禁用UseIntelHDMI移除boot argument参数：-disablegfxfirmware移除IGPU和HDMI部分的全部内容，包括：config.plist/Devices/Arbitraryconfig.plist/Devices/Propertiesconfig.plist/Devices/AddProperties从以下位置删除任何与IGPU和HDMI相关的SSDT和DSDT：CLOVER/ACPI/patched使用方法打开应用：Intel FB Patcher.app通过菜单项：Framebuffer选择macOS 10.13.6 (17G2112) / macOS 10.14(18A389)选择显卡的次代，比如Intel HD Graphics 620就需要选择Kaby Lake，Intel HD Graphics 520就需要选择Skylake等等，之后选择Platform-id，这个就是能正确驱动你的显卡的id，至于这个ID如何确定，请参考黑苹果必备：Intel核显platform ID整理及smbios速查表。欲了解更多信息，请阅读使用WhateverGreen英特尔帧缓冲修补指南。中文版：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理点击Patch按钮，在Patch Options-General选项中勾选Auto Detect Changes，All,Connectors,VRAM这几个选项；在Patch Options-Advanced选项中勾选DVMT pre-alloc 32 MB，VRAM 2048 MB，Enable HDMI20(4K)勾选Device id，选择platfrom-id相对应的设置id，这通常跟你的显卡名称相吻合；点击Generate Patch生成显卡驱动补丁；通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件中；几个例子：Coffee Lake（八代）平台:Intel UHD Graphics 630(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件Kabe Lake（七代）平台Intel HD Graphics 620/Intel UHD Graphics 620(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件Sky Lake（六代）平台:Intel HD Graphics 530(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件Haswell（四代）平台：Intel HD Graphics 4600(Mobile)通过菜单项：File-Export-config.plist，将该补丁导出到CLOVER的配置文件本教程会随着新版本新增功能持续更新下载链接http://headsoft.com.au/download/mac/FBPatcher.zip扩展阅读macOS High Sierra 10.13.6(17G2112)/Mojave ig-platform-id数据整理鸣谢vit9696 for WhateverGreen (full credits), Lilu (full credits), AppleALC (full credits), USBPower.kext and additional helpvit9696 for IntelFramebuffer.bt with additional work by bcc9, Piker-Alpha and joevtDalianSky for Intel Core Platform ID and SMBIOS Quick Referencevandroiy2013 for audio id data from AppleALCRehabMan for AllData patch method and various technical info]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -89,8 +89,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>17A389</tag>
@@ -137,8 +137,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
@@ -154,8 +154,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G65</tag>
@@ -171,8 +171,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.5</tag>
         <tag>17F77</tag>
@@ -242,8 +242,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.4</tag>
         <tag>1.7e+200</tag>
@@ -286,8 +286,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -318,8 +318,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -433,8 +433,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -552,8 +552,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -604,8 +604,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -632,8 +632,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -754,8 +754,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -769,9 +769,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -813,8 +813,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -842,9 +842,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
+        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -913,8 +913,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>镜像</tag>
         <tag>10.12.6</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>安装</tag>
       </tags>
@@ -943,8 +943,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>镜像</tag>
         <tag>下载</tag>
+        <tag>镜像</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
