@@ -367,8 +367,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>接口</tag>
         <tag>platform-id</tag>
+        <tag>接口</tag>
         <tag>显存</tag>
         <tag>显示器</tag>
       </tags>
@@ -569,8 +569,8 @@
       <tags>
         <tag>10.12</tag>
         <tag>10.13</tag>
-        <tag>BlueTooth</tag>
         <tag>蓝牙</tag>
+        <tag>BlueTooth</tag>
         <tag>鼠标</tag>
         <tag>Mouse</tag>
       </tags>
@@ -735,8 +735,8 @@
         <tag>High Sierra</tag>
         <tag>驱动</tag>
         <tag>WIFI</tag>
-        <tag>BlueTooth</tag>
         <tag>蓝牙</tag>
+        <tag>BlueTooth</tag>
       </tags>
   </entry>
   <entry>
@@ -754,8 +754,8 @@
         <tag>Lilu</tag>
         <tag>Plugins</tag>
         <tag>Clover</tag>
-        <tag>platform-id</tag>
         <tag>常见问题</tag>
+        <tag>platform-id</tag>
         <tag>Patch</tag>
         <tag>wake</tag>
       </tags>
