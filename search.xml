@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mojave硬件支持列表（持续更新中）]]></title>
+    <url>%2FMojave-Hardware-Support-List.html</url>
+    <content type="text"><![CDATA[AMD显卡支持列表免驱免驱或仿冒无法驱动Vega 64R9 270RX580 2048SPVega 56R9 370RX550RX 560R9 370XR7 240RX 560DR9 380XR7 250RX 570R9 390R7 250XRX 580R9 390XR7 260XRX 590R5 340RX 460R7 350RX 470R7 360RX 470DHD7750RX 480HD7770HD7850WX 2100HD7870WX 3100HD7950W2100HD7970W4100HD7990W4300R9 270XR9 280R9 280XR9 380W5000W7000W8000W9000W5100W7100W8100W9100W9100 32GBPro SSGWX 4100WX 5100WX 7100WX 9100WX 8200Pro Duo (Fiji)Nvidia显卡支持列表开普勒GK104/GK107/GK110核心的在Mojave里原生驱动开普勒GK106/GK208核心的在10.12.6+的系统里花屏闪屏免驱花屏/闪屏无法驱动GTXTitanGTX650RTX20XXGTXTitan ZGTX650TiRTXX000GTX Titan BlackGTX660GTX9XXGTX690GTX660TiGTX10XXGTX680GT720GT1030GTX760GT730GTX750TiGTX770GT640GTX750GTX780K2200GTX780tiK620GTX650K1200GT640Titan XGT710Titan XPGT740Titan VK6000GV100K5200GP100K5000PXX00K4000PXX0K4200MX000K2000K2000DK600K420INTEL核显支持列表除HD3000外，其实的基本都支持，详见：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理 和 黑苹果必备：Intel核显platform ID整理及smbios速查表未完待续源引链接及讨论：http://bbs.pcbeta.com/viewthread-1799271-1-1.html]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Mojave</tag>
+        <tag>硬件</tag>
+        <tag>支持</tag>
+        <tag>列表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【黑果小兵】macOS Mojave 10.14.2 18C54 正式版 with Clover 4792原版镜像]]></title>
     <url>%2FmacOS-Mojave-10.14.2-18C54-official-version-with-Clover-4792-original-image.html</url>
     <content type="text"><![CDATA[【黑果小兵】macOS Mojave 10.14.2(18C54)正式版 with Clover 4792原版镜像12月5日，苹果发布了MacOS Mojave 10.14.2的更新版本macOS 10.14.2的更新日志如下：增加了对Wi-Fi通话的RTT（实时文本）支持解决了iTunes可能无法通过第三方”隔空播放”扬声器媒体播放的问题此外，苹果表示macOS Mojave 10.14.2更新提高了Mac的稳定性、兼容性和安全性，建议所有用户安装。以下是与macOS Mojave兼容的Mac机型：MacBook (2015年前期或之后的机型)MacBook Air (2012年中期或之后的机型)MacBook Pro (2012年中期或之后的机型)Mac mini (2012年后期或之后的机型)iMac (2012年后期或之后的机型)iMac Pro (2017年)Mac Pro (2013年后期的机型，以及支持特定Metal技术图形卡的2010年中期和2012年中期的机型)镜像靓点：去除USB端口限制，减少禁行发生的几率；增加Lilu崩溃的日志信息显示；新增加config_WHISKEYLAKE_3EA0WHISKEY LAKE平台的配置文件，原则上支持安装时驱动显卡；新增UHD630的配置文件，机型设置为MacBookPro15,2，显卡自动侦测；本镜像采用官方原版app制作，集成Clover 4792，支持UEFI启动安装;apfs.efi同时去除日志显示；其它的驱动位于drivers-Off；300系列主板请于drivers64UEFI目录中移除AptioMemoryFix-64.efi添加OsxAptioFix2Drv-free2000.efiClover集成了本人修改的全新主题，不喜欢的可以于安装系统后自行替换；所有配置文件中默认添加Lilu崩溃日志的输出信息,详见：macOS Mojave 10.14安装中常见的问题及解决方法;更新WhateverGreen到V1.2.4，原生支持UHD620/UHD630等八代核显，不需要注入platform-id， 同时它也支持NVIDIA和AMD的显卡，以及整合了Shiki和CoreDisplayFixup的驱动，现在是All In One了；Clover默认配置文件config.plist原则上支持各种机型引导安装；同时新增加了config_WHISKEYLAKE_3EA0.plist和原生支持HD620/UHD620的配置文件config_UHD620_HD620_59160000.plist和八代UHD630的配置文件config_UHD630.plist，供您享用；其它配置文件包括：HD520/530/540，HD550/P530,HD5000/5100/5200/5300/5500/6000,HD4200/4400/4600；所有config配置文件都可通过Clover引导界面-Options-configs进行选择；不会操作的请移步：Clover使用教程 macOS安装教程安装教程简单版安装过程（简易版）：详细的安装教程请移步：macOS安装教程下载镜像：黑果小兵的部落阁校验md5值：macOS：打开终端，输入命令：12md5 macOS Mojave 10.14.2(18C54) Installer with Clover 4792.dmg # 空格以\ 代替MD5 (macOS Mojave 10.14.2(18C54) Installer with Clover 4792.dmg) = 12e20b7d4257e746fe51ee0aac424c01Windows下：请使用winmd5，将下载的安装镜像拖进winmd5窗口，核验md5值（截图略）镜像制作：下载etcher，打开镜像，选择U盘，点击Flash即可安装macOS：安装过程中不要先替换EFI，等安装全部结果后再执行替换EFI的操作安装过程中出现问题请参考：clover使用教程 以及 macOS Mojave 10.14安装中常见的问题及解决方法安装后所需要执行的动作：合并和替换EFI 不借助任何工具将CLOVER引导添加进UEFI的正确姿势驱动：显卡、声卡、USB定制：Intel FB-Patcher使用教程及插入姿势 / 黑苹果必备：Intel核显platform ID整理及smbios速查表 / Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理声卡仿冒：使用AppleALC声卡仿冒驱动AppleHDA的正确姿势无线网卡：Broadcom BCM94352z/DW1560驱动新姿势新方法本镜像集成的EFI如果无法安装，请根据自己的机型寻找相应的EFI进行替换，请参考：macOS High Sierra区笔记本安装情况集合帖支持Realtek8111/8100系列有线网卡，支持Intel板载有线网卡；其它的网卡驱动位于kexts/Other/其它驱动已更新Lilu(v1.2.8)、AppleALC(v1.3.4)、WhateverGreen(v1.2.4)等驱动；本镜像已经过本人安装测试，若您在使用中遇到问题，可通过爬楼自行解决。本人才疏学浅，所学知识都来自于远景社区，感谢远景各位大咖一直以来对 黑果小兵 的大力支持，由于人员众多，恕不一一列名致谢！挂载EFI分区Windows操作系统下面,以系统管理员身份打开cmd窗口,输入命令:123456789c:\&gt;diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为基本数据分区assign letter=X # x为EFI分区盘符exit # 退出diskpartnotepad # 打开记事本程序，点击文件-&gt;打开，即可访问EFI分区您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区另一种方法：直接 使用应用程序diskgenius挂载EFI分区进行操作本镜像发布站点：远景论坛 / 黑果小兵的部落阁截图：结合了台式机和笔记本的截屏，仅供参考特别感谢@宪武 提供的新的hotpatch的全套方法下载链接迅雷离线下载：[请点击下载] 感谢@难忘情怀提供下载资源http下载链接:请点击下载 感谢@难忘情怀提供下载资源百毒云：请点击下载OneDrive：请点击下载MD5 (macOS Mojave 10.14.2(18C54) Installer with Clover 4792.dmg) = 12e20b7d4257e746fe51ee0aac424c01关于打赏您的支持就是我更新的动力！如果不希望看到博主停更的话，请点击下方的 打赏 支持一下，有钱的捧个钱场，没钱的捧个人场，谢谢大家！]]></content>
@@ -11,8 +25,8 @@
       <tags>
         <tag>下载</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>Mojave</tag>
+        <tag>dmg</tag>
         <tag>10.14.2</tag>
         <tag>18C54</tag>
       </tags>
@@ -45,8 +59,8 @@
       <tags>
         <tag>下载</tag>
         <tag>镜像</tag>
-        <tag>dmg</tag>
         <tag>Mojave</tag>
+        <tag>dmg</tag>
         <tag>10.14.1</tag>
         <tag>18B75</tag>
       </tags>
@@ -77,9 +91,9 @@
       <tags>
         <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>Mojave</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
-        <tag>Mojave</tag>
         <tag>18A391</tag>
       </tags>
   </entry>
@@ -125,10 +139,10 @@
       <tags>
         <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>Mojave</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
         <tag>17A389</tag>
-        <tag>Mojave</tag>
       </tags>
   </entry>
   <entry>
@@ -139,8 +153,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>10.14</tag>
         <tag>Mojave</tag>
+        <tag>10.14</tag>
         <tag>安装</tag>
         <tag>常见问题</tag>
       </tags>
@@ -153,10 +167,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>Mojave</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
         <tag>10.14</tag>
-        <tag>Mojave</tag>
         <tag>framebuffer</tag>
         <tag>patch</tag>
       </tags>
@@ -552,9 +566,9 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>EFI</tag>
         <tag>gpt</tag>
         <tag>MacOS</tag>
+        <tag>EFI</tag>
         <tag>Fix</tag>
         <tag>修复</tag>
       </tags>
@@ -830,10 +844,10 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>EFI</tag>
         <tag>diskpart</tag>
         <tag>Windows</tag>
         <tag>分区</tag>
-        <tag>EFI</tag>
         <tag>ESP</tag>
       </tags>
   </entry>
