@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[联想小新Air 13安装黑苹果兼macOS Mojave安装教程]]></title>
+    <url>%2FLenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html</url>
+    <content type="text"><![CDATA[联想小新Air 13安装黑苹果兼macOS Mojave安装教程写作/安装流程：1.下载镜像；2.刻盘；3.安装；4.替换/完善EFI；电脑配置规格详细信息电脑型号联想Lenovo Air 13 IWL笔记本电脑操作系统macOS Mojave 10.14.1 18B75/macOS High Sierra 10.13.6 17G2208处理器Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz内存16 GB 1867MHz硬盘Crucial_CT500MX200SSD1 (500G固态) PM981无法驱动，需要更换显卡英特尔 HD Graphics 500 8086:3EA0(Whiskey Lake) (显卡仿冒：注入platform-id:0x3e9b0009)显示器FHD 1920x1080 (13.3 英寸)声卡ALC236 (layout-id:2)网卡REALTEK 10EC:B822 已更换为Bcm94352z(14E4:43B1)Windows下制作macOS Mojave安装盘准备工具U盘大于8GU 盘大小不限做 PE 盘系统镜像下载：点击前往etcher制作安装镜像镜像制作：下载etcher，打开镜像，选择U盘，点击Flash即可小新BIOS设置开机按F2或者F12键进入BIOS设置ConfigurationSystem Performance Mode: Intelligent 解决20%以下电量时蓝牙关闭问题SecurityIntel SGX: Disable or Software Control 视BIOS版本不同操作会有所不同BootBoot Mode: Legacy SupportBoot Priority: UEFI FirstFast Boot: DisabledExitOS Optimized Defaults: Disabled安装系统开机，按F12选择U盘引导进入CLOVER主界面，直接回车，开始引导macOS很多的机友都是会在这个地方翻车。出现问题请进群反馈，请提供翻车照片及机器配置图。不提供任何信息直接发问就是耍流氓这个过程需要1-2分钟,耐心等待，进入安装程序,出现语言选择界面选择简体中文，点击继续出现安装向导，点击继续阅读许可协议，点击继续点击同意，继续出现安装界面，这里是让你选择安装磁盘请点击菜单上面的实用工具-&gt;磁盘工具出现磁盘工具，在磁盘工具里面所做的操作涉及到你的数据安全，请认真仔细确认后再操作，否则由此造成的一切后果本站概不承担。点击窗口左上角的显示，选择显示所有设备选择APPLE SSD macOS-0 SSD Media本例中为虚拟机中的磁盘名称，请根据你的设备选择相应的磁盘点击抹掉， 假设您的磁盘是空的或者数据是已经备份过的,别怪我没提醒你!!!在弹出的窗口中输入：名称：MAC；格式：Mac OS扩展(日志式)；方案：GUID分区图，在点击抹掉按钮之前，请再次确认你的磁盘已经提前做了数据备份点击抹除，然后等待操作结束点击完成，通过菜单选择退出磁盘工具或者按窗口左上角红色按钮离开磁盘工具返回到安装界面选择MAC磁盘，点击继续它会把USB安装盘上的安装文件预复制到要安装的系统分区里，这个过程通常会持续1-2分钟重启后继续安装，在安装期间，通常会自动重启2-3遍之所以有重启的动作是因为从macOS 10.13.x开始，苹果公司将默认的HFS磁盘分区强行换成APFS分区，它会在第二次重启之后做HFS-&gt;APFS转换的动作，转换成功后，继续安装过程。第二阶段的安装会有两种界面,一种是不进安装界面直接安装,另一种是先进入安装界面直接安装,需要注意的是,无论是哪一种界面下,安装的过程中全程是禁用鼠标和键盘的,需要你做的只是耐心等待它安装完成设置向导选择国家：中国设置键盘你可以添加自己熟悉的输入法，然后点击继续，出现数据与隐私，阅读后点击继续选择不传输任何信息，点击继续点击稍后设置出现您确定要中法使用Apple ID来登录吗？，点击跳过出现条款与条件，点击同意出现我已经阅读并同意&quot;macOS软件许可协议&quot;，点击同意出现创建电脑用户的窗口,输入用户名和密码,点击继续创建电脑用户系统会创建初始用户，接着进行快捷设置弹出界面，让你选择外观，您可以根据个人的喜好选择浅色主题或者深色主题，点击继续出现正在设置您的Mac,请稍候完成设置向导设置向导完成，根据选择主题的不同，分别进入不同的界面进入桌面出现桌面后,整个的安装向导就完成了。安装后的系统设置系统安装后,你可以先喝杯咖啡兴奋会儿,马上还有更艰巨的任务在等着你呢教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[macOS篇]新的系统安装成功后，EFI还位于U盘里，总不能一直挂着U盘使用系统吧。这个时候如果你想将U盘里的EFI复制到磁盘的EFI分区里，却苦于找不到看不见EFI分区，这个时候是该让diskutil登场了。diskutil命令的基本用法：查看磁盘分区表1diskutil list/dev/disk0(internal, physical):#:TYPENAMESIZEIDENTIFIER0:GUID_partition_scheme256 GBdisk01:EFIEFI200 MBdisk0s12:Apple_HFSMAC128 GBdisk0s23:Microsoft Basic DataWIN10127.7 GBdisk0s3/dev/disk1(internal, physical):#:TYPENAMESIZEIDENTIFIER0:GUID_partition_scheme16 GBdisk11:EFIEFI200 MBdisk1s12:Apple_HFSInstall macOS Sierra15.8 GBdisk1s2挂载磁盘EFI分区1sudo diskutil mount disk0s1挂载U盘EFI分区1sudo diskutil mount disk1s1打开Finder，注意后面有个.1open .左侧会显示挂载了两个EFI分区，将U盘EFI目录全部复制到磁盘的EFI分区即可。合并EFI分区这里有一点需要注意:如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是**合并**的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.复制EFI分区如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.教你将U盘上的EFI复制到磁盘的EFI分区,脱离USB运行[Windows篇]挂载EFI分区Windows操作系统下面,打开cmd窗口,输入命令:1234567diskpartlist disk # 磁盘列表select disk n # 选择EFI分区所在的磁盘，n为磁盘号list partition # 磁盘分区列表select partition n # 选择EFI分区，n为EFI分区号set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7" # 设置为EFI分区assign letter=X # x为EFI分区盘符您可以重复输入命令同时挂载USB的EFI分区和磁盘的EFI分区打开资源管理器，会出现一个盘符为X的磁盘，格式化为fat32格式,将USB的EFI分区下面的EFI目录复制到安装磁盘的EFI分区下合并EFI分区这里有一点需要注意:如果之前安装过Windows系统的话,会存在EFI的目录,只是EFI的目录下面只有BOOT和Microsoft这两个目录,如果希望添加macOS的Clover引导的话,可以将USB的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行的是合并 的操作,让EFI同时支持WINDOWS和macOS的引导.千万不要全部复制,否则有可能造成EFI无法启动Windows.复制EFI分区如果磁盘上的EFI分区里为空的,可以直接将USB的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里.添加UEFI引导选项使用工具:BOOTICE操作过程:打开BOOTICE软件,选择物理磁盘,选择欲操作的目标磁盘,点击分区管理,弹出分区管理的窗口,点击分配盘符,为ESP分区分配一个盘符,点击确定选择UEFI,点击修改启动序列,点击添加按钮,菜单标题填写:CLOVER,选择启动文件,在打开的窗口里选择ESP分区下的目录\EFI\CLOVER\CLOVERX64.EFI,点击保存当前启动项设置完善驱动声卡：型号为ALC236，注入ID：2，使用AppleALC仿冒，顺利加载；修正HDMI Audio输出信息；安装完系统后请安装ALCPlugFix_for_ALC_node12_19声卡守护进程，耳麦工作正常；网卡：REALTEK 10EC:B822的无线网卡截止到目前还是无解，更换为DW1560/DW1830；显卡：Intel HD Graphics 500，Whiskey Lake平台目前还没有驱动程序，使用Coffee Lake仿冒驱动，Platform-id为：0x3e9b0009，添加DVMT补丁；采用Devices-Properties方法注入；核显版外接HDMI显示器工作正常；睡眠唤醒正常；蓝牙工作正常；睡眠唤醒工作正常；电池信息正常；触摸板：使用VoodooI2C驱动，多手势全功能正常工作；显示器亮度调节正常；亮度调节快捷键：F11和F12USB端口识别，未进行端口订制；摄像头、无线网卡已内建，避免睡眠问题；系统截图更新日志：12-4-2018更新AppleALC v1.3.4，已提交到vit9696合并完毕全新仿冒了小新AIR的声卡id：9911-25-2018修改显卡驱动方式：Whiskey lake仿冒Coffee lakeplatform-id注入id:3e9b0006可完美睡眠唤醒，可调节屏幕亮度声卡驱动方式：采用AppleALC仿冒原生驱动AppleHDAALC236注入id:2驱动方式：FakePCI-ID+FakePCIID_Intel_HDMI_Audio添加ALCPlugFix守护进程，解决耳机/耳麦自动切换，解决睡眠唤醒最后更新:12-14-2018 10:30PM小新AIR 13 IWL EFI下载/更新链接：https://github.com/daliansky/Lenovo-Air13-IWL/特别鸣谢:@宪武 为联想系统机型制作了全套的hotpatch及小新Air 13 IWL拆机图、BIOS设置等素材]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>安装</tag>
+        <tag>macOS</tag>
+        <tag>小新air</tag>
+        <tag>2018</tag>
+        <tag>联想</tag>
+        <tag>Air 13 IWL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mojave硬件支持列表（持续更新中）]]></title>
     <url>%2FMojave-Hardware-Support-List.html</url>
-    <content type="text"><![CDATA[AMD显卡支持列表免驱免驱或仿冒无法驱动Vega 64R9 270RX580 2048SPVega 56R9 370RX550RX 560R9 370XR7 240RX 560DR9 380XR7 250RX 570R9 390R7 250XRX 580R9 390XR7 260XRX 590R5 340RX 460R7 350RX 470R7 360RX 470DHD7750RX 480HD7770HD7850WX 2100HD7870WX 3100HD7950W2100HD7970W4100HD7990W4300R9 270XR9 280R9 280XR9 380W5000W7000W8000W9000W5100W7100W8100W9100W9100 32GBPro SSGWX 4100WX 5100WX 7100WX 9100WX 8200Pro Duo (Fiji)Nvidia显卡支持列表开普勒GK104/GK107/GK110核心的在Mojave里原生驱动开普勒GK106/GK208核心的在10.12.6+的系统里花屏闪屏免驱花屏/闪屏无法驱动GTXTitanGTX650RTX20XXGTXTitan ZGTX650TiRTXX000GTX Titan BlackGTX660GTX9XXGTX690GTX660TiGTX10XXGTX680GT720GT1030GTX760GT730GTX750TiGTX770GT640GTX750GTX780K2200GTX780tiK620GTX650K1200GT640Titan XGT710Titan XPGT740Titan VK6000GV100K5200GP100K5000PXX00K4000PXX0K4200MX000K2000K2000DK600K420INTEL核显支持列表除HD3000外，其实的基本都支持，详见：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理 和 黑苹果必备：Intel核显platform ID整理及smbios速查表未完待续源引链接及讨论：http://bbs.pcbeta.com/viewthread-1799271-1-1.html]]></content>
+    <content type="text"><![CDATA[AMD显卡支持列表免驱免驱或仿冒无法驱动Vega 64R9 270RX580 2048SPVega 56R9 370RX550RX 560R9 370XR7 240RX 560DR9 380XR7 250RX 570R9 390R7 250XRX 580R9 390XR7 260XRX 590R5 340RX 460R7 350RX 470R7 360RX 470DHD7750RX 480HD7770HD7850WX 2100HD7870WX 3100HD7950W2100HD7970W4100HD7990W4300R9 270XR9 280R9 280XR9 380W5000W7000W8000W9000W5100W7100W8100W9100W9100 32GBPro SSGWX 4100WX 5100WX 7100WX 9100WX 8200Pro Duo (Fiji)Nvidia显卡支持列表开普勒GK104/GK107/GK110核心的在Mojave里原生驱动开普勒GK106/GK208核心的在10.12.6+的系统里花屏闪屏免驱花屏/闪屏无法驱动GTXTitanGTX650RTX20XXGTXTitan ZGTX650TiRTXX000GTX Titan BlackGTX660GTX9XXGTX690GTX660TiGTX10XXGTX680GT720GT1030GTX760GT730GTX750TiGTX770GT640GTX750GTX780K2200GTX780tiK620GTX650K1200GT640Titan XGT710Titan XPGT740Titan VK6000GV100K5200GP100K5000PXX00K4000PXX0K4200MX000K2000K2000DK600K420INTEL核显支持列表除HD3000外，其它的基本都支持，详见：Coffee Lake帧缓冲区补丁及UHD630 Coffee Lake ig-platform-id数据整理 和 黑苹果必备：Intel核显platform ID整理及smbios速查表未完待续源引链接及讨论：http://bbs.pcbeta.com/viewthread-1799271-1-1.html]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -23,8 +40,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>Mojave</tag>
         <tag>dmg</tag>
         <tag>10.14.2</tag>
@@ -57,8 +74,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>Mojave</tag>
         <tag>dmg</tag>
         <tag>10.14.1</tag>
@@ -89,8 +106,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>Mojave</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
@@ -137,8 +154,8 @@
         <category>镜像</category>
       </categories>
       <tags>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>Mojave</tag>
         <tag>dmg</tag>
         <tag>10.14</tag>
@@ -185,8 +202,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G2112</tag>
@@ -202,8 +219,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.6</tag>
         <tag>17G65</tag>
@@ -219,8 +236,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.5</tag>
         <tag>17F77</tag>
@@ -290,8 +307,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.4</tag>
         <tag>1.7e+200</tag>
@@ -334,8 +351,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -366,8 +383,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.2</tag>
         <tag>17C88</tag>
@@ -481,8 +498,8 @@
       </categories>
       <tags>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>10.13.1</tag>
         <tag>17B48</tag>
@@ -600,8 +617,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A405</tag>
       </tags>
@@ -652,8 +669,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
       </tags>
   </entry>
@@ -680,8 +697,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>GM</tag>
         <tag>17A362a</tag>
@@ -802,8 +819,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB9</tag>
         <tag>17A360a</tag>
         <tag>dmg</tag>
@@ -817,9 +834,9 @@
         <tag>10.13</tag>
         <tag>Sierra</tag>
         <tag>High Sierra</tag>
+        <tag>下载</tag>
         <tag>10.12.6</tag>
         <tag>Download</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -861,8 +878,8 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>DB8</tag>
         <tag>17A358a</tag>
       </tags>
@@ -890,9 +907,9 @@
       </categories>
       <tags>
         <tag>10.13</tag>
-        <tag>下载</tag>
         <tag>DB7</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -961,8 +978,8 @@
       </categories>
       <tags>
         <tag>Sierra</tag>
-        <tag>10.12.6</tag>
         <tag>镜像</tag>
+        <tag>10.12.6</tag>
         <tag>dmg</tag>
         <tag>安装</tag>
       </tags>
@@ -991,8 +1008,8 @@
       <tags>
         <tag>10.13</tag>
         <tag>High Sierra</tag>
-        <tag>下载</tag>
         <tag>镜像</tag>
+        <tag>下载</tag>
         <tag>dmg</tag>
         <tag>17A344b</tag>
       </tags>
